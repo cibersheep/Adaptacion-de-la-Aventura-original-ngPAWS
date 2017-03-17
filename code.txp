@@ -25,34 +25,92 @@
 ;-------------------------------------------------------------
 ; Deficiones flags del sistema
 ;-------------------------------------------------------------
-#define flg fGraficosActivados 203
+#define flg fGraficosActivados 	203
+#define flg fMoneda 		120 	; f12 es de sistema
+#define flg fCandado 		140 	; f14 es de sistema
+#define flg fLintPilas 		110 	; f11 es de sistema
+#define flg fElfito 		101 	; 4 contigo, 3 , 2, 1 presente?
+#define flg fEnano 		102 
+#define flg fLlave 		103 	; 1 ya está cogido
+#define flg fDichoCasa 		104
+#define flg fGrosero 		254 	; 1 controla si se usan palabrotas
+;flg 255 ¿Si ya has muerto?
+;-------------------------------------------------------------
+; Deficiones de objetos
+;-------------------------------------------------------------
+#define obj oLinterna 		0
+#define obj oMoneda 		1
+#define obj oTortilla 		2
+#define obj oBotella 		3
+#define obj oLlave 		4
+#define obj oPila 		5
+#define obj oBotas 		6
+
+;-------------------------------------------------------------
+; Deficiones de localidades
+;-------------------------------------------------------------
+#define loc lFrontera 		3
+#define loc lCampo 		4
+#define loc lArida 		5
+#define loc lTapizado 		6
+#define loc lPaisajeAl 		7
+#define loc lColina 		8
+#define loc lPrecipicio 	9
+#define loc lHabGuarra 		10
+#define loc lPozo 		11
+#define loc lLava 		12
+#define loc lBosqueProf 	16
+#define loc lRamas 		17
+#define loc lPicnic 		18
+#define loc lBoscillo 		19
+#define loc lBosqueCer 		20
+#define loc lRampa 		21
+#define loc lRampa2 		22
+#define loc lEspiral 		23
+#define loc lValle 		24
+#define loc lValleProf 		25
+#define loc lReja	 	26
+#define loc lCanon 		28
+#define loc lMuerte 		29
 
 ;-------------------------------------------------------------
 ; Deficiones imágenes de localidades
 ;-------------------------------------------------------------
-#define pic loc03.gif 3
-#define grf loc03.jpg 200
+#define grf intro.png 1
+#define pic loc03.png 3 ; lFrontera
+#define pic loc04.png 4
+#define pic loc05.png 5
+#define pic loc06.png 6
+#define pic loc07.png 7
+#define pic loc08.png 8
+#define pic loc09.png 9
+#define pic loc10.png 10
+#define pic loc11.png 11
+#define pic loc12.png 12
+#define pic loc13.png 13
+#define pic loc14.png 14
+#define pic loc15.png 15
+#define pic loc16.png 16
+#define pic loc17.png 17
+#define pic loc18.png 18
+#define pic loc19.png 19
+#define pic loc20.png 20
+#define pic loc21.png 21
+#define pic loc22.png 22
+#define pic loc23.png 23
+#define pic loc24.png 24
+#define pic loc25.png 25
+#define pic loc26.png 26
+#define pic loc26abierta.png 27
+#define grf loc26sincand.png 3
+#define pic loc28.png 28 ; lCanon
+#define pic loc29.png 29 ; lMuerte
 
-; Ejemplo gráfico suelto
-;##define grf escena.jpg 1
-
-; Ejemplo música de localidad
-;##define msc loc1.ogg 1
-
-; Ejemplo sonido o música suelto
-;##define snd sfx.aiff 2
-
-; Ejemplo flag
-;##define flg fDragonMuerto 100
-
-; Ejemplo constante
-;##define const ORO_INICIAL 50
-
-; Ejemplo objeto
-;##define obj oLlave 3
-
-; Ejemplo localidad
-;##define loc lPuente 12
+;-------------------------------------------------------------
+; Deficiones constantes propias
+;-------------------------------------------------------------
+#define const cMaxCosas = 4	; Máximo de objetos que se pueden llevar
+#define const NOTCREATED = 252
 
 ;-------------------------------------------------------------
 ; Definiciones por defecto para atributos de objeto
@@ -60,7 +118,7 @@
 #define const aLight = 0
 #define const aWear = 1
 #define const aContainer = 2
-#define const aNPC  =3
+#define const aNPC = 3
 #define const aConcealed = 4
 #define const aEdible = 5
 #define const aDrinkable = 6
@@ -80,64 +138,61 @@
 #define const aOn = 20
 #define const aStatic = 21
 
+;-------------------------------------------------------------
+; Definiciones propias para atributos de objeto
+;-------------------------------------------------------------
+#define const aFull = 22
+/CTL
 
-/CTL 
-
-/VOC 
-; COMPROBAR Y AÑADIR ORIG
+/VOC
 
 ;--Movimientos, verbos y nombres < 14--
 
-N             2        noun
-NORTE         2        noun
-S             3        noun
-SUR           3        noun
-E             4        noun
-ESTE          4        noun
-O             5        noun
-OESTE         5        noun
-W             5        noun 
-NE            6        noun
-NORESTE       6        noun
-NORDESTE      6        noun
-NW            7        noun
-NOROESTE      7        noun
-NO            7        noun
-SE            8        noun
-SURESTE       8        noun
-SUDESTE       8        noun
-SUROESTE      9        noun
-SW            9        noun
-SO            9        noun
-ARRIBA        10       noun
-U             10       noun
-UP            10       noun  
-ABAJO         11       noun
-D             11       noun
-DOWN          11       noun
-SUBIR         10       verb
-ASCENDER      10       verb  
-ASCIENDE      10       verb
-SUBETE        10       verb
-SUBE          10       verb
-SUBIRSE       10       verb
-SUBIRTE       10       verb
-BAJAR         11       verb
-BAJA          11       verb
-DESCENDER     11       verb  
-DESCIENDE     11       verb
-BAJATE        11       verb
-BAJARSE       11       verb
-BAJARTE       11       verb
-ENTRAR        12       verb
-SALIR         13       verb
-ENTRA         12       verb
-ENTER         12       verb
-INTRODUCET    12       verb  
-INTERNATE     12       verb
-INTERNARTE    12       verb  
-SAL           13       verb
-EXIT          13       verb
+N		2	noun
+NORTE		2	noun
+S		3	noun
+SUR		3	noun
+E		4	noun
+ESTE		4	noun
+O		5	noun
+OESTE		5	noun
+NE		6	noun
+NORESTE		6	noun
+NORDESTE	6	noun
+NOROESTE	7	noun
+NO		7	noun
+SE		8	noun
+SURESTE		8	noun
+SUDESTE		8	noun
+SUROESTE	9	noun
+SO		9	noun
+ARRIBA		10	noun  
+ABAJO		11	noun
+SUBIR		10	verb
+SUBO		10	verb
+ASCENDER	10	verb  
+ASCIENDE	10	verb
+SUBETE		10	verb
+SUBE		10	verb
+SUBIRSE		10	verb
+SUBIRTE		10	verb
+BAJAR		11	verb
+BAJA		11	verb
+; BAJO		11	verb
+DESCENDER	11	verb  
+DESCIENDE	11	verb
+BAJATE		11	verb
+BAJARSE		11	verb
+BAJARTE		11	verb
+ENTRAR		12	verb
+ENTRO		12	verb
+ENTRA		12	verb
+INTRODUCET	12	verb
+INTERNATE	12	verb
+INTERNARTE	12	verb
+SAL		13	verb
+SALIR		13	verb
+SALGO		13	verb
 
 ;--Nombres--    <20 indica que pueden ser usados como verbos
 ;               <50 indica que son nombres propios, no serán
@@ -145,7 +200,28 @@ EXIT          13       verb
 I		14	noun
 INVEN		14	noun
 INVENTARIO	14	noun
+ESTAS		15	noun
+LLORAS		15	noun
+; LLORAR		15	noun
+; Ya es un verbo
+QUE		15	noun
+OCURRE		15	noun
+PASA 		15	noun
+QUIER		15	noun
+QUIERES		15	noun
+RABIA		15	noun
+SUCED		15	noun
+SUCEDE		15	noun
+SUCEDIDO	15	noun
+; -----------------------------------------------------------------------------------------------------------
+CERRADURA	19	noun
 TODO		20	noun
+GRAFICOS	31	noun
+GRAFI		31	noun
+TIEMP		36	noun
+TIEMPO		36	noun
+LAMPA		50	noun
+LAMPARA		50	noun
 LINTE		50	noun
 LINTERNA	50	noun
 MONEDA		51	noun
@@ -157,48 +233,177 @@ BOTELLA		53	noun
 LLAVE		54	noun
 PILA 		55	noun
 PILAS		55	noun
-;ZAPAT		101	noun
-;ZAPATO		101	noun
-;ZAPATOS		101	noun
+CABAÑ		56	noun
+CABAÑA		56	noun
+CASA 		56	noun
+CASIT		56	noun
+CASITA		56	noun
+CAVER		56	noun
+CAVERNA		56	noun
+VIVES		56	noun
+AGUA 		57	noun
+ARROY		57	noun
+ARROYO		57	noun
+ARROYUELO	57	noun
+RIO  		57	noun
+ARBOL		58	noun
+BOSQU		58	noun
+BOSQUE		58	noun
+RAMA 		58	noun
+RAMAS		58	noun
+AZUFR		60	noun
+AZUFRE		60	noun
+FRAGA		60	noun
+FRAGANCIA	60	noun
+PESTE		60	noun
+AIRE		60	noun
+VOLCA		62	noun
+VOLCAN		62	noun
+LAVA 		63	noun
+MAGMA		63	noun
+COLIN		65	noun
+COLINA		65	noun
+CAMIN		66	noun
+CAMINO		66	noun
+RAMPA		66	noun
+SENDA		66	noun
+PRECI		67	noun
+PRECIPICIO	67	noun
+ENANO		68	noun
+HABIT		69	noun
+HABITACION	69	noun
+PARED		70	noun
+PAREDES		70	noun
+DESCO		71	noun
+DESCONCHAD	71	noun
+SUELO		72	noun
+VENTA		73	noun
+ESCAL		74	noun
+ESCALERA	74	noun
+CHARC		75	noun
+CHARCO		75	noun
+CHARCOS		75	noun
+BORDE		76	noun
+AGUJE		77	noun
+AGUJERO		77	noun
+TORRE		78	noun
+ESPIRAL		78	noun
+CLARO		79	noun
+VALLE		80	noun
+PICNI		81	noun
+PICNIC		81	noun
+MESA 		82	noun
+MESAS		82	noun
+SILLA		83	noun
+LECHO		86	noun
+GRIETAS		87	noun
+GRIETA		87	noun
+DEPRE		88	noun
+DEPRESION	88	noun
+PUERT		89	noun
+PUERTA		89	noun
+REJA 		89	noun
+REJAS		89	noun
+BARRO		90	noun
+CANDA		90	noun
+CANDADO		90	noun
+CASCA		92	noun
+CASCADA		92	noun
+CARTE		93	noun
+CARTEL		93	noun
+LETRE		93	noun
+LETRERO		93	noun
+RAM  		99	noun
+BOTA		101	noun
+BOTAS		101	noun
+ZAPAT		101	noun
+ZAPATO		101	noun
+ZAPATOS		101	noun
+ELFIT		104	noun
+ELFITO		104	noun
+ELFO 		104	noun
+FIGUR		104	noun
+FIGURA		104	noun
+SIGUEME		106	noun
+SIGUE		106	noun
+VIENES		106	noun
+BRILL		107	noun
+BRILLO		107	noun
+; Para poder hablar con el enano. Decir "Cómo te llamas"
+LLAMAS		109	noun
+NOMBR		109	noun
+NOMBRE		109	noun
+ENTRADA		110	noun
+; -------------------------------------------------------
+BOCA 		111	noun
+POZO 		111	noun
+ESTRU		114	noun
+ESTRUCTURA	114	noun
+HOLA 		115	noun
+LUZ 		116	noun
+MIERDA		117	noun
+CORTADO		118	noun
+ROCAS		119	noun
+ROCA		119	noun
+CANON		120	noun
+MALEZA		121	noun
+ESPINO		121	noun
+HUMO		122	noun
+FUEGO		123	noun
 
 ;--Verbos--
-COGER         20       verb
-COGE          20       verb
-TOMAR         20       verb
-TOMA          20       verb
-TAKE          20       verb
-DEJAR         21       verb
-DEJA          21       verb
-SOLTAR        21       verb
-SUELTA        21       verb
-DROP          21       verb
-QUITAR        22       verb
-QUITA         22       verb
-QUITATE       22       verb
-QUITARTE      22       verb
-QUITARSE      22       verb
-QUITASE       22       verb
-SACATE        22       verb
-SACARTE       22       verb
-SACARSE       22       verb
-SACASE        22       verb
-DESVISTE      22       verb
-DESVESTIR     22       verb
-DESVESTIRSE   22       verb
-DESVESTIRTE   22       verb
-SENTAR        23       verb
-SENTARSE      23       verb
-SENTARTE      23       verb
-SIENTATE      23       verb
-L             24       verb
-LOOK          24       verb
-M             24       verb   
-MIRAR         24       verb   
-MIRA          24       verb
-QUIT          25       verb
-FIN           25       verb
-SAVE          26       verb
-GRABAR        26       verb
+COGER		20	verb
+COGE		20	verb
+COJO		20	verb
+TOMAR		20	verb
+TOMA		20	verb
+TOMO		20	verb
+AGARR		20	verb
+AGARRA		20	verb
+AGARRO		20	verb
+AGARRAR		20	verb
+DEJAR		21	verb
+DEJA		21	verb
+DEJO		21	verb
+SOLTAR		21	verb
+SUELTA		21	verb
+SUELTO		21	verb
+QUITAR		22	verb
+QUITA		22	verb
+QUITO		22	verb
+QUITATE		22	verb
+QUITARTE	22	verb
+QUITARSE	22	verb
+QUITASE		22	verb
+SACATE		22	verb
+SACARTE		22	verb
+SACARSE		22	verb
+SACASE		22	verb
+DESVISTE	22	verb
+DESVISTO	22	verb
+DESVESTIR	22	verb
+DESVESTIRSE	22	verb
+DESVESTIRTE	22	verb
+SENTAR		23	verb
+SENTARSE	23	verb
+SENTARTE	23	verb
+SIENTATE	23	verb
+SIENTO		23	verb
+M		24	verb
+MIRAR		24	verb
+MIRA		24	verb
+MIRO		24	verb
+D		24	verb
+DESCRIBIR	24	verb
+DESCRIBE	24	verb
+DESCRIBO	24	verb
+FIN		25	verb
+ABANDONA	25	verb
+ABANDONO	25	verb
+ABANDONDAR	25	verb
+RINDO		25	verb
+SAVE		26	verb
+GRABAR		26	verb
 GRABA         26       verb
 SALVAR        26       verb
 SALVA         26       verb
@@ -212,37 +417,45 @@ GRABARAM      28       verb
 RAMLOAD       29       verb
 CARGARAM      29       verb
 EXAMINAR      30       verb
-EXAMINA       30       verb
-EX            30       verb
-INSPECCIONA   30       verb
-OBSERVAR      30       verb
-OBSERVA       30       verb
-DECIR         31       verb
-DI            31       verb
-HABLAR        31       verb
-HABLA         31       verb
-RESPONDER     31       verb
-RESPONDE      31       verb
-LANZAR        32       verb
-LANZA         32       verb
-LANZARSE      32       verb
-LANZASE       32       verb
-TIRAR         32       verb
-TIRA          32       verb
-TIRARSE       32       verb
-TIRASE        32       verb
-ARROJA        32       verb
-ARROJAR       32       verb
-ARROJARSE     32       verb
-ARROJASE      32       verb
-EMPUJAR       33       verb
-EMPUJA        33       verb
-AYUDA         34       verb
-HELP          34       verb
-GIRAR         35       verb
-GIRA          35       verb
-ROTA          35       verb
-ROTAR         35       verb
+EXAMINA		30	verb
+EXAMINO		30	verb
+EX		30	verb
+INSPECCION	30	verb
+OBSERVAR	30	verb
+OBSERVA		30	verb
+DECIR		31	verb
+DIGO		31	verb
+DI		31	verb
+HABLAR		31	verb
+HABLA		31	verb
+HABLO		31	verb
+RESPONDER	31	verb
+RESPONDE	31	verb
+LANZAR		32	verb
+LANZA		32	verb
+LANZO		32	verb
+LANZARSE	32	verb
+LANZASE		32	verb
+TIRAR		32	verb
+TIRA		32	verb
+TIRO		32	verb
+TIRARSE		32	verb
+TIRASE		32	verb
+ARROJA		32	verb
+ARROJO		32	verb
+ARROJAR		32	verb
+ARROJARSE	32	verb
+ARROJASE	32	verb
+EMPUJAR		33	verb
+EMPUJA		33	verb
+EMPUJO		33	verb
+AYUDA		34	verb
+GIRAR		35	verb
+GIRA		35	verb
+GIRO		35	verb
+ROTA		35	verb
+ROTO		35	verb
+ROTAR		35	verb
 VOLTEAR       35       verb
 VOLTEA        35       verb
 MOSTRAR       36       verb
@@ -253,11 +466,14 @@ ENSEÑAR       36       verb
 ENSEÑA        36       verb
 ENSEÑARSE     36       verb
 ENSEÑASE      36       verb
-ESCUCHAR      37       verb
-ESCUCHA       37       verb
-OIR           37       verb
-OYE           37       verb
-COMER         38       verb
+ESCUCHAR	37	verb
+ESCUCHA		37	verb
+ESCUCHO		37	verb
+OIR		37	verb
+OYE		37	verb
+OIGO		37	verb
+COMER		38	verb
+COMO		38	verb
 COME          38       verb
 COMETE        38       verb
 COMERTE       38       verb
@@ -271,11 +487,12 @@ INGIERE       38       verb
 INGERIR       38       verb
 MASTICA       38       verb
 MASTICAR      38       verb
-BEBER         39       verb
-BEBE          39       verb
-BEBETE        39       verb
-BEBERSE       39       verb
-BEBERTE       39       verb
+BEBER		39	verb
+BEBE		39	verb
+BEBO		39	verb
+BEBETE		39	verb
+BEBERSE		39	verb
+BEBERTE		39	verb
 TOCAR         40       verb
 TOCA          40       verb
 ACARICIAR     40       verb
@@ -291,27 +508,29 @@ OLFATEAR      42       verb
 OLFATEA       42       verb
 HUSMEA        42       verb
 HUSMEAR       42       verb
-ESPERAR       43       verb
-ESPERA        43       verb
-Z             43       verb
-CANTAR        44       verb
-CANTA         44       verb
-SALTAR        45       verb
-SALTA         45       verb
-SALTATE       45       verb
-SALTARSE      45       verb
-SALTARTE      45       verb
-BRINCAR       45       verb
-BRINCA        45       verb
-BRINCATE      45       verb
-BRINCARTE     45       verb
-BRINCARSE     45       verb
-ATACA         46       verb
-ATACAR        46       verb
-AGREDIR       46       verb
-AGREDE        46       verb
-MATAR         46       verb
-MATA          46       verb
+ESPERAR		43	verb
+ESPERA		43	verb
+ESPERO		43	verb
+CANTAR		44	verb
+CANTA		44	verb
+SALTAR		45	verb
+SALTA		45	verb
+SALTO		45	verb
+SALTATE		45	verb
+SALTARSE	45	verb
+SALTARTE	45	verb
+BRINCAR		45	verb
+BRINCA		45	verb
+BRINCATE	45	verb
+BRINCARTE	45	verb
+BRINCARSE	45	verb
+ATACA		46	verb
+ATACAR		46	verb
+AGREDIR		46	verb
+AGREDE		46	verb
+MATAR		46	verb
+MATA		46	verb
+MATO		46	verb
 ASESINAR      46       verb
 ASESINA       46       verb
 ESTRANGULA    46       verb
@@ -356,15 +575,17 @@ VOMITARTE     47       verb
 VOMITARSE     47       verb
 ESCUPIR       48       verb
 ESCUPE        48       verb
-AGITAR        49       verb
-AGITA         49       verb
-MENEAR        49       verb
-MENEA         49       verb
-SACUDIR       49       verb
-SACUDE        49       verb
-REMOVER       49       verb
-REMUEVE       49       verb
-BALANCEA      50       verb
+AGITAR		49	verb
+AGITO		49	verb
+AGITA		49	verb
+MENEAR		49	verb
+MENEA		49	verb
+SACUDIR		49	verb
+SACUDE		49	verb
+SACUDO		49	verb
+REMOVER		49	verb
+REMUEVE		49	verb
+BALANCEA	50	verb
 BALANCEAR     50       verb
 BALANCEARTE   50       verb
 BALANCEARSE   50       verb
@@ -386,21 +607,23 @@ RASGAR        52       verb
 RASGA         52       verb
 LEVANTATE     53       verb
 LEVANTARSE    53       verb
-LEVANTARTE    53       verb
-ATAR          54       verb
-ATA           54       verb
-ENLAZAR       54       verb
-ENLAZA        54       verb
-ANUDA         54       verb
-ANUDAR        54       verb
-LLENAR        55       verb
-LLENA         55       verb
-RELLENAR      55       verb
-RELLENA       55       verb
-NADAR         56       verb
-NADA          56       verb
-TREPAR        57       verb
-TREPA         57       verb
+LEVANTARTE	53	verb
+ATAR		54	verb
+ATA		54	verb
+ENLAZAR		54	verb
+ENLAZA		54	verb
+ANUDA		54	verb
+ANUDAR		54	verb
+LLENAR		55	verb
+LLENA		55	verb
+LLENO		55	verb
+RELLENAR	55	verb
+RELLENA		55	verb
+NADAR		56	verb
+NADA		56	verb
+TREPAR		57	verb
+TREPA		57	verb
+TREPO		57	verb
 ESCALAR       57       verb
 ESCALA        57       verb
 RETORCER      58       verb
@@ -425,6 +648,7 @@ ECHATE        61       verb
 ECHARSE       61       verb
 ECHARTE       61       verb
 BESAR         62       verb
+BESAME         62       verb
 BESA          62       verb
 CHUPAR        63       verb
 CHUPA         63       verb
@@ -444,14 +668,16 @@ CIERRA        65       verb
 CLOSE         65       verb
 QUEMAR        66       verb
 QUEMA         66       verb
-ENCENDER      66       verb
-ENCIENDE      66       verb
-INCENDIAR     66       verb
-INCENDIA      66       verb
-PRENDE        66       verb
-PRENDER       66       verb
-APAGAR        67       verb
-APAGA         67       verb
+ENCENDER	66	verb
+ENCIENDO	66	verb
+ENCIENDE	66	verb
+INCENDIAR	66	verb
+INCENDIA	66	verb
+PRENDE		66	verb
+PRENDER		66	verb
+APAGAR		67	verb
+APAGA		67	verb
+APAGO		67	verb
 EXTINGUIR     67       verb
 EXTINGUE      67       verb
 SOFOCAR       67       verb
@@ -459,34 +685,38 @@ SOFOCA        67       verb
 TRANSCRIP     68       verb
 TRANSCRIPC    68       verb
 TRANSCRIPT    68       verb
-ROMPER        69       verb
-ROMPE         69       verb
-PARTIR        69       verb
-PARTE         69       verb
-QUEBRAR       69       verb
-QUIEBRA       69       verb
-DESTRUYE      69       verb
-DESTRUIR      69       verb
-VERSION       70       verb        
-PONER         71       verb
-PON           71       verb
-PONTE         71       verb
-PONSE         71       verb
-PONERSE       71       verb
-PONERTE       71       verb
-VISTE         71       verb
-VISTESE       71       verb
-VESTIRSE      71       verb
-VESTIRTE      71       verb 
-VESTIR        71       verb
-GOLPEAR       72       verb
-GOLPEA        72       verb
-DAR           73       verb
-DA            73       verb
-DASE          73       verb
-DARSE         73       verb
-DARTE         73       verb
-DALE          73       verb
+ROMPER		69	verb
+ROMPE		69	verb
+ROMPO		69	verb
+PARTIR		69	verb
+PARTE		69	verb
+QUEBRAR		69	verb
+QUIEBRA		69	verb
+DESTRUYE	69	verb
+DESTRUIR	69	verb
+VERSION		70	verb
+PONER		71	verb
+PON		71	verb
+PONGO		71	verb
+PONTE		71	verb
+PONSE		71	verb
+PONERSE		71	verb
+PONERTE		71	verb
+VISTE		71	verb
+VISTESE		71	verb
+VESTIRSE	71	verb
+VESTIRTE	71	verb 
+VESTIR		71	verb
+GOLPEAR		72	verb
+GOLPEA		72	verb
+PEGAR		72	verb
+PEGO		72	verb
+DAR		73	verb
+DOY		73	verb
+DA		73	verb
+DARSE		73	verb
+DARTE		73	verb
+DALE		73	verb
 DARLE         73       verb
 OFRECE        73       verb
 OFRECESE      73       verb
@@ -496,20 +726,25 @@ REGALA        73       verb
 REGALAR       73       verb
 REGALARSE     73       verb
 REGALASE      73       verb
-METER         74       verb
-METE          74       verb
-INTRODUCE     74       verb
-INTRODUCIR    74       verb
-INSERTAR      74       verb
-INSERTA       74       verb
-ECHA          74       verb
-ECHAR         74       verb
-SACAR         75       verb
-SACA          75       verb
-EXTRAE        75       verb
-EXTRAER       75       verb
-LLAMA         76       verb
-LLAMAR        76       verb
+METER		74	verb
+METE		74	verb
+INTRODUCE	74	verb
+INTRODUCIR	74	verb
+INTRODUZCO	74	verb
+INSERTAR	74	verb
+INSERTA		74	verb
+INSERTO		74	verb
+ECHA		74	verb
+ECHAR		74	verb
+SACAR		75	verb
+SACA		75	verb
+SACO		75	verb
+EXTRAE		75	verb
+EXTRAER		75	verb
+EXTRAIGO	75	verb
+LLAMA		76	verb
+LLAMO		76	verb
+LLAMAR		76	verb
 GRITA         77       verb
 GRITAR        77       verb
 CHILLA        77       verb
@@ -544,10 +779,11 @@ MIRARTE       85       verb
 EXAMINATE     85       verb
 EXAMINARSE    85       verb
 EXAMINARTE    85       verb    
-VACIAR        86       verb
-VACIA         86       verb
-VERTER        86       verb
-VERTIR        86       verb  ; Término erróneo pero ampliamente extendido
+VACIAR		86	verb
+VACIA		86	verb
+VACIO		86	verb
+VERTER		86	verb
+VERTIR	86	verb  ; Término erróneo pero ampliamente extendido
 VIERTE        86       verb
 DESPIERTA     87       verb
 DESPERTAR     87       verb
@@ -632,7 +868,7 @@ LIMPIA        101      verb
 FROTAR        101      verb
 FROTA         101      verb
 LAVAR         101      verb
-LAVA          101      verb
+; LAVA          101      verb Definida como sustantivo
 PULE          101      verb
 PULIR         101      verb
 FREGAR        101      verb
@@ -659,32 +895,65 @@ COMPRATE      106      verb
 ADQUIRIR      106      verb
 ADQUIERE      106      verb
 ADQUIERESE    106      verb
-CONSULTAR     107      verb
-CONSULTA      107      verb
-PREGUNTAR     108      verb
-PREGUNTA      108      verb
-LEE           109      verb
-LEER          109      verb
-LEERSE        109      verb
-LEERTE        109      verb
-LEETE         109      verb
-MOVER         110      verb
-MUEVE         110      verb
-DESPLAZAR     110      verb
-DESPLAZA      110      verb
-APRETAR       111      verb
-APRIETA       111      verb
-ESTRUJAR      111      verb
-ESTRUJA       111      verb
-BAILAR        112      verb
-BAILA         112      verb
-DANZAR        112      verb
-DANZA         112      verb
-SALUDAR       113      verb
-SALUDA        113      verb
-LEVANTAR      114      verb
-LEVANTA       114      verb
-
+CONSULTAR	107	verb
+CONSULTA	107	verb
+PEDIR		31	verb
+PIDO		31	verb
+PREGUNTAR	31	verb
+PREGUNTA	31	verb
+PREGUNTO	31	verb
+LEE		109	verb
+LEO		109	verb
+LEER		109	verb
+LEERSE		109	verb
+LEERTE		109	verb
+LEETE		109	verb
+MOVER		110	verb
+MUEVO		110	verb
+MUEVE		110	verb
+DESPLAZAR	110	verb
+DESPLAZA	110	verb
+APRETAR		111	verb
+APRIETA		111	verb
+APRIETO		111	verb
+ESTRUJAR	111	verb
+ESTRUJA		111	verb
+BAILAR		112	verb
+BAILA		112	verb
+DANZAR		112	verb
+DANZA		112	verb
+SALUDAR		113	verb
+SALUDA		113	verb
+SALUDO		113	verb
+LEVANTAR	114	verb
+LEVANTA		114	verb
+AD		115	verb
+ASOMA		116	verb
+ASOMAR		116	verb
+ASOMO		116	verb
+ASUST		117	verb
+ASUSTAR		117	verb
+ASUSTO		117	verb
+BUSCA		118	verb
+BUSCAR		118	verb
+BUSCO		118	verb
+CABRON		119	verb
+CAPULLO		119	verb
+CULO 		119	verb
+FOLLAR		119	verb
+GILIPOLLAS	119	verb
+IDIOTA		119	verb
+IMBECIL		119	verb
+JODE 		119	verb
+JODER		119	verb
+JODES		119	verb
+JOPUTA		119	verb
+MARICA		119	verb
+PUTA 		119	verb
+VENIR		120	verb
+VENTE		120	verb
+VEN  		120	verb
+ACERCATE	120	verb
 
 ;--Adjetivos--
 PEQUEÑO       	2     	adjective
@@ -700,6 +969,7 @@ SUAVE         	7	adjective
 LARGO         	9	adjective
 LARGA         	9  	adjective
 ENCENDIDA	10	adjective
+ALTOS		11	adjective ; ALTOS 102	adjective
 
 ;--Adverbios--
 RAPIDAMENT    2        adverb
@@ -747,13 +1017,13 @@ LE            2        pronoun
 LES           2        pronoun
 
 ;--Conjunciones--
-Y             2        conjunction
+Y             2        conjunction ; Y    35	conjunction
 ENTONCES      2        conjunction ; A efectos del sistema. ENTONCES es un adverbio
           
 
-/STX 
+/STX
 /0
-No puedes ver nada, está muy oscuro.
+No puedes ver nada, está muy oscuro y aquí apesta.
 
 /1
 Puedes ver: 
@@ -773,7 +1043,6 @@ No puedes ir en esa dirección.
 
 /8
 ¿Perdón?
-
 /9
 Llevas: 
 /10
@@ -790,7 +1059,7 @@ ningún objeto.
 /14
 Adiós...
 /15
-OK.
+Perfecto.
 
 /16
 Pulsa una tecla para continuar.
@@ -925,13 +1194,14 @@ están
 dentro hay 
 /67
 encima hay 
-/MTX 
+/MTX
 /0
 
 /1
-Te arrastras como una cucaracha por todo el suelo, 
+;Te arrastras como una cucaracha por todo el suelo, 
+;No parece que salga en ninguna parte
 /2
-Vale, linterna lista.
+;Vale, linterna lista.
 /3
 ¡Qué horror, el palizas otra vez! ¡Prefiero la muerte!
 /4
@@ -939,9 +1209,9 @@ Vale, linterna lista.
 /5
 Algo que has hecho te impide completar la aventura.
 /6
-Chapoteas tocando gelatinosas babosidades 
+;Chapoteas tocando gelatinosas babosidades 
 /7
-pero de pronto descubres que hay ¡una moneda!
+;pero de pronto descubres que hay ¡una moneda!
 /8
 ¡Busca luz!
 /9
@@ -951,11 +1221,11 @@ pero de pronto descubres que hay ¡una moneda!
 /11
 Sé lógico y hazte un mapa.
 /12
-¡pero de monedas nada, listillo!
+;¡pero de monedas nada, listillo!
 /13
-Pone: " CUIDADO CON TUS OBJETOS ".
+Pone: «CUIDADO CON TUS OBJETOS».
 /14
-¡No ves nada especial!
+;¡No ves nada especial!
 /15
 Está encendida.
 /16
@@ -967,62 +1237,52 @@ Esta antigua moneda perteneció a los Elfos.
 /19
 Dejaría satisfecho hasta a un oso.
 /20
-Es de vidrio y está vacía.
+;Es de vidrio y está vacía.
 /21
 Lleva la insignia del Rey Elfo.
 /22
-" SEMPER LUX " (No lo creas).
-/23
-Es una sólida construcción que antaño perteneció a los dueños del valle, hoy está abandonada.
-/24
-¡@ ha caido al suelo!
-/25
-¡Asesino nanicida!
+«SEMPER LUX» (No lo creas).
 /26
 No estás en clase de botánica.
 /27
 Un bujero quecha humo y pedorreta.
 /28
-¡No te pases!
+;¡No te pases!
 /29
-La lava te reduce a cenizas.
+;La lava te reduce a cenizas.
 /30
 Tiene una fuerte reja.
 /31
 Baja p'abajo.
 /32
 Sube p'arriba.
-/33
-Es una construcción altísima y de un brillo metálico, pero de superficie tan resbaladiza que la hace inexpugnable.
+
 /34
 De hechura rústica y buena madera. Muy usada por los enanos del bosque.
 /35
-...y te levantas para seguir jugando.
+;... y te levantas para seguir jugando.
 /36
 ¡Tate pa la faena!
 /37
-Son ranuras estrechas por las que se cuela el agua del rio.
+;Son ranuras estrechas por las que se cuela el agua del río.
 /38
 Es muy fuerte. Impide la entrada.
 /39
-Es la Gran Cascada del jefe de los enanos.
+;Es la Gran Cascada del jefe de los enanos.
 /40
-Flotas en forma de nube.
+;Flotas en forma de nube.
 /41
 Con un gracioso saltito emprendes el vuelo.
 /42
 Tremendo batacazo en el fondo del abismo.
 /43
 Pareces estar un poco muerto.
-/44
-Te rompes el hocico contra la raíz del árbol.
-/45
-Te observa por unos instantes y esboza una sonrisa.
+
 /46
 
 Ya te lo advertí...
 /47
-      ¡¡¡ FELICIDADES !!!
+      ¡¡¡FELICIDADES!!!
 /48
    CLAVE DE ACCESO:  TIMACUS 
 /49
@@ -1032,126 +1292,83 @@ Ya te lo advertí...
 /51
    CLAVE DE ACCESO:  GUACHARO 
 /52
-¿No sabes leer? ¡Un enanito desaparece con lo dejado!
+;¿No sabes leer? ¡Un enanito desaparece con lo dejado!
 /53
-Hay una fuerte reja metálica
+ Hay una fuerte reja metálica
 /54
 . Detrás de ella se ve una misteriosa entrada a las profundidades.
 /55
  cerrada con un candado
 /56
  con un candado abierto
-/57
-Tienes ante tí la entrada a La Gran Caverna.
 /58
 Al quitarlo... ¡desaparece de tus manos!
-/59
-"¡Largo de aquí!"
-/60
- junto a un enano que rabia de amargura.
-/61
-Don Enano se calza y agradecido te deja una linterna.
-/62
-Oyes un débil llanto y con dificultad ves una figura traslúcida.
 /63
 Es un elfo que llora acurrucado junto a un árbol.
 /64
 No hay suficiente luz.
 /65
 Y desesperado Don Enano se lanza al volcán. ¡Descanse en paz!
-/66
-"¡No quiero!"
-/67
-
-"¡Mi casa!"
-/68
-"No es aquí."
-/69
-"Mi agradecimiento está sobre la mesa."
-Y penetra en las profundidades.
-/70
-Muy ofendido Elfito se las pira llorando.
 /71
  El sol hace brillar algo en una rama.
 /72
 ¡Parece una llave!
-/73
-Para entrar y sobrevivir en las profundidades necesitas más cosas.
-/74
-"Mi nombre es Elfito."
-/75
-"En la Gran Caverna."
-/76
-"Cuando encuentre mi casa."
 /77
- AVENTURA ORIGINAL I 
-/78
- LA BUSQUEDA 
-/79
-Como los del circo. Parece tener muy mala uva. Para comunicarte, "háblale".
-/80
-"Don Enano"
-/81
-"¡Quiero ser más alto!"
-/82
-Cabreadísimo te ataca.
-/83
-Luchais en el borde... 
-/84
-¡y los dos al abismo!
-/85
-Gráficos:
-/86
-Programación:
-/87
-Andrés  Samudio
-/88
-Dirección:
-/89
-Manuel González
-/90
+\1<div style='padding:2em 2%; text-align:center'> AVENTURA ORIGINAL I 
 
-/91
 
-/92
-Carlos
-/93
-Marqués
-/94
-(c) 1989 Aventuras AD 
-/95
-Esta parte del bosque es muy densa, los árboles te impiden orientarte bien y son todos muy parecidos. Vagas por entre la maleza buscando tu rumbo pero pronto te das cuenta de que estás algo despistadillo.
+ LA BÚSQUEDA 
+
+
+
+
+Dirección: Andrés Samudio
+
+Programación: Manuel González
+
+Gráficos: Carlos Marqués
+
+
+(c) 1989 Aventuras AD </div>
+
+
 /96
 ¡Ya no tiene solución!
-/97
-«¿Qué dices?»
 /98
 
 /99
+\1<div style='padding:2em 2%; text-align:center'>
                ********
 
            ¡LA GRAN CAVERNA!
 
+
   ORIGEN DE LEYENDAS SOBRE FABULOSAS
      RIQUEZAS Y TERRIBLES PELIGROS.
+
            ¿MITO O REALIDAD?
+
 
 SIGUIENDO EL BORROSO MAPA QUE TE DIO UN
 EXTRAÑO (POR CIERTO, MUY RICO) A QUIEN
  SALVASTE DE LAS GARRAS DE UNOS TROLLS
    HAS LLEGADO A ESTE APACIBLE VALLE.  
 
+
     PRESIENTES QUE ESTAS MUY CERCA,
    PERO DE REPENTE EL VIEJO MAPA SE
    DESHACE EN TUS MANOS MIENTRAS UNA   
         CALIDA BRISA TE SUSURRA:
-   "SOLO LOS VALIENTES QUE DOMINEN
-    LA MAGIA MERECERAN MIS TESOROS"
+
+   «SOLO LOS VALIENTES QUE DOMINEN
+    LA MAGIA MERECERAN MIS TESOROS»
+
                ¡SUERTE!
 
-                ****** 
+
+                ****** </div>
 /100
-No tienes nada.
+;No tienes nada.
 /101
 No hay ninguna salida
 /102
@@ -1180,56 +1397,13 @@ Salir
 Norte
 /114
 Las salidas posibles son 
-/115
-.
 /116
 , 
 /117
  y 
 /118
 La única salida es 
-/119
-No llevas todos los objetos que necesitas, por lo tanto la magia de La Gran Caverna te impide el paso.
-/120
-Pues ya lo sabes.
-/121
-Dicen que las aguas de éste rio tienen la mágica propiedad de hacer crecer semillas muy viejas.
-/122
-La boca del pozo está muy oscura.
-/123
-La entrada es pequeña, pero lo suficiente para que pases por ella y penetres a un Mundo Mágico.
-/124
-La tienes llena de agua fresca y fertilizante.
-/125
-El enano está muy cabreado para finuras y con malos modales intenta deshacerse de tí.
-/126
-Por su posición y solidez proporciona una fácil subida.
-/127
-La llave está demasiado lejos.
-/128
-¡El enano ha caido al volcán!
-/129
-Si en vez de escuchar tanto, teclearas más, oirías: "Clik, Clak, Clok".
-/130
-Oyes el susurro del viento, el canto de los pájaros y el murmullo del agua.
-/131
-Es una sólida y bella construcción.
-/132
-No estás suficientemente cerca.
-/133
-Estas botas tienen un tacón muy alto, pero no son de tu número.
-/134
-Elfito da saltos de alegría.
-/135
-Las botas son pequeñas para tus pies.
-/136
-No tiene pilas.
-/137
-Te dice "¡Hola tú!"
-/138
-La rama se mueve y se mueve.
-/139
-Tambien participaron: Eva Samitier, Juan Darder, Juanjo Muñoz y Tim Gilberts (some bugs).
+
 
 /1000
 Salidas visibles: 
@@ -1261,24 +1435,22 @@ al {ACTION|suroeste|suroeste}
 {ACTION|dentro|dentro}
 /1015
 {ACTION|fuera|fuera}
-/OTX 
-/0
-una linterna encendida
-/1
+/OTX
+/0 			; 0 lint encendida ; 2 linterna
+una linterna {TEXTPIC|iconolinterna.svg|0}
+/1 			; 1 moneda
 una moneda
-/2
-una linterna
-/3
+/2 			; 3 tortiall
 una tortilla
-/4
+/3 			; 4 botella ; 5 botella con agua
 una botella
-/5
-una botella con agua
-/6
+/4 			; 6 llave
 una llave
-/7
-una pila eléctrica ;/8 ;Una pareja de botas
-/LTX 
+/5		 	; 7 pila
+una pila eléctrica
+/6 			; 8 botas
+una pareja de botas
+/LTX
 /0
 \1<div style='padding:2em 2%; text-align:center'>LA AVENTURA ORIGINAL</div>
 
@@ -1287,7 +1459,7 @@ una pila eléctrica ;/8 ;Una pareja de botas
 /3
 Estás justo en la frontera entre las tierras áridas del norte y la zona húmeda y boscosa del sur. Muy cerca hacia el este hay una cabaña de ladrillos rodeada por un frondoso bosque. Un río poco caudaloso fluye hacia el sur.
 /4
-En campo abierto, rodeado por escasa vegetación. Un camino va hacia la cabaña y hacia el este te llega una peste a azufre.
+En campo abierto, rodeado por escasa vegetación. Un camino va hacia la cabaña abandonada y desde el este te llega una peste a azufre.
 /5
 Esta es una zona muy árida donde solo crecen malezas espinosas. La fragancia azufrada ya empieza a molestar.
 /6
@@ -1303,13 +1475,9 @@ Estás en una habitación bastante guarra. Las paredes desconchadas y el suelo r
 /11
 ¡Puaf! El fondo del pozo está casi seco (por suerte para ti, curiosón). Solo quedan algunos charcos malolientes de agua estancada. La estrechez de las mohosas paredes y el enorme silencio que reina hacen que tengas por única compañía el latido desbocado de tu corazón.
 /12
-El calor que se desprende de la burbujeante lava es asfixiante. Un enorme penacho de cenizas se desprende flotando perezosamente del ardiente magma, dejando una peste cosa mala. Imprudentemente estás haciendo el payaso en el peligroso borde del volcán ; comprobar si falta punto final
 /13
-
 /14
-
 /15
-
 /16
 Te encuentras en lo profundo del bosque rodeado por densa vegetación y junto a un enorme árbol con desgajadas ramas que llegan al suelo.
 /17
@@ -1327,11 +1495,10 @@ Sigues en la rampa artificial construida en medio del bosque. Frente a ti ves la
 /23
 La rampa te conduce hasta un majestuoso claro. Ante ti se eleva la espiral, pulida, brillante y sobre todo impresionante. Detrás, el suelo cae bruscamente.
 /24
-Estás al comienzo del valle, al lado de un alegre arroyuelo que juguetea sobre el lecho rocoso en su camino hacia el Sur. Hay bosque a ambos lados.
+Estás al comienzo del valle, al lado de un alegre arroyuelo que juguetea sobre el lecho rocoso en su camino hacia el sur. Hay bosque a ambos lados.
 /25
-El valle se hace mas estrecho y profundo. El arroyo es cada vez menos caudaloso, y ahora no tan alegre, porque poco a poco se va filtrando por las numerosas grietas del rocoso lecho.
+El valle se hace más estrecho y profundo. El arroyo es cada vez menos caudaloso, y ahora no tan alegre, porque poco a poco se va filtrando por las numerosas grietas del rocoso lecho.
 /26
-
 /27
 
 /28
@@ -1339,7 +1506,7 @@ El cañón se abre en lo que fue antes una cascada y hoy solo un precipicio roco
 /29
 
 /30
-
+Con un click la puerta se cierra mágicamente...
 /31
 
 /32
@@ -1378,59 +1545,56 @@ El cañón se abre en lo que fue antes una cascada y hoy solo un precipicio roco
 
 
 
-/CON 
+/CON
 /0
-NORTE 3 ; TEST ; BORRA
 /1
-NORTE 3 ; TEST ; BORRA
 /2
-NORTE 3 ; TEST ; BORRA
 /3
-NORTE 4
-SUR   24
-ESTE  10
-DENTRO 10
+NORTE lCampo
+SUR   lValle
+ESTE  lHabGuarra
+ENTRAR lHabGuarra
 /4
-NORTE 4
-SUR   3
-ESTE  5
-OESTE 4
+NORTE lCampo
+SUR   lFrontera
+ESTE  lArida
+OESTE lCampo
 /5
-NORTE 5
-ESTE  6
-OESTE 4
+NORTE lArida
+ESTE  lTapizado
+OESTE lCampo
 /6
-NORTE 12
-SUR   8
-ESTE  7
-OESTE 5
+NORTE lLava
+SUR   lColina
+ESTE  lPaisajeAl
+OESTE lArida
 /7
-NORTE 12
-SUR   9
-OESTE 6
+NORTE lLava
+SUR   lPrecipicio
+OESTE lTapizado
 /8
-NORTE 6
+NORTE lTapizado
 SUR   13
-ESTE  9
+ESTE  lPrecipicio
 /9
-NORTE 7
-OESTE 8
+NORTE lPaisajeAl
+OESTE lColina
 SUR   0
 ESTE  0
-BAJO  0
+BAJAR 0
 /10
-OESTE 3
-SALIR 3
-BAJO  0
+OESTE lFrontera
+SALIR lFrontera
+BAJAR 0
 /11
-SUBIR 0 ; TREPO 0
+SUBIR 0
 /12
-SUR   7
-ESTE  12
+SUR   lPaisajeAl
+ESTE  lLava
 NORTE 0
-BAJO  0
+BAJAR 0
 /13
-SUR   16
+SUR   lBosqueProf
 OESTE 14
 NORTE 13
 ESTE  13
@@ -1445,64 +1609,63 @@ SUR   14
 OESTE 14
 /15
 NORTE 14
-SUR   18
-SURESTE 16
+SUR   lPicnic
+SURESTE lBosqueProf
 OESTE 14
 ESTE  15
 /16
 NORTE 15
-SUBIR 17 ; TREPO 17
+SUBIR 17
 ESTE  14
 OESTE 14
 SUR   14
 /17
-BAJO  16
+BAJAR lBosqueProf
 NORTE 0
 SUR   0
 ESTE  0
 OESTE 0
 /18
-NOROESTE 3
-ESTE  19
-OESTE 24
+NOROESTE lFrontera
+ESTE  lBoscillo
+OESTE lValle
 /19
-SUR   20
-OESTE 18
+SUR   lBosqueCer
+OESTE lPicnic
 /20
-NORTE 19
-SUR   21
-OESTE 20
+NORTE lBoscillo
+SUR   lRampa
+OESTE lBosqueCer
 /21
-NORTE 20
-SUR   22
+NORTE lBosqueCer
+SUR   lRampa2
 /22
-NORTE 21
-SUR   23
+NORTE lRampa
+SUR   lEspiral
 /23
-NORTE 22
+NORTE lRampa2
 SUR   0
 /24
-NORTE 3
-SUR   25
-ESTE  18
-OESTE 20
+NORTE lFrontera
+SUR   lValleProf
+ESTE  lPicnic
+OESTE lBosqueCer
 /25
-NORTE 24
-SUR   26
+NORTE lValle
+SUR   lReja
 ESTE  14
 OESTE 13
 /26
-NORTE 25
-SUR   28
-ESTE  20
-OESTE 20
-DENTRO 0
+NORTE lValleProf 
+OESTE  lBosqueCer 
+ESTE  lBosqueCer 
+SUR   lCanon 
+ENTRAR 0
 /27
 /28
-NORTE 26
-ESTE  20
-OESTE 20
-SUR   0
+NORTE lReja
+OESTE lBosqueCer 
+ESTE  lBosqueCer 
 /29
 /30
 /31
@@ -1525,23 +1688,19 @@ SUR   0
 /48
 
 
-/OBJ 
-;obj	loc	peso	nombre		adjetivo	atributo
-;num  ini              
+/OBJ
+;obj	loc		peso	nombre		adj.	atributo
+;-----------------------------------------------------------------------------------------------
+/0	NOTCREATED	1	LINTERNA	_	ATTR aFemale aSwitchable aContainer	;lLava
+/1	NOTCREATED	1	MONEDA		_	ATTR aFemale				;lPozo
+/2	NOTCREATED	1	TORTILLA	_	ATTR aFemale aEdible			;lPicnic
+/3	lCanon 		1	BOTELLA		_	ATTR aFemale aFull
+/4	NOTCREATED	1	LLAVE		_	ATTR aFemale				;lRamas
+/5	lColina		1	PILAS		_	ATTR aFemale
+/6	lEspiral	1	ZAPATOS		_	ATTR aFemale aWear aPluralName	;pareja de botas
 
-/0	3	1	LINTERNA	ENCENDIDA	ATTR aLight aFemale aSwitchable
-/1	11	1	MONEDA		_		ATTR aFemale
-/2	12	1	LINTERNA	_		ATTR aSwitchable aFemale
-/3	10	1	TORTILLA	_		ATTR aEdible aFemale
-/4	28 	1	BOTELLA		_		ATTR aDrinkable aFemale
-/5	28	1	BOTELLA		_		ATTR aFemale			; LLENA
-/6	10	1	LLAVE		_		ATTR aFemale
-/7	8 	1	PILAS		_		ATTR aFemale
-;/8	23	1	ZAPATOS		_		ATTR aWear
-  
 ; Importante: Recuerda que si creas un objeto contenedor o soporte, debes dejar sin usar la localidad de igual número
-
-/PRO 0 
+/PRO 0
 
 ; ################################## ACCIONES MÚLTIPLES ####################################
 ; #                                                                                        #
@@ -1554,7 +1713,8 @@ SUR   0
 _	_
  HOOK "RESPONSE_START" ; «Back call» a el sistema de hooks. Por defecto no hace nada pero algunas librerías plugin podrían necesitarlo. No borrar.
  
-COGER TODO   ; COGER TODO DE --> SACAR TODO DE
+; COGER TODO DE --> SACAR TODO DE
+COGER TODO
  PREP DE
  SYNONYM SACAR _
 
@@ -1595,7 +1755,8 @@ VACIAR _
  SYNONYM SACAR TODO
  LET 43 &&_voc_DE
 
-SACAR _    ; Copiamos en el Flag 13 el número de objeto referenciado por noun2 (o 255 si no lo hay)
+; Copiamos en el Flag 13 el número de objeto referenciado por noun2 (o 255 si no lo hay)
+SACAR _    
  WHATOX2 13
 
 SACAR TODO
@@ -1672,8 +1833,8 @@ PONER _
  PREP EN
  SYNONYM METER _
  
-
-METER _         	 ; Copiamos en el Flag 13 el número de objeto referenciado por noun2 (o 255 si no lo hay)
+; Copiamos en el Flag 13 el número de objeto referenciado por noun2 (o 255 si no lo hay)
+METER _         	 
  WHATOX2 13
 
 METER TODO
@@ -1691,7 +1852,6 @@ METER TODO
  ABSENT @13
  WRITELN "No ves eso por aquí."
  DONE
-
 
 METER TODO
  PREP EN
@@ -1712,8 +1872,6 @@ METER TODO
  EQ 14 1		 ; No llevas nada en el inventario (solo llevas el contenedor)
  WRITELN "No llevas nada."
  DONE
-
-
 
 METER TODO
  PREP EN
@@ -1807,6 +1965,11 @@ _ TODO
 ; #                                                                                       #
 ; #########################################################################################
 
+ENCENDER _
+ SYNONYM CONECTAR _
+
+APAGAR _
+ SYNONYM DESCONECTAR _
 
 IR   _
  LT 34 14
@@ -1827,7 +1990,6 @@ _    _
  LET 43 255
 
 ; ** Convertir «MIRAR DENTRO» en «EXAMINAR DENTRO»
-
 MIRAR _
  NOTEQ 34 255          
  PREP DENTRO
@@ -1835,7 +1997,6 @@ MIRAR _
  
 
 ; ** Convertir «MIRAR ALGO» en «EXAMINAR ALGO»
-
 MIRAR _
  NOTEQ 34 255
  SYNONYM EXAMINAR _
@@ -1848,7 +2009,6 @@ MIRAR _
   
  
 ; ** Convertir «REGISTRAR» en «EXAMINAR DENTRO»
-
 REGISTRAR _
  SYNONYM EXAMINAR _
  LET 43 &&_voc_DENTRO
@@ -1869,7 +2029,6 @@ X _
  SYNONYM EXAMINAR _
  
 ; ** Convertir «CONSULTAR A ALGUIEN» en «PREGUNTAR A ALGUIEN»
-
 CONSULTAR _
  NOTEQ 34 255
  NOTEQ 51 255
@@ -1878,7 +2037,7 @@ CONSULTAR _
  
 
  
- ; ** Convertir «HACER ALGO CON OBJETO2 A OBJETO1» en «HACER ALGO A OBJETO1 CON OBJETO2»
+; ** Convertir «HACER ALGO CON OBJETO2 A OBJETO1» en «HACER ALGO A OBJETO1 CON OBJETO2»
 _  _
  PREP CON 
  BZERO 12 2 	; La prep estaba antes del primer nombre
@@ -1955,7 +2114,6 @@ _  _
 
 
 ; ** Convertir «COGER DE» en «SACAR DE»
-
 COGER _
   PREP DE
   SYNONYM SACAR _
@@ -1978,9 +2136,919 @@ _	_
 
 ;  ********************* [[[  Coloca aquí tus propias respuestas  ]]] *********************
 
+AD    _
+ ;MESSAGE 139 
+ WRITELN "También participaron: Eva Samitier, Juan Darder, Juanjo Muñoz y Tim Gilberts (some bugs)."
+ DONE    
 
+SUR   _
+ AT      lCanon 
+ PROCESS 7 
 
+SUR   _
+ AT      lPrecipicio
+ PROCESS 7 
 
+SUR   _
+ AT      lRamas 
+ PROCESS 8 
+
+SUR   _
+ AT      lEspiral 
+ PROCESS 7 
+
+ESTE  _
+ AT      lPrecipicio
+ PROCESS 7 
+
+ESTE  _
+ AT      lRamas 
+ PROCESS 8 
+
+OESTE _
+ AT      lRamas 
+ PROCESS 8 
+
+SUBIR _
+ AT      lPozo 
+ GOTO    lHabGuarra 
+ CLEAR   0 	; No está oscuro
+ DESC    
+
+BAJAR  _
+ AT      lHabGuarra 
+ CARRIED oLinterna
+ ONOTZERO oLinterna aOn
+ CLEAR   0 
+ GOTO    lPozo 
+ DESC    
+
+BAJAR  _
+ AT      lHabGuarra 
+ GOTO    lPozo 
+ SET     0 	; Está oscuro
+ DESC    
+
+BAJAR  _
+ AT      lLava 
+ PROCESS 6 
+
+BAJAR  _
+ AT      lCanon 
+ PROCESS 7 
+
+BAJAR  _
+ AT      lPrecipicio
+ PROCESS 7 
+
+ENTRAR _
+ AT      lReja 
+ ZERO    fCandado 
+ ;MES     53 
+ WRITE " Hay una fuerte reja metálica"
+ ;MES     55 
+ WRITE " cerrada con un candado"
+ WRITELN "."
+ DONE    
+
+ENTRAR _
+ AT      lReja 
+ EQ      fCandado 1 
+ ;MES     53 
+ WRITE " Hay una fuerte reja metálica"
+ ;MES     56 
+ WRITE " con un candado abierto"
+ WRITELN "."
+ DONE    
+
+ENTRAR _
+ AT      lReja 
+ EQ      fCandado 2 
+ ;MES     53 
+ WRITE " Hay una fuerte reja metálica"
+ WRITELN "."
+ DONE    
+
+ENTRAR _
+ AT      lReja 
+ EQ      1 5 ; flag 1 Objetos llevados
+ NOTZERO fLintPilas 
+ GOTO    30 
+ DESC    
+
+ENTRAR _
+ AT      lReja 
+ ;MESSAGE 73 
+ WRITELN "Para entrar y sobrevivir en las profundidades necesitas más cosas."
+ DONE    
+
+NORTE _
+ AT      lLava 
+ PROCESS 6 
+
+NORTE _
+ AT      lRamas 
+ PROCESS 8 
+
+OIR   _
+ AT      lBoscillo 
+ WRITELN "Oyes el susurro del viento, el canto de los pájaros y el murmullo del agua."
+ DONE    
+
+OIR   _
+ WRITELN "Si en vez de escuchar tanto, teclearas más, oirías: «Clik, Clak, Clok»."
+ DONE    
+
+AYUDA _
+ PROCESS 3 
+ DONE    
+
+MATAR  _
+ ;MESSAGE 28 
+ WRITELN "¿Te parece forma de solucionar las cosas?"
+ NOTDONE 
+
+;SAVE  RAM  
+; RAMSAVE 
+; DESC    
+
+;SAVE  _
+; SAVE    
+; DESC    
+
+;LOAD  _
+; COMPROBAR
+; NOTEQ   34 99 
+; GT      29 127 
+; LOAD    
+; LT      29 128 
+; PLUS    29 128 
+
+;LOAD  _
+; COMPROBAR
+; NOTEQ   34 99 
+; LT      29 128 
+; LOAD    
+; GT      29 127 
+; MINUS   29 128 
+
+;LOAD  RAM  
+; RAMLOAD 248 
+
+;LOAD  _
+; NOTEQ   34 99 
+; DONE    
+
+;SAVE  _
+; CLS     
+; DESC    
+
+EMPUJAR ENANO
+ AT      lLava 
+ LT      fEnano 255 ; flag 102
+ SET     fEnano 
+ WRITELN "¡El enano ha caído al volcán!"
+ PAUSE   100 
+ WRITELN "¡Asesino nanicida!"
+ LET     5 4 
+ DONE    
+
+ABRIR CANDADO
+ PRESENT oLlave
+ NOTCARR oLlave
+ ;WRITE "Primero coges la llave. "
+ GET oLlave
+
+ABRIR CANDADO
+ EQ 44 255
+ LET 43 &&_voc_CON
+ LET 44 &&_voc_LLAVE
+
+ABRIR CANDADO
+ PREP CON
+ NOUN2 LLAVE
+ AT lReja
+ CARRIED oLlave
+ ZERO    fCandado 
+ LET fCandado 1
+ WRITELN "Para lo viejo que parece, se ha abierto sin ningún problema."
+ DONE
+
+ABRIR CANDADO
+ NOTCARR oLlave
+ WRITELN "Estiras de él pero está cerrado. No se abre."
+ DONE
+
+ABRIR REJAS
+ PREP CON
+ NOUN2 LLAVE
+ AT lReja
+ CARRIED oLlave
+ ZERO    fCandado 
+ LET fCandado 1
+ WRITE "Para ello, abres el candado que "
+ WRITELN "con lo viejo que parece, se ha abierto sin ningún problema."
+ DONE
+
+ABRIR REJAS
+ AT      lReja 
+ EQ      fCandado 2 
+ LET     fCandado 3 
+ DESC 
+
+ABRIR REJAS
+ AT      lReja 
+ WRITELN "Mmm... no puedes porque tiene el candado puesto."
+ DONE
+
+EMPUJAR REJAS
+ AT      lReja 
+ EQ      fCandado 2 
+ LET     fCandado 3 
+ DESC    
+
+EMPUJAR REJAS 
+ AT      lReja 
+ WRITELN "Empujas y empujas sin conseguir nada. En muy resistente y todavía está el candado puesto."
+ DONE
+
+EMPUJAR CANDA
+ AT      lReja 
+ CARRIED oLlave
+ EQ      fCandado 0 
+ LET     fCandado 1 
+ DESC    
+
+ABRIR CANDADO
+ AT lReja
+ CARRIED oLlave
+ NOTZERO    fCandado 
+ WRITELN "Pero si ya está abierto."
+ DONE
+
+CERRAR REJAS
+ AT      lReja 
+ EQ      fCandado 3 
+ LET     fCandado 2 
+ DESC    
+
+CERRAR CANDA
+ AT      lReja 
+ EQ      fCandado 1 
+ LET     fCandado 0 
+ DESC    
+
+PEGAR ENANO
+ AT      lLava 
+ LT      fEnano 255 ; flag 102
+ PROCESS 11 
+ DONE    
+
+COGER  MONED
+ AT      lPozo 
+ PRESENT oMoneda 
+ ISLIGHT
+ GET     oMoneda
+ SET     fMoneda ; flag 12
+ ;WRITELN "Coges la moneda todavía sin creer la suerte que has tenido."
+ DONE    
+
+COGER MONEDA
+ AT      lPozo 
+ ISLIGHT
+ ABSENT oMoneda 
+ ;MES     1 
+ WRITE "Te arrastras como una cucaracha por todo el suelo"
+ PAUSE   100 
+ ;MESSAGE 12 
+ WRITELN " pero de monedas nada, ¡listillo!"
+ DONE    
+
+COGER LLAVE
+ AT      lRamas 
+ EQ      fLlave 1 ; flag 103
+ WRITELN "La llave está demasiado lejos."
+ DONE    
+
+COGER ENANO
+ AT      lLava 
+ LT      fEnano 255 ; flag 102
+ PROCESS 11 
+ DONE    
+
+SACAR CANDADO
+ LET 33 _voc_COGER
+
+QUITAR CANDADO
+ LET 33 _voc_COGER
+
+COGER CANDADO
+ AT      lReja 
+ EQ      fCandado 1 
+ LET     fCandado 2 
+ ;MESSAGE 58 
+ WRITELN "Al quitarlo... ¡desaparece de tus manos!"
+ ANYKEY
+ DESC
+
+COGER CANDADO
+ AT      lReja 
+ WRITELN "Lo tienes en la mano, sigue en la reja. Cerrado. ¿Y ahora qué?"
+ DONE
+
+GOLPEAR CANDADO
+ AT      lReja 
+ EQ      fCandado 1 
+ WRITELN "Te haces daño en la mano. ¡A quién se le ocurre!"
+ DONE
+
+GOLPEAR CANDADO
+ AT      lReja 
+ EQ      fCandado 2 
+ WRITELN "¿Qué candado? Vas y golpeas la pared. La violencia no es la solución."
+ DONE
+
+GOLPEAR CANDADO
+ AT      lReja 
+ WRITELN "No consigues más que hacerte daño. Cabeza de chorlito."
+ DONE
+
+SOLTAR TODO 
+ AT      lPicnic 
+ ZERO    1 
+ ;MESSAGE 100 
+ WRITELN "No tienes nada."
+ NEWLINE 
+ DONE    
+
+SOLTAR TODO 
+ AT      lPicnic 
+ GOTO    lHabGuarra 
+ DROPALL 
+ GOTO    lPicnic 
+ ;MESSAGE 52 
+ WRITELN "¿No sabes leer? ¡Un enanito desaparece con lo dejado!"
+ DONE    
+
+;SOLTAR TODO 
+; DOALL   254 
+
+SOLTAR _
+ AT      lPicnic 
+ GOTO    lHabGuarra 
+ WHATO   
+ LT      51 255 ; COMPROBAR flag 51
+ EQ      54 254 ; COMPROBAR flag 54
+ COPYFF  55 38 ; COMPROBAR flag 55, 38
+ AUTOD   
+ PAUSE   50 
+ ;MESSAGE 52 
+ WRITELN "¿No sabes leer? ¡Un enanito desaparece con lo dejado!"
+ GOTO    lPicnic 
+ DONE    
+
+SOLTAR _
+ AT      lRamas 
+ WHATO   
+ LT      51 255 
+ EQ      54 254 
+ ;MESSAGE 24 
+ WRITELN "¡{OREF} ha caído al suelo!"
+ PUTO    lBosqueProf
+ DONE    
+
+;SOLTAR _
+; AUTOD   
+; DONE    
+
+SALTAR _
+ AT      lPrecipicio
+ PROCESS 7 
+
+SALTAR _
+ AT      lLava 
+ PROCESS 6 
+
+SALTAR _
+ AT      lRamas 
+ PROCESS 8 
+
+SALTAR _
+ AT      lCanon 
+ PROCESS 7 
+
+SALTAR _
+ WRITELN "Nunca te lo habías pasado bien haciendo el tonto. Venga, déjate ya de perder el tiempo."      
+ DONE
+
+CONECTAR LINTERNA 
+ CARRIED oLinterna 
+ NOTZERO fLintPilas ; flag 11
+ AT      lPozo 
+ OZERO oLinterna aOn
+ OSET oLinterna aOn
+ WRITELN "Enciendes la linterna que ilumina el lugar."
+ CLEAR   0 
+ DESC    
+
+CONECTAR LINTERNA
+ CARRIED oLinterna 
+ NOTZERO fLintPilas 
+ OZERO oLinterna aOn
+ OSET oLinterna aOn
+ ;SWAP    2 0 
+ CLEAR   0 	
+ WRITELN "Enciendes la linterna."
+ DONE
+
+CONECTAR LINTERNA
+ CARRIED oLinterna 
+ ZERO    fLintPilas 
+ WRITELN "No tiene pilas."
+ DONE    
+
+DESCONECTAR LINTERNA
+ CARRIED oLinterna ; apagada
+ AT      lPozo 
+ ONOTZERO oLinterna aOn
+ OCLEAR oLinterna aOn
+ SET     0  
+ WRITELN "Apagas la linterna y la oscuridad se apodera del lugar."
+ PAUSE 5
+ DESC    
+
+DESCONECTAR LINTERNA
+ CARRIED oLinterna ; apagada
+ ONOTZERO oLinterna aOn
+ OCLEAR oLinterna aOn
+ ;SWAP    0 2 
+ WRITELN "Apagas la linterna."
+ DONE
+
+ESPERAR _
+ ; redundante pero da otro mensaje
+ MESSAGE 36 
+ DONE    
+
+LEER LETRERO
+ PROCESS 4 
+ DONE    
+
+EXAMINAR _
+ PROCESS 4 
+ DONE    
+
+OLER AIRE
+ AT      lCampo
+ WRITELN "Curioso, la peste a azufre parece venir del este."
+ DONE   
+
+OLER AIRE
+ AT      lArida
+ WRITELN "Uff, te estás empezando a marear del pestazo a azufre. Parece que hacia el este es más fuerte."
+ DONE   
+
+OLER AIRE
+ AT      lArida
+ WRITELN "El olor a azufre se intensifica cada vez más hacie el este."
+ DONE   
+
+OLER AIRE
+ AT      lTapizado
+ WRITELN "Uff, te estás empezando a marear del pestazo a azufre. Parece que hacia el este es más fuerte."
+ DONE   
+
+VACIAR BOTELLA
+ CARRIED oBotella
+ OZERO oBotella aFull
+ WRITELN "Ya está vacía."
+ DONE
+
+VACIAR BOTELLA
+ CARRIED oBotella 
+ OCLEAR oBotella aFull
+ ;SWAP    5 4 
+ WRITELN "Derramas el agua que hay en ella hasta que no queda nada."
+ DONE
+
+LLENAR BOTELLA
+ CARRIED oBotella
+ ONOTZERO oBotella aFull
+ WRITELN "No cabe más agua ya."
+ DONE
+
+LLENAR BOTELLA
+ AT      lFrontera 
+ CARRIED oBotella 
+ OSET oBotella aFull
+ WRITELN "Casi sin esfuerzo, llenas la botella de agua."
+ DONE
+
+LLENAR BOTELLA
+ AT      lBoscillo 
+ CARRIED oBotella 
+ OSET oBotella aFull
+ WRITELN "No te resulta demasiado difícil llenarla de agua."
+ DONE
+
+LLENAR BOTELLA
+ AT      lValle 
+ CARRIED oBotella 
+ OSET oBotella aFull
+ WRITELN "Genial. Ya está llena de agua."
+ DONE      
+
+LLENAR BOTELLA
+ AT      lValleProf 
+ CARRIED oBotella 
+ OSET oBotella aFull
+ WRITELN "Mmm... a ver... listo. Botella llena."
+ DONE      
+
+LLENAR BOTELLA
+ CARRIED oBotella 
+ WRITELN "No puedes llenarla si no hay agua cerca."
+ DONE      
+
+COMER TORTI
+ CARRIED oTortilla
+ DESTROY oTortilla
+ MESSAGE 4 
+ LET     5 4 ; COMPROBAR flag 5
+ DONE    
+
+BEBER  RIO  ; COMPROBAR
+ CARRIED oBotella
+ OCLEAR oBotella aFull
+ ;SWAP    5 4 ; COMPROBAR
+ WRITELN "Pero qué sed tenías."    
+ DONE   
+
+COGER RAMAS
+ AT      lRamas 
+ WRITELN "Ya te estás agarrando a las ramas. Si no, ya hubieras caído."
+ DONE
+
+MOVER RAMAS
+ AT      lRamas 
+ LET 33 _voc_SACUDIR
+
+SACUDIR RAMAS
+ AT      lRamas 
+ LT      fLlave 2 ; flag 103
+ LET     51 oLlave ; flag 51 = Último ebjeto referenciado. Era LET 51 6 (6 era llave)
+ ;MESSAGE 24 
+ WRITELN "¡La llave ha caído al suelo!"
+ PLACE   oLlave lBosqueProf 
+ SET     fLlave 
+ DONE    
+
+SACUDIR RAMAS
+ AT      lRamas 
+ WRITELN "La rama se mueve y se mueve."
+ DONE    
+
+PONER PILAS
+ LET 33 _voc_METER
+
+METER PILAS
+ LET 43 &&_voc_EN
+ LET 44 &&_voc_LINTERNA
+
+METER PILAS
+ PREP A
+ LET 43 _voc_EN
+
+METER PILAS
+ PREP EN
+ NOUN2 LINTERNA
+ CARRIED oLinterna
+ NOTZERO fLintPilas 
+ WRITELN "La linterna ya tiene las pilas puestas."
+ DONE    
+
+METER PILAS
+ PREP EN
+ NOUN2 LINTERNA
+ CARRIED oPila
+ CARRIED oLinterna
+ DESTROY oPila
+ SET     fLintPilas 
+ WRITELN "Vale, linterna lista."
+ ;MESSAGE 2 
+ DONE    
+
+METER PILAS
+ PREP EN
+ NOUN2 LINTERNA
+ NOTCARR oPila
+ WRITELN "No tienes la pila, así que..."
+ DONE
+
+METER PILAS
+ PREP EN
+ NOUN2 LINTERNA
+ NOTCARR oLinterna
+ WRITELN "No tienes la linterna... ¿Dónde está?"
+ DONE
+
+QUITAR PILAS
+ LET 33 _voc_SACAR
+ LET 43 &&_voc_DE
+ LET 44 &&_voc_LINTERNA
+
+SACAR PILAS
+ CARRIED oLinterna
+ NOTZERO fLintPilas 
+ GT      1 cMaxCosas ; Llevas más de cuatro cosas
+ WRITELN "Ya no puedes llevar más trastos."
+ DONE    
+
+SACAR PILAS
+ PREP DE
+ NOUN2 LINTERNA
+ ZERO fLintPilas
+ CARRIED oLinterna
+ WRITELN "La linterna no tiene las pilas puestas."
+ DONE    
+
+SACAR PILAS
+ PREP DE
+ NOUN2 LINTERNA
+ CARRIED oLinterna ; encendida
+ OCLEAR oLinterna aOn
+ AT      lPozo 
+ SET     0
+ CREATE  oPila
+ GET     oPila
+ CLEAR   fLintPilas 
+ DESC    
+
+SACAR PILAS
+ PREP DE
+ NOUN2 LINTERNA
+ CARRIED oLinterna
+ NOTZERO fLintPilas 
+ CLEAR   fLintPilas 
+ OCLEAR oLinterna aOn
+ CREATE  oPila
+ GET     oPila
+ OK      
+
+;SACO  PILAS
+ ;Redundante
+; CARRIED oLinterna ; encendida
+; NOTZERO fLintPilas 
+; GT      1 cMaxCosas 
+; WRITELN "Ya no puedes llevar más trastos."
+; DONE    
+
+SACAR PILAS
+ PREP DE
+ NOUN2 LINTERNA
+ CARRIED oLinterna ; encendida
+ NOTZERO fLintPilas 
+ OCLEAR oLinterna aOn
+ ;SWAP    0 2 
+ CREATE  oPila
+ GET     oPila
+ CLEAR   fLintPilas 
+ OK      
+
+SACAR CANDA
+ PREP DE
+ NOUN2 REJAS
+ AT      lReja 
+ EQ      fCandado 1 
+ LET     fCandado 2 
+ ;MESSAGE 58 
+ WRITELN "Al quitarlo... ¡desaparece de tus manos!"
+ ;ANYKEY  
+ DESC    
+
+;MIRAR _
+ ; Redundante
+; DESC    
+
+SENTAR SILLA
+ AT      lPicnic 
+ ;MESSAGE 35 
+ WRITE "Te sientas... y te levantas para seguir jugando. "
+ PAUSE   30
+ MESSAGE 36 
+ DONE    
+
+ROMPER BOTELLA
+ CARRIED oBotella 
+ DESTROY oBotella
+ LET     5 4 ; COMPROBAR ; flag 5 autodecrementa
+ OK      
+
+SALTAR _
+ AT      lLava 
+ PROCESS 6 
+
+SALTAR _
+ AT      lPrecipicio
+ PROCESS 7 
+
+SALTAR _
+ AT      lCanon 
+ PROCESS 7 
+
+SALTAR _
+ AT      lEspiral 
+ PROCESS 7 
+
+;---------- COMPROBAR ------------
+PUTA  _
+ NOTZERO fGrosero 
+ CLEAR   fGrosero 
+ MESSAGE 46 	; Ya te lo advertí
+ PAUSE   200 
+ PROCESS 5 
+
+PUTA  _
+ SET 	 fGrosero
+ DROPALL 
+ WRITELN "No hace falta decir groserías."
+ DONE
+
+_ MIERDA
+ NOTZERO fGrosero 
+ CLEAR   fGrosero 
+ MESSAGE 46 
+ PAUSE   200 
+ PROCESS 5 
+
+_ MIERDA
+ DROPALL 
+ SET     fGrosero 
+ WRITELN "No hace falta decir groserías."
+ PAUSE   2 
+ GOTO    lFrontera 
+ DESC    
+;---------------------------------
+
+RINDO _
+ QUIT    
+ PRINT  21 ; comprobar
+
+RINDO _
+ OK      
+
+SALUDAR _
+ AT      lLava 
+ LT      fEnano 255 
+ WRITELN "El enano está muy cabreado para finuras y con malos modales intenta deshacerse de ti."
+ DONE    
+
+PREGUNTAR ENANO
+ AT      lLava 
+ LT      fEnano 255 
+ PROCESS 10 
+ DONE    
+
+SALUDAR _
+ AT      lBosqueCer
+ GT      fElfito 2 
+ LT      fElfito 5 
+ WRITELN "Te observa tímidamente y esboza una sonrisa."
+ DONE    
+
+SALUDAR _
+ EQ      fElfito 4 
+ WRITELN "Te observa por unos instantes y esboza una sonrisa."
+ DONE    
+
+PREGUNTAR FIGUR
+ AT      lBosqueCer
+ GT      fElfito 2 
+ LT      fElfito 5 
+ PROCESS 9 
+ DONE    
+
+PREGUNTAR _
+ EQ      fElfito 4 
+ PROCESS 9 
+ DONE    
+
+PREGUNTAR _
+ AT      lBosqueCer
+ EQ      fElfito 3 
+ PROCESS 9 
+ DONE    
+
+PREGUNTAR _
+ AT      lLava 
+ PROCESS 10 
+ DONE    
+
+PEGAR ELFO
+ EQ      fElfito 4 
+ LET     fElfito 3 
+ WRITELN "Muy ofendido, Elfito, se las pira llorando."
+ DONE    
+
+;PEGAR  _
+; OK      
+
+PONER ZAPATOS
+ CARRIED oBotas
+ ;MESSAGE 135 
+ WRITELN "Las botas son pequeñas para tus pies."
+ DONE    
+
+DAR ZAPATOS
+ AT      lLava
+ PRESENT oBotas
+ NOTCARR oBotas
+ GET oBotas
+
+DAR ZAPATOS
+ AT      lLava
+ EQ 44 255
+ LET 43 &&_voc_A
+ LET 44 &&_voc_ENANO
+
+DAR ZAPATOS
+ PREP    A
+ NOUN2   ENANO 
+ AT      lLava 
+ CARRIED oBotas
+ LT      fEnano 255 
+ DESTROY oBotas
+ SET     fEnano 
+ CREATE  oLinterna
+ EXTERN "previous_noun=50" 	; Para que se pueda decir «cógela» y entienda «la linterna» después
+ 				; de que la deje el enano. No puede ser oLinterna, ha de ser 50.
+				; Gracias Uto
+ WRITELN "Don Enano se calza, y agradecido, te deja una linterna."
+ DONE
+
+;SALID _
+; PROCESS 13 
+; DONE    
+
+;_ INVEN
+; NOTZERO 1 
+; SYSMESS 9 
+; LISTAT  254 
+; DONE    
+
+;_ INVEN
+; MESSAGE 100 
+
+_ LLAVE
+ AT      lReja 
+ EQ      33 255 
+ ZERO    fCandado 
+ WRITELN "Pues ya lo sabes."
+ DONE    
+
+_ FIGURA
+ AT      lBosqueCer
+ GT      fElfito 2 
+ LT      fElfito 5 
+ PROCESS 9 
+ DONE    
+
+_ FIGURA
+ EQ      fElfito 4 
+ PROCESS 9 
+ DONE    
+
+_ FIGURA
+ AT      lBosqueCer
+ EQ      fElfito 3 
+ PROCESS 9 
+ DONE    
+
+;_ _
+; ; No sé qué hace esto. Mira el vebo, si es menor de 14. Redundante
+; LT      33 14 ; COMPROBAR flag 33
+; MOVE    38 ; COMPROBAR flag 38
+; DESC    
+
+; Runtina AD de «no puedes ir al»
+;_ _
+; LT      33 14 
+; WRITELN "No puedes "; COMPROBAR
+; EQ      33 13 
+; WRITELN "ir al "; COMPROBAR 
+
+;_ _
+; LT      33 9 
+; WRITELN "ir al " ; COMPROBAR
+
+; Rutina AD «no puedes ir al»
+;_ _
+; LT      33 14 
+; COPYFF  33 200 
+; PLUS    200 100 
+; MES     @200 
+; WRITELN "." ; COMPROBAR
+; PROCESS 13 
 
 ; ############################### RESPUESTAS POR DEFECTO ##################################
 ; #                                                                                       #
@@ -2066,7 +3134,7 @@ RAMSAVE        _
 
 RAMLOAD        _        
  RAMLOAD       255
- ANYKEY
+ ;ANYKEY
  DESC
                 
 TRANSCRIPCION _
@@ -3434,160 +4502,6 @@ USAR        _
  WRITELN "USAR es demasiado genérico. Por favor, sé más concreto. Por ejemplo, si quieres barrer el suelo utiliza BARRER SUELO, no USAR ESCOBA."
  DONE
 
-;-----------------------------------------------
-
-
-EX _                        ; Posiblemente en la frase hay un nombre no incluido en el vocabulario y la «preposición» DENTRO (EN) está presente
- PREP DENTRO
- EQ 34 255
- BNOTZERO 12 1
- WRITELN "No puedes examinar dentro de eso que dices."  
- DONE
-
-EX _                        ; No hay nombre en la frase y la «preposición» DENTRO (EN) está presente
- PREP DENTRO                       
- EQ 34 255
- BZERO 12 1
- WRITELN "Por favor, especifica dentro de qué quieres examinar."
- DONE
-
-EX _                        ; Posiblemente en la frase hay un nombre no incluido en el vocabulario
- EQ 34 255
- BNOTZERO 12 1
- WRITELN "No puedes examinar eso que dices."  
- DONE
-
-EX _                        ; No hay nombre en la frase
- EQ 34 255
- BZERO 12 1
- WRITELN "Por favor, especifica qué o a quién quieres examinar."
- DONE
-
-EX        _           ; hay nombre, y es propio, y la «preposición» DENTRO (EN) esta presente
- PREP DENTRO
- NOTEQ 51 255
- ONOTZERO @51 aNPC ; Es un NPC
- PRESENT @51
- WRITELN "Vaya ocurrencia..."
- DONE
-
-EX _
- NOTEQ 51 255
- ONOTZERO @51 aNPC ; Es un NPC
- ABSENT @51
- WRITELN "No está aquí."
- DONE
- 
-EX _
- NOTEQ 34 255
- NOTEQ 51 255
- ONOTZERO @51 aNPC ; Es un NPC
- PRESENT @51
- WRITELN "Es de mala educación."
- DONE
-
-EX _
- NOTEQ 34 255
- NOTEQ 51 255
- ONOTZERO @51 aNPC ; Es un NPC
- ABSENT @51
- WRITELN "No está aquí."
- DONE
-
-EX _    ; Hay nombre pero no es un objeto, «prep.» DENTRO presente
- PREP DENTRO
- NOTEQ 34 255
- EQ 51 255
- WRITELN "No le ves sentido a examinar dentro de eso."   
- DONE
-
-EX _                        ; Hay nombre pero no es un objeto
- NOTEQ 34 255
- EQ 51 255
- WRITELN "No le ves sentido a examinar eso."     
- DONE
-
-EX _                        ; Es un objeto presente y contenedor, transaparente con cosas dentro
- NOTEQ 51 255
- PRESENT @51
- ONOTZERO @51 aContainer
- ONOTZERO @51 aTransparent
- OBJAT @51 13
- NOTZERO 13
- WRITE "Examinas {OREF} pero no ves nada especial "
- LISTCONTENTS @51
- WRITELN "."
- DONE
-
-EX _                        ; Es un objeto presente y contenedor, que no se puede abrir
- NOTEQ 51 255
- PRESENT @51
- ONOTZERO @51 aContainer
- OZERO @51 aOpenable
- OBJAT @51 13
- NOTZERO 13
- WRITE "Examinas {OREF} pero no ves nada especial "
- LISTCONTENTS @51
- WRITELN "."
- DONE
-
-
-EX _                        ; Es un objeto presente y contenedor, que se puede abrir y está abierto con cosas dentro
- NOTEQ 51 255
- PRESENT @51
- ONOTZERO @51 aContainer
- ONOTZERO @51 aOpenable
- ONOTZERO @51 aOpen
- OBJAT @51 13
- NOTZERO 13
- WRITE "Examinas {OREF} pero no ves nada especial"
- LISTCONTENTS @51
- WRITELN "."
- DONE
-
-EX _                        ; Es un objeto presente y contenedor, que se puede abrir y cerrado
- NOTEQ 51 255
- PRESENT @51
- ONOTZERO @51 aContainer
- ONOTZERO @51 aOpenable
- OZERO @51 aOpen
- WRITELN "Examinas {OREF} pero no ves nada especial. Si lo abres podrás ver su contenido."
- DONE
-
-EX _                        ; Es un objeto presente y contenedor, lockable y locked
- NOTEQ 51 255
- PRESENT @51
- ONOTZERO @51 aContainer
- ONOTZERO @51 aLockable
- OZERO @51 aLocked
- WRITELN "Examinas {OREF} pero no ves nada especial. Si lo abres podrás ver su contenido."
- DONE
-
-EX _                        ; Es un objeto presente y supporter con algo encima
- NOTEQ 51 255
- PRESENT @51
- ONOTZERO @51 aSupporter
- OBJAT @51 13
- NOTZERO 13
- WRITE "Examinas {OREF} pero no ves nada especial "
- LISTCONTENTS @51
- WRITELN "."
- DONE
-
-
-
-
-EX _                        ; Es un objeto presente
- NOTEQ 51 255
- PRESENT @51
- WRITELN "Examinas {OREF} pero no ves nada especial."
- DONE
-
-EX _                        ; Es un objeto ausente
- NOTEQ 51 255
- ABSENT @51
- WRITELN "No ves {OREF} por aquí."   
- DONE
 
 ;-----------------------------------------------
 
@@ -5552,8 +6466,7 @@ _	_	LT 33 14
 
 _	_
  HOOK "RESPONSE_DEFAULT_END"  ; «Back call» a el sistema de hooks. Por defecto no hace nada pero algunas librerías plugin podrían necesitarlo. No borrar.
-
-/PRO 1 
+/PRO 1
 
 ; ################################### PROCESO 1 ####################################
 ; #                                                                                #
@@ -5573,22 +6486,299 @@ _	_
  TITLE "La aventura original"
  BSET 12 5                      ; Spanish
  SET fGraficosActivados
- PICTURE loc03.gif
  LET 53 64 ; Lista los objetos en modo continuo, en lugar de uno debajo del otro
- CLEAR 11 ; De McArras
+ ;CLEAR 11 ; De McArras
+ OCLEAR oBotella aFull ; debe estar vacía al principio.
  COMMAND 0
- BLOCK "La aventura original (1ª parte)" 3 3
+ BLOCK "La aventura original (1ª parte)" intro.png 17
 
+;/PRO 1
+
+_ _
+ AT      0 
+ NOTZERO 255 
+ GOTO    2 
+
+;_ _
+; Obsoleto. bandera 29 a 128 es para redibujar el gráfico
+; AT      0 
+; ;PRINTAT 11 26 
+; LT      29 128 
+; ;PRINTAT 11 39 
+
+;_ _
+; AT      0 
+ ;MES     18 
+; WRITE "?"
+; ANYKEY  
+; GOTO    1 
+; DESC    
+
+_ _
+ ; Si el jugador está en el laberinto, muestra el mensaje de que está perdido
+ ATGT    lLava 
+ ATLT    lBosqueProf 
+ ;MES     95 
+ WRITELN "Esta parte del bosque es muy densa, los árboles te impiden orientarte bien y son todos muy parecidos. Vagas por entre la maleza buscando tu rumbo pero pronto te das cuenta de que estás algo despistadillo."
+;_ _
+;obsoleto
+; AT      1 
+; LT      29 128 
+
+_ _
+ AT      1 
+
+ ;PICTURE 44 
+
+ MESSAGE     77 
+ ANYKEY  
+ CLS     
+ MES     99 
+ ANYKEY  
+ CLS
+ GOTO    2 
+ DESC
+_ _
+ AT      1 
+ CLS     
+ SET     255 ; COMPROBAR flag 255 ; ;Init solamente la primera vez
+ GOTO    2 
+
+_ _
+ AT      2 
+ ABILITY 5 255 ; Máx objetos, máx peso
+ LET     53 64 ; COMPROBAR flag 53 ; Imprimir el inventario en una línea
+ GOTO    lFrontera
+ DESC    
+
+_ _
+ TIME    47 1 	; TIEMP 
+
+_ _
+ AT      lRamas 
+ LT      fLlave 255 
+ ;MES     71 
+ WRITELN "El sol hace brillar algo en una rama."
+
+_ _
+ AT      lBosqueCer
+ ZERO    fElfito 
+ LET     fElfito 1 
+
+_ _
+ NOTAT   lBoscillo 
+ EQ      fElfito 1 
+ LET     fElfito 2 
+
+_ _
+ AT      lBosqueCer
+ EQ      fElfito 2 
+ WRITELN "Oyes un débil llanto y con dificultad ves una figura traslúcida."
+
+_ _
+ AT      lBosqueCer
+ EQ      fElfito 3 
+ ;MES     67 
+ WRITELN "«¡Mi casa!»"
+
+_ _
+ AT      lLava 
+ ZERO    fEnano 
+ LET     fEnano 1 
+
+_ _
+ NOTAT   lLava 
+ EQ      fEnano 1 
+ LET     fEnano 2 
+
+_ _
+ AT      lLava 
+ EQ      fEnano 2 
+ LET     fEnano 3 
+
+_ _
+ NOTAT   lLava 
+ EQ      fEnano 3 
+ LET     fEnano 4 
+
+_ _
+ AT      lReja 
+ WRITE "Estás en una depresión de siete metros. El valle se estrecha hacia el sur."
+ EQ      fElfito 4 	; elfito contigo
+ LT      fCandado 3 	; puerta no abierta
+ ;MESSAGE 134 
+ WRITELN " Elfito da saltos de alegría."
+
+SUR   _
+ AT      lReja 
+ EQ      fElfito 4 	; elfito contigo
+ EQ      fCandado 3 	; la habías abierto cuando no iba contigo
+ ;MESSAGE 134 
+ WRITELN " Elfito da saltos de alegría."
+_ _
+ AT      lReja 
+ EQ      fCandado 0 
+
+ PICTURE 26 
+
+ MES     53 
+ MES     55 
+ MESSAGE 54 
+
+_ _
+ AT      lReja 
+ EQ      fCandado 1 
+
+ PICTURE 26 
+
+ MES     53 
+ MES     56 
+ MESSAGE 54 
+
+_ _
+ AT      lReja 
+ EQ      fCandado 2 
+
+ PICTURE loc26sincand.png 
+
+ MES     53 
+ MESSAGE 54 
+
+_ _
+ AT      lReja 
+ EQ      fCandado 3 
+ PICTURE 27 
+ WRITELN " Tienes ante ti la entrada a La Gran Caverna."
+_ _
+ AT      lReja 
+ EQ      fElfito 4 
+ EQ      fCandado 3 
+ SET     fElfito 
+ ;MESSAGE 67 
+ NEWLINE
+ WRITELN "Elfito dice: «¡Mi casa!»"
+ WRITE "«Mi agradecimiento está sobre la mesa.» "
+ WRITELN "Y penetra en las profundidades."
+ PLACE   oTortilla lPicnic  
+
+_ _
+ EQ      fElfito 4 
+ PLUS    100 1 
+ EQ      100 2 
+ CLEAR   100 
+
+_ _
+ EQ      fElfito 4 
+ ZERO    100 
+ NOTAT   lReja 
+ NEWLINE 
+ ;MES     98 
+ ;MESSAGE 68 
+ WRITELN "«No es aquí.»"
+
+_ _
+ EQ      fElfito 4 
+ EQ      100 1 
+ NOTAT   lReja 
+ ;MESSAGE 67 
+ NEWLINE
+ WRITELN "«¡Mi casa!»"
+
+_ _
+ AT      lLava 
+ WRITE "El calor que se desprende de la burbujeante lava es asfixiante. Un enorme penacho de cenizas se desprende flotando perezosamente del ardiente magma, dejando una peste cosa mala. Imprudentemente estás haciendo el payaso en el peligroso borde del volcán"
+
+_ _
+ AT      lLava 
+ LT      fEnano 255 
+ WRITELN   " junto a un enano que rabia de amargura."
+ ;MESSAGE 60 
+
+_ _
+ AT      lLava 
+ EQ      fEnano 255 
+ WRITELN "."
+
+; COMPROBAR estas dos opciones. Son condiciones de fin de juego pero se activan al principio
+;_ _
+; AT      lFrontera 
+; CLS     
+; ;PRINTAT 8 10 
+; LT      29 128 
+; ;PRINTAT 8 22 
+
+;Muestra datos del final de la partida pero no hay flag para discriminarlos
+;_ _
+; AT      lFrontera 
+; MESSAGE 47 
+; ;PRINTAT 12 10 
+; LT      29 128 
+; ;PRINTAT 12 22 
+
+;_ _
+; AT      lFrontera 
+; CARRIED oLinterna ;apagada
+; CARRIED oBotella ;llena
+; MESSAGE 50 
+
+;_ _
+; AT      lFrontera 
+; CARRIED oLinterna ;apagada
+; CARRIED oBotella ; vacía
+; MESSAGE 49 
+
+;_ _
+; AT      lFrontera 
+; CARRIED oLinterna ; encendida
+; CARRIED oBotella ;llena
+; MESSAGE 48 
+
+;_ _
+; AT      lFrontera 
+; CARRIED oLinterna ;encendida
+; CARRIED oBotella ;vacía
+; MESSAGE 51 
+
+;_ _ 
+; ; COMPROBAR ¿Es el final de la aventura?
+; AT      lFrontera 
+; ;PRINTAT 19 0 
+; END     
+
+;_ _
+ ;¿Lista de objetos?
+; NEWLINE 
+; ZERO    0 ; COMPROBAR flag 0
+; ABSENT  oLinterna 
+; LISTOBJ 
+
+;_ _
+ ; ¿Redundante?
+ ;PRESENT oLinterna
+ ;ONOTZERO oLinterna aOn
+ ; podría ser mejor:
+; ISLIGHT
+
+; LISTOBJ 
+
+_ _
+ AT      lMuerte 	; Muerte
+ ;CLS     
+ ; PICTURE 
+ COMMAND 0
+ WRITE "Has jugado durante "
+ PRINT  31 
+ WRITELN " turnos."
+ NEWLINE
+ WRITELN "{RESTART|Volver a jugar}"
+
+; Si dejas esto al final los objetos siempre se listan después de las descripciones
 _	_
  ISLIGHT
  LISTOBJ                        ;Lista los objetos
  LISTNPC @38                    ;Lista las personas
 
-
-
-
-
-/PRO 2 
+/PRO 2
 
 ; ################################### PROCESO 2 ####################################
 ; #                                                                                #
@@ -5602,8 +6792,1017 @@ _	_
 _	_
  HOOK "PRO2"  ; «Back call» a el sistema de hooks. Por defecto no hace nada pero algunas librerías plugin podrían necesitarlo. No borrar.
  
-/PRO 3 
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 3
+; Respuesta a AYUDA dependiendo del lugar
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+AYUDA _
+ NOTZERO 5 
+ MESSAGE 96 
+ DONE    
+
+AYUDA _
+ AT      lPozo 
+ ABSENT  oLinterna
+ MESSAGE 8 
+ DONE    
+
+AYUDA _
+ ATGT    12 
+ ATLT    16 
+ MESSAGE 9 
+ DONE    
+
+AYUDA _
+ AT      lReja 
+ EQ      fCandado 0 
+ MESSAGE 10 
+ DONE    
+
+AYUDA _
+ AT      lReja 
+ EQ      fCandado 3 	; puerta abierta
+ ;MESSAGE 119 
+ WRITELN "No llevas todos los objetos que necesitas, por lo tanto la magia de La Gran Caverna te impide el paso."
+ DONE    
+
+AYUDA _
+ AT      lEspiral 
+ ;MESSAGE 36 ; Tate pa la faena
+ WRITELN "Examina lo que has encontrado. Explora toda la zona."
+ DONE    
+
+AYUDA _
+ AT      lBosqueCer
+ NOTCARR oLinterna 
+ MESSAGE 8 
+ DONE    
+
+_ _
+ CHANCE  10 
+ MESSAGE 36 
+
+_ _
+ MESSAGE 11 
+ NEWLINE
+ WRITELN "Algunas de las preguntas más frecuentes son:"
+ HELP
+ DONE
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 4
+; Todo lo que se puede examinar (parte 1)
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+EXAMINAR ESTRUCTURA
+ AT      lRampa
+ WRITELN "No la ves desde aquí."
+ DONE    
+
+EXAMINAR ESTRUCTURA
+ AT      lRampa2 
+ WRITELN "No estás suficientemente cerca."
+ DONE    
+
+EXAMINAR ESTRUCTURA
+ AT      lEspiral
+ LET 	 34 _voc_ESPIRAL
+
+EXAMINAR SENDA
+ AT      lRampa 
+ WRITELN "Es una sólida y bella construcción."
+ DONE    
+
+EXAMINAR SENDA
+ AT      lRampa2
+ WRITELN "Continúa hacia una extraña construcción."
+ DONE    
+
+EXAMINAR SENDA
+ AT      lPrecipicio
+ WRITELN "No hay nada que te llame la atención. Acaban aquí."
+ DONE
+
+EXAMINAR LINTERNA
+ PRESENT oLinterna 
+ OZERO oLinterna aOn
+ MESSAGE 16 
+ DONE    
+
+EXAMINAR LINTERNA
+ PRESENT oLinterna 
+ ONOTZERO oLinterna aOn
+ MESSAGE 15 
+ DONE    
+
+EXAMINAR MONEDA
+ PRESENT oMoneda 
+ MESSAGE 17 
+ DONE    
+
+EXAMINAR TORTILLA
+ PRESENT oTortilla
+ MESSAGE 19 
+ DONE    
+
+EXAMINAR BOTAS
+ PRESENT oBotas
+ WRITELN "Estas botas tienen un tacón muy alto pero no son de tu número."
+ DONE    
+
+EXAMINAR BOTELLA
+ PRESENT oBotella
+ OZERO oBotella aFull
+ ;WRITELN "{TEXTPIC|iconobotella.svg|3}" ; COMPROBAR y hacer en todos los objetos
+ WRITELN "Es de vidrio y está vacía."
+ ;MESSAGE 20 
+ DONE    
+
+EXAMINAR BOTELLA
+ PRESENT oBotella 
+ ONOTZERO oBotella aFull
+ ;MESSAGE 124 
+ WRITELN "La tienes llena de agua fresca y fertilizante."
+ DONE    
+
+EXAMINAR LLAVE
+ PRESENT oLlave
+ MESSAGE 21 
+ DONE    
+
+EXAMINAR PILAS
+ PRESENT oPila
+ MESSAGE 22 
+ DONE    
+
+EXAMINAR CASITA
+ AT      lFrontera 
+ WRITELN "Es una sólida construcción que antaño perteneció a los dueños del valle, hoy está abandonada." 
+ DONE    
+
+EXAMINAR CASITA
+ AT      lColina
+ WRITELN "Se ve tan pequeña que parece de juguete." 
+ DONE    
+
+EXAMINAR HUMO
+ AT      lColina
+ WRITELN "La columna de humo sube de forma lenta, casi poética." 
+ DONE    
+
+EXAMINAR FUEGO
+ AT      lColina
+ WRITELN "La imagen del volcán es aterradora. Suerte que está lejos." 
+ DONE    
+
+EXAMINAR ESPIRAL
+ AT      lColina
+ WRITELN "Está hacia al sur. No sabrías describirla muy bien desde aquí." 
+ DONE    
+
+EXAMINAR CAVERNA
+ AT      lReja 
+ WRITELN "La entrada es pequeña pero lo suficientemente amplia para que pases por ella y penetres a un Mundo Mágico."
+ DONE    
+
+EXAMINAR POZO 
+ AT      lHabGuarra 
+ WRITELN "La boca del pozo está muy oscura."
+ DONE    
+
+EXAMINAR RIO  
+ AT      lPozo 
+ PRESENT oLinterna
+ ONOTZERO oLinterna aOn
+ WRITE "Chapoteas tocando gelatinosas babosidades "
+ PAUSE   15
+ WRITELN "¡pero de monedas nada, listillo!"
+ DONE    
+
+EXAMINAR RIO  
+ AT      lPozo 
+ ;PRESENT oLinterna
+ ;ONOTZERO oLinterna aOn
+ ISLIGHT
+ ZERO    fMoneda 
+ ;MES     6 
+ WRITE "Chapoteas tocando asquerosas gelatinosas babosidades "
+ PAUSE   15 
+ ;MESSAGE 7 
+ WRITELN "y de pronto descubres que hay ¡una moneda!"
+ CREATE  oMoneda 
+ SET     fMoneda 
+ DONE    
+
+EXAMINAR RIO  
+ AT      lFrontera 
+ WRITELN "Dicen que las aguas de este río tienen la mágica propiedad de hacer crecer semillas muy viejas."
+ DONE    
+
+EXAMINAR BOSQUE
+ AT      lFrontera 
+ WRITELN "No dan muchas ganas de meterse en él pero no conseguirás nada quedándote aquí. ¿Con qué tipo de criaturas te vas a encontrar?"
+ DONE    
+
+EXAMINAR RIO  
+ AT      lValle 
+ WRITELN "Has oído decir que las aguas de este río tienen mágicas propiedades. Que pueden hacer crecer semillas de cualquier tipo."
+ DONE    
+
+EXAMINAR BOSQUE
+ AT      lValle
+ WRITELN "Es un bosque frondoso. Si no fuera por el valle en el que estás, no verías el sol."
+ DONE    
+
+EXAMINAR VALLE  
+ AT      lValle 
+ WRITELN "Es un lugar bellísimo pero no deberías admirar los parajes, esta es una tierra que seguro está llena de peligros..."
+ DONE    
+
+EXAMINAR LECHO 
+ AT      lValle 
+ WRITELN "El agua corre. Ves que el caudal mengua hacia el sur."
+ DONE
+
+EXAMINAR VALLE  
+ AT      lValleProf 
+ WRITELN "Sientes una extraña sensación. Algo te da muy mala espina..."
+ DONE    
+
+EXAMINAR LECHO 
+ AT      lValleProf 
+ WRITELN "Cada vez más seco, el agua se pierde entre las grietas."
+ DONE
+
+EXAMINAR RIO  
+ AT      lValleProf 
+ WRITELN "Sabes de buena tinta que las aguas de este río son mágicas. Dicen que pueden hacer crecer todo tipo de semillas."
+ DONE    
+
+EXAMINAR CABAÑA
+ AT      lCampo
+ WRITELN "Inlcuso desde aquí se puede apreciar el mal estado en el que está."
+ DONE   
+
+EXAMINAR RAMAS
+ AT      lFrontera 
+ MESSAGE 26 
+ DONE    
+
+EXAMINAR RAMAS
+ AT      lTapizado 
+ MESSAGE 26 
+ DONE    
+
+EXAMINAR RAMAS
+ AT      lColina 
+ MESSAGE 26 
+ DONE    
+
+EXAMINAR RAMAS
+ AT      lRamas 
+ LT      fLlave 2 
+ MESSAGE 72 
+ LET     fLlave 1 
+ DONE    
+
+EXAMINAR RAMAS
+ AT      lBosqueProf
+ WRITELN "Por su posición y solidez proporciona una fácil subida."
+ DONE    
+
+EXAMINAR RAMAS
+ ATGT    12 
+ ATLT    24 
+ MESSAGE 26 
+ DONE    
+
+EXAMINAR VOLCA
+ ATGT    5 
+ ATLT    10 
+ MESSAGE 27 
+ DONE    
+
+EXAMINAR MAGMA
+ AT      lTapizado 
+ ;MESSAGE 28 
+ WRITELN "¿Estás de broma? Es demasiado peligroso. Te estás quedando sin cejas del calor que notas ya desde aquí."
+ DONE    
+
+EXAMINAR MAGMA
+ AT      lLava
+ WRITELN "¿Estás de broma? Si antes ya era peligroso ahora vas a arder si te acercas más."
+ DONE    
+
+EXAMINAR PRECI
+ AT      lPrecipicio
+ ;MESSAGE 28 
+ WRITELN "Solo de imaginar que te asomas al vacío ya te estás mareando, como para acercarse."
+ DONE    
+
+EXAMINAR ENANO
+ AT      lLava 
+ LT      fEnano 255 
+ WRITELN "Como los del circo. Parece tener muy mala uva. Para comunicarte, «háblale»."
+ DONE    
+
+EXAMINAR COLINA
+ AT      lTapizado 
+ WRITELN "Seguro que desde allí hay buenas vistas."
+ DONE  
+
+EXAMINAR ROCAS
+ AT      lPaisajeAl
+ WRITELN "De un color oscuro. Cada una de una forma más excepcional que la anterior."
+ DONE  
+
+EXAMINAR MALEZA
+ AT      lArida
+ WRITELN "No serviría de mucho. Ni tan siquiera si pudieras acercar la mano."
+ DONE   
+
+EXAMINAR HABIT
+ AT      lHabGuarra 
+ DESC    
+
+EXAMINAR VENTA
+ AT      lHabGuarra 
+ MESSAGE 30 
+ DONE    
+
+EXAMINAR ESCAL
+ AT      lHabGuarra 
+ MESSAGE 31 
+ DONE    
+
+EXAMINAR DESCONCHAD
+ AT      lHabGuarra 
+ WRITELN "¡Puaj! No te quieres acercar más. ¡Qué asco! ¿Qué es eso que está pegado ahí? Mejor no saberlo."
+ DONE    
+
+EXAMINAR PAREDES
+ AT      lHabGuarra 
+ WRITELN "¡Aj! Si sigues investigando vas acabar por vomitar. ¡Qué asco!"
+ DONE    
+
+EXAMINAR SUELO
+ AT      lHabGuarra 
+ WRITELN "¡Buaaaaagghhh! No... argh... es pegajoso... ¡puaj!"
+ DONE    
+
+EXAMINAR ESCAL
+ AT      lPozo 
+ PRESENT oLinterna ;encendida 
+ ONOTZERO oLinterna aOn
+ MESSAGE 32 
+ DONE    
+
+EXAMINAR CHARC
+ AT      lPozo 
+ ;PRESENT oLinterna ;encendida 
+ ;ONOTZERO oLinterna aOn
+ ISLIGHT
+ ZERO    fMoneda 
+ ;MES     6 
+ WRITE "Chapoteas tocando asquerosas gelatinosas babosidades "
+ PAUSE   10
+ ;MESSAGE 7 
+ WRITELN "y de pronto descubres que hay ¡una moneda!"
+ CREATE  oMoneda 
+ DONE    
+
+EXAMINAR CHARC
+ AT      lPozo 
+ ISLIGHT
+ ;MES     6 
+ WRITE "Chapoteas tocando gelatinosas babosidades "
+ PAUSE   10
+ ;MESSAGE 12 
+ WRITELN "¡pero de monedas nada, listillo!"
+ DONE    
+
+EXAMINAR ESPIRAL
+ AT      lEspiral 
+ WRITELN "Es una construcción altísima y de un brillo metálico, pero de superficie tan resbaladiza que la hace inexpugnable."
+ DONE    
+
+EXAMINAR MESAS
+ AT      lPicnic 
+ MESSAGE 34 
+ DONE    
+
+EXAMINAR SILLA
+ AT      lPicnic 
+ MESSAGE 34 
+ DONE    
+
+EXAMINAR GRIETAS
+ AT      lValleProf 
+ WRITELN "Son ranuras estrechas por las que se cuela el agua del río."
+ DONE    
+
+EXAMINAR REJAS
+ AT      lReja 
+ LT      fCandado 2 	; reja cerrada con candado abierto o cerrado
+ ;MESSAGE 38 
+ WRITELN "Es muy fuerte. Impide la entrada."
+ DONE    
+
+EXAMINAR DEPRESION
+ AT      lReja 
+ WRITELN "Esta zona es la más inquietante de las que has estado desde hace un rato."
+ DONE    
+
+EXAMINAR VALLE
+ AT      lReja 
+ WRITELN "Mmmm... hacia el sur se hace cada vez más estrecho. Hacia el norte se ensancha."
+ DONE    
+
+EXAMINAR ENTRADA
+ AT      lReja 
+ WRITELN "Un aire pútrido te da en la cara. El olor es tan nauseabundo que te preguntas si todo esto merece la pena."
+ DONE    
+
+EXAMINAR CANDADO
+ AT      lReja 
+ EQ      fCandado 0 	; reja cerrada con candado cerrado
+ ;MESSAGE 38 
+ WRITELN "No parece que se pueda forzar con nada. Habrá que buscar la llave que lo abre."
+ DONE    
+
+EXAMINAR CANDADO
+ AT      lReja 
+ EQ      fCandado 1 	; reja cerrada con candado abierto
+ ;MESSAGE 38 
+ WRITELN "Está abierto pero sigue ahí puesto."
+ DONE    
+
+EXAMINAR CANDADO
+ AT      lReja 
+ EQ      fCandado 2 	; reja cerrada sin candado
+ WRITELN "Ha desaparecido delante de tus ojos"
+ DONE
+
+EXAMINAR CANON
+ AT      lCanon 
+ WRITELN "Es un lugar excepcional, imaginas cómo debió ser hace años, cuando el río caía por aquí."
+ DONE    
+
+EXAMINAR CASCADA
+ AT      lCanon 
+ WRITELN "Este lugar es la Gran Cascada del jefe de los enanos, aunque ya no haya agua. Ahora, es un lugar tan bello como desolador."
+ DONE    
+
+EXAMINAR PRECIPICIO
+ AT      lCanon 
+ WRITELN "¡Uuaahhh! Te estás mareando de lo profundo que es. Deja de hacer tonterías que te vas a matar."
+ DONE    
+
+EXAMINAR CORTADO
+ AT      lCanon 
+ WRITELN "Ves la pared casi vertical. Imposible de escalar, ni tan siquiera teniendo el equipo adecuado. Como para intentarlo sin él: Muerte segura."
+ DONE   
+
+_ LETRE
+ AT      lPicnic 
+ MESSAGE 13 
+ DONE    
+
+EXAMINAR FIGUR
+ AT      lBosqueCer
+ PRESENT  oLinterna
+ ONOTZERO oLinterna aOn
+ EQ      fElfito 2 
+ MESSAGE 63 
+ LET     fElfito 3 
+ DONE    
+
+EXAMINAR FIGUR
+ AT      lBosqueCer
+ EQ      fElfito 2 
+ MESSAGE 64 
+ DONE    
+
+EXAMINAR BRILL
+ AT      lRamas 
+ LT      fLlave 2 
+ MESSAGE 72 
+ LET     fLlave 1 
+ DONE    
+
+EXAMINAR _
+ ISNOTLIGHT
+ WRITELN "No ves nada de nada."
+ DONE
+
+
+;-----------------------------------------------
+; Movido de las respuestas por defecto para que sean detectadas por el «sistema de AD»
+
+EX _                        ; Posiblemente en la frase hay un nombre no incluido en el vocabulario y la «preposición» DENTRO (EN) está presente
+ PREP DENTRO
+ EQ 34 255
+ BNOTZERO 12 1
+ WRITELN "No puedes examinar dentro de eso que dices."  
+ DONE
+
+EX _                        ; No hay nombre en la frase y la «preposición» DENTRO (EN) está presente
+ PREP DENTRO                       
+ EQ 34 255
+ BZERO 12 1
+ WRITELN "Por favor, especifica dentro de qué quieres examinar."
+ DONE
+
+EX _                        ; Posiblemente en la frase hay un nombre no incluido en el vocabulario
+ EQ 34 255
+ BNOTZERO 12 1
+ WRITELN "No puedes examinar eso que dices."  
+ DONE
+
+EX _                        ; No hay nombre en la frase
+ EQ 34 255
+ BZERO 12 1
+ WRITELN "Por favor, especifica qué o a quién quieres examinar."
+ DONE
+
+EX        _           ; hay nombre, y es propio, y la «preposición» DENTRO (EN) esta presente
+ PREP DENTRO
+ NOTEQ 51 255
+ ONOTZERO @51 aNPC ; Es un NPC
+ PRESENT @51
+ WRITELN "Vaya ocurrencia..."
+ DONE
+
+EX _
+ NOTEQ 51 255
+ ONOTZERO @51 aNPC ; Es un NPC
+ ABSENT @51
+ WRITELN "No está aquí."
+ DONE
+ 
+EX _
+ NOTEQ 34 255
+ NOTEQ 51 255
+ ONOTZERO @51 aNPC ; Es un NPC
+ PRESENT @51
+ WRITELN "Es de mala educación."
+ DONE
+
+EX _
+ NOTEQ 34 255
+ NOTEQ 51 255
+ ONOTZERO @51 aNPC ; Es un NPC
+ ABSENT @51
+ WRITELN "No está aquí."
+ DONE
+
+EX _    ; Hay nombre pero no es un objeto, «prep.» DENTRO presente
+ PREP DENTRO
+ NOTEQ 34 255
+ EQ 51 255
+ WRITELN "No le ves sentido a examinar dentro de eso."   
+ DONE
+
+EX _                        ; Hay nombre pero no es un objeto
+ NOTEQ 34 255
+ EQ 51 255
+ WRITELN "No le ves sentido a examinar eso."     
+ DONE
+
+EX _                        ; Es un objeto presente y contenedor, transaparente con cosas dentro
+ NOTEQ 51 255
+ PRESENT @51
+ ONOTZERO @51 aContainer
+ ONOTZERO @51 aTransparent
+ OBJAT @51 13
+ NOTZERO 13
+ WRITE "Examinas {OREF} pero no ves nada especial "
+ LISTCONTENTS @51
+ WRITELN "."
+ DONE
+
+EX _                        ; Es un objeto presente y contenedor, que no se puede abrir
+ NOTEQ 51 255
+ PRESENT @51
+ ONOTZERO @51 aContainer
+ OZERO @51 aOpenable
+ OBJAT @51 13
+ NOTZERO 13
+ WRITE "Examinas {OREF} pero no ves nada especial "
+ LISTCONTENTS @51
+ WRITELN "."
+ DONE
+
+
+EX _                        ; Es un objeto presente y contenedor, que se puede abrir y está abierto con cosas dentro
+ NOTEQ 51 255
+ PRESENT @51
+ ONOTZERO @51 aContainer
+ ONOTZERO @51 aOpenable
+ ONOTZERO @51 aOpen
+ OBJAT @51 13
+ NOTZERO 13
+ WRITE "Examinas {OREF} pero no ves nada especial"
+ LISTCONTENTS @51
+ WRITELN "."
+ DONE
+
+EX _                        ; Es un objeto presente y contenedor, que se puede abrir y cerrado
+ NOTEQ 51 255
+ PRESENT @51
+ ONOTZERO @51 aContainer
+ ONOTZERO @51 aOpenable
+ OZERO @51 aOpen
+ WRITELN "Examinas {OREF} pero no ves nada especial. Si lo abres podrás ver su contenido."
+ DONE
+
+EX _                        ; Es un objeto presente y contenedor, lockable y locked
+ NOTEQ 51 255
+ PRESENT @51
+ ONOTZERO @51 aContainer
+ ONOTZERO @51 aLockable
+ OZERO @51 aLocked
+ WRITELN "Examinas {OREF} pero no ves nada especial. Si lo abres podrás ver su contenido."
+ DONE
+
+EX _                        ; Es un objeto presente y supporter con algo encima
+ NOTEQ 51 255
+ PRESENT @51
+ ONOTZERO @51 aSupporter
+ OBJAT @51 13
+ NOTZERO 13
+ WRITE "Examinas {OREF} pero no ves nada especial "
+ LISTCONTENTS @51
+ WRITELN "."
+ DONE
+
+EX _                        ; Es un objeto presente
+ NOTEQ 51 255
+ PRESENT @51
+ WRITELN "Examinas {OREF} pero no ves nada especial."
+ DONE
+
+EX _                        ; Es un objeto ausente
+ NOTEQ 51 255
+ ABSENT @51
+ WRITELN "No ves {OREF} por aquí."   
+ DONE
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 5
+; Muerteeee
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+_ _
+ PAUSE   15 
+ ;PAUSE   15 
+ GOTO    lMuerte 
+ DESC 
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 6
+; Muerte
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+_ _
+ ;MESSAGE 29 
+ WRITELN "La lava te reduce a cenizas."
+ PAUSE   150 
+ MESSAGE 43 	; Pareces estar un poco muerto.
+ PAUSE   150 
+ ;MESSAGE 40 
+ WRITELN "Flotas en forma de nube."
+ ANYKEY
+ PROCESS 5
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 7
+; Muerteee
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+_ _
+ MESSAGE 41 
+ PAUSE   150
+ MESSAGE 42 
+ PAUSE   150 
+ MESSAGE 43 
+ ANYKEY 	; COMPROBAR
+ PROCESS 5 
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 8
+; Muerteeee
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+_ _
+ MESSAGE 41 
+ PAUSE   150
+ WRITELN "Te rompes el hocico contra la raíz del árbol."
+ PAUSE   150 
+ MESSAGE 43 
+ PROCESS 5 
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 9
+; Conversación con Elfito
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+_ _
+ PARSE   
+ NOTEQ   fElfito 3 	; 
+ ;MESSAGE 97 
+ WRITELN "«¿Qué dices?»"
+ DONE    
+
+_ _
+ EQ      fElfito 3 
+ ZERO    fDichoCasa 
+ NEWLINE
+ WRITELN "«¡Mi casa!»"
+ SET     fDichoCasa 
+ DONE    
+
+AYUDA _
+ ;MESSAGE 76 
+ WRITELN "«Cuando encuentre mi casa.»"
+ DONE    
+
+;MIERDA _
+ ;LET     33 119 	; Era LET 33 96 
+ 			; Ya es verbo 119
+
+PUTA  _
+ LET     fElfito 3 
+ NOTAT   lBosqueCer 
+ WRITELN "Muy contrariado Elfito no puede aguantar las lágrimas y se va. Lo has perdido de vista."
+ DONE    
+
+PUTA  _
+ WRITELN "«¡Qué grosería! ¡Qué mala educación!»"
+ DONE    
+
+_ SUCEDE
+ NEWLINE
+ WRITELN "«¡No encuentro mi casa!»"
+ DONE    
+
+_ VIVES
+ WRITELN "«En la Gran Caverna.»"
+ DONE    
+
+_ SIGUEME
+ LET 33 _voc_VEN
+
+VEN _
+ LET     fElfito 4 	; Elfito viene contigo
+ WRITELN "Oh, qué amable. Gracias." 
+ DONE 
+
+_ NOMBR
+ WRITELN "«Mi nombre es Elfito.»"
+ DONE    
+
+_ HOLA 
+ WRITELN "Te dice: «¡Hola tú!»"
+ DONE    
+
+_ _
+ WRITELN "«¡No quiero!»"
+ DONE  
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 10
+; Conversación con Don Enano
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+_ _
+ PARSE   
+ WRITELN "«Pero ¿qué dices?»"
+ DONE    
+
+AYUDA _
+ WRITELN "«¡No me da la gana!»"
+ DONE    
+
+_ MIERDA
+ PROCESS 11 
+ DONE    
+
+PUTA  _
+ PROCESS 11 
+ DONE    
+
+_ PASA
+ WRITELN "«¡Quiero ser más alto!»"
+ DONE    
+
+VEN _
+ WRITELN "«No quiero ir a ninguna parte ¿Por qué no me dejas en paz?»"
+ DONE   
+
+_ SIGUEME
+ WRITELN "«No quiero seguirte. Déjame tranquilo ya.»"
+ DONE
+
+BESAME _
+ WRITELN "«¿Quién te has creído que soy? ¿Quién te piensas que eres?»"
+ DONE   
+
+_ NOMBR
+ WRITELN "«Don Enano»"
+ DONE    
+
+_ HOLA 
+ WRITELN "Sí, sí... hola, hola. Ahora, piérdete."
+ DONE    
+
+_ _
+ WRITELN "«¡Largo de aquí!»"
+ DONE   
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 11
+; Has insulado al enano. COMPROBAR porque también vale para Elfito
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _
+ SET     fEnano 
+ WRITELN "Cabreadísimo te ataca, echándose encima de ti."
+ PAUSE   100 
+ WRITE "Lucháis, forcejeando como dos locos, en el borde del volcán..."
+ PAUSE   200 
+ WRITELN " ¡y os precipitáis hacia el abismo!"
+ PAUSE   200 
+ PROCESS 6 
+ OK   
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;   
+/PRO 12
+; Obsoleto. Pintaba una imagen en blanco de transición para algunos equipos
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 13
+; Rutina AD «La única salida es»
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+;_ _
+; CLEAR   201 
+; LET     200 101 
+; PROCESS 16 
+; PROCESS 14 
+; GT      201 1 
+; MES     117 
+;_ _
+; EQ      201 1 
+; MES     118 
+
+;_ _
+; MES     @200 
+; WRITELN "." 
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 14
+; Runtina AD «la única salida es»
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+;_ _
+; COPYFF  38 202 
+; MOVE    202 
+; PROCESS 15 
+
+;_ _
+; PLUS    33 1 
+; LT      33 13 
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 15
+; Rutina AD «las posibles salidas son»
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+;_ _
+; EQ      201 1 
+; MES     114 
+
+;_ _
+; GT      201 1 
+; MES     116 
+
+;_ _
+; NOTZERO 201 
+; MES     @200 
+
+;_ _
+; COPYFF  33 200 
+; PLUS    200 100 
+; PLUS    201 1 
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 16
+; Rutina AD «la única salida es». Imprimir norte primero
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+;_ _
+; LET     33 13 
+; COPYFF  38 202 
+; MOVE    202 
+; PROCESS 15 
+
+;_ _
+; LET     33 2 
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 17
+; Comienza la aventura
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
 _	_
  COMMAND 1
- GOTO 3
+ GOTO 1
  DESC
+
+
+
+
+
+
+; TO DO
+; Mejorar descripciones
+;DONE Ex candado y Ex reja deberían dar descripciones diferentes
+; ampliar EXAMINAR cosas. Que sea más rico el juego
+; Hacer una pasada por todos los «; COMPROBAR»
+
+;CSS en pantalla pequeña debería hacer subir el texto como en landscape
+;CSS las imágenes en pantalla pequeña deberían mantener la escala 
+
+;COMPROBAR contraseñas... cuando tienes los elementos que se necesitan. En lFrontera
+;Arreglar la zona de insultos
+
+
+;DONE     ; Comprobar flags y bits de control
+;DONE     ; Comprobar los SUBIR que no funcionan
+;DONE     ; Comprobar la rutina repetida
+ ;DONE ; > subir
+ ;DONE ;No puedes ir en esa dirección.
+ ;DONE ;Bajar¿Qué vas a hacer ahora? La única salida es Sur.
+ ;DONE ;No puedes ir al sur. No hay salidas visibles.
+;DONE Cambiar todos los verbos a infinitivo en los condactos.
+;DONE     ; ¡BAJO no es verbo, es preposición!
+;DONE PONER PILAS EN LINTERNA -> CHECK
+ ;DONE Pon pilas AAAAA linterna
+ ;DONE no puedo
+
+ ;DONE > meter pila en cueva
+ ;DONE Vale, linterna lista.
+ ;DONE Si no tienes linterna no lo entiende
+;DONE	  ; Comprobar luz en pozo con la linterna apagada
+;DONE	  ; comprobar ENCENDER LINTERNA en pozo: Quemar una linterna no es la solución.
+;DONE     ; comprobar APAGAR LINTERNA: No quieres apagar una linterna.
+;DONE     ; oMoneda no debe estar «contruida» o con COGE TODO la coges
+;DONE     ; COMPROBAR ex charc no troba moneda però es pot agafar
+
+;DONE Arreglar que la llave no se vea hasta examinar el brillo
+ ;DONE Puedes ver: una llave.
+ ;DONE El sol hace brillar algo en una rama.
+
+;DONE ¿Hacer linterna contenedor?
+ ;DONE > sacar pilas de linterna
+ ;DONE No puedes sacar cosas de ahí.
+
+;DONE En lLava la descripción está en dos líneas. Arreglar
+;DONE Se puede hacer que el nombre después de dar las botas al enano sea linterna para que «cógela» funcione
+
+
+;DONE Comprobar Elfo
+ ;DONE > ex figura
+ ;DONE Es un elfo que llora acurrucado junto a un árbol.
+ ;DONE > habla con elfo
+
+ ;DONE «¡Mi casa!»
+ ;DONE > decir hola
+ ;DONE No quieres hablarle a eso.
+
+;DONE En /CON la direción para entrar no es DENTRO si no ENTRAR. COMPROBAR ir al este desde lReja va a la pantalla de inicio ¿?
+
+;DONE COMPROBAR ex nombre del vocabulario (aunque no esté presente) da como respuesta "No ves nada especial"
+
+;DONE COMPROBAR decir a enano "que pasa": Quiero se más alto
+
+;DONE COMPROBAR Llenar botell en un lugar que no hay río solo dice "No puedes llenar la botella", dar más pistas.
+;DONE Empujar REJA responde: "No le ves mucho sentido a eso"
+
+;DONE SACAR CANDADO
+;DONE No puedes
+;DONE SACAR CANDADO DE REJA
+;DONE El candado desaparece
+;DONE > quitar candado de reja
+;DONE No llevas puesto eso.
+
+;DONE > mover rama
+;DONE No ves mucho sentido a mover eso.
+;DONE > sacudir rama
+;DONE La rama se mueve y se mueve.
+;DONE > coger rama
+;DONE No ves eso por aquí.
