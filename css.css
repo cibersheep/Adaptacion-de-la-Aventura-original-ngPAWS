@@ -43,7 +43,7 @@ a:hover {
 
 .graphics {
 	position: absolute;
-	height: 50%;
+	height: 33%;
 	top: 0;
 	margin-left: auto;
 	margin-right: auto;
@@ -55,9 +55,10 @@ a:hover {
 
 .text {
 	position: absolute;
-	top: 52%;
-	bottom:7%;
-	overflow: hidden;
+	top: 35%;
+	bottom:10%;
+	overflow-y: scroll;
+	
 	width: 100%;
 	box-sizing: border-box;
 	padding: 10px 20px 10px 20px;
@@ -66,19 +67,19 @@ a:hover {
 .input {
 	position: absolute;
 	height: 5%;
-	bottom:0;
+	bottom: 2%;
 	box-sizing: border-box;
 	width: 100%;
-	padding: 0 10px 0 10px;
+	padding: 0 10px;
 	background-color: black;
 }
 
 .prompt {
 	border: none;
-	margin: 5px 0 5px 0;
+	margin: 1% 0;
 	outline:  none;
 	width: 100%;
-	font-size: 105%;	
+	font-size: 95%;	
 	background-color: black;
 	color: white;
 }
@@ -98,13 +99,13 @@ a:hover {
 
 .half_text
 {
-	top: 52%;
-	bottom:7%;
+	top: 35%;
+	bottom: 8%;
 }
 
 .half_graphics
 {
-	height: 50%;
+	height: 33%;
 	top: 0;
 }
 
@@ -122,7 +123,7 @@ a:hover {
 .all_text 
 {
 	top: 0;
-	bottom: 7%;
+	bottom: 8%;
 }
 
 /* input placeholder */
@@ -153,6 +154,7 @@ input:-moz-placeholder { color:#777; }
 .block_layer .block_graphics {
 	position: absolute;
 	width: 100%;
+	max-width: 100%;
 	height:50%; 
 	top: 0;
 	display: block;
@@ -165,12 +167,14 @@ input:-moz-placeholder { color:#777; }
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	width:100%;
+	height:100%;
 }
 
 .block_layer .block_text {
 	position: absolute;
-	top: 52%;
-	bottom:0;
+	top: 62%;
+	
 	width: 100%;
 	text-align: center;
 	box-sizing: border-box;
@@ -227,27 +231,20 @@ input:-moz-placeholder { color:#777; }
 	}
 
 	.graphics {
-		position: relative;
 	}
 	.text  {
-		position: relative;
-		top: auto;
-		bottom: auto;
-		height: auto;
 	}
 
 	.input  {
-		position: relative;
-		top: auto;
-		bottom: auto;
 	}
 
+.prompt {
+	font-size: 80%;	
+}
 
 .half_text
 {
-	top: auto;
-	bottom: auto;
-	height: auto;
+
 }
 
 
