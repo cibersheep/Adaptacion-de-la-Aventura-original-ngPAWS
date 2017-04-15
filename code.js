@@ -3922,7 +3922,6 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(92)) break p000e0203;
 		if (!CNDnotcarr(3)) break p000e0203;
-		if (!CNDonotzero(3,22)) break p000e0203;
 		if (!CNDnotcarr(9)) break p000e0203;
  		ACCwriteln(103);
  		ACCdone();
@@ -4103,9 +4102,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(118)) break p000e0213;
 		if (!CNDcarried(3)) break p000e0213;
-		if (!CNDozero(3,22)) break p000e0213;
  		ACCoset(3,22);
- 		ACCok();
+ 		ACCwriteln(111);
+ 		ACCdone();
 		break pro000_restart;
 		{}
 
@@ -4122,9 +4121,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(69)) break p000e0214;
 		if (!CNDcarried(3)) break p000e0214;
-		if (!CNDozero(3,22)) break p000e0214;
  		ACCoset(3,22);
- 		ACCok();
+ 		ACCwriteln(112);
+ 		ACCdone();
 		break pro000_restart;
 		{}
 
@@ -4141,9 +4140,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(84)) break p000e0215;
 		if (!CNDcarried(3)) break p000e0215;
-		if (!CNDozero(3,22)) break p000e0215;
  		ACCoset(3,22);
- 		ACCok();
+ 		ACCwriteln(113);
+ 		ACCdone();
 		break pro000_restart;
 		{}
 
@@ -4160,10 +4159,10 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(93)) break p000e0216;
 		if (!CNDcarried(3)) break p000e0216;
-		if (!CNDozero(3,22)) break p000e0216;
  		ACCoset(3,22);
  		ACCswap(3,9);
- 		ACCok();
+ 		ACCwriteln(114);
+ 		ACCdone();
 		break pro000_restart;
 		{}
 
@@ -4179,7 +4178,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(53)) break p000e0217;
  		}
 		if (!CNDcarried(3)) break p000e0217;
- 		ACCwriteln(111);
+ 		ACCwriteln(115);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4197,7 +4196,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDcarried(2)) break p000e0218;
  		ACCdestroy(2);
- 		ACCmessage(4);
+ 		ACCwriteln(116);
  		ACClet(5,4);
  		ACCdone();
 		break pro000_restart;
@@ -4216,7 +4215,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDcarried(3)) break p000e0219;
  		ACCoclear(3,22);
- 		ACCwriteln(112);
+ 		ACCwriteln(117);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4233,7 +4232,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(58)) break p000e0220;
  		}
 		if (!CNDat(17)) break p000e0220;
- 		ACCwriteln(113);
+ 		ACCwriteln(118);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4267,7 +4266,7 @@ pro000_restart: while(process_restart)
 		if (!CNDat(17)) break p000e0222;
 		if (!CNDlt(103,2)) break p000e0222;
  		ACClet(51,4);
- 		ACCwriteln(114);
+ 		ACCwriteln(119);
  		ACCplace(4,16);
  		ACCset(103);
  		ACCdone();
@@ -4286,7 +4285,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(58)) break p000e0223;
  		}
 		if (!CNDat(17)) break p000e0223;
- 		ACCwriteln(115);
+ 		ACCwriteln(120);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4352,8 +4351,8 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(1)) break p000e0227;
  		ACCdestroy(1);
  		ACCclear(8);
- 		ACCwriteln(116);
- 		ACCwriteln(117);
+ 		ACCwriteln(121);
+ 		ACCwriteln(122);
  		ACCcreate(5);
  		ACCdone();
 		break pro000_restart;
@@ -4395,8 +4394,8 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(5)) break p000e0229;
  		ACCclear(8);
  		ACCplace(5,53);
- 		ACCwriteln(118);
- 		ACCwriteln(119);
+ 		ACCwriteln(123);
+ 		ACCwriteln(124);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4472,7 +4471,7 @@ pro000_restart: while(process_restart)
 		if (!CNDprep(4)) break p000e0233;
 		if (!CNDnoun2(50)) break p000e0233;
 		if (!CNDnotcarr(0)) break p000e0233;
- 		ACCwriteln(120);
+ 		ACCwriteln(125);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4491,7 +4490,7 @@ pro000_restart: while(process_restart)
 		if (!CNDprep(4)) break p000e0234;
 		if (!CNDnoun2(50)) break p000e0234;
 		if (!CNDnotcarr(5)) break p000e0234;
- 		ACCwriteln(121);
+ 		ACCwriteln(126);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4510,7 +4509,7 @@ pro000_restart: while(process_restart)
 		if (!CNDprep(4)) break p000e0235;
 		if (!CNDnoun2(50)) break p000e0235;
 		if (!CNDnotzero(105)) break p000e0235;
- 		ACCwriteln(122);
+ 		ACCwriteln(127);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4530,7 +4529,7 @@ pro000_restart: while(process_restart)
 		if (!CNDnoun2(50)) break p000e0236;
  		ACCdestroy(5);
  		ACCset(105);
- 		ACCwriteln(123);
+ 		ACCwriteln(128);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4597,7 +4596,7 @@ pro000_restart: while(process_restart)
 		if (!CNDprep(3)) break p000e0240;
 		if (!CNDnoun2(50)) break p000e0240;
 		if (!CNDnotcarr(0)) break p000e0240;
- 		ACCwriteln(124);
+ 		ACCwriteln(129);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4616,7 +4615,7 @@ pro000_restart: while(process_restart)
 		if (!CNDprep(3)) break p000e0241;
 		if (!CNDnoun2(50)) break p000e0241;
 		if (!CNDzero(105)) break p000e0241;
- 		ACCwriteln(125);
+ 		ACCwriteln(130);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4634,7 +4633,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDatlt(30)) break p000e0242;
 		if (!CNDgt(1,4)) break p000e0242;
- 		ACCwriteln(126);
+ 		ACCwriteln(131);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4652,7 +4651,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDatgt(30)) break p000e0243;
 		if (!CNDgt(1,6)) break p000e0243;
- 		ACCwriteln(127);
+ 		ACCwriteln(132);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4726,7 +4725,7 @@ pro000_restart: while(process_restart)
  		ACCcreate(5);
  		ACCget(5);
 		if (!success) break pro000_restart;
- 		ACCwriteln(128);
+ 		ACCwriteln(133);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4747,7 +4746,7 @@ pro000_restart: while(process_restart)
 		if (!CNDat(26)) break p000e0247;
 		if (!CNDeq(107,1)) break p000e0247;
  		ACClet(107,2);
- 		ACCwriteln(129);
+ 		ACCwriteln(134);
  		ACCnewline();
  		ACCanykey();
  		function anykey00011() 
@@ -4772,7 +4771,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(83)) break p000e0248;
  		}
 		if (!CNDat(18)) break p000e0248;
- 		ACCwrite(130);
+ 		ACCwrite(135);
  		ACCpause(30);
  		function anykey00012() 
 		{
@@ -4816,7 +4815,7 @@ pro000_restart: while(process_restart)
 		if (!CNDnotzero(254)) break p000e0250;
  		ACCclear(254);
  		ACCnewline();
- 		ACCwriteln(131);
+ 		ACCwriteln(136);
  		ACCnewline();
  		ACCanykey();
  		function anykey00013() 
@@ -4841,7 +4840,7 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(119)) break p000e0251;
  		}
  		ACCset(254);
- 		ACCwriteln(132);
+ 		ACCwriteln(137);
 		if (!CNDnotzero(1)) break p000e0251;
  		ACClet(33,21);
 		entry_for_doall = 'p000e0252';
@@ -4879,7 +4878,7 @@ pro000_restart: while(process_restart)
 		if (!CNDnotzero(254)) break p000e0253;
  		ACCclear(254);
  		ACCnewline();
- 		ACCwriteln(133);
+ 		ACCwriteln(138);
  		ACCnewline();
  		ACCanykey();
  		function anykey00014() 
@@ -4904,7 +4903,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(117)) break p000e0254;
  		}
  		ACCset(254);
- 		ACCwriteln(134);
+ 		ACCwriteln(139);
  		ACCpause(120);
  		function anykey00015() 
 		{
@@ -4929,11 +4928,11 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(25)) break p000e0255;
  		}
  		ACCcommand(0);
- 		ACCwrite(135);
+ 		ACCwrite(140);
  		ACCprint(31);
- 		ACCwriteln(136);
+ 		ACCwriteln(141);
  		ACCnewline();
- 		ACCwriteln(137);
+ 		ACCwriteln(142);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4964,7 +4963,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(12)) break p000e0257;
 		if (!CNDlt(102,255)) break p000e0257;
- 		ACCwriteln(138);
+ 		ACCwriteln(143);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5000,7 +4999,7 @@ pro000_restart: while(process_restart)
 		if (!CNDat(20)) break p000e0259;
 		if (!CNDgt(101,2)) break p000e0259;
 		if (!CNDlt(101,5)) break p000e0259;
- 		ACCwriteln(139);
+ 		ACCwriteln(144);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5016,7 +5015,7 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(113)) break p000e0260;
  		}
 		if (!CNDeq(101,4)) break p000e0260;
- 		ACCwriteln(140);
+ 		ACCwriteln(145);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5102,7 +5101,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDeq(101,4)) break p000e0265;
  		ACClet(101,3);
- 		ACCwriteln(141);
+ 		ACCwriteln(146);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5119,7 +5118,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(101)) break p000e0266;
  		}
 		if (!CNDcarried(6)) break p000e0266;
- 		ACCwriteln(142);
+ 		ACCwriteln(147);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5178,8 +5177,8 @@ pro000_restart: while(process_restart)
  		ACCdestroy(6);
  		ACCset(102);
  		ACCcreate(0);
- 		ACCextern(143);
- 		ACCwriteln(144);
+ 		ACCextern(148);
+ 		ACCwriteln(149);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5197,7 +5196,7 @@ pro000_restart: while(process_restart)
 		if (!CNDat(26)) break p000e0270;
 		if (!CNDeq(33,255)) break p000e0270;
 		if (!CNDzero(107)) break p000e0270;
- 		ACCwriteln(145);
+ 		ACCwriteln(150);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5296,7 +5295,7 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(26)) break p000e0276;
  		ACCdestroy(26);
  		ACCnewline();
- 		ACCwriteln(146);
+ 		ACCwriteln(151);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5311,7 +5310,7 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(43)) break p000e0277;
  		}
- 		ACCwriteln(147);
+ 		ACCwriteln(152);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5327,7 +5326,7 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(33)) break p000e0278;
  		}
 		if (!CNDat(31)) break p000e0278;
- 		ACCwriteln(148);
+ 		ACCwriteln(153);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5346,7 +5345,7 @@ pro000_restart: while(process_restart)
 		if (!CNDatlt(104)) break p000e0279;
 		if (!CNDnoteq(51,255)) break p000e0279;
 		if (!CNDnotcarr(getFlag(51))) break p000e0279;
- 		ACCwriteln(149);
+ 		ACCwriteln(154);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5383,7 +5382,7 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(7)) break p000e0281;
 		if (!CNDonotzero(7,23)) break p000e0281;
  		ACCoclear(7,23);
- 		ACCwriteln(150);
+ 		ACCwriteln(155);
  		ACCclear(130);
  		ACCdone();
 		break pro000_restart;
@@ -5404,9 +5403,9 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(7)) break p000e0282;
 		if (!CNDonotzero(7,23)) break p000e0282;
  		ACCoclear(7,23);
- 		ACCwrite(151);
+ 		ACCwrite(156);
  		ACCclear(130);
- 		ACCwriteln(152);
+ 		ACCwriteln(157);
  		ACCset(116);
  		ACCcreate(17);
  		ACCdone();
@@ -5426,7 +5425,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDcarried(7)) break p000e0283;
 		if (!CNDonotzero(7,23)) break p000e0283;
- 		ACCwriteln(153);
+ 		ACCwriteln(158);
  		ACCanykey();
  		function anykey00016() 
 		{
@@ -5453,7 +5452,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(116)) break p000e0284;
 		if (!CNDcarried(4)) break p000e0284;
- 		ACCwriteln(154);
+ 		ACCwriteln(159);
  		ACCset(123);
  		ACCdone();
 		break pro000_restart;
@@ -5471,7 +5470,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(129)) break p000e0285;
  		}
 		if (!CNDat(116)) break p000e0285;
- 		ACCwriteln(155);
+ 		ACCwriteln(160);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5489,7 +5488,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDcarried(7)) break p000e0286;
 		if (!CNDozero(7,23)) break p000e0286;
- 		ACCwriteln(156);
+ 		ACCwriteln(161);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5508,7 +5507,7 @@ pro000_restart: while(process_restart)
 		if (!CNDat(77)) break p000e0287;
 		if (!CNDcarried(20)) break p000e0287;
 		if (!CNDzero(118)) break p000e0287;
- 		ACCwriteln(157);
+ 		ACCwriteln(162);
  		ACCplace(21,79);
  		ACCset(118);
  		ACCdone();
@@ -5528,7 +5527,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(77)) break p000e0288;
 		if (!CNDcarried(20)) break p000e0288;
- 		ACCwriteln(158);
+ 		ACCwriteln(163);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5545,7 +5544,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(126)) break p000e0289;
  		}
 		if (!CNDat(77)) break p000e0289;
- 		ACCwriteln(159);
+ 		ACCwriteln(164);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5564,7 +5563,7 @@ pro000_restart: while(process_restart)
 		if (!CNDat(106)) break p000e0290;
 		if (!CNDeq(124,1)) break p000e0290;
  		ACCset(124);
- 		ACCwriteln(160);
+ 		ACCwriteln(165);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5582,7 +5581,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(106)) break p000e0291;
 		if (!CNDzero(124)) break p000e0291;
- 		ACCwriteln(161);
+ 		ACCwriteln(166);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5599,7 +5598,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(89)) break p000e0292;
  		}
 		if (!CNDat(106)) break p000e0292;
- 		ACCwriteln(162);
+ 		ACCwriteln(167);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5615,7 +5614,7 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(64)) break p000e0293;
  		}
 		if (!CNDat(31)) break p000e0293;
- 		ACCwriteln(163);
+ 		ACCwriteln(168);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5633,7 +5632,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(106)) break p000e0294;
 		if (!CNDeq(124,1)) break p000e0294;
- 		ACCwriteln(164);
+ 		ACCwriteln(169);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5651,7 +5650,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(106)) break p000e0295;
 		if (!CNDzero(124)) break p000e0295;
- 		ACCwriteln(165);
+ 		ACCwriteln(170);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5669,7 +5668,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(106)) break p000e0296;
  		ACClet(124,1);
- 		ACCwriteln(166);
+ 		ACCwriteln(171);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5687,7 +5686,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDcarried(7)) break p000e0297;
 		if (!CNDonotzero(7,23)) break p000e0297;
- 		ACCwriteln(167);
+ 		ACCwriteln(172);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5809,7 +5808,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(168)) break p000e0304;
  		}
 		if (!CNDcarried(8)) break p000e0304;
- 		ACCwriteln(168);
+ 		ACCwriteln(173);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5842,7 +5841,7 @@ pro000_restart: while(process_restart)
 		if (!CNDnoun2(155)) break p000e0306;
 		if (!CNDat(53)) break p000e0306;
 		if (!CNDabsent(5)) break p000e0306;
- 		ACCwriteln(169);
+ 		ACCwriteln(174);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5875,7 +5874,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(37)) break p000e0308;
 		if (!CNDzero(114)) break p000e0308;
- 		ACCwriteln(170);
+ 		ACCwriteln(175);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5893,7 +5892,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(37)) break p000e0309;
 		if (!CNDisat(14,37)) break p000e0309;
- 		ACCwriteln(171);
+ 		ACCwriteln(176);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5911,7 +5910,7 @@ pro000_restart: while(process_restart)
 		if (!CNDat(66)) break p000e0310;
 		if (!CNDlt(116,9)) break p000e0310;
  		ACClet(116,9);
- 		ACCwriteln(172);
+ 		ACCwriteln(177);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5933,7 +5932,7 @@ pro000_restart: while(process_restart)
  		ACCget(11);
 		if (!success) break pro000_restart;
  		ACClet(51,152);
- 		ACCwriteln(173);
+ 		ACCwriteln(178);
  		ACCdestroy(26);
  		ACCdone();
 		break pro000_restart;
@@ -5957,7 +5956,7 @@ pro000_restart: while(process_restart)
 		if (!CNDzero(130)) break p000e0312;
  		ACCoset(7,23);
  		ACCset(130);
- 		ACCwriteln(174);
+ 		ACCwriteln(179);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5974,7 +5973,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(158)) break p000e0313;
  		}
 		if (!CNDat(35)) break p000e0313;
- 		ACCwriteln(175);
+ 		ACCwriteln(180);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5991,7 +5990,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(132)) break p000e0314;
  		}
 		if (!CNDat(92)) break p000e0314;
- 		ACCwriteln(176);
+ 		ACCwriteln(181);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6009,7 +6008,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(37)) break p000e0315;
 		if (!CNDzero(114)) break p000e0315;
- 		ACCwriteln(177);
+ 		ACCwriteln(182);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6046,7 +6045,7 @@ pro000_restart: while(process_restart)
 		if (!CNDprep(3)) break p000e0317;
 		if (!CNDnoun2(172)) break p000e0317;
 		if (!CNDat(106)) break p000e0317;
- 		ACCwriteln(178);
+ 		ACCwriteln(183);
  		ACCnotdone();
 		break pro000_restart;
 		{}
@@ -6064,7 +6063,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDprep(3)) break p000e0318;
 		if (!CNDnoun2(172)) break p000e0318;
- 		ACCwriteln(179);
+ 		ACCwriteln(184);
  		ACCnotdone();
 		break pro000_restart;
 		{}
@@ -6081,7 +6080,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(171)) break p000e0319;
  		}
 		if (!CNDat(106)) break p000e0319;
- 		ACCwriteln(180);
+ 		ACCwriteln(185);
  		ACCnotdone();
 		break pro000_restart;
 		{}
@@ -6112,7 +6111,7 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(124)) break p000e0321;
  		}
- 		ACCwriteln(181);
+ 		ACCwriteln(186);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6128,7 +6127,7 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(123)) break p000e0322;
  		}
 		if (!CNDat(98)) break p000e0322;
- 		ACCwriteln(182);
+ 		ACCwriteln(187);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6147,8 +6146,7 @@ pro000_restart: while(process_restart)
 		if (!CNDisnotat(11,getFlag(38))) break p000e0323;
 		if (!CNDcarried(26)) break p000e0323;
 		if (!CNDnotat(96)) break p000e0323;
- 		ACCwhato();
- 		ACCwriteln(183);
+ 		ACCwriteln(188);
  		ACCdestroy(26);
  		ACCdone();
 		break pro000_restart;
@@ -6183,7 +6181,7 @@ pro000_restart: while(process_restart)
 		if (!CNDeq(122,2)) break p000e0325;
 		if (!CNDcarried(4)) break p000e0325;
  		ACCset(122);
- 		ACCwriteln(184);
+ 		ACCwriteln(189);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6202,7 +6200,7 @@ pro000_restart: while(process_restart)
 		if (!CNDat(117)) break p000e0326;
 		if (!CNDcarried(4)) break p000e0326;
 		if (!CNDzero(122)) break p000e0326;
- 		ACCwriteln(185);
+ 		ACCwriteln(190);
  		ACCanykey();
  		function anykey00017() 
 		{
@@ -6231,8 +6229,8 @@ pro000_restart: while(process_restart)
 		if (!CNDatgt(101)) break p000e0327;
 		if (!CNDatlt(104)) break p000e0327;
 		if (!CNDzero(121)) break p000e0327;
- 		ACCwrite(186);
- 		ACCwriteln(187);
+ 		ACCwrite(191);
+ 		ACCwriteln(192);
  		ACCset(121);
  		ACCcreate(23);
  		ACClet(122,1);
@@ -6252,7 +6250,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(157)) break p000e0328;
  		}
 		if (!CNDeq(122,255)) break p000e0328;
- 		ACCwriteln(188);
+ 		ACCwriteln(193);
  		ACCcreate(23);
  		ACClet(122,1);
  		ACCdone();
@@ -6271,7 +6269,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(157)) break p000e0329;
  		}
 		if (!CNDeq(122,1)) break p000e0329;
- 		ACCwriteln(189);
+ 		ACCwriteln(194);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6302,7 +6300,7 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(40)) break p000e0331;
  		}
- 		ACCwriteln(190);
+ 		ACCwriteln(195);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6335,7 +6333,8 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(150)) break p000e0333;
  		}
 		if (!CNDcarried(10)) break p000e0333;
- 		ACCwriteln(191);
+ 		ACCwriteln(196);
+ 		ACCnewline();
  		ACCanykey();
  		function anykey00018() 
 		{
@@ -6394,7 +6393,7 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(39)) break p000e0336;
  		}
 		if (!CNDat(118)) break p000e0336;
- 		ACCwriteln(192);
+ 		ACCwriteln(197);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6410,7 +6409,7 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(39)) break p000e0337;
  		}
 		if (!CNDat(69)) break p000e0337;
- 		ACCwriteln(193);
+ 		ACCwriteln(198);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6426,7 +6425,7 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(39)) break p000e0338;
  		}
 		if (!CNDat(84)) break p000e0338;
- 		ACCwriteln(194);
+ 		ACCwriteln(199);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6447,7 +6446,7 @@ pro000_restart: while(process_restart)
 		if (!CNDzero(124)) break p000e0339;
  		ACCswap(9,3);
  		ACCoclear(3,22);
- 		ACCwriteln(195);
+ 		ACCwriteln(200);
  		ACClet(124,1);
  		ACCdone();
 		break pro000_restart;
@@ -6466,7 +6465,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(106)) break p000e0340;
 		if (!CNDnotcarr(9)) break p000e0340;
- 		ACCwriteln(196);
+ 		ACCwriteln(201);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6484,7 +6483,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(106)) break p000e0341;
 		if (!CNDnotzero(124)) break p000e0341;
- 		ACCwriteln(197);
+ 		ACCwriteln(202);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6499,7 +6498,7 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(127)) break p000e0342;
  		}
- 		ACCwriteln(198);
+ 		ACCwriteln(203);
  		ACCnotdone();
 		break pro000_restart;
 		{}
@@ -6516,7 +6515,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(156)) break p000e0343;
  		}
 		if (!CNDat(37)) break p000e0343;
- 		ACCwriteln(199);
+ 		ACCwriteln(204);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6548,7 +6547,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDzero(131)) break p000e0345;
  		ACCset(131);
- 		ACCwrite(200);
+ 		ACCwrite(205);
  		ACCplace(14,37);
 		{}
 
@@ -6562,7 +6561,8 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(95)) break p000e0346;
  		}
- 		ACCok();
+ 		ACCwriteln(206);
+ 		ACCdone();
 		break pro000_restart;
 		{}
 
@@ -6579,7 +6579,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(92)) break p000e0347;
 		if (!CNDcarried(9)) break p000e0347;
- 		ACCwriteln(201);
+ 		ACCwriteln(207);
  		ACCclear(120);
  		ACCswap(9,3);
  		ACCoclear(3,22);
@@ -6599,7 +6599,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(132)) break p000e0348;
  		}
 		if (!CNDnotcarr(3)) break p000e0348;
- 		ACCwriteln(202);
+ 		ACCwriteln(208);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6616,7 +6616,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(132)) break p000e0349;
  		}
 		if (!CNDozero(3,22)) break p000e0349;
- 		ACCwriteln(203);
+ 		ACCwriteln(209);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6650,7 +6650,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(92)) break p000e0351;
 		if (!CNDeq(120,1)) break p000e0351;
- 		ACCwriteln(204);
+ 		ACCwriteln(210);
  		ACCnewline();
  		ACCdone();
 		break pro000_restart;
@@ -6669,7 +6669,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(92)) break p000e0352;
 		if (!CNDgt(120,1)) break p000e0352;
- 		ACCwriteln(205);
+ 		ACCwriteln(211);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6686,7 +6686,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDatgt(30)) break p000e0353;
  		ACCdestroy(0);
- 		ACCwrite(206);
+ 		ACCwrite(212);
  		ACCanykey();
  		function anykey00019() 
 		{
@@ -6711,7 +6711,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDcarried(3)) break p000e0354;
  		ACCdestroy(3);
- 		ACCwriteln(207);
+ 		ACCwriteln(213);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6730,7 +6730,7 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(9)) break p000e0355;
  		ACCdestroy(9);
  		ACCnewline();
- 		ACCwriteln(208);
+ 		ACCwriteln(214);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6747,7 +6747,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(149)) break p000e0356;
  		}
 		if (!CNDnotcarr(12)) break p000e0356;
- 		ACCwriteln(209);
+ 		ACCwriteln(215);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6766,7 +6766,7 @@ pro000_restart: while(process_restart)
 		if (!CNDzero(127)) break p000e0357;
 		if (!CNDeq(126,2)) break p000e0357;
 		if (!CNDchance(50)) break p000e0357;
- 		ACCwriteln(210);
+ 		ACCwriteln(216);
  		ACCplace(12,getFlag(38));
  		ACCset(127);
  		ACCdone();
@@ -6785,7 +6785,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(149)) break p000e0358;
  		}
 		if (!CNDeq(126,2)) break p000e0358;
- 		ACCwriteln(211);
+ 		ACCwriteln(217);
  		ACCdestroy(12);
  		ACCclear(126);
  		ACCclear(127);
@@ -6813,7 +6813,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(50)) break p000e0359;
  		}
 		if (!CNDnotcarr(0)) break p000e0359;
- 		ACCwriteln(212);
+ 		ACCwriteln(218);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6830,7 +6830,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(50)) break p000e0360;
  		}
 		if (!CNDat(118)) break p000e0360;
- 		ACCwriteln(213);
+ 		ACCwriteln(219);
  		ACCset(0);
  		ACCpause(100);
  		function anykey00021() 
@@ -6855,7 +6855,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(50)) break p000e0361;
  		}
 		if (!CNDat(84)) break p000e0361;
- 		ACCwriteln(214);
+ 		ACCwriteln(220);
  		ACCset(0);
  		ACCpause(100);
  		function anykey00022() 
@@ -6881,7 +6881,7 @@ pro000_restart: while(process_restart)
 		if (!CNDat(118)) break p000e0362;
 		if (!CNDnoteq(51,255)) break p000e0362;
 		if (!CNDcarried(getFlag(51))) break p000e0362;
- 		ACCwriteln(215);
+ 		ACCwriteln(221);
  		ACCdestroy(getFlag(51));
  		ACCdone();
 		break pro000_restart;
@@ -6900,7 +6900,7 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p000e0363;
 		if (!CNDat(84)) break p000e0363;
 		if (!CNDcarried(getFlag(51))) break p000e0363;
- 		ACCwriteln(216);
+ 		ACCwriteln(222);
  		ACCdestroy(getFlag(51));
  		ACCdone();
 		break pro000_restart;
@@ -6919,7 +6919,7 @@ pro000_restart: while(process_restart)
 		if (!CNDatgt(101)) break p000e0364;
 		if (!CNDatlt(104)) break p000e0364;
 		if (!CNDzero(121)) break p000e0364;
- 		ACCwriteln(217);
+ 		ACCwriteln(223);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6937,7 +6937,7 @@ pro000_restart: while(process_restart)
 		if (!CNDatgt(101)) break p000e0365;
 		if (!CNDatlt(104)) break p000e0365;
 		if (!CNDeq(122,255)) break p000e0365;
- 		ACCwriteln(218);
+ 		ACCwriteln(224);
  		ACCclear(0);
  		ACCgoto(120);
  		ACCanykey();
@@ -7045,7 +7045,7 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(45)) break p000e0371;
  		}
 		if (!CNDat(96)) break p000e0371;
- 		ACCwriteln(219);
+ 		ACCwriteln(225);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7093,7 +7093,7 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(45)) break p000e0374;
  		}
- 		ACCwriteln(220);
+ 		ACCwriteln(226);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7125,7 +7125,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDat(106)) break p000e0376;
 		if (!CNDisat(22,106)) break p000e0376;
- 		ACCwriteln(221);
+ 		ACCwriteln(227);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7144,8 +7144,8 @@ pro000_restart: while(process_restart)
 		if (!CNDat(106)) break p000e0377;
 		if (!CNDcarried(22)) break p000e0377;
  		ACCplace(22,106);
- 		ACCwrite(222);
- 		ACCwriteln(223);
+ 		ACCwrite(228);
+ 		ACCwriteln(229);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7162,7 +7162,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(140)) break p000e0378;
  		}
 		if (!CNDat(106)) break p000e0378;
- 		ACCwriteln(224);
+ 		ACCwriteln(230);
  		ACCcreate(22);
  		ACCdone();
 		break pro000_restart;
@@ -7179,7 +7179,7 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(121)) break p000e0379;
 			if (!CNDnoun1(140)) break p000e0379;
  		}
- 		ACCwriteln(225);
+ 		ACCwriteln(231);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7273,7 +7273,7 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDnoun1(165)) break p000e0385;
  		}
- 		ACCwriteln(226);
+ 		ACCwriteln(232);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7382,7 +7382,7 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDnoun1(154)) break p000e0392;
  		}
- 		ACCwriteln(227);
+ 		ACCwriteln(233);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7476,7 +7476,7 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(82)) break p000e0398;
  		}
- 		ACCwriteln(228);
+ 		ACCwriteln(234);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7491,7 +7491,7 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDnoun1(163)) break p000e0399;
  		}
- 		ACCwriteln(229);
+ 		ACCwriteln(235);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7506,7 +7506,7 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(113)) break p000e0400;
  		}
- 		ACCwrite(230);
+ 		ACCwrite(236);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7519,7 +7519,7 @@ pro000_restart: while(process_restart)
  		if (skipdoall('p000e0401')) break p000e0401;
 		if (!CNDat(76)) break p000e0401;
  		ACCclear(117);
- 		ACCwrite(231);
+ 		ACCwrite(237);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7553,28 +7553,19 @@ pro000_restart: while(process_restart)
 	p000e0404:
 	{
  		if (skipdoall('p000e0404')) break p000e0404;
-		if (!CNDat(120)) break p000e0404;
-		{}
-
-	}
-
-	// _ _
-	p000e0405:
-	{
- 		if (skipdoall('p000e0405')) break p000e0405;
- 		ACChook(232);
+ 		ACChook(238);
 		if (done_flag) break pro000_restart;
 		{}
 
 	}
 
 	//  _
-	p000e0406:
+	p000e0405:
 	{
- 		if (skipdoall('p000e0406')) break p000e0406;
+ 		if (skipdoall('p000e0405')) break p000e0405;
  		if (in_response)
 		{
-			if (!CNDverb(14)) break p000e0406;
+			if (!CNDverb(14)) break p000e0405;
  		}
  		ACCinven();
 		break pro000_restart;
@@ -7583,16 +7574,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// ENTRA _
-	p000e0407:
+	p000e0406:
 	{
- 		if (skipdoall('p000e0407')) break p000e0407;
+ 		if (skipdoall('p000e0406')) break p000e0406;
  		if (in_response)
 		{
-			if (!CNDverb(12)) break p000e0407;
+			if (!CNDverb(12)) break p000e0406;
  		}
-		if (!CNDnoteq(51,255)) break p000e0407;
-		if (!CNDpresent(getFlag(51))) break p000e0407;
-		if (!CNDonotzero(getFlag(51),7)) break p000e0407;
+		if (!CNDnoteq(51,255)) break p000e0406;
+		if (!CNDpresent(getFlag(51))) break p000e0406;
+		if (!CNDonotzero(getFlag(51),7)) break p000e0406;
  		ACCgoto(getFlag(51));
  		ACCdesc();
 		break pro000_restart;
@@ -7601,102 +7592,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// SENTAR _
-	p000e0408:
+	p000e0407:
 	{
- 		if (skipdoall('p000e0408')) break p000e0408;
+ 		if (skipdoall('p000e0407')) break p000e0407;
  		if (in_response)
 		{
-			if (!CNDverb(23)) break p000e0408;
- 		}
- 		ACCwriteln(233);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// LEVANTARSE _
-	p000e0409:
-	{
- 		if (skipdoall('p000e0409')) break p000e0409;
- 		if (in_response)
-		{
-			if (!CNDverb(53)) break p000e0409;
- 		}
- 		ACCwriteln(234);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// ALUMBRA _
-	p000e0410:
-	{
- 		if (skipdoall('p000e0410')) break p000e0410;
- 		if (in_response)
-		{
-			if (!CNDverb(85)) break p000e0410;
- 		}
- 		ACCwriteln(235);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// REGISTRARS _
-	p000e0411:
-	{
- 		if (skipdoall('p000e0411')) break p000e0411;
- 		if (in_response)
-		{
-			if (!CNDverb(84)) break p000e0411;
- 		}
- 		ACCwriteln(236);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// MATARSE _
-	p000e0412:
-	{
- 		if (skipdoall('p000e0412')) break p000e0412;
- 		if (in_response)
-		{
-			if (!CNDverb(81)) break p000e0412;
- 		}
- 		ACCwriteln(237);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// LAVARSE _
-	p000e0413:
-	{
- 		if (skipdoall('p000e0413')) break p000e0413;
- 		if (in_response)
-		{
-			if (!CNDverb(88)) break p000e0413;
- 		}
- 		ACCwriteln(238);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// XYZZY _
-	p000e0414:
-	{
- 		if (skipdoall('p000e0414')) break p000e0414;
- 		if (in_response)
-		{
-			if (!CNDverb(82)) break p000e0414;
+			if (!CNDverb(23)) break p000e0407;
  		}
  		ACCwriteln(239);
  		ACCdone();
@@ -7705,13 +7606,103 @@ pro000_restart: while(process_restart)
 
 	}
 
-	// ABANDONA _
-	p000e0415:
+	// LEVANTARSE _
+	p000e0408:
 	{
- 		if (skipdoall('p000e0415')) break p000e0415;
+ 		if (skipdoall('p000e0408')) break p000e0408;
  		if (in_response)
 		{
-			if (!CNDverb(25)) break p000e0415;
+			if (!CNDverb(53)) break p000e0408;
+ 		}
+ 		ACCwriteln(240);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ALUMBRA _
+	p000e0409:
+	{
+ 		if (skipdoall('p000e0409')) break p000e0409;
+ 		if (in_response)
+		{
+			if (!CNDverb(85)) break p000e0409;
+ 		}
+ 		ACCwriteln(241);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// REGISTRARS _
+	p000e0410:
+	{
+ 		if (skipdoall('p000e0410')) break p000e0410;
+ 		if (in_response)
+		{
+			if (!CNDverb(84)) break p000e0410;
+ 		}
+ 		ACCwriteln(242);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// MATARSE _
+	p000e0411:
+	{
+ 		if (skipdoall('p000e0411')) break p000e0411;
+ 		if (in_response)
+		{
+			if (!CNDverb(81)) break p000e0411;
+ 		}
+ 		ACCwriteln(243);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// LAVARSE _
+	p000e0412:
+	{
+ 		if (skipdoall('p000e0412')) break p000e0412;
+ 		if (in_response)
+		{
+			if (!CNDverb(88)) break p000e0412;
+ 		}
+ 		ACCwriteln(244);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// XYZZY _
+	p000e0413:
+	{
+ 		if (skipdoall('p000e0413')) break p000e0413;
+ 		if (in_response)
+		{
+			if (!CNDverb(82)) break p000e0413;
+ 		}
+ 		ACCwriteln(245);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ABANDONA _
+	p000e0414:
+	{
+ 		if (skipdoall('p000e0414')) break p000e0414;
+ 		if (in_response)
+		{
+			if (!CNDverb(25)) break p000e0414;
  		}
  		ACCquit();
  		function anykey00024() 
@@ -7728,12 +7719,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// GRABA _
-	p000e0416:
+	p000e0415:
 	{
- 		if (skipdoall('p000e0416')) break p000e0416;
+ 		if (skipdoall('p000e0415')) break p000e0415;
  		if (in_response)
 		{
-			if (!CNDverb(26)) break p000e0416;
+			if (!CNDverb(26)) break p000e0415;
  		}
  		ACCsave();
 		break pro000_restart;
@@ -7742,12 +7733,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// CARGA _
-	p000e0417:
+	p000e0416:
 	{
- 		if (skipdoall('p000e0417')) break p000e0417;
+ 		if (skipdoall('p000e0416')) break p000e0416;
  		if (in_response)
 		{
-			if (!CNDverb(27)) break p000e0417;
+			if (!CNDverb(27)) break p000e0416;
  		}
  		ACCload();
 		break pro000_restart;
@@ -7756,12 +7747,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// GRABARAM _
-	p000e0418:
+	p000e0417:
 	{
- 		if (skipdoall('p000e0418')) break p000e0418;
+ 		if (skipdoall('p000e0417')) break p000e0417;
  		if (in_response)
 		{
-			if (!CNDverb(28)) break p000e0418;
+			if (!CNDverb(28)) break p000e0417;
  		}
  		ACCramsave();
  		ACCdesc();
@@ -7771,12 +7762,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// CARGARAM _
-	p000e0419:
+	p000e0418:
 	{
- 		if (skipdoall('p000e0419')) break p000e0419;
+ 		if (skipdoall('p000e0418')) break p000e0418;
  		if (in_response)
 		{
-			if (!CNDverb(29)) break p000e0419;
+			if (!CNDverb(29)) break p000e0418;
  		}
  		ACCramload(255);
  		ACCdesc();
@@ -7786,16 +7777,33 @@ pro000_restart: while(process_restart)
 	}
 
 	// TRANSCRIP _
+	p000e0419:
+	{
+ 		if (skipdoall('p000e0419')) break p000e0419;
+ 		if (in_response)
+		{
+			if (!CNDverb(68)) break p000e0419;
+ 		}
+ 		ACCtranscript(1);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// AGARR _
 	p000e0420:
 	{
  		if (skipdoall('p000e0420')) break p000e0420;
  		if (in_response)
 		{
-			if (!CNDverb(68)) break p000e0420;
+			if (!CNDverb(20)) break p000e0420;
  		}
- 		ACCtranscript(1);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDprep(3)) break p000e0420;
+ 		ACCwhatox2(14);
+		if (!CNDnoteq(14,255)) break p000e0420;
+		if (!CNDonotzero(getFlag(14),2)) break p000e0420;
+ 		ACCsynonym(75,255);
 		{}
 
 	}
@@ -7808,11 +7816,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(20)) break p000e0421;
  		}
-		if (!CNDprep(3)) break p000e0421;
- 		ACCwhatox2(14);
-		if (!CNDnoteq(14,255)) break p000e0421;
-		if (!CNDonotzero(getFlag(14),2)) break p000e0421;
- 		ACCsynonym(75,255);
+		if (!CNDeq(34,255)) break p000e0421;
+		if (!CNDbnotzero(12,1)) break p000e0421;
+ 		ACCwriteln(246);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
@@ -7826,8 +7834,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(20)) break p000e0422;
  		}
 		if (!CNDeq(34,255)) break p000e0422;
-		if (!CNDbnotzero(12,1)) break p000e0422;
- 		ACCwriteln(240);
+		if (!CNDbzero(12,1)) break p000e0422;
+ 		ACCwriteln(247);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7842,9 +7850,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(20)) break p000e0423;
  		}
-		if (!CNDeq(34,255)) break p000e0423;
-		if (!CNDbzero(12,1)) break p000e0423;
- 		ACCwriteln(241);
+		if (!CNDnoteq(51,255)) break p000e0423;
+		if (!CNDonotzero(getFlag(51),21)) break p000e0423;
+ 		ACCwriteln(248);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7859,27 +7867,27 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(20)) break p000e0424;
  		}
-		if (!CNDnoteq(51,255)) break p000e0424;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0424;
- 		ACCwriteln(242);
+ 		ACCautog();
+		if (!success) break pro000_restart;
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// AGARR _
+	// DEJA _
 	p000e0425:
 	{
  		if (skipdoall('p000e0425')) break p000e0425;
  		if (in_response)
 		{
-			if (!CNDverb(20)) break p000e0425;
+			if (!CNDverb(21)) break p000e0425;
  		}
- 		ACCautog();
-		if (!success) break pro000_restart;
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDprep(4)) break p000e0425;
+ 		ACCwhatox2(14);
+		if (!CNDnoteq(14,255)) break p000e0425;
+		if (!CNDonotzero(getFlag(14),2)) break p000e0425;
+ 		ACCsynonym(74,255);
 		{}
 
 	}
@@ -7892,11 +7900,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(21)) break p000e0426;
  		}
-		if (!CNDprep(4)) break p000e0426;
- 		ACCwhatox2(14);
-		if (!CNDnoteq(14,255)) break p000e0426;
-		if (!CNDonotzero(getFlag(14),2)) break p000e0426;
- 		ACCsynonym(74,255);
+		if (!CNDeq(34,255)) break p000e0426;
+		if (!CNDbnotzero(12,1)) break p000e0426;
+ 		ACCwriteln(249);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
@@ -7910,8 +7918,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(21)) break p000e0427;
  		}
 		if (!CNDeq(34,255)) break p000e0427;
-		if (!CNDbnotzero(12,1)) break p000e0427;
- 		ACCwriteln(243);
+		if (!CNDbzero(12,1)) break p000e0427;
+ 		ACCwriteln(250);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7926,27 +7934,23 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(21)) break p000e0428;
  		}
-		if (!CNDeq(34,255)) break p000e0428;
-		if (!CNDbzero(12,1)) break p000e0428;
- 		ACCwriteln(244);
+ 		ACCautod();
+		if (!success) break pro000_restart;
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DEJA _
+	// EXTRAE _
 	p000e0429:
 	{
  		if (skipdoall('p000e0429')) break p000e0429;
  		if (in_response)
 		{
-			if (!CNDverb(21)) break p000e0429;
+			if (!CNDverb(75)) break p000e0429;
  		}
- 		ACCautod();
-		if (!success) break pro000_restart;
- 		ACCdone();
-		break pro000_restart;
+ 		ACCwhatox2(15);
 		{}
 
 	}
@@ -7959,7 +7963,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(75)) break p000e0430;
  		}
- 		ACCwhatox2(15);
+		if (!CNDeq(34,255)) break p000e0430;
+		if (!CNDbzero(12,1)) break p000e0430;
+ 		ACCwriteln(251);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
@@ -7973,8 +7981,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(75)) break p000e0431;
  		}
 		if (!CNDeq(34,255)) break p000e0431;
-		if (!CNDbzero(12,1)) break p000e0431;
- 		ACCwriteln(245);
+		if (!CNDbnotzero(12,1)) break p000e0431;
+ 		ACCwriteln(252);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7989,9 +7997,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(75)) break p000e0432;
  		}
-		if (!CNDeq(34,255)) break p000e0432;
-		if (!CNDbnotzero(12,1)) break p000e0432;
- 		ACCwriteln(246);
+		if (!CNDnoteq(34,255)) break p000e0432;
+		if (!CNDeq(51,255)) break p000e0432;
+ 		ACCwriteln(253);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8006,9 +8014,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(75)) break p000e0433;
  		}
-		if (!CNDnoteq(34,255)) break p000e0433;
-		if (!CNDeq(51,255)) break p000e0433;
- 		ACCwriteln(247);
+		if (!CNDbzero(12,2)) break p000e0433;
+		if (!CNDeq(44,255)) break p000e0433;
+		if (!CNDbnotzero(12,1)) break p000e0433;
+ 		ACCwriteln(254);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8023,10 +8032,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(75)) break p000e0434;
  		}
-		if (!CNDbzero(12,2)) break p000e0434;
-		if (!CNDeq(44,255)) break p000e0434;
-		if (!CNDbnotzero(12,1)) break p000e0434;
- 		ACCwriteln(248);
+		if (!CNDnoteq(51,255)) break p000e0434;
+		if (!CNDworn(getFlag(51))) break p000e0434;
+		if (!CNDonotzero(getFlag(51),1)) break p000e0434;
+ 		ACCwriteln(255);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8042,9 +8051,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(75)) break p000e0435;
  		}
 		if (!CNDnoteq(51,255)) break p000e0435;
-		if (!CNDworn(getFlag(51))) break p000e0435;
-		if (!CNDonotzero(getFlag(51),1)) break p000e0435;
- 		ACCwriteln(249);
+		if (!CNDeq(44,255)) break p000e0435;
+		if (!CNDbzero(12,1)) break p000e0435;
+ 		ACCwriteln(256);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8060,9 +8069,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(75)) break p000e0436;
  		}
 		if (!CNDnoteq(51,255)) break p000e0436;
+		if (!CNDcarried(getFlag(51))) break p000e0436;
 		if (!CNDeq(44,255)) break p000e0436;
-		if (!CNDbzero(12,1)) break p000e0436;
- 		ACCwriteln(250);
+		if (!CNDbnotzero(12,1)) break p000e0436;
+ 		ACCwriteln(257);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8077,11 +8087,8 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(75)) break p000e0437;
  		}
-		if (!CNDnoteq(51,255)) break p000e0437;
-		if (!CNDcarried(getFlag(51))) break p000e0437;
-		if (!CNDeq(44,255)) break p000e0437;
-		if (!CNDbnotzero(12,1)) break p000e0437;
- 		ACCwriteln(251);
+		if (!CNDeq(15,255)) break p000e0437;
+ 		ACCwriteln(258);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8096,8 +8103,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(75)) break p000e0438;
  		}
-		if (!CNDeq(15,255)) break p000e0438;
- 		ACCwriteln(252);
+		if (!CNDnoteq(15,255)) break p000e0438;
+		if (!CNDonotzero(getFlag(15),2)) break p000e0438;
+		if (!CNDsame(51,15)) break p000e0438;
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8114,7 +8122,11 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(15,255)) break p000e0439;
 		if (!CNDonotzero(getFlag(15),2)) break p000e0439;
-		if (!CNDsame(51,15)) break p000e0439;
+		if (!CNDonotzero(getFlag(15),13)) break p000e0439;
+		if (!CNDozero(getFlag(15),14)) break p000e0439;
+		if (!CNDpresent(getFlag(15))) break p000e0439;
+ 		ACCwriteln(259);
+ 		ACCbreak();
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8131,10 +8143,10 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(15,255)) break p000e0440;
 		if (!CNDonotzero(getFlag(15),2)) break p000e0440;
-		if (!CNDonotzero(getFlag(15),13)) break p000e0440;
-		if (!CNDozero(getFlag(15),14)) break p000e0440;
+		if (!CNDonotzero(getFlag(15),9)) break p000e0440;
+		if (!CNDozero(getFlag(15),10)) break p000e0440;
 		if (!CNDpresent(getFlag(15))) break p000e0440;
- 		ACCwriteln(253);
+ 		ACCwriteln(260);
  		ACCbreak();
  		ACCdone();
 		break pro000_restart;
@@ -8152,11 +8164,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(15,255)) break p000e0441;
 		if (!CNDonotzero(getFlag(15),2)) break p000e0441;
-		if (!CNDonotzero(getFlag(15),9)) break p000e0441;
-		if (!CNDozero(getFlag(15),10)) break p000e0441;
-		if (!CNDpresent(getFlag(15))) break p000e0441;
- 		ACCwriteln(254);
- 		ACCbreak();
+		if (!CNDabsent(getFlag(15))) break p000e0441;
+ 		ACCwriteln(261);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8174,7 +8183,7 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(15,255)) break p000e0442;
 		if (!CNDonotzero(getFlag(15),2)) break p000e0442;
 		if (!CNDabsent(getFlag(15))) break p000e0442;
- 		ACCwriteln(255);
+ 		ACCwriteln(262);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8191,8 +8200,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(15,255)) break p000e0443;
 		if (!CNDonotzero(getFlag(15),2)) break p000e0443;
-		if (!CNDabsent(getFlag(15))) break p000e0443;
- 		ACCwriteln(256);
+		if (!CNDpresent(getFlag(15))) break p000e0443;
+ 		ACCautot(getFlag(15));
+		if (!success) break pro000_restart;
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8208,7 +8218,7 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(75)) break p000e0444;
  		}
 		if (!CNDnoteq(15,255)) break p000e0444;
-		if (!CNDonotzero(getFlag(15),2)) break p000e0444;
+		if (!CNDonotzero(getFlag(15),18)) break p000e0444;
 		if (!CNDpresent(getFlag(15))) break p000e0444;
  		ACCautot(getFlag(15));
 		if (!success) break pro000_restart;
@@ -8227,28 +8237,22 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(75)) break p000e0445;
  		}
 		if (!CNDnoteq(15,255)) break p000e0445;
-		if (!CNDonotzero(getFlag(15),18)) break p000e0445;
-		if (!CNDpresent(getFlag(15))) break p000e0445;
- 		ACCautot(getFlag(15));
-		if (!success) break pro000_restart;
+ 		ACCwriteln(263);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// EXTRAE _
+	// ECHA _
 	p000e0446:
 	{
  		if (skipdoall('p000e0446')) break p000e0446;
  		if (in_response)
 		{
-			if (!CNDverb(75)) break p000e0446;
+			if (!CNDverb(74)) break p000e0446;
  		}
-		if (!CNDnoteq(15,255)) break p000e0446;
- 		ACCwriteln(257);
- 		ACCdone();
-		break pro000_restart;
+ 		ACCwhatox2(15);
 		{}
 
 	}
@@ -8261,7 +8265,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0447;
  		}
- 		ACCwhatox2(15);
+		if (!CNDeq(34,255)) break p000e0447;
+		if (!CNDbzero(12,1)) break p000e0447;
+ 		ACCwriteln(264);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
@@ -8275,8 +8283,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(74)) break p000e0448;
  		}
 		if (!CNDeq(34,255)) break p000e0448;
-		if (!CNDbzero(12,1)) break p000e0448;
- 		ACCwriteln(258);
+		if (!CNDbnotzero(12,1)) break p000e0448;
+ 		ACCwriteln(265);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8291,9 +8299,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0449;
  		}
-		if (!CNDeq(34,255)) break p000e0449;
-		if (!CNDbnotzero(12,1)) break p000e0449;
- 		ACCwriteln(259);
+		if (!CNDnoteq(34,255)) break p000e0449;
+		if (!CNDeq(51,255)) break p000e0449;
+ 		ACCwriteln(266);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8308,9 +8316,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0450;
  		}
-		if (!CNDnoteq(34,255)) break p000e0450;
-		if (!CNDeq(51,255)) break p000e0450;
- 		ACCwriteln(260);
+		if (!CNDbzero(12,2)) break p000e0450;
+		if (!CNDeq(44,255)) break p000e0450;
+		if (!CNDbnotzero(12,1)) break p000e0450;
+ 		ACCwriteln(267);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8325,10 +8334,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0451;
  		}
-		if (!CNDbzero(12,2)) break p000e0451;
-		if (!CNDeq(44,255)) break p000e0451;
-		if (!CNDbnotzero(12,1)) break p000e0451;
- 		ACCwriteln(261);
+		if (!CNDnoteq(51,255)) break p000e0451;
+		if (!CNDworn(getFlag(51))) break p000e0451;
+		if (!CNDonotzero(getFlag(51),1)) break p000e0451;
+ 		ACCwriteln(268);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8344,9 +8353,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(74)) break p000e0452;
  		}
 		if (!CNDnoteq(51,255)) break p000e0452;
-		if (!CNDworn(getFlag(51))) break p000e0452;
-		if (!CNDonotzero(getFlag(51),1)) break p000e0452;
- 		ACCwriteln(262);
+		if (!CNDnotcarr(getFlag(51))) break p000e0452;
+ 		ACCwriteln(269);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8362,8 +8370,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(74)) break p000e0453;
  		}
 		if (!CNDnoteq(51,255)) break p000e0453;
-		if (!CNDnotcarr(getFlag(51))) break p000e0453;
- 		ACCwriteln(263);
+		if (!CNDcarried(getFlag(51))) break p000e0453;
+		if (!CNDeq(44,255)) break p000e0453;
+		if (!CNDbzero(12,1)) break p000e0453;
+ 		ACCwriteln(270);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8381,8 +8391,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p000e0454;
 		if (!CNDcarried(getFlag(51))) break p000e0454;
 		if (!CNDeq(44,255)) break p000e0454;
-		if (!CNDbzero(12,1)) break p000e0454;
- 		ACCwriteln(264);
+		if (!CNDbnotzero(12,1)) break p000e0454;
+ 		ACCwriteln(271);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8399,9 +8409,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0455;
 		if (!CNDcarried(getFlag(51))) break p000e0455;
-		if (!CNDeq(44,255)) break p000e0455;
-		if (!CNDbnotzero(12,1)) break p000e0455;
- 		ACCwriteln(265);
+		if (!CNDnoteq(44,255)) break p000e0455;
+		if (!CNDeq(15,255)) break p000e0455;
+ 		ACCwriteln(272);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8416,11 +8426,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0456;
  		}
-		if (!CNDnoteq(51,255)) break p000e0456;
-		if (!CNDcarried(getFlag(51))) break p000e0456;
-		if (!CNDnoteq(44,255)) break p000e0456;
-		if (!CNDeq(15,255)) break p000e0456;
- 		ACCwriteln(266);
+		if (!CNDnoteq(15,255)) break p000e0456;
+		if (!CNDonotzero(getFlag(15),2)) break p000e0456;
+		if (!CNDsame(51,15)) break p000e0456;
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8436,7 +8444,7 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(74)) break p000e0457;
  		}
 		if (!CNDnoteq(15,255)) break p000e0457;
-		if (!CNDonotzero(getFlag(15),2)) break p000e0457;
+		if (!CNDonotzero(getFlag(15),18)) break p000e0457;
 		if (!CNDsame(51,15)) break p000e0457;
  		ACCdone();
 		break pro000_restart;
@@ -8452,9 +8460,14 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0458;
  		}
+		if (!CNDnoteq(51,255)) break p000e0458;
+		if (!CNDcarried(getFlag(51))) break p000e0458;
+		if (!CNDnoteq(44,255)) break p000e0458;
 		if (!CNDnoteq(15,255)) break p000e0458;
-		if (!CNDonotzero(getFlag(15),18)) break p000e0458;
-		if (!CNDsame(51,15)) break p000e0458;
+		if (!CNDozero(getFlag(15),2)) break p000e0458;
+		if (!CNDozero(getFlag(15),18)) break p000e0458;
+		if (!CNDpresent(getFlag(15))) break p000e0458;
+ 		ACCwriteln(273);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8473,10 +8486,9 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(getFlag(51))) break p000e0459;
 		if (!CNDnoteq(44,255)) break p000e0459;
 		if (!CNDnoteq(15,255)) break p000e0459;
-		if (!CNDozero(getFlag(15),2)) break p000e0459;
-		if (!CNDozero(getFlag(15),18)) break p000e0459;
-		if (!CNDpresent(getFlag(15))) break p000e0459;
- 		ACCwriteln(267);
+		if (!CNDonotzero(getFlag(15),2)) break p000e0459;
+		if (!CNDabsent(getFlag(15))) break p000e0459;
+ 		ACCwriteln(274);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8495,9 +8507,9 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(getFlag(51))) break p000e0460;
 		if (!CNDnoteq(44,255)) break p000e0460;
 		if (!CNDnoteq(15,255)) break p000e0460;
-		if (!CNDonotzero(getFlag(15),2)) break p000e0460;
+		if (!CNDonotzero(getFlag(15),18)) break p000e0460;
 		if (!CNDabsent(getFlag(15))) break p000e0460;
- 		ACCwriteln(268);
+ 		ACCwriteln(275);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8516,9 +8528,12 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(getFlag(51))) break p000e0461;
 		if (!CNDnoteq(44,255)) break p000e0461;
 		if (!CNDnoteq(15,255)) break p000e0461;
-		if (!CNDonotzero(getFlag(15),18)) break p000e0461;
-		if (!CNDabsent(getFlag(15))) break p000e0461;
- 		ACCwriteln(269);
+		if (!CNDonotzero(getFlag(15),2)) break p000e0461;
+		if (!CNDpresent(getFlag(15))) break p000e0461;
+		if (!CNDonotzero(getFlag(15),13)) break p000e0461;
+		if (!CNDozero(getFlag(15),14)) break p000e0461;
+ 		ACCwriteln(276);
+ 		ACCbreak();
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8539,9 +8554,9 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(15,255)) break p000e0462;
 		if (!CNDonotzero(getFlag(15),2)) break p000e0462;
 		if (!CNDpresent(getFlag(15))) break p000e0462;
-		if (!CNDonotzero(getFlag(15),13)) break p000e0462;
-		if (!CNDozero(getFlag(15),14)) break p000e0462;
- 		ACCwriteln(270);
+		if (!CNDonotzero(getFlag(15),9)) break p000e0462;
+		if (!CNDozero(getFlag(15),10)) break p000e0462;
+ 		ACCwriteln(277);
  		ACCbreak();
  		ACCdone();
 		break pro000_restart;
@@ -8563,10 +8578,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(15,255)) break p000e0463;
 		if (!CNDonotzero(getFlag(15),2)) break p000e0463;
 		if (!CNDpresent(getFlag(15))) break p000e0463;
-		if (!CNDonotzero(getFlag(15),9)) break p000e0463;
-		if (!CNDozero(getFlag(15),10)) break p000e0463;
- 		ACCwriteln(271);
- 		ACCbreak();
+ 		ACCautop(getFlag(15));
+		if (!success) break pro000_restart;
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8585,7 +8598,7 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(getFlag(51))) break p000e0464;
 		if (!CNDnoteq(44,255)) break p000e0464;
 		if (!CNDnoteq(15,255)) break p000e0464;
-		if (!CNDonotzero(getFlag(15),2)) break p000e0464;
+		if (!CNDonotzero(getFlag(15),18)) break p000e0464;
 		if (!CNDpresent(getFlag(15))) break p000e0464;
  		ACCautop(getFlag(15));
 		if (!success) break pro000_restart;
@@ -8595,22 +8608,17 @@ pro000_restart: while(process_restart)
 
 	}
 
-	// ECHA _
+	// DESVESTIR _
 	p000e0465:
 	{
  		if (skipdoall('p000e0465')) break p000e0465;
  		if (in_response)
 		{
-			if (!CNDverb(74)) break p000e0465;
+			if (!CNDverb(22)) break p000e0465;
  		}
-		if (!CNDnoteq(51,255)) break p000e0465;
-		if (!CNDcarried(getFlag(51))) break p000e0465;
-		if (!CNDnoteq(44,255)) break p000e0465;
-		if (!CNDnoteq(15,255)) break p000e0465;
-		if (!CNDonotzero(getFlag(15),18)) break p000e0465;
-		if (!CNDpresent(getFlag(15))) break p000e0465;
- 		ACCautop(getFlag(15));
-		if (!success) break pro000_restart;
+		if (!CNDeq(34,255)) break p000e0465;
+		if (!CNDbnotzero(12,1)) break p000e0465;
+ 		ACCwriteln(278);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8626,8 +8634,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(22)) break p000e0466;
  		}
 		if (!CNDeq(34,255)) break p000e0466;
-		if (!CNDbnotzero(12,1)) break p000e0466;
- 		ACCwriteln(272);
+		if (!CNDbzero(12,1)) break p000e0466;
+ 		ACCwriteln(279);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8642,25 +8650,25 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(22)) break p000e0467;
  		}
-		if (!CNDeq(34,255)) break p000e0467;
-		if (!CNDbzero(12,1)) break p000e0467;
- 		ACCwriteln(273);
+ 		ACCautor();
+		if (!success) break pro000_restart;
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESVESTIR _
+	// PON _
 	p000e0468:
 	{
  		if (skipdoall('p000e0468')) break p000e0468;
  		if (in_response)
 		{
-			if (!CNDverb(22)) break p000e0468;
+			if (!CNDverb(71)) break p000e0468;
  		}
- 		ACCautor();
-		if (!success) break pro000_restart;
+		if (!CNDeq(34,255)) break p000e0468;
+		if (!CNDbnotzero(12,1)) break p000e0468;
+ 		ACCwriteln(280);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8676,10 +8684,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(71)) break p000e0469;
  		}
 		if (!CNDeq(34,255)) break p000e0469;
-		if (!CNDbnotzero(12,1)) break p000e0469;
- 		ACCwriteln(274);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDbzero(12,1)) break p000e0469;
+ 		ACCwriteln(281);
 		{}
 
 	}
@@ -8692,23 +8698,26 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(71)) break p000e0470;
  		}
-		if (!CNDeq(34,255)) break p000e0470;
-		if (!CNDbzero(12,1)) break p000e0470;
- 		ACCwriteln(275);
+ 		ACCautow();
+		if (!success) break pro000_restart;
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
 
-	// PON _
+	// ARROJA _
 	p000e0471:
 	{
  		if (skipdoall('p000e0471')) break p000e0471;
  		if (in_response)
 		{
-			if (!CNDverb(71)) break p000e0471;
+			if (!CNDverb(32)) break p000e0471;
  		}
- 		ACCautow();
-		if (!success) break pro000_restart;
+		if (!CNDprep(3)) break p000e0471;
+		if (!CNDeq(34,255)) break p000e0471;
+		if (!CNDbnotzero(12,1)) break p000e0471;
+ 		ACCwriteln(282);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8725,8 +8734,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDprep(3)) break p000e0472;
 		if (!CNDeq(34,255)) break p000e0472;
-		if (!CNDbnotzero(12,1)) break p000e0472;
- 		ACCwriteln(276);
+		if (!CNDbzero(12,1)) break p000e0472;
+ 		ACCwriteln(283);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8742,9 +8751,11 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(32)) break p000e0473;
  		}
 		if (!CNDprep(3)) break p000e0473;
-		if (!CNDeq(34,255)) break p000e0473;
-		if (!CNDbzero(12,1)) break p000e0473;
- 		ACCwriteln(277);
+		if (!CNDnoteq(34,255)) break p000e0473;
+		if (!CNDnoteq(51,255)) break p000e0473;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0473;
+		if (!CNDpresent(getFlag(51))) break p000e0473;
+ 		ACCwriteln(284);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8763,8 +8774,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0474;
 		if (!CNDnoteq(51,255)) break p000e0474;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0474;
-		if (!CNDpresent(getFlag(51))) break p000e0474;
- 		ACCwriteln(278);
+		if (!CNDabsent(getFlag(51))) break p000e0474;
+ 		ACCwriteln(285);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8781,10 +8792,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDprep(3)) break p000e0475;
 		if (!CNDnoteq(34,255)) break p000e0475;
-		if (!CNDnoteq(51,255)) break p000e0475;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0475;
-		if (!CNDabsent(getFlag(51))) break p000e0475;
- 		ACCwriteln(279);
+		if (!CNDeq(51,255)) break p000e0475;
+ 		ACCwriteln(286);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8800,9 +8809,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(32)) break p000e0476;
  		}
 		if (!CNDprep(3)) break p000e0476;
-		if (!CNDnoteq(34,255)) break p000e0476;
-		if (!CNDeq(51,255)) break p000e0476;
- 		ACCwriteln(280);
+		if (!CNDnoteq(51,255)) break p000e0476;
+		if (!CNDpresent(getFlag(51))) break p000e0476;
+ 		ACCwriteln(287);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8819,26 +8828,26 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDprep(3)) break p000e0477;
 		if (!CNDnoteq(51,255)) break p000e0477;
-		if (!CNDpresent(getFlag(51))) break p000e0477;
- 		ACCwriteln(281);
+		if (!CNDabsent(getFlag(51))) break p000e0477;
+ 		ACCwriteln(288);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ARROJA _
+	// D _
 	p000e0478:
 	{
  		if (skipdoall('p000e0478')) break p000e0478;
  		if (in_response)
 		{
-			if (!CNDverb(32)) break p000e0478;
+			if (!CNDverb(24)) break p000e0478;
  		}
-		if (!CNDprep(3)) break p000e0478;
-		if (!CNDnoteq(51,255)) break p000e0478;
-		if (!CNDabsent(getFlag(51))) break p000e0478;
- 		ACCwriteln(282);
+		if (!CNDprep(4)) break p000e0478;
+		if (!CNDeq(34,255)) break p000e0478;
+		if (!CNDbnotzero(12,1)) break p000e0478;
+ 		ACCwriteln(289);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8855,8 +8864,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDprep(4)) break p000e0479;
 		if (!CNDeq(34,255)) break p000e0479;
-		if (!CNDbnotzero(12,1)) break p000e0479;
- 		ACCwriteln(283);
+		if (!CNDbzero(12,1)) break p000e0479;
+ 		ACCwriteln(290);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8871,10 +8880,8 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(24)) break p000e0480;
  		}
-		if (!CNDprep(4)) break p000e0480;
-		if (!CNDeq(34,255)) break p000e0480;
-		if (!CNDbzero(12,1)) break p000e0480;
- 		ACCwriteln(284);
+		if (!CNDlt(34,12)) break p000e0480;
+ 		ACCwriteln(291);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8889,8 +8896,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(24)) break p000e0481;
  		}
-		if (!CNDlt(34,12)) break p000e0481;
- 		ACCwriteln(285);
+		if (!CNDeq(34,255)) break p000e0481;
+		if (!CNDbnotzero(12,1)) break p000e0481;
+ 		ACCwriteln(292);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8906,24 +8914,24 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(24)) break p000e0482;
  		}
 		if (!CNDeq(34,255)) break p000e0482;
-		if (!CNDbnotzero(12,1)) break p000e0482;
- 		ACCwriteln(286);
- 		ACCdone();
+ 		ACCdesc();
 		break pro000_restart;
 		{}
 
 	}
 
-	// D _
+	// ESCONDE _
 	p000e0483:
 	{
  		if (skipdoall('p000e0483')) break p000e0483;
  		if (in_response)
 		{
-			if (!CNDverb(24)) break p000e0483;
+			if (!CNDverb(91)) break p000e0483;
  		}
 		if (!CNDeq(34,255)) break p000e0483;
- 		ACCdesc();
+		if (!CNDbnotzero(12,1)) break p000e0483;
+ 		ACCwriteln(293);
+ 		ACCdone();
 		break pro000_restart;
 		{}
 
@@ -8938,8 +8946,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(91)) break p000e0484;
  		}
 		if (!CNDeq(34,255)) break p000e0484;
-		if (!CNDbnotzero(12,1)) break p000e0484;
- 		ACCwriteln(287);
+		if (!CNDbzero(12,1)) break p000e0484;
+ 		ACCwriteln(294);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8954,9 +8962,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(91)) break p000e0485;
  		}
-		if (!CNDeq(34,255)) break p000e0485;
-		if (!CNDbzero(12,1)) break p000e0485;
- 		ACCwriteln(288);
+		if (!CNDnoteq(34,255)) break p000e0485;
+		if (!CNDnoteq(51,255)) break p000e0485;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0485;
+		if (!CNDpresent(getFlag(51))) break p000e0485;
+ 		ACCwriteln(295);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8974,8 +8984,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0486;
 		if (!CNDnoteq(51,255)) break p000e0486;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0486;
-		if (!CNDpresent(getFlag(51))) break p000e0486;
- 		ACCwriteln(289);
+		if (!CNDabsent(getFlag(51))) break p000e0486;
+ 		ACCwriteln(296);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8991,10 +9001,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(91)) break p000e0487;
  		}
 		if (!CNDnoteq(34,255)) break p000e0487;
-		if (!CNDnoteq(51,255)) break p000e0487;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0487;
-		if (!CNDabsent(getFlag(51))) break p000e0487;
- 		ACCwriteln(290);
+		if (!CNDeq(51,255)) break p000e0487;
+ 		ACCwriteln(297);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9009,9 +9017,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(91)) break p000e0488;
  		}
-		if (!CNDnoteq(34,255)) break p000e0488;
-		if (!CNDeq(51,255)) break p000e0488;
- 		ACCwriteln(291);
+		if (!CNDnoteq(51,255)) break p000e0488;
+		if (!CNDpresent(getFlag(51))) break p000e0488;
+ 		ACCwriteln(298);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9027,25 +9035,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(91)) break p000e0489;
  		}
 		if (!CNDnoteq(51,255)) break p000e0489;
-		if (!CNDpresent(getFlag(51))) break p000e0489;
- 		ACCwriteln(292);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// ESCONDE _
-	p000e0490:
-	{
- 		if (skipdoall('p000e0490')) break p000e0490;
- 		if (in_response)
-		{
-			if (!CNDverb(91)) break p000e0490;
- 		}
-		if (!CNDnoteq(51,255)) break p000e0490;
-		if (!CNDabsent(getFlag(51))) break p000e0490;
- 		ACCwriteln(293);
+		if (!CNDabsent(getFlag(51))) break p000e0489;
+ 		ACCwriteln(299);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9053,14 +9044,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// LLORA _
-	p000e0491:
+	p000e0490:
 	{
- 		if (skipdoall('p000e0491')) break p000e0491;
+ 		if (skipdoall('p000e0490')) break p000e0490;
  		if (in_response)
 		{
-			if (!CNDverb(93)) break p000e0491;
+			if (!CNDverb(93)) break p000e0490;
  		}
- 		ACCwriteln(294);
+ 		ACCwriteln(300);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9068,14 +9059,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// ACORDARSE _
-	p000e0492:
+	p000e0491:
 	{
- 		if (skipdoall('p000e0492')) break p000e0492;
+ 		if (skipdoall('p000e0491')) break p000e0491;
  		if (in_response)
 		{
-			if (!CNDverb(94)) break p000e0492;
+			if (!CNDverb(94)) break p000e0491;
  		}
- 		ACCwriteln(295);
+ 		ACCwriteln(301);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9083,14 +9074,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// SALUDA _
-	p000e0493:
+	p000e0492:
 	{
- 		if (skipdoall('p000e0493')) break p000e0493;
+ 		if (skipdoall('p000e0492')) break p000e0492;
  		if (in_response)
 		{
-			if (!CNDverb(113)) break p000e0493;
+			if (!CNDverb(113)) break p000e0492;
  		}
- 		ACCwriteln(296);
+ 		ACCwriteln(302);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9098,14 +9089,31 @@ pro000_restart: while(process_restart)
 	}
 
 	// ESCONDERSE _
+	p000e0493:
+	{
+ 		if (skipdoall('p000e0493')) break p000e0493;
+ 		if (in_response)
+		{
+			if (!CNDverb(92)) break p000e0493;
+ 		}
+ 		ACCwriteln(303);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// EMPUJA _
 	p000e0494:
 	{
  		if (skipdoall('p000e0494')) break p000e0494;
  		if (in_response)
 		{
-			if (!CNDverb(92)) break p000e0494;
+			if (!CNDverb(33)) break p000e0494;
  		}
- 		ACCwriteln(297);
+		if (!CNDeq(34,255)) break p000e0494;
+		if (!CNDbnotzero(12,1)) break p000e0494;
+ 		ACCwriteln(304);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9121,8 +9129,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(33)) break p000e0495;
  		}
 		if (!CNDeq(34,255)) break p000e0495;
-		if (!CNDbnotzero(12,1)) break p000e0495;
- 		ACCwriteln(298);
+		if (!CNDbzero(12,1)) break p000e0495;
+ 		ACCwriteln(305);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9137,9 +9145,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(33)) break p000e0496;
  		}
-		if (!CNDeq(34,255)) break p000e0496;
-		if (!CNDbzero(12,1)) break p000e0496;
- 		ACCwriteln(299);
+		if (!CNDnoteq(34,255)) break p000e0496;
+		if (!CNDnoteq(51,255)) break p000e0496;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0496;
+		if (!CNDpresent(getFlag(51))) break p000e0496;
+ 		ACCwriteln(306);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9156,9 +9166,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(34,255)) break p000e0497;
 		if (!CNDnoteq(51,255)) break p000e0497;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0497;
+		if (!CNDonotzero(getFlag(51),21)) break p000e0497;
 		if (!CNDpresent(getFlag(51))) break p000e0497;
- 		ACCwriteln(300);
+ 		ACCwriteln(307);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9175,9 +9185,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(34,255)) break p000e0498;
 		if (!CNDnoteq(51,255)) break p000e0498;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0498;
-		if (!CNDpresent(getFlag(51))) break p000e0498;
- 		ACCwriteln(301);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0498;
+		if (!CNDabsent(getFlag(51))) break p000e0498;
+ 		ACCwriteln(308);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9194,9 +9204,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(34,255)) break p000e0499;
 		if (!CNDnoteq(51,255)) break p000e0499;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0499;
+		if (!CNDonotzero(getFlag(51),21)) break p000e0499;
 		if (!CNDabsent(getFlag(51))) break p000e0499;
- 		ACCwriteln(302);
+ 		ACCwriteln(309);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9212,10 +9222,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(33)) break p000e0500;
  		}
 		if (!CNDnoteq(34,255)) break p000e0500;
-		if (!CNDnoteq(51,255)) break p000e0500;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0500;
-		if (!CNDabsent(getFlag(51))) break p000e0500;
- 		ACCwriteln(303);
+		if (!CNDeq(51,255)) break p000e0500;
+ 		ACCwriteln(310);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9230,9 +9238,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(33)) break p000e0501;
  		}
-		if (!CNDnoteq(34,255)) break p000e0501;
-		if (!CNDeq(51,255)) break p000e0501;
- 		ACCwriteln(304);
+		if (!CNDnoteq(51,255)) break p000e0501;
+		if (!CNDpresent(getFlag(51))) break p000e0501;
+ 		ACCwriteln(311);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9248,25 +9256,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(33)) break p000e0502;
  		}
 		if (!CNDnoteq(51,255)) break p000e0502;
-		if (!CNDpresent(getFlag(51))) break p000e0502;
- 		ACCwriteln(305);
+		if (!CNDabsent(getFlag(51))) break p000e0502;
+ 		ACCwriteln(312);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// EMPUJA _
+	// DESPLAZA _
 	p000e0503:
 	{
  		if (skipdoall('p000e0503')) break p000e0503;
  		if (in_response)
 		{
-			if (!CNDverb(33)) break p000e0503;
+			if (!CNDverb(110)) break p000e0503;
  		}
-		if (!CNDnoteq(51,255)) break p000e0503;
-		if (!CNDabsent(getFlag(51))) break p000e0503;
- 		ACCwriteln(306);
+		if (!CNDeq(34,255)) break p000e0503;
+		if (!CNDbnotzero(12,1)) break p000e0503;
+ 		ACCwriteln(313);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9282,8 +9290,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(110)) break p000e0504;
  		}
 		if (!CNDeq(34,255)) break p000e0504;
-		if (!CNDbnotzero(12,1)) break p000e0504;
- 		ACCwriteln(307);
+		if (!CNDbzero(12,1)) break p000e0504;
+ 		ACCwriteln(314);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9298,9 +9306,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(110)) break p000e0505;
  		}
-		if (!CNDeq(34,255)) break p000e0505;
-		if (!CNDbzero(12,1)) break p000e0505;
- 		ACCwriteln(308);
+		if (!CNDnoteq(34,255)) break p000e0505;
+		if (!CNDnoteq(51,255)) break p000e0505;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0505;
+		if (!CNDpresent(getFlag(51))) break p000e0505;
+ 		ACCwriteln(315);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9318,8 +9328,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0506;
 		if (!CNDnoteq(51,255)) break p000e0506;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0506;
-		if (!CNDpresent(getFlag(51))) break p000e0506;
- 		ACCwriteln(309);
+		if (!CNDabsent(getFlag(51))) break p000e0506;
+ 		ACCwriteln(316);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9335,10 +9345,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(110)) break p000e0507;
  		}
 		if (!CNDnoteq(34,255)) break p000e0507;
-		if (!CNDnoteq(51,255)) break p000e0507;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0507;
-		if (!CNDabsent(getFlag(51))) break p000e0507;
- 		ACCwriteln(310);
+		if (!CNDeq(51,255)) break p000e0507;
+ 		ACCwriteln(317);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9353,9 +9361,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(110)) break p000e0508;
  		}
-		if (!CNDnoteq(34,255)) break p000e0508;
-		if (!CNDeq(51,255)) break p000e0508;
- 		ACCwriteln(311);
+		if (!CNDnoteq(51,255)) break p000e0508;
+		if (!CNDpresent(getFlag(51))) break p000e0508;
+ 		ACCwriteln(318);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9371,25 +9379,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(110)) break p000e0509;
  		}
 		if (!CNDnoteq(51,255)) break p000e0509;
-		if (!CNDpresent(getFlag(51))) break p000e0509;
- 		ACCwriteln(312);
+		if (!CNDabsent(getFlag(51))) break p000e0509;
+ 		ACCwriteln(319);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESPLAZA _
+	// GIRA _
 	p000e0510:
 	{
  		if (skipdoall('p000e0510')) break p000e0510;
  		if (in_response)
 		{
-			if (!CNDverb(110)) break p000e0510;
+			if (!CNDverb(35)) break p000e0510;
  		}
-		if (!CNDnoteq(51,255)) break p000e0510;
-		if (!CNDabsent(getFlag(51))) break p000e0510;
- 		ACCwriteln(313);
+		if (!CNDeq(34,255)) break p000e0510;
+		if (!CNDbnotzero(12,1)) break p000e0510;
+ 		ACCwriteln(320);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9405,8 +9413,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(35)) break p000e0511;
  		}
 		if (!CNDeq(34,255)) break p000e0511;
-		if (!CNDbnotzero(12,1)) break p000e0511;
- 		ACCwriteln(314);
+		if (!CNDbzero(12,1)) break p000e0511;
+ 		ACCwriteln(321);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9421,9 +9429,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(35)) break p000e0512;
  		}
-		if (!CNDeq(34,255)) break p000e0512;
-		if (!CNDbzero(12,1)) break p000e0512;
- 		ACCwriteln(315);
+		if (!CNDnoteq(51,255)) break p000e0512;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0512;
+		if (!CNDpresent(getFlag(51))) break p000e0512;
+ 		ACCwriteln(322);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9439,9 +9448,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(35)) break p000e0513;
  		}
 		if (!CNDnoteq(51,255)) break p000e0513;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0513;
+		if (!CNDonotzero(getFlag(51),21)) break p000e0513;
 		if (!CNDpresent(getFlag(51))) break p000e0513;
- 		ACCwriteln(316);
+ 		ACCwriteln(323);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9457,9 +9466,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(35)) break p000e0514;
  		}
 		if (!CNDnoteq(51,255)) break p000e0514;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0514;
-		if (!CNDpresent(getFlag(51))) break p000e0514;
- 		ACCwriteln(317);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0514;
+		if (!CNDabsent(getFlag(51))) break p000e0514;
+ 		ACCwriteln(324);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9475,9 +9484,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(35)) break p000e0515;
  		}
 		if (!CNDnoteq(51,255)) break p000e0515;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0515;
+		if (!CNDonotzero(getFlag(51),21)) break p000e0515;
 		if (!CNDabsent(getFlag(51))) break p000e0515;
- 		ACCwriteln(318);
+ 		ACCwriteln(325);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9492,10 +9501,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(35)) break p000e0516;
  		}
-		if (!CNDnoteq(51,255)) break p000e0516;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0516;
-		if (!CNDabsent(getFlag(51))) break p000e0516;
- 		ACCwriteln(319);
+		if (!CNDnoteq(34,255)) break p000e0516;
+		if (!CNDeq(51,255)) break p000e0516;
+ 		ACCwriteln(326);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9510,9 +9518,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(35)) break p000e0517;
  		}
-		if (!CNDnoteq(34,255)) break p000e0517;
-		if (!CNDeq(51,255)) break p000e0517;
- 		ACCwriteln(320);
+		if (!CNDnoteq(51,255)) break p000e0517;
+		if (!CNDpresent(getFlag(51))) break p000e0517;
+ 		ACCwriteln(327);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9528,25 +9536,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(35)) break p000e0518;
  		}
 		if (!CNDnoteq(51,255)) break p000e0518;
-		if (!CNDpresent(getFlag(51))) break p000e0518;
- 		ACCwriteln(321);
+		if (!CNDabsent(getFlag(51))) break p000e0518;
+ 		ACCwriteln(328);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// GIRA _
+	// ARROJA _
 	p000e0519:
 	{
  		if (skipdoall('p000e0519')) break p000e0519;
  		if (in_response)
 		{
-			if (!CNDverb(35)) break p000e0519;
+			if (!CNDverb(32)) break p000e0519;
  		}
-		if (!CNDnoteq(51,255)) break p000e0519;
-		if (!CNDabsent(getFlag(51))) break p000e0519;
- 		ACCwriteln(322);
+		if (!CNDeq(34,255)) break p000e0519;
+		if (!CNDbnotzero(12,1)) break p000e0519;
+ 		ACCwriteln(329);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9562,8 +9570,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(32)) break p000e0520;
  		}
 		if (!CNDeq(34,255)) break p000e0520;
-		if (!CNDbnotzero(12,1)) break p000e0520;
- 		ACCwriteln(323);
+		if (!CNDbzero(12,1)) break p000e0520;
+ 		ACCwriteln(330);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9578,9 +9586,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(32)) break p000e0521;
  		}
-		if (!CNDeq(34,255)) break p000e0521;
-		if (!CNDbzero(12,1)) break p000e0521;
- 		ACCwriteln(324);
+		if (!CNDnoteq(51,255)) break p000e0521;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0521;
+		if (!CNDpresent(getFlag(51))) break p000e0521;
+ 		ACCwriteln(331);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9596,9 +9605,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(32)) break p000e0522;
  		}
 		if (!CNDnoteq(51,255)) break p000e0522;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0522;
+		if (!CNDonotzero(getFlag(51),21)) break p000e0522;
 		if (!CNDpresent(getFlag(51))) break p000e0522;
- 		ACCwriteln(325);
+ 		ACCwriteln(332);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9614,9 +9623,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(32)) break p000e0523;
  		}
 		if (!CNDnoteq(51,255)) break p000e0523;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0523;
-		if (!CNDpresent(getFlag(51))) break p000e0523;
- 		ACCwriteln(326);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0523;
+		if (!CNDabsent(getFlag(51))) break p000e0523;
+ 		ACCwriteln(333);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9632,9 +9641,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(32)) break p000e0524;
  		}
 		if (!CNDnoteq(51,255)) break p000e0524;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0524;
+		if (!CNDonotzero(getFlag(51),21)) break p000e0524;
 		if (!CNDabsent(getFlag(51))) break p000e0524;
- 		ACCwriteln(327);
+ 		ACCwriteln(334);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9649,10 +9658,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(32)) break p000e0525;
  		}
-		if (!CNDnoteq(51,255)) break p000e0525;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0525;
-		if (!CNDabsent(getFlag(51))) break p000e0525;
- 		ACCwriteln(328);
+		if (!CNDnoteq(34,255)) break p000e0525;
+		if (!CNDeq(51,255)) break p000e0525;
+ 		ACCwriteln(335);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9667,9 +9675,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(32)) break p000e0526;
  		}
-		if (!CNDnoteq(34,255)) break p000e0526;
-		if (!CNDeq(51,255)) break p000e0526;
- 		ACCwriteln(329);
+		if (!CNDnoteq(51,255)) break p000e0526;
+		if (!CNDcarried(getFlag(51))) break p000e0526;
+ 		ACCwriteln(336);
+ 		ACCplace(getFlag(51),getFlag(38));
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9685,26 +9694,26 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(32)) break p000e0527;
  		}
 		if (!CNDnoteq(51,255)) break p000e0527;
-		if (!CNDcarried(getFlag(51))) break p000e0527;
- 		ACCwriteln(330);
- 		ACCplace(getFlag(51),getFlag(38));
+		if (!CNDnotcarr(getFlag(51))) break p000e0527;
+ 		ACCwriteln(337);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ARROJA _
+	// ESCUCHA _
 	p000e0528:
 	{
  		if (skipdoall('p000e0528')) break p000e0528;
  		if (in_response)
 		{
-			if (!CNDverb(32)) break p000e0528;
+			if (!CNDverb(37)) break p000e0528;
  		}
 		if (!CNDnoteq(51,255)) break p000e0528;
-		if (!CNDnotcarr(getFlag(51))) break p000e0528;
- 		ACCwriteln(331);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0528;
+		if (!CNDpresent(getFlag(51))) break p000e0528;
+ 		ACCwriteln(338);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9721,8 +9730,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0529;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0529;
-		if (!CNDpresent(getFlag(51))) break p000e0529;
- 		ACCwriteln(332);
+		if (!CNDabsent(getFlag(51))) break p000e0529;
+ 		ACCwriteln(339);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9737,26 +9746,25 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(37)) break p000e0530;
  		}
-		if (!CNDnoteq(51,255)) break p000e0530;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0530;
-		if (!CNDabsent(getFlag(51))) break p000e0530;
- 		ACCwriteln(333);
+		if (!CNDeq(34,255)) break p000e0530;
+ 		ACCwriteln(340);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ESCUCHA _
+	// COME _
 	p000e0531:
 	{
  		if (skipdoall('p000e0531')) break p000e0531;
  		if (in_response)
 		{
-			if (!CNDverb(37)) break p000e0531;
+			if (!CNDverb(38)) break p000e0531;
  		}
 		if (!CNDeq(34,255)) break p000e0531;
- 		ACCwriteln(334);
+		if (!CNDbnotzero(12,1)) break p000e0531;
+ 		ACCwriteln(341);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9772,8 +9780,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(38)) break p000e0532;
  		}
 		if (!CNDeq(34,255)) break p000e0532;
-		if (!CNDbnotzero(12,1)) break p000e0532;
- 		ACCwriteln(335);
+		if (!CNDbzero(12,1)) break p000e0532;
+ 		ACCwriteln(342);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9788,9 +9796,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(38)) break p000e0533;
  		}
-		if (!CNDeq(34,255)) break p000e0533;
-		if (!CNDbzero(12,1)) break p000e0533;
- 		ACCwriteln(336);
+		if (!CNDnoteq(34,255)) break p000e0533;
+		if (!CNDnoteq(51,255)) break p000e0533;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0533;
+		if (!CNDpresent(getFlag(51))) break p000e0533;
+ 		ACCwriteln(343);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9807,9 +9817,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(34,255)) break p000e0534;
 		if (!CNDnoteq(51,255)) break p000e0534;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0534;
+		if (!CNDonotzero(getFlag(51),21)) break p000e0534;
 		if (!CNDpresent(getFlag(51))) break p000e0534;
- 		ACCwriteln(337);
+ 		ACCwriteln(344);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9826,9 +9836,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(34,255)) break p000e0535;
 		if (!CNDnoteq(51,255)) break p000e0535;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0535;
-		if (!CNDpresent(getFlag(51))) break p000e0535;
- 		ACCwriteln(338);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0535;
+		if (!CNDabsent(getFlag(51))) break p000e0535;
+ 		ACCwriteln(345);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9844,10 +9854,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(38)) break p000e0536;
  		}
 		if (!CNDnoteq(34,255)) break p000e0536;
-		if (!CNDnoteq(51,255)) break p000e0536;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0536;
-		if (!CNDabsent(getFlag(51))) break p000e0536;
- 		ACCwriteln(339);
+		if (!CNDeq(51,255)) break p000e0536;
+ 		ACCwriteln(346);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9862,9 +9870,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(38)) break p000e0537;
  		}
-		if (!CNDnoteq(34,255)) break p000e0537;
-		if (!CNDeq(51,255)) break p000e0537;
- 		ACCwriteln(340);
+		if (!CNDnoteq(51,255)) break p000e0537;
+		if (!CNDpresent(getFlag(51))) break p000e0537;
+		if (!CNDozero(getFlag(51),5)) break p000e0537;
+ 		ACCwriteln(347);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9881,8 +9890,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0538;
 		if (!CNDpresent(getFlag(51))) break p000e0538;
-		if (!CNDozero(getFlag(51),5)) break p000e0538;
- 		ACCwriteln(341);
+		if (!CNDonotzero(getFlag(51),5)) break p000e0538;
+ 		ACCwriteln(348);
+ 		ACCdestroy(getFlag(51));
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9898,27 +9908,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(38)) break p000e0539;
  		}
 		if (!CNDnoteq(51,255)) break p000e0539;
-		if (!CNDpresent(getFlag(51))) break p000e0539;
-		if (!CNDonotzero(getFlag(51),5)) break p000e0539;
- 		ACCwriteln(342);
- 		ACCdestroy(getFlag(51));
+		if (!CNDabsent(getFlag(51))) break p000e0539;
+ 		ACCwriteln(349);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// COME _
+	// BEBE _
 	p000e0540:
 	{
  		if (skipdoall('p000e0540')) break p000e0540;
  		if (in_response)
 		{
-			if (!CNDverb(38)) break p000e0540;
+			if (!CNDverb(39)) break p000e0540;
  		}
-		if (!CNDnoteq(51,255)) break p000e0540;
-		if (!CNDabsent(getFlag(51))) break p000e0540;
- 		ACCwriteln(343);
+		if (!CNDeq(34,255)) break p000e0540;
+		if (!CNDbnotzero(12,1)) break p000e0540;
+ 		ACCwriteln(350);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9934,8 +9942,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(39)) break p000e0541;
  		}
 		if (!CNDeq(34,255)) break p000e0541;
-		if (!CNDbnotzero(12,1)) break p000e0541;
- 		ACCwriteln(344);
+		if (!CNDbzero(12,1)) break p000e0541;
+ 		ACCwriteln(351);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9950,9 +9958,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(39)) break p000e0542;
  		}
-		if (!CNDeq(34,255)) break p000e0542;
-		if (!CNDbzero(12,1)) break p000e0542;
- 		ACCwriteln(345);
+		if (!CNDnoteq(34,255)) break p000e0542;
+		if (!CNDnoteq(51,255)) break p000e0542;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0542;
+		if (!CNDpresent(getFlag(51))) break p000e0542;
+ 		ACCwriteln(352);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9970,8 +9980,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0543;
 		if (!CNDnoteq(51,255)) break p000e0543;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0543;
-		if (!CNDpresent(getFlag(51))) break p000e0543;
- 		ACCwriteln(346);
+		if (!CNDabsent(getFlag(51))) break p000e0543;
+ 		ACCwriteln(353);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9987,10 +9997,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(39)) break p000e0544;
  		}
 		if (!CNDnoteq(34,255)) break p000e0544;
-		if (!CNDnoteq(51,255)) break p000e0544;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0544;
-		if (!CNDabsent(getFlag(51))) break p000e0544;
- 		ACCwriteln(347);
+		if (!CNDeq(51,255)) break p000e0544;
+ 		ACCwriteln(354);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10005,9 +10013,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(39)) break p000e0545;
  		}
-		if (!CNDnoteq(34,255)) break p000e0545;
-		if (!CNDeq(51,255)) break p000e0545;
- 		ACCwriteln(348);
+		if (!CNDnoteq(51,255)) break p000e0545;
+		if (!CNDpresent(getFlag(51))) break p000e0545;
+		if (!CNDozero(getFlag(51),6)) break p000e0545;
+ 		ACCwriteln(355);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10024,8 +10033,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0546;
 		if (!CNDpresent(getFlag(51))) break p000e0546;
-		if (!CNDozero(getFlag(51),6)) break p000e0546;
- 		ACCwriteln(349);
+		if (!CNDonotzero(getFlag(51),6)) break p000e0546;
+ 		ACCwriteln(356);
+ 		ACCdestroy(getFlag(51));
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10041,27 +10051,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(39)) break p000e0547;
  		}
 		if (!CNDnoteq(51,255)) break p000e0547;
-		if (!CNDpresent(getFlag(51))) break p000e0547;
-		if (!CNDonotzero(getFlag(51),6)) break p000e0547;
- 		ACCwriteln(350);
- 		ACCdestroy(getFlag(51));
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// BEBE _
-	p000e0548:
-	{
- 		if (skipdoall('p000e0548')) break p000e0548;
- 		if (in_response)
-		{
-			if (!CNDverb(39)) break p000e0548;
- 		}
-		if (!CNDnoteq(51,255)) break p000e0548;
-		if (!CNDabsent(getFlag(51))) break p000e0548;
- 		ACCwriteln(351);
+		if (!CNDabsent(getFlag(51))) break p000e0547;
+ 		ACCwriteln(357);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10069,14 +10060,31 @@ pro000_restart: while(process_restart)
 	}
 
 	// CAGA _
+	p000e0548:
+	{
+ 		if (skipdoall('p000e0548')) break p000e0548;
+ 		if (in_response)
+		{
+			if (!CNDverb(47)) break p000e0548;
+ 		}
+ 		ACCwriteln(358);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ESCUPE _
 	p000e0549:
 	{
  		if (skipdoall('p000e0549')) break p000e0549;
  		if (in_response)
 		{
-			if (!CNDverb(47)) break p000e0549;
+			if (!CNDverb(48)) break p000e0549;
  		}
- 		ACCwriteln(352);
+		if (!CNDeq(34,255)) break p000e0549;
+		if (!CNDbnotzero(12,1)) break p000e0549;
+ 		ACCwriteln(359);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10092,8 +10100,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(48)) break p000e0550;
  		}
 		if (!CNDeq(34,255)) break p000e0550;
-		if (!CNDbnotzero(12,1)) break p000e0550;
- 		ACCwriteln(353);
+		if (!CNDbzero(12,1)) break p000e0550;
+ 		ACCwriteln(360);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10108,9 +10116,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(48)) break p000e0551;
  		}
-		if (!CNDeq(34,255)) break p000e0551;
-		if (!CNDbzero(12,1)) break p000e0551;
- 		ACCwriteln(354);
+		if (!CNDnoteq(34,255)) break p000e0551;
+		if (!CNDnoteq(51,255)) break p000e0551;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0551;
+		if (!CNDpresent(getFlag(51))) break p000e0551;
+ 		ACCwriteln(361);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10128,8 +10138,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0552;
 		if (!CNDnoteq(51,255)) break p000e0552;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0552;
-		if (!CNDpresent(getFlag(51))) break p000e0552;
- 		ACCwriteln(355);
+		if (!CNDabsent(getFlag(51))) break p000e0552;
+ 		ACCwriteln(362);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10145,10 +10155,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(48)) break p000e0553;
  		}
 		if (!CNDnoteq(34,255)) break p000e0553;
-		if (!CNDnoteq(51,255)) break p000e0553;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0553;
-		if (!CNDabsent(getFlag(51))) break p000e0553;
- 		ACCwriteln(356);
+		if (!CNDeq(51,255)) break p000e0553;
+ 		ACCwriteln(363);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10163,9 +10171,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(48)) break p000e0554;
  		}
-		if (!CNDnoteq(34,255)) break p000e0554;
-		if (!CNDeq(51,255)) break p000e0554;
- 		ACCwriteln(357);
+		if (!CNDnoteq(51,255)) break p000e0554;
+		if (!CNDpresent(getFlag(51))) break p000e0554;
+ 		ACCwriteln(364);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10181,25 +10189,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(48)) break p000e0555;
  		}
 		if (!CNDnoteq(51,255)) break p000e0555;
-		if (!CNDpresent(getFlag(51))) break p000e0555;
- 		ACCwriteln(358);
+		if (!CNDabsent(getFlag(51))) break p000e0555;
+ 		ACCwriteln(365);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ESCUPE _
+	// ACARICIA _
 	p000e0556:
 	{
  		if (skipdoall('p000e0556')) break p000e0556;
  		if (in_response)
 		{
-			if (!CNDverb(48)) break p000e0556;
+			if (!CNDverb(40)) break p000e0556;
  		}
-		if (!CNDnoteq(51,255)) break p000e0556;
-		if (!CNDabsent(getFlag(51))) break p000e0556;
- 		ACCwriteln(359);
+		if (!CNDeq(34,255)) break p000e0556;
+		if (!CNDbnotzero(12,1)) break p000e0556;
+ 		ACCwriteln(366);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10215,8 +10223,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(40)) break p000e0557;
  		}
 		if (!CNDeq(34,255)) break p000e0557;
-		if (!CNDbnotzero(12,1)) break p000e0557;
- 		ACCwriteln(360);
+		if (!CNDbzero(12,1)) break p000e0557;
+ 		ACCwriteln(367);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10231,9 +10239,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(40)) break p000e0558;
  		}
-		if (!CNDeq(34,255)) break p000e0558;
-		if (!CNDbzero(12,1)) break p000e0558;
- 		ACCwriteln(361);
+		if (!CNDnoteq(34,255)) break p000e0558;
+		if (!CNDnoteq(51,255)) break p000e0558;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0558;
+		if (!CNDpresent(getFlag(51))) break p000e0558;
+ 		ACCwriteln(368);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10251,8 +10261,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0559;
 		if (!CNDnoteq(51,255)) break p000e0559;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0559;
-		if (!CNDpresent(getFlag(51))) break p000e0559;
- 		ACCwriteln(362);
+		if (!CNDabsent(getFlag(51))) break p000e0559;
+ 		ACCwriteln(369);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10268,10 +10278,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(40)) break p000e0560;
  		}
 		if (!CNDnoteq(34,255)) break p000e0560;
-		if (!CNDnoteq(51,255)) break p000e0560;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0560;
-		if (!CNDabsent(getFlag(51))) break p000e0560;
- 		ACCwriteln(363);
+		if (!CNDeq(51,255)) break p000e0560;
+ 		ACCwriteln(370);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10286,9 +10294,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(40)) break p000e0561;
  		}
-		if (!CNDnoteq(34,255)) break p000e0561;
-		if (!CNDeq(51,255)) break p000e0561;
- 		ACCwriteln(364);
+		if (!CNDnoteq(51,255)) break p000e0561;
+		if (!CNDpresent(getFlag(51))) break p000e0561;
+ 		ACCwriteln(371);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10304,25 +10312,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(40)) break p000e0562;
  		}
 		if (!CNDnoteq(51,255)) break p000e0562;
-		if (!CNDpresent(getFlag(51))) break p000e0562;
- 		ACCwriteln(365);
+		if (!CNDabsent(getFlag(51))) break p000e0562;
+ 		ACCwriteln(372);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ACARICIA _
+	// HUELE _
 	p000e0563:
 	{
  		if (skipdoall('p000e0563')) break p000e0563;
  		if (in_response)
 		{
-			if (!CNDverb(40)) break p000e0563;
+			if (!CNDverb(42)) break p000e0563;
  		}
-		if (!CNDnoteq(51,255)) break p000e0563;
-		if (!CNDabsent(getFlag(51))) break p000e0563;
- 		ACCwriteln(366);
+		if (!CNDeq(34,255)) break p000e0563;
+		if (!CNDbnotzero(12,1)) break p000e0563;
+ 		ACCwriteln(373);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10338,8 +10346,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(42)) break p000e0564;
  		}
 		if (!CNDeq(34,255)) break p000e0564;
-		if (!CNDbnotzero(12,1)) break p000e0564;
- 		ACCwriteln(367);
+		if (!CNDbzero(12,1)) break p000e0564;
+ 		ACCwriteln(374);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10354,9 +10362,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(42)) break p000e0565;
  		}
-		if (!CNDeq(34,255)) break p000e0565;
-		if (!CNDbzero(12,1)) break p000e0565;
- 		ACCwriteln(368);
+		if (!CNDnoteq(34,255)) break p000e0565;
+		if (!CNDnoteq(51,255)) break p000e0565;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0565;
+		if (!CNDpresent(getFlag(51))) break p000e0565;
+ 		ACCwriteln(375);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10374,8 +10384,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0566;
 		if (!CNDnoteq(51,255)) break p000e0566;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0566;
-		if (!CNDpresent(getFlag(51))) break p000e0566;
- 		ACCwriteln(369);
+		if (!CNDabsent(getFlag(51))) break p000e0566;
+ 		ACCwriteln(376);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10391,10 +10401,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(42)) break p000e0567;
  		}
 		if (!CNDnoteq(34,255)) break p000e0567;
-		if (!CNDnoteq(51,255)) break p000e0567;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0567;
-		if (!CNDabsent(getFlag(51))) break p000e0567;
- 		ACCwriteln(370);
+		if (!CNDeq(51,255)) break p000e0567;
+ 		ACCwriteln(377);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10409,9 +10417,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(42)) break p000e0568;
  		}
-		if (!CNDnoteq(34,255)) break p000e0568;
-		if (!CNDeq(51,255)) break p000e0568;
- 		ACCwriteln(371);
+		if (!CNDnoteq(51,255)) break p000e0568;
+		if (!CNDpresent(getFlag(51))) break p000e0568;
+		if (!CNDonotzero(getFlag(51),5)) break p000e0568;
+ 		ACCwriteln(378);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10428,8 +10437,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0569;
 		if (!CNDpresent(getFlag(51))) break p000e0569;
-		if (!CNDonotzero(getFlag(51),5)) break p000e0569;
- 		ACCwriteln(372);
+		if (!CNDonotzero(getFlag(51),6)) break p000e0569;
+ 		ACCwriteln(379);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10446,8 +10455,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0570;
 		if (!CNDpresent(getFlag(51))) break p000e0570;
-		if (!CNDonotzero(getFlag(51),6)) break p000e0570;
- 		ACCwriteln(373);
+ 		ACCwriteln(380);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10464,7 +10472,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0571;
 		if (!CNDpresent(getFlag(51))) break p000e0571;
- 		ACCwriteln(374);
+		if (!CNDonotzero(getFlag(51),5)) break p000e0571;
+ 		ACCwriteln(381);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10480,26 +10489,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(42)) break p000e0572;
  		}
 		if (!CNDnoteq(51,255)) break p000e0572;
-		if (!CNDpresent(getFlag(51))) break p000e0572;
-		if (!CNDonotzero(getFlag(51),5)) break p000e0572;
- 		ACCwriteln(375);
+		if (!CNDabsent(getFlag(51))) break p000e0572;
+ 		ACCwriteln(382);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// HUELE _
+	// AGITA _
 	p000e0573:
 	{
  		if (skipdoall('p000e0573')) break p000e0573;
  		if (in_response)
 		{
-			if (!CNDverb(42)) break p000e0573;
+			if (!CNDverb(49)) break p000e0573;
  		}
-		if (!CNDnoteq(51,255)) break p000e0573;
-		if (!CNDabsent(getFlag(51))) break p000e0573;
- 		ACCwriteln(376);
+		if (!CNDeq(34,255)) break p000e0573;
+		if (!CNDbnotzero(12,1)) break p000e0573;
+ 		ACCwriteln(383);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10515,8 +10523,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(49)) break p000e0574;
  		}
 		if (!CNDeq(34,255)) break p000e0574;
-		if (!CNDbnotzero(12,1)) break p000e0574;
- 		ACCwriteln(377);
+		if (!CNDbzero(12,1)) break p000e0574;
+ 		ACCwriteln(384);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10531,9 +10539,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(49)) break p000e0575;
  		}
-		if (!CNDeq(34,255)) break p000e0575;
-		if (!CNDbzero(12,1)) break p000e0575;
- 		ACCwriteln(378);
+		if (!CNDnoteq(34,255)) break p000e0575;
+		if (!CNDnoteq(51,255)) break p000e0575;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0575;
+		if (!CNDpresent(getFlag(51))) break p000e0575;
+ 		ACCwriteln(385);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10551,8 +10561,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0576;
 		if (!CNDnoteq(51,255)) break p000e0576;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0576;
-		if (!CNDpresent(getFlag(51))) break p000e0576;
- 		ACCwriteln(379);
+		if (!CNDabsent(getFlag(51))) break p000e0576;
+ 		ACCwriteln(386);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10568,10 +10578,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(49)) break p000e0577;
  		}
 		if (!CNDnoteq(34,255)) break p000e0577;
-		if (!CNDnoteq(51,255)) break p000e0577;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0577;
-		if (!CNDabsent(getFlag(51))) break p000e0577;
- 		ACCwriteln(380);
+		if (!CNDeq(51,255)) break p000e0577;
+ 		ACCwriteln(387);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10586,9 +10594,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(49)) break p000e0578;
  		}
-		if (!CNDnoteq(34,255)) break p000e0578;
-		if (!CNDeq(51,255)) break p000e0578;
- 		ACCwriteln(381);
+		if (!CNDnoteq(51,255)) break p000e0578;
+		if (!CNDpresent(getFlag(51))) break p000e0578;
+ 		ACCwriteln(388);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10604,25 +10612,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(49)) break p000e0579;
  		}
 		if (!CNDnoteq(51,255)) break p000e0579;
-		if (!CNDpresent(getFlag(51))) break p000e0579;
- 		ACCwriteln(382);
+		if (!CNDabsent(getFlag(51))) break p000e0579;
+ 		ACCwriteln(389);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// AGITA _
+	// BALANCEA _
 	p000e0580:
 	{
  		if (skipdoall('p000e0580')) break p000e0580;
  		if (in_response)
 		{
-			if (!CNDverb(49)) break p000e0580;
+			if (!CNDverb(50)) break p000e0580;
  		}
-		if (!CNDnoteq(51,255)) break p000e0580;
-		if (!CNDabsent(getFlag(51))) break p000e0580;
- 		ACCwriteln(383);
+		if (!CNDeq(34,255)) break p000e0580;
+		if (!CNDbnotzero(12,1)) break p000e0580;
+ 		ACCwriteln(390);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10638,8 +10646,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(50)) break p000e0581;
  		}
 		if (!CNDeq(34,255)) break p000e0581;
-		if (!CNDbnotzero(12,1)) break p000e0581;
- 		ACCwriteln(384);
+		if (!CNDbzero(12,1)) break p000e0581;
+ 		ACCwriteln(391);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10654,9 +10662,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(50)) break p000e0582;
  		}
-		if (!CNDeq(34,255)) break p000e0582;
-		if (!CNDbzero(12,1)) break p000e0582;
- 		ACCwriteln(385);
+		if (!CNDnoteq(34,255)) break p000e0582;
+		if (!CNDnoteq(51,255)) break p000e0582;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0582;
+		if (!CNDpresent(getFlag(51))) break p000e0582;
+ 		ACCwriteln(392);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10674,8 +10684,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0583;
 		if (!CNDnoteq(51,255)) break p000e0583;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0583;
-		if (!CNDpresent(getFlag(51))) break p000e0583;
- 		ACCwriteln(386);
+		if (!CNDabsent(getFlag(51))) break p000e0583;
+ 		ACCwriteln(393);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10691,10 +10701,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(50)) break p000e0584;
  		}
 		if (!CNDnoteq(34,255)) break p000e0584;
-		if (!CNDnoteq(51,255)) break p000e0584;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0584;
-		if (!CNDabsent(getFlag(51))) break p000e0584;
- 		ACCwriteln(387);
+		if (!CNDeq(51,255)) break p000e0584;
+ 		ACCwriteln(394);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10709,9 +10717,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(50)) break p000e0585;
  		}
-		if (!CNDnoteq(34,255)) break p000e0585;
-		if (!CNDeq(51,255)) break p000e0585;
- 		ACCwriteln(388);
+		if (!CNDnoteq(51,255)) break p000e0585;
+		if (!CNDpresent(getFlag(51))) break p000e0585;
+ 		ACCwriteln(395);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10727,25 +10735,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(50)) break p000e0586;
  		}
 		if (!CNDnoteq(51,255)) break p000e0586;
-		if (!CNDpresent(getFlag(51))) break p000e0586;
- 		ACCwriteln(389);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// BALANCEA _
-	p000e0587:
-	{
- 		if (skipdoall('p000e0587')) break p000e0587;
- 		if (in_response)
-		{
-			if (!CNDverb(50)) break p000e0587;
- 		}
-		if (!CNDnoteq(51,255)) break p000e0587;
-		if (!CNDabsent(getFlag(51))) break p000e0587;
- 		ACCwriteln(390);
+		if (!CNDabsent(getFlag(51))) break p000e0586;
+ 		ACCwriteln(396);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10753,12 +10744,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// ESPERA _
-	p000e0588:
+	p000e0587:
 	{
- 		if (skipdoall('p000e0588')) break p000e0588;
+ 		if (skipdoall('p000e0587')) break p000e0587;
  		if (in_response)
 		{
-			if (!CNDverb(43)) break p000e0588;
+			if (!CNDverb(43)) break p000e0587;
  		}
  		ACCsysmess(35);
  		ACCdone();
@@ -10768,102 +10759,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// DESCANSA _
-	p000e0589:
+	p000e0588:
 	{
- 		if (skipdoall('p000e0589')) break p000e0589;
+ 		if (skipdoall('p000e0588')) break p000e0588;
  		if (in_response)
 		{
-			if (!CNDverb(61)) break p000e0589;
- 		}
- 		ACCwriteln(391);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// BRINCA _
-	p000e0590:
-	{
- 		if (skipdoall('p000e0590')) break p000e0590;
- 		if (in_response)
-		{
-			if (!CNDverb(45)) break p000e0590;
- 		}
- 		ACCwriteln(392);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// ORA _
-	p000e0591:
-	{
- 		if (skipdoall('p000e0591')) break p000e0591;
- 		if (in_response)
-		{
-			if (!CNDverb(59)) break p000e0591;
- 		}
- 		ACCwriteln(393);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// CAVA _
-	p000e0592:
-	{
- 		if (skipdoall('p000e0592')) break p000e0592;
- 		if (in_response)
-		{
-			if (!CNDverb(51)) break p000e0592;
- 		}
- 		ACCwriteln(394);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// PENSAR _
-	p000e0593:
-	{
- 		if (skipdoall('p000e0593')) break p000e0593;
- 		if (in_response)
-		{
-			if (!CNDverb(60)) break p000e0593;
- 		}
- 		ACCwriteln(395);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// DESCANSA _
-	p000e0594:
-	{
- 		if (skipdoall('p000e0594')) break p000e0594;
- 		if (in_response)
-		{
-			if (!CNDverb(61)) break p000e0594;
- 		}
- 		ACCwriteln(396);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// CANTA _
-	p000e0595:
-	{
- 		if (skipdoall('p000e0595')) break p000e0595;
- 		if (in_response)
-		{
-			if (!CNDverb(44)) break p000e0595;
+			if (!CNDverb(61)) break p000e0588;
  		}
  		ACCwriteln(397);
  		ACCdone();
@@ -10872,15 +10773,122 @@ pro000_restart: while(process_restart)
 
 	}
 
+	// BRINCA _
+	p000e0589:
+	{
+ 		if (skipdoall('p000e0589')) break p000e0589;
+ 		if (in_response)
+		{
+			if (!CNDverb(45)) break p000e0589;
+ 		}
+ 		ACCwriteln(398);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ORA _
+	p000e0590:
+	{
+ 		if (skipdoall('p000e0590')) break p000e0590;
+ 		if (in_response)
+		{
+			if (!CNDverb(59)) break p000e0590;
+ 		}
+ 		ACCwriteln(399);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// CAVA _
+	p000e0591:
+	{
+ 		if (skipdoall('p000e0591')) break p000e0591;
+ 		if (in_response)
+		{
+			if (!CNDverb(51)) break p000e0591;
+ 		}
+ 		ACCwriteln(400);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// PENSAR _
+	p000e0592:
+	{
+ 		if (skipdoall('p000e0592')) break p000e0592;
+ 		if (in_response)
+		{
+			if (!CNDverb(60)) break p000e0592;
+ 		}
+ 		ACCwriteln(401);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// DESCANSA _
+	p000e0593:
+	{
+ 		if (skipdoall('p000e0593')) break p000e0593;
+ 		if (in_response)
+		{
+			if (!CNDverb(61)) break p000e0593;
+ 		}
+ 		ACCwriteln(402);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// CANTA _
+	p000e0594:
+	{
+ 		if (skipdoall('p000e0594')) break p000e0594;
+ 		if (in_response)
+		{
+			if (!CNDverb(44)) break p000e0594;
+ 		}
+ 		ACCwriteln(403);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
 	// BAILA _
+	p000e0595:
+	{
+ 		if (skipdoall('p000e0595')) break p000e0595;
+ 		if (in_response)
+		{
+			if (!CNDverb(112)) break p000e0595;
+ 		}
+ 		ACCwriteln(404);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// AGREDE _
 	p000e0596:
 	{
  		if (skipdoall('p000e0596')) break p000e0596;
  		if (in_response)
 		{
-			if (!CNDverb(112)) break p000e0596;
+			if (!CNDverb(46)) break p000e0596;
  		}
- 		ACCwriteln(398);
+		if (!CNDeq(34,255)) break p000e0596;
+		if (!CNDbnotzero(12,1)) break p000e0596;
+ 		ACCwriteln(405);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10896,8 +10904,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(46)) break p000e0597;
  		}
 		if (!CNDeq(34,255)) break p000e0597;
-		if (!CNDbnotzero(12,1)) break p000e0597;
- 		ACCwriteln(399);
+		if (!CNDbzero(12,1)) break p000e0597;
+ 		ACCwriteln(406);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10912,9 +10920,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(46)) break p000e0598;
  		}
-		if (!CNDeq(34,255)) break p000e0598;
-		if (!CNDbzero(12,1)) break p000e0598;
- 		ACCwriteln(400);
+		if (!CNDnoteq(34,255)) break p000e0598;
+		if (!CNDnoteq(51,255)) break p000e0598;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0598;
+		if (!CNDpresent(getFlag(51))) break p000e0598;
+ 		ACCwriteln(407);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10932,8 +10942,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0599;
 		if (!CNDnoteq(51,255)) break p000e0599;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0599;
-		if (!CNDpresent(getFlag(51))) break p000e0599;
- 		ACCwriteln(401);
+		if (!CNDabsent(getFlag(51))) break p000e0599;
+ 		ACCwriteln(408);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10949,10 +10959,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(46)) break p000e0600;
  		}
 		if (!CNDnoteq(34,255)) break p000e0600;
-		if (!CNDnoteq(51,255)) break p000e0600;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0600;
-		if (!CNDabsent(getFlag(51))) break p000e0600;
- 		ACCwriteln(402);
+		if (!CNDeq(51,255)) break p000e0600;
+ 		ACCwriteln(409);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10967,9 +10975,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(46)) break p000e0601;
  		}
-		if (!CNDnoteq(34,255)) break p000e0601;
-		if (!CNDeq(51,255)) break p000e0601;
- 		ACCwriteln(403);
+		if (!CNDnoteq(51,255)) break p000e0601;
+		if (!CNDpresent(getFlag(51))) break p000e0601;
+ 		ACCwriteln(410);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10985,25 +10993,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(46)) break p000e0602;
  		}
 		if (!CNDnoteq(51,255)) break p000e0602;
-		if (!CNDpresent(getFlag(51))) break p000e0602;
- 		ACCwriteln(404);
+		if (!CNDabsent(getFlag(51))) break p000e0602;
+ 		ACCwriteln(411);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// AGREDE _
+	// GOLPEA _
 	p000e0603:
 	{
  		if (skipdoall('p000e0603')) break p000e0603;
  		if (in_response)
 		{
-			if (!CNDverb(46)) break p000e0603;
+			if (!CNDverb(72)) break p000e0603;
  		}
-		if (!CNDnoteq(51,255)) break p000e0603;
-		if (!CNDabsent(getFlag(51))) break p000e0603;
- 		ACCwriteln(405);
+		if (!CNDeq(34,255)) break p000e0603;
+		if (!CNDbnotzero(12,1)) break p000e0603;
+ 		ACCwriteln(412);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11019,8 +11027,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(72)) break p000e0604;
  		}
 		if (!CNDeq(34,255)) break p000e0604;
-		if (!CNDbnotzero(12,1)) break p000e0604;
- 		ACCwriteln(406);
+		if (!CNDbzero(12,1)) break p000e0604;
+ 		ACCwriteln(413);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11035,9 +11043,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(72)) break p000e0605;
  		}
-		if (!CNDeq(34,255)) break p000e0605;
-		if (!CNDbzero(12,1)) break p000e0605;
- 		ACCwriteln(407);
+		if (!CNDnoteq(34,255)) break p000e0605;
+		if (!CNDnoteq(51,255)) break p000e0605;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0605;
+		if (!CNDpresent(getFlag(51))) break p000e0605;
+ 		ACCwriteln(414);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11055,8 +11065,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0606;
 		if (!CNDnoteq(51,255)) break p000e0606;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0606;
-		if (!CNDpresent(getFlag(51))) break p000e0606;
- 		ACCwriteln(408);
+		if (!CNDabsent(getFlag(51))) break p000e0606;
+ 		ACCwriteln(415);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11072,10 +11082,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(72)) break p000e0607;
  		}
 		if (!CNDnoteq(34,255)) break p000e0607;
-		if (!CNDnoteq(51,255)) break p000e0607;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0607;
-		if (!CNDabsent(getFlag(51))) break p000e0607;
- 		ACCwriteln(409);
+		if (!CNDeq(51,255)) break p000e0607;
+ 		ACCwriteln(416);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11090,9 +11098,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(72)) break p000e0608;
  		}
-		if (!CNDnoteq(34,255)) break p000e0608;
-		if (!CNDeq(51,255)) break p000e0608;
- 		ACCwriteln(410);
+		if (!CNDnoteq(51,255)) break p000e0608;
+		if (!CNDpresent(getFlag(51))) break p000e0608;
+ 		ACCwriteln(417);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11108,25 +11116,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(72)) break p000e0609;
  		}
 		if (!CNDnoteq(51,255)) break p000e0609;
-		if (!CNDpresent(getFlag(51))) break p000e0609;
- 		ACCwriteln(411);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// GOLPEA _
-	p000e0610:
-	{
- 		if (skipdoall('p000e0610')) break p000e0610;
- 		if (in_response)
-		{
-			if (!CNDverb(72)) break p000e0610;
- 		}
-		if (!CNDnoteq(51,255)) break p000e0610;
-		if (!CNDabsent(getFlag(51))) break p000e0610;
- 		ACCwriteln(412);
+		if (!CNDabsent(getFlag(51))) break p000e0609;
+ 		ACCwriteln(418);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11134,14 +11125,31 @@ pro000_restart: while(process_restart)
 	}
 
 	// USA _
+	p000e0610:
+	{
+ 		if (skipdoall('p000e0610')) break p000e0610;
+ 		if (in_response)
+		{
+			if (!CNDverb(80)) break p000e0610;
+ 		}
+ 		ACCwriteln(419);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// FREGAR _
 	p000e0611:
 	{
  		if (skipdoall('p000e0611')) break p000e0611;
  		if (in_response)
 		{
-			if (!CNDverb(80)) break p000e0611;
+			if (!CNDverb(101)) break p000e0611;
  		}
- 		ACCwriteln(413);
+		if (!CNDeq(34,255)) break p000e0611;
+		if (!CNDbnotzero(12,1)) break p000e0611;
+ 		ACCwriteln(420);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11157,8 +11165,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(101)) break p000e0612;
  		}
 		if (!CNDeq(34,255)) break p000e0612;
-		if (!CNDbnotzero(12,1)) break p000e0612;
- 		ACCwriteln(414);
+		if (!CNDbzero(12,1)) break p000e0612;
+ 		ACCwriteln(421);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11173,9 +11181,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(101)) break p000e0613;
  		}
-		if (!CNDeq(34,255)) break p000e0613;
-		if (!CNDbzero(12,1)) break p000e0613;
- 		ACCwriteln(415);
+		if (!CNDnoteq(34,255)) break p000e0613;
+		if (!CNDnoteq(51,255)) break p000e0613;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0613;
+		if (!CNDpresent(getFlag(51))) break p000e0613;
+ 		ACCwriteln(422);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11193,8 +11203,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0614;
 		if (!CNDnoteq(51,255)) break p000e0614;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0614;
-		if (!CNDpresent(getFlag(51))) break p000e0614;
- 		ACCwriteln(416);
+		if (!CNDabsent(getFlag(51))) break p000e0614;
+ 		ACCwriteln(423);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11210,10 +11220,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(101)) break p000e0615;
  		}
 		if (!CNDnoteq(34,255)) break p000e0615;
-		if (!CNDnoteq(51,255)) break p000e0615;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0615;
-		if (!CNDabsent(getFlag(51))) break p000e0615;
- 		ACCwriteln(417);
+		if (!CNDeq(51,255)) break p000e0615;
+ 		ACCwriteln(424);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11228,9 +11236,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(101)) break p000e0616;
  		}
-		if (!CNDnoteq(34,255)) break p000e0616;
-		if (!CNDeq(51,255)) break p000e0616;
- 		ACCwriteln(418);
+		if (!CNDnoteq(51,255)) break p000e0616;
+		if (!CNDpresent(getFlag(51))) break p000e0616;
+ 		ACCwriteln(425);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11246,25 +11254,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(101)) break p000e0617;
  		}
 		if (!CNDnoteq(51,255)) break p000e0617;
-		if (!CNDpresent(getFlag(51))) break p000e0617;
- 		ACCwriteln(419);
+		if (!CNDabsent(getFlag(51))) break p000e0617;
+ 		ACCwriteln(426);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// FREGAR _
+	// RASCA _
 	p000e0618:
 	{
  		if (skipdoall('p000e0618')) break p000e0618;
  		if (in_response)
 		{
-			if (!CNDverb(101)) break p000e0618;
+			if (!CNDverb(102)) break p000e0618;
  		}
-		if (!CNDnoteq(51,255)) break p000e0618;
-		if (!CNDabsent(getFlag(51))) break p000e0618;
- 		ACCwriteln(420);
+		if (!CNDeq(34,255)) break p000e0618;
+		if (!CNDbnotzero(12,1)) break p000e0618;
+ 		ACCwriteln(427);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11280,8 +11288,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(102)) break p000e0619;
  		}
 		if (!CNDeq(34,255)) break p000e0619;
-		if (!CNDbnotzero(12,1)) break p000e0619;
- 		ACCwriteln(421);
+		if (!CNDbzero(12,1)) break p000e0619;
+ 		ACCwriteln(428);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11296,9 +11304,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(102)) break p000e0620;
  		}
-		if (!CNDeq(34,255)) break p000e0620;
-		if (!CNDbzero(12,1)) break p000e0620;
- 		ACCwriteln(422);
+		if (!CNDnoteq(34,255)) break p000e0620;
+		if (!CNDnoteq(51,255)) break p000e0620;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0620;
+		if (!CNDpresent(getFlag(51))) break p000e0620;
+ 		ACCwriteln(429);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11316,8 +11326,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0621;
 		if (!CNDnoteq(51,255)) break p000e0621;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0621;
-		if (!CNDpresent(getFlag(51))) break p000e0621;
- 		ACCwriteln(423);
+		if (!CNDabsent(getFlag(51))) break p000e0621;
+ 		ACCwriteln(430);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11333,10 +11343,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(102)) break p000e0622;
  		}
 		if (!CNDnoteq(34,255)) break p000e0622;
-		if (!CNDnoteq(51,255)) break p000e0622;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0622;
-		if (!CNDabsent(getFlag(51))) break p000e0622;
- 		ACCwriteln(424);
+		if (!CNDeq(51,255)) break p000e0622;
+ 		ACCwriteln(431);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11351,9 +11359,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(102)) break p000e0623;
  		}
-		if (!CNDnoteq(34,255)) break p000e0623;
-		if (!CNDeq(51,255)) break p000e0623;
- 		ACCwriteln(425);
+		if (!CNDnoteq(51,255)) break p000e0623;
+		if (!CNDpresent(getFlag(51))) break p000e0623;
+ 		ACCwriteln(432);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11369,25 +11377,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(102)) break p000e0624;
  		}
 		if (!CNDnoteq(51,255)) break p000e0624;
-		if (!CNDpresent(getFlag(51))) break p000e0624;
- 		ACCwriteln(426);
+		if (!CNDabsent(getFlag(51))) break p000e0624;
+ 		ACCwriteln(433);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// RASCA _
+	// ENCENDER _
 	p000e0625:
 	{
  		if (skipdoall('p000e0625')) break p000e0625;
  		if (in_response)
 		{
-			if (!CNDverb(102)) break p000e0625;
+			if (!CNDverb(66)) break p000e0625;
  		}
-		if (!CNDnoteq(51,255)) break p000e0625;
-		if (!CNDabsent(getFlag(51))) break p000e0625;
- 		ACCwriteln(427);
+		if (!CNDeq(34,255)) break p000e0625;
+		if (!CNDbnotzero(12,1)) break p000e0625;
+ 		ACCwriteln(434);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11403,8 +11411,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(66)) break p000e0626;
  		}
 		if (!CNDeq(34,255)) break p000e0626;
-		if (!CNDbnotzero(12,1)) break p000e0626;
- 		ACCwriteln(428);
+		if (!CNDbzero(12,1)) break p000e0626;
+ 		ACCwriteln(435);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11419,9 +11427,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(66)) break p000e0627;
  		}
-		if (!CNDeq(34,255)) break p000e0627;
-		if (!CNDbzero(12,1)) break p000e0627;
- 		ACCwriteln(429);
+		if (!CNDnoteq(51,255)) break p000e0627;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0627;
+		if (!CNDpresent(getFlag(51))) break p000e0627;
+ 		ACCwriteln(436);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11438,8 +11447,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0628;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0628;
-		if (!CNDpresent(getFlag(51))) break p000e0628;
- 		ACCwriteln(430);
+		if (!CNDabsent(getFlag(51))) break p000e0628;
+ 		ACCwriteln(437);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11454,10 +11463,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(66)) break p000e0629;
  		}
-		if (!CNDnoteq(51,255)) break p000e0629;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0629;
-		if (!CNDabsent(getFlag(51))) break p000e0629;
- 		ACCwriteln(431);
+		if (!CNDnoteq(34,255)) break p000e0629;
+		if (!CNDeq(51,255)) break p000e0629;
+ 		ACCwriteln(438);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11472,9 +11480,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(66)) break p000e0630;
  		}
-		if (!CNDnoteq(34,255)) break p000e0630;
-		if (!CNDeq(51,255)) break p000e0630;
- 		ACCwriteln(432);
+		if (!CNDnoteq(51,255)) break p000e0630;
+		if (!CNDpresent(getFlag(51))) break p000e0630;
+ 		ACCwriteln(439);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11490,25 +11498,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(66)) break p000e0631;
  		}
 		if (!CNDnoteq(51,255)) break p000e0631;
-		if (!CNDpresent(getFlag(51))) break p000e0631;
- 		ACCwriteln(433);
+		if (!CNDabsent(getFlag(51))) break p000e0631;
+ 		ACCwriteln(440);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ENCENDER _
+	// APAGA _
 	p000e0632:
 	{
  		if (skipdoall('p000e0632')) break p000e0632;
  		if (in_response)
 		{
-			if (!CNDverb(66)) break p000e0632;
+			if (!CNDverb(67)) break p000e0632;
  		}
-		if (!CNDnoteq(51,255)) break p000e0632;
-		if (!CNDabsent(getFlag(51))) break p000e0632;
- 		ACCwriteln(434);
+		if (!CNDeq(34,255)) break p000e0632;
+		if (!CNDbnotzero(12,1)) break p000e0632;
+ 		ACCwriteln(441);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11524,8 +11532,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(67)) break p000e0633;
  		}
 		if (!CNDeq(34,255)) break p000e0633;
-		if (!CNDbnotzero(12,1)) break p000e0633;
- 		ACCwriteln(435);
+		if (!CNDbzero(12,1)) break p000e0633;
+ 		ACCwriteln(442);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11540,9 +11548,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(67)) break p000e0634;
  		}
-		if (!CNDeq(34,255)) break p000e0634;
-		if (!CNDbzero(12,1)) break p000e0634;
- 		ACCwriteln(436);
+		if (!CNDnoteq(34,255)) break p000e0634;
+		if (!CNDeq(51,255)) break p000e0634;
+ 		ACCwriteln(443);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11557,9 +11565,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(67)) break p000e0635;
  		}
-		if (!CNDnoteq(34,255)) break p000e0635;
-		if (!CNDeq(51,255)) break p000e0635;
- 		ACCwriteln(437);
+		if (!CNDnoteq(51,255)) break p000e0635;
+		if (!CNDpresent(getFlag(51))) break p000e0635;
+ 		ACCwriteln(444);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11575,25 +11583,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(67)) break p000e0636;
  		}
 		if (!CNDnoteq(51,255)) break p000e0636;
-		if (!CNDpresent(getFlag(51))) break p000e0636;
- 		ACCwriteln(438);
+		if (!CNDabsent(getFlag(51))) break p000e0636;
+ 		ACCwriteln(445);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// APAGA _
+	// CORTA _
 	p000e0637:
 	{
  		if (skipdoall('p000e0637')) break p000e0637;
  		if (in_response)
 		{
-			if (!CNDverb(67)) break p000e0637;
+			if (!CNDverb(52)) break p000e0637;
  		}
-		if (!CNDnoteq(51,255)) break p000e0637;
-		if (!CNDabsent(getFlag(51))) break p000e0637;
- 		ACCwriteln(439);
+		if (!CNDeq(34,255)) break p000e0637;
+		if (!CNDbnotzero(12,1)) break p000e0637;
+ 		ACCwriteln(446);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11609,8 +11617,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(52)) break p000e0638;
  		}
 		if (!CNDeq(34,255)) break p000e0638;
-		if (!CNDbnotzero(12,1)) break p000e0638;
- 		ACCwriteln(440);
+		if (!CNDbzero(12,1)) break p000e0638;
+ 		ACCwriteln(447);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11625,9 +11633,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(52)) break p000e0639;
  		}
-		if (!CNDeq(34,255)) break p000e0639;
-		if (!CNDbzero(12,1)) break p000e0639;
- 		ACCwriteln(441);
+		if (!CNDnoteq(51,255)) break p000e0639;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0639;
+		if (!CNDpresent(getFlag(51))) break p000e0639;
+ 		ACCwriteln(448);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11643,9 +11652,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(52)) break p000e0640;
  		}
 		if (!CNDnoteq(51,255)) break p000e0640;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0640;
+		if (!CNDonotzero(getFlag(51),21)) break p000e0640;
 		if (!CNDpresent(getFlag(51))) break p000e0640;
- 		ACCwriteln(442);
+ 		ACCwriteln(449);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11661,9 +11670,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(52)) break p000e0641;
  		}
 		if (!CNDnoteq(51,255)) break p000e0641;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0641;
-		if (!CNDpresent(getFlag(51))) break p000e0641;
- 		ACCwriteln(443);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0641;
+		if (!CNDabsent(getFlag(51))) break p000e0641;
+ 		ACCwriteln(450);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11678,10 +11687,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(52)) break p000e0642;
  		}
-		if (!CNDnoteq(51,255)) break p000e0642;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0642;
-		if (!CNDabsent(getFlag(51))) break p000e0642;
- 		ACCwriteln(444);
+		if (!CNDnoteq(34,255)) break p000e0642;
+		if (!CNDeq(51,255)) break p000e0642;
+ 		ACCwriteln(451);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11696,9 +11704,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(52)) break p000e0643;
  		}
-		if (!CNDnoteq(34,255)) break p000e0643;
-		if (!CNDeq(51,255)) break p000e0643;
- 		ACCwriteln(445);
+		if (!CNDnoteq(51,255)) break p000e0643;
+		if (!CNDpresent(getFlag(51))) break p000e0643;
+ 		ACCwriteln(452);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11714,25 +11722,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(52)) break p000e0644;
  		}
 		if (!CNDnoteq(51,255)) break p000e0644;
-		if (!CNDpresent(getFlag(51))) break p000e0644;
- 		ACCwriteln(446);
+		if (!CNDabsent(getFlag(51))) break p000e0644;
+ 		ACCwriteln(453);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CORTA _
+	// ANUDA _
 	p000e0645:
 	{
  		if (skipdoall('p000e0645')) break p000e0645;
  		if (in_response)
 		{
-			if (!CNDverb(52)) break p000e0645;
+			if (!CNDverb(54)) break p000e0645;
  		}
-		if (!CNDnoteq(51,255)) break p000e0645;
-		if (!CNDabsent(getFlag(51))) break p000e0645;
- 		ACCwriteln(447);
+		if (!CNDeq(34,255)) break p000e0645;
+		if (!CNDbnotzero(12,1)) break p000e0645;
+ 		ACCwriteln(454);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11748,8 +11756,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(54)) break p000e0646;
  		}
 		if (!CNDeq(34,255)) break p000e0646;
-		if (!CNDbnotzero(12,1)) break p000e0646;
- 		ACCwriteln(448);
+		if (!CNDbzero(12,1)) break p000e0646;
+ 		ACCwriteln(455);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11764,9 +11772,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(54)) break p000e0647;
  		}
-		if (!CNDeq(34,255)) break p000e0647;
-		if (!CNDbzero(12,1)) break p000e0647;
- 		ACCwriteln(449);
+		if (!CNDnoteq(51,255)) break p000e0647;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0647;
+		if (!CNDpresent(getFlag(51))) break p000e0647;
+ 		ACCwriteln(456);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11783,8 +11792,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0648;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0648;
-		if (!CNDpresent(getFlag(51))) break p000e0648;
- 		ACCwriteln(450);
+		if (!CNDabsent(getFlag(51))) break p000e0648;
+ 		ACCwriteln(457);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11799,10 +11808,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(54)) break p000e0649;
  		}
-		if (!CNDnoteq(51,255)) break p000e0649;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0649;
-		if (!CNDabsent(getFlag(51))) break p000e0649;
- 		ACCwriteln(451);
+		if (!CNDnoteq(34,255)) break p000e0649;
+		if (!CNDeq(51,255)) break p000e0649;
+ 		ACCwriteln(458);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11817,9 +11825,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(54)) break p000e0650;
  		}
-		if (!CNDnoteq(34,255)) break p000e0650;
-		if (!CNDeq(51,255)) break p000e0650;
- 		ACCwriteln(452);
+		if (!CNDnoteq(51,255)) break p000e0650;
+		if (!CNDpresent(getFlag(51))) break p000e0650;
+ 		ACCwriteln(459);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11835,25 +11843,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(54)) break p000e0651;
  		}
 		if (!CNDnoteq(51,255)) break p000e0651;
-		if (!CNDpresent(getFlag(51))) break p000e0651;
- 		ACCwriteln(453);
+		if (!CNDabsent(getFlag(51))) break p000e0651;
+ 		ACCwriteln(460);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ANUDA _
+	// DESATA _
 	p000e0652:
 	{
  		if (skipdoall('p000e0652')) break p000e0652;
  		if (in_response)
 		{
-			if (!CNDverb(54)) break p000e0652;
+			if (!CNDverb(98)) break p000e0652;
  		}
-		if (!CNDnoteq(51,255)) break p000e0652;
-		if (!CNDabsent(getFlag(51))) break p000e0652;
- 		ACCwriteln(454);
+		if (!CNDeq(34,255)) break p000e0652;
+		if (!CNDbnotzero(12,1)) break p000e0652;
+ 		ACCwriteln(461);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11869,8 +11877,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(98)) break p000e0653;
  		}
 		if (!CNDeq(34,255)) break p000e0653;
-		if (!CNDbnotzero(12,1)) break p000e0653;
- 		ACCwriteln(455);
+		if (!CNDbzero(12,1)) break p000e0653;
+ 		ACCwriteln(462);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11885,9 +11893,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(98)) break p000e0654;
  		}
-		if (!CNDeq(34,255)) break p000e0654;
-		if (!CNDbzero(12,1)) break p000e0654;
- 		ACCwriteln(456);
+		if (!CNDnoteq(51,255)) break p000e0654;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0654;
+		if (!CNDpresent(getFlag(51))) break p000e0654;
+ 		ACCwriteln(463);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11904,8 +11913,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0655;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0655;
-		if (!CNDpresent(getFlag(51))) break p000e0655;
- 		ACCwriteln(457);
+		if (!CNDabsent(getFlag(51))) break p000e0655;
+ 		ACCwriteln(464);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11920,10 +11929,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(98)) break p000e0656;
  		}
-		if (!CNDnoteq(51,255)) break p000e0656;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0656;
-		if (!CNDabsent(getFlag(51))) break p000e0656;
- 		ACCwriteln(458);
+		if (!CNDnoteq(34,255)) break p000e0656;
+		if (!CNDeq(51,255)) break p000e0656;
+ 		ACCwriteln(465);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11938,9 +11946,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(98)) break p000e0657;
  		}
-		if (!CNDnoteq(34,255)) break p000e0657;
-		if (!CNDeq(51,255)) break p000e0657;
- 		ACCwriteln(459);
+		if (!CNDnoteq(51,255)) break p000e0657;
+		if (!CNDpresent(getFlag(51))) break p000e0657;
+ 		ACCwriteln(466);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11956,25 +11964,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(98)) break p000e0658;
  		}
 		if (!CNDnoteq(51,255)) break p000e0658;
-		if (!CNDpresent(getFlag(51))) break p000e0658;
- 		ACCwriteln(460);
+		if (!CNDabsent(getFlag(51))) break p000e0658;
+ 		ACCwriteln(467);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESATA _
+	// LLENA _
 	p000e0659:
 	{
  		if (skipdoall('p000e0659')) break p000e0659;
  		if (in_response)
 		{
-			if (!CNDverb(98)) break p000e0659;
+			if (!CNDverb(55)) break p000e0659;
  		}
-		if (!CNDnoteq(51,255)) break p000e0659;
-		if (!CNDabsent(getFlag(51))) break p000e0659;
- 		ACCwriteln(461);
+		if (!CNDeq(34,255)) break p000e0659;
+		if (!CNDbnotzero(12,1)) break p000e0659;
+ 		ACCwriteln(468);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11990,8 +11998,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(55)) break p000e0660;
  		}
 		if (!CNDeq(34,255)) break p000e0660;
-		if (!CNDbnotzero(12,1)) break p000e0660;
- 		ACCwriteln(462);
+		if (!CNDbzero(12,1)) break p000e0660;
+ 		ACCwriteln(469);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12006,9 +12014,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(55)) break p000e0661;
  		}
-		if (!CNDeq(34,255)) break p000e0661;
-		if (!CNDbzero(12,1)) break p000e0661;
- 		ACCwriteln(463);
+		if (!CNDnoteq(34,255)) break p000e0661;
+		if (!CNDeq(51,255)) break p000e0661;
+ 		ACCwriteln(470);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12023,9 +12031,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(55)) break p000e0662;
  		}
-		if (!CNDnoteq(34,255)) break p000e0662;
-		if (!CNDeq(51,255)) break p000e0662;
- 		ACCwriteln(464);
+		if (!CNDnoteq(51,255)) break p000e0662;
+		if (!CNDpresent(getFlag(51))) break p000e0662;
+		if (!CNDonotzero(getFlag(51),2)) break p000e0662;
+ 		ACCwriteln(471);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12042,8 +12051,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0663;
 		if (!CNDpresent(getFlag(51))) break p000e0663;
-		if (!CNDonotzero(getFlag(51),2)) break p000e0663;
- 		ACCwriteln(465);
+		if (!CNDozero(getFlag(51),2)) break p000e0663;
+ 		ACCwriteln(472);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12059,26 +12068,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(55)) break p000e0664;
  		}
 		if (!CNDnoteq(51,255)) break p000e0664;
-		if (!CNDpresent(getFlag(51))) break p000e0664;
-		if (!CNDozero(getFlag(51),2)) break p000e0664;
- 		ACCwriteln(466);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// LLENA _
-	p000e0665:
-	{
- 		if (skipdoall('p000e0665')) break p000e0665;
- 		if (in_response)
-		{
-			if (!CNDverb(55)) break p000e0665;
- 		}
-		if (!CNDnoteq(51,255)) break p000e0665;
-		if (!CNDabsent(getFlag(51))) break p000e0665;
- 		ACCwriteln(467);
+		if (!CNDabsent(getFlag(51))) break p000e0664;
+ 		ACCwriteln(473);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12086,14 +12077,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// BANAR _
-	p000e0666:
+	p000e0665:
 	{
- 		if (skipdoall('p000e0666')) break p000e0666;
+ 		if (skipdoall('p000e0665')) break p000e0665;
  		if (in_response)
 		{
-			if (!CNDverb(56)) break p000e0666;
+			if (!CNDverb(56)) break p000e0665;
  		}
- 		ACCwriteln(468);
+ 		ACCwriteln(474);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12101,14 +12092,31 @@ pro000_restart: while(process_restart)
 	}
 
 	// ESCALA _
+	p000e0666:
+	{
+ 		if (skipdoall('p000e0666')) break p000e0666;
+ 		if (in_response)
+		{
+			if (!CNDverb(57)) break p000e0666;
+ 		}
+ 		ACCwriteln(475);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// RETORCER _
 	p000e0667:
 	{
  		if (skipdoall('p000e0667')) break p000e0667;
  		if (in_response)
 		{
-			if (!CNDverb(57)) break p000e0667;
+			if (!CNDverb(58)) break p000e0667;
  		}
- 		ACCwriteln(469);
+		if (!CNDeq(34,255)) break p000e0667;
+		if (!CNDbnotzero(12,1)) break p000e0667;
+ 		ACCwriteln(476);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12124,8 +12132,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(58)) break p000e0668;
  		}
 		if (!CNDeq(34,255)) break p000e0668;
-		if (!CNDbnotzero(12,1)) break p000e0668;
- 		ACCwriteln(470);
+		if (!CNDbzero(12,1)) break p000e0668;
+ 		ACCwriteln(477);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12140,9 +12148,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(58)) break p000e0669;
  		}
-		if (!CNDeq(34,255)) break p000e0669;
-		if (!CNDbzero(12,1)) break p000e0669;
- 		ACCwriteln(471);
+		if (!CNDnoteq(51,255)) break p000e0669;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0669;
+		if (!CNDpresent(getFlag(51))) break p000e0669;
+ 		ACCwriteln(478);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12159,8 +12168,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0670;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0670;
-		if (!CNDpresent(getFlag(51))) break p000e0670;
- 		ACCwriteln(472);
+		if (!CNDabsent(getFlag(51))) break p000e0670;
+ 		ACCwriteln(479);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12175,10 +12184,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(58)) break p000e0671;
  		}
-		if (!CNDnoteq(51,255)) break p000e0671;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0671;
-		if (!CNDabsent(getFlag(51))) break p000e0671;
- 		ACCwriteln(473);
+		if (!CNDnoteq(34,255)) break p000e0671;
+		if (!CNDeq(51,255)) break p000e0671;
+ 		ACCwriteln(480);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12193,9 +12201,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(58)) break p000e0672;
  		}
-		if (!CNDnoteq(34,255)) break p000e0672;
-		if (!CNDeq(51,255)) break p000e0672;
- 		ACCwriteln(474);
+		if (!CNDnoteq(51,255)) break p000e0672;
+		if (!CNDpresent(getFlag(51))) break p000e0672;
+ 		ACCwriteln(481);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12211,25 +12219,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(58)) break p000e0673;
  		}
 		if (!CNDnoteq(51,255)) break p000e0673;
-		if (!CNDpresent(getFlag(51))) break p000e0673;
- 		ACCwriteln(475);
+		if (!CNDabsent(getFlag(51))) break p000e0673;
+ 		ACCwriteln(482);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// RETORCER _
+	// APRETAR _
 	p000e0674:
 	{
  		if (skipdoall('p000e0674')) break p000e0674;
  		if (in_response)
 		{
-			if (!CNDverb(58)) break p000e0674;
+			if (!CNDverb(111)) break p000e0674;
  		}
-		if (!CNDnoteq(51,255)) break p000e0674;
-		if (!CNDabsent(getFlag(51))) break p000e0674;
- 		ACCwriteln(476);
+		if (!CNDeq(34,255)) break p000e0674;
+		if (!CNDbnotzero(12,1)) break p000e0674;
+ 		ACCwriteln(483);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12245,8 +12253,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(111)) break p000e0675;
  		}
 		if (!CNDeq(34,255)) break p000e0675;
-		if (!CNDbnotzero(12,1)) break p000e0675;
- 		ACCwriteln(477);
+		if (!CNDbzero(12,1)) break p000e0675;
+ 		ACCwriteln(484);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12261,9 +12269,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(111)) break p000e0676;
  		}
-		if (!CNDeq(34,255)) break p000e0676;
-		if (!CNDbzero(12,1)) break p000e0676;
- 		ACCwriteln(478);
+		if (!CNDnoteq(51,255)) break p000e0676;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0676;
+		if (!CNDpresent(getFlag(51))) break p000e0676;
+ 		ACCwriteln(485);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12280,8 +12289,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0677;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0677;
-		if (!CNDpresent(getFlag(51))) break p000e0677;
- 		ACCwriteln(479);
+		if (!CNDabsent(getFlag(51))) break p000e0677;
+ 		ACCwriteln(486);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12296,10 +12305,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(111)) break p000e0678;
  		}
-		if (!CNDnoteq(51,255)) break p000e0678;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0678;
-		if (!CNDabsent(getFlag(51))) break p000e0678;
- 		ACCwriteln(480);
+		if (!CNDnoteq(34,255)) break p000e0678;
+		if (!CNDeq(51,255)) break p000e0678;
+ 		ACCwriteln(487);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12314,9 +12322,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(111)) break p000e0679;
  		}
-		if (!CNDnoteq(34,255)) break p000e0679;
-		if (!CNDeq(51,255)) break p000e0679;
- 		ACCwriteln(481);
+		if (!CNDnoteq(51,255)) break p000e0679;
+		if (!CNDpresent(getFlag(51))) break p000e0679;
+ 		ACCwriteln(488);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12332,25 +12340,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(111)) break p000e0680;
  		}
 		if (!CNDnoteq(51,255)) break p000e0680;
-		if (!CNDpresent(getFlag(51))) break p000e0680;
- 		ACCwriteln(482);
+		if (!CNDabsent(getFlag(51))) break p000e0680;
+ 		ACCwriteln(489);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// APRETAR _
+	// BESA _
 	p000e0681:
 	{
  		if (skipdoall('p000e0681')) break p000e0681;
  		if (in_response)
 		{
-			if (!CNDverb(111)) break p000e0681;
+			if (!CNDverb(62)) break p000e0681;
  		}
-		if (!CNDnoteq(51,255)) break p000e0681;
-		if (!CNDabsent(getFlag(51))) break p000e0681;
- 		ACCwriteln(483);
+		if (!CNDeq(34,255)) break p000e0681;
+		if (!CNDbnotzero(12,1)) break p000e0681;
+ 		ACCwriteln(490);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12366,8 +12374,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(62)) break p000e0682;
  		}
 		if (!CNDeq(34,255)) break p000e0682;
-		if (!CNDbnotzero(12,1)) break p000e0682;
- 		ACCwriteln(484);
+		if (!CNDbzero(12,1)) break p000e0682;
+ 		ACCwriteln(491);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12382,9 +12390,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(62)) break p000e0683;
  		}
-		if (!CNDeq(34,255)) break p000e0683;
-		if (!CNDbzero(12,1)) break p000e0683;
- 		ACCwriteln(485);
+		if (!CNDnoteq(34,255)) break p000e0683;
+		if (!CNDnoteq(51,255)) break p000e0683;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0683;
+		if (!CNDpresent(getFlag(51))) break p000e0683;
+ 		ACCwriteln(492);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12402,8 +12412,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0684;
 		if (!CNDnoteq(51,255)) break p000e0684;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0684;
-		if (!CNDpresent(getFlag(51))) break p000e0684;
- 		ACCwriteln(486);
+		if (!CNDabsent(getFlag(51))) break p000e0684;
+ 		ACCwriteln(493);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12419,10 +12429,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(62)) break p000e0685;
  		}
 		if (!CNDnoteq(34,255)) break p000e0685;
-		if (!CNDnoteq(51,255)) break p000e0685;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0685;
-		if (!CNDabsent(getFlag(51))) break p000e0685;
- 		ACCwriteln(487);
+		if (!CNDeq(51,255)) break p000e0685;
+ 		ACCwriteln(494);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12437,9 +12445,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(62)) break p000e0686;
  		}
-		if (!CNDnoteq(34,255)) break p000e0686;
-		if (!CNDeq(51,255)) break p000e0686;
- 		ACCwriteln(488);
+		if (!CNDnoteq(51,255)) break p000e0686;
+		if (!CNDpresent(getFlag(51))) break p000e0686;
+ 		ACCwriteln(495);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12455,25 +12463,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(62)) break p000e0687;
  		}
 		if (!CNDnoteq(51,255)) break p000e0687;
-		if (!CNDpresent(getFlag(51))) break p000e0687;
- 		ACCwriteln(489);
+		if (!CNDabsent(getFlag(51))) break p000e0687;
+ 		ACCwriteln(496);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// BESA _
+	// ABRAZA _
 	p000e0688:
 	{
  		if (skipdoall('p000e0688')) break p000e0688;
  		if (in_response)
 		{
-			if (!CNDverb(62)) break p000e0688;
+			if (!CNDverb(105)) break p000e0688;
  		}
-		if (!CNDnoteq(51,255)) break p000e0688;
-		if (!CNDabsent(getFlag(51))) break p000e0688;
- 		ACCwriteln(490);
+		if (!CNDeq(34,255)) break p000e0688;
+		if (!CNDbnotzero(12,1)) break p000e0688;
+ 		ACCwriteln(497);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12489,8 +12497,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(105)) break p000e0689;
  		}
 		if (!CNDeq(34,255)) break p000e0689;
-		if (!CNDbnotzero(12,1)) break p000e0689;
- 		ACCwriteln(491);
+		if (!CNDbzero(12,1)) break p000e0689;
+ 		ACCwriteln(498);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12505,9 +12513,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(105)) break p000e0690;
  		}
-		if (!CNDeq(34,255)) break p000e0690;
-		if (!CNDbzero(12,1)) break p000e0690;
- 		ACCwriteln(492);
+		if (!CNDnoteq(34,255)) break p000e0690;
+		if (!CNDnoteq(51,255)) break p000e0690;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0690;
+		if (!CNDpresent(getFlag(51))) break p000e0690;
+ 		ACCwriteln(499);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12525,8 +12535,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0691;
 		if (!CNDnoteq(51,255)) break p000e0691;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0691;
-		if (!CNDpresent(getFlag(51))) break p000e0691;
- 		ACCwriteln(493);
+		if (!CNDabsent(getFlag(51))) break p000e0691;
+ 		ACCwriteln(500);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12542,10 +12552,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(105)) break p000e0692;
  		}
 		if (!CNDnoteq(34,255)) break p000e0692;
-		if (!CNDnoteq(51,255)) break p000e0692;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0692;
-		if (!CNDabsent(getFlag(51))) break p000e0692;
- 		ACCwriteln(494);
+		if (!CNDeq(51,255)) break p000e0692;
+ 		ACCwriteln(501);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12560,9 +12568,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(105)) break p000e0693;
  		}
-		if (!CNDnoteq(34,255)) break p000e0693;
-		if (!CNDeq(51,255)) break p000e0693;
- 		ACCwriteln(495);
+		if (!CNDnoteq(51,255)) break p000e0693;
+		if (!CNDpresent(getFlag(51))) break p000e0693;
+ 		ACCwriteln(502);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12578,25 +12586,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(105)) break p000e0694;
  		}
 		if (!CNDnoteq(51,255)) break p000e0694;
-		if (!CNDpresent(getFlag(51))) break p000e0694;
- 		ACCwriteln(496);
+		if (!CNDabsent(getFlag(51))) break p000e0694;
+ 		ACCwriteln(503);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ABRAZA _
+	// ACTIVA _
 	p000e0695:
 	{
  		if (skipdoall('p000e0695')) break p000e0695;
  		if (in_response)
 		{
-			if (!CNDverb(105)) break p000e0695;
+			if (!CNDverb(103)) break p000e0695;
  		}
-		if (!CNDnoteq(51,255)) break p000e0695;
-		if (!CNDabsent(getFlag(51))) break p000e0695;
- 		ACCwriteln(497);
+		if (!CNDeq(34,255)) break p000e0695;
+		if (!CNDbnotzero(12,1)) break p000e0695;
+ 		ACCwriteln(504);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12612,8 +12620,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(103)) break p000e0696;
  		}
 		if (!CNDeq(34,255)) break p000e0696;
-		if (!CNDbnotzero(12,1)) break p000e0696;
- 		ACCwriteln(498);
+		if (!CNDbzero(12,1)) break p000e0696;
+ 		ACCwriteln(505);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12628,9 +12636,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(103)) break p000e0697;
  		}
-		if (!CNDeq(34,255)) break p000e0697;
-		if (!CNDbzero(12,1)) break p000e0697;
- 		ACCwriteln(499);
+		if (!CNDnoteq(34,255)) break p000e0697;
+		if (!CNDeq(51,255)) break p000e0697;
+ 		ACCwriteln(506);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12645,9 +12653,12 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(103)) break p000e0698;
  		}
-		if (!CNDnoteq(34,255)) break p000e0698;
-		if (!CNDeq(51,255)) break p000e0698;
- 		ACCwriteln(500);
+		if (!CNDnoteq(51,255)) break p000e0698;
+		if (!CNDpresent(getFlag(51))) break p000e0698;
+		if (!CNDonotzero(getFlag(51),19)) break p000e0698;
+		if (!CNDozero(getFlag(51),20)) break p000e0698;
+ 		ACCoset(getFlag(51),20);
+ 		ACCwriteln(507);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12665,9 +12676,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p000e0699;
 		if (!CNDpresent(getFlag(51))) break p000e0699;
 		if (!CNDonotzero(getFlag(51),19)) break p000e0699;
-		if (!CNDozero(getFlag(51),20)) break p000e0699;
- 		ACCoset(getFlag(51),20);
- 		ACCwriteln(501);
+		if (!CNDonotzero(getFlag(51),20)) break p000e0699;
+ 		ACCwriteln(508);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12684,9 +12694,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0700;
 		if (!CNDpresent(getFlag(51))) break p000e0700;
-		if (!CNDonotzero(getFlag(51),19)) break p000e0700;
-		if (!CNDonotzero(getFlag(51),20)) break p000e0700;
- 		ACCwriteln(502);
+ 		ACCwriteln(509);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12702,25 +12710,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(103)) break p000e0701;
  		}
 		if (!CNDnoteq(51,255)) break p000e0701;
-		if (!CNDpresent(getFlag(51))) break p000e0701;
- 		ACCwriteln(503);
+		if (!CNDabsent(getFlag(51))) break p000e0701;
+ 		ACCwriteln(510);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ACTIVA _
+	// DESACTIVA _
 	p000e0702:
 	{
  		if (skipdoall('p000e0702')) break p000e0702;
  		if (in_response)
 		{
-			if (!CNDverb(103)) break p000e0702;
+			if (!CNDverb(104)) break p000e0702;
  		}
-		if (!CNDnoteq(51,255)) break p000e0702;
-		if (!CNDabsent(getFlag(51))) break p000e0702;
- 		ACCwriteln(504);
+		if (!CNDeq(34,255)) break p000e0702;
+		if (!CNDbnotzero(12,1)) break p000e0702;
+ 		ACCwriteln(511);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12736,8 +12744,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(104)) break p000e0703;
  		}
 		if (!CNDeq(34,255)) break p000e0703;
-		if (!CNDbnotzero(12,1)) break p000e0703;
- 		ACCwriteln(505);
+		if (!CNDbzero(12,1)) break p000e0703;
+ 		ACCwriteln(512);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12752,9 +12760,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(104)) break p000e0704;
  		}
-		if (!CNDeq(34,255)) break p000e0704;
-		if (!CNDbzero(12,1)) break p000e0704;
- 		ACCwriteln(506);
+		if (!CNDnoteq(34,255)) break p000e0704;
+		if (!CNDeq(51,255)) break p000e0704;
+ 		ACCwriteln(513);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12769,9 +12777,12 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(104)) break p000e0705;
  		}
-		if (!CNDnoteq(34,255)) break p000e0705;
-		if (!CNDeq(51,255)) break p000e0705;
- 		ACCwriteln(507);
+		if (!CNDnoteq(51,255)) break p000e0705;
+		if (!CNDpresent(getFlag(51))) break p000e0705;
+		if (!CNDonotzero(getFlag(51),19)) break p000e0705;
+		if (!CNDonotzero(getFlag(51),20)) break p000e0705;
+ 		ACCoclear(getFlag(51),20);
+ 		ACCwriteln(514);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12789,9 +12800,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p000e0706;
 		if (!CNDpresent(getFlag(51))) break p000e0706;
 		if (!CNDonotzero(getFlag(51),19)) break p000e0706;
-		if (!CNDonotzero(getFlag(51),20)) break p000e0706;
- 		ACCoclear(getFlag(51),20);
- 		ACCwriteln(508);
+		if (!CNDozero(getFlag(51),20)) break p000e0706;
+ 		ACCwriteln(515);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12808,9 +12818,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0707;
 		if (!CNDpresent(getFlag(51))) break p000e0707;
-		if (!CNDonotzero(getFlag(51),19)) break p000e0707;
-		if (!CNDozero(getFlag(51),20)) break p000e0707;
- 		ACCwriteln(509);
+ 		ACCwriteln(516);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12826,25 +12834,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(104)) break p000e0708;
  		}
 		if (!CNDnoteq(51,255)) break p000e0708;
-		if (!CNDpresent(getFlag(51))) break p000e0708;
- 		ACCwriteln(510);
+		if (!CNDabsent(getFlag(51))) break p000e0708;
+ 		ACCwriteln(517);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESACTIVA _
+	// ABRE _
 	p000e0709:
 	{
  		if (skipdoall('p000e0709')) break p000e0709;
  		if (in_response)
 		{
-			if (!CNDverb(104)) break p000e0709;
+			if (!CNDverb(64)) break p000e0709;
  		}
-		if (!CNDnoteq(51,255)) break p000e0709;
-		if (!CNDabsent(getFlag(51))) break p000e0709;
- 		ACCwriteln(511);
+		if (!CNDeq(34,255)) break p000e0709;
+		if (!CNDbnotzero(12,1)) break p000e0709;
+ 		ACCwriteln(518);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12860,8 +12868,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(64)) break p000e0710;
  		}
 		if (!CNDeq(34,255)) break p000e0710;
-		if (!CNDbnotzero(12,1)) break p000e0710;
- 		ACCwriteln(512);
+		if (!CNDbzero(12,1)) break p000e0710;
+ 		ACCwriteln(519);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12876,9 +12884,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(64)) break p000e0711;
  		}
-		if (!CNDeq(34,255)) break p000e0711;
-		if (!CNDbzero(12,1)) break p000e0711;
- 		ACCwriteln(513);
+		if (!CNDnoteq(34,255)) break p000e0711;
+		if (!CNDeq(51,255)) break p000e0711;
+ 		ACCwriteln(520);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12893,9 +12901,13 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(64)) break p000e0712;
  		}
-		if (!CNDnoteq(34,255)) break p000e0712;
-		if (!CNDeq(51,255)) break p000e0712;
- 		ACCwriteln(514);
+		if (!CNDnoteq(51,255)) break p000e0712;
+		if (!CNDpresent(getFlag(51))) break p000e0712;
+		if (!CNDonotzero(getFlag(51),13)) break p000e0712;
+		if (!CNDozero(getFlag(51),14)) break p000e0712;
+		if (!CNDozero(getFlag(51),10)) break p000e0712;
+ 		ACCoset(getFlag(51),14);
+ 		ACCwriteln(521);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12914,9 +12926,8 @@ pro000_restart: while(process_restart)
 		if (!CNDpresent(getFlag(51))) break p000e0713;
 		if (!CNDonotzero(getFlag(51),13)) break p000e0713;
 		if (!CNDozero(getFlag(51),14)) break p000e0713;
-		if (!CNDozero(getFlag(51),10)) break p000e0713;
- 		ACCoset(getFlag(51),14);
- 		ACCwriteln(515);
+		if (!CNDonotzero(getFlag(51),10)) break p000e0713;
+ 		ACCwriteln(522);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12934,9 +12945,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p000e0714;
 		if (!CNDpresent(getFlag(51))) break p000e0714;
 		if (!CNDonotzero(getFlag(51),13)) break p000e0714;
-		if (!CNDozero(getFlag(51),14)) break p000e0714;
-		if (!CNDonotzero(getFlag(51),10)) break p000e0714;
- 		ACCwriteln(516);
+		if (!CNDonotzero(getFlag(51),14)) break p000e0714;
+ 		ACCwriteln(523);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12955,7 +12965,7 @@ pro000_restart: while(process_restart)
 		if (!CNDpresent(getFlag(51))) break p000e0715;
 		if (!CNDonotzero(getFlag(51),13)) break p000e0715;
 		if (!CNDonotzero(getFlag(51),14)) break p000e0715;
- 		ACCwriteln(517);
+ 		ACCwriteln(524);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12972,9 +12982,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0716;
 		if (!CNDpresent(getFlag(51))) break p000e0716;
-		if (!CNDonotzero(getFlag(51),13)) break p000e0716;
-		if (!CNDonotzero(getFlag(51),14)) break p000e0716;
- 		ACCwriteln(518);
+ 		ACCwriteln(525);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12990,25 +12998,24 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(64)) break p000e0717;
  		}
 		if (!CNDnoteq(51,255)) break p000e0717;
-		if (!CNDpresent(getFlag(51))) break p000e0717;
- 		ACCwriteln(519);
+		if (!CNDabsent(getFlag(51))) break p000e0717;
+ 		ACCwriteln(526);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ABRE _
+	// CERRAR _
 	p000e0718:
 	{
  		if (skipdoall('p000e0718')) break p000e0718;
  		if (in_response)
 		{
-			if (!CNDverb(64)) break p000e0718;
+			if (!CNDverb(65)) break p000e0718;
  		}
-		if (!CNDnoteq(51,255)) break p000e0718;
-		if (!CNDabsent(getFlag(51))) break p000e0718;
- 		ACCwriteln(520);
+		if (!CNDeq(34,255)) break p000e0718;
+ 		ACCwriteln(527);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13024,7 +13031,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(65)) break p000e0719;
  		}
 		if (!CNDeq(34,255)) break p000e0719;
- 		ACCwriteln(521);
+		if (!CNDbzero(12,1)) break p000e0719;
+ 		ACCwriteln(528);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13039,9 +13047,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(65)) break p000e0720;
  		}
-		if (!CNDeq(34,255)) break p000e0720;
-		if (!CNDbzero(12,1)) break p000e0720;
- 		ACCwriteln(522);
+		if (!CNDnoteq(34,255)) break p000e0720;
+		if (!CNDeq(51,255)) break p000e0720;
+ 		ACCwriteln(529);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13056,9 +13064,12 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(65)) break p000e0721;
  		}
-		if (!CNDnoteq(34,255)) break p000e0721;
-		if (!CNDeq(51,255)) break p000e0721;
- 		ACCwriteln(523);
+		if (!CNDnoteq(51,255)) break p000e0721;
+		if (!CNDpresent(getFlag(51))) break p000e0721;
+		if (!CNDonotzero(getFlag(51),13)) break p000e0721;
+		if (!CNDonotzero(getFlag(51),14)) break p000e0721;
+ 		ACCoclear(getFlag(51),14);
+ 		ACCwriteln(530);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13076,9 +13087,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p000e0722;
 		if (!CNDpresent(getFlag(51))) break p000e0722;
 		if (!CNDonotzero(getFlag(51),13)) break p000e0722;
-		if (!CNDonotzero(getFlag(51),14)) break p000e0722;
- 		ACCoclear(getFlag(51),14);
- 		ACCwriteln(524);
+		if (!CNDozero(getFlag(51),14)) break p000e0722;
+ 		ACCwriteln(531);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13095,9 +13105,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0723;
 		if (!CNDpresent(getFlag(51))) break p000e0723;
-		if (!CNDonotzero(getFlag(51),13)) break p000e0723;
-		if (!CNDozero(getFlag(51),14)) break p000e0723;
- 		ACCwriteln(525);
+ 		ACCwriteln(532);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13113,25 +13121,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(65)) break p000e0724;
  		}
 		if (!CNDnoteq(51,255)) break p000e0724;
-		if (!CNDpresent(getFlag(51))) break p000e0724;
- 		ACCwriteln(526);
+		if (!CNDabsent(getFlag(51))) break p000e0724;
+ 		ACCwriteln(533);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CERRAR _
+	// CHUPA _
 	p000e0725:
 	{
  		if (skipdoall('p000e0725')) break p000e0725;
  		if (in_response)
 		{
-			if (!CNDverb(65)) break p000e0725;
+			if (!CNDverb(63)) break p000e0725;
  		}
-		if (!CNDnoteq(51,255)) break p000e0725;
-		if (!CNDabsent(getFlag(51))) break p000e0725;
- 		ACCwriteln(527);
+		if (!CNDeq(34,255)) break p000e0725;
+		if (!CNDbnotzero(12,1)) break p000e0725;
+ 		ACCwriteln(534);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13147,8 +13155,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(63)) break p000e0726;
  		}
 		if (!CNDeq(34,255)) break p000e0726;
-		if (!CNDbnotzero(12,1)) break p000e0726;
- 		ACCwriteln(528);
+		if (!CNDbzero(12,1)) break p000e0726;
+ 		ACCwriteln(535);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13163,9 +13171,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(63)) break p000e0727;
  		}
-		if (!CNDeq(34,255)) break p000e0727;
-		if (!CNDbzero(12,1)) break p000e0727;
- 		ACCwriteln(529);
+		if (!CNDnoteq(51,255)) break p000e0727;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0727;
+		if (!CNDpresent(getFlag(51))) break p000e0727;
+ 		ACCwriteln(536);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13181,9 +13190,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(63)) break p000e0728;
  		}
 		if (!CNDnoteq(51,255)) break p000e0728;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0728;
+		if (!CNDonotzero(getFlag(51),5)) break p000e0728;
 		if (!CNDpresent(getFlag(51))) break p000e0728;
- 		ACCwriteln(530);
+ 		ACCwriteln(537);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13199,9 +13208,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(63)) break p000e0729;
  		}
 		if (!CNDnoteq(51,255)) break p000e0729;
-		if (!CNDonotzero(getFlag(51),5)) break p000e0729;
-		if (!CNDpresent(getFlag(51))) break p000e0729;
- 		ACCwriteln(531);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0729;
+		if (!CNDabsent(getFlag(51))) break p000e0729;
+ 		ACCwriteln(538);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13216,10 +13225,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(63)) break p000e0730;
  		}
-		if (!CNDnoteq(51,255)) break p000e0730;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0730;
-		if (!CNDabsent(getFlag(51))) break p000e0730;
- 		ACCwriteln(532);
+		if (!CNDnoteq(34,255)) break p000e0730;
+		if (!CNDeq(51,255)) break p000e0730;
+ 		ACCwriteln(539);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13234,9 +13242,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(63)) break p000e0731;
  		}
-		if (!CNDnoteq(34,255)) break p000e0731;
-		if (!CNDeq(51,255)) break p000e0731;
- 		ACCwriteln(533);
+		if (!CNDnoteq(51,255)) break p000e0731;
+		if (!CNDpresent(getFlag(51))) break p000e0731;
+ 		ACCwriteln(540);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13252,25 +13260,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(63)) break p000e0732;
  		}
 		if (!CNDnoteq(51,255)) break p000e0732;
-		if (!CNDpresent(getFlag(51))) break p000e0732;
- 		ACCwriteln(534);
+		if (!CNDabsent(getFlag(51))) break p000e0732;
+ 		ACCwriteln(541);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CHUPA _
+	// DESTRUIR _
 	p000e0733:
 	{
  		if (skipdoall('p000e0733')) break p000e0733;
  		if (in_response)
 		{
-			if (!CNDverb(63)) break p000e0733;
+			if (!CNDverb(69)) break p000e0733;
  		}
-		if (!CNDnoteq(51,255)) break p000e0733;
-		if (!CNDabsent(getFlag(51))) break p000e0733;
- 		ACCwriteln(535);
+		if (!CNDeq(34,255)) break p000e0733;
+		if (!CNDbnotzero(12,1)) break p000e0733;
+ 		ACCwriteln(542);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13286,8 +13294,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(69)) break p000e0734;
  		}
 		if (!CNDeq(34,255)) break p000e0734;
-		if (!CNDbnotzero(12,1)) break p000e0734;
- 		ACCwriteln(536);
+		if (!CNDbzero(12,1)) break p000e0734;
+ 		ACCwriteln(543);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13302,9 +13310,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(69)) break p000e0735;
  		}
-		if (!CNDeq(34,255)) break p000e0735;
-		if (!CNDbzero(12,1)) break p000e0735;
- 		ACCwriteln(537);
+		if (!CNDnoteq(34,255)) break p000e0735;
+		if (!CNDnoteq(51,255)) break p000e0735;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0735;
+		if (!CNDpresent(getFlag(51))) break p000e0735;
+ 		ACCwriteln(544);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13322,8 +13332,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0736;
 		if (!CNDnoteq(51,255)) break p000e0736;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0736;
-		if (!CNDpresent(getFlag(51))) break p000e0736;
- 		ACCwriteln(538);
+		if (!CNDabsent(getFlag(51))) break p000e0736;
+ 		ACCwriteln(545);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13339,10 +13349,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(69)) break p000e0737;
  		}
 		if (!CNDnoteq(34,255)) break p000e0737;
-		if (!CNDnoteq(51,255)) break p000e0737;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0737;
-		if (!CNDabsent(getFlag(51))) break p000e0737;
- 		ACCwriteln(539);
+		if (!CNDeq(51,255)) break p000e0737;
+ 		ACCwriteln(546);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13357,9 +13365,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(69)) break p000e0738;
  		}
-		if (!CNDnoteq(34,255)) break p000e0738;
-		if (!CNDeq(51,255)) break p000e0738;
- 		ACCwriteln(540);
+		if (!CNDnoteq(51,255)) break p000e0738;
+		if (!CNDpresent(getFlag(51))) break p000e0738;
+ 		ACCwriteln(547);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13375,25 +13383,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(69)) break p000e0739;
  		}
 		if (!CNDnoteq(51,255)) break p000e0739;
-		if (!CNDpresent(getFlag(51))) break p000e0739;
- 		ACCwriteln(541);
+		if (!CNDabsent(getFlag(51))) break p000e0739;
+ 		ACCwriteln(548);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESTRUIR _
+	// ADQUIERE _
 	p000e0740:
 	{
  		if (skipdoall('p000e0740')) break p000e0740;
  		if (in_response)
 		{
-			if (!CNDverb(69)) break p000e0740;
+			if (!CNDverb(106)) break p000e0740;
  		}
-		if (!CNDnoteq(51,255)) break p000e0740;
-		if (!CNDabsent(getFlag(51))) break p000e0740;
- 		ACCwriteln(542);
+		if (!CNDeq(34,255)) break p000e0740;
+		if (!CNDbnotzero(12,1)) break p000e0740;
+ 		ACCwriteln(549);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13409,8 +13417,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(106)) break p000e0741;
  		}
 		if (!CNDeq(34,255)) break p000e0741;
-		if (!CNDbnotzero(12,1)) break p000e0741;
- 		ACCwriteln(543);
+		if (!CNDbzero(12,1)) break p000e0741;
+ 		ACCwriteln(550);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13425,9 +13433,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(106)) break p000e0742;
  		}
-		if (!CNDeq(34,255)) break p000e0742;
-		if (!CNDbzero(12,1)) break p000e0742;
- 		ACCwriteln(544);
+		if (!CNDnoteq(34,255)) break p000e0742;
+		if (!CNDnoteq(51,255)) break p000e0742;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0742;
+		if (!CNDpresent(getFlag(51))) break p000e0742;
+ 		ACCwriteln(551);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13445,8 +13455,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0743;
 		if (!CNDnoteq(51,255)) break p000e0743;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0743;
-		if (!CNDpresent(getFlag(51))) break p000e0743;
- 		ACCwriteln(545);
+		if (!CNDabsent(getFlag(51))) break p000e0743;
+ 		ACCwriteln(552);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13462,10 +13472,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(106)) break p000e0744;
  		}
 		if (!CNDnoteq(34,255)) break p000e0744;
-		if (!CNDnoteq(51,255)) break p000e0744;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0744;
-		if (!CNDabsent(getFlag(51))) break p000e0744;
- 		ACCwriteln(546);
+		if (!CNDeq(51,255)) break p000e0744;
+ 		ACCwriteln(553);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13480,9 +13488,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(106)) break p000e0745;
  		}
-		if (!CNDnoteq(34,255)) break p000e0745;
-		if (!CNDeq(51,255)) break p000e0745;
- 		ACCwriteln(547);
+		if (!CNDnoteq(51,255)) break p000e0745;
+		if (!CNDpresent(getFlag(51))) break p000e0745;
+ 		ACCwriteln(554);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13498,25 +13506,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(106)) break p000e0746;
  		}
 		if (!CNDnoteq(51,255)) break p000e0746;
-		if (!CNDpresent(getFlag(51))) break p000e0746;
- 		ACCwriteln(548);
+		if (!CNDabsent(getFlag(51))) break p000e0746;
+ 		ACCwriteln(555);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ADQUIERE _
+	// DOBLA _
 	p000e0747:
 	{
  		if (skipdoall('p000e0747')) break p000e0747;
  		if (in_response)
 		{
-			if (!CNDverb(106)) break p000e0747;
+			if (!CNDverb(96)) break p000e0747;
  		}
-		if (!CNDnoteq(51,255)) break p000e0747;
-		if (!CNDabsent(getFlag(51))) break p000e0747;
- 		ACCwriteln(549);
+		if (!CNDeq(34,255)) break p000e0747;
+		if (!CNDbnotzero(12,1)) break p000e0747;
+ 		ACCwriteln(556);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13532,8 +13540,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(96)) break p000e0748;
  		}
 		if (!CNDeq(34,255)) break p000e0748;
-		if (!CNDbnotzero(12,1)) break p000e0748;
- 		ACCwriteln(550);
+		if (!CNDbzero(12,1)) break p000e0748;
+ 		ACCwriteln(557);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13548,9 +13556,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(96)) break p000e0749;
  		}
-		if (!CNDeq(34,255)) break p000e0749;
-		if (!CNDbzero(12,1)) break p000e0749;
- 		ACCwriteln(551);
+		if (!CNDnoteq(34,255)) break p000e0749;
+		if (!CNDnoteq(51,255)) break p000e0749;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0749;
+		if (!CNDpresent(getFlag(51))) break p000e0749;
+ 		ACCwriteln(558);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13568,8 +13578,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0750;
 		if (!CNDnoteq(51,255)) break p000e0750;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0750;
-		if (!CNDpresent(getFlag(51))) break p000e0750;
- 		ACCwriteln(552);
+		if (!CNDabsent(getFlag(51))) break p000e0750;
+ 		ACCwriteln(559);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13585,10 +13595,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(96)) break p000e0751;
  		}
 		if (!CNDnoteq(34,255)) break p000e0751;
-		if (!CNDnoteq(51,255)) break p000e0751;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0751;
-		if (!CNDabsent(getFlag(51))) break p000e0751;
- 		ACCwriteln(553);
+		if (!CNDeq(51,255)) break p000e0751;
+ 		ACCwriteln(560);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13603,9 +13611,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(96)) break p000e0752;
  		}
-		if (!CNDnoteq(34,255)) break p000e0752;
-		if (!CNDeq(51,255)) break p000e0752;
- 		ACCwriteln(554);
+		if (!CNDnoteq(51,255)) break p000e0752;
+		if (!CNDpresent(getFlag(51))) break p000e0752;
+ 		ACCwriteln(561);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13621,25 +13629,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(96)) break p000e0753;
  		}
 		if (!CNDnoteq(51,255)) break p000e0753;
-		if (!CNDpresent(getFlag(51))) break p000e0753;
- 		ACCwriteln(555);
+		if (!CNDabsent(getFlag(51))) break p000e0753;
+ 		ACCwriteln(562);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DOBLA _
+	// DESDOBLA _
 	p000e0754:
 	{
  		if (skipdoall('p000e0754')) break p000e0754;
  		if (in_response)
 		{
-			if (!CNDverb(96)) break p000e0754;
+			if (!CNDverb(97)) break p000e0754;
  		}
-		if (!CNDnoteq(51,255)) break p000e0754;
-		if (!CNDabsent(getFlag(51))) break p000e0754;
- 		ACCwriteln(556);
+		if (!CNDeq(34,255)) break p000e0754;
+		if (!CNDbnotzero(12,1)) break p000e0754;
+ 		ACCwriteln(563);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13655,8 +13663,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(97)) break p000e0755;
  		}
 		if (!CNDeq(34,255)) break p000e0755;
-		if (!CNDbnotzero(12,1)) break p000e0755;
- 		ACCwriteln(557);
+		if (!CNDbzero(12,1)) break p000e0755;
+ 		ACCwriteln(564);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13671,9 +13679,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(97)) break p000e0756;
  		}
-		if (!CNDeq(34,255)) break p000e0756;
-		if (!CNDbzero(12,1)) break p000e0756;
- 		ACCwriteln(558);
+		if (!CNDnoteq(34,255)) break p000e0756;
+		if (!CNDnoteq(51,255)) break p000e0756;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0756;
+		if (!CNDpresent(getFlag(51))) break p000e0756;
+ 		ACCwriteln(565);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13691,8 +13701,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0757;
 		if (!CNDnoteq(51,255)) break p000e0757;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0757;
-		if (!CNDpresent(getFlag(51))) break p000e0757;
- 		ACCwriteln(559);
+		if (!CNDabsent(getFlag(51))) break p000e0757;
+ 		ACCwriteln(566);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13708,10 +13718,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(97)) break p000e0758;
  		}
 		if (!CNDnoteq(34,255)) break p000e0758;
-		if (!CNDnoteq(51,255)) break p000e0758;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0758;
-		if (!CNDabsent(getFlag(51))) break p000e0758;
- 		ACCwriteln(560);
+		if (!CNDeq(51,255)) break p000e0758;
+ 		ACCwriteln(567);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13726,9 +13734,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(97)) break p000e0759;
  		}
-		if (!CNDnoteq(34,255)) break p000e0759;
-		if (!CNDeq(51,255)) break p000e0759;
- 		ACCwriteln(561);
+		if (!CNDnoteq(51,255)) break p000e0759;
+		if (!CNDpresent(getFlag(51))) break p000e0759;
+ 		ACCwriteln(568);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13744,25 +13752,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(97)) break p000e0760;
  		}
 		if (!CNDnoteq(51,255)) break p000e0760;
-		if (!CNDpresent(getFlag(51))) break p000e0760;
- 		ACCwriteln(562);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// DESDOBLA _
-	p000e0761:
-	{
- 		if (skipdoall('p000e0761')) break p000e0761;
- 		if (in_response)
-		{
-			if (!CNDverb(97)) break p000e0761;
- 		}
-		if (!CNDnoteq(51,255)) break p000e0761;
-		if (!CNDabsent(getFlag(51))) break p000e0761;
- 		ACCwriteln(563);
+		if (!CNDabsent(getFlag(51))) break p000e0760;
+ 		ACCwriteln(569);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13770,12 +13761,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// EXITS _
-	p000e0762:
+	p000e0761:
 	{
- 		if (skipdoall('p000e0762')) break p000e0762;
+ 		if (skipdoall('p000e0761')) break p000e0761;
  		if (in_response)
 		{
-			if (!CNDverb(41)) break p000e0762;
+			if (!CNDverb(41)) break p000e0761;
  		}
  		ACCexits(getFlag(38),1000);
  		ACCnewline();
@@ -13785,13 +13776,42 @@ pro000_restart: while(process_restart)
 
 	}
 
-	// AYUDA _
+	// _ PARTIDAS
+	p000e0762:
+	{
+ 		if (skipdoall('p000e0762')) break p000e0762;
+ 		if (in_response)
+		{
+			if (!CNDnoun1(183)) break p000e0762;
+ 		}
+ 		ACClet(33,129);
+		{}
+
+	}
+
+	// ENUMERA PARTIDAS
 	p000e0763:
 	{
  		if (skipdoall('p000e0763')) break p000e0763;
  		if (in_response)
 		{
-			if (!CNDverb(34)) break p000e0763;
+			if (!CNDverb(129)) break p000e0763;
+			if (!CNDnoun1(183)) break p000e0763;
+ 		}
+ 		ACClistsavedgames();
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// AYUDA _
+	p000e0764:
+	{
+ 		if (skipdoall('p000e0764')) break p000e0764;
+ 		if (in_response)
+		{
+			if (!CNDverb(34)) break p000e0764;
  		}
  		ACChelp();
  		ACCdone();
@@ -13801,40 +13821,17 @@ pro000_restart: while(process_restart)
 	}
 
 	// VERSION _
-	p000e0764:
-	{
- 		if (skipdoall('p000e0764')) break p000e0764;
- 		if (in_response)
-		{
-			if (!CNDverb(70)) break p000e0764;
- 		}
- 		ACCversion();
- 		ACCnewline();
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// DA _
 	p000e0765:
 	{
  		if (skipdoall('p000e0765')) break p000e0765;
  		if (in_response)
 		{
-			if (!CNDverb(73)) break p000e0765;
+			if (!CNDverb(70)) break p000e0765;
  		}
-		if (!CNDsame(46,34)) break p000e0765;
- 		ACCwhatox(13);
-		if (!CNDonotzero(getFlag(13),3)) break p000e0765;
-		if (!CNDnoteq(44,255)) break p000e0765;
- 		ACCcopyff(34,14);
- 		ACCcopyff(44,34);
- 		ACCcopyff(14,44);
- 		ACCcopyff(35,14);
- 		ACCcopyff(45,35);
- 		ACCcopyff(14,45);
- 		ACCwhato();
+ 		ACCversion();
+ 		ACCnewline();
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
@@ -13847,13 +13844,17 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(73)) break p000e0766;
  		}
-		if (!CNDprep(2)) break p000e0766;
-		if (!CNDbzero(12,2)) break p000e0766;
-		if (!CNDeq(44,255)) break p000e0766;
-		if (!CNDbnotzero(12,1)) break p000e0766;
- 		ACCwriteln(564);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDsame(46,34)) break p000e0766;
+ 		ACCwhatox(13);
+		if (!CNDonotzero(getFlag(13),3)) break p000e0766;
+		if (!CNDnoteq(44,255)) break p000e0766;
+ 		ACCcopyff(34,14);
+ 		ACCcopyff(44,34);
+ 		ACCcopyff(14,44);
+ 		ACCcopyff(35,14);
+ 		ACCcopyff(45,35);
+ 		ACCcopyff(14,45);
+ 		ACCwhato();
 		{}
 
 	}
@@ -13866,9 +13867,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(73)) break p000e0767;
  		}
-		if (!CNDeq(34,255)) break p000e0767;
-		if (!CNDbzero(12,1)) break p000e0767;
- 		ACCwriteln(565);
+		if (!CNDprep(2)) break p000e0767;
+		if (!CNDbzero(12,2)) break p000e0767;
+		if (!CNDeq(44,255)) break p000e0767;
+		if (!CNDbnotzero(12,1)) break p000e0767;
+ 		ACCwriteln(570);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13884,8 +13887,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(73)) break p000e0768;
  		}
 		if (!CNDeq(34,255)) break p000e0768;
-		if (!CNDbnotzero(12,1)) break p000e0768;
- 		ACCwriteln(566);
+		if (!CNDbzero(12,1)) break p000e0768;
+ 		ACCwriteln(571);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13900,9 +13903,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(73)) break p000e0769;
  		}
-		if (!CNDnoteq(34,255)) break p000e0769;
-		if (!CNDeq(51,255)) break p000e0769;
- 		ACCwriteln(567);
+		if (!CNDeq(34,255)) break p000e0769;
+		if (!CNDbnotzero(12,1)) break p000e0769;
+ 		ACCwriteln(572);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13917,10 +13920,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(73)) break p000e0770;
  		}
-		if (!CNDnoteq(51,255)) break p000e0770;
-		if (!CNDworn(getFlag(51))) break p000e0770;
-		if (!CNDonotzero(getFlag(51),1)) break p000e0770;
- 		ACCwriteln(568);
+		if (!CNDnoteq(34,255)) break p000e0770;
+		if (!CNDeq(51,255)) break p000e0770;
+ 		ACCwriteln(573);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13936,8 +13938,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(73)) break p000e0771;
  		}
 		if (!CNDnoteq(51,255)) break p000e0771;
-		if (!CNDnotcarr(getFlag(51))) break p000e0771;
- 		ACCwriteln(569);
+		if (!CNDworn(getFlag(51))) break p000e0771;
+		if (!CNDonotzero(getFlag(51),1)) break p000e0771;
+ 		ACCwriteln(574);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13953,10 +13956,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(73)) break p000e0772;
  		}
 		if (!CNDnoteq(51,255)) break p000e0772;
-		if (!CNDcarried(getFlag(51))) break p000e0772;
-		if (!CNDeq(44,255)) break p000e0772;
-		if (!CNDbzero(12,1)) break p000e0772;
- 		ACCwriteln(570);
+		if (!CNDnotcarr(getFlag(51))) break p000e0772;
+ 		ACCwriteln(575);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13974,8 +13975,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p000e0773;
 		if (!CNDcarried(getFlag(51))) break p000e0773;
 		if (!CNDeq(44,255)) break p000e0773;
-		if (!CNDbnotzero(12,1)) break p000e0773;
- 		ACCwriteln(571);
+		if (!CNDbzero(12,1)) break p000e0773;
+ 		ACCwriteln(576);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13992,10 +13993,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0774;
 		if (!CNDcarried(getFlag(51))) break p000e0774;
-		if (!CNDnoteq(44,255)) break p000e0774;
- 		ACCwhatox2(15);
-		if (!CNDeq(15,255)) break p000e0774;
- 		ACCwriteln(572);
+		if (!CNDeq(44,255)) break p000e0774;
+		if (!CNDbnotzero(12,1)) break p000e0774;
+ 		ACCwriteln(577);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14013,10 +14013,9 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p000e0775;
 		if (!CNDcarried(getFlag(51))) break p000e0775;
 		if (!CNDnoteq(44,255)) break p000e0775;
- 		ACCwhatox2(13);
-		if (!CNDnoteq(13,255)) break p000e0775;
-		if (!CNDozero(getFlag(13),3)) break p000e0775;
- 		ACCwriteln(573);
+ 		ACCwhatox2(15);
+		if (!CNDeq(15,255)) break p000e0775;
+ 		ACCwriteln(578);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14036,9 +14035,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(44,255)) break p000e0776;
  		ACCwhatox2(13);
 		if (!CNDnoteq(13,255)) break p000e0776;
-		if (!CNDonotzero(getFlag(13),3)) break p000e0776;
-		if (!CNDabsent(getFlag(13))) break p000e0776;
- 		ACCwriteln(574);
+		if (!CNDozero(getFlag(13),3)) break p000e0776;
+ 		ACCwriteln(579);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14059,33 +14057,32 @@ pro000_restart: while(process_restart)
  		ACCwhatox2(13);
 		if (!CNDnoteq(13,255)) break p000e0777;
 		if (!CNDonotzero(getFlag(13),3)) break p000e0777;
-		if (!CNDpresent(getFlag(13))) break p000e0777;
- 		ACCwriteln(575);
+		if (!CNDabsent(getFlag(13))) break p000e0777;
+ 		ACCwriteln(580);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ENSEÑA _
+	// DA _
 	p000e0778:
 	{
  		if (skipdoall('p000e0778')) break p000e0778;
  		if (in_response)
 		{
-			if (!CNDverb(36)) break p000e0778;
+			if (!CNDverb(73)) break p000e0778;
  		}
-		if (!CNDsame(46,34)) break p000e0778;
- 		ACCwhatox(13);
-		if (!CNDonotzero(getFlag(13),3)) break p000e0778;
+		if (!CNDnoteq(51,255)) break p000e0778;
+		if (!CNDcarried(getFlag(51))) break p000e0778;
 		if (!CNDnoteq(44,255)) break p000e0778;
- 		ACCcopyff(34,14);
- 		ACCcopyff(44,34);
- 		ACCcopyff(14,44);
- 		ACCcopyff(35,14);
- 		ACCcopyff(45,35);
- 		ACCcopyff(14,45);
- 		ACCwhato();
+ 		ACCwhatox2(13);
+		if (!CNDnoteq(13,255)) break p000e0778;
+		if (!CNDonotzero(getFlag(13),3)) break p000e0778;
+		if (!CNDpresent(getFlag(13))) break p000e0778;
+ 		ACCwriteln(581);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
@@ -14098,13 +14095,17 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(36)) break p000e0779;
  		}
-		if (!CNDprep(2)) break p000e0779;
-		if (!CNDbzero(12,2)) break p000e0779;
-		if (!CNDeq(44,255)) break p000e0779;
-		if (!CNDbnotzero(12,1)) break p000e0779;
- 		ACCwriteln(576);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDsame(46,34)) break p000e0779;
+ 		ACCwhatox(13);
+		if (!CNDonotzero(getFlag(13),3)) break p000e0779;
+		if (!CNDnoteq(44,255)) break p000e0779;
+ 		ACCcopyff(34,14);
+ 		ACCcopyff(44,34);
+ 		ACCcopyff(14,44);
+ 		ACCcopyff(35,14);
+ 		ACCcopyff(45,35);
+ 		ACCcopyff(14,45);
+ 		ACCwhato();
 		{}
 
 	}
@@ -14117,9 +14118,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(36)) break p000e0780;
  		}
-		if (!CNDeq(34,255)) break p000e0780;
-		if (!CNDbzero(12,1)) break p000e0780;
- 		ACCwriteln(577);
+		if (!CNDprep(2)) break p000e0780;
+		if (!CNDbzero(12,2)) break p000e0780;
+		if (!CNDeq(44,255)) break p000e0780;
+		if (!CNDbnotzero(12,1)) break p000e0780;
+ 		ACCwriteln(582);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14135,8 +14138,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(36)) break p000e0781;
  		}
 		if (!CNDeq(34,255)) break p000e0781;
-		if (!CNDbnotzero(12,1)) break p000e0781;
- 		ACCwriteln(578);
+		if (!CNDbzero(12,1)) break p000e0781;
+ 		ACCwriteln(583);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14151,9 +14154,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(36)) break p000e0782;
  		}
-		if (!CNDnoteq(34,255)) break p000e0782;
-		if (!CNDeq(51,255)) break p000e0782;
- 		ACCwriteln(579);
+		if (!CNDeq(34,255)) break p000e0782;
+		if (!CNDbnotzero(12,1)) break p000e0782;
+ 		ACCwriteln(584);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14168,10 +14171,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(36)) break p000e0783;
  		}
-		if (!CNDnoteq(51,255)) break p000e0783;
-		if (!CNDworn(getFlag(51))) break p000e0783;
-		if (!CNDonotzero(getFlag(51),1)) break p000e0783;
- 		ACCwriteln(580);
+		if (!CNDnoteq(34,255)) break p000e0783;
+		if (!CNDeq(51,255)) break p000e0783;
+ 		ACCwriteln(585);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14187,8 +14189,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(36)) break p000e0784;
  		}
 		if (!CNDnoteq(51,255)) break p000e0784;
-		if (!CNDnotcarr(getFlag(51))) break p000e0784;
- 		ACCwriteln(581);
+		if (!CNDworn(getFlag(51))) break p000e0784;
+		if (!CNDonotzero(getFlag(51),1)) break p000e0784;
+ 		ACCwriteln(586);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14204,10 +14207,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(36)) break p000e0785;
  		}
 		if (!CNDnoteq(51,255)) break p000e0785;
-		if (!CNDcarried(getFlag(51))) break p000e0785;
-		if (!CNDeq(44,255)) break p000e0785;
-		if (!CNDbzero(12,1)) break p000e0785;
- 		ACCwriteln(582);
+		if (!CNDnotcarr(getFlag(51))) break p000e0785;
+ 		ACCwriteln(587);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14225,8 +14226,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p000e0786;
 		if (!CNDcarried(getFlag(51))) break p000e0786;
 		if (!CNDeq(44,255)) break p000e0786;
-		if (!CNDbnotzero(12,1)) break p000e0786;
- 		ACCwriteln(583);
+		if (!CNDbzero(12,1)) break p000e0786;
+ 		ACCwriteln(588);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14243,10 +14244,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0787;
 		if (!CNDcarried(getFlag(51))) break p000e0787;
-		if (!CNDnoteq(44,255)) break p000e0787;
- 		ACCwhatox2(13);
-		if (!CNDeq(13,255)) break p000e0787;
- 		ACCwriteln(584);
+		if (!CNDeq(44,255)) break p000e0787;
+		if (!CNDbnotzero(12,1)) break p000e0787;
+ 		ACCwriteln(589);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14265,9 +14265,8 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(getFlag(51))) break p000e0788;
 		if (!CNDnoteq(44,255)) break p000e0788;
  		ACCwhatox2(13);
-		if (!CNDnoteq(13,255)) break p000e0788;
-		if (!CNDozero(getFlag(13),3)) break p000e0788;
- 		ACCwriteln(585);
+		if (!CNDeq(13,255)) break p000e0788;
+ 		ACCwriteln(590);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14287,9 +14286,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(44,255)) break p000e0789;
  		ACCwhatox2(13);
 		if (!CNDnoteq(13,255)) break p000e0789;
-		if (!CNDonotzero(getFlag(13),3)) break p000e0789;
-		if (!CNDabsent(getFlag(13))) break p000e0789;
- 		ACCwriteln(586);
+		if (!CNDozero(getFlag(13),3)) break p000e0789;
+ 		ACCwriteln(591);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14310,25 +14308,30 @@ pro000_restart: while(process_restart)
  		ACCwhatox2(13);
 		if (!CNDnoteq(13,255)) break p000e0790;
 		if (!CNDonotzero(getFlag(13),3)) break p000e0790;
-		if (!CNDpresent(getFlag(13))) break p000e0790;
- 		ACCwriteln(587);
+		if (!CNDabsent(getFlag(13))) break p000e0790;
+ 		ACCwriteln(592);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// SOPLA _
+	// ENSEÑA _
 	p000e0791:
 	{
  		if (skipdoall('p000e0791')) break p000e0791;
  		if (in_response)
 		{
-			if (!CNDverb(95)) break p000e0791;
+			if (!CNDverb(36)) break p000e0791;
  		}
-		if (!CNDeq(34,255)) break p000e0791;
-		if (!CNDbnotzero(12,1)) break p000e0791;
- 		ACCwriteln(588);
+		if (!CNDnoteq(51,255)) break p000e0791;
+		if (!CNDcarried(getFlag(51))) break p000e0791;
+		if (!CNDnoteq(44,255)) break p000e0791;
+ 		ACCwhatox2(13);
+		if (!CNDnoteq(13,255)) break p000e0791;
+		if (!CNDonotzero(getFlag(13),3)) break p000e0791;
+		if (!CNDpresent(getFlag(13))) break p000e0791;
+ 		ACCwriteln(593);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14344,8 +14347,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(95)) break p000e0792;
  		}
 		if (!CNDeq(34,255)) break p000e0792;
-		if (!CNDbzero(12,1)) break p000e0792;
- 		ACCwriteln(589);
+		if (!CNDbnotzero(12,1)) break p000e0792;
+ 		ACCwriteln(594);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14360,11 +14363,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(95)) break p000e0793;
  		}
-		if (!CNDnoteq(34,255)) break p000e0793;
-		if (!CNDnoteq(51,255)) break p000e0793;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0793;
-		if (!CNDpresent(getFlag(51))) break p000e0793;
- 		ACCwriteln(590);
+		if (!CNDeq(34,255)) break p000e0793;
+		if (!CNDbzero(12,1)) break p000e0793;
+ 		ACCwriteln(595);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14382,8 +14383,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0794;
 		if (!CNDnoteq(51,255)) break p000e0794;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0794;
-		if (!CNDabsent(getFlag(51))) break p000e0794;
- 		ACCwriteln(591);
+		if (!CNDpresent(getFlag(51))) break p000e0794;
+ 		ACCwriteln(596);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14399,8 +14400,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(95)) break p000e0795;
  		}
 		if (!CNDnoteq(34,255)) break p000e0795;
-		if (!CNDeq(51,255)) break p000e0795;
- 		ACCwriteln(592);
+		if (!CNDnoteq(51,255)) break p000e0795;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0795;
+		if (!CNDabsent(getFlag(51))) break p000e0795;
+ 		ACCwriteln(597);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14415,9 +14418,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(95)) break p000e0796;
  		}
-		if (!CNDnoteq(51,255)) break p000e0796;
-		if (!CNDpresent(getFlag(51))) break p000e0796;
- 		ACCwriteln(593);
+		if (!CNDnoteq(34,255)) break p000e0796;
+		if (!CNDeq(51,255)) break p000e0796;
+ 		ACCwriteln(598);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14433,27 +14436,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(95)) break p000e0797;
  		}
 		if (!CNDnoteq(51,255)) break p000e0797;
-		if (!CNDabsent(getFlag(51))) break p000e0797;
- 		ACCwriteln(594);
+		if (!CNDpresent(getFlag(51))) break p000e0797;
+ 		ACCwriteln(599);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CHILLA _
+	// SOPLA _
 	p000e0798:
 	{
  		if (skipdoall('p000e0798')) break p000e0798;
  		if (in_response)
 		{
-			if (!CNDverb(77)) break p000e0798;
+			if (!CNDverb(95)) break p000e0798;
  		}
-		if (!CNDnoteq(34,255)) break p000e0798;
 		if (!CNDnoteq(51,255)) break p000e0798;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0798;
-		if (!CNDpresent(getFlag(51))) break p000e0798;
- 		ACCwriteln(595);
+		if (!CNDabsent(getFlag(51))) break p000e0798;
+ 		ACCwriteln(600);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14471,8 +14472,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0799;
 		if (!CNDnoteq(51,255)) break p000e0799;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0799;
-		if (!CNDabsent(getFlag(51))) break p000e0799;
- 		ACCwriteln(596);
+		if (!CNDpresent(getFlag(51))) break p000e0799;
+ 		ACCwriteln(601);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14487,26 +14488,26 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(77)) break p000e0800;
  		}
- 		ACCwriteln(597);
+		if (!CNDnoteq(34,255)) break p000e0800;
+		if (!CNDnoteq(51,255)) break p000e0800;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0800;
+		if (!CNDabsent(getFlag(51))) break p000e0800;
+ 		ACCwriteln(602);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESPERTAR _
+	// CHILLA _
 	p000e0801:
 	{
  		if (skipdoall('p000e0801')) break p000e0801;
  		if (in_response)
 		{
-			if (!CNDverb(87)) break p000e0801;
+			if (!CNDverb(77)) break p000e0801;
  		}
-		if (!CNDnoteq(34,255)) break p000e0801;
-		if (!CNDnoteq(51,255)) break p000e0801;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0801;
-		if (!CNDpresent(getFlag(51))) break p000e0801;
- 		ACCwriteln(598);
+ 		ACCwriteln(603);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14524,8 +14525,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0802;
 		if (!CNDnoteq(51,255)) break p000e0802;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0802;
-		if (!CNDabsent(getFlag(51))) break p000e0802;
- 		ACCwriteln(599);
+		if (!CNDpresent(getFlag(51))) break p000e0802;
+ 		ACCwriteln(604);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14540,24 +14541,26 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(87)) break p000e0803;
  		}
- 		ACCwriteln(600);
+		if (!CNDnoteq(34,255)) break p000e0803;
+		if (!CNDnoteq(51,255)) break p000e0803;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0803;
+		if (!CNDabsent(getFlag(51))) break p000e0803;
+ 		ACCwriteln(605);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// LEVANTA _
+	// DESPERTAR _
 	p000e0804:
 	{
  		if (skipdoall('p000e0804')) break p000e0804;
  		if (in_response)
 		{
-			if (!CNDverb(114)) break p000e0804;
+			if (!CNDverb(87)) break p000e0804;
  		}
-		if (!CNDeq(34,255)) break p000e0804;
-		if (!CNDbnotzero(12,1)) break p000e0804;
- 		ACCwriteln(601);
+ 		ACCwriteln(606);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14573,8 +14576,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(114)) break p000e0805;
  		}
 		if (!CNDeq(34,255)) break p000e0805;
-		if (!CNDbzero(12,1)) break p000e0805;
- 		ACCwriteln(602);
+		if (!CNDbnotzero(12,1)) break p000e0805;
+ 		ACCwriteln(607);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14589,11 +14592,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(114)) break p000e0806;
  		}
-		if (!CNDnoteq(34,255)) break p000e0806;
-		if (!CNDnoteq(51,255)) break p000e0806;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0806;
-		if (!CNDpresent(getFlag(51))) break p000e0806;
- 		ACCwriteln(603);
+		if (!CNDeq(34,255)) break p000e0806;
+		if (!CNDbzero(12,1)) break p000e0806;
+ 		ACCwriteln(608);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14611,8 +14612,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0807;
 		if (!CNDnoteq(51,255)) break p000e0807;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0807;
-		if (!CNDabsent(getFlag(51))) break p000e0807;
- 		ACCwriteln(604);
+		if (!CNDpresent(getFlag(51))) break p000e0807;
+ 		ACCwriteln(609);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14628,8 +14629,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(114)) break p000e0808;
  		}
 		if (!CNDnoteq(34,255)) break p000e0808;
-		if (!CNDeq(51,255)) break p000e0808;
- 		ACCwriteln(605);
+		if (!CNDnoteq(51,255)) break p000e0808;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0808;
+		if (!CNDabsent(getFlag(51))) break p000e0808;
+ 		ACCwriteln(610);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14644,10 +14647,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(114)) break p000e0809;
  		}
-		if (!CNDnoteq(51,255)) break p000e0809;
-		if (!CNDpresent(getFlag(51))) break p000e0809;
-		if (!CNDgt(55,52)) break p000e0809;
- 		ACCwriteln(606);
+		if (!CNDnoteq(34,255)) break p000e0809;
+		if (!CNDeq(51,255)) break p000e0809;
+ 		ACCwriteln(611);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14664,7 +14666,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0810;
 		if (!CNDpresent(getFlag(51))) break p000e0810;
- 		ACCwriteln(607);
+		if (!CNDgt(55,52)) break p000e0810;
+ 		ACCwriteln(612);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14680,25 +14683,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(114)) break p000e0811;
  		}
 		if (!CNDnoteq(51,255)) break p000e0811;
-		if (!CNDabsent(getFlag(51))) break p000e0811;
- 		ACCwriteln(608);
+		if (!CNDpresent(getFlag(51))) break p000e0811;
+ 		ACCwriteln(613);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ARRASTRA _
+	// LEVANTA _
 	p000e0812:
 	{
  		if (skipdoall('p000e0812')) break p000e0812;
  		if (in_response)
 		{
-			if (!CNDverb(83)) break p000e0812;
+			if (!CNDverb(114)) break p000e0812;
  		}
-		if (!CNDeq(34,255)) break p000e0812;
-		if (!CNDbnotzero(12,1)) break p000e0812;
- 		ACCwriteln(609);
+		if (!CNDnoteq(51,255)) break p000e0812;
+		if (!CNDabsent(getFlag(51))) break p000e0812;
+ 		ACCwriteln(614);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14714,8 +14717,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(83)) break p000e0813;
  		}
 		if (!CNDeq(34,255)) break p000e0813;
-		if (!CNDbzero(12,1)) break p000e0813;
- 		ACCwriteln(610);
+		if (!CNDbnotzero(12,1)) break p000e0813;
+ 		ACCwriteln(615);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14730,11 +14733,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(83)) break p000e0814;
  		}
-		if (!CNDnoteq(34,255)) break p000e0814;
-		if (!CNDnoteq(51,255)) break p000e0814;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0814;
-		if (!CNDpresent(getFlag(51))) break p000e0814;
- 		ACCwriteln(611);
+		if (!CNDeq(34,255)) break p000e0814;
+		if (!CNDbzero(12,1)) break p000e0814;
+ 		ACCwriteln(616);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14752,8 +14753,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0815;
 		if (!CNDnoteq(51,255)) break p000e0815;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0815;
-		if (!CNDabsent(getFlag(51))) break p000e0815;
- 		ACCwriteln(612);
+		if (!CNDpresent(getFlag(51))) break p000e0815;
+ 		ACCwriteln(617);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14769,8 +14770,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(83)) break p000e0816;
  		}
 		if (!CNDnoteq(34,255)) break p000e0816;
-		if (!CNDeq(51,255)) break p000e0816;
- 		ACCwriteln(613);
+		if (!CNDnoteq(51,255)) break p000e0816;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0816;
+		if (!CNDabsent(getFlag(51))) break p000e0816;
+ 		ACCwriteln(618);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14785,9 +14788,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(83)) break p000e0817;
  		}
-		if (!CNDnoteq(51,255)) break p000e0817;
-		if (!CNDpresent(getFlag(51))) break p000e0817;
- 		ACCwriteln(614);
+		if (!CNDnoteq(34,255)) break p000e0817;
+		if (!CNDeq(51,255)) break p000e0817;
+ 		ACCwriteln(619);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14803,25 +14806,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(83)) break p000e0818;
  		}
 		if (!CNDnoteq(51,255)) break p000e0818;
-		if (!CNDabsent(getFlag(51))) break p000e0818;
- 		ACCwriteln(615);
+		if (!CNDpresent(getFlag(51))) break p000e0818;
+ 		ACCwriteln(620);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// VACIA _
+	// ARRASTRA _
 	p000e0819:
 	{
  		if (skipdoall('p000e0819')) break p000e0819;
  		if (in_response)
 		{
-			if (!CNDverb(86)) break p000e0819;
+			if (!CNDverb(83)) break p000e0819;
  		}
-		if (!CNDeq(34,255)) break p000e0819;
-		if (!CNDbnotzero(12,1)) break p000e0819;
- 		ACCwriteln(616);
+		if (!CNDnoteq(51,255)) break p000e0819;
+		if (!CNDabsent(getFlag(51))) break p000e0819;
+ 		ACCwriteln(621);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14837,8 +14840,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(86)) break p000e0820;
  		}
 		if (!CNDeq(34,255)) break p000e0820;
-		if (!CNDbzero(12,1)) break p000e0820;
- 		ACCwriteln(617);
+		if (!CNDbnotzero(12,1)) break p000e0820;
+ 		ACCwriteln(622);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14853,11 +14856,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(86)) break p000e0821;
  		}
-		if (!CNDnoteq(34,255)) break p000e0821;
-		if (!CNDnoteq(51,255)) break p000e0821;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0821;
-		if (!CNDpresent(getFlag(51))) break p000e0821;
- 		ACCwriteln(618);
+		if (!CNDeq(34,255)) break p000e0821;
+		if (!CNDbzero(12,1)) break p000e0821;
+ 		ACCwriteln(623);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14875,8 +14876,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0822;
 		if (!CNDnoteq(51,255)) break p000e0822;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0822;
-		if (!CNDabsent(getFlag(51))) break p000e0822;
- 		ACCwriteln(619);
+		if (!CNDpresent(getFlag(51))) break p000e0822;
+ 		ACCwriteln(624);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14892,8 +14893,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(86)) break p000e0823;
  		}
 		if (!CNDnoteq(34,255)) break p000e0823;
-		if (!CNDeq(51,255)) break p000e0823;
- 		ACCwriteln(620);
+		if (!CNDnoteq(51,255)) break p000e0823;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0823;
+		if (!CNDabsent(getFlag(51))) break p000e0823;
+ 		ACCwriteln(625);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14908,9 +14911,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(86)) break p000e0824;
  		}
-		if (!CNDnoteq(51,255)) break p000e0824;
-		if (!CNDpresent(getFlag(51))) break p000e0824;
- 		ACCwriteln(621);
+		if (!CNDnoteq(34,255)) break p000e0824;
+		if (!CNDeq(51,255)) break p000e0824;
+ 		ACCwriteln(626);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14926,25 +14929,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(86)) break p000e0825;
  		}
 		if (!CNDnoteq(51,255)) break p000e0825;
-		if (!CNDabsent(getFlag(51))) break p000e0825;
- 		ACCwriteln(622);
+		if (!CNDpresent(getFlag(51))) break p000e0825;
+ 		ACCwriteln(627);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// LLAMA _
+	// VACIA _
 	p000e0826:
 	{
  		if (skipdoall('p000e0826')) break p000e0826;
  		if (in_response)
 		{
-			if (!CNDverb(76)) break p000e0826;
+			if (!CNDverb(86)) break p000e0826;
  		}
-		if (!CNDeq(34,255)) break p000e0826;
-		if (!CNDbnotzero(12,1)) break p000e0826;
- 		ACCwriteln(623);
+		if (!CNDnoteq(51,255)) break p000e0826;
+		if (!CNDabsent(getFlag(51))) break p000e0826;
+ 		ACCwriteln(628);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14960,8 +14963,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(76)) break p000e0827;
  		}
 		if (!CNDeq(34,255)) break p000e0827;
-		if (!CNDbzero(12,1)) break p000e0827;
- 		ACCwriteln(624);
+		if (!CNDbnotzero(12,1)) break p000e0827;
+ 		ACCwriteln(629);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14976,11 +14979,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(76)) break p000e0828;
  		}
-		if (!CNDnoteq(34,255)) break p000e0828;
-		if (!CNDnoteq(51,255)) break p000e0828;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0828;
-		if (!CNDpresent(getFlag(51))) break p000e0828;
- 		ACCwriteln(625);
+		if (!CNDeq(34,255)) break p000e0828;
+		if (!CNDbzero(12,1)) break p000e0828;
+ 		ACCwriteln(630);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14998,8 +14999,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0829;
 		if (!CNDnoteq(51,255)) break p000e0829;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0829;
-		if (!CNDabsent(getFlag(51))) break p000e0829;
- 		ACCwriteln(626);
+		if (!CNDpresent(getFlag(51))) break p000e0829;
+ 		ACCwriteln(631);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15015,8 +15016,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(76)) break p000e0830;
  		}
 		if (!CNDnoteq(34,255)) break p000e0830;
-		if (!CNDeq(51,255)) break p000e0830;
- 		ACCwriteln(627);
+		if (!CNDnoteq(51,255)) break p000e0830;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0830;
+		if (!CNDabsent(getFlag(51))) break p000e0830;
+ 		ACCwriteln(632);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15031,9 +15034,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(76)) break p000e0831;
  		}
-		if (!CNDnoteq(51,255)) break p000e0831;
-		if (!CNDpresent(getFlag(51))) break p000e0831;
- 		ACCwriteln(628);
+		if (!CNDnoteq(34,255)) break p000e0831;
+		if (!CNDeq(51,255)) break p000e0831;
+ 		ACCwriteln(633);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15049,25 +15052,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(76)) break p000e0832;
  		}
 		if (!CNDnoteq(51,255)) break p000e0832;
-		if (!CNDabsent(getFlag(51))) break p000e0832;
- 		ACCwriteln(629);
+		if (!CNDpresent(getFlag(51))) break p000e0832;
+ 		ACCwriteln(634);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DECIR _
+	// LLAMA _
 	p000e0833:
 	{
  		if (skipdoall('p000e0833')) break p000e0833;
  		if (in_response)
 		{
-			if (!CNDverb(31)) break p000e0833;
+			if (!CNDverb(76)) break p000e0833;
  		}
-		if (!CNDeq(34,255)) break p000e0833;
-		if (!CNDbnotzero(12,1)) break p000e0833;
- 		ACCwriteln(630);
+		if (!CNDnoteq(51,255)) break p000e0833;
+		if (!CNDabsent(getFlag(51))) break p000e0833;
+ 		ACCwriteln(635);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15083,8 +15086,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(31)) break p000e0834;
  		}
 		if (!CNDeq(34,255)) break p000e0834;
-		if (!CNDbzero(12,1)) break p000e0834;
- 		ACCwriteln(631);
+		if (!CNDbnotzero(12,1)) break p000e0834;
+ 		ACCwriteln(636);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15099,11 +15102,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(31)) break p000e0835;
  		}
-		if (!CNDnoteq(34,255)) break p000e0835;
-		if (!CNDnoteq(51,255)) break p000e0835;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0835;
-		if (!CNDpresent(getFlag(51))) break p000e0835;
- 		ACCwriteln(632);
+		if (!CNDeq(34,255)) break p000e0835;
+		if (!CNDbzero(12,1)) break p000e0835;
+ 		ACCwriteln(637);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15121,8 +15122,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0836;
 		if (!CNDnoteq(51,255)) break p000e0836;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0836;
-		if (!CNDabsent(getFlag(51))) break p000e0836;
- 		ACCwriteln(633);
+		if (!CNDpresent(getFlag(51))) break p000e0836;
+ 		ACCwriteln(638);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15138,8 +15139,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(31)) break p000e0837;
  		}
 		if (!CNDnoteq(34,255)) break p000e0837;
-		if (!CNDeq(51,255)) break p000e0837;
- 		ACCwriteln(634);
+		if (!CNDnoteq(51,255)) break p000e0837;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0837;
+		if (!CNDabsent(getFlag(51))) break p000e0837;
+ 		ACCwriteln(639);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15154,9 +15157,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(31)) break p000e0838;
  		}
-		if (!CNDnoteq(51,255)) break p000e0838;
-		if (!CNDpresent(getFlag(51))) break p000e0838;
- 		ACCwriteln(635);
+		if (!CNDnoteq(34,255)) break p000e0838;
+		if (!CNDeq(51,255)) break p000e0838;
+ 		ACCwriteln(640);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15172,25 +15175,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(31)) break p000e0839;
  		}
 		if (!CNDnoteq(51,255)) break p000e0839;
-		if (!CNDabsent(getFlag(51))) break p000e0839;
- 		ACCwriteln(636);
+		if (!CNDpresent(getFlag(51))) break p000e0839;
+ 		ACCwriteln(641);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CONSULTA _
+	// DECIR _
 	p000e0840:
 	{
  		if (skipdoall('p000e0840')) break p000e0840;
  		if (in_response)
 		{
-			if (!CNDverb(107)) break p000e0840;
+			if (!CNDverb(31)) break p000e0840;
  		}
-		if (!CNDeq(34,255)) break p000e0840;
-		if (!CNDbnotzero(12,1)) break p000e0840;
- 		ACCwriteln(637);
+		if (!CNDnoteq(51,255)) break p000e0840;
+		if (!CNDabsent(getFlag(51))) break p000e0840;
+ 		ACCwriteln(642);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15206,8 +15209,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(107)) break p000e0841;
  		}
 		if (!CNDeq(34,255)) break p000e0841;
-		if (!CNDbzero(12,1)) break p000e0841;
- 		ACCwriteln(638);
+		if (!CNDbnotzero(12,1)) break p000e0841;
+ 		ACCwriteln(643);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15222,9 +15225,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(107)) break p000e0842;
  		}
-		if (!CNDnoteq(34,255)) break p000e0842;
-		if (!CNDeq(51,255)) break p000e0842;
- 		ACCwriteln(639);
+		if (!CNDeq(34,255)) break p000e0842;
+		if (!CNDbzero(12,1)) break p000e0842;
+ 		ACCwriteln(644);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15239,9 +15242,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(107)) break p000e0843;
  		}
-		if (!CNDnoteq(51,255)) break p000e0843;
-		if (!CNDpresent(getFlag(51))) break p000e0843;
- 		ACCwriteln(640);
+		if (!CNDnoteq(34,255)) break p000e0843;
+		if (!CNDeq(51,255)) break p000e0843;
+ 		ACCwriteln(645);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15257,25 +15260,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(107)) break p000e0844;
  		}
 		if (!CNDnoteq(51,255)) break p000e0844;
-		if (!CNDabsent(getFlag(51))) break p000e0844;
- 		ACCwriteln(641);
+		if (!CNDpresent(getFlag(51))) break p000e0844;
+ 		ACCwriteln(646);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// INCREPA _
+	// CONSULTA _
 	p000e0845:
 	{
  		if (skipdoall('p000e0845')) break p000e0845;
  		if (in_response)
 		{
-			if (!CNDverb(89)) break p000e0845;
+			if (!CNDverb(107)) break p000e0845;
  		}
-		if (!CNDeq(34,255)) break p000e0845;
-		if (!CNDbnotzero(12,1)) break p000e0845;
- 		ACCwriteln(642);
+		if (!CNDnoteq(51,255)) break p000e0845;
+		if (!CNDabsent(getFlag(51))) break p000e0845;
+ 		ACCwriteln(647);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15291,8 +15294,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(89)) break p000e0846;
  		}
 		if (!CNDeq(34,255)) break p000e0846;
-		if (!CNDbzero(12,1)) break p000e0846;
- 		ACCwriteln(643);
+		if (!CNDbnotzero(12,1)) break p000e0846;
+ 		ACCwriteln(648);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15307,11 +15310,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(89)) break p000e0847;
  		}
-		if (!CNDnoteq(34,255)) break p000e0847;
-		if (!CNDnoteq(51,255)) break p000e0847;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0847;
-		if (!CNDpresent(getFlag(51))) break p000e0847;
- 		ACCwriteln(644);
+		if (!CNDeq(34,255)) break p000e0847;
+		if (!CNDbzero(12,1)) break p000e0847;
+ 		ACCwriteln(649);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15329,8 +15330,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0848;
 		if (!CNDnoteq(51,255)) break p000e0848;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0848;
-		if (!CNDabsent(getFlag(51))) break p000e0848;
- 		ACCwriteln(645);
+		if (!CNDpresent(getFlag(51))) break p000e0848;
+ 		ACCwriteln(650);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15346,8 +15347,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(89)) break p000e0849;
  		}
 		if (!CNDnoteq(34,255)) break p000e0849;
-		if (!CNDeq(51,255)) break p000e0849;
- 		ACCwriteln(646);
+		if (!CNDnoteq(51,255)) break p000e0849;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0849;
+		if (!CNDabsent(getFlag(51))) break p000e0849;
+ 		ACCwriteln(651);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15362,9 +15365,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(89)) break p000e0850;
  		}
-		if (!CNDnoteq(51,255)) break p000e0850;
-		if (!CNDpresent(getFlag(51))) break p000e0850;
- 		ACCwriteln(647);
+		if (!CNDnoteq(34,255)) break p000e0850;
+		if (!CNDeq(51,255)) break p000e0850;
+ 		ACCwriteln(652);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15380,25 +15383,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(89)) break p000e0851;
  		}
 		if (!CNDnoteq(51,255)) break p000e0851;
-		if (!CNDabsent(getFlag(51))) break p000e0851;
- 		ACCwriteln(648);
+		if (!CNDpresent(getFlag(51))) break p000e0851;
+ 		ACCwriteln(653);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ACERCA _
+	// INCREPA _
 	p000e0852:
 	{
  		if (skipdoall('p000e0852')) break p000e0852;
  		if (in_response)
 		{
-			if (!CNDverb(99)) break p000e0852;
+			if (!CNDverb(89)) break p000e0852;
  		}
-		if (!CNDeq(34,255)) break p000e0852;
-		if (!CNDbnotzero(12,1)) break p000e0852;
- 		ACCwriteln(649);
+		if (!CNDnoteq(51,255)) break p000e0852;
+		if (!CNDabsent(getFlag(51))) break p000e0852;
+ 		ACCwriteln(654);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15414,8 +15417,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(99)) break p000e0853;
  		}
 		if (!CNDeq(34,255)) break p000e0853;
-		if (!CNDbzero(12,1)) break p000e0853;
- 		ACCwriteln(650);
+		if (!CNDbnotzero(12,1)) break p000e0853;
+ 		ACCwriteln(655);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15430,11 +15433,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(99)) break p000e0854;
  		}
-		if (!CNDnoteq(34,255)) break p000e0854;
-		if (!CNDnoteq(51,255)) break p000e0854;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0854;
-		if (!CNDpresent(getFlag(51))) break p000e0854;
- 		ACCwriteln(651);
+		if (!CNDeq(34,255)) break p000e0854;
+		if (!CNDbzero(12,1)) break p000e0854;
+ 		ACCwriteln(656);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15452,8 +15453,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0855;
 		if (!CNDnoteq(51,255)) break p000e0855;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0855;
-		if (!CNDabsent(getFlag(51))) break p000e0855;
- 		ACCwriteln(652);
+		if (!CNDpresent(getFlag(51))) break p000e0855;
+ 		ACCwriteln(657);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15469,8 +15470,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(99)) break p000e0856;
  		}
 		if (!CNDnoteq(34,255)) break p000e0856;
-		if (!CNDeq(51,255)) break p000e0856;
- 		ACCwriteln(653);
+		if (!CNDnoteq(51,255)) break p000e0856;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0856;
+		if (!CNDabsent(getFlag(51))) break p000e0856;
+ 		ACCwriteln(658);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15485,9 +15488,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(99)) break p000e0857;
  		}
-		if (!CNDnoteq(51,255)) break p000e0857;
-		if (!CNDpresent(getFlag(51))) break p000e0857;
- 		ACCwriteln(654);
+		if (!CNDnoteq(34,255)) break p000e0857;
+		if (!CNDeq(51,255)) break p000e0857;
+ 		ACCwriteln(659);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15503,25 +15506,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(99)) break p000e0858;
  		}
 		if (!CNDnoteq(51,255)) break p000e0858;
-		if (!CNDabsent(getFlag(51))) break p000e0858;
- 		ACCwriteln(655);
+		if (!CNDpresent(getFlag(51))) break p000e0858;
+ 		ACCwriteln(660);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// SEPARA _
+	// ACERCA _
 	p000e0859:
 	{
  		if (skipdoall('p000e0859')) break p000e0859;
  		if (in_response)
 		{
-			if (!CNDverb(100)) break p000e0859;
+			if (!CNDverb(99)) break p000e0859;
  		}
-		if (!CNDeq(34,255)) break p000e0859;
-		if (!CNDbnotzero(12,1)) break p000e0859;
- 		ACCwriteln(656);
+		if (!CNDnoteq(51,255)) break p000e0859;
+		if (!CNDabsent(getFlag(51))) break p000e0859;
+ 		ACCwriteln(661);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15537,8 +15540,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(100)) break p000e0860;
  		}
 		if (!CNDeq(34,255)) break p000e0860;
-		if (!CNDbzero(12,1)) break p000e0860;
- 		ACCwriteln(657);
+		if (!CNDbnotzero(12,1)) break p000e0860;
+ 		ACCwriteln(662);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15553,11 +15556,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(100)) break p000e0861;
  		}
-		if (!CNDnoteq(34,255)) break p000e0861;
-		if (!CNDnoteq(51,255)) break p000e0861;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0861;
-		if (!CNDpresent(getFlag(51))) break p000e0861;
- 		ACCwriteln(658);
+		if (!CNDeq(34,255)) break p000e0861;
+		if (!CNDbzero(12,1)) break p000e0861;
+ 		ACCwriteln(663);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15575,8 +15576,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0862;
 		if (!CNDnoteq(51,255)) break p000e0862;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0862;
-		if (!CNDabsent(getFlag(51))) break p000e0862;
- 		ACCwriteln(659);
+		if (!CNDpresent(getFlag(51))) break p000e0862;
+ 		ACCwriteln(664);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15592,8 +15593,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(100)) break p000e0863;
  		}
 		if (!CNDnoteq(34,255)) break p000e0863;
-		if (!CNDeq(51,255)) break p000e0863;
- 		ACCwriteln(660);
+		if (!CNDnoteq(51,255)) break p000e0863;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0863;
+		if (!CNDabsent(getFlag(51))) break p000e0863;
+ 		ACCwriteln(665);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15608,9 +15611,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(100)) break p000e0864;
  		}
-		if (!CNDnoteq(51,255)) break p000e0864;
-		if (!CNDpresent(getFlag(51))) break p000e0864;
- 		ACCwriteln(661);
+		if (!CNDnoteq(34,255)) break p000e0864;
+		if (!CNDeq(51,255)) break p000e0864;
+ 		ACCwriteln(666);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15626,25 +15629,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(100)) break p000e0865;
  		}
 		if (!CNDnoteq(51,255)) break p000e0865;
-		if (!CNDabsent(getFlag(51))) break p000e0865;
- 		ACCwriteln(662);
+		if (!CNDpresent(getFlag(51))) break p000e0865;
+ 		ACCwriteln(667);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DECIR _
+	// SEPARA _
 	p000e0866:
 	{
  		if (skipdoall('p000e0866')) break p000e0866;
  		if (in_response)
 		{
-			if (!CNDverb(31)) break p000e0866;
+			if (!CNDverb(100)) break p000e0866;
  		}
-		if (!CNDeq(34,255)) break p000e0866;
-		if (!CNDbnotzero(12,1)) break p000e0866;
- 		ACCwriteln(663);
+		if (!CNDnoteq(51,255)) break p000e0866;
+		if (!CNDabsent(getFlag(51))) break p000e0866;
+ 		ACCwriteln(668);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15660,8 +15663,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(31)) break p000e0867;
  		}
 		if (!CNDeq(34,255)) break p000e0867;
-		if (!CNDbzero(12,1)) break p000e0867;
- 		ACCwriteln(664);
+		if (!CNDbnotzero(12,1)) break p000e0867;
+ 		ACCwriteln(669);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15676,11 +15679,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(31)) break p000e0868;
  		}
-		if (!CNDnoteq(34,255)) break p000e0868;
-		if (!CNDnoteq(51,255)) break p000e0868;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0868;
-		if (!CNDpresent(getFlag(51))) break p000e0868;
- 		ACCwriteln(665);
+		if (!CNDeq(34,255)) break p000e0868;
+		if (!CNDbzero(12,1)) break p000e0868;
+ 		ACCwriteln(670);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15698,8 +15699,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0869;
 		if (!CNDnoteq(51,255)) break p000e0869;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0869;
-		if (!CNDabsent(getFlag(51))) break p000e0869;
- 		ACCwriteln(666);
+		if (!CNDpresent(getFlag(51))) break p000e0869;
+ 		ACCwriteln(671);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15715,8 +15716,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(31)) break p000e0870;
  		}
 		if (!CNDnoteq(34,255)) break p000e0870;
-		if (!CNDeq(51,255)) break p000e0870;
- 		ACCwriteln(667);
+		if (!CNDnoteq(51,255)) break p000e0870;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0870;
+		if (!CNDabsent(getFlag(51))) break p000e0870;
+ 		ACCwriteln(672);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15731,9 +15734,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(31)) break p000e0871;
  		}
-		if (!CNDnoteq(51,255)) break p000e0871;
-		if (!CNDpresent(getFlag(51))) break p000e0871;
- 		ACCwriteln(668);
+		if (!CNDnoteq(34,255)) break p000e0871;
+		if (!CNDeq(51,255)) break p000e0871;
+ 		ACCwriteln(673);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15749,25 +15752,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(31)) break p000e0872;
  		}
 		if (!CNDnoteq(51,255)) break p000e0872;
-		if (!CNDabsent(getFlag(51))) break p000e0872;
- 		ACCwriteln(669);
+		if (!CNDpresent(getFlag(51))) break p000e0872;
+ 		ACCwriteln(674);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ANDA _
+	// DECIR _
 	p000e0873:
 	{
  		if (skipdoall('p000e0873')) break p000e0873;
  		if (in_response)
 		{
-			if (!CNDverb(90)) break p000e0873;
+			if (!CNDverb(31)) break p000e0873;
  		}
-		if (!CNDeq(34,255)) break p000e0873;
-		if (!CNDbnotzero(12,1)) break p000e0873;
- 		ACCwriteln(670);
+		if (!CNDnoteq(51,255)) break p000e0873;
+		if (!CNDabsent(getFlag(51))) break p000e0873;
+ 		ACCwriteln(675);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15783,8 +15786,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(90)) break p000e0874;
  		}
 		if (!CNDeq(34,255)) break p000e0874;
-		if (!CNDbzero(12,1)) break p000e0874;
- 		ACCwriteln(671);
+		if (!CNDbnotzero(12,1)) break p000e0874;
+ 		ACCwriteln(676);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15799,11 +15802,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(90)) break p000e0875;
  		}
-		if (!CNDnoteq(34,255)) break p000e0875;
-		if (!CNDnoteq(51,255)) break p000e0875;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0875;
-		if (!CNDpresent(getFlag(51))) break p000e0875;
- 		ACCwriteln(672);
+		if (!CNDeq(34,255)) break p000e0875;
+		if (!CNDbzero(12,1)) break p000e0875;
+ 		ACCwriteln(677);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15821,8 +15822,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0876;
 		if (!CNDnoteq(51,255)) break p000e0876;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0876;
-		if (!CNDabsent(getFlag(51))) break p000e0876;
- 		ACCwriteln(673);
+		if (!CNDpresent(getFlag(51))) break p000e0876;
+ 		ACCwriteln(678);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15838,8 +15839,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(90)) break p000e0877;
  		}
 		if (!CNDnoteq(34,255)) break p000e0877;
-		if (!CNDeq(51,255)) break p000e0877;
- 		ACCwriteln(674);
+		if (!CNDnoteq(51,255)) break p000e0877;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0877;
+		if (!CNDabsent(getFlag(51))) break p000e0877;
+ 		ACCwriteln(679);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15854,9 +15857,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(90)) break p000e0878;
  		}
-		if (!CNDnoteq(51,255)) break p000e0878;
-		if (!CNDpresent(getFlag(51))) break p000e0878;
- 		ACCwriteln(675);
+		if (!CNDnoteq(34,255)) break p000e0878;
+		if (!CNDeq(51,255)) break p000e0878;
+ 		ACCwriteln(680);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15872,22 +15875,26 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(90)) break p000e0879;
  		}
 		if (!CNDnoteq(51,255)) break p000e0879;
-		if (!CNDabsent(getFlag(51))) break p000e0879;
- 		ACCwriteln(676);
+		if (!CNDpresent(getFlag(51))) break p000e0879;
+ 		ACCwriteln(681);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// _ _
+	// ANDA _
 	p000e0880:
 	{
  		if (skipdoall('p000e0880')) break p000e0880;
-		if (!CNDlt(33,14)) break p000e0880;
-		if (!CNDmove(38)) break p000e0880;
- 		ACCprocess(26);
- 		ACCdesc();
+ 		if (in_response)
+		{
+			if (!CNDverb(90)) break p000e0880;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0880;
+		if (!CNDabsent(getFlag(51))) break p000e0880;
+ 		ACCwriteln(682);
+ 		ACCdone();
 		break pro000_restart;
 		{}
 
@@ -15898,10 +15905,23 @@ pro000_restart: while(process_restart)
 	{
  		if (skipdoall('p000e0881')) break p000e0881;
 		if (!CNDlt(33,14)) break p000e0881;
+		if (!CNDmove(38)) break p000e0881;
+ 		ACCprocess(26);
+ 		ACCdesc();
+		break pro000_restart;
+		{}
+
+	}
+
+	// _ _
+	p000e0882:
+	{
+ 		if (skipdoall('p000e0882')) break p000e0882;
+		if (!CNDlt(33,14)) break p000e0882;
  		ACCplus(33,1002);
- 		ACCwrite(677);
+ 		ACCwrite(683);
  		ACCmes(getFlag(33));
- 		ACCwrite(678);
+ 		ACCwrite(684);
  		ACCminus(33,1002);
  		ACCexits(getFlag(38),1000);
  		ACCnewline();
@@ -15912,10 +15932,10 @@ pro000_restart: while(process_restart)
 	}
 
 	// _ _
-	p000e0882:
+	p000e0883:
 	{
- 		if (skipdoall('p000e0882')) break p000e0882;
- 		ACChook(679);
+ 		if (skipdoall('p000e0883')) break p000e0883;
+ 		ACChook(685);
 		if (done_flag) break pro000_restart;
 		{}
 
@@ -15935,7 +15955,7 @@ pro001_restart: while(process_restart)
 	p001e0000:
 	{
  		if (skipdoall('p001e0000')) break p001e0000;
- 		ACChook(680);
+ 		ACChook(686);
 		if (done_flag) break pro001_restart;
 		{}
 
@@ -15946,7 +15966,7 @@ pro001_restart: while(process_restart)
 	{
  		if (skipdoall('p001e0001')) break p001e0001;
 		if (!CNDat(0)) break p001e0001;
- 		ACCtitle(681);
+ 		ACCtitle(687);
  		ACCbset(12,5);
  		ACCset(203);
  		ACClet(53,64);
@@ -15965,7 +15985,7 @@ pro001_restart: while(process_restart)
  		if (skipdoall('p001e0002')) break p001e0002;
 		if (!CNDatgt(12)) break p001e0002;
 		if (!CNDatlt(16)) break p001e0002;
- 		ACCwriteln(682);
+ 		ACCwriteln(688);
 		{}
 
 	}
@@ -15977,7 +15997,7 @@ pro001_restart: while(process_restart)
 		if (!CNDat(3)) break p001e0003;
 		if (!CNDzero(253)) break p001e0003;
  		ACCnewline();
- 		ACCwriteln(683);
+ 		ACCwriteln(689);
  		ACCset(253);
  		ACCdone();
 		break pro001_restart;
@@ -16045,7 +16065,7 @@ pro001_restart: while(process_restart)
  		if (skipdoall('p001e0007')) break p001e0007;
 		if (!CNDat(11)) break p001e0007;
 		if (!CNDisnotlight()) break p001e0007;
- 		ACCwriteln(684);
+ 		ACCwriteln(690);
 		{}
 
 	}
@@ -16056,7 +16076,7 @@ pro001_restart: while(process_restart)
  		if (skipdoall('p001e0008')) break p001e0008;
 		if (!CNDat(17)) break p001e0008;
 		if (!CNDlt(103,255)) break p001e0008;
- 		ACCwriteln(685);
+ 		ACCwriteln(691);
 		{}
 
 	}
@@ -16089,7 +16109,7 @@ pro001_restart: while(process_restart)
  		if (skipdoall('p001e0011')) break p001e0011;
 		if (!CNDat(20)) break p001e0011;
 		if (!CNDeq(101,2)) break p001e0011;
- 		ACCwriteln(686);
+ 		ACCwriteln(692);
 		{}
 
 	}
@@ -16100,7 +16120,7 @@ pro001_restart: while(process_restart)
  		if (skipdoall('p001e0012')) break p001e0012;
 		if (!CNDat(20)) break p001e0012;
 		if (!CNDeq(101,3)) break p001e0012;
- 		ACCwriteln(687);
+ 		ACCwriteln(693);
 		{}
 
 	}
@@ -16154,10 +16174,10 @@ pro001_restart: while(process_restart)
 	{
  		if (skipdoall('p001e0017')) break p001e0017;
 		if (!CNDat(26)) break p001e0017;
- 		ACCwrite(688);
+ 		ACCwrite(694);
 		if (!CNDeq(101,4)) break p001e0017;
 		if (!CNDlt(107,3)) break p001e0017;
- 		ACCwriteln(689);
+ 		ACCwriteln(695);
 		{}
 
 	}
@@ -16173,7 +16193,7 @@ pro001_restart: while(process_restart)
 		if (!CNDat(26)) break p001e0018;
 		if (!CNDeq(101,4)) break p001e0018;
 		if (!CNDeq(107,3)) break p001e0018;
- 		ACCwriteln(690);
+ 		ACCwriteln(696);
 		{}
 
 	}
@@ -16224,7 +16244,7 @@ pro001_restart: while(process_restart)
 		if (!CNDat(26)) break p001e0022;
 		if (!CNDeq(107,3)) break p001e0022;
  		ACCpicture(27);
- 		ACCwriteln(691);
+ 		ACCwriteln(697);
 		{}
 
 	}
@@ -16238,9 +16258,8 @@ pro001_restart: while(process_restart)
 		if (!CNDeq(107,3)) break p001e0023;
  		ACCset(101);
  		ACCnewline();
- 		ACCwriteln(692);
- 		ACCwrite(693);
- 		ACCwriteln(694);
+ 		ACCwriteln(698);
+ 		ACCwriteln(699);
  		ACCplace(2,18);
 		{}
 
@@ -16267,7 +16286,7 @@ pro001_restart: while(process_restart)
 		if (!CNDnotat(26)) break p001e0025;
 		if (!CNDnotat(29)) break p001e0025;
  		ACCnewline();
- 		ACCwriteln(695);
+ 		ACCwriteln(700);
 		{}
 
 	}
@@ -16281,7 +16300,7 @@ pro001_restart: while(process_restart)
 		if (!CNDnotat(26)) break p001e0026;
 		if (!CNDnotat(29)) break p001e0026;
  		ACCnewline();
- 		ACCwriteln(696);
+ 		ACCwriteln(701);
 		{}
 
 	}
@@ -16291,7 +16310,7 @@ pro001_restart: while(process_restart)
 	{
  		if (skipdoall('p001e0027')) break p001e0027;
 		if (!CNDat(12)) break p001e0027;
- 		ACCwrite(697);
+ 		ACCwrite(702);
 		{}
 
 	}
@@ -16302,7 +16321,7 @@ pro001_restart: while(process_restart)
  		if (skipdoall('p001e0028')) break p001e0028;
 		if (!CNDat(12)) break p001e0028;
 		if (!CNDlt(102,255)) break p001e0028;
- 		ACCwriteln(698);
+ 		ACCwriteln(703);
 		{}
 
 	}
@@ -16313,7 +16332,7 @@ pro001_restart: while(process_restart)
  		if (skipdoall('p001e0029')) break p001e0029;
 		if (!CNDat(12)) break p001e0029;
 		if (!CNDeq(102,255)) break p001e0029;
- 		ACCwriteln(699);
+ 		ACCwriteln(704);
 		{}
 
 	}
@@ -16324,11 +16343,11 @@ pro001_restart: while(process_restart)
  		if (skipdoall('p001e0030')) break p001e0030;
 		if (!CNDat(29)) break p001e0030;
  		ACCcommand(0);
- 		ACCwrite(700);
+ 		ACCwrite(705);
  		ACCprint(31);
- 		ACCwriteln(701);
+ 		ACCwriteln(706);
  		ACCnewline();
- 		ACCwriteln(702);
+ 		ACCwriteln(707);
  		ACCtime(0,0);
 		{}
 
@@ -16343,7 +16362,7 @@ pro001_restart: while(process_restart)
  		ACCability(7,255);
  		ACCcls();
  		ACCpicture(30);
- 		ACCwriteln(703);
+ 		ACCwriteln(708);
  		ACCanykey();
  		function anykey00027() 
 		{
@@ -16367,9 +16386,9 @@ pro001_restart: while(process_restart)
 		if (!CNDlt(150,4)) break p001e0032;
 		if (!CNDgt(150,1)) break p001e0032;
  		ACCnewline();
- 		ACCwrite(704);
+ 		ACCwrite(709);
  		ACCprint(150);
- 		ACCwriteln(705);
+ 		ACCwriteln(710);
 		{}
 
 	}
@@ -16381,7 +16400,7 @@ pro001_restart: while(process_restart)
 		if (!CNDat(119)) break p001e0033;
 		if (!CNDeq(150,1)) break p001e0033;
  		ACCnewline();
- 		ACCwriteln(706);
+ 		ACCwriteln(711);
 		{}
 
 	}
@@ -16393,7 +16412,7 @@ pro001_restart: while(process_restart)
 		if (!CNDat(31)) break p001e0034;
 		if (!CNDzero(152)) break p001e0034;
 		if (!CNDnotzero(151)) break p001e0034;
- 		ACCwriteln(707);
+ 		ACCwriteln(712);
  		ACCset(152);
  		ACCanykey();
  		function anykey00028() 
@@ -16434,7 +16453,7 @@ pro001_restart: while(process_restart)
 		if (!CNDat(31)) break p001e0037;
 		if (!CNDzero(152)) break p001e0037;
  		ACCpicture(31);
- 		ACCwriteln(708);
+ 		ACCwriteln(713);
 		{}
 
 	}
@@ -16446,7 +16465,7 @@ pro001_restart: while(process_restart)
 		if (!CNDat(31)) break p001e0038;
 		if (!CNDnotzero(152)) break p001e0038;
  		ACCpicture(30);
- 		ACCwriteln(709);
+ 		ACCwriteln(714);
 		{}
 
 	}
@@ -16477,7 +16496,7 @@ pro002_restart: while(process_restart)
 	p002e0000:
 	{
  		if (skipdoall('p002e0000')) break p002e0000;
- 		ACChook(710);
+ 		ACChook(715);
 		if (done_flag) break pro002_restart;
 		{}
 
@@ -16539,7 +16558,7 @@ pro002_restart: while(process_restart)
  		ACCoclear(0,20);
  		ACCset(0);
  		ACCcls();
- 		ACCwriteln(711);
+ 		ACCwriteln(716);
  		ACCdesc();
 		break pro002_restart;
 		{}
@@ -16571,7 +16590,7 @@ pro002_restart: while(process_restart)
 		}
  		function anykey00030() 
 		{
- 		ACCwriteln(712);
+ 		ACCwriteln(717);
  		ACCnewtext();
  		ACCanykey();
  		waitKey(anykey00031);
@@ -16606,7 +16625,7 @@ pro002_restart: while(process_restart)
 	{
  		if (skipdoall('p002e0009')) break p002e0009;
 		if (!CNDeq(116,9)) break p002e0009;
- 		ACCwriteln(713);
+ 		ACCwriteln(718);
 		{}
 
 	}
@@ -16616,7 +16635,7 @@ pro002_restart: while(process_restart)
 	{
  		if (skipdoall('p002e0010')) break p002e0010;
 		if (!CNDeq(116,16)) break p002e0010;
- 		ACCwriteln(714);
+ 		ACCwriteln(719);
  		ACCclear(0);
  		ACCgoto(120);
  		ACCanykey();
@@ -16639,7 +16658,7 @@ pro002_restart: while(process_restart)
 		if (!CNDpresent(0)) break p002e0011;
 		if (!CNDonotzero(0,20)) break p002e0011;
 		if (!CNDeq(8,60)) break p002e0011;
- 		ACCwriteln(715);
+ 		ACCwriteln(720);
  		ACCminus(8,1);
 		{}
 
@@ -16653,7 +16672,7 @@ pro002_restart: while(process_restart)
 		if (!CNDonotzero(0,20)) break p002e0012;
 		if (!CNDnotzero(8)) break p002e0012;
 		if (!CNDlt(8,50)) break p002e0012;
- 		ACCwriteln(716);
+ 		ACCwriteln(721);
 		{}
 
 	}
@@ -16664,7 +16683,7 @@ pro002_restart: while(process_restart)
  		if (skipdoall('p002e0013')) break p002e0013;
 		if (!CNDlt(9,250)) break p002e0013;
 		if (!CNDnotzero(9)) break p002e0013;
- 		ACCwriteln(717);
+ 		ACCwriteln(722);
  		ACCanykey();
  		function anykey00033() 
 		{
@@ -16734,7 +16753,7 @@ pro002_restart: while(process_restart)
  		ACCplus(126,1);
  		ACCcls();
  		ACCnewtext();
- 		ACCwriteln(718);
+ 		ACCwriteln(723);
  		ACCprocess(15);
 		if (!CNDeq(126,1)) break p002e0017;
  		ACCpause(150);
@@ -16745,14 +16764,14 @@ pro002_restart: while(process_restart)
 		}
  		function anykey00035() 
 		{
- 		ACCwriteln(720);
+ 		ACCwriteln(725);
  		ACCanykey();
  		waitKey(anykey00036);
 		}
  		function anykey00034() 
 		{
  		ACCplace(12,getFlag(38));
- 		ACCwriteln(719);
+ 		ACCwriteln(724);
  		ACCpause(100);
  		waitKey(anykey00035);
 		}
@@ -16821,13 +16840,13 @@ pro002_restart: while(process_restart)
  		function anykey00038() 
 		{
  		ACCcls();
- 		ACCwriteln(724);
+ 		ACCwriteln(729);
  		ACCnewline();
- 		ACCwriteln(725);
+ 		ACCwriteln(730);
  		ACCnewline();
- 		ACCwriteln(726);
+ 		ACCwriteln(731);
  		ACCnewline();
- 		ACCwriteln(727);
+ 		ACCwriteln(732);
  		ACCnewline();
  		ACCanykey();
  		waitKey(anykey00039);
@@ -16835,9 +16854,9 @@ pro002_restart: while(process_restart)
  		function anykey00037() 
 		{
  		ACCcls();
- 		ACCwrite(721);
- 		ACCwrite(722);
- 		ACCwriteln(723);
+ 		ACCwrite(726);
+ 		ACCwrite(727);
+ 		ACCwriteln(728);
  		ACCnewline();
  		ACCanykey();
  		waitKey(anykey00038);
@@ -16857,7 +16876,7 @@ pro002_restart: while(process_restart)
  		ACCminus(151,1);
 		if (!CNDzero(151)) break p002e0022;
  		ACCcls();
- 		ACCwriteln(728);
+ 		ACCwriteln(733);
  		ACCnewline();
  		ACCanykey();
  		function anykey00040() 
@@ -16880,7 +16899,7 @@ pro002_restart: while(process_restart)
 	{
  		if (skipdoall('p002e0023')) break p002e0023;
 		if (!CNDeq(5,1)) break p002e0023;
- 		ACCwriteln(729);
+ 		ACCwriteln(734);
  		ACClet(5,4);
  		ACCdone();
 		break pro002_restart;
@@ -16975,7 +16994,7 @@ pro003_restart: while(process_restart)
  		}
 		if (!CNDat(26)) break p003e0004;
 		if (!CNDeq(107,3)) break p003e0004;
- 		ACCwriteln(730);
+ 		ACCwriteln(735);
  		ACCdone();
 		break pro003_restart;
 		{}
@@ -16991,7 +17010,7 @@ pro003_restart: while(process_restart)
 			if (!CNDverb(34)) break p003e0005;
  		}
 		if (!CNDat(23)) break p003e0005;
- 		ACCwriteln(731);
+ 		ACCwriteln(736);
  		ACCdone();
 		break pro003_restart;
 		{}
@@ -17031,7 +17050,7 @@ pro003_restart: while(process_restart)
  		if (skipdoall('p003e0008')) break p003e0008;
  		ACCmessage(11);
  		ACCnewline();
- 		ACCwriteln(732);
+ 		ACCwriteln(737);
  		ACChelp();
  		ACCdone();
 		break pro003_restart;
@@ -17059,7 +17078,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(114)) break p004e0000;
  		}
 		if (!CNDat(21)) break p004e0000;
- 		ACCwriteln(733);
+ 		ACCwriteln(738);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17076,7 +17095,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(114)) break p004e0001;
  		}
 		if (!CNDat(22)) break p004e0001;
- 		ACCwriteln(734);
+ 		ACCwriteln(739);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17108,7 +17127,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(66)) break p004e0003;
  		}
 		if (!CNDat(21)) break p004e0003;
- 		ACCwriteln(735);
+ 		ACCwriteln(740);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17125,7 +17144,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(66)) break p004e0004;
  		}
 		if (!CNDat(22)) break p004e0004;
- 		ACCwriteln(736);
+ 		ACCwriteln(741);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17142,7 +17161,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(66)) break p004e0005;
  		}
 		if (!CNDat(9)) break p004e0005;
- 		ACCwriteln(737);
+ 		ACCwriteln(742);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17229,7 +17248,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(101)) break p004e0010;
  		}
 		if (!CNDpresent(6)) break p004e0010;
- 		ACCwriteln(738);
+ 		ACCwriteln(743);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17247,7 +17266,7 @@ pro004_restart: while(process_restart)
  		}
 		if (!CNDpresent(3)) break p004e0011;
 		if (!CNDozero(3,22)) break p004e0011;
- 		ACCwriteln(739);
+ 		ACCwriteln(744);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17265,7 +17284,7 @@ pro004_restart: while(process_restart)
  		}
 		if (!CNDpresent(3)) break p004e0012;
 		if (!CNDonotzero(3,22)) break p004e0012;
- 		ACCwriteln(740);
+ 		ACCwriteln(745);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17316,7 +17335,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(56)) break p004e0015;
  		}
 		if (!CNDat(3)) break p004e0015;
- 		ACCwriteln(741);
+ 		ACCwriteln(746);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17333,7 +17352,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(56)) break p004e0016;
  		}
 		if (!CNDat(8)) break p004e0016;
- 		ACCwriteln(742);
+ 		ACCwriteln(747);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17350,7 +17369,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(122)) break p004e0017;
  		}
 		if (!CNDat(8)) break p004e0017;
- 		ACCwriteln(743);
+ 		ACCwriteln(748);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17367,7 +17386,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(123)) break p004e0018;
  		}
 		if (!CNDat(8)) break p004e0018;
- 		ACCwriteln(744);
+ 		ACCwriteln(749);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17384,7 +17403,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(78)) break p004e0019;
  		}
 		if (!CNDat(8)) break p004e0019;
- 		ACCwriteln(745);
+ 		ACCwriteln(750);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17401,7 +17420,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(56)) break p004e0020;
  		}
 		if (!CNDat(26)) break p004e0020;
- 		ACCwriteln(746);
+ 		ACCwriteln(751);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17418,7 +17437,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(111)) break p004e0021;
  		}
 		if (!CNDat(10)) break p004e0021;
- 		ACCwriteln(747);
+ 		ACCwriteln(752);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17437,11 +17456,11 @@ pro004_restart: while(process_restart)
 		if (!CNDat(11)) break p004e0022;
 		if (!CNDpresent(0)) break p004e0022;
 		if (!CNDonotzero(0,20)) break p004e0022;
- 		ACCwrite(748);
+ 		ACCwrite(753);
  		ACCpause(15);
  		function anykey00041() 
 		{
- 		ACCwriteln(749);
+ 		ACCwriteln(754);
  		ACCdone();
 		return;
 		}
@@ -17464,14 +17483,14 @@ pro004_restart: while(process_restart)
 		if (!CNDat(11)) break p004e0023;
 		if (!CNDislight()) break p004e0023;
 		if (!CNDzero(106)) break p004e0023;
- 		ACCwrite(750);
+ 		ACCwrite(755);
  		ACCpause(100);
  		function anykey00042() 
 		{
- 		ACCwriteln(751);
+ 		ACCwriteln(756);
  		ACCcreate(1);
  		ACCset(106);
- 		ACCextern(752);
+ 		ACCextern(757);
  		ACCdone();
 		return;
 		}
@@ -17492,7 +17511,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(57)) break p004e0024;
  		}
 		if (!CNDat(3)) break p004e0024;
- 		ACCwriteln(753);
+ 		ACCwriteln(758);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17509,7 +17528,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(58)) break p004e0025;
  		}
 		if (!CNDat(3)) break p004e0025;
- 		ACCwriteln(754);
+ 		ACCwriteln(759);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17526,7 +17545,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(57)) break p004e0026;
  		}
 		if (!CNDat(24)) break p004e0026;
- 		ACCwriteln(755);
+ 		ACCwriteln(760);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17543,7 +17562,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(58)) break p004e0027;
  		}
 		if (!CNDat(24)) break p004e0027;
- 		ACCwriteln(756);
+ 		ACCwriteln(761);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17560,7 +17579,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(80)) break p004e0028;
  		}
 		if (!CNDat(24)) break p004e0028;
- 		ACCwriteln(757);
+ 		ACCwriteln(762);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17577,7 +17596,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(86)) break p004e0029;
  		}
 		if (!CNDat(24)) break p004e0029;
- 		ACCwriteln(758);
+ 		ACCwriteln(763);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17594,7 +17613,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(80)) break p004e0030;
  		}
 		if (!CNDat(25)) break p004e0030;
- 		ACCwriteln(759);
+ 		ACCwriteln(764);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17611,7 +17630,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(86)) break p004e0031;
  		}
 		if (!CNDat(25)) break p004e0031;
- 		ACCwriteln(760);
+ 		ACCwriteln(765);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17628,7 +17647,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(57)) break p004e0032;
  		}
 		if (!CNDat(25)) break p004e0032;
- 		ACCwriteln(761);
+ 		ACCwriteln(766);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17645,7 +17664,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(56)) break p004e0033;
  		}
 		if (!CNDat(4)) break p004e0033;
- 		ACCwriteln(762);
+ 		ACCwriteln(767);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17732,7 +17751,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(58)) break p004e0038;
  		}
 		if (!CNDat(16)) break p004e0038;
- 		ACCwriteln(763);
+ 		ACCwriteln(768);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17785,7 +17804,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(63)) break p004e0041;
  		}
 		if (!CNDat(6)) break p004e0041;
- 		ACCwriteln(764);
+ 		ACCwriteln(769);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17802,7 +17821,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(63)) break p004e0042;
  		}
 		if (!CNDat(12)) break p004e0042;
- 		ACCwriteln(765);
+ 		ACCwriteln(770);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17819,7 +17838,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(67)) break p004e0043;
  		}
 		if (!CNDat(9)) break p004e0043;
- 		ACCwriteln(766);
+ 		ACCwriteln(771);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17837,7 +17856,7 @@ pro004_restart: while(process_restart)
  		}
 		if (!CNDat(12)) break p004e0044;
 		if (!CNDlt(102,255)) break p004e0044;
- 		ACCwriteln(767);
+ 		ACCwriteln(772);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17854,7 +17873,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(65)) break p004e0045;
  		}
 		if (!CNDat(6)) break p004e0045;
- 		ACCwriteln(768);
+ 		ACCwriteln(773);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17871,7 +17890,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(119)) break p004e0046;
  		}
 		if (!CNDat(7)) break p004e0046;
- 		ACCwriteln(769);
+ 		ACCwriteln(774);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17888,7 +17907,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(121)) break p004e0047;
  		}
 		if (!CNDat(5)) break p004e0047;
- 		ACCwriteln(770);
+ 		ACCwriteln(775);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17955,7 +17974,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(71)) break p004e0051;
  		}
 		if (!CNDat(10)) break p004e0051;
- 		ACCwriteln(771);
+ 		ACCwriteln(776);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17972,7 +17991,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(70)) break p004e0052;
  		}
 		if (!CNDat(10)) break p004e0052;
- 		ACCwriteln(772);
+ 		ACCwriteln(777);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -17989,7 +18008,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(72)) break p004e0053;
  		}
 		if (!CNDat(10)) break p004e0053;
- 		ACCwriteln(773);
+ 		ACCwriteln(778);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18027,11 +18046,11 @@ pro004_restart: while(process_restart)
 		if (!CNDat(11)) break p004e0055;
 		if (!CNDislight()) break p004e0055;
 		if (!CNDzero(106)) break p004e0055;
- 		ACCwrite(774);
+ 		ACCwrite(779);
  		ACCpause(10);
  		function anykey00043() 
 		{
- 		ACCwriteln(775);
+ 		ACCwriteln(780);
  		ACCcreate(1);
  		ACCdone();
 		return;
@@ -18054,11 +18073,11 @@ pro004_restart: while(process_restart)
  		}
 		if (!CNDat(11)) break p004e0056;
 		if (!CNDislight()) break p004e0056;
- 		ACCwrite(776);
+ 		ACCwrite(781);
  		ACCpause(10);
  		function anykey00044() 
 		{
- 		ACCwriteln(777);
+ 		ACCwriteln(782);
  		ACCdone();
 		return;
 		}
@@ -18079,7 +18098,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(78)) break p004e0057;
  		}
 		if (!CNDat(23)) break p004e0057;
- 		ACCwriteln(778);
+ 		ACCwriteln(783);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18130,7 +18149,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(87)) break p004e0060;
  		}
 		if (!CNDat(25)) break p004e0060;
- 		ACCwriteln(779);
+ 		ACCwriteln(784);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18148,7 +18167,7 @@ pro004_restart: while(process_restart)
  		}
 		if (!CNDat(26)) break p004e0061;
 		if (!CNDlt(107,2)) break p004e0061;
- 		ACCwriteln(780);
+ 		ACCwriteln(785);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18165,7 +18184,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(88)) break p004e0062;
  		}
 		if (!CNDat(26)) break p004e0062;
- 		ACCwriteln(781);
+ 		ACCwriteln(786);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18182,7 +18201,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(80)) break p004e0063;
  		}
 		if (!CNDat(26)) break p004e0063;
- 		ACCwriteln(782);
+ 		ACCwriteln(787);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18199,7 +18218,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(110)) break p004e0064;
  		}
 		if (!CNDat(26)) break p004e0064;
- 		ACCwriteln(783);
+ 		ACCwriteln(788);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18217,7 +18236,7 @@ pro004_restart: while(process_restart)
  		}
 		if (!CNDat(26)) break p004e0065;
 		if (!CNDeq(107,0)) break p004e0065;
- 		ACCwriteln(784);
+ 		ACCwriteln(789);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18235,7 +18254,7 @@ pro004_restart: while(process_restart)
  		}
 		if (!CNDat(26)) break p004e0066;
 		if (!CNDeq(107,1)) break p004e0066;
- 		ACCwriteln(785);
+ 		ACCwriteln(790);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18253,7 +18272,7 @@ pro004_restart: while(process_restart)
  		}
 		if (!CNDat(26)) break p004e0067;
 		if (!CNDeq(107,2)) break p004e0067;
- 		ACCwriteln(786);
+ 		ACCwriteln(791);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18270,7 +18289,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(120)) break p004e0068;
  		}
 		if (!CNDat(28)) break p004e0068;
- 		ACCwriteln(787);
+ 		ACCwriteln(792);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18287,7 +18306,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(92)) break p004e0069;
  		}
 		if (!CNDat(28)) break p004e0069;
- 		ACCwriteln(788);
+ 		ACCwriteln(793);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18304,7 +18323,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(67)) break p004e0070;
  		}
 		if (!CNDat(28)) break p004e0070;
- 		ACCwriteln(789);
+ 		ACCwriteln(794);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18321,7 +18340,7 @@ pro004_restart: while(process_restart)
 			if (!CNDnoun1(118)) break p004e0071;
  		}
 		if (!CNDat(28)) break p004e0071;
- 		ACCwriteln(790);
+ 		ACCwriteln(795);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18412,7 +18431,7 @@ pro004_restart: while(process_restart)
 			if (!CNDverb(30)) break p004e0076;
  		}
 		if (!CNDisnotlight()) break p004e0076;
- 		ACCwriteln(791);
+ 		ACCwriteln(796);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18430,7 +18449,7 @@ pro004_restart: while(process_restart)
 		if (!CNDprep(4)) break p004e0077;
 		if (!CNDeq(34,255)) break p004e0077;
 		if (!CNDbnotzero(12,1)) break p004e0077;
- 		ACCwriteln(792);
+ 		ACCwriteln(797);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18448,7 +18467,7 @@ pro004_restart: while(process_restart)
 		if (!CNDprep(4)) break p004e0078;
 		if (!CNDeq(34,255)) break p004e0078;
 		if (!CNDbzero(12,1)) break p004e0078;
- 		ACCwriteln(793);
+ 		ACCwriteln(798);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18465,7 +18484,7 @@ pro004_restart: while(process_restart)
  		}
 		if (!CNDeq(34,255)) break p004e0079;
 		if (!CNDbnotzero(12,1)) break p004e0079;
- 		ACCwriteln(794);
+ 		ACCwriteln(799);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18482,7 +18501,7 @@ pro004_restart: while(process_restart)
  		}
 		if (!CNDeq(34,255)) break p004e0080;
 		if (!CNDbzero(12,1)) break p004e0080;
- 		ACCwriteln(795);
+ 		ACCwriteln(800);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18501,7 +18520,7 @@ pro004_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p004e0081;
 		if (!CNDonotzero(getFlag(51),3)) break p004e0081;
 		if (!CNDpresent(getFlag(51))) break p004e0081;
- 		ACCwriteln(796);
+ 		ACCwriteln(801);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18519,7 +18538,7 @@ pro004_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p004e0082;
 		if (!CNDonotzero(getFlag(51),3)) break p004e0082;
 		if (!CNDabsent(getFlag(51))) break p004e0082;
- 		ACCwriteln(797);
+ 		ACCwriteln(802);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18538,7 +18557,7 @@ pro004_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p004e0083;
 		if (!CNDonotzero(getFlag(51),3)) break p004e0083;
 		if (!CNDpresent(getFlag(51))) break p004e0083;
- 		ACCwriteln(798);
+ 		ACCwriteln(803);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18557,7 +18576,7 @@ pro004_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p004e0084;
 		if (!CNDonotzero(getFlag(51),3)) break p004e0084;
 		if (!CNDabsent(getFlag(51))) break p004e0084;
- 		ACCwriteln(799);
+ 		ACCwriteln(804);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18575,7 +18594,7 @@ pro004_restart: while(process_restart)
 		if (!CNDprep(4)) break p004e0085;
 		if (!CNDnoteq(34,255)) break p004e0085;
 		if (!CNDeq(51,255)) break p004e0085;
- 		ACCwriteln(800);
+ 		ACCwriteln(805);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18592,7 +18611,7 @@ pro004_restart: while(process_restart)
  		}
 		if (!CNDnoteq(34,255)) break p004e0086;
 		if (!CNDeq(51,255)) break p004e0086;
- 		ACCwriteln(801);
+ 		ACCwriteln(806);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18613,9 +18632,9 @@ pro004_restart: while(process_restart)
 		if (!CNDonotzero(getFlag(51),16)) break p004e0087;
  		ACCobjat(getFlag(51),13);
 		if (!CNDnotzero(13)) break p004e0087;
- 		ACCwrite(802);
+ 		ACCwrite(807);
  		ACClistcontents(getFlag(51));
- 		ACCwriteln(803);
+ 		ACCwriteln(808);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18636,9 +18655,9 @@ pro004_restart: while(process_restart)
 		if (!CNDozero(getFlag(51),13)) break p004e0088;
  		ACCobjat(getFlag(51),13);
 		if (!CNDnotzero(13)) break p004e0088;
- 		ACCwrite(804);
+ 		ACCwrite(809);
  		ACClistcontents(getFlag(51));
- 		ACCwriteln(805);
+ 		ACCwriteln(810);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18660,9 +18679,9 @@ pro004_restart: while(process_restart)
 		if (!CNDonotzero(getFlag(51),14)) break p004e0089;
  		ACCobjat(getFlag(51),13);
 		if (!CNDnotzero(13)) break p004e0089;
- 		ACCwrite(806);
+ 		ACCwrite(811);
  		ACClistcontents(getFlag(51));
- 		ACCwriteln(807);
+ 		ACCwriteln(812);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18682,7 +18701,7 @@ pro004_restart: while(process_restart)
 		if (!CNDonotzero(getFlag(51),2)) break p004e0090;
 		if (!CNDonotzero(getFlag(51),13)) break p004e0090;
 		if (!CNDozero(getFlag(51),14)) break p004e0090;
- 		ACCwriteln(808);
+ 		ACCwriteln(813);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18702,7 +18721,7 @@ pro004_restart: while(process_restart)
 		if (!CNDonotzero(getFlag(51),2)) break p004e0091;
 		if (!CNDonotzero(getFlag(51),9)) break p004e0091;
 		if (!CNDozero(getFlag(51),10)) break p004e0091;
- 		ACCwriteln(809);
+ 		ACCwriteln(814);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18722,9 +18741,9 @@ pro004_restart: while(process_restart)
 		if (!CNDonotzero(getFlag(51),18)) break p004e0092;
  		ACCobjat(getFlag(51),13);
 		if (!CNDnotzero(13)) break p004e0092;
- 		ACCwrite(810);
+ 		ACCwrite(815);
  		ACClistcontents(getFlag(51));
- 		ACCwriteln(811);
+ 		ACCwriteln(816);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18741,7 +18760,7 @@ pro004_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p004e0093;
 		if (!CNDpresent(getFlag(51))) break p004e0093;
- 		ACCwriteln(812);
+ 		ACCwriteln(817);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18758,7 +18777,7 @@ pro004_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p004e0094;
 		if (!CNDabsent(getFlag(51))) break p004e0094;
- 		ACCwriteln(813);
+ 		ACCwriteln(818);
  		ACCdone();
 		break pro004_restart;
 		{}
@@ -18800,7 +18819,7 @@ pro006_restart: while(process_restart)
 	p006e0000:
 	{
  		if (skipdoall('p006e0000')) break p006e0000;
- 		ACCwrite(814);
+ 		ACCwrite(819);
  		ACCpause(100);
  		function anykey00047() 
 		{
@@ -18814,7 +18833,7 @@ pro006_restart: while(process_restart)
 		}
  		function anykey00045() 
 		{
- 		ACCwriteln(815);
+ 		ACCwriteln(820);
  		ACCpause(100);
  		waitKey(anykey00046);
 		}
@@ -18892,7 +18911,7 @@ pro008_restart: while(process_restart)
 		}
  		function anykey00051() 
 		{
- 		ACCwriteln(816);
+ 		ACCwriteln(821);
  		ACCpause(150);
  		waitKey(anykey00052);
 		}
@@ -18919,7 +18938,7 @@ pro009_restart: while(process_restart)
  		if (skipdoall('p009e0000')) break p009e0000;
 		if (!CNDparse()) break p009e0000;
 		if (!CNDnoteq(101,3)) break p009e0000;
- 		ACCwriteln(817);
+ 		ACCwriteln(822);
  		ACCdone();
 		break pro009_restart;
 		{}
@@ -18933,7 +18952,7 @@ pro009_restart: while(process_restart)
 		if (!CNDeq(101,3)) break p009e0001;
 		if (!CNDzero(104)) break p009e0001;
  		ACCnewline();
- 		ACCwriteln(818);
+ 		ACCwriteln(823);
  		ACCset(104);
  		ACCdone();
 		break pro009_restart;
@@ -18949,7 +18968,7 @@ pro009_restart: while(process_restart)
 		{
 			if (!CNDverb(34)) break p009e0002;
  		}
- 		ACCwriteln(819);
+ 		ACCwriteln(824);
  		ACCdone();
 		break pro009_restart;
 		{}
@@ -18979,7 +18998,7 @@ pro009_restart: while(process_restart)
  		}
  		ACClet(101,3);
 		if (!CNDnotat(20)) break p009e0004;
- 		ACCwriteln(820);
+ 		ACCwriteln(825);
  		ACCdone();
 		break pro009_restart;
 		{}
@@ -18994,7 +19013,7 @@ pro009_restart: while(process_restart)
 		{
 			if (!CNDverb(119)) break p009e0005;
  		}
- 		ACCwriteln(821);
+ 		ACCwriteln(826);
  		ACCdone();
 		break pro009_restart;
 		{}
@@ -19010,7 +19029,7 @@ pro009_restart: while(process_restart)
 			if (!CNDnoun1(15)) break p009e0006;
  		}
  		ACCnewline();
- 		ACCwriteln(822);
+ 		ACCwriteln(827);
  		ACCdone();
 		break pro009_restart;
 		{}
@@ -19025,7 +19044,7 @@ pro009_restart: while(process_restart)
 		{
 			if (!CNDnoun1(56)) break p009e0007;
  		}
- 		ACCwriteln(823);
+ 		ACCwriteln(828);
  		ACCdone();
 		break pro009_restart;
 		{}
@@ -19054,7 +19073,7 @@ pro009_restart: while(process_restart)
 			if (!CNDverb(120)) break p009e0009;
  		}
  		ACClet(101,4);
- 		ACCwriteln(824);
+ 		ACCwriteln(829);
  		ACCdone();
 		break pro009_restart;
 		{}
@@ -19069,7 +19088,7 @@ pro009_restart: while(process_restart)
 		{
 			if (!CNDnoun1(109)) break p009e0010;
  		}
- 		ACCwriteln(825);
+ 		ACCwriteln(830);
  		ACCdone();
 		break pro009_restart;
 		{}
@@ -19084,7 +19103,7 @@ pro009_restart: while(process_restart)
 		{
 			if (!CNDnoun1(115)) break p009e0011;
  		}
- 		ACCwriteln(826);
+ 		ACCwriteln(831);
  		ACCdone();
 		break pro009_restart;
 		{}
@@ -19095,7 +19114,7 @@ pro009_restart: while(process_restart)
 	p009e0012:
 	{
  		if (skipdoall('p009e0012')) break p009e0012;
- 		ACCwriteln(827);
+ 		ACCwriteln(832);
  		ACCdone();
 		break pro009_restart;
 		{}
@@ -19117,7 +19136,7 @@ pro010_restart: while(process_restart)
 	{
  		if (skipdoall('p010e0000')) break p010e0000;
 		if (!CNDparse()) break p010e0000;
- 		ACCwriteln(828);
+ 		ACCwriteln(833);
  		ACCdone();
 		break pro010_restart;
 		{}
@@ -19132,7 +19151,7 @@ pro010_restart: while(process_restart)
 		{
 			if (!CNDverb(34)) break p010e0001;
  		}
- 		ACCwriteln(829);
+ 		ACCwriteln(834);
  		ACCdone();
 		break pro010_restart;
 		{}
@@ -19177,7 +19196,7 @@ pro010_restart: while(process_restart)
 		{
 			if (!CNDnoun1(15)) break p010e0004;
  		}
- 		ACCwriteln(830);
+ 		ACCwriteln(835);
  		ACCdone();
 		break pro010_restart;
 		{}
@@ -19192,7 +19211,7 @@ pro010_restart: while(process_restart)
 		{
 			if (!CNDverb(120)) break p010e0005;
  		}
- 		ACCwriteln(831);
+ 		ACCwriteln(836);
  		ACCdone();
 		break pro010_restart;
 		{}
@@ -19207,7 +19226,7 @@ pro010_restart: while(process_restart)
 		{
 			if (!CNDnoun1(106)) break p010e0006;
  		}
- 		ACCwriteln(832);
+ 		ACCwriteln(837);
  		ACCdone();
 		break pro010_restart;
 		{}
@@ -19222,7 +19241,7 @@ pro010_restart: while(process_restart)
 		{
 			if (!CNDverb(62)) break p010e0007;
  		}
- 		ACCwriteln(833);
+ 		ACCwriteln(838);
  		ACCdone();
 		break pro010_restart;
 		{}
@@ -19237,7 +19256,7 @@ pro010_restart: while(process_restart)
 		{
 			if (!CNDnoun1(109)) break p010e0008;
  		}
- 		ACCwriteln(834);
+ 		ACCwriteln(839);
  		ACCdone();
 		break pro010_restart;
 		{}
@@ -19252,7 +19271,7 @@ pro010_restart: while(process_restart)
 		{
 			if (!CNDnoun1(115)) break p010e0009;
  		}
- 		ACCwriteln(835);
+ 		ACCwriteln(840);
  		ACCdone();
 		break pro010_restart;
 		{}
@@ -19263,7 +19282,7 @@ pro010_restart: while(process_restart)
 	p010e0010:
 	{
  		if (skipdoall('p010e0010')) break p010e0010;
- 		ACCwriteln(836);
+ 		ACCwriteln(841);
  		ACCdone();
 		break pro010_restart;
 		{}
@@ -19285,7 +19304,7 @@ pro011_restart: while(process_restart)
 	{
  		if (skipdoall('p011e0000')) break p011e0000;
  		ACCset(102);
- 		ACCwriteln(837);
+ 		ACCwriteln(842);
  		ACCpause(100);
  		function anykey00056() 
 		{
@@ -19295,13 +19314,13 @@ pro011_restart: while(process_restart)
 		}
  		function anykey00055() 
 		{
- 		ACCwriteln(839);
+ 		ACCwriteln(844);
  		ACCpause(150);
  		waitKey(anykey00056);
 		}
  		function anykey00054() 
 		{
- 		ACCwrite(838);
+ 		ACCwrite(843);
  		ACCpause(100);
  		waitKey(anykey00055);
 		}
@@ -19428,7 +19447,7 @@ pro015_restart: while(process_restart)
  		if (skipdoall('p015e0000')) break p015e0000;
  		ACCset(7);
  		ACCpicture(260);
- 		ACCwriteln(840);
+ 		ACCwriteln(845);
 		{}
 
 	}
@@ -19499,7 +19518,7 @@ pro016_restart: while(process_restart)
  		ACCputo(47);
  		ACCcls();
  		ACCpicture(264);
- 		ACCwrite(841);
+ 		ACCwrite(846);
  		ACCpause(100);
  		function anykey00058() 
 		{
@@ -19508,7 +19527,7 @@ pro016_restart: while(process_restart)
 		}
  		function anykey00057() 
 		{
- 		ACCwriteln(842);
+ 		ACCwriteln(847);
  		ACCnewline();
  		ACCanykey();
  		waitKey(anykey00058);
@@ -19591,9 +19610,9 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0002')) break p018e0002;
 		if (!CNDat(82)) break p018e0002;
 		if (!CNDislight()) break p018e0002;
- 		ACCwrite(843);
+ 		ACCwrite(848);
 		if (!CNDlt(119,255)) break p018e0002;
- 		ACCwriteln(844);
+ 		ACCwriteln(849);
 		{}
 
 	}
@@ -19605,7 +19624,7 @@ pro018_restart: while(process_restart)
 		if (!CNDat(82)) break p018e0003;
 		if (!CNDislight()) break p018e0003;
 		if (!CNDeq(119,255)) break p018e0003;
- 		ACCwriteln(845);
+ 		ACCwriteln(850);
 		{}
 
 	}
@@ -19618,7 +19637,7 @@ pro018_restart: while(process_restart)
 		if (!CNDatgt(101)) break p018e0004;
 		if (!CNDatlt(104)) break p018e0004;
 		if (!CNDzero(121)) break p018e0004;
- 		ACCwriteln(846);
+ 		ACCwriteln(851);
 		{}
 
 	}
@@ -19630,7 +19649,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0005;
 		if (!CNDat(66)) break p018e0005;
 		if (!CNDlt(116,9)) break p018e0005;
- 		ACCwriteln(847);
+ 		ACCwriteln(852);
 		{}
 
 	}
@@ -19641,7 +19660,7 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0006')) break p018e0006;
 		if (!CNDat(35)) break p018e0006;
 		if (!CNDzero(130)) break p018e0006;
- 		ACCwriteln(848);
+ 		ACCwriteln(853);
 		{}
 
 	}
@@ -19653,7 +19672,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0007;
 		if (!CNDat(106)) break p018e0007;
 		if (!CNDzero(124)) break p018e0007;
- 		ACCwriteln(849);
+ 		ACCwriteln(854);
 		{}
 
 	}
@@ -19665,7 +19684,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0008;
 		if (!CNDat(106)) break p018e0008;
 		if (!CNDeq(124,1)) break p018e0008;
- 		ACCwriteln(850);
+ 		ACCwriteln(855);
 		{}
 
 	}
@@ -19677,7 +19696,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0009;
 		if (!CNDat(106)) break p018e0009;
 		if (!CNDgt(124,1)) break p018e0009;
- 		ACCwriteln(851);
+ 		ACCwriteln(856);
 		{}
 
 	}
@@ -19690,12 +19709,12 @@ pro018_restart: while(process_restart)
 		if (!CNDatgt(47)) break p018e0010;
 		if (!CNDatlt(53)) break p018e0010;
  		ACCpicture(48);
- 		ACCwrite(852);
+ 		ACCwrite(857);
 		if (!CNDat(48)) break p018e0010;
- 		ACCwrite(853);
- 		ACCwrite(854);
- 		ACCwrite(855);
- 		ACCwrite(856);
+ 		ACCwrite(858);
+ 		ACCwrite(859);
+ 		ACCwrite(860);
+ 		ACCwrite(861);
 		{}
 
 	}
@@ -19716,10 +19735,10 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0012')) break p018e0012;
 		if (!CNDislight()) break p018e0012;
 		if (!CNDat(49)) break p018e0012;
- 		ACCwrite(857);
- 		ACCwrite(858);
- 		ACCwrite(859);
- 		ACCwrite(860);
+ 		ACCwrite(862);
+ 		ACCwrite(863);
+ 		ACCwrite(864);
+ 		ACCwrite(865);
 		{}
 
 	}
@@ -19730,10 +19749,10 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0013')) break p018e0013;
 		if (!CNDislight()) break p018e0013;
 		if (!CNDat(50)) break p018e0013;
- 		ACCwrite(861);
- 		ACCwrite(862);
- 		ACCwrite(863);
- 		ACCwrite(864);
+ 		ACCwrite(866);
+ 		ACCwrite(867);
+ 		ACCwrite(868);
+ 		ACCwrite(869);
 		{}
 
 	}
@@ -19744,10 +19763,10 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0014')) break p018e0014;
 		if (!CNDislight()) break p018e0014;
 		if (!CNDat(51)) break p018e0014;
- 		ACCwrite(865);
- 		ACCwrite(866);
- 		ACCwrite(867);
- 		ACCwrite(868);
+ 		ACCwrite(870);
+ 		ACCwrite(871);
+ 		ACCwrite(872);
+ 		ACCwrite(873);
 		{}
 
 	}
@@ -19758,10 +19777,10 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0015')) break p018e0015;
 		if (!CNDislight()) break p018e0015;
 		if (!CNDat(52)) break p018e0015;
- 		ACCwrite(869);
- 		ACCwrite(870);
- 		ACCwrite(871);
- 		ACCwrite(872);
+ 		ACCwrite(874);
+ 		ACCwrite(875);
+ 		ACCwrite(876);
+ 		ACCwrite(877);
 		{}
 
 	}
@@ -19773,7 +19792,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0016;
 		if (!CNDatgt(47)) break p018e0016;
 		if (!CNDatlt(53)) break p018e0016;
- 		ACCwriteln(873);
+ 		ACCwriteln(878);
 		{}
 
 	}
@@ -19795,7 +19814,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0018;
 		if (!CNDat(92)) break p018e0018;
 		if (!CNDzero(120)) break p018e0018;
- 		ACCwriteln(874);
+ 		ACCwriteln(879);
 		{}
 
 	}
@@ -19807,7 +19826,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0019;
 		if (!CNDat(92)) break p018e0019;
 		if (!CNDeq(120,1)) break p018e0019;
- 		ACCwriteln(875);
+ 		ACCwriteln(880);
 		{}
 
 	}
@@ -19819,7 +19838,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0020;
 		if (!CNDat(92)) break p018e0020;
 		if (!CNDgt(120,1)) break p018e0020;
- 		ACCwriteln(876);
+ 		ACCwriteln(881);
 		{}
 
 	}
@@ -19831,7 +19850,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0021;
 		if (!CNDat(117)) break p018e0021;
 		if (!CNDzero(122)) break p018e0021;
- 		ACCwriteln(877);
+ 		ACCwriteln(882);
 		{}
 
 	}
@@ -19843,7 +19862,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0022;
 		if (!CNDat(117)) break p018e0022;
 		if (!CNDeq(122,2)) break p018e0022;
- 		ACCwriteln(878);
+ 		ACCwriteln(883);
 		{}
 
 	}
@@ -19876,7 +19895,7 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0025')) break p018e0025;
 		if (!CNDislight()) break p018e0025;
 		if (!CNDeq(122,255)) break p018e0025;
- 		ACCwriteln(879);
+ 		ACCwriteln(884);
 		{}
 
 	}
@@ -19889,12 +19908,12 @@ pro018_restart: while(process_restart)
 		if (!CNDatgt(41)) break p018e0026;
 		if (!CNDatlt(48)) break p018e0026;
  		ACCpicture(42);
- 		ACCwrite(880);
+ 		ACCwrite(885);
 		if (!CNDat(42)) break p018e0026;
- 		ACCwrite(881);
- 		ACCwrite(882);
- 		ACCwrite(883);
- 		ACCwrite(884);
+ 		ACCwrite(886);
+ 		ACCwrite(887);
+ 		ACCwrite(888);
+ 		ACCwrite(889);
 		{}
 
 	}
@@ -19905,10 +19924,10 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0027')) break p018e0027;
 		if (!CNDislight()) break p018e0027;
 		if (!CNDat(43)) break p018e0027;
- 		ACCwrite(885);
- 		ACCwrite(886);
- 		ACCwrite(887);
- 		ACCwrite(888);
+ 		ACCwrite(890);
+ 		ACCwrite(891);
+ 		ACCwrite(892);
+ 		ACCwrite(893);
 		{}
 
 	}
@@ -19919,12 +19938,12 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0028')) break p018e0028;
 		if (!CNDislight()) break p018e0028;
 		if (!CNDat(44)) break p018e0028;
- 		ACCwrite(889);
- 		ACCwrite(890);
- 		ACCwrite(891);
- 		ACCwrite(892);
- 		ACCwriteln(893);
  		ACCwrite(894);
+ 		ACCwrite(895);
+ 		ACCwrite(896);
+ 		ACCwrite(897);
+ 		ACCwriteln(898);
+ 		ACCwrite(899);
 		{}
 
 	}
@@ -19935,10 +19954,10 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0029')) break p018e0029;
 		if (!CNDislight()) break p018e0029;
 		if (!CNDat(45)) break p018e0029;
- 		ACCwrite(895);
- 		ACCwrite(896);
- 		ACCwrite(897);
- 		ACCwrite(898);
+ 		ACCwrite(900);
+ 		ACCwrite(901);
+ 		ACCwrite(902);
+ 		ACCwrite(903);
 		{}
 
 	}
@@ -19949,10 +19968,10 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0030')) break p018e0030;
 		if (!CNDislight()) break p018e0030;
 		if (!CNDat(46)) break p018e0030;
- 		ACCwrite(899);
- 		ACCwrite(900);
- 		ACCwrite(901);
- 		ACCwrite(902);
+ 		ACCwrite(904);
+ 		ACCwrite(905);
+ 		ACCwrite(906);
+ 		ACCwrite(907);
 		{}
 
 	}
@@ -19963,12 +19982,12 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0031')) break p018e0031;
 		if (!CNDislight()) break p018e0031;
 		if (!CNDat(47)) break p018e0031;
- 		ACCwrite(903);
- 		ACCwrite(904);
- 		ACCwrite(905);
- 		ACCwrite(906);
- 		ACCwriteln(907);
  		ACCwrite(908);
+ 		ACCwrite(909);
+ 		ACCwrite(910);
+ 		ACCwrite(911);
+ 		ACCwriteln(912);
+ 		ACCwrite(913);
 		{}
 
 	}
@@ -19980,7 +19999,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0032;
 		if (!CNDatgt(41)) break p018e0032;
 		if (!CNDatlt(48)) break p018e0032;
- 		ACCwriteln(909);
+ 		ACCwriteln(914);
 		{}
 
 	}
@@ -19992,10 +20011,10 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0033;
 		if (!CNDatgt(37)) break p018e0033;
 		if (!CNDatlt(40)) break p018e0033;
- 		ACCwrite(910);
+ 		ACCwrite(915);
 		if (!CNDzero(160)) break p018e0033;
- 		ACCwrite(911);
- 		ACCwriteln(912);
+ 		ACCwrite(916);
+ 		ACCwriteln(917);
  		ACCdone();
 		break pro018_restart;
 		{}
@@ -20009,8 +20028,8 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0034;
 		if (!CNDatgt(37)) break p018e0034;
 		if (!CNDatlt(40)) break p018e0034;
- 		ACCwrite(913);
- 		ACCwriteln(914);
+ 		ACCwrite(918);
+ 		ACCwriteln(919);
 		{}
 
 	}
@@ -20022,11 +20041,11 @@ pro018_restart: while(process_restart)
 		if (!CNDat(120)) break p018e0035;
  		ACCpicture(29);
  		ACCcommand(0);
- 		ACCwrite(915);
+ 		ACCwrite(920);
  		ACCprint(31);
- 		ACCwriteln(916);
+ 		ACCwriteln(921);
  		ACCnewline();
- 		ACCwriteln(917);
+ 		ACCwriteln(922);
  		ACCtime(0,0);
 		{}
 
@@ -20059,7 +20078,7 @@ pro019_restart: while(process_restart)
 	{
  		if (skipdoall('p019e0001')) break p019e0001;
 		if (!CNDeq(119,1)) break p019e0001;
- 		ACCwriteln(918);
+ 		ACCwriteln(923);
 		{}
 
 	}
@@ -20069,7 +20088,7 @@ pro019_restart: while(process_restart)
 	{
  		if (skipdoall('p019e0002')) break p019e0002;
 		if (!CNDeq(119,2)) break p019e0002;
- 		ACCwriteln(919);
+ 		ACCwriteln(924);
 		{}
 
 	}
@@ -20079,7 +20098,7 @@ pro019_restart: while(process_restart)
 	{
  		if (skipdoall('p019e0003')) break p019e0003;
 		if (!CNDeq(119,3)) break p019e0003;
- 		ACCwriteln(920);
+ 		ACCwriteln(925);
 		{}
 
 	}
@@ -20100,7 +20119,7 @@ pro020_restart: while(process_restart)
  		if (skipdoall('p020e0000')) break p020e0000;
 		if (!CNDat(82)) break p020e0000;
 		if (!CNDeq(119,255)) break p020e0000;
- 		ACCwriteln(921);
+ 		ACCwriteln(926);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20113,7 +20132,7 @@ pro020_restart: while(process_restart)
  		if (skipdoall('p020e0001')) break p020e0001;
 		if (!CNDat(117)) break p020e0001;
 		if (!CNDeq(122,1)) break p020e0001;
- 		ACCwriteln(922);
+ 		ACCwriteln(927);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20127,7 +20146,7 @@ pro020_restart: while(process_restart)
 		if (!CNDatgt(101)) break p020e0002;
 		if (!CNDatlt(104)) break p020e0002;
 		if (!CNDnotzero(121)) break p020e0002;
- 		ACCwriteln(923);
+ 		ACCwriteln(928);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20146,7 +20165,7 @@ pro020_restart: while(process_restart)
 		if (!CNDat(117)) break p020e0003;
 		if (!CNDzero(122)) break p020e0003;
  		ACClet(122,2);
- 		ACCwriteln(924);
+ 		ACCwriteln(929);
  		ACCdestroy(2);
  		ACCdone();
 		break pro020_restart;
@@ -20165,8 +20184,8 @@ pro020_restart: while(process_restart)
  		}
 		if (!CNDat(82)) break p020e0004;
  		ACCset(0);
- 		ACCwrite(925);
- 		ACCwriteln(926);
+ 		ACCwrite(930);
+ 		ACCwriteln(931);
  		ACCdestroy(0);
  		ACCanykey();
  		function anykey00059() 
@@ -20192,7 +20211,7 @@ pro020_restart: while(process_restart)
  		}
 		if (!CNDat(117)) break p020e0005;
  		ACCset(0);
- 		ACCwrite(927);
+ 		ACCwrite(932);
  		ACCpause(100);
  		function anykey00061() 
 		{
@@ -20201,7 +20220,7 @@ pro020_restart: while(process_restart)
 		}
  		function anykey00060() 
 		{
- 		ACCwriteln(928);
+ 		ACCwriteln(933);
  		ACCdestroy(0);
  		ACCanykey();
  		waitKey(anykey00061);
@@ -20224,9 +20243,9 @@ pro020_restart: while(process_restart)
  		}
 		if (!CNDatgt(101)) break p020e0006;
 		if (!CNDatlt(104)) break p020e0006;
- 		ACCwrite(929);
+ 		ACCwrite(934);
  		ACCset(0);
- 		ACCwrite(930);
+ 		ACCwrite(935);
  		ACCpause(100);
  		function anykey00063() 
 		{
@@ -20235,7 +20254,7 @@ pro020_restart: while(process_restart)
 		}
  		function anykey00062() 
 		{
- 		ACCwriteln(931);
+ 		ACCwriteln(936);
  		ACCnewline();
  		ACCdestroy(0);
  		ACCanykey();
@@ -20258,7 +20277,7 @@ pro020_restart: while(process_restart)
  		}
 		if (!CNDat(82)) break p020e0007;
  		ACCdestroy(getFlag(51));
- 		ACCwriteln(932);
+ 		ACCwriteln(937);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20275,7 +20294,7 @@ pro020_restart: while(process_restart)
  		}
 		if (!CNDat(117)) break p020e0008;
  		ACCdestroy(getFlag(51));
- 		ACCwriteln(933);
+ 		ACCwriteln(938);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20293,7 +20312,7 @@ pro020_restart: while(process_restart)
 		if (!CNDnotat(103)) break p020e0009;
 		if (!CNDgt(122,1)) break p020e0009;
  		ACCdestroy(getFlag(51));
- 		ACCwriteln(934);
+ 		ACCwriteln(939);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20310,7 +20329,7 @@ pro020_restart: while(process_restart)
  		}
 		if (!CNDnotat(103)) break p020e0010;
 		if (!CNDgt(122,1)) break p020e0010;
- 		ACCwriteln(935);
+ 		ACCwriteln(940);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20326,7 +20345,7 @@ pro020_restart: while(process_restart)
 			if (!CNDverb(73)) break p020e0011;
  		}
 		if (!CNDat(117)) break p020e0011;
- 		ACCwriteln(936);
+ 		ACCwriteln(941);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20344,7 +20363,7 @@ pro020_restart: while(process_restart)
 		if (!CNDatgt(101)) break p020e0012;
 		if (!CNDatlt(104)) break p020e0012;
 		if (!CNDlt(51,14)) break p020e0012;
- 		ACCwriteln(937);
+ 		ACCwriteln(942);
  		ACCdestroy(getFlag(51));
  		ACCdone();
 		break pro020_restart;
@@ -20363,7 +20382,7 @@ pro020_restart: while(process_restart)
 		if (!CNDatgt(101)) break p020e0013;
 		if (!CNDatlt(104)) break p020e0013;
  		ACCputo(125);
- 		ACCwriteln(938);
+ 		ACCwriteln(943);
  		ACCset(121);
  		ACCdone();
 		break pro020_restart;
@@ -20379,7 +20398,7 @@ pro020_restart: while(process_restart)
 		{
 			if (!CNDverb(73)) break p020e0014;
  		}
- 		ACCwriteln(939);
+ 		ACCwriteln(944);
 		{}
 
 	}
@@ -20407,7 +20426,7 @@ pro021_restart: while(process_restart)
 	p021e0001:
 	{
  		if (skipdoall('p021e0001')) break p021e0001;
- 		ACCwriteln(940);
+ 		ACCwriteln(945);
  		ACCnewline();
  		ACClet(150,14);
 		entry_for_doall = 'p021e0002';
@@ -20415,7 +20434,7 @@ pro021_restart: while(process_restart)
  		ACCdoall(getFlag(38));
 		break pro021_restart;
 		if (!CNDgt(51,13)) break p021e0001;
- 		ACCwriteln(941);
+ 		ACCwriteln(946);
  		ACCminus(150,1);
 		{}
 
@@ -20426,7 +20445,7 @@ pro021_restart: while(process_restart)
 	{
  		if (skipdoall('p021e0002')) break p021e0002;
 		if (!CNDgt(51,13)) break p021e0002;
- 		ACCwriteln(942);
+ 		ACCwriteln(947);
  		ACCminus(150,1);
 		{}
 
@@ -20437,7 +20456,7 @@ pro021_restart: while(process_restart)
 	{
  		if (skipdoall('p021e0003')) break p021e0003;
 		if (!CNDlt(51,14)) break p021e0003;
- 		ACCwriteln(943);
+ 		ACCwriteln(948);
  		ACCnewline();
 		{}
 
@@ -20457,7 +20476,7 @@ pro022_restart: while(process_restart)
 	p022e0000:
 	{
  		if (skipdoall('p022e0000')) break p022e0000;
- 		ACCwriteln(944);
+ 		ACCwriteln(949);
  		ACCanykey();
  		function anykey00064() 
 		{
@@ -20489,7 +20508,7 @@ pro023_restart: while(process_restart)
  		if (skipdoall('p023e0000')) break p023e0000;
  		ACCcls();
  		ACCpicture(261);
- 		ACCwriteln(945);
+ 		ACCwriteln(950);
  		ACCnewline();
  		ACCanykey();
  		function anykey00065() 
@@ -20522,7 +20541,7 @@ pro024_restart: while(process_restart)
  		if (skipdoall('p024e0000')) break p024e0000;
 		if (!CNDatgt(41)) break p024e0000;
 		if (!CNDatlt(54)) break p024e0000;
- 		ACCwriteln(946);
+ 		ACCwriteln(951);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20534,7 +20553,7 @@ pro024_restart: while(process_restart)
 	{
  		if (skipdoall('p024e0001')) break p024e0001;
 		if (!CNDat(101)) break p024e0001;
- 		ACCwriteln(947);
+ 		ACCwriteln(952);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20546,7 +20565,7 @@ pro024_restart: while(process_restart)
 	{
  		if (skipdoall('p024e0002')) break p024e0002;
 		if (!CNDat(33)) break p024e0002;
- 		ACCwriteln(948);
+ 		ACCwriteln(953);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20558,7 +20577,7 @@ pro024_restart: while(process_restart)
 	{
  		if (skipdoall('p024e0003')) break p024e0003;
 		if (!CNDat(68)) break p024e0003;
- 		ACCwriteln(949);
+ 		ACCwriteln(954);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20570,7 +20589,7 @@ pro024_restart: while(process_restart)
 	{
  		if (skipdoall('p024e0004')) break p024e0004;
 		if (!CNDat(38)) break p024e0004;
- 		ACCwriteln(950);
+ 		ACCwriteln(955);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20582,7 +20601,7 @@ pro024_restart: while(process_restart)
 	{
  		if (skipdoall('p024e0005')) break p024e0005;
 		if (!CNDnotcarr(0)) break p024e0005;
- 		ACCwriteln(951);
+ 		ACCwriteln(956);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20595,7 +20614,7 @@ pro024_restart: while(process_restart)
  		if (skipdoall('p024e0006')) break p024e0006;
 		if (!CNDat(37)) break p024e0006;
 		if (!CNDzero(131)) break p024e0006;
- 		ACCwriteln(952);
+ 		ACCwriteln(957);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20607,7 +20626,7 @@ pro024_restart: while(process_restart)
 	{
  		if (skipdoall('p024e0007')) break p024e0007;
 		if (!CNDat(37)) break p024e0007;
- 		ACCwriteln(953);
+ 		ACCwriteln(958);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20618,7 +20637,7 @@ pro024_restart: while(process_restart)
 	p024e0008:
 	{
  		if (skipdoall('p024e0008')) break p024e0008;
- 		ACCwriteln(954);
+ 		ACCwriteln(959);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20660,7 +20679,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(161)) break p025e0001;
  		}
 		if (!CNDat(68)) break p025e0001;
- 		ACCwriteln(955);
+ 		ACCwriteln(960);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20673,7 +20692,7 @@ pro025_restart: while(process_restart)
  		if (skipdoall('p025e0002')) break p025e0002;
 		if (!CNDnotzero(0)) break p025e0002;
 		if (!CNDabsent(0)) break p025e0002;
- 		ACCwriteln(956);
+ 		ACCwriteln(961);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20690,7 +20709,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(92)) break p025e0003;
 		if (!CNDeq(120,1)) break p025e0003;
- 		ACCwriteln(957);
+ 		ACCwriteln(962);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20707,7 +20726,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(92)) break p025e0004;
 		if (!CNDgt(120,1)) break p025e0004;
- 		ACCwriteln(958);
+ 		ACCwriteln(963);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20723,7 +20742,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(132)) break p025e0005;
  		}
 		if (!CNDat(92)) break p025e0005;
- 		ACCwriteln(959);
+ 		ACCwriteln(964);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20739,7 +20758,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(139)) break p025e0006;
  		}
 		if (!CNDat(83)) break p025e0006;
- 		ACCwriteln(960);
+ 		ACCwriteln(965);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20770,7 +20789,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDeq(44,255)) break p025e0008;
 		if (!CNDat(96)) break p025e0008;
- 		ACCwriteln(961);
+ 		ACCwriteln(966);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20786,7 +20805,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0009;
  		}
 		if (!CNDat(96)) break p025e0009;
- 		ACCwriteln(962);
+ 		ACCwriteln(967);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20802,7 +20821,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0010;
  		}
 		if (!CNDat(104)) break p025e0010;
- 		ACCwriteln(963);
+ 		ACCwriteln(968);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20818,7 +20837,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(145)) break p025e0011;
  		}
 		if (!CNDat(69)) break p025e0011;
- 		ACCwriteln(964);
+ 		ACCwriteln(969);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20834,7 +20853,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(126)) break p025e0012;
  		}
 		if (!CNDat(77)) break p025e0012;
- 		ACCwriteln(965);
+ 		ACCwriteln(970);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20850,7 +20869,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(54)) break p025e0013;
  		}
 		if (!CNDcarried(4)) break p025e0013;
- 		ACCwriteln(966);
+ 		ACCwriteln(971);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20866,7 +20885,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(133)) break p025e0014;
  		}
 		if (!CNDat(82)) break p025e0014;
- 		ACCwriteln(967);
+ 		ACCwriteln(972);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20883,7 +20902,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDatgt(101)) break p025e0015;
 		if (!CNDatlt(104)) break p025e0015;
- 		ACCwriteln(968);
+ 		ACCwriteln(973);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20899,7 +20918,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(164)) break p025e0016;
  		}
 		if (!CNDat(39)) break p025e0016;
- 		ACCwriteln(969);
+ 		ACCwriteln(974);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20915,7 +20934,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(67)) break p025e0017;
  		}
 		if (!CNDat(38)) break p025e0017;
- 		ACCwriteln(970);
+ 		ACCwriteln(975);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20931,7 +20950,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(149)) break p025e0018;
  		}
 		if (!CNDat(106)) break p025e0018;
- 		ACCwriteln(971);
+ 		ACCwriteln(976);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20947,7 +20966,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(171)) break p025e0019;
  		}
 		if (!CNDat(106)) break p025e0019;
- 		ACCwriteln(972);
+ 		ACCwriteln(977);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20964,7 +20983,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(106)) break p025e0020;
 		if (!CNDzero(124)) break p025e0020;
- 		ACCwriteln(973);
+ 		ACCwriteln(978);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20981,7 +21000,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(106)) break p025e0021;
 		if (!CNDeq(124,1)) break p025e0021;
- 		ACCwriteln(974);
+ 		ACCwriteln(979);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20997,7 +21016,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(89)) break p025e0022;
  		}
 		if (!CNDat(106)) break p025e0022;
- 		ACCwriteln(975);
+ 		ACCwriteln(980);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21014,7 +21033,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(82)) break p025e0023;
 		if (!CNDnoteq(119,255)) break p025e0023;
- 		ACCwriteln(976);
+ 		ACCwriteln(981);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21030,7 +21049,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(175)) break p025e0024;
  		}
 		if (!CNDat(84)) break p025e0024;
- 		ACCwriteln(977);
+ 		ACCwriteln(982);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21046,7 +21065,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(155)) break p025e0025;
  		}
 		if (!CNDat(53)) break p025e0025;
- 		ACCwriteln(978);
+ 		ACCwriteln(983);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21062,7 +21081,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(52)) break p025e0026;
  		}
 		if (!CNDpresent(2)) break p025e0026;
- 		ACCwriteln(979);
+ 		ACCwriteln(984);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21078,7 +21097,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(75)) break p025e0027;
  		}
 		if (!CNDat(69)) break p025e0027;
- 		ACCwriteln(980);
+ 		ACCwriteln(985);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21094,7 +21113,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(156)) break p025e0028;
  		}
 		if (!CNDat(69)) break p025e0028;
- 		ACCwriteln(981);
+ 		ACCwriteln(986);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21110,7 +21129,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(156)) break p025e0029;
  		}
 		if (!CNDat(38)) break p025e0029;
- 		ACCwriteln(982);
+ 		ACCwriteln(987);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21126,7 +21145,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(156)) break p025e0030;
  		}
 		if (!CNDat(40)) break p025e0030;
- 		ACCwriteln(983);
+ 		ACCwriteln(988);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21142,7 +21161,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(156)) break p025e0031;
  		}
 		if (!CNDat(36)) break p025e0031;
- 		ACCwriteln(984);
+ 		ACCwriteln(989);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21158,7 +21177,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(156)) break p025e0032;
  		}
 		if (!CNDat(69)) break p025e0032;
- 		ACCwriteln(985);
+ 		ACCwriteln(990);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21174,7 +21193,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(156)) break p025e0033;
  		}
 		if (!CNDat(40)) break p025e0033;
- 		ACCwriteln(986);
+ 		ACCwriteln(991);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21190,7 +21209,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(66)) break p025e0034;
  		}
 		if (!CNDat(78)) break p025e0034;
- 		ACCwriteln(987);
+ 		ACCwriteln(992);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21206,7 +21225,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(66)) break p025e0035;
  		}
 		if (!CNDat(79)) break p025e0035;
- 		ACCwriteln(988);
+ 		ACCwriteln(993);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21222,7 +21241,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(176)) break p025e0036;
  		}
 		if (!CNDat(93)) break p025e0036;
- 		ACCwriteln(989);
+ 		ACCwriteln(994);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21266,7 +21285,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(77)) break p025e0039;
  		}
 		if (!CNDat(81)) break p025e0039;
- 		ACCwriteln(990);
+ 		ACCwriteln(995);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21282,7 +21301,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(77)) break p025e0040;
  		}
 		if (!CNDat(81)) break p025e0040;
- 		ACCwriteln(991);
+ 		ACCwriteln(996);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21298,7 +21317,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(77)) break p025e0041;
  		}
 		if (!CNDat(92)) break p025e0041;
- 		ACCwriteln(992);
+ 		ACCwriteln(997);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21314,7 +21333,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(177)) break p025e0042;
  		}
 		if (!CNDat(66)) break p025e0042;
- 		ACCwriteln(993);
+ 		ACCwriteln(998);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21330,7 +21349,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(174)) break p025e0043;
  		}
 		if (!CNDat(66)) break p025e0043;
- 		ACCwriteln(994);
+ 		ACCwriteln(999);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21346,7 +21365,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(173)) break p025e0044;
  		}
 		if (!CNDat(66)) break p025e0044;
- 		ACCwriteln(995);
+ 		ACCwriteln(1000);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21362,7 +21381,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(178)) break p025e0045;
  		}
 		if (!CNDat(98)) break p025e0045;
- 		ACCwriteln(996);
+ 		ACCwriteln(1001);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21378,7 +21397,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(179)) break p025e0046;
  		}
 		if (!CNDat(98)) break p025e0046;
- 		ACCwriteln(997);
+ 		ACCwriteln(1002);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21394,7 +21413,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(116)) break p025e0047;
  		}
 		if (!CNDat(100)) break p025e0047;
- 		ACCwriteln(998);
+ 		ACCwriteln(1003);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21410,7 +21429,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(74)) break p025e0048;
  		}
 		if (!CNDat(37)) break p025e0048;
- 		ACCwriteln(999);
+ 		ACCwriteln(1004);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21426,7 +21445,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(89)) break p025e0049;
  		}
 		if (!CNDat(101)) break p025e0049;
- 		ACCwriteln(1000);
+ 		ACCwriteln(1005);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21442,7 +21461,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(119)) break p025e0050;
  		}
 		if (!CNDat(112)) break p025e0050;
- 		ACCwriteln(1001);
+ 		ACCwriteln(1006);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21458,7 +21477,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(182)) break p025e0051;
  		}
 		if (!CNDat(116)) break p025e0051;
- 		ACCwriteln(1002);
+ 		ACCwriteln(1007);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21488,7 +21507,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(55)) break p025e0053;
  		}
 		if (!CNDabsent(0)) break p025e0053;
- 		ACCwriteln(1003);
+ 		ACCwriteln(1008);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21504,7 +21523,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(55)) break p025e0054;
  		}
 		if (!CNDozero(0,20)) break p025e0054;
- 		ACCwrite(1004);
+ 		ACCwrite(1009);
 		{}
 
 	}
@@ -21518,7 +21537,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(55)) break p025e0055;
  		}
 		if (!CNDonotzero(0,20)) break p025e0055;
- 		ACCwrite(1005);
+ 		ACCwrite(1010);
 		{}
 
 	}
@@ -21533,7 +21552,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDzero(105)) break p025e0056;
 		if (!CNDabsent(5)) break p025e0056;
- 		ACCwriteln(1006);
+ 		ACCwriteln(1011);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21548,7 +21567,7 @@ pro025_restart: while(process_restart)
 		{
 			if (!CNDnoun1(55)) break p025e0057;
  		}
- 		ACCwrite(1007);
+ 		ACCwrite(1012);
 		if (!CNDnotzero(8)) break p025e0057;
  		ACCprint(8);
  		ACCnewline();
@@ -21566,7 +21585,7 @@ pro025_restart: while(process_restart)
 		{
 			if (!CNDnoun1(55)) break p025e0058;
  		}
- 		ACCwriteln(1008);
+ 		ACCwriteln(1013);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21582,7 +21601,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(129)) break p025e0059;
  		}
 		if (!CNDat(31)) break p025e0059;
- 		ACCwriteln(1009);
+ 		ACCwriteln(1014);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21599,7 +21618,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(116)) break p025e0060;
 		if (!CNDzero(123)) break p025e0060;
- 		ACCwriteln(1010);
+ 		ACCwriteln(1015);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21616,7 +21635,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDpresent(7)) break p025e0061;
 		if (!CNDozero(7,23)) break p025e0061;
- 		ACCwriteln(1011);
+ 		ACCwriteln(1016);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21633,7 +21652,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDcarried(7)) break p025e0062;
 		if (!CNDonotzero(7,23)) break p025e0062;
- 		ACCwriteln(1012);
+ 		ACCwriteln(1017);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21650,7 +21669,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDcarried(7)) break p025e0063;
 		if (!CNDonotzero(7,23)) break p025e0063;
- 		ACCwriteln(1013);
+ 		ACCwriteln(1018);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21666,7 +21685,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(158)) break p025e0064;
  		}
 		if (!CNDat(35)) break p025e0064;
- 		ACCwriteln(1014);
+ 		ACCwriteln(1019);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21682,7 +21701,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0065;
  		}
 		if (!CNDat(88)) break p025e0065;
- 		ACCwriteln(1015);
+ 		ACCwriteln(1020);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21698,7 +21717,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0066;
  		}
 		if (!CNDat(37)) break p025e0066;
- 		ACCwriteln(1016);
+ 		ACCwriteln(1021);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21714,7 +21733,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0067;
  		}
 		if (!CNDat(33)) break p025e0067;
- 		ACCwriteln(1017);
+ 		ACCwriteln(1022);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21730,7 +21749,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0068;
  		}
 		if (!CNDat(68)) break p025e0068;
- 		ACCwriteln(1018);
+ 		ACCwriteln(1023);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21746,7 +21765,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0069;
  		}
 		if (!CNDat(105)) break p025e0069;
- 		ACCwriteln(1019);
+ 		ACCwriteln(1024);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21762,7 +21781,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0070;
  		}
 		if (!CNDat(106)) break p025e0070;
- 		ACCwriteln(1020);
+ 		ACCwriteln(1025);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21777,7 +21796,7 @@ pro025_restart: while(process_restart)
 		{
 			if (!CNDnoun1(124)) break p025e0071;
  		}
- 		ACCwriteln(1021);
+ 		ACCwriteln(1026);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21794,7 +21813,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(66)) break p025e0072;
 		if (!CNDlt(116,9)) break p025e0072;
- 		ACCwriteln(1022);
+ 		ACCwriteln(1027);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21811,7 +21830,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDatgt(37)) break p025e0073;
 		if (!CNDatlt(40)) break p025e0073;
- 		ACCwriteln(1023);
+ 		ACCwriteln(1028);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21828,7 +21847,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDatgt(101)) break p025e0074;
 		if (!CNDatlt(104)) break p025e0074;
- 		ACCwriteln(1024);
+ 		ACCwriteln(1029);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21846,7 +21865,7 @@ pro025_restart: while(process_restart)
 		if (!CNDzero(121)) break p025e0075;
 		if (!CNDatgt(101)) break p025e0075;
 		if (!CNDatlt(104)) break p025e0075;
- 		ACCwriteln(1025);
+ 		ACCwriteln(1030);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21863,7 +21882,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(117)) break p025e0076;
 		if (!CNDnoteq(122,1)) break p025e0076;
- 		ACCwriteln(1026);
+ 		ACCwriteln(1031);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21880,7 +21899,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDatgt(101)) break p025e0077;
 		if (!CNDatlt(104)) break p025e0077;
- 		ACCwriteln(1027);
+ 		ACCwriteln(1032);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21897,7 +21916,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDatgt(101)) break p025e0078;
 		if (!CNDatlt(104)) break p025e0078;
- 		ACCwriteln(1028);
+ 		ACCwriteln(1033);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21913,7 +21932,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(181)) break p025e0079;
  		}
 		if (!CNDat(104)) break p025e0079;
- 		ACCwriteln(1029);
+ 		ACCwriteln(1034);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21929,7 +21948,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(161)) break p025e0080;
  		}
 		if (!CNDat(33)) break p025e0080;
- 		ACCwriteln(1030);
+ 		ACCwriteln(1035);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21945,7 +21964,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(161)) break p025e0081;
  		}
 		if (!CNDat(68)) break p025e0081;
- 		ACCwriteln(1031);
+ 		ACCwriteln(1036);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21961,7 +21980,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(53)) break p025e0082;
  		}
 		if (!CNDcarried(9)) break p025e0082;
- 		ACCwriteln(1032);
+ 		ACCwriteln(1037);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21978,7 +21997,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDcarried(3)) break p025e0083;
 		if (!CNDozero(3,22)) break p025e0083;
- 		ACCwriteln(1033);
+ 		ACCwriteln(1038);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21994,7 +22013,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(53)) break p025e0084;
  		}
 		if (!CNDcarried(3)) break p025e0084;
- 		ACCwriteln(1034);
+ 		ACCwriteln(1039);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -22010,7 +22029,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(168)) break p025e0085;
  		}
 		if (!CNDpresent(8)) break p025e0085;
- 		ACCwrite(1035);
+ 		ACCwrite(1040);
 		{}
 
 	}
@@ -22024,7 +22043,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(135)) break p025e0086;
  		}
 		if (!CNDpresent(13)) break p025e0086;
- 		ACCwrite(1036);
+ 		ACCwrite(1041);
 		{}
 
 	}
@@ -22037,7 +22056,7 @@ pro025_restart: while(process_restart)
 		{
 			if (!CNDnoun1(72)) break p025e0087;
  		}
- 		ACCwriteln(1037);
+ 		ACCwriteln(1042);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -22058,7 +22077,7 @@ pro025_restart: while(process_restart)
 	{
  		if (skipdoall('p025e0089')) break p025e0089;
 		if (!CNDeq(51,255)) break p025e0089;
- 		ACCwriteln(1038);
+ 		ACCwriteln(1043);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -22070,7 +22089,7 @@ pro025_restart: while(process_restart)
 	{
  		if (skipdoall('p025e0090')) break p025e0090;
 		if (!CNDabsent(getFlag(51))) break p025e0090;
- 		ACCwriteln(1039);
+ 		ACCwriteln(1044);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -22083,7 +22102,7 @@ pro025_restart: while(process_restart)
  		if (skipdoall('p025e0091')) break p025e0091;
 		if (!CNDpresent(getFlag(51))) break p025e0091;
 		if (!CNDgt(51,13)) break p025e0091;
- 		ACCwriteln(1040);
+ 		ACCwriteln(1045);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -22096,7 +22115,7 @@ pro025_restart: while(process_restart)
  		if (skipdoall('p025e0092')) break p025e0092;
 		if (!CNDpresent(getFlag(51))) break p025e0092;
 		if (!CNDlt(51,14)) break p025e0092;
- 		ACCwriteln(1041);
+ 		ACCwriteln(1046);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -24426,6 +24445,22 @@ h_keydown = function (event)
 
 
 
+//CND LISTSAVEDGAMES A 0 0 0 0
+
+function ACClistsavedgames()
+{
+  for(var savedgames in localStorage)
+  {
+    gamePrefix = savedgames.substring(0,16); // takes out ngpaws_savegame_
+    if (gamePrefix == "ngpaws_savegame_")
+    {
+      gameName = savedgames.substring(16);
+      writelnText(gameName);
+    }
+  }
+}
+
+
 //CND NPCAT A 9 1 0 0
 
 function ACCnpcat(locno, flagno)
@@ -25260,6 +25295,22 @@ h_keydown = function (event)
 }
 
 
+
+
+//CND LISTSAVEDGAMES A 0 0 0 0
+
+function ACClistsavedgames()
+{
+  for(var savedgames in localStorage)
+  {
+    gamePrefix = savedgames.substring(0,16); // takes out ngpaws_savegame_
+    if (gamePrefix == "ngpaws_savegame_")
+    {
+      gameName = savedgames.substring(16);
+      writelnText(gameName);
+    }
+  }
+}
 
 
 //CND NPCAT A 9 1 0 0
@@ -27505,6 +27556,8 @@ vocabulary.push([110, "ENTRADA", 1]);
 vocabulary.push([12, "ENTRAR", 0]);
 vocabulary.push([15, "ENTRE", 6]);
 vocabulary.push([12, "ENTRO", 0]);
+vocabulary.push([129, "ENUMERA", 0]);
+vocabulary.push([129, "ENUMERAR", 0]);
 vocabulary.push([47, "ERUCTA", 0]);
 vocabulary.push([47, "ERUCTAR", 0]);
 vocabulary.push([47, "ERUCTARSE", 0]);
@@ -27823,6 +27876,7 @@ vocabulary.push([10, "PARA", 6]);
 vocabulary.push([70, "PARED", 1]);
 vocabulary.push([70, "PAREDES", 1]);
 vocabulary.push([69, "PARTE", 0]);
+vocabulary.push([183, "PARTIDAS", 1]);
 vocabulary.push([69, "PARTIR", 0]);
 vocabulary.push([15, "PASA", 1]);
 vocabulary.push([125, "PASAR", 0]);
@@ -28212,7 +28266,7 @@ messages[0] = "";
 messages[1] = "";
 messages[2] = "";
 messages[3] = "¡Qué horror, el palizas otra vez! ¡Prefiero la muerte!";
-messages[4] = "¡Riquísima!";
+messages[4] = "";
 messages[5] = "Algo que has hecho te impide completar la aventura.";
 messages[6] = "";
 messages[7] = "";
@@ -28305,7 +28359,7 @@ messages[1015] = "{ACTION|fuera|fuera}";
 
 // WRITE MESSAGES
 
-total_writemessages=1042;
+total_writemessages=1047;
 
 writemessages = [];
 
@@ -28420,937 +28474,942 @@ writemessages[107] = "Casi sin esfuerzo, llenas la botella de agua.";
 writemessages[108] = "No te resulta demasiado difícil llenarla de agua.";
 writemessages[109] = "Genial. Ya está llena de agua.";
 writemessages[110] = "Mmm... a ver... listo. Botella llena.";
-writemessages[111] = "No puedes llenarla si no hay agua cerca.";
-writemessages[112] = "Pero qué sed tenías.";
-writemessages[113] = "Ya te estás agarrando a las ramas. Si no, ya hubieras caído.";
-writemessages[114] = "¡La llave ha caído al suelo!";
-writemessages[115] = "La rama se mueve y se mueve.";
-writemessages[116] = "¡CHUMM! ¡PUM! ¡BROOM! ¡PIFSSSS!";
-writemessages[117] = "¡¡¡ Pilas recargadas !!!";
-writemessages[118] = "¡CHUMM! ¡PUM! ¡BROOM! ¡PIFSSSS!";
-writemessages[119] = "¡¡¡ Pilas recargadas !!!";
-writemessages[120] = "No tienes la linterna... ¿Dónde está?";
-writemessages[121] = "No tienes la pila, así que...";
-writemessages[122] = "La linterna ya tiene las pilas puestas.";
-writemessages[123] = "Vale, linterna lista.";
-writemessages[124] = "No tienes la linterna.";
-writemessages[125] = "La linterna no tiene las pilas puestas.";
-writemessages[126] = "Ya no puedes llevar más trastos.";
-writemessages[127] = "Ya no puedes llevar más trastos.";
-writemessages[128] = "Sacas la pila y la linterna se apaga.";
-writemessages[129] = "Al quitarlo... ¡desaparece de tus manos!";
-writemessages[130] = "Te sientas... y te levantas para seguir jugando. ";
-writemessages[131] = "Ya te lo advertí...";
-writemessages[132] = "Te aconsejo que dejes de insultar.";
-writemessages[133] = "Ya te lo advertí...";
-writemessages[134] = "Te aconsejo que dejes de decir groserías.";
-writemessages[135] = "Has jugado ";
-writemessages[136] = " turnos.";
-writemessages[137] = "{RESTART|Volver a jugar}";
-writemessages[138] = "El enano está muy cabreado para finuras y con malos modales intenta deshacerse de ti.";
-writemessages[139] = "Te observa tímidamente y esboza una sonrisa.";
-writemessages[140] = "Te observa por unos instantes y esboza una sonrisa.";
-writemessages[141] = "Muy ofendido, Elfito, se las pira llorando.";
-writemessages[142] = "Las botas son pequeñas para tus pies.";
-writemessages[143] = "previous_noun=50";
-writemessages[144] = "Don Enano se calza, y agradecido, te deja una linterna.";
-writemessages[145] = "Pues ya lo sabes.";
-writemessages[146] = "El jarrón se ha roto en el suelo.";
-writemessages[147] = "... tras un corto descansito sigues con lo tuyo.";
-writemessages[148] = "¡Algo te impide pasar!";
-writemessages[149] = "¡Si el peaje no quieres pagar, conmigo tendrás que luchar!";
-writemessages[150] = "El pajarito se escapa, cantando alegremente.";
-writemessages[151] = "El pajarito se escapa, cantando alegremente. ";
-writemessages[152] = "Y al ver a la serpiente la ataca en los ojos y la hace huir despavorida.";
-writemessages[153] = "El veneno te ha matado.";
-writemessages[154] = "Abres la jaula que ahora tiene la reja abierta.";
-writemessages[155] = "Necesitarás algo, ¿no?";
-writemessages[156] = "No hace falta. ";
-writemessages[157] = "Poco a poco las valvas del molusco se abren y con asombro descubres que... ¡es una ostra! Dentro hay una preciosa perla que por tu imprudencia cae y rueda por el pasillo.";
-writemessages[158] = "Se cerró para siempre.";
-writemessages[159] = "¡Es demasiado fuerte para ti, forastero!";
-writemessages[160] = "Abres la puerta con facilidad.";
-writemessages[161] = "Lo intentas pero no cede. Mmm... ¡cuánto óxido!";
-writemessages[162] = "Pero si ya está abierta.";
-writemessages[163] = "¡Algo te impide pasar!";
-writemessages[164] = "Ya está cerrada.";
-writemessages[165] = "Ni cerrar la puerta ni abrirla podrías con el óxido que tiene.";
-writemessages[166] = "Cierras la puerta fácilmente.";
-writemessages[167] = "No hace falta. ";
-writemessages[168] = "Te pasarías horas probando de hacer algo útil pero tal vez no sea el sitio indicado.";
-writemessages[169] = "No ves la pila por aquí.";
-writemessages[170] = "La niebla te lo impide.";
-writemessages[171] = "¡Está en el suelo!";
-writemessages[172] = "El reptil te marca sus colmillos en el cuello y se marcha.";
-writemessages[173] = "El jarrón se ha roto en el suelo.";
-writemessages[174] = "Tienes al pájaro enjaulado.";
-writemessages[175] = "El pajarito se escapa, cantando alegremente.";
-writemessages[176] = "Las resecas semillas queman tu mano y caen de nuevo a tierra.";
-writemessages[177] = "La niebla te lo impide.";
-writemessages[178] = "Es demasiado pesada. Es como si fuera de un gigante.";
-writemessages[179] = "No ves el hacha de gigante por aquí.";
-writemessages[180] = "Es demasiado pesado, tanto como el hacha. Es como si fuera de un gigante.";
-writemessages[181] = "Coger se escribe con ge.";
-writemessages[182] = "No sel puñetelo.";
-writemessages[183] = "El jarrón se ha roto en el suelo.";
-writemessages[184] = "Lo liberas de la pared y lo llevas de la cadena.";
-writemessages[185] = "Recibes de lleno el ataque del enorme oso Peposo.";
-writemessages[186] = "Al verse libre, Peposo escapa dejando a tus pies la cadena.";
-writemessages[187] = " Se yergue sobre sus patas traseras y agitando sus garras amenazadoramente, abre su enorme boca y deja escapar un cavernoso rugido. Al verlo suelto, el Troll Chulangas sale corriendo.";
-writemessages[188] = "Al verse libre, Peposo escapa dejando a tus pies la cadena.";
-writemessages[189] = "No ves a Peposo por aquí. Seguramente no querrá acercarse a un humano ahora que es libre.";
-writemessages[190] = "No le encuentras nada de especial.";
-writemessages[191] = "¡¡Arggg!! ¡Te has ahogado!";
-writemessages[192] = "Bebes hasta saciar tu sed.";
-writemessages[193] = "Aunque da un poco de asco, bebes saciando la sed.";
-writemessages[194] = "Es excelente. No puede ser un agua más pura.";
-writemessages[195] = "La puerta queda bien aceitada.";
-writemessages[196] = "No ves aceite por aquí.";
-writemessages[197] = "No le hace falta más aceite. Con el que tiene será suficiente.";
-writemessages[198] = "No sabrías cómo.";
-writemessages[199] = "¿Cómo la vas a apartar?";
-writemessages[200] = "Soplas y parece que funciona. ";
-writemessages[201] = "El aceite, como es lógico, las deja bien fritas.";
-writemessages[202] = "Ya me dirás cómo quieres hacerlo sin la botella.";
-writemessages[203] = "Ya me dirás cómo quieres hacerlo sin agua.";
-writemessages[204] = "Absorbiendo ávidamente el precioso líquido las semillas se hinchan, se abren y de ellas nace una tierna plantita de judías.";
-writemessages[205] = "Al recibir más agua, el tronco se endurece y crece fuerte hacia lo alto hasta salir por el agujero superior.";
-writemessages[206] = "Nadie te hace caso. ";
-writemessages[207] = "La botella se ha roto en el suelo.";
-writemessages[208] = "La botella se ha roto en el suelo dejando una fea mancha de aceite.";
-writemessages[209] = "No la llevas encima.";
-writemessages[210] = "¡Has fallado! El hacha cae al suelo.";
-writemessages[211] = "¡Le has cortado la cabeza! ¡Maluva se desintegra junto con su hacha!";
-writemessages[212] = "No la llevas encima.";
-writemessages[213] = "Al agua que va la linte... ¡Espera un momento!";
-writemessages[214] = "Al agua que va la linte... ¡Espera un momento!";
-writemessages[215] = "Tiras {OREF} al agua y ves como se hunde... lentamente...";
-writemessages[216] = "Tiras {OREF} al agua. Y allá va, hundiéndose. ¿Pero qué has hecho?";
-writemessages[217] = "¡Te bloquea un fornido Troll que ruge: «un tesoro has de dar para poder pasar»!";
-writemessages[218] = "Por el peso de Peposo, el puente se rompe y los dos al foso.";
-writemessages[219] = "¡Boing! ¡Boong!";
-writemessages[220] = "Nunca te lo habías pasado bien haciendo el tonto. Venga, déjate ya de perder el tiempo.";
-writemessages[221] = "El huevo vibra afectado por el hechizo.";
-writemessages[222] = "Se te ha caído. ";
-writemessages[223] = "El huevo vibra afectado por el hechizo.";
-writemessages[224] = "¡El huevo aparece entre tus pies!";
-writemessages[225] = "La magia hace temblar la cueva.";
-writemessages[226] = "La magia hace temblar la cueva.";
-writemessages[227] = "La magia hace temblar la cueva.";
-writemessages[228] = "La magia hace temblar la cueva.";
-writemessages[229] = "La magia hace temblar la cueva.";
-writemessages[230] = "Nadie te hace caso. ";
-writemessages[231] = "No puedes ";
-writemessages[232] = "RESPONSE_DEFAULT_START";
-writemessages[233] = "Ahora mismo no te apetece.";
-writemessages[234] = "Estás bien así.";
-writemessages[235] = "Te miras de arriba a abajo pero no ves nada especial.";
-writemessages[236] = "No encuentras nada destacable.";
-writemessages[237] = "Esa no es la solución...";
-writemessages[238] = "Ahora mismo no te apetece...";
-writemessages[239] = "Has jugado a demasiadas aventuras conversacionales...";
-writemessages[240] = "No puedes coger eso que dices.";
-writemessages[241] = "Por favor, especifica qué quieres coger.";
-writemessages[242] = "Mejor no coges {OREF}, está bien donde está.";
-writemessages[243] = "No puedes dejar eso que dices.";
-writemessages[244] = "Por favor, especifica qué quieres dejar.";
-writemessages[245] = "Por favor, especifica qué quieres sacar.";
-writemessages[246] = "No puedes sacar eso que dices.";
-writemessages[247] = "No puedes sacar eso.";
-writemessages[248] = "No puedes sacar eso.";
-writemessages[249] = "No puedes sacar {OREF} de ningún sitio, en todo caso puedes quitártelo porque lo llevas puesto...";
-writemessages[250] = "¿De dónde quieres sacar eso?";
-writemessages[251] = "No puedes sacar {OREF} de eso.";
-writemessages[252] = "¿De dónde dices que quieres sacar {OREF}?";
-writemessages[253] = "Antes abre {OBJECT|15}.";
-writemessages[254] = "Antes abre {OBJECT|15}.";
-writemessages[255] = "No puedes sacar nada de ahí porque no está aquí.";
-writemessages[256] = "No puedes coger nada de ahí porque no está aquí.";
-writemessages[257] = "No puedes sacar cosas de ahí.";
-writemessages[258] = "Por favor, especifica qué quieres meter.";
-writemessages[259] = "No puedes meter eso que dices.";
-writemessages[260] = "No puedes meter eso.";
-writemessages[261] = "No puedes meter eso.";
-writemessages[262] = "Primero deberías quitarte {OREF} para poder hacer eso...";
-writemessages[263] = "No llevas {OREF}.";
-writemessages[264] = "¿Dónde quieres meter eso?";
-writemessages[265] = "No puedes meter {OREF} a eso.";
-writemessages[266] = "¿Dónde dices que quieres meter {OREF}?";
-writemessages[267] = "No puedes meter cosas dentro de eso...";
-writemessages[268] = "No puedes meter {OREF} ahí porque no llevas eso.";
-writemessages[269] = "No puedes meter {OREF} ahí porque no llevas eso.";
-writemessages[270] = "Antes abre {OBJECT|15}.";
-writemessages[271] = "Antes abre {OBJECT|15}";
-writemessages[272] = "No te puedes quitar eso que dices.";
-writemessages[273] = "Por favor, especifica qué quieres quitarte.";
-writemessages[274] = "No te puedes poner eso que dices.";
-writemessages[275] = "Por favor, especifica qué quieres ponerte.";
-writemessages[276] = "No puedes tirar de eso que dices.";
-writemessages[277] = "Por favor, especifica de qué quieres tirar.";
-writemessages[278] = "No sería adecuado.";
-writemessages[279] = "No está aquí.";
-writemessages[280] = "No ves mucho sentido a tirar de eso.";
-writemessages[281] = "No parece que se consiga nada tirando de {OREF}.";
-writemessages[282] = "Para tirar de {OREF} tendría que estar aquí.";
-writemessages[283] = "No puedes examinar dentro de eso que dices..";
-writemessages[284] = "Por favor, especifica dentro de qué quieres examinar.";
-writemessages[285] = "No ves nada interesante hacia allí.";
-writemessages[286] = "No puedes mirar eso que dices.";
-writemessages[287] = "No puedes esconder eso que dices.";
-writemessages[288] = "Por favor, especifica qué quieres esconder.";
-writemessages[289] = "Piensas que no conseguirás que pase desapercibido.";
-writemessages[290] = "No está aquí.";
-writemessages[291] = "No crees que eso sirva de algo...";
-writemessages[292] = "Escondiendo {OREF} no solucionarás nada.";
-writemessages[293] = "No ves {OREF} por aquí.";
-writemessages[294] = "La autocompasión no conduce a nada.";
-writemessages[295] = "No recuerdas nada que te pueda ser útil.";
-writemessages[296] = "No hay respuesta alguna.";
-writemessages[297] = "Esa es una opción muy cobarde.";
-writemessages[298] = "No puedes empujar eso que dices.";
-writemessages[299] = "Por favor, especifica qué quieres empujar.";
-writemessages[300] = "No crees que le guste demasiado.";
-writemessages[301] = "No se mueve.";
-writemessages[302] = "No está aquí.";
-writemessages[303] = "No ves eso por aquí.";
-writemessages[304] = "No ves mucho sentido a empujar eso.";
-writemessages[305] = "No parece que se consiga nada empujando {OREF}.";
-writemessages[306] = "Para empujar {OREF} tendría que estar aquí.";
-writemessages[307] = "No puedes mover eso que dices.";
-writemessages[308] = "Por favor, especifica qué quieres mover.";
-writemessages[309] = "No crees que le guste demasiado.";
-writemessages[310] = "No está aquí.";
-writemessages[311] = "No ves mucho sentido a mover eso.";
-writemessages[312] = "No parece que se consiga nada moviendo {OREF}.";
-writemessages[313] = "Para mover {OREF} tendría que estar aquí.";
-writemessages[314] = "No puedes girar eso que dices.";
-writemessages[315] = "Por favor, especifica qué quieres girar.";
-writemessages[316] = "No sería apropiado.";
-writemessages[317] = "No ves utilidad en girar eso.";
-writemessages[318] = "No está aquí.";
-writemessages[319] = "No ves eso por aquí.";
-writemessages[320] = "No ves mucho sentido a girar eso.";
-writemessages[321] = "No ves sentido a girar {OREF}.";
-writemessages[322] = "Girar {OREF} requiere su presencia.";
-writemessages[323] = "No puedes lanzar eso que dices.";
-writemessages[324] = "Por favor, especifica qué quieres lanzar.";
-writemessages[325] = "La violencia no es la solución.";
-writemessages[326] = "No puedes lanzar eso.";
-writemessages[327] = "No está aquí.";
-writemessages[328] = "No ves eso por aquí.";
-writemessages[329] = "No, no ves sentido a lanzar eso.";
-writemessages[330] = "Lanzas {OREF}.";
-writemessages[331] = "Desgraciadamente no llevas {OREF}.";
-writemessages[332] = "No parece decir nada.";
+writemessages[111] = "Llenas la botella de agua espectacularmente cristalina.";
+writemessages[112] = "Llenas la botella. Crees que irá bien.";
+writemessages[113] = "Botella llena. Perfecto.";
+writemessages[114] = "No sin cierta dificultad, llenas la botella de aceite, quedando un poco pringosa.";
+writemessages[115] = "De qué quieres llenarla. No hay nada por aquí.";
+writemessages[116] = "¡La tortila está riquísima!";
+writemessages[117] = "Pero qué sed tenías.";
+writemessages[118] = "Ya te estás agarrando a las ramas. Si no, ya hubieras caído.";
+writemessages[119] = "¡La llave ha caído al suelo!";
+writemessages[120] = "La rama se mueve y se mueve.";
+writemessages[121] = "¡CHUMM! ¡PUM! ¡BROOM! ¡PIFSSSS!";
+writemessages[122] = "¡¡¡ Pilas recargadas !!!";
+writemessages[123] = "¡CHUMM! ¡PUM! ¡BROOM! ¡PIFSSSS!";
+writemessages[124] = "¡¡¡ Pilas recargadas !!!";
+writemessages[125] = "No tienes la linterna... ¿Dónde está?";
+writemessages[126] = "No tienes la pila, así que...";
+writemessages[127] = "La linterna ya tiene las pilas puestas.";
+writemessages[128] = "Vale, linterna lista.";
+writemessages[129] = "No tienes la linterna.";
+writemessages[130] = "La linterna no tiene las pilas puestas.";
+writemessages[131] = "Ya no puedes llevar más trastos.";
+writemessages[132] = "Ya no puedes llevar más trastos.";
+writemessages[133] = "Sacas la pila y la linterna se apaga.";
+writemessages[134] = "Al quitarlo... ¡desaparece de tus manos!";
+writemessages[135] = "Te sientas... y te levantas para seguir jugando. ";
+writemessages[136] = "Ya te lo advertí...";
+writemessages[137] = "Te aconsejo que dejes de insultar.";
+writemessages[138] = "Ya te lo advertí...";
+writemessages[139] = "Te aconsejo que dejes de decir groserías.";
+writemessages[140] = "Has jugado ";
+writemessages[141] = " turnos.";
+writemessages[142] = "{RESTART|Volver a jugar}";
+writemessages[143] = "El enano está muy cabreado para finuras y con malos modales intenta deshacerse de ti.";
+writemessages[144] = "Te observa tímidamente y esboza una sonrisa.";
+writemessages[145] = "Te observa por unos instantes y esboza una sonrisa.";
+writemessages[146] = "Muy ofendido, Elfito, se las pira llorando.";
+writemessages[147] = "Las botas son pequeñas para tus pies.";
+writemessages[148] = "previous_noun=50";
+writemessages[149] = "Don Enano se calza, y agradecido, te deja una linterna.";
+writemessages[150] = "Pues ya lo sabes.";
+writemessages[151] = "El jarrón se ha roto en el suelo.";
+writemessages[152] = "... tras un corto descansito sigues con lo tuyo.";
+writemessages[153] = "¡Algo te impide pasar!";
+writemessages[154] = "¡Si el peaje no quieres pagar, conmigo tendrás que luchar!";
+writemessages[155] = "El pajarito se escapa, cantando alegremente.";
+writemessages[156] = "El pajarito se escapa, cantando alegremente. ";
+writemessages[157] = "Y al ver a la serpiente la ataca en los ojos y la hace huir despavorida.";
+writemessages[158] = "El veneno te ha matado.";
+writemessages[159] = "Abres la jaula que ahora tiene la reja abierta.";
+writemessages[160] = "Necesitarás algo, ¿no?";
+writemessages[161] = "No hace falta. ";
+writemessages[162] = "Poco a poco las valvas del molusco se abren y con asombro descubres que... ¡es una ostra! Dentro hay una preciosa perla que por tu imprudencia cae y rueda por el pasillo. La ostra se cierra.";
+writemessages[163] = "Está cerrada para siempre. No hay más que hacer aquí.";
+writemessages[164] = "¡Es demasiado fuerte para ti, forastero!";
+writemessages[165] = "Abres la puerta con facilidad.";
+writemessages[166] = "Lo intentas pero no cede. Mmm... ¡cuánto óxido!";
+writemessages[167] = "Pero si ya está abierta.";
+writemessages[168] = "¡Algo te impide pasar!";
+writemessages[169] = "Ya está cerrada.";
+writemessages[170] = "Ni cerrar la puerta ni abrirla podrías con el óxido que tiene.";
+writemessages[171] = "Cierras la puerta fácilmente.";
+writemessages[172] = "No hace falta. ";
+writemessages[173] = "Te pasarías horas probando de hacer algo útil pero tal vez no sea el sitio indicado.";
+writemessages[174] = "No ves la pila por aquí.";
+writemessages[175] = "La niebla te lo impide.";
+writemessages[176] = "¡Está en el suelo!";
+writemessages[177] = "El reptil te marca sus colmillos en el cuello y se marcha.";
+writemessages[178] = "El jarrón se ha roto en el suelo.";
+writemessages[179] = "Tienes al pájaro enjaulado.";
+writemessages[180] = "El pajarito se escapa, cantando alegremente.";
+writemessages[181] = "Las resecas semillas queman tu mano y caen de nuevo a tierra.";
+writemessages[182] = "La niebla te lo impide.";
+writemessages[183] = "Es demasiado pesada. Es como si fuera de un gigante.";
+writemessages[184] = "No ves el hacha de gigante por aquí.";
+writemessages[185] = "Es demasiado pesado, tanto como el hacha. Es como si fuera de un gigante.";
+writemessages[186] = "Coger se escribe con ge.";
+writemessages[187] = "No sel puñetelo.";
+writemessages[188] = "El jarrón se ha roto en el suelo.";
+writemessages[189] = "Lo liberas de la pared y lo llevas de la cadena.";
+writemessages[190] = "Recibes de lleno el ataque del enorme oso Peposo.";
+writemessages[191] = "Al verse libre, Peposo escapa dejando a tus pies la cadena.";
+writemessages[192] = " Se yergue sobre sus patas traseras y agitando sus garras amenazadoramente, abre su enorme boca y deja escapar un cavernoso rugido. Al verlo suelto, el Troll Chulangas sale corriendo.";
+writemessages[193] = "Al verse libre, Peposo escapa dejando a tus pies la cadena.";
+writemessages[194] = "No ves a Peposo por aquí. Seguramente no querrá acercarse a un humano ahora que es libre.";
+writemessages[195] = "No le encuentras nada de especial.";
+writemessages[196] = "¡¡Arggg!! ¡Te has ahogado con el hueso!";
+writemessages[197] = "Bebes hasta saciar tu sed.";
+writemessages[198] = "Aunque da un poco de asco, bebes saciando la sed.";
+writemessages[199] = "Es excelente. No puede ser un agua más pura.";
+writemessages[200] = "La puerta queda bien aceitada.";
+writemessages[201] = "No ves aceite por aquí.";
+writemessages[202] = "No le hace falta más aceite. Con el que tiene será suficiente.";
+writemessages[203] = "No sabrías cómo.";
+writemessages[204] = "¿Cómo la vas a apartar?";
+writemessages[205] = "Soplas y parece que funciona. ";
+writemessages[206] = "Soplas. Te mareas un poquito y ya está.";
+writemessages[207] = "El aceite, como es lógico, las deja bien fritas.";
+writemessages[208] = "Ya me dirás cómo quieres hacerlo sin la botella.";
+writemessages[209] = "Ya me dirás cómo quieres hacerlo sin agua.";
+writemessages[210] = "Absorbiendo ávidamente el precioso líquido las semillas se hinchan, se abren y de ellas nace una tierna plantita de judías.";
+writemessages[211] = "Al recibir más agua, el tronco se endurece y crece fuerte hacia lo alto hasta salir por el agujero superior.";
+writemessages[212] = "Nadie te hace caso. ";
+writemessages[213] = "La botella se ha roto en el suelo.";
+writemessages[214] = "La botella se ha roto en el suelo dejando una fea mancha de aceite.";
+writemessages[215] = "No la llevas encima.";
+writemessages[216] = "¡Has fallado! El hacha cae al suelo.";
+writemessages[217] = "¡Le has cortado la cabeza! ¡Maluva se desintegra junto con su hacha!";
+writemessages[218] = "No la llevas encima.";
+writemessages[219] = "Al agua que va la linte... ¡Espera un momento!";
+writemessages[220] = "Al agua que va la linte... ¡Espera un momento!";
+writemessages[221] = "Tiras {OREF} al agua y ves como se hunde... lentamente...";
+writemessages[222] = "Tiras {OREF} al agua. Y allá va, hundiéndose. ¿Pero qué has hecho?";
+writemessages[223] = "¡Te bloquea un fornido Troll que ruge: «un tesoro has de dar para poder pasar»!";
+writemessages[224] = "Por el peso de Peposo, el puente se rompe y los dos al foso.";
+writemessages[225] = "¡Boing! ¡Boong!";
+writemessages[226] = "Nunca te lo habías pasado bien haciendo el tonto. Venga, déjate ya de perder el tiempo.";
+writemessages[227] = "El huevo vibra afectado por el hechizo.";
+writemessages[228] = "Se te ha caído. ";
+writemessages[229] = "El huevo vibra afectado por el hechizo.";
+writemessages[230] = "¡El huevo aparece entre tus pies!";
+writemessages[231] = "La magia hace temblar la cueva.";
+writemessages[232] = "La magia hace temblar la cueva.";
+writemessages[233] = "La magia hace temblar la cueva.";
+writemessages[234] = "La magia hace temblar la cueva.";
+writemessages[235] = "La magia hace temblar la cueva.";
+writemessages[236] = "Nadie te hace caso. ";
+writemessages[237] = "No puedes ";
+writemessages[238] = "RESPONSE_DEFAULT_START";
+writemessages[239] = "Ahora mismo no te apetece.";
+writemessages[240] = "Estás bien así.";
+writemessages[241] = "Te miras de arriba a abajo pero no ves nada especial.";
+writemessages[242] = "No encuentras nada destacable.";
+writemessages[243] = "Esa no es la solución...";
+writemessages[244] = "Ahora mismo no te apetece...";
+writemessages[245] = "Has jugado a demasiadas aventuras conversacionales...";
+writemessages[246] = "No puedes coger eso que dices.";
+writemessages[247] = "Por favor, especifica qué quieres coger.";
+writemessages[248] = "Mejor no coges {OREF}, está bien donde está.";
+writemessages[249] = "No puedes dejar eso que dices.";
+writemessages[250] = "Por favor, especifica qué quieres dejar.";
+writemessages[251] = "Por favor, especifica qué quieres sacar.";
+writemessages[252] = "No puedes sacar eso que dices.";
+writemessages[253] = "No puedes sacar eso.";
+writemessages[254] = "No puedes sacar eso.";
+writemessages[255] = "No puedes sacar {OREF} de ningún sitio, en todo caso puedes quitártelo porque lo llevas puesto...";
+writemessages[256] = "¿De dónde quieres sacar eso?";
+writemessages[257] = "No puedes sacar {OREF} de eso.";
+writemessages[258] = "¿De dónde dices que quieres sacar {OREF}?";
+writemessages[259] = "Antes abre {OBJECT|15}.";
+writemessages[260] = "Antes abre {OBJECT|15}.";
+writemessages[261] = "No puedes sacar nada de ahí porque no está aquí.";
+writemessages[262] = "No puedes coger nada de ahí porque no está aquí.";
+writemessages[263] = "No puedes sacar cosas de ahí.";
+writemessages[264] = "Por favor, especifica qué quieres meter.";
+writemessages[265] = "No puedes meter eso que dices.";
+writemessages[266] = "No puedes meter eso.";
+writemessages[267] = "No puedes meter eso.";
+writemessages[268] = "Primero deberías quitarte {OREF} para poder hacer eso...";
+writemessages[269] = "No llevas {OREF}.";
+writemessages[270] = "¿Dónde quieres meter eso?";
+writemessages[271] = "No puedes meter {OREF} a eso.";
+writemessages[272] = "¿Dónde dices que quieres meter {OREF}?";
+writemessages[273] = "No puedes meter cosas dentro de eso...";
+writemessages[274] = "No puedes meter {OREF} ahí porque no llevas eso.";
+writemessages[275] = "No puedes meter {OREF} ahí porque no llevas eso.";
+writemessages[276] = "Antes abre {OBJECT|15}.";
+writemessages[277] = "Antes abre {OBJECT|15}";
+writemessages[278] = "No te puedes quitar eso que dices.";
+writemessages[279] = "Por favor, especifica qué quieres quitarte.";
+writemessages[280] = "No te puedes poner eso que dices.";
+writemessages[281] = "Por favor, especifica qué quieres ponerte.";
+writemessages[282] = "No puedes tirar de eso que dices.";
+writemessages[283] = "Por favor, especifica de qué quieres tirar.";
+writemessages[284] = "No sería adecuado.";
+writemessages[285] = "No está aquí.";
+writemessages[286] = "No ves mucho sentido a tirar de eso.";
+writemessages[287] = "No parece que se consiga nada tirando de {OREF}.";
+writemessages[288] = "Para tirar de {OREF} tendría que estar aquí.";
+writemessages[289] = "No puedes examinar dentro de eso que dices..";
+writemessages[290] = "Por favor, especifica dentro de qué quieres examinar.";
+writemessages[291] = "No ves nada interesante hacia allí.";
+writemessages[292] = "No puedes mirar eso que dices.";
+writemessages[293] = "No puedes esconder eso que dices.";
+writemessages[294] = "Por favor, especifica qué quieres esconder.";
+writemessages[295] = "Piensas que no conseguirás que pase desapercibido.";
+writemessages[296] = "No está aquí.";
+writemessages[297] = "No crees que eso sirva de algo...";
+writemessages[298] = "Escondiendo {OREF} no solucionarás nada.";
+writemessages[299] = "No ves {OREF} por aquí.";
+writemessages[300] = "La autocompasión no conduce a nada.";
+writemessages[301] = "No recuerdas nada que te pueda ser útil.";
+writemessages[302] = "No hay respuesta alguna.";
+writemessages[303] = "Esa es una opción muy cobarde.";
+writemessages[304] = "No puedes empujar eso que dices.";
+writemessages[305] = "Por favor, especifica qué quieres empujar.";
+writemessages[306] = "No crees que le guste demasiado.";
+writemessages[307] = "No se mueve.";
+writemessages[308] = "No está aquí.";
+writemessages[309] = "No ves eso por aquí.";
+writemessages[310] = "No ves mucho sentido a empujar eso.";
+writemessages[311] = "No parece que se consiga nada empujando {OREF}.";
+writemessages[312] = "Para empujar {OREF} tendría que estar aquí.";
+writemessages[313] = "No puedes mover eso que dices.";
+writemessages[314] = "Por favor, especifica qué quieres mover.";
+writemessages[315] = "No crees que le guste demasiado.";
+writemessages[316] = "No está aquí.";
+writemessages[317] = "No ves mucho sentido a mover eso.";
+writemessages[318] = "No parece que se consiga nada moviendo {OREF}.";
+writemessages[319] = "Para mover {OREF} tendría que estar aquí.";
+writemessages[320] = "No puedes girar eso que dices.";
+writemessages[321] = "Por favor, especifica qué quieres girar.";
+writemessages[322] = "No sería apropiado.";
+writemessages[323] = "No ves utilidad en girar eso.";
+writemessages[324] = "No está aquí.";
+writemessages[325] = "No ves eso por aquí.";
+writemessages[326] = "No ves mucho sentido a girar eso.";
+writemessages[327] = "No ves sentido a girar {OREF}.";
+writemessages[328] = "Girar {OREF} requiere su presencia.";
+writemessages[329] = "No puedes lanzar eso que dices.";
+writemessages[330] = "Por favor, especifica qué quieres lanzar.";
+writemessages[331] = "La violencia no es la solución.";
+writemessages[332] = "No puedes lanzar eso.";
 writemessages[333] = "No está aquí.";
-writemessages[334] = "Prestas atención a ver si oyes algo más pero no escuchas nada en especial.";
-writemessages[335] = "No puedes comer eso que dices.";
-writemessages[336] = "Por favor, especifica qué quieres comer.";
-writemessages[337] = "No crees que se deje. En cualquier caso no es muy apropiado.";
-writemessages[338] = "No es muy buena idea que te comas eso.";
+writemessages[334] = "No ves eso por aquí.";
+writemessages[335] = "No, no ves sentido a lanzar eso.";
+writemessages[336] = "Lanzas {OREF}.";
+writemessages[337] = "Desgraciadamente no llevas {OREF}.";
+writemessages[338] = "No parece decir nada.";
 writemessages[339] = "No está aquí.";
-writemessages[340] = "No quieres comer eso.";
-writemessages[341] = "No ves sentido a comerte {OREF}.";
-writemessages[342] = "Te comes {OREF}.";
-writemessages[343] = "Para comerte {OREF} debería estar aquí.";
-writemessages[344] = "No puedes beber eso que dices.";
-writemessages[345] = "Por favor, especifica qué quieres beber.";
-writemessages[346] = "Estás perdiendo el rumbo.";
-writemessages[347] = "No está aquí.";
-writemessages[348] = "No quieres beber eso.";
-writemessages[349] = "No ves sentido a beberte {OREF}.";
-writemessages[350] = "Te bebes {OREF}.";
-writemessages[351] = "Para beberte {OREF} debería estar aquí.";
-writemessages[352] = "No tienes ganas.";
-writemessages[353] = "No puedes escupir a eso que dices.";
-writemessages[354] = "Por favor, especifica a qué quieres escupir.";
-writemessages[355] = "Eso sería de muy mala educación.";
-writemessages[356] = "No está aquí.";
-writemessages[357] = "No le ves sentido a escupir a eso.";
-writemessages[358] = "No quieres escupir a {OREF}.";
-writemessages[359] = "No ves {OREF} por aquí.";
-writemessages[360] = "No puedes tocar eso que dices.";
-writemessages[361] = "Por favor, especifica qué quieres tocar.";
-writemessages[362] = "No se deja.";
-writemessages[363] = "No está aquí.";
-writemessages[364] = "No le ves sentido a tocar eso.";
-writemessages[365] = "No quieres tocar {OREF}.";
-writemessages[366] = "No ves {OREF} por aquí.";
-writemessages[367] = "No puedes oler eso que dices.";
-writemessages[368] = "Por favor, especifica qué quieres oler.";
-writemessages[369] = "Es de mala educación.";
-writemessages[370] = "No está aquí.";
-writemessages[371] = "No le ves sentido a oler eso.";
-writemessages[372] = "La verdad es que {OREF} huele bien.";
-writemessages[373] = "La verdad es que {OREF} huele bien.";
-writemessages[374] = "No quieres oler {OREF}.";
-writemessages[375] = "La verdad es que {OREF} huele bien.";
-writemessages[376] = "No ves {OREF} por aquí.";
-writemessages[377] = "No puedes agitar eso que dices.";
-writemessages[378] = "Por favor, especifica qué quieres agitar.";
-writemessages[379] = "No crees que le guste demasiado.";
-writemessages[380] = "No está aquí.";
-writemessages[381] = "No le ves sentido a agitar eso.";
-writemessages[382] = "No quieres agitar {OREF}.";
-writemessages[383] = "No ves {OREF} por aquí.";
-writemessages[384] = "No puedes balancearte en eso que dices.";
-writemessages[385] = "Por favor, especifica dónde quieres balancearte.";
-writemessages[386] = "No crees que le guste demasiado.";
-writemessages[387] = "No está aquí.";
-writemessages[388] = "No es algo adecuado para balancearse.";
-writemessages[389] = "Crees que {OREF} no es algo adecuado para balancearse.";
-writemessages[390] = "No ves {OREF} por aquí.";
-writemessages[391] = "No tienes sueño.";
-writemessages[392] = "Saltas, sin conseguir nada.";
-writemessages[393] = "Rezas todo lo que sabes.";
-writemessages[394] = "No quieres cavar aquí.";
-writemessages[395] = "Pensar siempre es bueno.";
-writemessages[396] = "No tienes sueño.";
-writemessages[397] = "Cantas fatal.";
-writemessages[398] = "La verdad es que bailar no se te da muy bien...";
-writemessages[399] = "No puedes atacar a eso que dices.";
-writemessages[400] = "Por favor, especifica a qué o a quién quieres atacar.";
-writemessages[401] = "La violencia no es buena.";
-writemessages[402] = "No está aquí.";
-writemessages[403] = "La violencia no es la solución.";
-writemessages[404] = "Atacar {OREF} no solucionará nada.";
-writemessages[405] = "No ves {OREF} por aquí, en cualquier caso la violencia no es la solución.";
-writemessages[406] = "No puedes golpear a eso que dices.";
-writemessages[407] = "Por favor, especifica a qué o a quién quieres golpear.";
-writemessages[408] = "La violencia no es buena.";
-writemessages[409] = "No está aquí.";
-writemessages[410] = "La violencia no es la solución.";
-writemessages[411] = "Golpear {OREF} no solucionará nada.";
-writemessages[412] = "No ves {OREF} por aquí, en cualquier caso la violencia no es la solución.";
-writemessages[413] = "USAR es demasiado genérico. Por favor, sé más concreto. Por ejemplo, si quieres barrer el suelo utiliza BARRER SUELO, no USAR ESCOBA.";
-writemessages[414] = "No puedes limpiar eso que dices.";
-writemessages[415] = "Por favor, especifica qué quieres limpiar.";
-writemessages[416] = "No se deja.";
-writemessages[417] = "No está aquí.";
-writemessages[418] = "No le ves sentido a limpiar eso.";
-writemessages[419] = "Limpias {OREF}. No hay efecto alguno.";
-writemessages[420] = "No ves {OREF} por aquí.";
-writemessages[421] = "No puedes rascar eso que dices.";
-writemessages[422] = "Por favor, especifica qué quieres rascar.";
-writemessages[423] = "No se deja.";
-writemessages[424] = "No está aquí.";
-writemessages[425] = "No quieres rascar eso.";
-writemessages[426] = "Rascas {OREF}. No hay efecto alguno.";
-writemessages[427] = "No ves {OREF}_ por aquí.";
-writemessages[428] = "No puedes quemar eso que dices.";
-writemessages[429] = "Por favor, especifica qué quieres quemar.";
-writemessages[430] = "La barbarie no solucionará tus problemas.";
-writemessages[431] = "No está aquí.";
-writemessages[432] = "No le ves sentido a quemar eso.";
-writemessages[433] = "Quemar {OREF} no es la solución.";
-writemessages[434] = "No ves {OREF} por aquí.";
-writemessages[435] = "No puedes apagar eso que dices.";
-writemessages[436] = "Por favor, especifica qué quieres apagar.";
-writemessages[437] = "No le ves sentido a apagar eso.";
-writemessages[438] = "No quieres apagar {OREF}.";
-writemessages[439] = "No ves {OREF} por aquí.";
-writemessages[440] = "No puedes cortar eso que dices.";
-writemessages[441] = "Por favor, especifica qué quieres cortar.";
-writemessages[442] = "La violencia no es la solución.";
-writemessages[443] = "No crees que cortar eso sea de mucha utilidad.";
-writemessages[444] = "No está aquí.";
-writemessages[445] = "No le ves sentido a cortar eso.";
-writemessages[446] = "No ves sentido a cortar {OREF}.";
-writemessages[447] = "No ves {OREF} por aquí.";
-writemessages[448] = "No puedes atar eso que dices.";
-writemessages[449] = "Por favor, especifica qué quieres atar.";
-writemessages[450] = "Crees que no se va a dejar.";
-writemessages[451] = "No está aquí.";
-writemessages[452] = "No le ves sentido a atar eso.";
-writemessages[453] = "No quieres atar {OREF}.";
-writemessages[454] = "No ves {OREF} por aquí.";
-writemessages[455] = "No puedes desatar eso que dices.";
-writemessages[456] = "Por favor, especifica qué quieres desatar.";
-writemessages[457] = "¿Desatarle?.";
-writemessages[458] = "No está aquí.";
-writemessages[459] = "No le ves sentido a desatar eso.";
-writemessages[460] = "¿Desatar {OREF}?, ¿para qué?";
-writemessages[461] = "No ves {OREF} por aquí.";
-writemessages[462] = "No puedes llenar eso que dices.";
-writemessages[463] = "Por favor, especifica qué quieres llenar.";
-writemessages[464] = "No le ves sentido a llenar eso.";
-writemessages[465] = "No quieres llenar {OREF}.";
-writemessages[466] = "No puedes llenar {OREF}.";
+writemessages[340] = "Prestas atención a ver si oyes algo más pero no escuchas nada en especial.";
+writemessages[341] = "No puedes comer eso que dices.";
+writemessages[342] = "Por favor, especifica qué quieres comer.";
+writemessages[343] = "No crees que se deje. En cualquier caso no es muy apropiado.";
+writemessages[344] = "No es muy buena idea que te comas eso.";
+writemessages[345] = "No está aquí.";
+writemessages[346] = "No quieres comer eso.";
+writemessages[347] = "No ves sentido a comerte {OREF}.";
+writemessages[348] = "Te comes {OREF}.";
+writemessages[349] = "Para comerte {OREF} debería estar aquí.";
+writemessages[350] = "No puedes beber eso que dices.";
+writemessages[351] = "Por favor, especifica qué quieres beber.";
+writemessages[352] = "Estás perdiendo el rumbo.";
+writemessages[353] = "No está aquí.";
+writemessages[354] = "No quieres beber eso.";
+writemessages[355] = "No ves sentido a beberte {OREF}.";
+writemessages[356] = "Te bebes {OREF}.";
+writemessages[357] = "Para beberte {OREF} debería estar aquí.";
+writemessages[358] = "No tienes ganas.";
+writemessages[359] = "No puedes escupir a eso que dices.";
+writemessages[360] = "Por favor, especifica a qué quieres escupir.";
+writemessages[361] = "Eso sería de muy mala educación.";
+writemessages[362] = "No está aquí.";
+writemessages[363] = "No le ves sentido a escupir a eso.";
+writemessages[364] = "No quieres escupir a {OREF}.";
+writemessages[365] = "No ves {OREF} por aquí.";
+writemessages[366] = "No puedes tocar eso que dices.";
+writemessages[367] = "Por favor, especifica qué quieres tocar.";
+writemessages[368] = "No se deja.";
+writemessages[369] = "No está aquí.";
+writemessages[370] = "No le ves sentido a tocar eso.";
+writemessages[371] = "No quieres tocar {OREF}.";
+writemessages[372] = "No ves {OREF} por aquí.";
+writemessages[373] = "No puedes oler eso que dices.";
+writemessages[374] = "Por favor, especifica qué quieres oler.";
+writemessages[375] = "Es de mala educación.";
+writemessages[376] = "No está aquí.";
+writemessages[377] = "No le ves sentido a oler eso.";
+writemessages[378] = "La verdad es que {OREF} huele bien.";
+writemessages[379] = "La verdad es que {OREF} huele bien.";
+writemessages[380] = "No quieres oler {OREF}.";
+writemessages[381] = "La verdad es que {OREF} huele bien.";
+writemessages[382] = "No ves {OREF} por aquí.";
+writemessages[383] = "No puedes agitar eso que dices.";
+writemessages[384] = "Por favor, especifica qué quieres agitar.";
+writemessages[385] = "No crees que le guste demasiado.";
+writemessages[386] = "No está aquí.";
+writemessages[387] = "No le ves sentido a agitar eso.";
+writemessages[388] = "No quieres agitar {OREF}.";
+writemessages[389] = "No ves {OREF} por aquí.";
+writemessages[390] = "No puedes balancearte en eso que dices.";
+writemessages[391] = "Por favor, especifica dónde quieres balancearte.";
+writemessages[392] = "No crees que le guste demasiado.";
+writemessages[393] = "No está aquí.";
+writemessages[394] = "No es algo adecuado para balancearse.";
+writemessages[395] = "Crees que {OREF} no es algo adecuado para balancearse.";
+writemessages[396] = "No ves {OREF} por aquí.";
+writemessages[397] = "No tienes sueño.";
+writemessages[398] = "Saltas, sin conseguir nada.";
+writemessages[399] = "Rezas todo lo que sabes.";
+writemessages[400] = "No quieres cavar aquí.";
+writemessages[401] = "Pensar siempre es bueno.";
+writemessages[402] = "No tienes sueño.";
+writemessages[403] = "Cantas fatal.";
+writemessages[404] = "La verdad es que bailar no se te da muy bien...";
+writemessages[405] = "No puedes atacar a eso que dices.";
+writemessages[406] = "Por favor, especifica a qué o a quién quieres atacar.";
+writemessages[407] = "La violencia no es buena.";
+writemessages[408] = "No está aquí.";
+writemessages[409] = "La violencia no es la solución.";
+writemessages[410] = "Atacar {OREF} no solucionará nada.";
+writemessages[411] = "No ves {OREF} por aquí, en cualquier caso la violencia no es la solución.";
+writemessages[412] = "No puedes golpear a eso que dices.";
+writemessages[413] = "Por favor, especifica a qué o a quién quieres golpear.";
+writemessages[414] = "La violencia no es buena.";
+writemessages[415] = "No está aquí.";
+writemessages[416] = "La violencia no es la solución.";
+writemessages[417] = "Golpear {OREF} no solucionará nada.";
+writemessages[418] = "No ves {OREF} por aquí, en cualquier caso la violencia no es la solución.";
+writemessages[419] = "USAR es demasiado genérico. Por favor, sé más concreto. Por ejemplo, si quieres barrer el suelo utiliza BARRER SUELO, no USAR ESCOBA.";
+writemessages[420] = "No puedes limpiar eso que dices.";
+writemessages[421] = "Por favor, especifica qué quieres limpiar.";
+writemessages[422] = "No se deja.";
+writemessages[423] = "No está aquí.";
+writemessages[424] = "No le ves sentido a limpiar eso.";
+writemessages[425] = "Limpias {OREF}. No hay efecto alguno.";
+writemessages[426] = "No ves {OREF} por aquí.";
+writemessages[427] = "No puedes rascar eso que dices.";
+writemessages[428] = "Por favor, especifica qué quieres rascar.";
+writemessages[429] = "No se deja.";
+writemessages[430] = "No está aquí.";
+writemessages[431] = "No quieres rascar eso.";
+writemessages[432] = "Rascas {OREF}. No hay efecto alguno.";
+writemessages[433] = "No ves {OREF}_ por aquí.";
+writemessages[434] = "No puedes quemar eso que dices.";
+writemessages[435] = "Por favor, especifica qué quieres quemar.";
+writemessages[436] = "La barbarie no solucionará tus problemas.";
+writemessages[437] = "No está aquí.";
+writemessages[438] = "No le ves sentido a quemar eso.";
+writemessages[439] = "Quemar {OREF} no es la solución.";
+writemessages[440] = "No ves {OREF} por aquí.";
+writemessages[441] = "No puedes apagar eso que dices.";
+writemessages[442] = "Por favor, especifica qué quieres apagar.";
+writemessages[443] = "No le ves sentido a apagar eso.";
+writemessages[444] = "No quieres apagar {OREF}.";
+writemessages[445] = "No ves {OREF} por aquí.";
+writemessages[446] = "No puedes cortar eso que dices.";
+writemessages[447] = "Por favor, especifica qué quieres cortar.";
+writemessages[448] = "La violencia no es la solución.";
+writemessages[449] = "No crees que cortar eso sea de mucha utilidad.";
+writemessages[450] = "No está aquí.";
+writemessages[451] = "No le ves sentido a cortar eso.";
+writemessages[452] = "No ves sentido a cortar {OREF}.";
+writemessages[453] = "No ves {OREF} por aquí.";
+writemessages[454] = "No puedes atar eso que dices.";
+writemessages[455] = "Por favor, especifica qué quieres atar.";
+writemessages[456] = "Crees que no se va a dejar.";
+writemessages[457] = "No está aquí.";
+writemessages[458] = "No le ves sentido a atar eso.";
+writemessages[459] = "No quieres atar {OREF}.";
+writemessages[460] = "No ves {OREF} por aquí.";
+writemessages[461] = "No puedes desatar eso que dices.";
+writemessages[462] = "Por favor, especifica qué quieres desatar.";
+writemessages[463] = "¿Desatarle?.";
+writemessages[464] = "No está aquí.";
+writemessages[465] = "No le ves sentido a desatar eso.";
+writemessages[466] = "¿Desatar {OREF}?, ¿para qué?";
 writemessages[467] = "No ves {OREF} por aquí.";
-writemessages[468] = "Mejor no.";
-writemessages[469] = "No te apetece trepar.";
-writemessages[470] = "No puedes retorcer eso que dices.";
-writemessages[471] = "Por favor, especifica qué quieres retorcer.";
-writemessages[472] = "La violencia no es la solución.";
-writemessages[473] = "No está aquí.";
-writemessages[474] = "No le ves sentido a retorcer eso.";
-writemessages[475] = "No quieres retorcer {OREF}.";
-writemessages[476] = "No ves {OREF} por aquí.";
-writemessages[477] = "No puedes apretar eso que dices.";
-writemessages[478] = "Por favor, especifica qué quieres apretar.";
-writemessages[479] = "La violencia no es la solución.";
-writemessages[480] = "No está aquí.";
-writemessages[481] = "No le ves sentido a apretar eso.";
-writemessages[482] = "No quieres apretar {OREF}.";
-writemessages[483] = "No ves {OREF} por aquí.";
-writemessages[484] = "No puedes besar eso que dices.";
-writemessages[485] = "Por favor, especifica a qué o a quién quieres besar.";
-writemessages[486] = "No se deja.";
-writemessages[487] = "No está aquí.";
-writemessages[488] = "No quieres besar eso.";
-writemessages[489] = "No quieres besar {OREF}.";
-writemessages[490] = "No ves {OREF} por aquí.";
-writemessages[491] = "No puedes abrazar eso que dices.";
-writemessages[492] = "Por favor, especifica a qué o a quién quieres abrazar.";
-writemessages[493] = "Ni se deja, ni crees que sea muy apropiado.";
-writemessages[494] = "No está aquí.";
-writemessages[495] = "No quieres abrazar eso.";
-writemessages[496] = "No quieres abrazar {OREF}.";
-writemessages[497] = "No ves {OREF} por aquí.";
-writemessages[498] = "No puedes conectar eso que dices.";
-writemessages[499] = "Por favor, especifica qué quieres conectar.";
-writemessages[500] = "No ves la manera de conectar eso.";
-writemessages[501] = "Activas {OREF}.";
-writemessages[502] = "Ya lo está.";
-writemessages[503] = "No ves la manera de activar {OREF}.";
-writemessages[504] = "No ves {OREF} por aquí.";
-writemessages[505] = "No puedes desconectar eso que dices.";
-writemessages[506] = "Por favor, especifica qué quieres desconectar.";
-writemessages[507] = "No le ves sentido a desconectar eso.";
-writemessages[508] = "Desactivas {OREF}.";
-writemessages[509] = "Ya lo está.";
-writemessages[510] = "No puedes desconectar {OREF}.";
-writemessages[511] = "No ves {OREF} por aquí.";
-writemessages[512] = "No puedes abrir eso que dices.";
-writemessages[513] = "Por favor, especifica qué quieres abrir.";
-writemessages[514] = "No le ves sentido a abrir eso.";
-writemessages[515] = "Abres {OREF}.";
-writemessages[516] = "Está cerrado con llave.";
-writemessages[517] = "Ya lo está.";
-writemessages[518] = "Ya lo está.";
-writemessages[519] = "No puedes abrir {OREF}.";
-writemessages[520] = "No ves {OREF} por aquí.";
-writemessages[521] = "No puedes cerrar eso que dices.";
-writemessages[522] = "Por favor, especifica qué quieres cerrar.";
-writemessages[523] = "No le ves sentido a cerrar eso.";
-writemessages[524] = "Cierras {OREF}.";
-writemessages[525] = "Ya lo está.";
-writemessages[526] = "No puedes cerrar {OREF}.";
-writemessages[527] = "No ves {OREF} por aquí.";
-writemessages[528] = "No puedes chupar eso que dices.";
-writemessages[529] = "Por favor, especifica qué quieres chupar.";
-writemessages[530] = "Eso sería muy poco apropiado.";
-writemessages[531] = "Piensas en comerte {OREF} pero te contienes.";
-writemessages[532] = "No está aquí.";
-writemessages[533] = "No te imaginas chupando eso.";
-writemessages[534] = "No quieres chupar {OREF}.";
-writemessages[535] = "No ves {OREF} por aquí.";
-writemessages[536] = "No puedes romper eso que dices.";
-writemessages[537] = "Por favor, especifica qué quieres romper.";
-writemessages[538] = "La violencia no es buena.";
-writemessages[539] = "No está aquí.";
-writemessages[540] = "La violencia no es la solución.";
-writemessages[541] = "Romper {OREF} no solucionará nada.";
-writemessages[542] = "No ves {OREF} por aquí; en cualquier caso, romper eso no es la solución.";
-writemessages[543] = "No puedes comprar eso que dices.";
-writemessages[544] = "Por favor, especifica qué quieres comprar.";
-writemessages[545] = "Todo el mundo tiene un precio... pero no está en venta.";
-writemessages[546] = "No está aquí.";
-writemessages[547] = "No hay nada en venta.";
-writemessages[548] = "No hay nada en venta.";
-writemessages[549] = "No ves {OREF} por aquí.";
-writemessages[550] = "No puedes doblar eso que dices.";
-writemessages[551] = "Por favor, especifica qué quieres doblar.";
-writemessages[552] = "Piensas que ya está bien como está...";
-writemessages[553] = "No está aquí.";
-writemessages[554] = "Prefieres no doblar eso.";
-writemessages[555] = "Doblar {OREF} no solucionará nada.";
-writemessages[556] = "No ves {OREF} por aquí.";
-writemessages[557] = "No puedes desdoblar eso que dices.";
-writemessages[558] = "Por favor, especifica qué quieres desdoblar.";
-writemessages[559] = "Piensas que ya está bien como está...";
-writemessages[560] = "No está aquí.";
-writemessages[561] = "¿Para qué quieres desdoblar eso?";
-writemessages[562] = "¿Desdoblar {OREF}?, ¿para qué?";
-writemessages[563] = "No ves {OREF} por aquí.";
-writemessages[564] = "No puedes dar eso.";
-writemessages[565] = "Por favor, especifica qué quieres dar.";
-writemessages[566] = "No puedes dar eso que dices.";
-writemessages[567] = "No puedes dar eso.";
-writemessages[568] = "Primero deberías quitarte {OREF} para poder hacer eso...";
-writemessages[569] = "No llevas {OREF}.";
-writemessages[570] = "¿A quién quieres dar eso?";
-writemessages[571] = "No puedes darle {OREF} a eso.";
-writemessages[572] = "No puedes darle {OREF} a eso.";
-writemessages[573] = "Estás perdiendo la cabeza...";
-writemessages[574] = "No le puedes dar {OREF} porque no está aquí.";
-writemessages[575] = "Le ofreces {OREF} pero no le hace ni caso.";
-writemessages[576] = "No puedes mostrar eso.";
-writemessages[577] = "Por favor, especifica qué quieres mostrar.";
-writemessages[578] = "No puedes mostrar eso que dices.";
-writemessages[579] = "No puedes mostrar eso.";
-writemessages[580] = "Primero deberías quitarte {OREF} para poder hacer eso...";
-writemessages[581] = "No llevas {OREF}.";
-writemessages[582] = "¿A quién quieres mostrar eso?";
-writemessages[583] = "No puedes mostrarle {OREF} a eso.";
-writemessages[584] = "No puedes mostrarle {OREF} a eso.";
-writemessages[585] = "Estás perdiendo la cabeza...";
-writemessages[586] = "No le puedes mostrar {OREF} porque no está aquí.";
-writemessages[587] = "Le muestras {OREF} pero no le hace ni caso.";
-writemessages[588] = "No puedes soplar eso que dices.";
-writemessages[589] = "Por favor, especifica a qué quieres soplar.";
-writemessages[590] = "No crees que le guste demasiado.";
-writemessages[591] = "No está aquí.";
-writemessages[592] = "No le ves sentido a soplar eso.";
-writemessages[593] = "No quieres soplar {OREF}.";
-writemessages[594] = "No ves eso que dices.";
-writemessages[595] = "Mejor no, puede enfadarse.";
-writemessages[596] = "Gritas con fuerza pero no te oye.";
-writemessages[597] = "Gritas lo más fuerte que puedes y... no sucede nada.";
-writemessages[598] = "No crees que haga falta.";
-writemessages[599] = "No está aquí.";
-writemessages[600] = "Pellizcas tu mejilla creyendo que despertarás pero... no estás soñando...¿o sí?";
-writemessages[601] = "No puedes levantar eso que dices.";
-writemessages[602] = "Por favor, especifica qué quieres levantar.";
-writemessages[603] = "No crees que le guste demasiado.";
-writemessages[604] = "No está aquí.";
-writemessages[605] = "No ves mucho sentido a levantar eso.";
-writemessages[606] = "No puedes levantar {OREF}. Pesa demasiado.";
-writemessages[607] = "No conseguirás nada levantando eso.";
-writemessages[608] = "Para levantar {OREF} tendría que estar aquí.";
-writemessages[609] = "No puedes arrastrar eso que dices.";
-writemessages[610] = "Por favor, especifica qué quieres arrastrar.";
-writemessages[611] = "No crees que le guste demasiado.";
-writemessages[612] = "No está aquí.";
-writemessages[613] = "No ves mucho sentido a arrastrar eso.";
-writemessages[614] = "No parece que se consiga nada arrastrando {OREF}.";
-writemessages[615] = "Para arrastrar {OREF} tendría que estar aquí.";
-writemessages[616] = "No puedes vaciar eso que dices.";
-writemessages[617] = "Por favor, especifica qué quieres vaciar.";
-writemessages[618] = "No es lo más apropiado.";
-writemessages[619] = "No está aquí.";
-writemessages[620] = "No le ves sentido a vaciar eso.";
-writemessages[621] = "No quieres vaciar {OREF}.";
-writemessages[622] = "No ves {OREF} por aquí.";
-writemessages[623] = "No puedes llamar a eso que dices.";
-writemessages[624] = "Por favor, especifica a qué o a quién quieres llamar.";
-writemessages[625] = "No hay respuesta...";
-writemessages[626] = "No está aquí.";
-writemessages[627] = "No le ves sentido a llamar a eso.";
-writemessages[628] = "No quieres llamar a {OREF}.";
-writemessages[629] = "No ves {OREF} por aquí.";
-writemessages[630] = "No puedes preguntar a eso que dices.";
-writemessages[631] = "Por favor, especifica a quién quieres preguntar.";
-writemessages[632] = "No hay respuesta alguna...";
-writemessages[633] = "No está aquí.";
-writemessages[634] = "No le ves sentido a preguntar a eso.";
-writemessages[635] = "No quieres preguntar a {OREF}.";
-writemessages[636] = "No ves {OREF} por aquí.";
-writemessages[637] = "No puedes consultar eso que dices.";
-writemessages[638] = "Por favor, especifica qué quieres consultar.";
-writemessages[639] = "No le ves sentido a consultar eso.";
-writemessages[640] = "No quieres consultar {OREF}.";
-writemessages[641] = "No ves {OREF} por aquí.";
-writemessages[642] = "No puedes insultar a eso que dices.";
-writemessages[643] = "Por favor, especifica a quién quieres insultar.";
-writemessages[644] = "No parece hacerte ni caso...";
-writemessages[645] = "No está aquí.";
-writemessages[646] = "No conseguirás nada insultando a eso.";
-writemessages[647] = "Estás perdiendo la cabeza...";
-writemessages[648] = "Ni ves eso que dices, ni crees que sea útil insultarle.";
-writemessages[649] = "No puedes unir eso que dices.";
-writemessages[650] = "Por favor, especifica qué quieres unir.";
-writemessages[651] = "No crees que le guste demasiado.";
-writemessages[652] = "No está aquí.";
-writemessages[653] = "No ves mucho sentido a unir eso.";
-writemessages[654] = "No parece que se consiga nada uniendo {OREF}.";
-writemessages[655] = "Para unir {OREF} tendría que estar aquí.";
-writemessages[656] = "No puedes separar eso que dices.";
-writemessages[657] = "Por favor, especifica qué quieres separar.";
-writemessages[658] = "No crees que le guste demasiado.";
-writemessages[659] = "No está aquí.";
-writemessages[660] = "No ves mucho sentido a separar eso.";
-writemessages[661] = "No parece que se consiga nada separando {OREF}.";
-writemessages[662] = "Para separar {OREF}, tendría que estar aquí.";
-writemessages[663] = "No puedes hablar con eso que dices.";
-writemessages[664] = "Por favor, especifica con quién quieres hablar.";
-writemessages[665] = "No parece interesarse por tu charla.";
-writemessages[666] = "No está aquí.";
-writemessages[667] = "No quieres hablarle a eso.";
-writemessages[668] = "Estás perdiendo la cabeza...";
-writemessages[669] = "Ni ves eso que dices, ni crees que sea útil hablarle.";
-writemessages[670] = "No puedes ir ahí donde dices.";
-writemessages[671] = "Por favor, especifica dónde quieres ir.";
-writemessages[672] = "Prefieres no acercarte más...";
-writemessages[673] = "No sabes dónde está.";
-writemessages[674] = "No le ves sentido a ir hacia eso.";
-writemessages[675] = "No quieres ir a {OREF}.";
-writemessages[676] = "No ves eso que dices.";
-writemessages[677] = "No puedes ir ";
-writemessages[678] = ". ";
-writemessages[679] = "RESPONSE_DEFAULT_END";
-writemessages[680] = "PRO1";
-writemessages[681] = "La aventura original";
-writemessages[682] = "Esta parte del bosque es muy densa, los árboles te impiden orientarte bien y son todos muy parecidos. Vagas por entre la maleza buscando tu rumbo pero pronto te das cuenta de que estás algo despistadillo.";
-writemessages[683] = "<b>Si es la primera vez que juegas a una aventura conversacional y no sabes por dónde empezar, teclea «AYUDA».</b>";
-writemessages[684] = "¡Puaj! Aquí apesta. ";
-writemessages[685] = "El sol hace brillar algo en una rama.";
-writemessages[686] = "Oyes un débil llanto y con dificultad ves una figura traslúcida.";
-writemessages[687] = "«¡Mi casa!»";
-writemessages[688] = "Estás en una depresión de siete metros. El valle se estrecha hacia el sur.";
-writemessages[689] = " Elfito da saltos de alegría.";
-writemessages[690] = " Elfito da saltos de alegría.";
-writemessages[691] = " Tienes ante ti la entrada a La Gran Caverna.";
-writemessages[692] = "Elfito dice: «¡Mi casa!»";
-writemessages[693] = "«Mi agradecimiento está sobre la mesa.» ";
-writemessages[694] = "Y penetra en las profundidades.";
-writemessages[695] = "«No es aquí.»";
-writemessages[696] = "«¡Mi casa!»";
-writemessages[697] = "El calor que se desprende de la burbujeante lava es asfixiante. Un enorme penacho de cenizas se desprende flotando perezosamente del ardiente magma, dejando una peste cosa mala. Imprudentemente estás haciendo el payaso en el peligroso borde del volcán";
-writemessages[698] = " junto a un enano que rabia de amargura.";
-writemessages[699] = ".";
-writemessages[700] = "Has jugado durante ";
-writemessages[701] = " turnos.";
-writemessages[702] = "{RESTART|Volver a jugar}";
-writemessages[703] = "Con un click la puerta se cierra mágicamente...";
-writemessages[704] = "Ánimo, solo te faltan ";
-writemessages[705] = ".";
-writemessages[706] = "Si no has perdido el último tesoro vencerás a la Gran Caverna.";
-writemessages[707] = "Mágicamente, dándote otra oportunidad de vivir, la puerta se abre...";
-writemessages[708] = "Te encuentras en una pequeña cueva, rodeado de húmedas rocas. Los rayos del sol penetran a través de los barrotes de la cerrada reja. Hacia el oeste sale un pasadizo bajo y oscuro que se pierde en el misterio.";
-writemessages[709] = "Te encuentras en la salida al exterior de la cueva. Vuelves a ver los rayos del sol.";
-writemessages[710] = "PRO2";
-writemessages[711] = "¡La linterna se ha apagado!";
-writemessages[712] = "Maluva te parte en dos la cabeza.";
-writemessages[713] = "El reptil te marca sus colmillos en el cuello, y se marcha.";
-writemessages[714] = "El veneno te ha matado.";
-writemessages[715] = "La linterna va mal. La luz parpadea.";
-writemessages[716] = "¡La linterna apenas da luz!";
-writemessages[717] = "Tropiezas en la oscuridad y te desnucas.";
-writemessages[718] = "¡El enano Maluva sale de entre las sombras! Chorreando espesa baba avanza bamboleante hacia ti.";
-writemessages[719] = "...¡y falla por poco!";
-writemessages[720] = "Con un gran insulto vuelve a las tinieblas.";
-writemessages[721] = "\1<div style='padding:0 1%; margin: 0; font-family:monospace; font-size:.7em; text-align:center'>------- LOS TESOROS DE -------</div>";
-writemessages[722] = "\1<div style='padding:0 1%; margin: 0; font-family:monospace; font-size:.7em; text-align:center'>----- LA CAVERNA ORIGINAL ----</div>";
-writemessages[723] = "\1<div style='padding:0 1%; margin: 0; font-family:monospace; font-size:.7em; text-align:center'>---------- SON TUYOS ---------</div>";
-writemessages[724] = "\1<div style='padding:0 1%; margin: 0; font-size:.7em; text-align:center'>FELICIDADES</div>";
-writemessages[725] = "   Aparece Elfito y te dice:";
-writemessages[726] = "    «Al haber perdido todos sus tesoros La Gran Caverna no tiene razón para seguir existiendo y está a punto de derrumbarse, larguémonos cuanto antes»";
-writemessages[727] = "        y se las pira...";
-writemessages[728] = "Tal como dijo Elfito, sin tesoros que le den fuerza vital, la caverna se colapsa. El cataclismo acaba con todo ser viviente.";
-writemessages[729] = "Algo que has hecho te impide completar la aventura.";
-writemessages[730] = "No llevas todos los objetos que necesitas, por lo tanto la magia de La Gran Caverna te impide el paso.";
-writemessages[731] = "Examina lo que has encontrado. Explora toda la zona.";
-writemessages[732] = "Algunas de las preguntas más frecuentes son:";
-writemessages[733] = "No la ves desde aquí.";
-writemessages[734] = "No estás suficientemente cerca.";
-writemessages[735] = "Es una sólida y bella construcción.";
-writemessages[736] = "Continúa hacia una extraña construcción.";
-writemessages[737] = "No hay nada que te llame la atención. Acaban aquí.";
-writemessages[738] = "Estas botas tienen un tacón muy alto pero no son de tu número.";
-writemessages[739] = "Es de vidrio y está vacía.";
-writemessages[740] = "La tienes llena de agua fresca y fertilizante.";
-writemessages[741] = "Es una sólida construcción que antaño perteneció a los dueños del valle, hoy está abandonada.";
-writemessages[742] = "Se ve tan pequeña que parece de juguete.";
-writemessages[743] = "La columna de humo sube de forma lenta, casi poética.";
-writemessages[744] = "La imagen del volcán es aterradora. Suerte que está lejos.";
-writemessages[745] = "Está hacia al sur. No sabrías describirla muy bien desde aquí.";
-writemessages[746] = "La entrada es pequeña pero lo suficientemente amplia para que pases por ella y penetres a un Mundo Mágico.";
-writemessages[747] = "La boca del pozo está muy oscura.";
-writemessages[748] = "Chapoteas tocando gelatinosas babosidades ";
-writemessages[749] = "¡pero de monedas nada, listillo!";
-writemessages[750] = "Chapoteas tocando asquerosas gelatinosas babosidades ";
-writemessages[751] = "y de pronto descubres que hay ¡una moneda!";
-writemessages[752] = "previous_noun=51";
-writemessages[753] = "Dicen que las aguas de este río tienen la mágica propiedad de hacer crecer semillas muy viejas.";
-writemessages[754] = "No dan muchas ganas de meterse en él pero no conseguirás nada quedándote aquí. ¿Con qué tipo de criaturas te vas a encontrar?";
-writemessages[755] = "Has oído decir que las aguas de este río tienen mágicas propiedades. Que pueden hacer crecer semillas de cualquier tipo.";
-writemessages[756] = "Es un bosque frondoso. Si no fuera por el valle en el que estás, no verías el sol.";
-writemessages[757] = "Es un lugar bellísimo pero no deberías admirar los parajes, esta es una tierra que seguro está llena de peligros...";
-writemessages[758] = "El agua corre. Ves que el caudal mengua hacia el sur.";
-writemessages[759] = "Sientes una extraña sensación. Algo te da muy mala espina...";
-writemessages[760] = "Cada vez más seco, el agua se pierde entre las grietas.";
-writemessages[761] = "Sabes de buena tinta que las aguas de este río son mágicas. Dicen que pueden hacer crecer todo tipo de semillas.";
-writemessages[762] = "Inlcuso desde aquí se puede apreciar el mal estado en el que está.";
-writemessages[763] = "Por su posición y solidez proporciona una fácil subida.";
-writemessages[764] = "¿Estás de broma? Es demasiado peligroso. Te estás quedando sin cejas del calor que notas ya desde aquí.";
-writemessages[765] = "¿Estás de broma? Si antes ya era peligroso ahora vas a arder si te acercas más.";
-writemessages[766] = "Solo de imaginar que te asomas al vacío ya te estás mareando, como para acercarse.";
-writemessages[767] = "Como los del circo. Parece tener muy mala uva. Para comunicarte, «háblale».";
-writemessages[768] = "Seguro que desde allí hay buenas vistas.";
-writemessages[769] = "De un color oscuro. Cada una de una forma más excepcional que la anterior.";
-writemessages[770] = "No serviría de mucho. Ni tan siquiera si pudieras acercar la mano.";
-writemessages[771] = "¡Puaj! No te quieres acercar más. ¡Qué asco! ¿Qué es eso que está pegado ahí? Mejor no saberlo.";
-writemessages[772] = "¡Aj! Si sigues investigando vas acabar por vomitar. ¡Qué asco!";
-writemessages[773] = "¡Buaaaaagghhh! No... argh... es pegajoso... ¡puaj!";
-writemessages[774] = "Chapoteas tocando asquerosas gelatinosas babosidades ";
-writemessages[775] = "y de pronto descubres que hay ¡una moneda!";
-writemessages[776] = "Chapoteas tocando gelatinosas babosidades ";
-writemessages[777] = "¡pero de monedas nada, listillo!";
-writemessages[778] = "Es una construcción altísima y de un brillo metálico, pero de superficie tan resbaladiza que la hace inexpugnable.";
-writemessages[779] = "Son ranuras estrechas por las que se cuela el agua del río.";
-writemessages[780] = "Es muy fuerte. Impide la entrada.";
-writemessages[781] = "Esta zona es la más inquietante de las que has estado desde hace un rato.";
-writemessages[782] = "Mmmm... hacia el sur se hace cada vez más estrecho. Hacia el norte se ensancha.";
-writemessages[783] = "Un aire pútrido te da en la cara. El olor es tan nauseabundo que te preguntas si todo esto merece la pena.";
-writemessages[784] = "No parece que se pueda forzar con nada. Habrá que buscar la llave que lo abre.";
-writemessages[785] = "Está abierto pero sigue ahí puesto.";
-writemessages[786] = "Ha desaparecido delante de tus ojos";
-writemessages[787] = "Es un lugar excepcional, imaginas cómo debió ser hace años, cuando el río caía por aquí.";
-writemessages[788] = "Este lugar es la Gran Cascada del jefe de los enanos, aunque ya no haya agua. Ahora, es un lugar tan bello como desolador.";
-writemessages[789] = "¡Uuaahhh! Te estás mareando de lo profundo que es. Deja de hacer tonterías que te vas a matar.";
-writemessages[790] = "Ves la pared casi vertical. Imposible de escalar, ni tan siquiera teniendo el equipo adecuado. Como para intentarlo sin él: Muerte segura.";
-writemessages[791] = "No ves nada de nada.";
-writemessages[792] = "No puedes examinar dentro de eso que dices.";
-writemessages[793] = "Por favor, especifica dentro de qué quieres examinar.";
-writemessages[794] = "No puedes examinar eso que dices.";
-writemessages[795] = "Por favor, especifica qué o a quién quieres examinar.";
-writemessages[796] = "Vaya ocurrencia...";
-writemessages[797] = "No está aquí.";
-writemessages[798] = "Es de mala educación.";
-writemessages[799] = "No está aquí.";
-writemessages[800] = "No le ves sentido a examinar dentro de eso.";
-writemessages[801] = "No le ves sentido a examinar eso.";
-writemessages[802] = "Examinas {OREF} pero no ves nada especial ";
-writemessages[803] = ".";
-writemessages[804] = "Examinas {OREF} pero no ves nada especial ";
-writemessages[805] = ".";
-writemessages[806] = "Examinas {OREF} pero no ves nada especial";
-writemessages[807] = ".";
-writemessages[808] = "Examinas {OREF} pero no ves nada especial. Si lo abres podrás ver su contenido.";
-writemessages[809] = "Examinas {OREF} pero no ves nada especial. Si lo abres podrás ver su contenido.";
-writemessages[810] = "Examinas {OREF} pero no ves nada especial ";
-writemessages[811] = ".";
-writemessages[812] = "Examinas {OREF} pero no ves nada especial.";
-writemessages[813] = "No ves {OREF} por aquí.";
-writemessages[814] = "La lava te reduce a cenizas.";
-writemessages[815] = " Flotas en forma de nube.";
-writemessages[816] = "Te rompes el hocico contra la raíz del árbol.";
-writemessages[817] = "«¿Qué dices?»";
-writemessages[818] = "«¡Mi casa!»";
-writemessages[819] = "«Cuando encuentre mi casa.»";
-writemessages[820] = "Muy contrariado Elfito no puede aguantar las lágrimas y se va. Lo has perdido de vista.";
-writemessages[821] = "«¡Qué grosería! ¡Qué mala educación!»";
-writemessages[822] = "«¡No encuentro mi casa!»";
-writemessages[823] = "«En la Gran Caverna.»";
-writemessages[824] = "Oh, qué amable. Gracias.";
-writemessages[825] = "«Mi nombre es Elfito.»";
-writemessages[826] = "Te dice: «¡Hola tú!»";
-writemessages[827] = "«¡No quiero!»";
-writemessages[828] = "«Pero ¿qué dices?»";
-writemessages[829] = "«¡No me da la gana!»";
-writemessages[830] = "«¡Quiero ser más alto!»";
-writemessages[831] = "«No quiero ir a ninguna parte ¿Por qué no me dejas en paz?»";
-writemessages[832] = "«No quiero seguirte. Déjame tranquilo ya.»";
-writemessages[833] = "«¿Quién te has creído que soy? ¿Quién te piensas que eres?»";
-writemessages[834] = "«Don Enano»";
-writemessages[835] = "Sí, sí... hola, hola. Ahora, piérdete.";
-writemessages[836] = "«¡Largo de aquí!»";
-writemessages[837] = "Cabreadísimo te ataca, echándose encima de ti.";
-writemessages[838] = "Lucháis, forcejeando como dos locos, en el borde del volcán...";
-writemessages[839] = " ¡y os precipitáis hacia el abismo!";
-writemessages[840] = "Te arroja con furia su hacha...";
-writemessages[841] = "Aparece el Terrible Pirata gritando: «¡Te quito {OREF} y me voy a mi entrelazada guarida!» ";
-writemessages[842] = "Y con un gran insulto vuelve a las tinieblas.";
-writemessages[843] = "Estás en una fétida madriguera llena de caca de dragón por todos lados. El olor es insoportable, pero del norte llega una suave brisa húmeda";
-writemessages[844] = ". Frente a ti tienes al «bisssssho» más grande que hayas visto jamás.";
-writemessages[845] = ".";
-writemessages[846] = "¡Te bloquea un fornido Troll que ruge: «un tesoro has de dar para poder pasar»!";
-writemessages[847] = " Una enorme serpiente te observa.";
-writemessages[848] = " Un pajarillo revolotea por la estancia.";
-writemessages[849] = "Aquí hay una puerta herrumbrosa.";
-writemessages[850] = "Ves que la puerta está bien aceitada.";
-writemessages[851] = "La puerta está abierta.";
-writemessages[852] = "Estás en un";
-writemessages[853] = " laberinto de";
-writemessages[854] = " ovales";
-writemessages[855] = " pasillos";
-writemessages[856] = " intercomunicados";
-writemessages[857] = " intercomunicado";
+writemessages[468] = "No puedes llenar eso que dices.";
+writemessages[469] = "Por favor, especifica qué quieres llenar.";
+writemessages[470] = "No le ves sentido a llenar eso.";
+writemessages[471] = "No quieres llenar {OREF}.";
+writemessages[472] = "No puedes llenar {OREF}.";
+writemessages[473] = "No ves {OREF} por aquí.";
+writemessages[474] = "Mejor no.";
+writemessages[475] = "No te apetece trepar.";
+writemessages[476] = "No puedes retorcer eso que dices.";
+writemessages[477] = "Por favor, especifica qué quieres retorcer.";
+writemessages[478] = "La violencia no es la solución.";
+writemessages[479] = "No está aquí.";
+writemessages[480] = "No le ves sentido a retorcer eso.";
+writemessages[481] = "No quieres retorcer {OREF}.";
+writemessages[482] = "No ves {OREF} por aquí.";
+writemessages[483] = "No puedes apretar eso que dices.";
+writemessages[484] = "Por favor, especifica qué quieres apretar.";
+writemessages[485] = "La violencia no es la solución.";
+writemessages[486] = "No está aquí.";
+writemessages[487] = "No le ves sentido a apretar eso.";
+writemessages[488] = "No quieres apretar {OREF}.";
+writemessages[489] = "No ves {OREF} por aquí.";
+writemessages[490] = "No puedes besar eso que dices.";
+writemessages[491] = "Por favor, especifica a qué o a quién quieres besar.";
+writemessages[492] = "No se deja.";
+writemessages[493] = "No está aquí.";
+writemessages[494] = "No quieres besar eso.";
+writemessages[495] = "No quieres besar {OREF}.";
+writemessages[496] = "No ves {OREF} por aquí.";
+writemessages[497] = "No puedes abrazar eso que dices.";
+writemessages[498] = "Por favor, especifica a qué o a quién quieres abrazar.";
+writemessages[499] = "Ni se deja, ni crees que sea muy apropiado.";
+writemessages[500] = "No está aquí.";
+writemessages[501] = "No quieres abrazar eso.";
+writemessages[502] = "No quieres abrazar {OREF}.";
+writemessages[503] = "No ves {OREF} por aquí.";
+writemessages[504] = "No puedes conectar eso que dices.";
+writemessages[505] = "Por favor, especifica qué quieres conectar.";
+writemessages[506] = "No ves la manera de conectar eso.";
+writemessages[507] = "Activas {OREF}.";
+writemessages[508] = "Ya lo está.";
+writemessages[509] = "No ves la manera de activar {OREF}.";
+writemessages[510] = "No ves {OREF} por aquí.";
+writemessages[511] = "No puedes desconectar eso que dices.";
+writemessages[512] = "Por favor, especifica qué quieres desconectar.";
+writemessages[513] = "No le ves sentido a desconectar eso.";
+writemessages[514] = "Desactivas {OREF}.";
+writemessages[515] = "Ya lo está.";
+writemessages[516] = "No puedes desconectar {OREF}.";
+writemessages[517] = "No ves {OREF} por aquí.";
+writemessages[518] = "No puedes abrir eso que dices.";
+writemessages[519] = "Por favor, especifica qué quieres abrir.";
+writemessages[520] = "No le ves sentido a abrir eso.";
+writemessages[521] = "Abres {OREF}.";
+writemessages[522] = "Está cerrado con llave.";
+writemessages[523] = "Ya lo está.";
+writemessages[524] = "Ya lo está.";
+writemessages[525] = "No puedes abrir {OREF}.";
+writemessages[526] = "No ves {OREF} por aquí.";
+writemessages[527] = "No puedes cerrar eso que dices.";
+writemessages[528] = "Por favor, especifica qué quieres cerrar.";
+writemessages[529] = "No le ves sentido a cerrar eso.";
+writemessages[530] = "Cierras {OREF}.";
+writemessages[531] = "Ya lo está.";
+writemessages[532] = "No puedes cerrar {OREF}.";
+writemessages[533] = "No ves {OREF} por aquí.";
+writemessages[534] = "No puedes chupar eso que dices.";
+writemessages[535] = "Por favor, especifica qué quieres chupar.";
+writemessages[536] = "Eso sería muy poco apropiado.";
+writemessages[537] = "Piensas en comerte {OREF} pero te contienes.";
+writemessages[538] = "No está aquí.";
+writemessages[539] = "No te imaginas chupando eso.";
+writemessages[540] = "No quieres chupar {OREF}.";
+writemessages[541] = "No ves {OREF} por aquí.";
+writemessages[542] = "No puedes romper eso que dices.";
+writemessages[543] = "Por favor, especifica qué quieres romper.";
+writemessages[544] = "La violencia no es buena.";
+writemessages[545] = "No está aquí.";
+writemessages[546] = "La violencia no es la solución.";
+writemessages[547] = "Romper {OREF} no solucionará nada.";
+writemessages[548] = "No ves {OREF} por aquí; en cualquier caso, romper eso no es la solución.";
+writemessages[549] = "No puedes comprar eso que dices.";
+writemessages[550] = "Por favor, especifica qué quieres comprar.";
+writemessages[551] = "Todo el mundo tiene un precio... pero no está en venta.";
+writemessages[552] = "No está aquí.";
+writemessages[553] = "No hay nada en venta.";
+writemessages[554] = "No hay nada en venta.";
+writemessages[555] = "No ves {OREF} por aquí.";
+writemessages[556] = "No puedes doblar eso que dices.";
+writemessages[557] = "Por favor, especifica qué quieres doblar.";
+writemessages[558] = "Piensas que ya está bien como está...";
+writemessages[559] = "No está aquí.";
+writemessages[560] = "Prefieres no doblar eso.";
+writemessages[561] = "Doblar {OREF} no solucionará nada.";
+writemessages[562] = "No ves {OREF} por aquí.";
+writemessages[563] = "No puedes desdoblar eso que dices.";
+writemessages[564] = "Por favor, especifica qué quieres desdoblar.";
+writemessages[565] = "Piensas que ya está bien como está...";
+writemessages[566] = "No está aquí.";
+writemessages[567] = "¿Para qué quieres desdoblar eso?";
+writemessages[568] = "¿Desdoblar {OREF}?, ¿para qué?";
+writemessages[569] = "No ves {OREF} por aquí.";
+writemessages[570] = "No puedes dar eso.";
+writemessages[571] = "Por favor, especifica qué quieres dar.";
+writemessages[572] = "No puedes dar eso que dices.";
+writemessages[573] = "No puedes dar eso.";
+writemessages[574] = "Primero deberías quitarte {OREF} para poder hacer eso...";
+writemessages[575] = "No llevas {OREF}.";
+writemessages[576] = "¿A quién quieres dar eso?";
+writemessages[577] = "No puedes darle {OREF} a eso.";
+writemessages[578] = "No puedes darle {OREF} a eso.";
+writemessages[579] = "Estás perdiendo la cabeza...";
+writemessages[580] = "No le puedes dar {OREF} porque no está aquí.";
+writemessages[581] = "Le ofreces {OREF} pero no le hace ni caso.";
+writemessages[582] = "No puedes mostrar eso.";
+writemessages[583] = "Por favor, especifica qué quieres mostrar.";
+writemessages[584] = "No puedes mostrar eso que dices.";
+writemessages[585] = "No puedes mostrar eso.";
+writemessages[586] = "Primero deberías quitarte {OREF} para poder hacer eso...";
+writemessages[587] = "No llevas {OREF}.";
+writemessages[588] = "¿A quién quieres mostrar eso?";
+writemessages[589] = "No puedes mostrarle {OREF} a eso.";
+writemessages[590] = "No puedes mostrarle {OREF} a eso.";
+writemessages[591] = "Estás perdiendo la cabeza...";
+writemessages[592] = "No le puedes mostrar {OREF} porque no está aquí.";
+writemessages[593] = "Le muestras {OREF} pero no le hace ni caso.";
+writemessages[594] = "No puedes soplar eso que dices.";
+writemessages[595] = "Por favor, especifica a qué quieres soplar.";
+writemessages[596] = "No crees que le guste demasiado.";
+writemessages[597] = "No está aquí.";
+writemessages[598] = "No le ves sentido a soplar eso.";
+writemessages[599] = "No quieres soplar {OREF}.";
+writemessages[600] = "No ves eso que dices.";
+writemessages[601] = "Mejor no, puede enfadarse.";
+writemessages[602] = "Gritas con fuerza pero no te oye.";
+writemessages[603] = "Gritas lo más fuerte que puedes y... no sucede nada.";
+writemessages[604] = "No crees que haga falta.";
+writemessages[605] = "No está aquí.";
+writemessages[606] = "Pellizcas tu mejilla creyendo que despertarás pero... no estás soñando...¿o sí?";
+writemessages[607] = "No puedes levantar eso que dices.";
+writemessages[608] = "Por favor, especifica qué quieres levantar.";
+writemessages[609] = "No crees que le guste demasiado.";
+writemessages[610] = "No está aquí.";
+writemessages[611] = "No ves mucho sentido a levantar eso.";
+writemessages[612] = "No puedes levantar {OREF}. Pesa demasiado.";
+writemessages[613] = "No conseguirás nada levantando eso.";
+writemessages[614] = "Para levantar {OREF} tendría que estar aquí.";
+writemessages[615] = "No puedes arrastrar eso que dices.";
+writemessages[616] = "Por favor, especifica qué quieres arrastrar.";
+writemessages[617] = "No crees que le guste demasiado.";
+writemessages[618] = "No está aquí.";
+writemessages[619] = "No ves mucho sentido a arrastrar eso.";
+writemessages[620] = "No parece que se consiga nada arrastrando {OREF}.";
+writemessages[621] = "Para arrastrar {OREF} tendría que estar aquí.";
+writemessages[622] = "No puedes vaciar eso que dices.";
+writemessages[623] = "Por favor, especifica qué quieres vaciar.";
+writemessages[624] = "No es lo más apropiado.";
+writemessages[625] = "No está aquí.";
+writemessages[626] = "No le ves sentido a vaciar eso.";
+writemessages[627] = "No quieres vaciar {OREF}.";
+writemessages[628] = "No ves {OREF} por aquí.";
+writemessages[629] = "No puedes llamar a eso que dices.";
+writemessages[630] = "Por favor, especifica a qué o a quién quieres llamar.";
+writemessages[631] = "No hay respuesta...";
+writemessages[632] = "No está aquí.";
+writemessages[633] = "No le ves sentido a llamar a eso.";
+writemessages[634] = "No quieres llamar a {OREF}.";
+writemessages[635] = "No ves {OREF} por aquí.";
+writemessages[636] = "No puedes preguntar a eso que dices.";
+writemessages[637] = "Por favor, especifica a quién quieres preguntar.";
+writemessages[638] = "No hay respuesta alguna...";
+writemessages[639] = "No está aquí.";
+writemessages[640] = "No le ves sentido a preguntar a eso.";
+writemessages[641] = "No quieres preguntar a {OREF}.";
+writemessages[642] = "No ves {OREF} por aquí.";
+writemessages[643] = "No puedes consultar eso que dices.";
+writemessages[644] = "Por favor, especifica qué quieres consultar.";
+writemessages[645] = "No le ves sentido a consultar eso.";
+writemessages[646] = "No quieres consultar {OREF}.";
+writemessages[647] = "No ves {OREF} por aquí.";
+writemessages[648] = "No puedes insultar a eso que dices.";
+writemessages[649] = "Por favor, especifica a quién quieres insultar.";
+writemessages[650] = "No parece hacerte ni caso...";
+writemessages[651] = "No está aquí.";
+writemessages[652] = "No conseguirás nada insultando a eso.";
+writemessages[653] = "Estás perdiendo la cabeza...";
+writemessages[654] = "Ni ves eso que dices, ni crees que sea útil insultarle.";
+writemessages[655] = "No puedes unir eso que dices.";
+writemessages[656] = "Por favor, especifica qué quieres unir.";
+writemessages[657] = "No crees que le guste demasiado.";
+writemessages[658] = "No está aquí.";
+writemessages[659] = "No ves mucho sentido a unir eso.";
+writemessages[660] = "No parece que se consiga nada uniendo {OREF}.";
+writemessages[661] = "Para unir {OREF} tendría que estar aquí.";
+writemessages[662] = "No puedes separar eso que dices.";
+writemessages[663] = "Por favor, especifica qué quieres separar.";
+writemessages[664] = "No crees que le guste demasiado.";
+writemessages[665] = "No está aquí.";
+writemessages[666] = "No ves mucho sentido a separar eso.";
+writemessages[667] = "No parece que se consiga nada separando {OREF}.";
+writemessages[668] = "Para separar {OREF}, tendría que estar aquí.";
+writemessages[669] = "No puedes hablar con eso que dices.";
+writemessages[670] = "Por favor, especifica con quién quieres hablar.";
+writemessages[671] = "No parece interesarse por tu charla.";
+writemessages[672] = "No está aquí.";
+writemessages[673] = "No quieres hablarle a eso.";
+writemessages[674] = "Estás perdiendo la cabeza...";
+writemessages[675] = "Ni ves eso que dices, ni crees que sea útil hablarle.";
+writemessages[676] = "No puedes ir ahí donde dices.";
+writemessages[677] = "Por favor, especifica dónde quieres ir.";
+writemessages[678] = "Prefieres no acercarte más...";
+writemessages[679] = "No sabes dónde está.";
+writemessages[680] = "No le ves sentido a ir hacia eso.";
+writemessages[681] = "No quieres ir a {OREF}.";
+writemessages[682] = "No ves eso que dices.";
+writemessages[683] = "No puedes ir ";
+writemessages[684] = ". ";
+writemessages[685] = "RESPONSE_DEFAULT_END";
+writemessages[686] = "PRO1";
+writemessages[687] = "La aventura original";
+writemessages[688] = "Esta parte del bosque es muy densa, los árboles te impiden orientarte bien y son todos muy parecidos. Vagas por entre la maleza buscando tu rumbo pero pronto te das cuenta de que estás algo despistadillo.";
+writemessages[689] = "<b>Si es la primera vez que juegas a una aventura conversacional y no sabes por dónde empezar, teclea «AYUDA».</b>";
+writemessages[690] = "¡Puaj! Aquí apesta. ";
+writemessages[691] = "El sol hace brillar algo en una rama.";
+writemessages[692] = "Oyes un débil llanto y con dificultad ves una figura traslúcida.";
+writemessages[693] = "«¡Mi casa!»";
+writemessages[694] = "Estás en una depresión de siete metros. El valle se estrecha hacia el sur.";
+writemessages[695] = " Elfito da saltos de alegría.";
+writemessages[696] = " Elfito da saltos de alegría.";
+writemessages[697] = " Tienes ante ti la entrada a La Gran Caverna.";
+writemessages[698] = "Elfito dice: «¡Mi casa!»";
+writemessages[699] = "«Mi agradecimiento está sobre la mesa.» Y penetra en las profundidades.";
+writemessages[700] = "«No es aquí.»";
+writemessages[701] = "«¡Mi casa!»";
+writemessages[702] = "El calor que se desprende de la burbujeante lava es asfixiante. Un enorme penacho de cenizas se desprende flotando perezosamente del ardiente magma, dejando una peste cosa mala. Imprudentemente estás haciendo el payaso en el peligroso borde del volcán";
+writemessages[703] = " junto a un enano que rabia de amargura.";
+writemessages[704] = ".";
+writemessages[705] = "Has jugado durante ";
+writemessages[706] = " turnos.";
+writemessages[707] = "{RESTART|Volver a jugar}";
+writemessages[708] = "Con un click la puerta se cierra mágicamente...";
+writemessages[709] = "Ánimo, solo te faltan ";
+writemessages[710] = ".";
+writemessages[711] = "Si no has perdido el último tesoro vencerás a la Gran Caverna.";
+writemessages[712] = "Mágicamente, dándote otra oportunidad de vivir, la puerta se abre...";
+writemessages[713] = "Te encuentras en una pequeña cueva, rodeado de húmedas rocas. Los rayos del sol penetran a través de los barrotes de la cerrada reja. Hacia el oeste sale un pasadizo bajo y oscuro que se pierde en el misterio.";
+writemessages[714] = "Te encuentras en la salida al exterior de la cueva. Vuelves a ver los rayos del sol.";
+writemessages[715] = "PRO2";
+writemessages[716] = "¡La linterna se ha apagado!";
+writemessages[717] = "Maluva te parte en dos la cabeza.";
+writemessages[718] = "El reptil te marca sus colmillos en el cuello, y se marcha.";
+writemessages[719] = "El veneno te ha matado.";
+writemessages[720] = "La linterna va mal. La luz parpadea.";
+writemessages[721] = "¡La linterna apenas da luz!";
+writemessages[722] = "Tropiezas en la oscuridad y te desnucas.";
+writemessages[723] = "¡El enano Maluva sale de entre las sombras! Chorreando espesa baba avanza bamboleante hacia ti.";
+writemessages[724] = "...¡y falla por poco!";
+writemessages[725] = "Con un gran insulto vuelve a las tinieblas.";
+writemessages[726] = "\1<div style='padding:0 1%; margin: 0; font-family:monospace; font-size:.7em; text-align:center'>------- LOS TESOROS DE -------</div>";
+writemessages[727] = "\1<div style='padding:0 1%; margin: 0; font-family:monospace; font-size:.7em; text-align:center'>----- LA CAVERNA ORIGINAL ----</div>";
+writemessages[728] = "\1<div style='padding:0 1%; margin: 0; font-family:monospace; font-size:.7em; text-align:center'>---------- SON TUYOS ---------</div>";
+writemessages[729] = "\1<div style='padding:0 1%; margin: 0; font-size:.7em; text-align:center'>FELICIDADES</div>";
+writemessages[730] = "   Aparece Elfito y te dice:";
+writemessages[731] = "    «Al haber perdido todos sus tesoros La Gran Caverna no tiene razón para seguir existiendo y está a punto de derrumbarse, larguémonos cuanto antes»";
+writemessages[732] = "        y se las pira...";
+writemessages[733] = "Tal como dijo Elfito, sin tesoros que le den fuerza vital, la caverna se colapsa. El cataclismo acaba con todo ser viviente.";
+writemessages[734] = "Algo que has hecho te impide completar la aventura.";
+writemessages[735] = "No llevas todos los objetos que necesitas, por lo tanto la magia de La Gran Caverna te impide el paso.";
+writemessages[736] = "Examina lo que has encontrado. Explora toda la zona.";
+writemessages[737] = "Algunas de las preguntas más frecuentes son:";
+writemessages[738] = "No la ves desde aquí.";
+writemessages[739] = "No estás suficientemente cerca.";
+writemessages[740] = "Es una sólida y bella construcción.";
+writemessages[741] = "Continúa hacia una extraña construcción.";
+writemessages[742] = "No hay nada que te llame la atención. Acaban aquí.";
+writemessages[743] = "Estas botas tienen un tacón muy alto pero no son de tu número.";
+writemessages[744] = "Es de vidrio y está vacía.";
+writemessages[745] = "La tienes llena de agua fresca y fertilizante.";
+writemessages[746] = "Es una sólida construcción que antaño perteneció a los dueños del valle, hoy está abandonada.";
+writemessages[747] = "Se ve tan pequeña que parece de juguete.";
+writemessages[748] = "La columna de humo sube de forma lenta, casi poética.";
+writemessages[749] = "La imagen del volcán es aterradora. Suerte que está lejos.";
+writemessages[750] = "Está hacia al sur. No sabrías describirla muy bien desde aquí.";
+writemessages[751] = "La entrada es pequeña pero lo suficientemente amplia para que pases por ella y penetres a un Mundo Mágico.";
+writemessages[752] = "La boca del pozo está muy oscura.";
+writemessages[753] = "Chapoteas tocando gelatinosas babosidades ";
+writemessages[754] = "¡pero de monedas nada, listillo!";
+writemessages[755] = "Chapoteas tocando asquerosas gelatinosas babosidades ";
+writemessages[756] = "y de pronto descubres que hay ¡una moneda!";
+writemessages[757] = "previous_noun=51";
+writemessages[758] = "Dicen que las aguas de este río tienen la mágica propiedad de hacer crecer semillas muy viejas.";
+writemessages[759] = "No dan muchas ganas de meterse en él pero no conseguirás nada quedándote aquí. ¿Con qué tipo de criaturas te vas a encontrar?";
+writemessages[760] = "Has oído decir que las aguas de este río tienen mágicas propiedades. Que pueden hacer crecer semillas de cualquier tipo.";
+writemessages[761] = "Es un bosque frondoso. Si no fuera por el valle en el que estás, no verías el sol.";
+writemessages[762] = "Es un lugar bellísimo pero no deberías admirar los parajes, esta es una tierra que seguro está llena de peligros...";
+writemessages[763] = "El agua corre. Ves que el caudal mengua hacia el sur.";
+writemessages[764] = "Sientes una extraña sensación. Algo te da muy mala espina...";
+writemessages[765] = "Cada vez más seco, el agua se pierde entre las grietas.";
+writemessages[766] = "Sabes de buena tinta que las aguas de este río son mágicas. Dicen que pueden hacer crecer todo tipo de semillas.";
+writemessages[767] = "Inlcuso desde aquí se puede apreciar el mal estado en el que está.";
+writemessages[768] = "Por su posición y solidez proporciona una fácil subida.";
+writemessages[769] = "¿Estás de broma? Es demasiado peligroso. Te estás quedando sin cejas del calor que notas ya desde aquí.";
+writemessages[770] = "¿Estás de broma? Si antes ya era peligroso ahora vas a arder si te acercas más.";
+writemessages[771] = "Solo de imaginar que te asomas al vacío ya te estás mareando, como para acercarse.";
+writemessages[772] = "Como los del circo. Parece tener muy mala uva. Para comunicarte, «háblale».";
+writemessages[773] = "Seguro que desde allí hay buenas vistas.";
+writemessages[774] = "De un color oscuro. Cada una de una forma más excepcional que la anterior.";
+writemessages[775] = "No serviría de mucho. Ni tan siquiera si pudieras acercar la mano.";
+writemessages[776] = "¡Puaj! No te quieres acercar más. ¡Qué asco! ¿Qué es eso que está pegado ahí? Mejor no saberlo.";
+writemessages[777] = "¡Aj! Si sigues investigando vas acabar por vomitar. ¡Qué asco!";
+writemessages[778] = "¡Buaaaaagghhh! No... argh... es pegajoso... ¡puaj!";
+writemessages[779] = "Chapoteas tocando asquerosas gelatinosas babosidades ";
+writemessages[780] = "y de pronto descubres que hay ¡una moneda!";
+writemessages[781] = "Chapoteas tocando gelatinosas babosidades ";
+writemessages[782] = "¡pero de monedas nada, listillo!";
+writemessages[783] = "Es una construcción altísima y de un brillo metálico, pero de superficie tan resbaladiza que la hace inexpugnable.";
+writemessages[784] = "Son ranuras estrechas por las que se cuela el agua del río.";
+writemessages[785] = "Es muy fuerte. Impide la entrada.";
+writemessages[786] = "Esta zona es la más inquietante de las que has estado desde hace un rato.";
+writemessages[787] = "Mmmm... hacia el sur se hace cada vez más estrecho. Hacia el norte se ensancha.";
+writemessages[788] = "Un aire pútrido te da en la cara. El olor es tan nauseabundo que te preguntas si todo esto merece la pena.";
+writemessages[789] = "No parece que se pueda forzar con nada. Habrá que buscar la llave que lo abre.";
+writemessages[790] = "Está abierto pero sigue ahí puesto.";
+writemessages[791] = "Ha desaparecido delante de tus ojos";
+writemessages[792] = "Es un lugar excepcional, imaginas cómo debió ser hace años, cuando el río caía por aquí.";
+writemessages[793] = "Este lugar es la Gran Cascada del jefe de los enanos, aunque ya no haya agua. Ahora, es un lugar tan bello como desolador.";
+writemessages[794] = "¡Uuaahhh! Te estás mareando de lo profundo que es. Deja de hacer tonterías que te vas a matar.";
+writemessages[795] = "Ves la pared casi vertical. Imposible de escalar, ni tan siquiera teniendo el equipo adecuado. Como para intentarlo sin él: Muerte segura.";
+writemessages[796] = "No ves nada de nada.";
+writemessages[797] = "No puedes examinar dentro de eso que dices.";
+writemessages[798] = "Por favor, especifica dentro de qué quieres examinar.";
+writemessages[799] = "No puedes examinar eso que dices.";
+writemessages[800] = "Por favor, especifica qué o a quién quieres examinar.";
+writemessages[801] = "Vaya ocurrencia...";
+writemessages[802] = "No está aquí.";
+writemessages[803] = "Es de mala educación.";
+writemessages[804] = "No está aquí.";
+writemessages[805] = "No le ves sentido a examinar dentro de eso.";
+writemessages[806] = "No le ves sentido a examinar eso.";
+writemessages[807] = "Examinas {OREF} pero no ves nada especial ";
+writemessages[808] = ".";
+writemessages[809] = "Examinas {OREF} pero no ves nada especial ";
+writemessages[810] = ".";
+writemessages[811] = "Examinas {OREF} pero no ves nada especial";
+writemessages[812] = ".";
+writemessages[813] = "Examinas {OREF} pero no ves nada especial. Si lo abres podrás ver su contenido.";
+writemessages[814] = "Examinas {OREF} pero no ves nada especial. Si lo abres podrás ver su contenido.";
+writemessages[815] = "Examinas {OREF} pero no ves nada especial ";
+writemessages[816] = ".";
+writemessages[817] = "Examinas {OREF} pero no ves nada especial.";
+writemessages[818] = "No ves {OREF} por aquí.";
+writemessages[819] = "La lava te reduce a cenizas.";
+writemessages[820] = " Flotas en forma de nube.";
+writemessages[821] = "Te rompes el hocico contra la raíz del árbol.";
+writemessages[822] = "«¿Qué dices?»";
+writemessages[823] = "«¡Mi casa!»";
+writemessages[824] = "«Cuando encuentre mi casa.»";
+writemessages[825] = "Muy contrariado Elfito no puede aguantar las lágrimas y se va. Lo has perdido de vista.";
+writemessages[826] = "«¡Qué grosería! ¡Qué mala educación!»";
+writemessages[827] = "«¡No encuentro mi casa!»";
+writemessages[828] = "«En la Gran Caverna.»";
+writemessages[829] = "Oh, qué amable. Gracias.";
+writemessages[830] = "«Mi nombre es Elfito.»";
+writemessages[831] = "Te dice: «¡Hola tú!»";
+writemessages[832] = "«¡No quiero!»";
+writemessages[833] = "«Pero ¿qué dices?»";
+writemessages[834] = "«¡No me da la gana!»";
+writemessages[835] = "«¡Quiero ser más alto!»";
+writemessages[836] = "«No quiero ir a ninguna parte ¿Por qué no me dejas en paz?»";
+writemessages[837] = "«No quiero seguirte. Déjame tranquilo ya.»";
+writemessages[838] = "«¿Quién te has creído que soy? ¿Quién te piensas que eres?»";
+writemessages[839] = "«Don Enano»";
+writemessages[840] = "Sí, sí... hola, hola. Ahora, piérdete.";
+writemessages[841] = "«¡Largo de aquí!»";
+writemessages[842] = "Cabreadísimo te ataca, echándose encima de ti.";
+writemessages[843] = "Lucháis, forcejeando como dos locos, en el borde del volcán...";
+writemessages[844] = " ¡y os precipitáis hacia el abismo!";
+writemessages[845] = "Te arroja con furia su hacha...";
+writemessages[846] = "Aparece el Terrible Pirata gritando: «¡Te quito {OREF} y me voy a mi entrelazada guarida!» ";
+writemessages[847] = "Y con un gran insulto vuelve a las tinieblas.";
+writemessages[848] = "Estás en una fétida madriguera llena de caca de dragón por todos lados. El olor es insoportable, pero del norte llega una suave brisa húmeda";
+writemessages[849] = ". Frente a ti tienes al «bisssssho» más grande que hayas visto jamás.";
+writemessages[850] = ".";
+writemessages[851] = "¡Te bloquea un fornido Troll que ruge: «un tesoro has de dar para poder pasar»!";
+writemessages[852] = " Una enorme serpiente te observa.";
+writemessages[853] = " Un pajarillo revolotea por la estancia.";
+writemessages[854] = "Aquí hay una puerta herrumbrosa.";
+writemessages[855] = "Ves que la puerta está bien aceitada.";
+writemessages[856] = "La puerta está abierta.";
+writemessages[857] = "Estás en un";
 writemessages[858] = " laberinto de";
-writemessages[859] = " pasillos";
-writemessages[860] = " ovales";
-writemessages[861] = " laberinto de";
-writemessages[862] = " intercomunicados";
-writemessages[863] = " pasillos";
-writemessages[864] = " ovales";
-writemessages[865] = " intercomunicado";
+writemessages[859] = " ovales";
+writemessages[860] = " pasillos";
+writemessages[861] = " intercomunicados";
+writemessages[862] = " intercomunicado";
+writemessages[863] = " laberinto de";
+writemessages[864] = " pasillos";
+writemessages[865] = " ovales";
 writemessages[866] = " laberinto de";
-writemessages[867] = " ovales";
+writemessages[867] = " intercomunicados";
 writemessages[868] = " pasillos";
-writemessages[869] = " laberinto de";
-writemessages[870] = " pasillos";
-writemessages[871] = " ovales";
-writemessages[872] = " intercomunicados";
-writemessages[873] = ". ";
-writemessages[874] = "En el suelo hay unas semillas de judías.";
-writemessages[875] = "Aquí hay una tierna plantita de judías.";
-writemessages[876] = "Aquí hay una planta de judías cuyo tronco es enorme. Sale por el agujero superior.";
-writemessages[877] = " ¡Un enorme oso tira con furia de su cadena para darte un abrazo de bienvenida!";
-writemessages[878] = " El oso Peposo está encadenado.";
-writemessages[879] = " El oso viene contigo. ";
-writemessages[880] = "Estás en un";
-writemessages[881] = " laberinto de";
-writemessages[882] = " pequeñas";
-writemessages[883] = " habitaciones";
-writemessages[884] = " entrelazadas";
-writemessages[885] = " pequeño";
+writemessages[869] = " ovales";
+writemessages[870] = " intercomunicado";
+writemessages[871] = " laberinto de";
+writemessages[872] = " ovales";
+writemessages[873] = " pasillos";
+writemessages[874] = " laberinto de";
+writemessages[875] = " pasillos";
+writemessages[876] = " ovales";
+writemessages[877] = " intercomunicados";
+writemessages[878] = ". ";
+writemessages[879] = "En el suelo hay unas semillas de judías.";
+writemessages[880] = "Aquí hay una tierna plantita de judías.";
+writemessages[881] = "Aquí hay una planta de judías cuyo tronco es enorme. Sale por el agujero superior.";
+writemessages[882] = " ¡Un enorme oso tira con furia de su cadena para darte un abrazo de bienvenida!";
+writemessages[883] = " El oso Peposo está encadenado.";
+writemessages[884] = " El oso viene contigo. ";
+writemessages[885] = "Estás en un";
 writemessages[886] = " laberinto de";
-writemessages[887] = " habitaciones";
-writemessages[888] = " entrelazadas";
-writemessages[889] = " entrelazado";
-writemessages[890] = " laberinto de";
-writemessages[891] = " habitaciones";
-writemessages[892] = " pequeñas";
-writemessages[893] = ". ";
-writemessages[894] = "Hay un agujero en el suelo";
-writemessages[895] = " pequeño";
-writemessages[896] = " laberinto de";
-writemessages[897] = " entrelazadas";
-writemessages[898] = " habitaciones";
-writemessages[899] = " laberinto de";
-writemessages[900] = " habitaciones";
-writemessages[901] = " pequeñas";
+writemessages[887] = " pequeñas";
+writemessages[888] = " habitaciones";
+writemessages[889] = " entrelazadas";
+writemessages[890] = " pequeño";
+writemessages[891] = " laberinto de";
+writemessages[892] = " habitaciones";
+writemessages[893] = " entrelazadas";
+writemessages[894] = " entrelazado";
+writemessages[895] = " laberinto de";
+writemessages[896] = " habitaciones";
+writemessages[897] = " pequeñas";
+writemessages[898] = ". ";
+writemessages[899] = "Hay un agujero en el suelo";
+writemessages[900] = " pequeño";
+writemessages[901] = " laberinto de";
 writemessages[902] = " entrelazadas";
-writemessages[903] = " entrelazado";
+writemessages[903] = " habitaciones";
 writemessages[904] = " laberinto de";
-writemessages[905] = " pequeñas";
-writemessages[906] = " habitaciones";
-writemessages[907] = ". ";
-writemessages[908] = "Estás en la guarida del pirata cleptómano";
-writemessages[909] = ". ";
-writemessages[910] = " El precipicio queda al ";
-writemessages[911] = "oeste";
-writemessages[912] = ".";
-writemessages[913] = "este";
-writemessages[914] = ".";
-writemessages[915] = "Has dado ";
-writemessages[916] = " órdenes.";
-writemessages[917] = "{RESTART|Volver a jugar}";
-writemessages[918] = "Chorreando espesa baba avanza bamboleante hacia ti.";
-writemessages[919] = "Mirándote amenazante desde lo alto, ruge: ¡Serás un buen bocata!";
-writemessages[920] = "¡Qué rico! Exclama relamiéndose, otro aventurero para cenar.";
-writemessages[921] = "No ves al dragón por ninguna parte.";
-writemessages[922] = "Peposo no está aquí.";
-writemessages[923] = "No ves al troll.";
-writemessages[924] = "Peposo se tranquiliza, come la tortilla y agradecido te lame la sucia cara. Tienes un fiel amigo.";
-writemessages[925] = "Se ha comido la linterna. Y ahora no crees que haya sido una buena idea... ";
-writemessages[926] = "porque todo se queda a oscuras";
-writemessages[927] = "Aunque no pensaste que fuera capaz, se ha comido la linterna. Y puede que no haya sido una buena idea... ";
-writemessages[928] = "porque todo se queda a oscuras";
-writemessages[929] = "¡No intentes engañarme! Esto no es un tesoro. Y cabreado tira la linterna al abismo.";
-writemessages[930] = " Puede que no haya sido una buena idea... ";
+writemessages[905] = " habitaciones";
+writemessages[906] = " pequeñas";
+writemessages[907] = " entrelazadas";
+writemessages[908] = " entrelazado";
+writemessages[909] = " laberinto de";
+writemessages[910] = " pequeñas";
+writemessages[911] = " habitaciones";
+writemessages[912] = ". ";
+writemessages[913] = "Estás en la guarida del pirata cleptómano";
+writemessages[914] = ". ";
+writemessages[915] = " El precipicio queda al ";
+writemessages[916] = "oeste";
+writemessages[917] = ".";
+writemessages[918] = "este";
+writemessages[919] = ".";
+writemessages[920] = "Has dado ";
+writemessages[921] = " órdenes.";
+writemessages[922] = "{RESTART|Volver a jugar}";
+writemessages[923] = "Chorreando espesa baba avanza bamboleante hacia ti.";
+writemessages[924] = "Mirándote amenazante desde lo alto, ruge: ¡Serás un buen bocata!";
+writemessages[925] = "¡Qué rico! Exclama relamiéndose, otro aventurero para cenar.";
+writemessages[926] = "No ves al dragón por ninguna parte.";
+writemessages[927] = "Peposo no está aquí.";
+writemessages[928] = "No ves al troll.";
+writemessages[929] = "Peposo se tranquiliza, come la tortilla y agradecido te lame la sucia cara. Tienes un fiel amigo.";
+writemessages[930] = "Se ha comido la linterna. Y ahora no crees que haya sido una buena idea... ";
 writemessages[931] = "porque todo se queda a oscuras";
-writemessages[932] = "El dragón se ha comido {OREF}.";
-writemessages[933] = "El oso se ha comido {OREF}.";
-writemessages[934] = "Se ha comido {OREF}.";
-writemessages[935] = "Pero... ¡Si no tienes eso!";
-writemessages[936] = "Pero... ¡Si no tienes eso!";
-writemessages[937] = "¡No intentes engañarme! Esto no es un tesoro. Y cabreado tira {OREF} al abismo.";
-writemessages[938] = "¡Cojo {OREF}. Pasa aventurero cobardica!";
-writemessages[939] = "No puedes hacerlo.";
-writemessages[940] = "\1<div style='padding:2em 2%; text-align:center; font-size:1.5em'>*** RECOLECTOR DE TESOROS ***</div>";
-writemessages[941] = "Tesoro: {OREF}";
-writemessages[942] = "Tesoro: {OREF}";
-writemessages[943] = "Objeto: {OREF}";
-writemessages[944] = "Caes por el precipicio y te estampas contra el suelo.";
-writemessages[945] = "¡Vale gran mago! El pajarillo se transforma en dragón, y de un flamazo te incinera. ";
-writemessages[946] = "Intenta hacerte un mapa.";
-writemessages[947] = "Utiliza la magia.";
-writemessages[948] = "Utiliza la magia.";
-writemessages[949] = "Usa otros sentidos o la magia.";
-writemessages[950] = "Utiliza la magia.";
-writemessages[951] = "¡Busca luz!";
-writemessages[952] = "¡Aparta la niebla!";
-writemessages[953] = "Ya no hay nada más que hacer aquí.";
-writemessages[954] = "¡Piensa un poco! Es fácil. ";
-writemessages[955] = "Las letras están grabadas en la piedra.";
-writemessages[956] = "No se ve bien.";
-writemessages[957] = "Es una tierna plantita. Todavía le falta por crecer.";
-writemessages[958] = "Vaya con la «plantita». Podrías trepar por ella.";
-writemessages[959] = "¡Agua, agua!";
-writemessages[960] = "El espejo, en estos momentos, solo refleja la ventana vacía de la habitación situada al otro lado del abismo.";
-writemessages[961] = "La alfombra cubre el suelo de toda esta habitación.";
-writemessages[962] = "¡Puaj! Qué asco. Están recubiertas de moho.";
-writemessages[963] = "Lo único llamativo son las ventanas por las que no llegas a ver.";
-writemessages[964] = "La figura te imita.";
-writemessages[965] = "Neptuno las abría fácilmente con sus tres dientes.";
-writemessages[966] = "Es la llave del zoológico subterráneo de los Reyes Elfos.";
-writemessages[967] = "Debido a tu retorcida curiosidad te pringas todo. ¡Cochino!";
-writemessages[968] = "Es un puente colgante muy peligroso porque las tablas de las que está hecho seguramente estén podridas.";
-writemessages[969] = "Es un puente mágico que cambia de color según el lugar de donde lo mires.";
-writemessages[970] = "La grieta es demasiado grande para poder atravesarla.";
-writemessages[971] = "El hacha es muy grande. De un tamaño descomunal.";
-writemessages[972] = "Es muy grande. Tanto como el hacha.";
-writemessages[973] = "Dirías que no puede moverse ni un milímetro con el óxido que tiene.";
-writemessages[974] = "La puerta está bien aceitada. Seguro que se abre.";
-writemessages[975] = "La puerta está abierta. Parecía mentira.";
-writemessages[976] = "Es enorme y fiero. Te tiemblan las piernas al verlo.";
-writemessages[977] = "El agua es cristalina pero pensar que el dragón se bañaba aquí te quita las ganas de bañarte.";
-writemessages[978] = "Tiene una ranura y un apartado para poner pilas.";
-writemessages[979] = "Se la comería hasta un oso.";
-writemessages[980] = "Aunque no es muy grande, es un charco de agua bastante limpia.";
-writemessages[981] = "Ves la niebla a lo lejos, espesa... misteriosa.";
-writemessages[982] = "La misteriosa niebla parece comenzar aquí.";
-writemessages[983] = "La niebla no es muy espesa aquí.";
-writemessages[984] = "Ves la niebla quedesaparece en tenues retazos.";
-writemessages[985] = "Ves la niebla a lo lejos, espesa... misteriosa.";
-writemessages[986] = "La niebla es bastante molesta. Suerte que no es tan densa como en otras partes de la caverna.";
-writemessages[987] = "La rampa desciende de forma bastante pronunciada.";
-writemessages[988] = "La rampa acaba aquí. Qué lugar más extraño.";
-writemessages[989] = "El aceite se acumula en esa zona de ahí, en un charco. Da un poco de asco.";
-writemessages[990] = "El agujero es lo suficientemente grande como para que pases por él. ¿Hacia dónde va? Deberás averiguarlo tú.";
-writemessages[991] = "No se ve a dónde va a parar el agujero. Ya que quieres meter la cabeza, atraviésalo que será más seguro.";
-writemessages[992] = "Por el agujero entra la luz... mmm...";
-writemessages[993] = "Es un trono bastante grande adornados con intrincados dibujos. No sabes si significan algo.";
-writemessages[994] = "No sabrías decir qué son excepto que son antiguos trofeos pero no parecen tener mucho valor.";
-writemessages[995] = "Debían ser bellísimos cuando eran nuevos. Ahora, son solo una sombra de lo que fueron.";
-writemessages[996] = "Son pleciosos. O al menos eso clees polque son un poco lalos. No palecen tenel mucho valol.";
-writemessages[997] = "Pleciosas telas de seda natural. Piensas de qué podlía servirte pelo no se te oculle nada.";
-writemessages[998] = "La luz parece venir de otro lugar. Es totalmente artificial.";
-writemessages[999] = "Es una escalera de piedra, algo resbaladiza pero podrás usarla.";
-writemessages[1000] = "No tiene mucho misterio. Es una puerta, de madera, bastante fea.";
-writemessages[1001] = "Aunque la visión es espectacular, no deberías quedarte aquí mucho tiempo.";
-writemessages[1002] = "Por la peste que hace aquí, ha vivido mucho tiempo aquí. ";
-writemessages[1003] = "No la ves por aquí.";
-writemessages[1004] = "La linterna está apagada. ";
-writemessages[1005] = "La linterna está encendida. ";
-writemessages[1006] = "No tiene la pila.";
-writemessages[1007] = "Nivel de energia de la pila: ";
-writemessages[1008] = "altísimo.";
-writemessages[1009] = "¡Es demasiado fuerte para ti, forastero!";
-writemessages[1010] = "¡Es demasiado fuerte para ti, forastero!";
-writemessages[1011] = "La jaula está vacía.";
-writemessages[1012] = "Tienes al pájaro enjaulado.";
-writemessages[1013] = "Tienes al pájaro enjaulado.";
-writemessages[1014] = "Está volando.";
-writemessages[1015] = "¿Se podrán comer las paredes?.";
-writemessages[1016] = "«En este lugar perdió el Rey Elfo una pepita de oro.»";
-writemessages[1017] = "Pone XYZZY.";
-writemessages[1018] = "Pone «OID».";
-writemessages[1019] = "Pone: «GRACIAS POR HABER TRAÍDO LUZ A ESTA TRISTE HABITACIÓN»";
-writemessages[1020] = "Pone: «FEE FIE FOE FOO». Lee justo después de la descripción. ¿Estás de beta tester o qué?";
-writemessages[1021] = "Mmm... Aquí las paredes no tienen mucho interés.";
-writemessages[1022] = "La serpiente se está poniendo nerviosa.";
-writemessages[1023] = "Es una grieta tan profunda que no ves dónde acaba.";
-writemessages[1024] = "La grieta es tan profunda que crees perder el conocimiento al mirar.";
-writemessages[1025] = "El troll da mucho miedo. No sabes cómo puede reaccionar...";
-writemessages[1026] = "Ahora ya sabes qué animal era el que hacía tanta peste.";
-writemessages[1027] = "Sudas la gota gorda del calor que hace en el interior del volcán.";
-writemessages[1028] = "Apesta aquí. Te recuerdan a los gases de fuera de la caverna. ";
-writemessages[1029] = "La cornisa es artificial. No sabes cuánto tiempo debe hacer que está aquí.";
-writemessages[1030] = "Las letras, enormes, están grabadas en la piedra de una forma muy tosca.";
-writemessages[1031] = "Las letras son bastante sutiles. Están grabadas en la piedra.";
-writemessages[1032] = "La botella está llena de un aceite muy denso.";
-writemessages[1033] = "La botella está vacía.";
-writemessages[1034] = "La botella está llena de agua.";
-writemessages[1035] = "Es mágica. A ver, úsala a ver qué pasa. Aparte de eso, ";
-writemessages[1036] = "Es... una piedra, redonda y bastante fea. Aparte de eso, ";
-writemessages[1037] = "No ves nada que te llame la atención. Pierdes el tiempo.";
-writemessages[1038] = "No ves eso por aquí.";
-writemessages[1039] = "No ves {OREF} por aquí.";
-writemessages[1040] = "{OREF} es un tesoro.";
-writemessages[1041] = "{OREF} es un objeto.";
+writemessages[932] = "Aunque no pensaste que fuera capaz, se ha comido la linterna. Y puede que no haya sido una buena idea... ";
+writemessages[933] = "porque todo se queda a oscuras";
+writemessages[934] = "¡No intentes engañarme! Esto no es un tesoro. Y cabreado tira la linterna al abismo.";
+writemessages[935] = " Puede que no haya sido una buena idea... ";
+writemessages[936] = "porque todo se queda a oscuras";
+writemessages[937] = "El dragón se ha comido {OREF}.";
+writemessages[938] = "El oso se ha comido {OREF}.";
+writemessages[939] = "Se ha comido {OREF}.";
+writemessages[940] = "Pero... ¡Si no tienes eso!";
+writemessages[941] = "Pero... ¡Si no tienes eso!";
+writemessages[942] = "¡No intentes engañarme! Esto no es un tesoro. Y cabreado tira {OREF} al abismo.";
+writemessages[943] = "¡Cojo {OREF}. Pasa aventurero cobardica!";
+writemessages[944] = "No puedes hacerlo.";
+writemessages[945] = "\1<div style='padding:2em 2%; text-align:center; font-size:1.5em'>*** RECOLECTOR DE TESOROS ***</div>";
+writemessages[946] = "Tesoro: {OREF}";
+writemessages[947] = "Tesoro: {OREF}";
+writemessages[948] = "Objeto: {OREF}";
+writemessages[949] = "Caes por el precipicio y te estampas contra el suelo.";
+writemessages[950] = "¡Vale gran mago! El pajarillo se transforma en dragón, y de un flamazo te incinera. ";
+writemessages[951] = "Intenta hacerte un mapa.";
+writemessages[952] = "Utiliza la magia.";
+writemessages[953] = "Utiliza la magia.";
+writemessages[954] = "Usa otros sentidos o la magia.";
+writemessages[955] = "Utiliza la magia.";
+writemessages[956] = "¡Busca luz!";
+writemessages[957] = "¡Aparta la niebla!";
+writemessages[958] = "Ya no hay nada más que hacer aquí.";
+writemessages[959] = "¡Piensa un poco! Es fácil. ";
+writemessages[960] = "Las letras están grabadas en la piedra.";
+writemessages[961] = "No se ve bien.";
+writemessages[962] = "Es una tierna plantita. Todavía le falta por crecer.";
+writemessages[963] = "Vaya con la «plantita». Podrías trepar por ella.";
+writemessages[964] = "¡Agua, agua!";
+writemessages[965] = "El espejo, en estos momentos, solo refleja la ventana vacía de la habitación situada al otro lado del abismo.";
+writemessages[966] = "La alfombra cubre el suelo de toda esta habitación.";
+writemessages[967] = "¡Puaj! Qué asco. Están recubiertas de moho.";
+writemessages[968] = "Lo único llamativo son las ventanas por las que no llegas a ver.";
+writemessages[969] = "La figura te imita.";
+writemessages[970] = "Neptuno las abría fácilmente con sus tres dientes.";
+writemessages[971] = "Es la llave del zoológico subterráneo de los Reyes Elfos.";
+writemessages[972] = "Debido a tu retorcida curiosidad te pringas todo. ¡Cochino!";
+writemessages[973] = "Es un puente colgante muy peligroso porque las tablas de las que está hecho seguramente estén podridas.";
+writemessages[974] = "Es un puente mágico que cambia de color según el lugar de donde lo mires.";
+writemessages[975] = "La grieta es demasiado grande para poder atravesarla.";
+writemessages[976] = "El hacha es muy grande. De un tamaño descomunal.";
+writemessages[977] = "Es muy grande. Tanto como el hacha.";
+writemessages[978] = "Dirías que no puede moverse ni un milímetro con el óxido que tiene.";
+writemessages[979] = "La puerta está bien aceitada. Seguro que se abre.";
+writemessages[980] = "La puerta está abierta. Parecía mentira.";
+writemessages[981] = "Es enorme y fiero. Te tiemblan las piernas al verlo.";
+writemessages[982] = "El agua es cristalina pero pensar que el dragón se bañaba aquí te quita las ganas de bañarte.";
+writemessages[983] = "Tiene una ranura y un apartado para poner pilas.";
+writemessages[984] = "Se la comería hasta un oso.";
+writemessages[985] = "Aunque no es muy grande, es un charco de agua bastante limpia.";
+writemessages[986] = "Ves la niebla a lo lejos, espesa... misteriosa.";
+writemessages[987] = "La misteriosa niebla parece comenzar aquí.";
+writemessages[988] = "La niebla no es muy espesa aquí.";
+writemessages[989] = "Ves la niebla quedesaparece en tenues retazos.";
+writemessages[990] = "Ves la niebla a lo lejos, espesa... misteriosa.";
+writemessages[991] = "La niebla es bastante molesta. Suerte que no es tan densa como en otras partes de la caverna.";
+writemessages[992] = "La rampa desciende de forma bastante pronunciada.";
+writemessages[993] = "La rampa acaba aquí. Qué lugar más extraño.";
+writemessages[994] = "El aceite se acumula en esa zona de ahí, en un charco. Da un poco de asco.";
+writemessages[995] = "El agujero es lo suficientemente grande como para que pases por él. ¿Hacia dónde va? Deberás averiguarlo tú.";
+writemessages[996] = "No se ve a dónde va a parar el agujero. Ya que quieres meter la cabeza, atraviésalo que será más seguro.";
+writemessages[997] = "Por el agujero entra la luz... mmm...";
+writemessages[998] = "Es un trono bastante grande adornados con intrincados dibujos. No sabes si significan algo.";
+writemessages[999] = "No sabrías decir qué son excepto que son antiguos trofeos pero no parecen tener mucho valor.";
+writemessages[1000] = "Debían ser bellísimos cuando eran nuevos. Ahora, son solo una sombra de lo que fueron.";
+writemessages[1001] = "Son pleciosos. O al menos eso clees polque son un poco lalos. No palecen tenel mucho valol.";
+writemessages[1002] = "Pleciosas telas de seda natural. Piensas de qué podlía servirte pelo no se te oculle nada.";
+writemessages[1003] = "La luz parece venir de otro lugar. Es totalmente artificial.";
+writemessages[1004] = "Es una escalera de piedra, algo resbaladiza pero podrás usarla.";
+writemessages[1005] = "No tiene mucho misterio. Es una puerta, de madera, bastante fea.";
+writemessages[1006] = "Aunque la visión es espectacular, no deberías quedarte aquí mucho tiempo.";
+writemessages[1007] = "Por la peste que hace aquí, ha vivido mucho tiempo aquí. ";
+writemessages[1008] = "No la ves por aquí.";
+writemessages[1009] = "La linterna está apagada. ";
+writemessages[1010] = "La linterna está encendida. ";
+writemessages[1011] = "No tiene la pila.";
+writemessages[1012] = "Nivel de energia de la pila: ";
+writemessages[1013] = "altísimo.";
+writemessages[1014] = "¡Es demasiado fuerte para ti, forastero!";
+writemessages[1015] = "¡Es demasiado fuerte para ti, forastero!";
+writemessages[1016] = "La jaula está vacía.";
+writemessages[1017] = "Tienes al pájaro enjaulado.";
+writemessages[1018] = "Tienes al pájaro enjaulado.";
+writemessages[1019] = "Está volando.";
+writemessages[1020] = "¿Se podrán comer las paredes?.";
+writemessages[1021] = "«En este lugar perdió el Rey Elfo una pepita de oro.»";
+writemessages[1022] = "Pone XYZZY.";
+writemessages[1023] = "Pone «OID».";
+writemessages[1024] = "Pone: «GRACIAS POR HABER TRAÍDO LUZ A ESTA TRISTE HABITACIÓN»";
+writemessages[1025] = "Pone: «FEE FIE FOE FOO». Lee justo después de la descripción. ¿Estás de beta tester o qué?";
+writemessages[1026] = "Mmm... Aquí las paredes no tienen mucho interés.";
+writemessages[1027] = "La serpiente se está poniendo nerviosa.";
+writemessages[1028] = "Es una grieta tan profunda que no ves dónde acaba.";
+writemessages[1029] = "La grieta es tan profunda que crees perder el conocimiento al mirar.";
+writemessages[1030] = "El troll da mucho miedo. No sabes cómo puede reaccionar...";
+writemessages[1031] = "Ahora ya sabes qué animal era el que hacía tanta peste.";
+writemessages[1032] = "Sudas la gota gorda del calor que hace en el interior del volcán.";
+writemessages[1033] = "Apesta aquí. Te recuerdan a los gases de fuera de la caverna. ";
+writemessages[1034] = "La cornisa es artificial. No sabes cuánto tiempo debe hacer que está aquí.";
+writemessages[1035] = "Las letras, enormes, están grabadas en la piedra de una forma muy tosca.";
+writemessages[1036] = "Las letras son bastante sutiles. Están grabadas en la piedra.";
+writemessages[1037] = "La botella está llena de un aceite muy denso.";
+writemessages[1038] = "La botella está vacía.";
+writemessages[1039] = "La botella está llena de agua.";
+writemessages[1040] = "Es mágica. A ver, úsala a ver qué pasa. Aparte de eso, ";
+writemessages[1041] = "Es... una piedra, redonda y bastante fea. Aparte de eso, ";
+writemessages[1042] = "No ves nada que te llame la atención. Pierdes el tiempo.";
+writemessages[1043] = "No ves eso por aquí.";
+writemessages[1044] = "No ves {OREF} por aquí.";
+writemessages[1045] = "{OREF} es un tesoro.";
+writemessages[1046] = "{OREF} es un objeto.";
 
 // LOCATION MESSAGES
 
