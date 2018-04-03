@@ -3497,59 +3497,73 @@ pro000_restart: while(process_restart)
 
 	}
 
-	// LEE CARTE
+	// EX CARTE
 	p000e0178:
 	{
  		if (skipdoall('p000e0178')) break p000e0178;
  		if (in_response)
 		{
-			if (!CNDverb(109)) break p000e0178;
+			if (!CNDverb(30)) break p000e0178;
 			if (!CNDnoun1(93)) break p000e0178;
  		}
-		if (!CNDat(18)) break p000e0178;
+ 		ACClet(33,109);
+		{}
+
+	}
+
+	// LEE CARTE
+	p000e0179:
+	{
+ 		if (skipdoall('p000e0179')) break p000e0179;
+ 		if (in_response)
+		{
+			if (!CNDverb(109)) break p000e0179;
+			if (!CNDnoun1(93)) break p000e0179;
+ 		}
+		if (!CNDat(18)) break p000e0179;
  		ACClet(34,124);
 		{}
 
 	}
 
 	// EX PARED
-	p000e0179:
+	p000e0180:
 	{
- 		if (skipdoall('p000e0179')) break p000e0179;
+ 		if (skipdoall('p000e0180')) break p000e0180;
  		if (in_response)
 		{
-			if (!CNDverb(30)) break p000e0179;
-			if (!CNDnoun1(70)) break p000e0179;
+			if (!CNDverb(30)) break p000e0180;
+			if (!CNDnoun1(70)) break p000e0180;
  		}
-		if (!CNDatgt(30)) break p000e0179;
+		if (!CNDatgt(30)) break p000e0180;
  		ACClet(33,109);
 		{}
 
 	}
 
 	// LEE PARED
-	p000e0180:
-	{
- 		if (skipdoall('p000e0180')) break p000e0180;
- 		if (in_response)
-		{
-			if (!CNDverb(109)) break p000e0180;
-			if (!CNDnoun1(70)) break p000e0180;
- 		}
-		if (!CNDatgt(30)) break p000e0180;
- 		ACClet(34,124);
-		{}
-
-	}
-
-	// LEE MENSAJE
 	p000e0181:
 	{
  		if (skipdoall('p000e0181')) break p000e0181;
  		if (in_response)
 		{
 			if (!CNDverb(109)) break p000e0181;
-			if (!CNDnoun1(124)) break p000e0181;
+			if (!CNDnoun1(70)) break p000e0181;
+ 		}
+		if (!CNDatgt(30)) break p000e0181;
+ 		ACClet(34,124);
+		{}
+
+	}
+
+	// LEE MENSAJE
+	p000e0182:
+	{
+ 		if (skipdoall('p000e0182')) break p000e0182;
+ 		if (in_response)
+		{
+			if (!CNDverb(109)) break p000e0182;
+			if (!CNDnoun1(124)) break p000e0182;
  		}
  		ACClet(34,124);
 		{}
@@ -3557,28 +3571,13 @@ pro000_restart: while(process_restart)
 	}
 
 	// LEE GRABADO
-	p000e0182:
-	{
- 		if (skipdoall('p000e0182')) break p000e0182;
- 		if (in_response)
-		{
-			if (!CNDverb(109)) break p000e0182;
-			if (!CNDnoun1(170)) break p000e0182;
- 		}
-		if (!CNDat(68)) break p000e0182;
- 		ACClet(34,124);
-		{}
-
-	}
-
-	// LEE PILAR
 	p000e0183:
 	{
  		if (skipdoall('p000e0183')) break p000e0183;
  		if (in_response)
 		{
 			if (!CNDverb(109)) break p000e0183;
-			if (!CNDnoun1(161)) break p000e0183;
+			if (!CNDnoun1(170)) break p000e0183;
  		}
 		if (!CNDat(68)) break p000e0183;
  		ACClet(34,124);
@@ -3586,19 +3585,17 @@ pro000_restart: while(process_restart)
 
 	}
 
-	// LEE MENSAJE
+	// LEE PILAR
 	p000e0184:
 	{
  		if (skipdoall('p000e0184')) break p000e0184;
  		if (in_response)
 		{
 			if (!CNDverb(109)) break p000e0184;
-			if (!CNDnoun1(124)) break p000e0184;
+			if (!CNDnoun1(161)) break p000e0184;
  		}
-		if (!CNDatgt(30)) break p000e0184;
- 		ACCprocess(25);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDat(68)) break p000e0184;
+ 		ACClet(34,124);
 		{}
 
 	}
@@ -3612,24 +3609,23 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(109)) break p000e0185;
 			if (!CNDnoun1(124)) break p000e0185;
  		}
- 		ACCprocess(4);
+		if (!CNDatgt(30)) break p000e0185;
+ 		ACCprocess(25);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// LEE _
+	// LEE MENSAJE
 	p000e0186:
 	{
  		if (skipdoall('p000e0186')) break p000e0186;
  		if (in_response)
 		{
 			if (!CNDverb(109)) break p000e0186;
+			if (!CNDnoun1(124)) break p000e0186;
  		}
-		if (!CNDeq(34,255)) break p000e0186;
-		if (!CNDat(18)) break p000e0186;
- 		ACClet(34,124);
  		ACCprocess(4);
  		ACCdone();
 		break pro000_restart;
@@ -3645,8 +3641,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(109)) break p000e0187;
  		}
+		if (!CNDeq(34,255)) break p000e0187;
 		if (!CNDat(18)) break p000e0187;
- 		ACCwriteln(91);
+ 		ACClet(34,124);
+ 		ACCprocess(4);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -3661,9 +3659,8 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(109)) break p000e0188;
  		}
-		if (!CNDeq(34,255)) break p000e0188;
-		if (!CNDbnotzero(12,1)) break p000e0188;
- 		ACCwriteln(92);
+		if (!CNDat(18)) break p000e0188;
+ 		ACCwriteln(91);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -3679,8 +3676,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(109)) break p000e0189;
  		}
 		if (!CNDeq(34,255)) break p000e0189;
-		if (!CNDbzero(12,1)) break p000e0189;
- 		ACCwriteln(93);
+		if (!CNDbnotzero(12,1)) break p000e0189;
+ 		ACCwriteln(92);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -3695,9 +3692,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(109)) break p000e0190;
  		}
-		if (!CNDnoteq(34,255)) break p000e0190;
-		if (!CNDeq(51,255)) break p000e0190;
- 		ACCwriteln(94);
+		if (!CNDeq(34,255)) break p000e0190;
+		if (!CNDbzero(12,1)) break p000e0190;
+ 		ACCwriteln(93);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -3712,9 +3709,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(109)) break p000e0191;
  		}
-		if (!CNDnoteq(51,255)) break p000e0191;
-		if (!CNDpresent(getFlag(51))) break p000e0191;
- 		ACCwriteln(95);
+		if (!CNDnoteq(34,255)) break p000e0191;
+		if (!CNDeq(51,255)) break p000e0191;
+ 		ACCwriteln(94);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -3730,24 +3727,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(109)) break p000e0192;
  		}
 		if (!CNDnoteq(51,255)) break p000e0192;
-		if (!CNDabsent(getFlag(51))) break p000e0192;
- 		ACCwriteln(96);
+		if (!CNDpresent(getFlag(51))) break p000e0192;
+ 		ACCwriteln(95);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// EX _
+	// LEE _
 	p000e0193:
 	{
  		if (skipdoall('p000e0193')) break p000e0193;
  		if (in_response)
 		{
-			if (!CNDverb(30)) break p000e0193;
+			if (!CNDverb(109)) break p000e0193;
  		}
-		if (!CNDatgt(30)) break p000e0193;
- 		ACCprocess(25);
+		if (!CNDnoteq(51,255)) break p000e0193;
+		if (!CNDabsent(getFlag(51))) break p000e0193;
+ 		ACCwriteln(96);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -3762,24 +3760,23 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(30)) break p000e0194;
  		}
- 		ACCprocess(4);
+		if (!CNDatgt(30)) break p000e0194;
+ 		ACCprocess(25);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// HUELE AIRE
+	// EX _
 	p000e0195:
 	{
  		if (skipdoall('p000e0195')) break p000e0195;
  		if (in_response)
 		{
-			if (!CNDverb(42)) break p000e0195;
-			if (!CNDnoun1(60)) break p000e0195;
+			if (!CNDverb(30)) break p000e0195;
  		}
-		if (!CNDat(4)) break p000e0195;
- 		ACCwriteln(97);
+ 		ACCprocess(4);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -3795,8 +3792,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(42)) break p000e0196;
 			if (!CNDnoun1(60)) break p000e0196;
  		}
-		if (!CNDat(5)) break p000e0196;
- 		ACCwriteln(98);
+		if (!CNDat(4)) break p000e0196;
+ 		ACCwriteln(97);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -3813,7 +3810,7 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(60)) break p000e0197;
  		}
 		if (!CNDat(5)) break p000e0197;
- 		ACCwriteln(99);
+ 		ACCwriteln(98);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -3829,7 +3826,24 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(42)) break p000e0198;
 			if (!CNDnoun1(60)) break p000e0198;
  		}
-		if (!CNDat(6)) break p000e0198;
+		if (!CNDat(5)) break p000e0198;
+ 		ACCwriteln(99);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// HUELE AIRE
+	p000e0199:
+	{
+ 		if (skipdoall('p000e0199')) break p000e0199;
+ 		if (in_response)
+		{
+			if (!CNDverb(42)) break p000e0199;
+			if (!CNDnoun1(60)) break p000e0199;
+ 		}
+		if (!CNDat(6)) break p000e0199;
  		ACCwriteln(100);
  		ACCdone();
 		break pro000_restart;
@@ -3838,16 +3852,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// VACIA BOTEL
-	p000e0199:
+	p000e0200:
 	{
- 		if (skipdoall('p000e0199')) break p000e0199;
+ 		if (skipdoall('p000e0200')) break p000e0200;
  		if (in_response)
 		{
-			if (!CNDverb(86)) break p000e0199;
-			if (!CNDnoun1(53)) break p000e0199;
+			if (!CNDverb(86)) break p000e0200;
+			if (!CNDnoun1(53)) break p000e0200;
  		}
-		if (!CNDcarried(3)) break p000e0199;
-		if (!CNDozero(3,22)) break p000e0199;
+		if (!CNDcarried(3)) break p000e0200;
+		if (!CNDozero(3,22)) break p000e0200;
  		ACCwriteln(101);
  		ACCdone();
 		break pro000_restart;
@@ -3856,36 +3870,17 @@ pro000_restart: while(process_restart)
 	}
 
 	// VACIA _
-	p000e0200:
-	{
- 		if (skipdoall('p000e0200')) break p000e0200;
- 		if (in_response)
-		{
-			if (!CNDverb(86)) break p000e0200;
- 		}
-		if (!CNDcarried(3)) break p000e0200;
-		if (!CNDonotzero(3,22)) break p000e0200;
-		if (!CNDeq(34,94)) break p000e0200;
- 		ACClet(34,53);
-		{}
-
-	}
-
-	// VACIA BOTEL
 	p000e0201:
 	{
  		if (skipdoall('p000e0201')) break p000e0201;
  		if (in_response)
 		{
 			if (!CNDverb(86)) break p000e0201;
-			if (!CNDnoun1(53)) break p000e0201;
  		}
 		if (!CNDcarried(3)) break p000e0201;
 		if (!CNDonotzero(3,22)) break p000e0201;
-		if (!CNDnotat(92)) break p000e0201;
- 		ACCoclear(3,22);
- 		ACCok();
-		break pro000_restart;
+		if (!CNDeq(34,94)) break p000e0201;
+ 		ACClet(34,53);
 		{}
 
 	}
@@ -3899,13 +3894,11 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(86)) break p000e0202;
 			if (!CNDnoun1(53)) break p000e0202;
  		}
-		if (!CNDcarried(9)) break p000e0202;
+		if (!CNDcarried(3)) break p000e0202;
+		if (!CNDonotzero(3,22)) break p000e0202;
 		if (!CNDnotat(92)) break p000e0202;
-		if (!CNDnotat(106)) break p000e0202;
- 		ACCswap(9,3);
  		ACCoclear(3,22);
- 		ACCwriteln(102);
- 		ACCdone();
+ 		ACCok();
 		break pro000_restart;
 		{}
 
@@ -3920,10 +3913,12 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(86)) break p000e0203;
 			if (!CNDnoun1(53)) break p000e0203;
  		}
-		if (!CNDat(92)) break p000e0203;
-		if (!CNDnotcarr(3)) break p000e0203;
-		if (!CNDnotcarr(9)) break p000e0203;
- 		ACCwriteln(103);
+		if (!CNDcarried(9)) break p000e0203;
+		if (!CNDnotat(92)) break p000e0203;
+		if (!CNDnotat(106)) break p000e0203;
+ 		ACCswap(9,3);
+ 		ACCoclear(3,22);
+ 		ACCwriteln(102);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -3940,8 +3935,11 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(53)) break p000e0204;
  		}
 		if (!CNDat(92)) break p000e0204;
- 		ACClet(33,126);
- 		ACClet(34,132);
+		if (!CNDnotcarr(3)) break p000e0204;
+		if (!CNDnotcarr(9)) break p000e0204;
+ 		ACCwriteln(103);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
@@ -3955,9 +3953,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(86)) break p000e0205;
 			if (!CNDnoun1(53)) break p000e0205;
  		}
-		if (!CNDat(106)) break p000e0205;
- 		ACClet(33,127);
- 		ACClet(34,89);
+		if (!CNDat(92)) break p000e0205;
+ 		ACClet(33,126);
+ 		ACClet(34,132);
 		{}
 
 	}
@@ -3971,26 +3969,25 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(86)) break p000e0206;
 			if (!CNDnoun1(53)) break p000e0206;
  		}
-		if (!CNDcarried(3)) break p000e0206;
- 		ACCoclear(3,22);
- 		ACCwriteln(104);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDat(106)) break p000e0206;
+ 		ACClet(33,127);
+ 		ACClet(34,89);
 		{}
 
 	}
 
-	// LLENA BOTEL
+	// VACIA BOTEL
 	p000e0207:
 	{
  		if (skipdoall('p000e0207')) break p000e0207;
  		if (in_response)
 		{
-			if (!CNDverb(55)) break p000e0207;
+			if (!CNDverb(86)) break p000e0207;
 			if (!CNDnoun1(53)) break p000e0207;
  		}
-		if (!CNDcarried(9)) break p000e0207;
- 		ACCwriteln(105);
+		if (!CNDcarried(3)) break p000e0207;
+ 		ACCoclear(3,22);
+ 		ACCwriteln(104);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4006,9 +4003,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(55)) break p000e0208;
 			if (!CNDnoun1(53)) break p000e0208;
  		}
-		if (!CNDcarried(3)) break p000e0208;
-		if (!CNDonotzero(3,22)) break p000e0208;
- 		ACCwriteln(106);
+		if (!CNDcarried(9)) break p000e0208;
+ 		ACCwriteln(105);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4024,10 +4020,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(55)) break p000e0209;
 			if (!CNDnoun1(53)) break p000e0209;
  		}
-		if (!CNDat(3)) break p000e0209;
 		if (!CNDcarried(3)) break p000e0209;
- 		ACCoset(3,22);
- 		ACCwriteln(107);
+		if (!CNDonotzero(3,22)) break p000e0209;
+ 		ACCwriteln(106);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4043,10 +4038,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(55)) break p000e0210;
 			if (!CNDnoun1(53)) break p000e0210;
  		}
-		if (!CNDat(19)) break p000e0210;
+		if (!CNDat(3)) break p000e0210;
 		if (!CNDcarried(3)) break p000e0210;
  		ACCoset(3,22);
- 		ACCwriteln(108);
+ 		ACCwriteln(107);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4062,10 +4057,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(55)) break p000e0211;
 			if (!CNDnoun1(53)) break p000e0211;
  		}
-		if (!CNDat(24)) break p000e0211;
+		if (!CNDat(19)) break p000e0211;
 		if (!CNDcarried(3)) break p000e0211;
  		ACCoset(3,22);
- 		ACCwriteln(109);
+ 		ACCwriteln(108);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4081,10 +4076,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(55)) break p000e0212;
 			if (!CNDnoun1(53)) break p000e0212;
  		}
-		if (!CNDat(25)) break p000e0212;
+		if (!CNDat(24)) break p000e0212;
 		if (!CNDcarried(3)) break p000e0212;
  		ACCoset(3,22);
- 		ACCwriteln(110);
+ 		ACCwriteln(109);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4100,10 +4095,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(55)) break p000e0213;
 			if (!CNDnoun1(53)) break p000e0213;
  		}
-		if (!CNDat(118)) break p000e0213;
+		if (!CNDat(25)) break p000e0213;
 		if (!CNDcarried(3)) break p000e0213;
  		ACCoset(3,22);
- 		ACCwriteln(111);
+ 		ACCwriteln(110);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4119,10 +4114,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(55)) break p000e0214;
 			if (!CNDnoun1(53)) break p000e0214;
  		}
-		if (!CNDat(69)) break p000e0214;
+		if (!CNDat(118)) break p000e0214;
 		if (!CNDcarried(3)) break p000e0214;
  		ACCoset(3,22);
- 		ACCwriteln(112);
+ 		ACCwriteln(111);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4138,10 +4133,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(55)) break p000e0215;
 			if (!CNDnoun1(53)) break p000e0215;
  		}
-		if (!CNDat(84)) break p000e0215;
+		if (!CNDat(69)) break p000e0215;
 		if (!CNDcarried(3)) break p000e0215;
  		ACCoset(3,22);
- 		ACCwriteln(113);
+ 		ACCwriteln(112);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4157,11 +4152,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(55)) break p000e0216;
 			if (!CNDnoun1(53)) break p000e0216;
  		}
-		if (!CNDat(93)) break p000e0216;
+		if (!CNDat(84)) break p000e0216;
 		if (!CNDcarried(3)) break p000e0216;
  		ACCoset(3,22);
- 		ACCswap(3,9);
- 		ACCwriteln(114);
+ 		ACCwriteln(113);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4177,7 +4171,27 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(55)) break p000e0217;
 			if (!CNDnoun1(53)) break p000e0217;
  		}
+		if (!CNDat(93)) break p000e0217;
 		if (!CNDcarried(3)) break p000e0217;
+ 		ACCoset(3,22);
+ 		ACCswap(3,9);
+ 		ACCwriteln(114);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// LLENA BOTEL
+	p000e0218:
+	{
+ 		if (skipdoall('p000e0218')) break p000e0218;
+ 		if (in_response)
+		{
+			if (!CNDverb(55)) break p000e0218;
+			if (!CNDnoun1(53)) break p000e0218;
+ 		}
+		if (!CNDcarried(3)) break p000e0218;
  		ACCwriteln(115);
  		ACCdone();
 		break pro000_restart;
@@ -4186,15 +4200,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// COME TORTI
-	p000e0218:
+	p000e0219:
 	{
- 		if (skipdoall('p000e0218')) break p000e0218;
+ 		if (skipdoall('p000e0219')) break p000e0219;
  		if (in_response)
 		{
-			if (!CNDverb(38)) break p000e0218;
-			if (!CNDnoun1(52)) break p000e0218;
+			if (!CNDverb(38)) break p000e0219;
+			if (!CNDnoun1(52)) break p000e0219;
  		}
-		if (!CNDcarried(2)) break p000e0218;
+		if (!CNDcarried(2)) break p000e0219;
  		ACCdestroy(2);
  		ACCwriteln(116);
  		ACClet(5,4);
@@ -4205,15 +4219,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// BEBE AGUA
-	p000e0219:
+	p000e0220:
 	{
- 		if (skipdoall('p000e0219')) break p000e0219;
+ 		if (skipdoall('p000e0220')) break p000e0220;
  		if (in_response)
 		{
-			if (!CNDverb(39)) break p000e0219;
-			if (!CNDnoun1(57)) break p000e0219;
+			if (!CNDverb(39)) break p000e0220;
+			if (!CNDnoun1(57)) break p000e0220;
  		}
-		if (!CNDcarried(3)) break p000e0219;
+		if (!CNDcarried(3)) break p000e0220;
  		ACCoclear(3,22);
  		ACCwriteln(117);
  		ACCdone();
@@ -4223,15 +4237,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// AGARR ARBOL
-	p000e0220:
+	p000e0221:
 	{
- 		if (skipdoall('p000e0220')) break p000e0220;
+ 		if (skipdoall('p000e0221')) break p000e0221;
  		if (in_response)
 		{
-			if (!CNDverb(20)) break p000e0220;
-			if (!CNDnoun1(58)) break p000e0220;
+			if (!CNDverb(20)) break p000e0221;
+			if (!CNDnoun1(58)) break p000e0221;
  		}
-		if (!CNDat(17)) break p000e0220;
+		if (!CNDat(17)) break p000e0221;
  		ACCwriteln(118);
  		ACCdone();
 		break pro000_restart;
@@ -4240,37 +4254,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// DESPLAZA ARBOL
-	p000e0221:
-	{
- 		if (skipdoall('p000e0221')) break p000e0221;
- 		if (in_response)
-		{
-			if (!CNDverb(110)) break p000e0221;
-			if (!CNDnoun1(58)) break p000e0221;
- 		}
-		if (!CNDat(17)) break p000e0221;
- 		ACClet(33,49);
-		{}
-
-	}
-
-	// AGITA ARBOL
 	p000e0222:
 	{
  		if (skipdoall('p000e0222')) break p000e0222;
  		if (in_response)
 		{
-			if (!CNDverb(49)) break p000e0222;
+			if (!CNDverb(110)) break p000e0222;
 			if (!CNDnoun1(58)) break p000e0222;
  		}
 		if (!CNDat(17)) break p000e0222;
-		if (!CNDlt(103,2)) break p000e0222;
- 		ACClet(51,4);
- 		ACCwriteln(119);
- 		ACCplace(4,16);
- 		ACCset(103);
- 		ACCdone();
-		break pro000_restart;
+ 		ACClet(33,49);
 		{}
 
 	}
@@ -4285,6 +4278,27 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(58)) break p000e0223;
  		}
 		if (!CNDat(17)) break p000e0223;
+		if (!CNDlt(103,2)) break p000e0223;
+ 		ACClet(51,4);
+ 		ACCwriteln(119);
+ 		ACCplace(4,16);
+ 		ACCset(103);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// AGITA ARBOL
+	p000e0224:
+	{
+ 		if (skipdoall('p000e0224')) break p000e0224;
+ 		if (in_response)
+		{
+			if (!CNDverb(49)) break p000e0224;
+			if (!CNDnoun1(58)) break p000e0224;
+ 		}
+		if (!CNDat(17)) break p000e0224;
  		ACCwriteln(120);
  		ACCdone();
 		break pro000_restart;
@@ -4293,31 +4307,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// PON BATERIA
-	p000e0224:
-	{
- 		if (skipdoall('p000e0224')) break p000e0224;
- 		if (in_response)
-		{
-			if (!CNDverb(71)) break p000e0224;
-			if (!CNDnoun1(55)) break p000e0224;
- 		}
- 		ACClet(33,74);
-		{}
-
-	}
-
-	// ECHA BATERIA
 	p000e0225:
 	{
  		if (skipdoall('p000e0225')) break p000e0225;
  		if (in_response)
 		{
-			if (!CNDverb(74)) break p000e0225;
+			if (!CNDverb(71)) break p000e0225;
 			if (!CNDnoun1(55)) break p000e0225;
  		}
-		if (!CNDnotat(53)) break p000e0225;
- 		ACClet(43,4);
- 		ACClet(44,50);
+ 		ACClet(33,74);
 		{}
 
 	}
@@ -4331,31 +4329,24 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(74)) break p000e0226;
 			if (!CNDnoun1(55)) break p000e0226;
  		}
-		if (!CNDprep(2)) break p000e0226;
+		if (!CNDnotat(53)) break p000e0226;
  		ACClet(43,4);
+ 		ACClet(44,50);
 		{}
 
 	}
 
-	// ECHA MONED
+	// ECHA BATERIA
 	p000e0227:
 	{
  		if (skipdoall('p000e0227')) break p000e0227;
  		if (in_response)
 		{
 			if (!CNDverb(74)) break p000e0227;
-			if (!CNDnoun1(51)) break p000e0227;
+			if (!CNDnoun1(55)) break p000e0227;
  		}
-		if (!CNDat(53)) break p000e0227;
-		if (!CNDnotzero(125)) break p000e0227;
-		if (!CNDcarried(1)) break p000e0227;
- 		ACCdestroy(1);
- 		ACCclear(8);
- 		ACCwriteln(121);
- 		ACCwriteln(122);
- 		ACCcreate(5);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDprep(2)) break p000e0227;
+ 		ACClet(43,4);
 		{}
 
 	}
@@ -4370,7 +4361,30 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(51)) break p000e0228;
  		}
 		if (!CNDat(53)) break p000e0228;
+		if (!CNDnotzero(125)) break p000e0228;
 		if (!CNDcarried(1)) break p000e0228;
+ 		ACCdestroy(1);
+ 		ACCclear(8);
+ 		ACCwriteln(121);
+ 		ACCwriteln(122);
+ 		ACCcreate(5);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ECHA MONED
+	p000e0229:
+	{
+ 		if (skipdoall('p000e0229')) break p000e0229;
+ 		if (in_response)
+		{
+			if (!CNDverb(74)) break p000e0229;
+			if (!CNDnoun1(51)) break p000e0229;
+ 		}
+		if (!CNDat(53)) break p000e0229;
+		if (!CNDcarried(1)) break p000e0229;
  		ACCdestroy(1);
  		ACCset(125);
  		ACCok();
@@ -4380,43 +4394,23 @@ pro000_restart: while(process_restart)
 	}
 
 	// ECHA BATERIA
-	p000e0229:
-	{
- 		if (skipdoall('p000e0229')) break p000e0229;
- 		if (in_response)
-		{
-			if (!CNDverb(74)) break p000e0229;
-			if (!CNDnoun1(55)) break p000e0229;
- 		}
-		if (!CNDnoun2(155)) break p000e0229;
-		if (!CNDat(53)) break p000e0229;
-		if (!CNDnotzero(125)) break p000e0229;
-		if (!CNDcarried(5)) break p000e0229;
- 		ACCclear(8);
- 		ACCplace(5,53);
- 		ACCwriteln(123);
- 		ACCwriteln(124);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// PON BATERIA
 	p000e0230:
 	{
  		if (skipdoall('p000e0230')) break p000e0230;
  		if (in_response)
 		{
-			if (!CNDverb(71)) break p000e0230;
+			if (!CNDverb(74)) break p000e0230;
 			if (!CNDnoun1(55)) break p000e0230;
  		}
 		if (!CNDnoun2(155)) break p000e0230;
 		if (!CNDat(53)) break p000e0230;
+		if (!CNDnotzero(125)) break p000e0230;
 		if (!CNDcarried(5)) break p000e0230;
- 		ACCdestroy(5);
- 		ACCset(125);
- 		ACCok();
+ 		ACCclear(8);
+ 		ACCplace(5,53);
+ 		ACCwriteln(123);
+ 		ACCwriteln(124);
+ 		ACCdone();
 		break pro000_restart;
 		{}
 
@@ -4431,10 +4425,11 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(71)) break p000e0231;
 			if (!CNDnoun1(55)) break p000e0231;
  		}
+		if (!CNDnoun2(155)) break p000e0231;
+		if (!CNDat(53)) break p000e0231;
 		if (!CNDcarried(5)) break p000e0231;
-		if (!CNDcarried(0)) break p000e0231;
  		ACCdestroy(5);
- 		ACCset(105);
+ 		ACCset(125);
  		ACCok();
 		break pro000_restart;
 		{}
@@ -4450,28 +4445,28 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(71)) break p000e0232;
 			if (!CNDnoun1(55)) break p000e0232;
  		}
-		if (!CNDnotcarr(5)) break p000e0232;
- 		ACCdrop(5);
-		if (!success) break pro000_restart;
- 		ACCdone();
+		if (!CNDcarried(5)) break p000e0232;
+		if (!CNDcarried(0)) break p000e0232;
+ 		ACCdestroy(5);
+ 		ACCset(105);
+ 		ACCok();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ECHA BATERIA
+	// PON BATERIA
 	p000e0233:
 	{
  		if (skipdoall('p000e0233')) break p000e0233;
  		if (in_response)
 		{
-			if (!CNDverb(74)) break p000e0233;
+			if (!CNDverb(71)) break p000e0233;
 			if (!CNDnoun1(55)) break p000e0233;
  		}
-		if (!CNDprep(4)) break p000e0233;
-		if (!CNDnoun2(50)) break p000e0233;
-		if (!CNDnotcarr(0)) break p000e0233;
- 		ACCwriteln(125);
+		if (!CNDnotcarr(5)) break p000e0233;
+ 		ACCdrop(5);
+		if (!success) break pro000_restart;
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4489,8 +4484,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDprep(4)) break p000e0234;
 		if (!CNDnoun2(50)) break p000e0234;
-		if (!CNDnotcarr(5)) break p000e0234;
- 		ACCwriteln(126);
+		if (!CNDnotcarr(0)) break p000e0234;
+ 		ACCwriteln(125);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4508,8 +4503,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDprep(4)) break p000e0235;
 		if (!CNDnoun2(50)) break p000e0235;
-		if (!CNDnotzero(105)) break p000e0235;
- 		ACCwriteln(127);
+		if (!CNDnotcarr(5)) break p000e0235;
+ 		ACCwriteln(126);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4527,6 +4522,25 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDprep(4)) break p000e0236;
 		if (!CNDnoun2(50)) break p000e0236;
+		if (!CNDnotzero(105)) break p000e0236;
+ 		ACCwriteln(127);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ECHA BATERIA
+	p000e0237:
+	{
+ 		if (skipdoall('p000e0237')) break p000e0237;
+ 		if (in_response)
+		{
+			if (!CNDverb(74)) break p000e0237;
+			if (!CNDnoun1(55)) break p000e0237;
+ 		}
+		if (!CNDprep(4)) break p000e0237;
+		if (!CNDnoun2(50)) break p000e0237;
  		ACCdestroy(5);
  		ACCset(105);
  		ACCwriteln(128);
@@ -4537,32 +4551,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// DESVESTIR BATERIA
-	p000e0237:
-	{
- 		if (skipdoall('p000e0237')) break p000e0237;
- 		if (in_response)
-		{
-			if (!CNDverb(22)) break p000e0237;
-			if (!CNDnoun1(55)) break p000e0237;
- 		}
- 		ACClet(33,75);
-		{}
-
-	}
-
-	// EXTRAE BATERIA
 	p000e0238:
 	{
  		if (skipdoall('p000e0238')) break p000e0238;
  		if (in_response)
 		{
-			if (!CNDverb(75)) break p000e0238;
+			if (!CNDverb(22)) break p000e0238;
 			if (!CNDnoun1(55)) break p000e0238;
  		}
-		if (!CNDeq(43,255)) break p000e0238;
-		if (!CNDnotat(53)) break p000e0238;
- 		ACClet(43,3);
- 		ACClet(44,50);
+ 		ACClet(33,75);
 		{}
 
 	}
@@ -4577,9 +4574,9 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(55)) break p000e0239;
  		}
 		if (!CNDeq(43,255)) break p000e0239;
-		if (!CNDat(53)) break p000e0239;
+		if (!CNDnotat(53)) break p000e0239;
  		ACClet(43,3);
- 		ACClet(44,155);
+ 		ACClet(44,50);
 		{}
 
 	}
@@ -4593,12 +4590,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(75)) break p000e0240;
 			if (!CNDnoun1(55)) break p000e0240;
  		}
-		if (!CNDprep(3)) break p000e0240;
-		if (!CNDnoun2(50)) break p000e0240;
-		if (!CNDnotcarr(0)) break p000e0240;
- 		ACCwriteln(129);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDeq(43,255)) break p000e0240;
+		if (!CNDat(53)) break p000e0240;
+ 		ACClet(43,3);
+ 		ACClet(44,155);
 		{}
 
 	}
@@ -4614,8 +4609,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDprep(3)) break p000e0241;
 		if (!CNDnoun2(50)) break p000e0241;
-		if (!CNDzero(105)) break p000e0241;
- 		ACCwriteln(130);
+		if (!CNDnotcarr(0)) break p000e0241;
+ 		ACCwriteln(129);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4631,9 +4626,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(75)) break p000e0242;
 			if (!CNDnoun1(55)) break p000e0242;
  		}
-		if (!CNDatlt(30)) break p000e0242;
-		if (!CNDgt(1,4)) break p000e0242;
- 		ACCwriteln(131);
+		if (!CNDprep(3)) break p000e0242;
+		if (!CNDnoun2(50)) break p000e0242;
+		if (!CNDzero(105)) break p000e0242;
+ 		ACCwriteln(130);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4649,9 +4645,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(75)) break p000e0243;
 			if (!CNDnoun1(55)) break p000e0243;
  		}
-		if (!CNDatgt(30)) break p000e0243;
-		if (!CNDgt(1,6)) break p000e0243;
- 		ACCwriteln(132);
+		if (!CNDatlt(30)) break p000e0243;
+		if (!CNDgt(1,4)) break p000e0243;
+ 		ACCwriteln(131);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -4667,16 +4663,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(75)) break p000e0244;
 			if (!CNDnoun1(55)) break p000e0244;
  		}
-		if (!CNDprep(3)) break p000e0244;
-		if (!CNDnoun2(50)) break p000e0244;
- 		ACCoclear(0,20);
-		if (!CNDat(11)) break p000e0244;
- 		ACCset(0);
- 		ACCcreate(5);
- 		ACCget(5);
-		if (!success) break pro000_restart;
- 		ACCclear(105);
- 		ACCdesc();
+		if (!CNDatgt(30)) break p000e0244;
+		if (!CNDgt(1,6)) break p000e0244;
+ 		ACCwriteln(132);
+ 		ACCdone();
 		break pro000_restart;
 		{}
 
@@ -4693,16 +4683,13 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDprep(3)) break p000e0245;
 		if (!CNDnoun2(50)) break p000e0245;
-		if (!CNDnotat(119)) break p000e0245;
-		if (!CNDnotat(101)) break p000e0245;
-		if (!CNDatgt(31)) break p000e0245;
  		ACCoclear(0,20);
+		if (!CNDat(11)) break p000e0245;
+ 		ACCset(0);
  		ACCcreate(5);
  		ACCget(5);
 		if (!success) break pro000_restart;
  		ACCclear(105);
- 		ACCset(0);
- 		ACCcls();
  		ACCdesc();
 		break pro000_restart;
 		{}
@@ -4720,6 +4707,33 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDprep(3)) break p000e0246;
 		if (!CNDnoun2(50)) break p000e0246;
+		if (!CNDnotat(119)) break p000e0246;
+		if (!CNDnotat(101)) break p000e0246;
+		if (!CNDatgt(31)) break p000e0246;
+ 		ACCoclear(0,20);
+ 		ACCcreate(5);
+ 		ACCget(5);
+		if (!success) break pro000_restart;
+ 		ACCclear(105);
+ 		ACCset(0);
+ 		ACCcls();
+ 		ACCdesc();
+		break pro000_restart;
+		{}
+
+	}
+
+	// EXTRAE BATERIA
+	p000e0247:
+	{
+ 		if (skipdoall('p000e0247')) break p000e0247;
+ 		if (in_response)
+		{
+			if (!CNDverb(75)) break p000e0247;
+			if (!CNDnoun1(55)) break p000e0247;
+ 		}
+		if (!CNDprep(3)) break p000e0247;
+		if (!CNDnoun2(50)) break p000e0247;
  		ACCclear(105);
  		ACCoclear(0,20);
  		ACCcreate(5);
@@ -4733,18 +4747,18 @@ pro000_restart: while(process_restart)
 	}
 
 	// EXTRAE BARRO
-	p000e0247:
+	p000e0248:
 	{
- 		if (skipdoall('p000e0247')) break p000e0247;
+ 		if (skipdoall('p000e0248')) break p000e0248;
  		if (in_response)
 		{
-			if (!CNDverb(75)) break p000e0247;
-			if (!CNDnoun1(90)) break p000e0247;
+			if (!CNDverb(75)) break p000e0248;
+			if (!CNDnoun1(90)) break p000e0248;
  		}
-		if (!CNDprep(3)) break p000e0247;
-		if (!CNDnoun2(89)) break p000e0247;
-		if (!CNDat(26)) break p000e0247;
-		if (!CNDeq(107,1)) break p000e0247;
+		if (!CNDprep(3)) break p000e0248;
+		if (!CNDnoun2(89)) break p000e0248;
+		if (!CNDat(26)) break p000e0248;
+		if (!CNDeq(107,1)) break p000e0248;
  		ACClet(107,2);
  		ACCwriteln(134);
  		ACCnewline();
@@ -4762,15 +4776,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// SENTAR SILLA
-	p000e0248:
+	p000e0249:
 	{
- 		if (skipdoall('p000e0248')) break p000e0248;
+ 		if (skipdoall('p000e0249')) break p000e0249;
  		if (in_response)
 		{
-			if (!CNDverb(23)) break p000e0248;
-			if (!CNDnoun1(83)) break p000e0248;
+			if (!CNDverb(23)) break p000e0249;
+			if (!CNDnoun1(83)) break p000e0249;
  		}
-		if (!CNDat(18)) break p000e0248;
+		if (!CNDat(18)) break p000e0249;
  		ACCwrite(135);
  		ACCpause(30);
  		function anykey00012() 
@@ -4787,15 +4801,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// DESTRUIR BOTEL
-	p000e0249:
+	p000e0250:
 	{
- 		if (skipdoall('p000e0249')) break p000e0249;
+ 		if (skipdoall('p000e0250')) break p000e0250;
  		if (in_response)
 		{
-			if (!CNDverb(69)) break p000e0249;
-			if (!CNDnoun1(53)) break p000e0249;
+			if (!CNDverb(69)) break p000e0250;
+			if (!CNDnoun1(53)) break p000e0250;
  		}
-		if (!CNDcarried(3)) break p000e0249;
+		if (!CNDcarried(3)) break p000e0250;
  		ACCdestroy(3);
  		ACClet(5,4);
  		ACCok();
@@ -4805,14 +4819,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// CABRON _
-	p000e0250:
+	p000e0251:
 	{
- 		if (skipdoall('p000e0250')) break p000e0250;
+ 		if (skipdoall('p000e0251')) break p000e0251;
  		if (in_response)
 		{
-			if (!CNDverb(119)) break p000e0250;
+			if (!CNDverb(119)) break p000e0251;
  		}
-		if (!CNDnotzero(254)) break p000e0250;
+		if (!CNDnotzero(254)) break p000e0251;
  		ACCclear(254);
  		ACCnewline();
  		ACCwriteln(136);
@@ -4832,18 +4846,18 @@ pro000_restart: while(process_restart)
 	}
 
 	// CABRON _
-	p000e0251:
+	p000e0252:
 	{
- 		if (skipdoall('p000e0251')) break p000e0251;
+ 		if (skipdoall('p000e0252')) break p000e0252;
  		if (in_response)
 		{
-			if (!CNDverb(119)) break p000e0251;
+			if (!CNDverb(119)) break p000e0252;
  		}
  		ACCset(254);
  		ACCwriteln(137);
-		if (!CNDnotzero(1)) break p000e0251;
+		if (!CNDnotzero(1)) break p000e0252;
  		ACClet(33,21);
-		entry_for_doall = 'p000e0252';
+		entry_for_doall = 'p000e0253';
 		process_in_doall = 0;
  		ACCdoall(254);
 		break pro000_restart;
@@ -4854,12 +4868,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// CABRON _
-	p000e0252:
+	p000e0253:
 	{
- 		if (skipdoall('p000e0252')) break p000e0252;
+ 		if (skipdoall('p000e0253')) break p000e0253;
  		if (in_response)
 		{
-			if (!CNDverb(119)) break p000e0252;
+			if (!CNDverb(119)) break p000e0253;
  		}
  		ACCdone();
 		break pro000_restart;
@@ -4868,14 +4882,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// _ MIERDA
-	p000e0253:
+	p000e0254:
 	{
- 		if (skipdoall('p000e0253')) break p000e0253;
+ 		if (skipdoall('p000e0254')) break p000e0254;
  		if (in_response)
 		{
-			if (!CNDnoun1(117)) break p000e0253;
+			if (!CNDnoun1(117)) break p000e0254;
  		}
-		if (!CNDnotzero(254)) break p000e0253;
+		if (!CNDnotzero(254)) break p000e0254;
  		ACCclear(254);
  		ACCnewline();
  		ACCwriteln(138);
@@ -4895,12 +4909,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// _ MIERDA
-	p000e0254:
+	p000e0255:
 	{
- 		if (skipdoall('p000e0254')) break p000e0254;
+ 		if (skipdoall('p000e0255')) break p000e0255;
  		if (in_response)
 		{
-			if (!CNDnoun1(117)) break p000e0254;
+			if (!CNDnoun1(117)) break p000e0255;
  		}
  		ACCset(254);
  		ACCwriteln(139);
@@ -4920,12 +4934,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// ABANDONA _
-	p000e0255:
+	p000e0256:
 	{
- 		if (skipdoall('p000e0255')) break p000e0255;
+ 		if (skipdoall('p000e0256')) break p000e0256;
  		if (in_response)
 		{
-			if (!CNDverb(25)) break p000e0255;
+			if (!CNDverb(25)) break p000e0256;
  		}
  		ACCcommand(0);
  		ACCwrite(140);
@@ -4940,12 +4954,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// ABANDONA _
-	p000e0256:
+	p000e0257:
 	{
- 		if (skipdoall('p000e0256')) break p000e0256;
+ 		if (skipdoall('p000e0257')) break p000e0257;
  		if (in_response)
 		{
-			if (!CNDverb(25)) break p000e0256;
+			if (!CNDverb(25)) break p000e0257;
  		}
  		ACCok();
 		break pro000_restart;
@@ -4954,15 +4968,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// SALUDA _
-	p000e0257:
+	p000e0258:
 	{
- 		if (skipdoall('p000e0257')) break p000e0257;
+ 		if (skipdoall('p000e0258')) break p000e0258;
  		if (in_response)
 		{
-			if (!CNDverb(113)) break p000e0257;
+			if (!CNDverb(113)) break p000e0258;
  		}
-		if (!CNDat(12)) break p000e0257;
-		if (!CNDlt(102,255)) break p000e0257;
+		if (!CNDat(12)) break p000e0258;
+		if (!CNDlt(102,255)) break p000e0258;
  		ACCwriteln(143);
  		ACCdone();
 		break pro000_restart;
@@ -4970,17 +4984,34 @@ pro000_restart: while(process_restart)
 
 	}
 
-	// DECIR ENANO
-	p000e0258:
+	// _ ENANO
+	p000e0259:
 	{
- 		if (skipdoall('p000e0258')) break p000e0258;
+ 		if (skipdoall('p000e0259')) break p000e0259;
  		if (in_response)
 		{
-			if (!CNDverb(31)) break p000e0258;
-			if (!CNDnoun1(68)) break p000e0258;
+			if (!CNDnoun1(68)) break p000e0259;
  		}
-		if (!CNDat(12)) break p000e0258;
-		if (!CNDlt(102,255)) break p000e0258;
+		if (!CNDat(12)) break p000e0259;
+		if (!CNDlt(102,255)) break p000e0259;
+ 		ACCprocess(10);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// DECIR ENANO
+	p000e0260:
+	{
+ 		if (skipdoall('p000e0260')) break p000e0260;
+ 		if (in_response)
+		{
+			if (!CNDverb(31)) break p000e0260;
+			if (!CNDnoun1(68)) break p000e0260;
+ 		}
+		if (!CNDat(12)) break p000e0260;
+		if (!CNDlt(102,255)) break p000e0260;
  		ACCprocess(10);
  		ACCdone();
 		break pro000_restart;
@@ -4989,16 +5020,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// SALUDA _
-	p000e0259:
+	p000e0261:
 	{
- 		if (skipdoall('p000e0259')) break p000e0259;
+ 		if (skipdoall('p000e0261')) break p000e0261;
  		if (in_response)
 		{
-			if (!CNDverb(113)) break p000e0259;
+			if (!CNDverb(113)) break p000e0261;
  		}
-		if (!CNDat(20)) break p000e0259;
-		if (!CNDgt(101,2)) break p000e0259;
-		if (!CNDlt(101,5)) break p000e0259;
+		if (!CNDat(20)) break p000e0261;
+		if (!CNDgt(101,2)) break p000e0261;
+		if (!CNDlt(101,5)) break p000e0261;
  		ACCwriteln(144);
  		ACCdone();
 		break pro000_restart;
@@ -5007,14 +5038,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// SALUDA _
-	p000e0260:
+	p000e0262:
 	{
- 		if (skipdoall('p000e0260')) break p000e0260;
+ 		if (skipdoall('p000e0262')) break p000e0262;
  		if (in_response)
 		{
-			if (!CNDverb(113)) break p000e0260;
+			if (!CNDverb(113)) break p000e0262;
  		}
-		if (!CNDeq(101,4)) break p000e0260;
+		if (!CNDeq(101,4)) break p000e0262;
  		ACCwriteln(145);
  		ACCdone();
 		break pro000_restart;
@@ -5023,50 +5054,17 @@ pro000_restart: while(process_restart)
 	}
 
 	// DECIR ELFIT
-	p000e0261:
-	{
- 		if (skipdoall('p000e0261')) break p000e0261;
- 		if (in_response)
-		{
-			if (!CNDverb(31)) break p000e0261;
-			if (!CNDnoun1(104)) break p000e0261;
- 		}
-		if (!CNDat(20)) break p000e0261;
-		if (!CNDgt(101,2)) break p000e0261;
-		if (!CNDlt(101,5)) break p000e0261;
- 		ACCprocess(9);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// DECIR _
-	p000e0262:
-	{
- 		if (skipdoall('p000e0262')) break p000e0262;
- 		if (in_response)
-		{
-			if (!CNDverb(31)) break p000e0262;
- 		}
-		if (!CNDeq(101,4)) break p000e0262;
- 		ACCprocess(9);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// DECIR _
 	p000e0263:
 	{
  		if (skipdoall('p000e0263')) break p000e0263;
  		if (in_response)
 		{
 			if (!CNDverb(31)) break p000e0263;
+			if (!CNDnoun1(104)) break p000e0263;
  		}
 		if (!CNDat(20)) break p000e0263;
-		if (!CNDeq(101,3)) break p000e0263;
+		if (!CNDgt(101,2)) break p000e0263;
+		if (!CNDlt(101,5)) break p000e0263;
  		ACCprocess(9);
  		ACCdone();
 		break pro000_restart;
@@ -5082,7 +5080,40 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(31)) break p000e0264;
  		}
-		if (!CNDat(12)) break p000e0264;
+		if (!CNDeq(101,4)) break p000e0264;
+ 		ACCprocess(9);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// DECIR _
+	p000e0265:
+	{
+ 		if (skipdoall('p000e0265')) break p000e0265;
+ 		if (in_response)
+		{
+			if (!CNDverb(31)) break p000e0265;
+ 		}
+		if (!CNDat(20)) break p000e0265;
+		if (!CNDeq(101,3)) break p000e0265;
+ 		ACCprocess(9);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// DECIR _
+	p000e0266:
+	{
+ 		if (skipdoall('p000e0266')) break p000e0266;
+ 		if (in_response)
+		{
+			if (!CNDverb(31)) break p000e0266;
+ 		}
+		if (!CNDat(12)) break p000e0266;
  		ACCprocess(10);
  		ACCdone();
 		break pro000_restart;
@@ -5091,15 +5122,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// GOLPEA ELFIT
-	p000e0265:
+	p000e0267:
 	{
- 		if (skipdoall('p000e0265')) break p000e0265;
+ 		if (skipdoall('p000e0267')) break p000e0267;
  		if (in_response)
 		{
-			if (!CNDverb(72)) break p000e0265;
-			if (!CNDnoun1(104)) break p000e0265;
+			if (!CNDverb(72)) break p000e0267;
+			if (!CNDnoun1(104)) break p000e0267;
  		}
-		if (!CNDeq(101,4)) break p000e0265;
+		if (!CNDeq(101,4)) break p000e0267;
  		ACClet(101,3);
  		ACCwriteln(146);
  		ACCdone();
@@ -5109,53 +5140,18 @@ pro000_restart: while(process_restart)
 	}
 
 	// PON BOTA
-	p000e0266:
-	{
- 		if (skipdoall('p000e0266')) break p000e0266;
- 		if (in_response)
-		{
-			if (!CNDverb(71)) break p000e0266;
-			if (!CNDnoun1(101)) break p000e0266;
- 		}
-		if (!CNDcarried(6)) break p000e0266;
- 		ACCwriteln(147);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// DA BOTA
-	p000e0267:
-	{
- 		if (skipdoall('p000e0267')) break p000e0267;
- 		if (in_response)
-		{
-			if (!CNDverb(73)) break p000e0267;
-			if (!CNDnoun1(101)) break p000e0267;
- 		}
-		if (!CNDat(12)) break p000e0267;
-		if (!CNDpresent(6)) break p000e0267;
-		if (!CNDnotcarr(6)) break p000e0267;
- 		ACCget(6);
-		if (!success) break pro000_restart;
-		{}
-
-	}
-
-	// DA BOTA
 	p000e0268:
 	{
  		if (skipdoall('p000e0268')) break p000e0268;
  		if (in_response)
 		{
-			if (!CNDverb(73)) break p000e0268;
+			if (!CNDverb(71)) break p000e0268;
 			if (!CNDnoun1(101)) break p000e0268;
  		}
-		if (!CNDat(12)) break p000e0268;
-		if (!CNDeq(44,255)) break p000e0268;
- 		ACClet(43,2);
- 		ACClet(44,68);
+		if (!CNDcarried(6)) break p000e0268;
+ 		ACCwriteln(147);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
@@ -5169,11 +5165,46 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(73)) break p000e0269;
 			if (!CNDnoun1(101)) break p000e0269;
  		}
-		if (!CNDprep(2)) break p000e0269;
-		if (!CNDnoun2(68)) break p000e0269;
 		if (!CNDat(12)) break p000e0269;
-		if (!CNDcarried(6)) break p000e0269;
-		if (!CNDlt(102,255)) break p000e0269;
+		if (!CNDpresent(6)) break p000e0269;
+		if (!CNDnotcarr(6)) break p000e0269;
+ 		ACCget(6);
+		if (!success) break pro000_restart;
+		{}
+
+	}
+
+	// DA BOTA
+	p000e0270:
+	{
+ 		if (skipdoall('p000e0270')) break p000e0270;
+ 		if (in_response)
+		{
+			if (!CNDverb(73)) break p000e0270;
+			if (!CNDnoun1(101)) break p000e0270;
+ 		}
+		if (!CNDat(12)) break p000e0270;
+		if (!CNDeq(44,255)) break p000e0270;
+ 		ACClet(43,2);
+ 		ACClet(44,68);
+		{}
+
+	}
+
+	// DA BOTA
+	p000e0271:
+	{
+ 		if (skipdoall('p000e0271')) break p000e0271;
+ 		if (in_response)
+		{
+			if (!CNDverb(73)) break p000e0271;
+			if (!CNDnoun1(101)) break p000e0271;
+ 		}
+		if (!CNDprep(2)) break p000e0271;
+		if (!CNDnoun2(68)) break p000e0271;
+		if (!CNDat(12)) break p000e0271;
+		if (!CNDcarried(6)) break p000e0271;
+		if (!CNDlt(102,255)) break p000e0271;
  		ACCdestroy(6);
  		ACCset(102);
  		ACCcreate(0);
@@ -5186,51 +5217,17 @@ pro000_restart: while(process_restart)
 	}
 
 	// _ LLAVE
-	p000e0270:
-	{
- 		if (skipdoall('p000e0270')) break p000e0270;
- 		if (in_response)
-		{
-			if (!CNDnoun1(54)) break p000e0270;
- 		}
-		if (!CNDat(26)) break p000e0270;
-		if (!CNDeq(33,255)) break p000e0270;
-		if (!CNDzero(107)) break p000e0270;
- 		ACCwriteln(150);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// _ ELFIT
-	p000e0271:
-	{
- 		if (skipdoall('p000e0271')) break p000e0271;
- 		if (in_response)
-		{
-			if (!CNDnoun1(104)) break p000e0271;
- 		}
-		if (!CNDat(20)) break p000e0271;
-		if (!CNDgt(101,2)) break p000e0271;
-		if (!CNDlt(101,5)) break p000e0271;
- 		ACCprocess(9);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// _ ELFIT
 	p000e0272:
 	{
  		if (skipdoall('p000e0272')) break p000e0272;
  		if (in_response)
 		{
-			if (!CNDnoun1(104)) break p000e0272;
+			if (!CNDnoun1(54)) break p000e0272;
  		}
-		if (!CNDeq(101,4)) break p000e0272;
- 		ACCprocess(9);
+		if (!CNDat(26)) break p000e0272;
+		if (!CNDeq(33,255)) break p000e0272;
+		if (!CNDzero(107)) break p000e0272;
+ 		ACCwriteln(150);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5246,7 +5243,41 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(104)) break p000e0273;
  		}
 		if (!CNDat(20)) break p000e0273;
-		if (!CNDeq(101,3)) break p000e0273;
+		if (!CNDgt(101,2)) break p000e0273;
+		if (!CNDlt(101,5)) break p000e0273;
+ 		ACCprocess(9);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// _ ELFIT
+	p000e0274:
+	{
+ 		if (skipdoall('p000e0274')) break p000e0274;
+ 		if (in_response)
+		{
+			if (!CNDnoun1(104)) break p000e0274;
+ 		}
+		if (!CNDeq(101,4)) break p000e0274;
+ 		ACCprocess(9);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// _ ELFIT
+	p000e0275:
+	{
+ 		if (skipdoall('p000e0275')) break p000e0275;
+ 		if (in_response)
+		{
+			if (!CNDnoun1(104)) break p000e0275;
+ 		}
+		if (!CNDat(20)) break p000e0275;
+		if (!CNDeq(101,3)) break p000e0275;
  		ACCprocess(9);
  		ACCdone();
 		break pro000_restart;
@@ -5255,13 +5286,13 @@ pro000_restart: while(process_restart)
 	}
 
 	// LIBERA PAJARO
-	p000e0274:
+	p000e0276:
 	{
- 		if (skipdoall('p000e0274')) break p000e0274;
+ 		if (skipdoall('p000e0276')) break p000e0276;
  		if (in_response)
 		{
-			if (!CNDverb(128)) break p000e0274;
-			if (!CNDnoun1(158)) break p000e0274;
+			if (!CNDverb(128)) break p000e0276;
+			if (!CNDnoun1(158)) break p000e0276;
  		}
  		ACClet(33,21);
 		{}
@@ -5269,13 +5300,13 @@ pro000_restart: while(process_restart)
 	}
 
 	// DEJA PAJARO
-	p000e0275:
+	p000e0277:
 	{
- 		if (skipdoall('p000e0275')) break p000e0275;
+ 		if (skipdoall('p000e0277')) break p000e0277;
  		if (in_response)
 		{
-			if (!CNDverb(21)) break p000e0275;
-			if (!CNDnoun1(158)) break p000e0275;
+			if (!CNDverb(21)) break p000e0277;
+			if (!CNDnoun1(158)) break p000e0277;
  		}
  		ACClet(33,64);
  		ACClet(34,129);
@@ -5284,15 +5315,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// ARROJA JARRON
-	p000e0276:
+	p000e0278:
 	{
- 		if (skipdoall('p000e0276')) break p000e0276;
+ 		if (skipdoall('p000e0278')) break p000e0278;
  		if (in_response)
 		{
-			if (!CNDverb(32)) break p000e0276;
-			if (!CNDnoun1(152)) break p000e0276;
+			if (!CNDverb(32)) break p000e0278;
+			if (!CNDnoun1(152)) break p000e0278;
  		}
-		if (!CNDcarried(26)) break p000e0276;
+		if (!CNDcarried(26)) break p000e0278;
  		ACCdestroy(26);
  		ACCnewline();
  		ACCwriteln(151);
@@ -5303,12 +5334,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// ESPERA _
-	p000e0277:
+	p000e0279:
 	{
- 		if (skipdoall('p000e0277')) break p000e0277;
+ 		if (skipdoall('p000e0279')) break p000e0279;
  		if (in_response)
 		{
-			if (!CNDverb(43)) break p000e0277;
+			if (!CNDverb(43)) break p000e0279;
  		}
  		ACCwriteln(152);
  		ACCdone();
@@ -5318,14 +5349,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// EMPUJA _
-	p000e0278:
+	p000e0280:
 	{
- 		if (skipdoall('p000e0278')) break p000e0278;
+ 		if (skipdoall('p000e0280')) break p000e0280;
  		if (in_response)
 		{
-			if (!CNDverb(33)) break p000e0278;
+			if (!CNDverb(33)) break p000e0280;
  		}
-		if (!CNDat(31)) break p000e0278;
+		if (!CNDat(31)) break p000e0280;
  		ACCwriteln(153);
  		ACCdone();
 		break pro000_restart;
@@ -5334,17 +5365,17 @@ pro000_restart: while(process_restart)
 	}
 
 	// DA _
-	p000e0279:
+	p000e0281:
 	{
- 		if (skipdoall('p000e0279')) break p000e0279;
+ 		if (skipdoall('p000e0281')) break p000e0281;
  		if (in_response)
 		{
-			if (!CNDverb(73)) break p000e0279;
+			if (!CNDverb(73)) break p000e0281;
  		}
-		if (!CNDatgt(101)) break p000e0279;
-		if (!CNDatlt(104)) break p000e0279;
-		if (!CNDnoteq(51,255)) break p000e0279;
-		if (!CNDnotcarr(getFlag(51))) break p000e0279;
+		if (!CNDatgt(101)) break p000e0281;
+		if (!CNDatlt(104)) break p000e0281;
+		if (!CNDnoteq(51,255)) break p000e0281;
+		if (!CNDnotcarr(getFlag(51))) break p000e0281;
  		ACCwriteln(154);
  		ACCdone();
 		break pro000_restart;
@@ -5353,61 +5384,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// DA _
-	p000e0280:
-	{
- 		if (skipdoall('p000e0280')) break p000e0280;
- 		if (in_response)
-		{
-			if (!CNDverb(73)) break p000e0280;
- 		}
-		if (!CNDnoteq(51,255)) break p000e0280;
-		if (!CNDcarried(getFlag(51))) break p000e0280;
- 		ACCprocess(20);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// ABRE BARROTE
-	p000e0281:
-	{
- 		if (skipdoall('p000e0281')) break p000e0281;
- 		if (in_response)
-		{
-			if (!CNDverb(64)) break p000e0281;
-			if (!CNDnoun1(129)) break p000e0281;
- 		}
-		if (!CNDnotat(66)) break p000e0281;
-		if (!CNDcarried(7)) break p000e0281;
-		if (!CNDonotzero(7,23)) break p000e0281;
- 		ACCoclear(7,23);
- 		ACCwriteln(155);
- 		ACCclear(130);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// ABRE BARROTE
 	p000e0282:
 	{
  		if (skipdoall('p000e0282')) break p000e0282;
  		if (in_response)
 		{
-			if (!CNDverb(64)) break p000e0282;
-			if (!CNDnoun1(129)) break p000e0282;
+			if (!CNDverb(73)) break p000e0282;
  		}
-		if (!CNDlt(116,9)) break p000e0282;
-		if (!CNDcarried(7)) break p000e0282;
-		if (!CNDonotzero(7,23)) break p000e0282;
- 		ACCoclear(7,23);
- 		ACCwrite(156);
- 		ACCclear(130);
- 		ACCwriteln(157);
- 		ACCset(116);
- 		ACCcreate(17);
+		if (!CNDnoteq(51,255)) break p000e0282;
+		if (!CNDcarried(getFlag(51))) break p000e0282;
+ 		ACCprocess(20);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5423,8 +5409,53 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(64)) break p000e0283;
 			if (!CNDnoun1(129)) break p000e0283;
  		}
+		if (!CNDnotat(66)) break p000e0283;
 		if (!CNDcarried(7)) break p000e0283;
 		if (!CNDonotzero(7,23)) break p000e0283;
+ 		ACCoclear(7,23);
+ 		ACCwriteln(155);
+ 		ACCclear(130);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ABRE BARROTE
+	p000e0284:
+	{
+ 		if (skipdoall('p000e0284')) break p000e0284;
+ 		if (in_response)
+		{
+			if (!CNDverb(64)) break p000e0284;
+			if (!CNDnoun1(129)) break p000e0284;
+ 		}
+		if (!CNDlt(116,9)) break p000e0284;
+		if (!CNDcarried(7)) break p000e0284;
+		if (!CNDonotzero(7,23)) break p000e0284;
+ 		ACCoclear(7,23);
+ 		ACCwrite(156);
+ 		ACCclear(130);
+ 		ACCwriteln(157);
+ 		ACCset(116);
+ 		ACCcreate(17);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ABRE BARROTE
+	p000e0285:
+	{
+ 		if (skipdoall('p000e0285')) break p000e0285;
+ 		if (in_response)
+		{
+			if (!CNDverb(64)) break p000e0285;
+			if (!CNDnoun1(129)) break p000e0285;
+ 		}
+		if (!CNDcarried(7)) break p000e0285;
+		if (!CNDonotzero(7,23)) break p000e0285;
  		ACCwriteln(158);
  		ACCanykey();
  		function anykey00016() 
@@ -5442,16 +5473,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// ABRE BARROTE
-	p000e0284:
+	p000e0286:
 	{
- 		if (skipdoall('p000e0284')) break p000e0284;
+ 		if (skipdoall('p000e0286')) break p000e0286;
  		if (in_response)
 		{
-			if (!CNDverb(64)) break p000e0284;
-			if (!CNDnoun1(129)) break p000e0284;
+			if (!CNDverb(64)) break p000e0286;
+			if (!CNDnoun1(129)) break p000e0286;
  		}
-		if (!CNDat(116)) break p000e0284;
-		if (!CNDcarried(4)) break p000e0284;
+		if (!CNDat(116)) break p000e0286;
+		if (!CNDcarried(4)) break p000e0286;
  		ACCwriteln(159);
  		ACCset(123);
  		ACCdone();
@@ -5461,15 +5492,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// ABRE BARROTE
-	p000e0285:
+	p000e0287:
 	{
- 		if (skipdoall('p000e0285')) break p000e0285;
+ 		if (skipdoall('p000e0287')) break p000e0287;
  		if (in_response)
 		{
-			if (!CNDverb(64)) break p000e0285;
-			if (!CNDnoun1(129)) break p000e0285;
+			if (!CNDverb(64)) break p000e0287;
+			if (!CNDnoun1(129)) break p000e0287;
  		}
-		if (!CNDat(116)) break p000e0285;
+		if (!CNDat(116)) break p000e0287;
  		ACCwriteln(160);
  		ACCdone();
 		break pro000_restart;
@@ -5478,56 +5509,17 @@ pro000_restart: while(process_restart)
 	}
 
 	// ABRE BARROTE
-	p000e0286:
-	{
- 		if (skipdoall('p000e0286')) break p000e0286;
- 		if (in_response)
-		{
-			if (!CNDverb(64)) break p000e0286;
-			if (!CNDnoun1(129)) break p000e0286;
- 		}
-		if (!CNDcarried(7)) break p000e0286;
-		if (!CNDozero(7,23)) break p000e0286;
- 		ACCwriteln(161);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// ABRE ALMEJA
-	p000e0287:
-	{
- 		if (skipdoall('p000e0287')) break p000e0287;
- 		if (in_response)
-		{
-			if (!CNDverb(64)) break p000e0287;
-			if (!CNDnoun1(126)) break p000e0287;
- 		}
-		if (!CNDat(77)) break p000e0287;
-		if (!CNDcarried(20)) break p000e0287;
-		if (!CNDzero(118)) break p000e0287;
- 		ACCwriteln(162);
- 		ACCplace(21,79);
- 		ACCset(118);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// ABRE ALMEJA
 	p000e0288:
 	{
  		if (skipdoall('p000e0288')) break p000e0288;
  		if (in_response)
 		{
 			if (!CNDverb(64)) break p000e0288;
-			if (!CNDnoun1(126)) break p000e0288;
+			if (!CNDnoun1(129)) break p000e0288;
  		}
-		if (!CNDat(77)) break p000e0288;
-		if (!CNDcarried(20)) break p000e0288;
- 		ACCwriteln(163);
+		if (!CNDcarried(7)) break p000e0288;
+		if (!CNDozero(7,23)) break p000e0288;
+ 		ACCwriteln(161);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5544,44 +5536,46 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(126)) break p000e0289;
  		}
 		if (!CNDat(77)) break p000e0289;
- 		ACCwriteln(164);
+		if (!CNDcarried(20)) break p000e0289;
+		if (!CNDzero(118)) break p000e0289;
+ 		ACCwriteln(162);
+ 		ACCplace(21,79);
+ 		ACCset(118);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ABRE PUERT
+	// ABRE ALMEJA
 	p000e0290:
 	{
  		if (skipdoall('p000e0290')) break p000e0290;
  		if (in_response)
 		{
 			if (!CNDverb(64)) break p000e0290;
-			if (!CNDnoun1(89)) break p000e0290;
+			if (!CNDnoun1(126)) break p000e0290;
  		}
-		if (!CNDat(106)) break p000e0290;
-		if (!CNDeq(124,1)) break p000e0290;
- 		ACCset(124);
- 		ACCwriteln(165);
+		if (!CNDat(77)) break p000e0290;
+		if (!CNDcarried(20)) break p000e0290;
+ 		ACCwriteln(163);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ABRE PUERT
+	// ABRE ALMEJA
 	p000e0291:
 	{
  		if (skipdoall('p000e0291')) break p000e0291;
  		if (in_response)
 		{
 			if (!CNDverb(64)) break p000e0291;
-			if (!CNDnoun1(89)) break p000e0291;
+			if (!CNDnoun1(126)) break p000e0291;
  		}
-		if (!CNDat(106)) break p000e0291;
-		if (!CNDzero(124)) break p000e0291;
- 		ACCwriteln(166);
+		if (!CNDat(77)) break p000e0291;
+ 		ACCwriteln(164);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5598,6 +5592,43 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(89)) break p000e0292;
  		}
 		if (!CNDat(106)) break p000e0292;
+		if (!CNDeq(124,1)) break p000e0292;
+ 		ACCset(124);
+ 		ACCwriteln(165);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ABRE PUERT
+	p000e0293:
+	{
+ 		if (skipdoall('p000e0293')) break p000e0293;
+ 		if (in_response)
+		{
+			if (!CNDverb(64)) break p000e0293;
+			if (!CNDnoun1(89)) break p000e0293;
+ 		}
+		if (!CNDat(106)) break p000e0293;
+		if (!CNDzero(124)) break p000e0293;
+ 		ACCwriteln(166);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ABRE PUERT
+	p000e0294:
+	{
+ 		if (skipdoall('p000e0294')) break p000e0294;
+ 		if (in_response)
+		{
+			if (!CNDverb(64)) break p000e0294;
+			if (!CNDnoun1(89)) break p000e0294;
+ 		}
+		if (!CNDat(106)) break p000e0294;
  		ACCwriteln(167);
  		ACCdone();
 		break pro000_restart;
@@ -5606,51 +5637,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// ABRE _
-	p000e0293:
-	{
- 		if (skipdoall('p000e0293')) break p000e0293;
- 		if (in_response)
-		{
-			if (!CNDverb(64)) break p000e0293;
- 		}
-		if (!CNDat(31)) break p000e0293;
- 		ACCwriteln(168);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// CERRAR PUERT
-	p000e0294:
-	{
- 		if (skipdoall('p000e0294')) break p000e0294;
- 		if (in_response)
-		{
-			if (!CNDverb(65)) break p000e0294;
-			if (!CNDnoun1(89)) break p000e0294;
- 		}
-		if (!CNDat(106)) break p000e0294;
-		if (!CNDeq(124,1)) break p000e0294;
- 		ACCwriteln(169);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// CERRAR PUERT
 	p000e0295:
 	{
  		if (skipdoall('p000e0295')) break p000e0295;
  		if (in_response)
 		{
-			if (!CNDverb(65)) break p000e0295;
-			if (!CNDnoun1(89)) break p000e0295;
+			if (!CNDverb(64)) break p000e0295;
  		}
-		if (!CNDat(106)) break p000e0295;
-		if (!CNDzero(124)) break p000e0295;
- 		ACCwriteln(170);
+		if (!CNDat(31)) break p000e0295;
+ 		ACCwriteln(168);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5667,8 +5662,8 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(89)) break p000e0296;
  		}
 		if (!CNDat(106)) break p000e0296;
- 		ACClet(124,1);
- 		ACCwriteln(171);
+		if (!CNDeq(124,1)) break p000e0296;
+ 		ACCwriteln(169);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5684,8 +5679,44 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(65)) break p000e0297;
 			if (!CNDnoun1(89)) break p000e0297;
  		}
-		if (!CNDcarried(7)) break p000e0297;
-		if (!CNDonotzero(7,23)) break p000e0297;
+		if (!CNDat(106)) break p000e0297;
+		if (!CNDzero(124)) break p000e0297;
+ 		ACCwriteln(170);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// CERRAR PUERT
+	p000e0298:
+	{
+ 		if (skipdoall('p000e0298')) break p000e0298;
+ 		if (in_response)
+		{
+			if (!CNDverb(65)) break p000e0298;
+			if (!CNDnoun1(89)) break p000e0298;
+ 		}
+		if (!CNDat(106)) break p000e0298;
+ 		ACClet(124,1);
+ 		ACCwriteln(171);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// CERRAR PUERT
+	p000e0299:
+	{
+ 		if (skipdoall('p000e0299')) break p000e0299;
+ 		if (in_response)
+		{
+			if (!CNDverb(65)) break p000e0299;
+			if (!CNDnoun1(89)) break p000e0299;
+ 		}
+		if (!CNDcarried(7)) break p000e0299;
+		if (!CNDonotzero(7,23)) break p000e0299;
  		ACCwriteln(172);
  		ACCdone();
 		break pro000_restart;
@@ -5694,13 +5725,13 @@ pro000_restart: while(process_restart)
 	}
 
 	// DESPLAZA VARITA
-	p000e0298:
+	p000e0300:
 	{
- 		if (skipdoall('p000e0298')) break p000e0298;
+ 		if (skipdoall('p000e0300')) break p000e0300;
  		if (in_response)
 		{
-			if (!CNDverb(110)) break p000e0298;
-			if (!CNDnoun1(168)) break p000e0298;
+			if (!CNDverb(110)) break p000e0300;
+			if (!CNDnoun1(168)) break p000e0300;
  		}
  		ACClet(33,80);
 		{}
@@ -5708,54 +5739,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// AGITA VARITA
-	p000e0299:
-	{
- 		if (skipdoall('p000e0299')) break p000e0299;
- 		if (in_response)
-		{
-			if (!CNDverb(49)) break p000e0299;
-			if (!CNDnoun1(168)) break p000e0299;
- 		}
- 		ACClet(33,80);
-		{}
-
-	}
-
-	// USA VARITA
-	p000e0300:
-	{
- 		if (skipdoall('p000e0300')) break p000e0300;
- 		if (in_response)
-		{
-			if (!CNDverb(80)) break p000e0300;
-			if (!CNDnoun1(168)) break p000e0300;
- 		}
-		if (!CNDatgt(37)) break p000e0300;
-		if (!CNDatlt(40)) break p000e0300;
-		if (!CNDcarried(8)) break p000e0300;
- 		ACCplus(115,1);
- 		ACCgoto(39);
-		if (!CNDeq(115,2)) break p000e0300;
- 		ACCclear(115);
- 		ACCgoto(38);
-		{}
-
-	}
-
-	// USA VARITA
 	p000e0301:
 	{
  		if (skipdoall('p000e0301')) break p000e0301;
  		if (in_response)
 		{
-			if (!CNDverb(80)) break p000e0301;
+			if (!CNDverb(49)) break p000e0301;
 			if (!CNDnoun1(168)) break p000e0301;
  		}
-		if (!CNDcarried(8)) break p000e0301;
-		if (!CNDatgt(37)) break p000e0301;
-		if (!CNDatlt(40)) break p000e0301;
- 		ACCdesc();
-		break pro000_restart;
+ 		ACClet(33,80);
 		{}
 
 	}
@@ -5769,12 +5761,14 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(80)) break p000e0302;
 			if (!CNDnoun1(168)) break p000e0302;
  		}
+		if (!CNDatgt(37)) break p000e0302;
+		if (!CNDatlt(40)) break p000e0302;
 		if (!CNDcarried(8)) break p000e0302;
-		if (!CNDpresent(7)) break p000e0302;
-		if (!CNDonotzero(7,23)) break p000e0302;
- 		ACCprocess(23);
- 		ACCdone();
-		break pro000_restart;
+ 		ACCplus(115,1);
+ 		ACCgoto(39);
+		if (!CNDeq(115,2)) break p000e0302;
+ 		ACCclear(115);
+ 		ACCgoto(38);
 		{}
 
 	}
@@ -5789,10 +5783,9 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(168)) break p000e0303;
  		}
 		if (!CNDcarried(8)) break p000e0303;
-		if (!CNDat(35)) break p000e0303;
-		if (!CNDzero(130)) break p000e0303;
- 		ACCprocess(23);
- 		ACCdone();
+		if (!CNDatgt(37)) break p000e0303;
+		if (!CNDatlt(40)) break p000e0303;
+ 		ACCdesc();
 		break pro000_restart;
 		{}
 
@@ -5808,7 +5801,9 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(168)) break p000e0304;
  		}
 		if (!CNDcarried(8)) break p000e0304;
- 		ACCwriteln(173);
+		if (!CNDpresent(7)) break p000e0304;
+		if (!CNDonotzero(7,23)) break p000e0304;
+ 		ACCprocess(23);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -5824,23 +5819,59 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(80)) break p000e0305;
 			if (!CNDnoun1(168)) break p000e0305;
  		}
+		if (!CNDcarried(8)) break p000e0305;
+		if (!CNDat(35)) break p000e0305;
+		if (!CNDzero(130)) break p000e0305;
+ 		ACCprocess(23);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// USA VARITA
+	p000e0306:
+	{
+ 		if (skipdoall('p000e0306')) break p000e0306;
+ 		if (in_response)
+		{
+			if (!CNDverb(80)) break p000e0306;
+			if (!CNDnoun1(168)) break p000e0306;
+ 		}
+		if (!CNDcarried(8)) break p000e0306;
+ 		ACCwriteln(173);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// USA VARITA
+	p000e0307:
+	{
+ 		if (skipdoall('p000e0307')) break p000e0307;
+ 		if (in_response)
+		{
+			if (!CNDverb(80)) break p000e0307;
+			if (!CNDnoun1(168)) break p000e0307;
+ 		}
  		ACClet(33,20);
 		{}
 
 	}
 
 	// EXTRAE BATERIA
-	p000e0306:
+	p000e0308:
 	{
- 		if (skipdoall('p000e0306')) break p000e0306;
+ 		if (skipdoall('p000e0308')) break p000e0308;
  		if (in_response)
 		{
-			if (!CNDverb(75)) break p000e0306;
-			if (!CNDnoun1(55)) break p000e0306;
+			if (!CNDverb(75)) break p000e0308;
+			if (!CNDnoun1(55)) break p000e0308;
  		}
-		if (!CNDnoun2(155)) break p000e0306;
-		if (!CNDat(53)) break p000e0306;
-		if (!CNDabsent(5)) break p000e0306;
+		if (!CNDnoun2(155)) break p000e0308;
+		if (!CNDat(53)) break p000e0308;
+		if (!CNDabsent(5)) break p000e0308;
  		ACCwriteln(174);
  		ACCdone();
 		break pro000_restart;
@@ -5849,31 +5880,31 @@ pro000_restart: while(process_restart)
 	}
 
 	// EXTRAE BATERIA
-	p000e0307:
+	p000e0309:
 	{
- 		if (skipdoall('p000e0307')) break p000e0307;
+ 		if (skipdoall('p000e0309')) break p000e0309;
  		if (in_response)
 		{
-			if (!CNDverb(75)) break p000e0307;
-			if (!CNDnoun1(55)) break p000e0307;
+			if (!CNDverb(75)) break p000e0309;
+			if (!CNDnoun1(55)) break p000e0309;
  		}
-		if (!CNDnoun2(155)) break p000e0307;
-		if (!CNDat(53)) break p000e0307;
+		if (!CNDnoun2(155)) break p000e0309;
+		if (!CNDat(53)) break p000e0309;
  		ACClet(33,20);
 		{}
 
 	}
 
 	// BUSCA _
-	p000e0308:
+	p000e0310:
 	{
- 		if (skipdoall('p000e0308')) break p000e0308;
+ 		if (skipdoall('p000e0310')) break p000e0310;
  		if (in_response)
 		{
-			if (!CNDverb(118)) break p000e0308;
+			if (!CNDverb(118)) break p000e0310;
  		}
-		if (!CNDat(37)) break p000e0308;
-		if (!CNDzero(114)) break p000e0308;
+		if (!CNDat(37)) break p000e0310;
+		if (!CNDzero(114)) break p000e0310;
  		ACCwriteln(175);
  		ACCdone();
 		break pro000_restart;
@@ -5882,16 +5913,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// BUSCA PEPITA
-	p000e0309:
+	p000e0311:
 	{
- 		if (skipdoall('p000e0309')) break p000e0309;
+ 		if (skipdoall('p000e0311')) break p000e0311;
  		if (in_response)
 		{
-			if (!CNDverb(118)) break p000e0309;
-			if (!CNDnoun1(159)) break p000e0309;
+			if (!CNDverb(118)) break p000e0311;
+			if (!CNDnoun1(159)) break p000e0311;
  		}
-		if (!CNDat(37)) break p000e0309;
-		if (!CNDisat(14,37)) break p000e0309;
+		if (!CNDat(37)) break p000e0311;
+		if (!CNDisat(14,37)) break p000e0311;
  		ACCwriteln(176);
  		ACCdone();
 		break pro000_restart;
@@ -5900,15 +5931,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// AGARR _
-	p000e0310:
+	p000e0312:
 	{
- 		if (skipdoall('p000e0310')) break p000e0310;
+ 		if (skipdoall('p000e0312')) break p000e0312;
  		if (in_response)
 		{
-			if (!CNDverb(20)) break p000e0310;
+			if (!CNDverb(20)) break p000e0312;
  		}
-		if (!CNDat(66)) break p000e0310;
-		if (!CNDlt(116,9)) break p000e0310;
+		if (!CNDat(66)) break p000e0312;
+		if (!CNDlt(116,9)) break p000e0312;
  		ACClet(116,9);
  		ACCwriteln(177);
  		ACCdone();
@@ -5918,17 +5949,17 @@ pro000_restart: while(process_restart)
 	}
 
 	// AGARR ALMOHADA
-	p000e0311:
+	p000e0313:
 	{
- 		if (skipdoall('p000e0311')) break p000e0311;
+ 		if (skipdoall('p000e0313')) break p000e0313;
  		if (in_response)
 		{
-			if (!CNDverb(20)) break p000e0311;
-			if (!CNDnoun1(127)) break p000e0311;
+			if (!CNDverb(20)) break p000e0313;
+			if (!CNDnoun1(127)) break p000e0313;
  		}
-		if (!CNDisat(11,getFlag(38))) break p000e0311;
-		if (!CNDisat(26,getFlag(38))) break p000e0311;
-		if (!CNDnotat(96)) break p000e0311;
+		if (!CNDisat(11,getFlag(38))) break p000e0313;
+		if (!CNDisat(26,getFlag(38))) break p000e0313;
+		if (!CNDnotat(96)) break p000e0313;
  		ACCget(11);
 		if (!success) break pro000_restart;
  		ACClet(51,152);
@@ -5941,19 +5972,19 @@ pro000_restart: while(process_restart)
 	}
 
 	// AGARR PAJARO
-	p000e0312:
+	p000e0314:
 	{
- 		if (skipdoall('p000e0312')) break p000e0312;
+ 		if (skipdoall('p000e0314')) break p000e0314;
  		if (in_response)
 		{
-			if (!CNDverb(20)) break p000e0312;
-			if (!CNDnoun1(158)) break p000e0312;
+			if (!CNDverb(20)) break p000e0314;
+			if (!CNDnoun1(158)) break p000e0314;
  		}
-		if (!CNDat(35)) break p000e0312;
-		if (!CNDnotcarr(8)) break p000e0312;
-		if (!CNDcarried(7)) break p000e0312;
-		if (!CNDozero(7,23)) break p000e0312;
-		if (!CNDzero(130)) break p000e0312;
+		if (!CNDat(35)) break p000e0314;
+		if (!CNDnotcarr(8)) break p000e0314;
+		if (!CNDcarried(7)) break p000e0314;
+		if (!CNDozero(7,23)) break p000e0314;
+		if (!CNDzero(130)) break p000e0314;
  		ACCoset(7,23);
  		ACCset(130);
  		ACCwriteln(179);
@@ -5964,15 +5995,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// AGARR PAJARO
-	p000e0313:
+	p000e0315:
 	{
- 		if (skipdoall('p000e0313')) break p000e0313;
+ 		if (skipdoall('p000e0315')) break p000e0315;
  		if (in_response)
 		{
-			if (!CNDverb(20)) break p000e0313;
-			if (!CNDnoun1(158)) break p000e0313;
+			if (!CNDverb(20)) break p000e0315;
+			if (!CNDnoun1(158)) break p000e0315;
  		}
-		if (!CNDat(35)) break p000e0313;
+		if (!CNDat(35)) break p000e0315;
  		ACCwriteln(180);
  		ACCdone();
 		break pro000_restart;
@@ -5981,15 +6012,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// AGARR BROTE
-	p000e0314:
+	p000e0316:
 	{
- 		if (skipdoall('p000e0314')) break p000e0314;
+ 		if (skipdoall('p000e0316')) break p000e0316;
  		if (in_response)
 		{
-			if (!CNDverb(20)) break p000e0314;
-			if (!CNDnoun1(132)) break p000e0314;
+			if (!CNDverb(20)) break p000e0316;
+			if (!CNDnoun1(132)) break p000e0316;
  		}
-		if (!CNDat(92)) break p000e0314;
+		if (!CNDat(92)) break p000e0316;
  		ACCwriteln(181);
  		ACCdone();
 		break pro000_restart;
@@ -5998,16 +6029,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// AGARR PEPITA
-	p000e0315:
+	p000e0317:
 	{
- 		if (skipdoall('p000e0315')) break p000e0315;
+ 		if (skipdoall('p000e0317')) break p000e0317;
  		if (in_response)
 		{
-			if (!CNDverb(20)) break p000e0315;
-			if (!CNDnoun1(159)) break p000e0315;
+			if (!CNDverb(20)) break p000e0317;
+			if (!CNDnoun1(159)) break p000e0317;
  		}
-		if (!CNDat(37)) break p000e0315;
-		if (!CNDzero(114)) break p000e0315;
+		if (!CNDat(37)) break p000e0317;
+		if (!CNDzero(114)) break p000e0317;
  		ACCwriteln(182);
  		ACCdone();
 		break pro000_restart;
@@ -6016,16 +6047,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// AGARR HACHA
-	p000e0316:
+	p000e0318:
 	{
- 		if (skipdoall('p000e0316')) break p000e0316;
+ 		if (skipdoall('p000e0318')) break p000e0318;
  		if (in_response)
 		{
-			if (!CNDverb(20)) break p000e0316;
-			if (!CNDnoun1(149)) break p000e0316;
+			if (!CNDverb(20)) break p000e0318;
+			if (!CNDnoun1(149)) break p000e0318;
  		}
-		if (!CNDat(106)) break p000e0316;
-		if (!CNDabsent(12)) break p000e0316;
+		if (!CNDat(106)) break p000e0318;
+		if (!CNDabsent(12)) break p000e0318;
  		ACClet(33,75);
  		ACClet(43,3);
  		ACClet(44,172);
@@ -6034,17 +6065,17 @@ pro000_restart: while(process_restart)
 	}
 
 	// EXTRAE HACHA
-	p000e0317:
+	p000e0319:
 	{
- 		if (skipdoall('p000e0317')) break p000e0317;
+ 		if (skipdoall('p000e0319')) break p000e0319;
  		if (in_response)
 		{
-			if (!CNDverb(75)) break p000e0317;
-			if (!CNDnoun1(149)) break p000e0317;
+			if (!CNDverb(75)) break p000e0319;
+			if (!CNDnoun1(149)) break p000e0319;
  		}
-		if (!CNDprep(3)) break p000e0317;
-		if (!CNDnoun2(172)) break p000e0317;
-		if (!CNDat(106)) break p000e0317;
+		if (!CNDprep(3)) break p000e0319;
+		if (!CNDnoun2(172)) break p000e0319;
+		if (!CNDat(106)) break p000e0319;
  		ACCwriteln(183);
  		ACCnotdone();
 		break pro000_restart;
@@ -6053,16 +6084,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// EXTRAE HACHA
-	p000e0318:
+	p000e0320:
 	{
- 		if (skipdoall('p000e0318')) break p000e0318;
+ 		if (skipdoall('p000e0320')) break p000e0320;
  		if (in_response)
 		{
-			if (!CNDverb(75)) break p000e0318;
-			if (!CNDnoun1(149)) break p000e0318;
+			if (!CNDverb(75)) break p000e0320;
+			if (!CNDnoun1(149)) break p000e0320;
  		}
-		if (!CNDprep(3)) break p000e0318;
-		if (!CNDnoun2(172)) break p000e0318;
+		if (!CNDprep(3)) break p000e0320;
+		if (!CNDnoun2(172)) break p000e0320;
  		ACCwriteln(184);
  		ACCnotdone();
 		break pro000_restart;
@@ -6071,15 +6102,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// AGARR ESCUDO
-	p000e0319:
+	p000e0321:
 	{
- 		if (skipdoall('p000e0319')) break p000e0319;
+ 		if (skipdoall('p000e0321')) break p000e0321;
  		if (in_response)
 		{
-			if (!CNDverb(20)) break p000e0319;
-			if (!CNDnoun1(171)) break p000e0319;
+			if (!CNDverb(20)) break p000e0321;
+			if (!CNDnoun1(171)) break p000e0321;
  		}
-		if (!CNDat(106)) break p000e0319;
+		if (!CNDat(106)) break p000e0321;
  		ACCwriteln(185);
  		ACCnotdone();
 		break pro000_restart;
@@ -6088,12 +6119,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// AGARR _
-	p000e0320:
+	p000e0322:
 	{
- 		if (skipdoall('p000e0320')) break p000e0320;
+ 		if (skipdoall('p000e0322')) break p000e0322;
  		if (in_response)
 		{
-			if (!CNDverb(20)) break p000e0320;
+			if (!CNDverb(20)) break p000e0322;
  		}
  		ACCautog();
 		if (!success) break pro000_restart;
@@ -6104,12 +6135,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// COJE _
-	p000e0321:
+	p000e0323:
 	{
- 		if (skipdoall('p000e0321')) break p000e0321;
+ 		if (skipdoall('p000e0323')) break p000e0323;
  		if (in_response)
 		{
-			if (!CNDverb(124)) break p000e0321;
+			if (!CNDverb(124)) break p000e0323;
  		}
  		ACCwriteln(186);
  		ACCdone();
@@ -6119,14 +6150,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// COGEL _
-	p000e0322:
+	p000e0324:
 	{
- 		if (skipdoall('p000e0322')) break p000e0322;
+ 		if (skipdoall('p000e0324')) break p000e0324;
  		if (in_response)
 		{
-			if (!CNDverb(123)) break p000e0322;
+			if (!CNDverb(123)) break p000e0324;
  		}
-		if (!CNDat(98)) break p000e0322;
+		if (!CNDat(98)) break p000e0324;
  		ACCwriteln(187);
  		ACCdone();
 		break pro000_restart;
@@ -6135,17 +6166,17 @@ pro000_restart: while(process_restart)
 	}
 
 	// DEJA JARRON
-	p000e0323:
+	p000e0325:
 	{
- 		if (skipdoall('p000e0323')) break p000e0323;
+ 		if (skipdoall('p000e0325')) break p000e0325;
  		if (in_response)
 		{
-			if (!CNDverb(21)) break p000e0323;
-			if (!CNDnoun1(152)) break p000e0323;
+			if (!CNDverb(21)) break p000e0325;
+			if (!CNDnoun1(152)) break p000e0325;
  		}
-		if (!CNDisnotat(11,getFlag(38))) break p000e0323;
-		if (!CNDcarried(26)) break p000e0323;
-		if (!CNDnotat(96)) break p000e0323;
+		if (!CNDisnotat(11,getFlag(38))) break p000e0325;
+		if (!CNDcarried(26)) break p000e0325;
+		if (!CNDnotat(96)) break p000e0325;
  		ACCwriteln(188);
  		ACCdestroy(26);
  		ACCdone();
@@ -6155,13 +6186,13 @@ pro000_restart: while(process_restart)
 	}
 
 	// LIBERA OSO
-	p000e0324:
+	p000e0326:
 	{
- 		if (skipdoall('p000e0324')) break p000e0324;
+ 		if (skipdoall('p000e0326')) break p000e0326;
  		if (in_response)
 		{
-			if (!CNDverb(128)) break p000e0324;
-			if (!CNDnoun1(157)) break p000e0324;
+			if (!CNDverb(128)) break p000e0326;
+			if (!CNDnoun1(157)) break p000e0326;
  		}
  		ACClet(33,21);
 		{}
@@ -6169,17 +6200,17 @@ pro000_restart: while(process_restart)
 	}
 
 	// DEJA OSO
-	p000e0325:
+	p000e0327:
 	{
- 		if (skipdoall('p000e0325')) break p000e0325;
+ 		if (skipdoall('p000e0327')) break p000e0327;
  		if (in_response)
 		{
-			if (!CNDverb(21)) break p000e0325;
-			if (!CNDnoun1(157)) break p000e0325;
+			if (!CNDverb(21)) break p000e0327;
+			if (!CNDnoun1(157)) break p000e0327;
  		}
-		if (!CNDat(117)) break p000e0325;
-		if (!CNDeq(122,2)) break p000e0325;
-		if (!CNDcarried(4)) break p000e0325;
+		if (!CNDat(117)) break p000e0327;
+		if (!CNDeq(122,2)) break p000e0327;
+		if (!CNDcarried(4)) break p000e0327;
  		ACCset(122);
  		ACCwriteln(189);
  		ACCdone();
@@ -6189,17 +6220,17 @@ pro000_restart: while(process_restart)
 	}
 
 	// DEJA OSO
-	p000e0326:
+	p000e0328:
 	{
- 		if (skipdoall('p000e0326')) break p000e0326;
+ 		if (skipdoall('p000e0328')) break p000e0328;
  		if (in_response)
 		{
-			if (!CNDverb(21)) break p000e0326;
-			if (!CNDnoun1(157)) break p000e0326;
+			if (!CNDverb(21)) break p000e0328;
+			if (!CNDnoun1(157)) break p000e0328;
  		}
-		if (!CNDat(117)) break p000e0326;
-		if (!CNDcarried(4)) break p000e0326;
-		if (!CNDzero(122)) break p000e0326;
+		if (!CNDat(117)) break p000e0328;
+		if (!CNDcarried(4)) break p000e0328;
+		if (!CNDzero(122)) break p000e0328;
  		ACCwriteln(190);
  		ACCanykey();
  		function anykey00017() 
@@ -6217,18 +6248,18 @@ pro000_restart: while(process_restart)
 	}
 
 	// DEJA OSO
-	p000e0327:
+	p000e0329:
 	{
- 		if (skipdoall('p000e0327')) break p000e0327;
+ 		if (skipdoall('p000e0329')) break p000e0329;
  		if (in_response)
 		{
-			if (!CNDverb(21)) break p000e0327;
-			if (!CNDnoun1(157)) break p000e0327;
+			if (!CNDverb(21)) break p000e0329;
+			if (!CNDnoun1(157)) break p000e0329;
  		}
-		if (!CNDeq(122,255)) break p000e0327;
-		if (!CNDatgt(101)) break p000e0327;
-		if (!CNDatlt(104)) break p000e0327;
-		if (!CNDzero(121)) break p000e0327;
+		if (!CNDeq(122,255)) break p000e0329;
+		if (!CNDatgt(101)) break p000e0329;
+		if (!CNDatlt(104)) break p000e0329;
+		if (!CNDzero(121)) break p000e0329;
  		ACCwrite(191);
  		ACCwriteln(192);
  		ACCset(121);
@@ -6241,15 +6272,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// DEJA OSO
-	p000e0328:
+	p000e0330:
 	{
- 		if (skipdoall('p000e0328')) break p000e0328;
+ 		if (skipdoall('p000e0330')) break p000e0330;
  		if (in_response)
 		{
-			if (!CNDverb(21)) break p000e0328;
-			if (!CNDnoun1(157)) break p000e0328;
+			if (!CNDverb(21)) break p000e0330;
+			if (!CNDnoun1(157)) break p000e0330;
  		}
-		if (!CNDeq(122,255)) break p000e0328;
+		if (!CNDeq(122,255)) break p000e0330;
  		ACCwriteln(193);
  		ACCcreate(23);
  		ACClet(122,1);
@@ -6260,15 +6291,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// DEJA OSO
-	p000e0329:
+	p000e0331:
 	{
- 		if (skipdoall('p000e0329')) break p000e0329;
+ 		if (skipdoall('p000e0331')) break p000e0331;
  		if (in_response)
 		{
-			if (!CNDverb(21)) break p000e0329;
-			if (!CNDnoun1(157)) break p000e0329;
+			if (!CNDverb(21)) break p000e0331;
+			if (!CNDnoun1(157)) break p000e0331;
  		}
-		if (!CNDeq(122,1)) break p000e0329;
+		if (!CNDeq(122,1)) break p000e0331;
  		ACCwriteln(194);
  		ACCdone();
 		break pro000_restart;
@@ -6277,13 +6308,13 @@ pro000_restart: while(process_restart)
 	}
 
 	// ACARICIA PILAR
-	p000e0330:
+	p000e0332:
 	{
- 		if (skipdoall('p000e0330')) break p000e0330;
+ 		if (skipdoall('p000e0332')) break p000e0332;
  		if (in_response)
 		{
-			if (!CNDverb(40)) break p000e0330;
-			if (!CNDnoun1(161)) break p000e0330;
+			if (!CNDverb(40)) break p000e0332;
+			if (!CNDnoun1(161)) break p000e0332;
  		}
  		ACCprocess(25);
  		ACCdone();
@@ -6293,12 +6324,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// ACARICIA _
-	p000e0331:
+	p000e0333:
 	{
- 		if (skipdoall('p000e0331')) break p000e0331;
+ 		if (skipdoall('p000e0333')) break p000e0333;
  		if (in_response)
 		{
-			if (!CNDverb(40)) break p000e0331;
+			if (!CNDverb(40)) break p000e0333;
  		}
  		ACCwriteln(195);
  		ACCdone();
@@ -6308,12 +6339,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// LEE _
-	p000e0332:
+	p000e0334:
 	{
- 		if (skipdoall('p000e0332')) break p000e0332;
+ 		if (skipdoall('p000e0334')) break p000e0334;
  		if (in_response)
 		{
-			if (!CNDverb(109)) break p000e0332;
+			if (!CNDverb(109)) break p000e0334;
  		}
  		ACClet(34,124);
  		ACCprocess(4);
@@ -6324,15 +6355,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// COME HUESO
-	p000e0333:
+	p000e0335:
 	{
- 		if (skipdoall('p000e0333')) break p000e0333;
+ 		if (skipdoall('p000e0335')) break p000e0335;
  		if (in_response)
 		{
-			if (!CNDverb(38)) break p000e0333;
-			if (!CNDnoun1(150)) break p000e0333;
+			if (!CNDverb(38)) break p000e0335;
+			if (!CNDnoun1(150)) break p000e0335;
  		}
-		if (!CNDcarried(10)) break p000e0333;
+		if (!CNDcarried(10)) break p000e0335;
  		ACCwriteln(196);
  		ACCnewline();
  		ACCanykey();
@@ -6351,50 +6382,17 @@ pro000_restart: while(process_restart)
 	}
 
 	// COME TORTI
-	p000e0334:
-	{
- 		if (skipdoall('p000e0334')) break p000e0334;
- 		if (in_response)
-		{
-			if (!CNDverb(38)) break p000e0334;
-			if (!CNDnoun1(52)) break p000e0334;
- 		}
-		if (!CNDcarried(2)) break p000e0334;
- 		ACCdestroy(2);
- 		ACCok();
-		break pro000_restart;
-		{}
-
-	}
-
-	// BEBE _
-	p000e0335:
-	{
- 		if (skipdoall('p000e0335')) break p000e0335;
- 		if (in_response)
-		{
-			if (!CNDverb(39)) break p000e0335;
- 		}
-		if (!CNDcarried(3)) break p000e0335;
-		if (!CNDonotzero(3,22)) break p000e0335;
- 		ACCoclear(3,22);
- 		ACCok();
-		break pro000_restart;
-		{}
-
-	}
-
-	// BEBE _
 	p000e0336:
 	{
  		if (skipdoall('p000e0336')) break p000e0336;
  		if (in_response)
 		{
-			if (!CNDverb(39)) break p000e0336;
+			if (!CNDverb(38)) break p000e0336;
+			if (!CNDnoun1(52)) break p000e0336;
  		}
-		if (!CNDat(118)) break p000e0336;
- 		ACCwriteln(197);
- 		ACCdone();
+		if (!CNDcarried(2)) break p000e0336;
+ 		ACCdestroy(2);
+ 		ACCok();
 		break pro000_restart;
 		{}
 
@@ -6408,9 +6406,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(39)) break p000e0337;
  		}
-		if (!CNDat(69)) break p000e0337;
- 		ACCwriteln(198);
- 		ACCdone();
+		if (!CNDcarried(3)) break p000e0337;
+		if (!CNDonotzero(3,22)) break p000e0337;
+ 		ACCoclear(3,22);
+ 		ACCok();
 		break pro000_restart;
 		{}
 
@@ -6424,48 +6423,40 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(39)) break p000e0338;
  		}
-		if (!CNDat(84)) break p000e0338;
- 		ACCwriteln(199);
+		if (!CNDat(118)) break p000e0338;
+ 		ACCwriteln(197);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ACEITAR PUERT
+	// BEBE _
 	p000e0339:
 	{
  		if (skipdoall('p000e0339')) break p000e0339;
  		if (in_response)
 		{
-			if (!CNDverb(127)) break p000e0339;
-			if (!CNDnoun1(89)) break p000e0339;
+			if (!CNDverb(39)) break p000e0339;
  		}
-		if (!CNDat(106)) break p000e0339;
-		if (!CNDcarried(9)) break p000e0339;
-		if (!CNDzero(124)) break p000e0339;
- 		ACCswap(9,3);
- 		ACCoclear(3,22);
- 		ACCwriteln(200);
- 		ACClet(124,1);
+		if (!CNDat(69)) break p000e0339;
+ 		ACCwriteln(198);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ACEITAR PUERT
+	// BEBE _
 	p000e0340:
 	{
  		if (skipdoall('p000e0340')) break p000e0340;
  		if (in_response)
 		{
-			if (!CNDverb(127)) break p000e0340;
-			if (!CNDnoun1(89)) break p000e0340;
+			if (!CNDverb(39)) break p000e0340;
  		}
-		if (!CNDat(106)) break p000e0340;
-		if (!CNDnotcarr(9)) break p000e0340;
- 		ACCwriteln(201);
+		if (!CNDat(84)) break p000e0340;
+ 		ACCwriteln(199);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6482,7 +6473,47 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(89)) break p000e0341;
  		}
 		if (!CNDat(106)) break p000e0341;
-		if (!CNDnotzero(124)) break p000e0341;
+		if (!CNDcarried(9)) break p000e0341;
+		if (!CNDzero(124)) break p000e0341;
+ 		ACCswap(9,3);
+ 		ACCoclear(3,22);
+ 		ACCwriteln(200);
+ 		ACClet(124,1);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ACEITAR PUERT
+	p000e0342:
+	{
+ 		if (skipdoall('p000e0342')) break p000e0342;
+ 		if (in_response)
+		{
+			if (!CNDverb(127)) break p000e0342;
+			if (!CNDnoun1(89)) break p000e0342;
+ 		}
+		if (!CNDat(106)) break p000e0342;
+		if (!CNDnotcarr(9)) break p000e0342;
+ 		ACCwriteln(201);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ACEITAR PUERT
+	p000e0343:
+	{
+ 		if (skipdoall('p000e0343')) break p000e0343;
+ 		if (in_response)
+		{
+			if (!CNDverb(127)) break p000e0343;
+			if (!CNDnoun1(89)) break p000e0343;
+ 		}
+		if (!CNDat(106)) break p000e0343;
+		if (!CNDnotzero(124)) break p000e0343;
  		ACCwriteln(202);
  		ACCdone();
 		break pro000_restart;
@@ -6491,12 +6522,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// ACEITAR _
-	p000e0342:
+	p000e0344:
 	{
- 		if (skipdoall('p000e0342')) break p000e0342;
+ 		if (skipdoall('p000e0344')) break p000e0344;
  		if (in_response)
 		{
-			if (!CNDverb(127)) break p000e0342;
+			if (!CNDverb(127)) break p000e0344;
  		}
  		ACCwriteln(203);
  		ACCnotdone();
@@ -6506,49 +6537,18 @@ pro000_restart: while(process_restart)
 	}
 
 	// APARTA NIEBLA
-	p000e0343:
-	{
- 		if (skipdoall('p000e0343')) break p000e0343;
- 		if (in_response)
-		{
-			if (!CNDverb(122)) break p000e0343;
-			if (!CNDnoun1(156)) break p000e0343;
- 		}
-		if (!CNDat(37)) break p000e0343;
- 		ACCwriteln(204);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// SOPLA _
-	p000e0344:
-	{
- 		if (skipdoall('p000e0344')) break p000e0344;
- 		if (in_response)
-		{
-			if (!CNDverb(95)) break p000e0344;
- 		}
-		if (!CNDat(37)) break p000e0344;
-		if (!CNDzero(114)) break p000e0344;
- 		ACCset(114);
-		{}
-
-	}
-
-	// SOPLA _
 	p000e0345:
 	{
  		if (skipdoall('p000e0345')) break p000e0345;
  		if (in_response)
 		{
-			if (!CNDverb(95)) break p000e0345;
+			if (!CNDverb(122)) break p000e0345;
+			if (!CNDnoun1(156)) break p000e0345;
  		}
-		if (!CNDzero(131)) break p000e0345;
- 		ACCset(131);
- 		ACCwrite(205);
- 		ACCplace(14,37);
+		if (!CNDat(37)) break p000e0345;
+ 		ACCwriteln(204);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
@@ -6562,45 +6562,38 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(95)) break p000e0346;
  		}
 		if (!CNDat(37)) break p000e0346;
- 		ACCwriteln(206);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDzero(114)) break p000e0346;
+ 		ACCset(114);
 		{}
 
 	}
 
-	// REGAR BROTE
+	// SOPLA _
 	p000e0347:
 	{
  		if (skipdoall('p000e0347')) break p000e0347;
  		if (in_response)
 		{
-			if (!CNDverb(126)) break p000e0347;
-			if (!CNDnoun1(132)) break p000e0347;
+			if (!CNDverb(95)) break p000e0347;
  		}
-		if (!CNDat(92)) break p000e0347;
-		if (!CNDcarried(9)) break p000e0347;
- 		ACCwriteln(207);
- 		ACCclear(120);
- 		ACCswap(9,3);
- 		ACCoclear(3,22);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDzero(131)) break p000e0347;
+ 		ACCset(131);
+ 		ACCwrite(205);
+ 		ACCplace(14,37);
 		{}
 
 	}
 
-	// REGAR BROTE
+	// SOPLA _
 	p000e0348:
 	{
  		if (skipdoall('p000e0348')) break p000e0348;
  		if (in_response)
 		{
-			if (!CNDverb(126)) break p000e0348;
-			if (!CNDnoun1(132)) break p000e0348;
+			if (!CNDverb(95)) break p000e0348;
  		}
-		if (!CNDnotcarr(3)) break p000e0348;
- 		ACCwriteln(208);
+		if (!CNDat(37)) break p000e0348;
+ 		ACCwriteln(206);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6616,8 +6609,12 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(126)) break p000e0349;
 			if (!CNDnoun1(132)) break p000e0349;
  		}
-		if (!CNDozero(3,22)) break p000e0349;
- 		ACCwriteln(209);
+		if (!CNDat(92)) break p000e0349;
+		if (!CNDcarried(9)) break p000e0349;
+ 		ACCwriteln(207);
+ 		ACCclear(120);
+ 		ACCswap(9,3);
+ 		ACCoclear(3,22);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6633,9 +6630,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(126)) break p000e0350;
 			if (!CNDnoun1(132)) break p000e0350;
  		}
-		if (!CNDat(92)) break p000e0350;
- 		ACCplus(120,1);
- 		ACCoclear(3,22);
+		if (!CNDnotcarr(3)) break p000e0350;
+ 		ACCwriteln(208);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
@@ -6649,10 +6647,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(126)) break p000e0351;
 			if (!CNDnoun1(132)) break p000e0351;
  		}
-		if (!CNDat(92)) break p000e0351;
-		if (!CNDeq(120,1)) break p000e0351;
- 		ACCwriteln(210);
- 		ACCnewline();
+		if (!CNDozero(3,22)) break p000e0351;
+ 		ACCwriteln(209);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6669,7 +6665,42 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(132)) break p000e0352;
  		}
 		if (!CNDat(92)) break p000e0352;
-		if (!CNDgt(120,1)) break p000e0352;
+ 		ACCplus(120,1);
+ 		ACCoclear(3,22);
+		{}
+
+	}
+
+	// REGAR BROTE
+	p000e0353:
+	{
+ 		if (skipdoall('p000e0353')) break p000e0353;
+ 		if (in_response)
+		{
+			if (!CNDverb(126)) break p000e0353;
+			if (!CNDnoun1(132)) break p000e0353;
+ 		}
+		if (!CNDat(92)) break p000e0353;
+		if (!CNDeq(120,1)) break p000e0353;
+ 		ACCwriteln(210);
+ 		ACCnewline();
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// REGAR BROTE
+	p000e0354:
+	{
+ 		if (skipdoall('p000e0354')) break p000e0354;
+ 		if (in_response)
+		{
+			if (!CNDverb(126)) break p000e0354;
+			if (!CNDnoun1(132)) break p000e0354;
+ 		}
+		if (!CNDat(92)) break p000e0354;
+		if (!CNDgt(120,1)) break p000e0354;
  		ACCwriteln(211);
  		ACCdone();
 		break pro000_restart;
@@ -6678,14 +6709,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// CABRON _
-	p000e0353:
+	p000e0355:
 	{
- 		if (skipdoall('p000e0353')) break p000e0353;
+ 		if (skipdoall('p000e0355')) break p000e0355;
  		if (in_response)
 		{
-			if (!CNDverb(119)) break p000e0353;
+			if (!CNDverb(119)) break p000e0355;
  		}
-		if (!CNDatgt(30)) break p000e0353;
+		if (!CNDatgt(30)) break p000e0355;
  		ACCdestroy(0);
  		ACCwrite(212);
  		ACCanykey();
@@ -6702,15 +6733,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// ARROJA BOTEL
-	p000e0354:
+	p000e0356:
 	{
- 		if (skipdoall('p000e0354')) break p000e0354;
+ 		if (skipdoall('p000e0356')) break p000e0356;
  		if (in_response)
 		{
-			if (!CNDverb(32)) break p000e0354;
-			if (!CNDnoun1(53)) break p000e0354;
+			if (!CNDverb(32)) break p000e0356;
+			if (!CNDnoun1(53)) break p000e0356;
  		}
-		if (!CNDcarried(3)) break p000e0354;
+		if (!CNDcarried(3)) break p000e0356;
  		ACCdestroy(3);
  		ACCwriteln(213);
  		ACCdone();
@@ -6720,56 +6751,18 @@ pro000_restart: while(process_restart)
 	}
 
 	// ARROJA BOTEL
-	p000e0355:
-	{
- 		if (skipdoall('p000e0355')) break p000e0355;
- 		if (in_response)
-		{
-			if (!CNDverb(32)) break p000e0355;
-			if (!CNDnoun1(53)) break p000e0355;
- 		}
-		if (!CNDcarried(9)) break p000e0355;
- 		ACCdestroy(9);
- 		ACCnewline();
- 		ACCwriteln(214);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// ARROJA HACHA
-	p000e0356:
-	{
- 		if (skipdoall('p000e0356')) break p000e0356;
- 		if (in_response)
-		{
-			if (!CNDverb(32)) break p000e0356;
-			if (!CNDnoun1(149)) break p000e0356;
- 		}
-		if (!CNDnotcarr(12)) break p000e0356;
- 		ACCwriteln(215);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// ARROJA HACHA
 	p000e0357:
 	{
  		if (skipdoall('p000e0357')) break p000e0357;
  		if (in_response)
 		{
 			if (!CNDverb(32)) break p000e0357;
-			if (!CNDnoun1(149)) break p000e0357;
+			if (!CNDnoun1(53)) break p000e0357;
  		}
-		if (!CNDzero(127)) break p000e0357;
-		if (!CNDeq(126,2)) break p000e0357;
-		if (!CNDchance(50)) break p000e0357;
- 		ACCwriteln(216);
- 		ACCplace(12,getFlag(38));
- 		ACCset(127);
+		if (!CNDcarried(9)) break p000e0357;
+ 		ACCdestroy(9);
+ 		ACCnewline();
+ 		ACCwriteln(214);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -6785,7 +6778,45 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(32)) break p000e0358;
 			if (!CNDnoun1(149)) break p000e0358;
  		}
-		if (!CNDeq(126,2)) break p000e0358;
+		if (!CNDnotcarr(12)) break p000e0358;
+ 		ACCwriteln(215);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ARROJA HACHA
+	p000e0359:
+	{
+ 		if (skipdoall('p000e0359')) break p000e0359;
+ 		if (in_response)
+		{
+			if (!CNDverb(32)) break p000e0359;
+			if (!CNDnoun1(149)) break p000e0359;
+ 		}
+		if (!CNDzero(127)) break p000e0359;
+		if (!CNDeq(126,2)) break p000e0359;
+		if (!CNDchance(50)) break p000e0359;
+ 		ACCwriteln(216);
+ 		ACCplace(12,getFlag(38));
+ 		ACCset(127);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ARROJA HACHA
+	p000e0360:
+	{
+ 		if (skipdoall('p000e0360')) break p000e0360;
+ 		if (in_response)
+		{
+			if (!CNDverb(32)) break p000e0360;
+			if (!CNDnoun1(149)) break p000e0360;
+ 		}
+		if (!CNDeq(126,2)) break p000e0360;
  		ACCwriteln(217);
  		ACCdestroy(12);
  		ACCclear(126);
@@ -6805,15 +6836,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// ARROJA LAMPA
-	p000e0359:
+	p000e0361:
 	{
- 		if (skipdoall('p000e0359')) break p000e0359;
+ 		if (skipdoall('p000e0361')) break p000e0361;
  		if (in_response)
 		{
-			if (!CNDverb(32)) break p000e0359;
-			if (!CNDnoun1(50)) break p000e0359;
+			if (!CNDverb(32)) break p000e0361;
+			if (!CNDnoun1(50)) break p000e0361;
  		}
-		if (!CNDnotcarr(0)) break p000e0359;
+		if (!CNDnotcarr(0)) break p000e0361;
  		ACCwriteln(218);
  		ACCdone();
 		break pro000_restart;
@@ -6822,15 +6853,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// ARROJA LAMPA
-	p000e0360:
+	p000e0362:
 	{
- 		if (skipdoall('p000e0360')) break p000e0360;
+ 		if (skipdoall('p000e0362')) break p000e0362;
  		if (in_response)
 		{
-			if (!CNDverb(32)) break p000e0360;
-			if (!CNDnoun1(50)) break p000e0360;
+			if (!CNDverb(32)) break p000e0362;
+			if (!CNDnoun1(50)) break p000e0362;
  		}
-		if (!CNDat(118)) break p000e0360;
+		if (!CNDat(118)) break p000e0362;
  		ACCwriteln(219);
  		ACCset(0);
  		ACCpause(100);
@@ -6847,15 +6878,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// ARROJA LAMPA
-	p000e0361:
+	p000e0363:
 	{
- 		if (skipdoall('p000e0361')) break p000e0361;
+ 		if (skipdoall('p000e0363')) break p000e0363;
  		if (in_response)
 		{
-			if (!CNDverb(32)) break p000e0361;
-			if (!CNDnoun1(50)) break p000e0361;
+			if (!CNDverb(32)) break p000e0363;
+			if (!CNDnoun1(50)) break p000e0363;
  		}
-		if (!CNDat(84)) break p000e0361;
+		if (!CNDat(84)) break p000e0363;
  		ACCwriteln(220);
  		ACCset(0);
  		ACCpause(100);
@@ -6872,16 +6903,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// ARROJA _
-	p000e0362:
+	p000e0364:
 	{
- 		if (skipdoall('p000e0362')) break p000e0362;
+ 		if (skipdoall('p000e0364')) break p000e0364;
  		if (in_response)
 		{
-			if (!CNDverb(32)) break p000e0362;
+			if (!CNDverb(32)) break p000e0364;
  		}
-		if (!CNDat(118)) break p000e0362;
-		if (!CNDnoteq(51,255)) break p000e0362;
-		if (!CNDcarried(getFlag(51))) break p000e0362;
+		if (!CNDat(118)) break p000e0364;
+		if (!CNDnoteq(51,255)) break p000e0364;
+		if (!CNDcarried(getFlag(51))) break p000e0364;
  		ACCwriteln(221);
  		ACCdestroy(getFlag(51));
  		ACCdone();
@@ -6891,16 +6922,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// ARROJA _
-	p000e0363:
+	p000e0365:
 	{
- 		if (skipdoall('p000e0363')) break p000e0363;
+ 		if (skipdoall('p000e0365')) break p000e0365;
  		if (in_response)
 		{
-			if (!CNDverb(32)) break p000e0363;
+			if (!CNDverb(32)) break p000e0365;
  		}
-		if (!CNDnoteq(51,255)) break p000e0363;
-		if (!CNDat(84)) break p000e0363;
-		if (!CNDcarried(getFlag(51))) break p000e0363;
+		if (!CNDnoteq(51,255)) break p000e0365;
+		if (!CNDat(84)) break p000e0365;
+		if (!CNDcarried(getFlag(51))) break p000e0365;
  		ACCwriteln(222);
  		ACCdestroy(getFlag(51));
  		ACCdone();
@@ -6910,16 +6941,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// CRUZA _
-	p000e0364:
+	p000e0366:
 	{
- 		if (skipdoall('p000e0364')) break p000e0364;
+ 		if (skipdoall('p000e0366')) break p000e0366;
  		if (in_response)
 		{
-			if (!CNDverb(125)) break p000e0364;
+			if (!CNDverb(125)) break p000e0366;
  		}
-		if (!CNDatgt(101)) break p000e0364;
-		if (!CNDatlt(104)) break p000e0364;
-		if (!CNDzero(121)) break p000e0364;
+		if (!CNDatgt(101)) break p000e0366;
+		if (!CNDatlt(104)) break p000e0366;
+		if (!CNDzero(121)) break p000e0366;
  		ACCwriteln(223);
  		ACCdone();
 		break pro000_restart;
@@ -6928,16 +6959,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// CRUZA _
-	p000e0365:
+	p000e0367:
 	{
- 		if (skipdoall('p000e0365')) break p000e0365;
+ 		if (skipdoall('p000e0367')) break p000e0367;
  		if (in_response)
 		{
-			if (!CNDverb(125)) break p000e0365;
+			if (!CNDverb(125)) break p000e0367;
  		}
-		if (!CNDatgt(101)) break p000e0365;
-		if (!CNDatlt(104)) break p000e0365;
-		if (!CNDeq(122,255)) break p000e0365;
+		if (!CNDatgt(101)) break p000e0367;
+		if (!CNDatlt(104)) break p000e0367;
+		if (!CNDeq(122,255)) break p000e0367;
  		ACCwriteln(224);
  		ACCclear(0);
  		ACCgoto(120);
@@ -6955,38 +6986,6 @@ pro000_restart: while(process_restart)
 	}
 
 	// CRUZA _
-	p000e0366:
-	{
- 		if (skipdoall('p000e0366')) break p000e0366;
- 		if (in_response)
-		{
-			if (!CNDverb(125)) break p000e0366;
- 		}
-		if (!CNDat(102)) break p000e0366;
- 		ACCgoto(103);
- 		ACCdesc();
-		break pro000_restart;
-		{}
-
-	}
-
-	// CRUZA _
-	p000e0367:
-	{
- 		if (skipdoall('p000e0367')) break p000e0367;
- 		if (in_response)
-		{
-			if (!CNDverb(125)) break p000e0367;
- 		}
-		if (!CNDat(103)) break p000e0367;
- 		ACCgoto(102);
- 		ACCdesc();
-		break pro000_restart;
-		{}
-
-	}
-
-	// CRUZA _
 	p000e0368:
 	{
  		if (skipdoall('p000e0368')) break p000e0368;
@@ -6994,8 +6993,8 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(125)) break p000e0368;
  		}
-		if (!CNDat(39)) break p000e0368;
- 		ACCgoto(40);
+		if (!CNDat(102)) break p000e0368;
+ 		ACCgoto(103);
  		ACCdesc();
 		break pro000_restart;
 		{}
@@ -7010,7 +7009,39 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(125)) break p000e0369;
  		}
-		if (!CNDat(40)) break p000e0369;
+		if (!CNDat(103)) break p000e0369;
+ 		ACCgoto(102);
+ 		ACCdesc();
+		break pro000_restart;
+		{}
+
+	}
+
+	// CRUZA _
+	p000e0370:
+	{
+ 		if (skipdoall('p000e0370')) break p000e0370;
+ 		if (in_response)
+		{
+			if (!CNDverb(125)) break p000e0370;
+ 		}
+		if (!CNDat(39)) break p000e0370;
+ 		ACCgoto(40);
+ 		ACCdesc();
+		break pro000_restart;
+		{}
+
+	}
+
+	// CRUZA _
+	p000e0371:
+	{
+ 		if (skipdoall('p000e0371')) break p000e0371;
+ 		if (in_response)
+		{
+			if (!CNDverb(125)) break p000e0371;
+ 		}
+		if (!CNDat(40)) break p000e0371;
  		ACCgoto(39);
  		ACCdesc();
 		break pro000_restart;
@@ -7019,51 +7050,19 @@ pro000_restart: while(process_restart)
 	}
 
 	// EXTRAE BATERIA
-	p000e0370:
-	{
- 		if (skipdoall('p000e0370')) break p000e0370;
- 		if (in_response)
-		{
-			if (!CNDverb(75)) break p000e0370;
-			if (!CNDnoun1(55)) break p000e0370;
- 		}
-		if (!CNDcarried(0)) break p000e0370;
- 		ACCclear(105);
- 		ACCplace(5,254);
- 		ACCoclear(0,20);
- 		ACCdesc();
-		break pro000_restart;
-		{}
-
-	}
-
-	// BRINCA _
-	p000e0371:
-	{
- 		if (skipdoall('p000e0371')) break p000e0371;
- 		if (in_response)
-		{
-			if (!CNDverb(45)) break p000e0371;
- 		}
-		if (!CNDat(96)) break p000e0371;
- 		ACCwriteln(225);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// BRINCA _
 	p000e0372:
 	{
  		if (skipdoall('p000e0372')) break p000e0372;
  		if (in_response)
 		{
-			if (!CNDverb(45)) break p000e0372;
+			if (!CNDverb(75)) break p000e0372;
+			if (!CNDnoun1(55)) break p000e0372;
  		}
-		if (!CNDat(38)) break p000e0372;
- 		ACCprocess(22);
- 		ACCdone();
+		if (!CNDcarried(0)) break p000e0372;
+ 		ACCclear(105);
+ 		ACCplace(5,254);
+ 		ACCoclear(0,20);
+ 		ACCdesc();
 		break pro000_restart;
 		{}
 
@@ -7077,9 +7076,8 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(45)) break p000e0373;
  		}
-		if (!CNDatgt(101)) break p000e0373;
-		if (!CNDatlt(104)) break p000e0373;
- 		ACCprocess(22);
+		if (!CNDat(96)) break p000e0373;
+ 		ACCwriteln(225);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7094,6 +7092,39 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(45)) break p000e0374;
  		}
+		if (!CNDat(38)) break p000e0374;
+ 		ACCprocess(22);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// BRINCA _
+	p000e0375:
+	{
+ 		if (skipdoall('p000e0375')) break p000e0375;
+ 		if (in_response)
+		{
+			if (!CNDverb(45)) break p000e0375;
+ 		}
+		if (!CNDatgt(101)) break p000e0375;
+		if (!CNDatlt(104)) break p000e0375;
+ 		ACCprocess(22);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// BRINCA _
+	p000e0376:
+	{
+ 		if (skipdoall('p000e0376')) break p000e0376;
+ 		if (in_response)
+		{
+			if (!CNDverb(45)) break p000e0376;
+ 		}
  		ACCwriteln(226);
  		ACCdone();
 		break pro000_restart;
@@ -7102,52 +7133,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// D _
-	p000e0375:
-	{
- 		if (skipdoall('p000e0375')) break p000e0375;
- 		if (in_response)
-		{
-			if (!CNDverb(24)) break p000e0375;
- 		}
- 		ACCdesc();
-		break pro000_restart;
-		{}
-
-	}
-
-	// FEE FIE
-	p000e0376:
-	{
- 		if (skipdoall('p000e0376')) break p000e0376;
- 		if (in_response)
-		{
-			if (!CNDverb(121)) break p000e0376;
-			if (!CNDnoun1(140)) break p000e0376;
- 		}
-		if (!CNDat(106)) break p000e0376;
-		if (!CNDisat(22,106)) break p000e0376;
- 		ACCwriteln(227);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// FEE FIE
 	p000e0377:
 	{
  		if (skipdoall('p000e0377')) break p000e0377;
  		if (in_response)
 		{
-			if (!CNDverb(121)) break p000e0377;
-			if (!CNDnoun1(140)) break p000e0377;
+			if (!CNDverb(24)) break p000e0377;
  		}
-		if (!CNDat(106)) break p000e0377;
-		if (!CNDcarried(22)) break p000e0377;
- 		ACCplace(22,106);
- 		ACCwrite(228);
- 		ACCwriteln(229);
- 		ACCdone();
+ 		ACCdesc();
 		break pro000_restart;
 		{}
 
@@ -7163,8 +7156,8 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(140)) break p000e0378;
  		}
 		if (!CNDat(106)) break p000e0378;
- 		ACCwriteln(230);
- 		ACCcreate(22);
+		if (!CNDisat(22,106)) break p000e0378;
+ 		ACCwriteln(227);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7180,41 +7173,47 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(121)) break p000e0379;
 			if (!CNDnoun1(140)) break p000e0379;
  		}
- 		ACCwriteln(231);
+		if (!CNDat(106)) break p000e0379;
+		if (!CNDcarried(22)) break p000e0379;
+ 		ACCplace(22,106);
+ 		ACCwrite(228);
+ 		ACCwriteln(229);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// _ RECOLECTOR
+	// FEE FIE
 	p000e0380:
 	{
  		if (skipdoall('p000e0380')) break p000e0380;
  		if (in_response)
 		{
-			if (!CNDnoun1(165)) break p000e0380;
+			if (!CNDverb(121)) break p000e0380;
+			if (!CNDnoun1(140)) break p000e0380;
  		}
-		if (!CNDat(68)) break p000e0380;
- 		ACCclear(0);
- 		ACCgoto(119);
- 		ACCdesc();
+		if (!CNDat(106)) break p000e0380;
+ 		ACCwriteln(230);
+ 		ACCcreate(22);
+ 		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// _ RECOLECTOR
+	// FEE FIE
 	p000e0381:
 	{
  		if (skipdoall('p000e0381')) break p000e0381;
  		if (in_response)
 		{
-			if (!CNDnoun1(165)) break p000e0381;
+			if (!CNDverb(121)) break p000e0381;
+			if (!CNDnoun1(140)) break p000e0381;
  		}
-		if (!CNDat(119)) break p000e0381;
-		if (!CNDabsent(0)) break p000e0381;
- 		ACCset(0);
+ 		ACCwriteln(231);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
@@ -7227,9 +7226,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDnoun1(165)) break p000e0382;
  		}
-		if (!CNDat(119)) break p000e0382;
-		if (!CNDozero(0,20)) break p000e0382;
- 		ACCset(0);
+		if (!CNDat(68)) break p000e0382;
+ 		ACCclear(0);
+ 		ACCgoto(119);
+ 		ACCdesc();
+		break pro000_restart;
 		{}
 
 	}
@@ -7243,8 +7244,8 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(165)) break p000e0383;
  		}
 		if (!CNDat(119)) break p000e0383;
-		if (!CNDobjfound(20,68)) break p000e0383;
- 		ACCclear(0);
+		if (!CNDabsent(0)) break p000e0383;
+ 		ACCset(0);
 		{}
 
 	}
@@ -7258,10 +7259,8 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(165)) break p000e0384;
  		}
 		if (!CNDat(119)) break p000e0384;
- 		ACCcls();
- 		ACCgoto(68);
- 		ACCdesc();
-		break pro000_restart;
+		if (!CNDozero(0,20)) break p000e0384;
+ 		ACCset(0);
 		{}
 
 	}
@@ -7274,41 +7273,41 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDnoun1(165)) break p000e0385;
  		}
- 		ACCwriteln(232);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDat(119)) break p000e0385;
+		if (!CNDobjfound(20,68)) break p000e0385;
+ 		ACCclear(0);
 		{}
 
 	}
 
-	// _ MAGIA
+	// _ RECOLECTOR
 	p000e0386:
 	{
  		if (skipdoall('p000e0386')) break p000e0386;
  		if (in_response)
 		{
-			if (!CNDnoun1(154)) break p000e0386;
+			if (!CNDnoun1(165)) break p000e0386;
  		}
-		if (!CNDat(68)) break p000e0386;
- 		ACCclear(0);
- 		ACCgoto(101);
+		if (!CNDat(119)) break p000e0386;
+ 		ACCcls();
+ 		ACCgoto(68);
  		ACCdesc();
 		break pro000_restart;
 		{}
 
 	}
 
-	// _ MAGIA
+	// _ RECOLECTOR
 	p000e0387:
 	{
  		if (skipdoall('p000e0387')) break p000e0387;
  		if (in_response)
 		{
-			if (!CNDnoun1(154)) break p000e0387;
+			if (!CNDnoun1(165)) break p000e0387;
  		}
-		if (!CNDat(101)) break p000e0387;
-		if (!CNDcarried(25)) break p000e0387;
- 		ACCplace(25,101);
+ 		ACCwriteln(232);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
@@ -7321,9 +7320,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDnoun1(154)) break p000e0388;
  		}
-		if (!CNDat(101)) break p000e0388;
-		if (!CNDnotcarr(0)) break p000e0388;
- 		ACCset(0);
+		if (!CNDat(68)) break p000e0388;
+ 		ACCclear(0);
+ 		ACCgoto(101);
+ 		ACCdesc();
+		break pro000_restart;
 		{}
 
 	}
@@ -7337,9 +7338,8 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(154)) break p000e0389;
  		}
 		if (!CNDat(101)) break p000e0389;
-		if (!CNDpresent(0)) break p000e0389;
-		if (!CNDozero(0,20)) break p000e0389;
- 		ACCset(0);
+		if (!CNDcarried(25)) break p000e0389;
+ 		ACCplace(25,101);
 		{}
 
 	}
@@ -7353,8 +7353,8 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(154)) break p000e0390;
  		}
 		if (!CNDat(101)) break p000e0390;
-		if (!CNDobjfound(20,68)) break p000e0390;
- 		ACCclear(0);
+		if (!CNDnotcarr(0)) break p000e0390;
+ 		ACCset(0);
 		{}
 
 	}
@@ -7368,9 +7368,9 @@ pro000_restart: while(process_restart)
 			if (!CNDnoun1(154)) break p000e0391;
  		}
 		if (!CNDat(101)) break p000e0391;
- 		ACCgoto(68);
- 		ACCdesc();
-		break pro000_restart;
+		if (!CNDpresent(0)) break p000e0391;
+		if (!CNDozero(0,20)) break p000e0391;
+ 		ACCset(0);
 		{}
 
 	}
@@ -7383,41 +7383,40 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDnoun1(154)) break p000e0392;
  		}
- 		ACCwriteln(233);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDat(101)) break p000e0392;
+		if (!CNDobjfound(20,68)) break p000e0392;
+ 		ACCclear(0);
 		{}
 
 	}
 
-	// XYZZY _
+	// _ MAGIA
 	p000e0393:
 	{
  		if (skipdoall('p000e0393')) break p000e0393;
  		if (in_response)
 		{
-			if (!CNDverb(82)) break p000e0393;
+			if (!CNDnoun1(154)) break p000e0393;
  		}
-		if (!CNDat(33)) break p000e0393;
- 		ACCclear(0);
- 		ACCgoto(119);
+		if (!CNDat(101)) break p000e0393;
+ 		ACCgoto(68);
  		ACCdesc();
 		break pro000_restart;
 		{}
 
 	}
 
-	// XYZZY _
+	// _ MAGIA
 	p000e0394:
 	{
  		if (skipdoall('p000e0394')) break p000e0394;
  		if (in_response)
 		{
-			if (!CNDverb(82)) break p000e0394;
+			if (!CNDnoun1(154)) break p000e0394;
  		}
-		if (!CNDat(119)) break p000e0394;
-		if (!CNDabsent(0)) break p000e0394;
- 		ACCset(0);
+ 		ACCwriteln(233);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
@@ -7430,9 +7429,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(82)) break p000e0395;
  		}
-		if (!CNDat(119)) break p000e0395;
-		if (!CNDozero(0,20)) break p000e0395;
- 		ACCset(0);
+		if (!CNDat(33)) break p000e0395;
+ 		ACCclear(0);
+ 		ACCgoto(119);
+ 		ACCdesc();
+		break pro000_restart;
 		{}
 
 	}
@@ -7446,8 +7447,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(82)) break p000e0396;
  		}
 		if (!CNDat(119)) break p000e0396;
-		if (!CNDobjfound(20,33)) break p000e0396;
- 		ACCclear(0);
+		if (!CNDabsent(0)) break p000e0396;
+ 		ACCset(0);
 		{}
 
 	}
@@ -7461,10 +7462,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(82)) break p000e0397;
  		}
 		if (!CNDat(119)) break p000e0397;
- 		ACCcls();
- 		ACCgoto(33);
- 		ACCdesc();
-		break pro000_restart;
+		if (!CNDozero(0,20)) break p000e0397;
+ 		ACCset(0);
 		{}
 
 	}
@@ -7477,6 +7476,38 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(82)) break p000e0398;
  		}
+		if (!CNDat(119)) break p000e0398;
+		if (!CNDobjfound(20,33)) break p000e0398;
+ 		ACCclear(0);
+		{}
+
+	}
+
+	// XYZZY _
+	p000e0399:
+	{
+ 		if (skipdoall('p000e0399')) break p000e0399;
+ 		if (in_response)
+		{
+			if (!CNDverb(82)) break p000e0399;
+ 		}
+		if (!CNDat(119)) break p000e0399;
+ 		ACCcls();
+ 		ACCgoto(33);
+ 		ACCdesc();
+		break pro000_restart;
+		{}
+
+	}
+
+	// XYZZY _
+	p000e0400:
+	{
+ 		if (skipdoall('p000e0400')) break p000e0400;
+ 		if (in_response)
+		{
+			if (!CNDverb(82)) break p000e0400;
+ 		}
  		ACCwriteln(234);
  		ACCdone();
 		break pro000_restart;
@@ -7485,12 +7516,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// _ PLOVE
-	p000e0399:
+	p000e0401:
 	{
- 		if (skipdoall('p000e0399')) break p000e0399;
+ 		if (skipdoall('p000e0401')) break p000e0401;
  		if (in_response)
 		{
-			if (!CNDnoun1(163)) break p000e0399;
+			if (!CNDnoun1(163)) break p000e0401;
  		}
  		ACCwriteln(235);
  		ACCdone();
@@ -7500,12 +7531,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// SALUDA _
-	p000e0400:
+	p000e0402:
 	{
- 		if (skipdoall('p000e0400')) break p000e0400;
+ 		if (skipdoall('p000e0402')) break p000e0402;
  		if (in_response)
 		{
-			if (!CNDverb(113)) break p000e0400;
+			if (!CNDverb(113)) break p000e0402;
  		}
  		ACCwrite(236);
  		ACCdone();
@@ -7515,35 +7546,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// _ _
-	p000e0401:
-	{
- 		if (skipdoall('p000e0401')) break p000e0401;
-		if (!CNDat(76)) break p000e0401;
- 		ACCclear(117);
- 		ACCwrite(237);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// _ _
-	p000e0402:
-	{
- 		if (skipdoall('p000e0402')) break p000e0402;
-		if (!CNDat(124)) break p000e0402;
- 		ACCset(255);
- 		ACCpicture(1);
-		{}
-
-	}
-
-	// _ _
 	p000e0403:
 	{
  		if (skipdoall('p000e0403')) break p000e0403;
-		if (!CNDat(124)) break p000e0403;
- 		ACCgoto(125);
+		if (!CNDat(76)) break p000e0403;
+ 		ACCclear(117);
+ 		ACCwrite(237);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7554,6 +7562,29 @@ pro000_restart: while(process_restart)
 	p000e0404:
 	{
  		if (skipdoall('p000e0404')) break p000e0404;
+		if (!CNDat(124)) break p000e0404;
+ 		ACCset(255);
+ 		ACCpicture(1);
+		{}
+
+	}
+
+	// _ _
+	p000e0405:
+	{
+ 		if (skipdoall('p000e0405')) break p000e0405;
+		if (!CNDat(124)) break p000e0405;
+ 		ACCgoto(125);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// _ _
+	p000e0406:
+	{
+ 		if (skipdoall('p000e0406')) break p000e0406;
  		ACChook(238);
 		if (done_flag) break pro000_restart;
 		{}
@@ -7561,12 +7592,12 @@ pro000_restart: while(process_restart)
 	}
 
 	//  _
-	p000e0405:
+	p000e0407:
 	{
- 		if (skipdoall('p000e0405')) break p000e0405;
+ 		if (skipdoall('p000e0407')) break p000e0407;
  		if (in_response)
 		{
-			if (!CNDverb(14)) break p000e0405;
+			if (!CNDverb(14)) break p000e0407;
  		}
  		ACCinven();
 		break pro000_restart;
@@ -7575,16 +7606,16 @@ pro000_restart: while(process_restart)
 	}
 
 	// ENTRA _
-	p000e0406:
+	p000e0408:
 	{
- 		if (skipdoall('p000e0406')) break p000e0406;
+ 		if (skipdoall('p000e0408')) break p000e0408;
  		if (in_response)
 		{
-			if (!CNDverb(12)) break p000e0406;
+			if (!CNDverb(12)) break p000e0408;
  		}
-		if (!CNDnoteq(51,255)) break p000e0406;
-		if (!CNDpresent(getFlag(51))) break p000e0406;
-		if (!CNDonotzero(getFlag(51),7)) break p000e0406;
+		if (!CNDnoteq(51,255)) break p000e0408;
+		if (!CNDpresent(getFlag(51))) break p000e0408;
+		if (!CNDonotzero(getFlag(51),7)) break p000e0408;
  		ACCgoto(getFlag(51));
  		ACCdesc();
 		break pro000_restart;
@@ -7593,12 +7624,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// SENTAR _
-	p000e0407:
+	p000e0409:
 	{
- 		if (skipdoall('p000e0407')) break p000e0407;
+ 		if (skipdoall('p000e0409')) break p000e0409;
  		if (in_response)
 		{
-			if (!CNDverb(23)) break p000e0407;
+			if (!CNDverb(23)) break p000e0409;
  		}
  		ACCwriteln(239);
  		ACCdone();
@@ -7608,12 +7639,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// LEVANTARSE _
-	p000e0408:
+	p000e0410:
 	{
- 		if (skipdoall('p000e0408')) break p000e0408;
+ 		if (skipdoall('p000e0410')) break p000e0410;
  		if (in_response)
 		{
-			if (!CNDverb(53)) break p000e0408;
+			if (!CNDverb(53)) break p000e0410;
  		}
  		ACCwriteln(240);
  		ACCdone();
@@ -7623,12 +7654,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// ALUMBRA _
-	p000e0409:
+	p000e0411:
 	{
- 		if (skipdoall('p000e0409')) break p000e0409;
+ 		if (skipdoall('p000e0411')) break p000e0411;
  		if (in_response)
 		{
-			if (!CNDverb(85)) break p000e0409;
+			if (!CNDverb(85)) break p000e0411;
  		}
  		ACCwriteln(241);
  		ACCdone();
@@ -7638,12 +7669,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// REGISTRARS _
-	p000e0410:
+	p000e0412:
 	{
- 		if (skipdoall('p000e0410')) break p000e0410;
+ 		if (skipdoall('p000e0412')) break p000e0412;
  		if (in_response)
 		{
-			if (!CNDverb(84)) break p000e0410;
+			if (!CNDverb(84)) break p000e0412;
  		}
  		ACCwriteln(242);
  		ACCdone();
@@ -7653,12 +7684,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// MATARSE _
-	p000e0411:
+	p000e0413:
 	{
- 		if (skipdoall('p000e0411')) break p000e0411;
+ 		if (skipdoall('p000e0413')) break p000e0413;
  		if (in_response)
 		{
-			if (!CNDverb(81)) break p000e0411;
+			if (!CNDverb(81)) break p000e0413;
  		}
  		ACCwriteln(243);
  		ACCdone();
@@ -7668,12 +7699,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// LAVARSE _
-	p000e0412:
+	p000e0414:
 	{
- 		if (skipdoall('p000e0412')) break p000e0412;
+ 		if (skipdoall('p000e0414')) break p000e0414;
  		if (in_response)
 		{
-			if (!CNDverb(88)) break p000e0412;
+			if (!CNDverb(88)) break p000e0414;
  		}
  		ACCwriteln(244);
  		ACCdone();
@@ -7683,12 +7714,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// XYZZY _
-	p000e0413:
+	p000e0415:
 	{
- 		if (skipdoall('p000e0413')) break p000e0413;
+ 		if (skipdoall('p000e0415')) break p000e0415;
  		if (in_response)
 		{
-			if (!CNDverb(82)) break p000e0413;
+			if (!CNDverb(82)) break p000e0415;
  		}
  		ACCwriteln(245);
  		ACCdone();
@@ -7698,12 +7729,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// ABANDONA _
-	p000e0414:
+	p000e0416:
 	{
- 		if (skipdoall('p000e0414')) break p000e0414;
+ 		if (skipdoall('p000e0416')) break p000e0416;
  		if (in_response)
 		{
-			if (!CNDverb(25)) break p000e0414;
+			if (!CNDverb(25)) break p000e0416;
  		}
  		ACCquit();
  		function anykey00024() 
@@ -7720,12 +7751,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// GRABA _
-	p000e0415:
+	p000e0417:
 	{
- 		if (skipdoall('p000e0415')) break p000e0415;
+ 		if (skipdoall('p000e0417')) break p000e0417;
  		if (in_response)
 		{
-			if (!CNDverb(26)) break p000e0415;
+			if (!CNDverb(26)) break p000e0417;
  		}
  		ACCsave();
 		break pro000_restart;
@@ -7734,12 +7765,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// CARGA _
-	p000e0416:
+	p000e0418:
 	{
- 		if (skipdoall('p000e0416')) break p000e0416;
+ 		if (skipdoall('p000e0418')) break p000e0418;
  		if (in_response)
 		{
-			if (!CNDverb(27)) break p000e0416;
+			if (!CNDverb(27)) break p000e0418;
  		}
  		ACCload();
 		break pro000_restart;
@@ -7748,12 +7779,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// GRABARAM _
-	p000e0417:
+	p000e0419:
 	{
- 		if (skipdoall('p000e0417')) break p000e0417;
+ 		if (skipdoall('p000e0419')) break p000e0419;
  		if (in_response)
 		{
-			if (!CNDverb(28)) break p000e0417;
+			if (!CNDverb(28)) break p000e0419;
  		}
  		ACCramsave();
  		ACCdesc();
@@ -7763,12 +7794,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// CARGARAM _
-	p000e0418:
+	p000e0420:
 	{
- 		if (skipdoall('p000e0418')) break p000e0418;
+ 		if (skipdoall('p000e0420')) break p000e0420;
  		if (in_response)
 		{
-			if (!CNDverb(29)) break p000e0418;
+			if (!CNDverb(29)) break p000e0420;
  		}
  		ACCramload(255);
  		ACCdesc();
@@ -7778,48 +7809,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// TRANSCRIP _
-	p000e0419:
-	{
- 		if (skipdoall('p000e0419')) break p000e0419;
- 		if (in_response)
-		{
-			if (!CNDverb(68)) break p000e0419;
- 		}
- 		ACCtranscript(1);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// AGARR _
-	p000e0420:
-	{
- 		if (skipdoall('p000e0420')) break p000e0420;
- 		if (in_response)
-		{
-			if (!CNDverb(20)) break p000e0420;
- 		}
-		if (!CNDprep(3)) break p000e0420;
- 		ACCwhatox2(14);
-		if (!CNDnoteq(14,255)) break p000e0420;
-		if (!CNDonotzero(getFlag(14),2)) break p000e0420;
- 		ACCsynonym(75,255);
-		{}
-
-	}
-
-	// AGARR _
 	p000e0421:
 	{
  		if (skipdoall('p000e0421')) break p000e0421;
  		if (in_response)
 		{
-			if (!CNDverb(20)) break p000e0421;
+			if (!CNDverb(68)) break p000e0421;
  		}
-		if (!CNDeq(34,255)) break p000e0421;
-		if (!CNDbnotzero(12,1)) break p000e0421;
- 		ACCwriteln(246);
+ 		ACCtranscript(1);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7834,11 +7831,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(20)) break p000e0422;
  		}
-		if (!CNDeq(34,255)) break p000e0422;
-		if (!CNDbzero(12,1)) break p000e0422;
- 		ACCwriteln(247);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDprep(3)) break p000e0422;
+ 		ACCwhatox2(14);
+		if (!CNDnoteq(14,255)) break p000e0422;
+		if (!CNDonotzero(getFlag(14),2)) break p000e0422;
+ 		ACCsynonym(75,255);
 		{}
 
 	}
@@ -7851,9 +7848,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(20)) break p000e0423;
  		}
-		if (!CNDnoteq(51,255)) break p000e0423;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0423;
- 		ACCwriteln(248);
+		if (!CNDeq(34,255)) break p000e0423;
+		if (!CNDbnotzero(12,1)) break p000e0423;
+ 		ACCwriteln(246);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7868,42 +7865,42 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(20)) break p000e0424;
  		}
- 		ACCautog();
-		if (!success) break pro000_restart;
+		if (!CNDeq(34,255)) break p000e0424;
+		if (!CNDbzero(12,1)) break p000e0424;
+ 		ACCwriteln(247);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DEJA _
+	// AGARR _
 	p000e0425:
 	{
  		if (skipdoall('p000e0425')) break p000e0425;
  		if (in_response)
 		{
-			if (!CNDverb(21)) break p000e0425;
+			if (!CNDverb(20)) break p000e0425;
  		}
-		if (!CNDprep(4)) break p000e0425;
- 		ACCwhatox2(14);
-		if (!CNDnoteq(14,255)) break p000e0425;
-		if (!CNDonotzero(getFlag(14),2)) break p000e0425;
- 		ACCsynonym(74,255);
+		if (!CNDnoteq(51,255)) break p000e0425;
+		if (!CNDonotzero(getFlag(51),21)) break p000e0425;
+ 		ACCwriteln(248);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
 
-	// DEJA _
+	// AGARR _
 	p000e0426:
 	{
  		if (skipdoall('p000e0426')) break p000e0426;
  		if (in_response)
 		{
-			if (!CNDverb(21)) break p000e0426;
+			if (!CNDverb(20)) break p000e0426;
  		}
-		if (!CNDeq(34,255)) break p000e0426;
-		if (!CNDbnotzero(12,1)) break p000e0426;
- 		ACCwriteln(249);
+ 		ACCautog();
+		if (!success) break pro000_restart;
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7918,11 +7915,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(21)) break p000e0427;
  		}
-		if (!CNDeq(34,255)) break p000e0427;
-		if (!CNDbzero(12,1)) break p000e0427;
- 		ACCwriteln(250);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDprep(4)) break p000e0427;
+ 		ACCwhatox2(14);
+		if (!CNDnoteq(14,255)) break p000e0427;
+		if (!CNDonotzero(getFlag(14),2)) break p000e0427;
+ 		ACCsynonym(74,255);
 		{}
 
 	}
@@ -7935,38 +7932,42 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(21)) break p000e0428;
  		}
- 		ACCautod();
-		if (!success) break pro000_restart;
+		if (!CNDeq(34,255)) break p000e0428;
+		if (!CNDbnotzero(12,1)) break p000e0428;
+ 		ACCwriteln(249);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// EXTRAE _
+	// DEJA _
 	p000e0429:
 	{
  		if (skipdoall('p000e0429')) break p000e0429;
  		if (in_response)
 		{
-			if (!CNDverb(75)) break p000e0429;
+			if (!CNDverb(21)) break p000e0429;
  		}
- 		ACCwhatox2(15);
+		if (!CNDeq(34,255)) break p000e0429;
+		if (!CNDbzero(12,1)) break p000e0429;
+ 		ACCwriteln(250);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
 
-	// EXTRAE _
+	// DEJA _
 	p000e0430:
 	{
  		if (skipdoall('p000e0430')) break p000e0430;
  		if (in_response)
 		{
-			if (!CNDverb(75)) break p000e0430;
+			if (!CNDverb(21)) break p000e0430;
  		}
-		if (!CNDeq(34,255)) break p000e0430;
-		if (!CNDbzero(12,1)) break p000e0430;
- 		ACCwriteln(251);
+ 		ACCautod();
+		if (!success) break pro000_restart;
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -7981,11 +7982,7 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(75)) break p000e0431;
  		}
-		if (!CNDeq(34,255)) break p000e0431;
-		if (!CNDbnotzero(12,1)) break p000e0431;
- 		ACCwriteln(252);
- 		ACCdone();
-		break pro000_restart;
+ 		ACCwhatox2(15);
 		{}
 
 	}
@@ -7998,9 +7995,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(75)) break p000e0432;
  		}
-		if (!CNDnoteq(34,255)) break p000e0432;
-		if (!CNDeq(51,255)) break p000e0432;
- 		ACCwriteln(253);
+		if (!CNDeq(34,255)) break p000e0432;
+		if (!CNDbzero(12,1)) break p000e0432;
+ 		ACCwriteln(251);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8015,10 +8012,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(75)) break p000e0433;
  		}
-		if (!CNDbzero(12,2)) break p000e0433;
-		if (!CNDeq(44,255)) break p000e0433;
+		if (!CNDeq(34,255)) break p000e0433;
 		if (!CNDbnotzero(12,1)) break p000e0433;
- 		ACCwriteln(254);
+ 		ACCwriteln(252);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8033,10 +8029,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(75)) break p000e0434;
  		}
-		if (!CNDnoteq(51,255)) break p000e0434;
-		if (!CNDworn(getFlag(51))) break p000e0434;
-		if (!CNDonotzero(getFlag(51),1)) break p000e0434;
- 		ACCwriteln(255);
+		if (!CNDnoteq(34,255)) break p000e0434;
+		if (!CNDeq(51,255)) break p000e0434;
+ 		ACCwriteln(253);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8051,10 +8046,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(75)) break p000e0435;
  		}
-		if (!CNDnoteq(51,255)) break p000e0435;
+		if (!CNDbzero(12,2)) break p000e0435;
 		if (!CNDeq(44,255)) break p000e0435;
-		if (!CNDbzero(12,1)) break p000e0435;
- 		ACCwriteln(256);
+		if (!CNDbnotzero(12,1)) break p000e0435;
+ 		ACCwriteln(254);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8070,10 +8065,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(75)) break p000e0436;
  		}
 		if (!CNDnoteq(51,255)) break p000e0436;
-		if (!CNDcarried(getFlag(51))) break p000e0436;
-		if (!CNDeq(44,255)) break p000e0436;
-		if (!CNDbnotzero(12,1)) break p000e0436;
- 		ACCwriteln(257);
+		if (!CNDworn(getFlag(51))) break p000e0436;
+		if (!CNDonotzero(getFlag(51),1)) break p000e0436;
+ 		ACCwriteln(255);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8088,8 +8082,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(75)) break p000e0437;
  		}
-		if (!CNDeq(15,255)) break p000e0437;
- 		ACCwriteln(258);
+		if (!CNDnoteq(51,255)) break p000e0437;
+		if (!CNDeq(44,255)) break p000e0437;
+		if (!CNDbzero(12,1)) break p000e0437;
+ 		ACCwriteln(256);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8104,9 +8100,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(75)) break p000e0438;
  		}
-		if (!CNDnoteq(15,255)) break p000e0438;
-		if (!CNDonotzero(getFlag(15),2)) break p000e0438;
-		if (!CNDsame(51,15)) break p000e0438;
+		if (!CNDnoteq(51,255)) break p000e0438;
+		if (!CNDcarried(getFlag(51))) break p000e0438;
+		if (!CNDeq(44,255)) break p000e0438;
+		if (!CNDbnotzero(12,1)) break p000e0438;
+ 		ACCwriteln(257);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8121,13 +8119,8 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(75)) break p000e0439;
  		}
-		if (!CNDnoteq(15,255)) break p000e0439;
-		if (!CNDonotzero(getFlag(15),2)) break p000e0439;
-		if (!CNDonotzero(getFlag(15),13)) break p000e0439;
-		if (!CNDozero(getFlag(15),14)) break p000e0439;
-		if (!CNDpresent(getFlag(15))) break p000e0439;
- 		ACCwriteln(259);
- 		ACCbreak();
+		if (!CNDeq(15,255)) break p000e0439;
+ 		ACCwriteln(258);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8144,11 +8137,7 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(15,255)) break p000e0440;
 		if (!CNDonotzero(getFlag(15),2)) break p000e0440;
-		if (!CNDonotzero(getFlag(15),9)) break p000e0440;
-		if (!CNDozero(getFlag(15),10)) break p000e0440;
-		if (!CNDpresent(getFlag(15))) break p000e0440;
- 		ACCwriteln(260);
- 		ACCbreak();
+		if (!CNDsame(51,15)) break p000e0440;
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8165,8 +8154,11 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(15,255)) break p000e0441;
 		if (!CNDonotzero(getFlag(15),2)) break p000e0441;
-		if (!CNDabsent(getFlag(15))) break p000e0441;
- 		ACCwriteln(261);
+		if (!CNDonotzero(getFlag(15),13)) break p000e0441;
+		if (!CNDozero(getFlag(15),14)) break p000e0441;
+		if (!CNDpresent(getFlag(15))) break p000e0441;
+ 		ACCwriteln(259);
+ 		ACCbreak();
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8183,8 +8175,11 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(15,255)) break p000e0442;
 		if (!CNDonotzero(getFlag(15),2)) break p000e0442;
-		if (!CNDabsent(getFlag(15))) break p000e0442;
- 		ACCwriteln(262);
+		if (!CNDonotzero(getFlag(15),9)) break p000e0442;
+		if (!CNDozero(getFlag(15),10)) break p000e0442;
+		if (!CNDpresent(getFlag(15))) break p000e0442;
+ 		ACCwriteln(260);
+ 		ACCbreak();
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8201,9 +8196,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(15,255)) break p000e0443;
 		if (!CNDonotzero(getFlag(15),2)) break p000e0443;
-		if (!CNDpresent(getFlag(15))) break p000e0443;
- 		ACCautot(getFlag(15));
-		if (!success) break pro000_restart;
+		if (!CNDabsent(getFlag(15))) break p000e0443;
+ 		ACCwriteln(261);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8219,10 +8213,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(75)) break p000e0444;
  		}
 		if (!CNDnoteq(15,255)) break p000e0444;
-		if (!CNDonotzero(getFlag(15),18)) break p000e0444;
-		if (!CNDpresent(getFlag(15))) break p000e0444;
- 		ACCautot(getFlag(15));
-		if (!success) break pro000_restart;
+		if (!CNDonotzero(getFlag(15),2)) break p000e0444;
+		if (!CNDabsent(getFlag(15))) break p000e0444;
+ 		ACCwriteln(262);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8238,37 +8231,45 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(75)) break p000e0445;
  		}
 		if (!CNDnoteq(15,255)) break p000e0445;
- 		ACCwriteln(263);
+		if (!CNDonotzero(getFlag(15),2)) break p000e0445;
+		if (!CNDpresent(getFlag(15))) break p000e0445;
+ 		ACCautot(getFlag(15));
+		if (!success) break pro000_restart;
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ECHA _
+	// EXTRAE _
 	p000e0446:
 	{
  		if (skipdoall('p000e0446')) break p000e0446;
  		if (in_response)
 		{
-			if (!CNDverb(74)) break p000e0446;
+			if (!CNDverb(75)) break p000e0446;
  		}
- 		ACCwhatox2(15);
+		if (!CNDnoteq(15,255)) break p000e0446;
+		if (!CNDonotzero(getFlag(15),18)) break p000e0446;
+		if (!CNDpresent(getFlag(15))) break p000e0446;
+ 		ACCautot(getFlag(15));
+		if (!success) break pro000_restart;
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
 
-	// ECHA _
+	// EXTRAE _
 	p000e0447:
 	{
  		if (skipdoall('p000e0447')) break p000e0447;
  		if (in_response)
 		{
-			if (!CNDverb(74)) break p000e0447;
+			if (!CNDverb(75)) break p000e0447;
  		}
-		if (!CNDeq(34,255)) break p000e0447;
-		if (!CNDbzero(12,1)) break p000e0447;
- 		ACCwriteln(264);
+		if (!CNDnoteq(15,255)) break p000e0447;
+ 		ACCwriteln(263);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8283,11 +8284,7 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0448;
  		}
-		if (!CNDeq(34,255)) break p000e0448;
-		if (!CNDbnotzero(12,1)) break p000e0448;
- 		ACCwriteln(265);
- 		ACCdone();
-		break pro000_restart;
+ 		ACCwhatox2(15);
 		{}
 
 	}
@@ -8300,9 +8297,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0449;
  		}
-		if (!CNDnoteq(34,255)) break p000e0449;
-		if (!CNDeq(51,255)) break p000e0449;
- 		ACCwriteln(266);
+		if (!CNDeq(34,255)) break p000e0449;
+		if (!CNDbzero(12,1)) break p000e0449;
+ 		ACCwriteln(264);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8317,10 +8314,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0450;
  		}
-		if (!CNDbzero(12,2)) break p000e0450;
-		if (!CNDeq(44,255)) break p000e0450;
+		if (!CNDeq(34,255)) break p000e0450;
 		if (!CNDbnotzero(12,1)) break p000e0450;
- 		ACCwriteln(267);
+ 		ACCwriteln(265);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8335,10 +8331,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0451;
  		}
-		if (!CNDnoteq(51,255)) break p000e0451;
-		if (!CNDworn(getFlag(51))) break p000e0451;
-		if (!CNDonotzero(getFlag(51),1)) break p000e0451;
- 		ACCwriteln(268);
+		if (!CNDnoteq(34,255)) break p000e0451;
+		if (!CNDeq(51,255)) break p000e0451;
+ 		ACCwriteln(266);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8353,9 +8348,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0452;
  		}
-		if (!CNDnoteq(51,255)) break p000e0452;
-		if (!CNDnotcarr(getFlag(51))) break p000e0452;
- 		ACCwriteln(269);
+		if (!CNDbzero(12,2)) break p000e0452;
+		if (!CNDeq(44,255)) break p000e0452;
+		if (!CNDbnotzero(12,1)) break p000e0452;
+ 		ACCwriteln(267);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8371,10 +8367,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(74)) break p000e0453;
  		}
 		if (!CNDnoteq(51,255)) break p000e0453;
-		if (!CNDcarried(getFlag(51))) break p000e0453;
-		if (!CNDeq(44,255)) break p000e0453;
-		if (!CNDbzero(12,1)) break p000e0453;
- 		ACCwriteln(270);
+		if (!CNDworn(getFlag(51))) break p000e0453;
+		if (!CNDonotzero(getFlag(51),1)) break p000e0453;
+ 		ACCwriteln(268);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8390,10 +8385,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(74)) break p000e0454;
  		}
 		if (!CNDnoteq(51,255)) break p000e0454;
-		if (!CNDcarried(getFlag(51))) break p000e0454;
-		if (!CNDeq(44,255)) break p000e0454;
-		if (!CNDbnotzero(12,1)) break p000e0454;
- 		ACCwriteln(271);
+		if (!CNDnotcarr(getFlag(51))) break p000e0454;
+ 		ACCwriteln(269);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8410,9 +8403,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0455;
 		if (!CNDcarried(getFlag(51))) break p000e0455;
-		if (!CNDnoteq(44,255)) break p000e0455;
-		if (!CNDeq(15,255)) break p000e0455;
- 		ACCwriteln(272);
+		if (!CNDeq(44,255)) break p000e0455;
+		if (!CNDbzero(12,1)) break p000e0455;
+ 		ACCwriteln(270);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8427,9 +8420,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0456;
  		}
-		if (!CNDnoteq(15,255)) break p000e0456;
-		if (!CNDonotzero(getFlag(15),2)) break p000e0456;
-		if (!CNDsame(51,15)) break p000e0456;
+		if (!CNDnoteq(51,255)) break p000e0456;
+		if (!CNDcarried(getFlag(51))) break p000e0456;
+		if (!CNDeq(44,255)) break p000e0456;
+		if (!CNDbnotzero(12,1)) break p000e0456;
+ 		ACCwriteln(271);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8444,9 +8439,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0457;
  		}
-		if (!CNDnoteq(15,255)) break p000e0457;
-		if (!CNDonotzero(getFlag(15),18)) break p000e0457;
-		if (!CNDsame(51,15)) break p000e0457;
+		if (!CNDnoteq(51,255)) break p000e0457;
+		if (!CNDcarried(getFlag(51))) break p000e0457;
+		if (!CNDnoteq(44,255)) break p000e0457;
+		if (!CNDeq(15,255)) break p000e0457;
+ 		ACCwriteln(272);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8461,14 +8458,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0458;
  		}
-		if (!CNDnoteq(51,255)) break p000e0458;
-		if (!CNDcarried(getFlag(51))) break p000e0458;
-		if (!CNDnoteq(44,255)) break p000e0458;
 		if (!CNDnoteq(15,255)) break p000e0458;
-		if (!CNDozero(getFlag(15),2)) break p000e0458;
-		if (!CNDozero(getFlag(15),18)) break p000e0458;
-		if (!CNDpresent(getFlag(15))) break p000e0458;
- 		ACCwriteln(273);
+		if (!CNDonotzero(getFlag(15),2)) break p000e0458;
+		if (!CNDsame(51,15)) break p000e0458;
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8483,13 +8475,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(74)) break p000e0459;
  		}
-		if (!CNDnoteq(51,255)) break p000e0459;
-		if (!CNDcarried(getFlag(51))) break p000e0459;
-		if (!CNDnoteq(44,255)) break p000e0459;
 		if (!CNDnoteq(15,255)) break p000e0459;
-		if (!CNDonotzero(getFlag(15),2)) break p000e0459;
-		if (!CNDabsent(getFlag(15))) break p000e0459;
- 		ACCwriteln(274);
+		if (!CNDonotzero(getFlag(15),18)) break p000e0459;
+		if (!CNDsame(51,15)) break p000e0459;
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8508,9 +8496,10 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(getFlag(51))) break p000e0460;
 		if (!CNDnoteq(44,255)) break p000e0460;
 		if (!CNDnoteq(15,255)) break p000e0460;
-		if (!CNDonotzero(getFlag(15),18)) break p000e0460;
-		if (!CNDabsent(getFlag(15))) break p000e0460;
- 		ACCwriteln(275);
+		if (!CNDozero(getFlag(15),2)) break p000e0460;
+		if (!CNDozero(getFlag(15),18)) break p000e0460;
+		if (!CNDpresent(getFlag(15))) break p000e0460;
+ 		ACCwriteln(273);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8530,11 +8519,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(44,255)) break p000e0461;
 		if (!CNDnoteq(15,255)) break p000e0461;
 		if (!CNDonotzero(getFlag(15),2)) break p000e0461;
-		if (!CNDpresent(getFlag(15))) break p000e0461;
-		if (!CNDonotzero(getFlag(15),13)) break p000e0461;
-		if (!CNDozero(getFlag(15),14)) break p000e0461;
- 		ACCwriteln(276);
- 		ACCbreak();
+		if (!CNDabsent(getFlag(15))) break p000e0461;
+ 		ACCwriteln(274);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8553,12 +8539,9 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(getFlag(51))) break p000e0462;
 		if (!CNDnoteq(44,255)) break p000e0462;
 		if (!CNDnoteq(15,255)) break p000e0462;
-		if (!CNDonotzero(getFlag(15),2)) break p000e0462;
-		if (!CNDpresent(getFlag(15))) break p000e0462;
-		if (!CNDonotzero(getFlag(15),9)) break p000e0462;
-		if (!CNDozero(getFlag(15),10)) break p000e0462;
- 		ACCwriteln(277);
- 		ACCbreak();
+		if (!CNDonotzero(getFlag(15),18)) break p000e0462;
+		if (!CNDabsent(getFlag(15))) break p000e0462;
+ 		ACCwriteln(275);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8579,8 +8562,10 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(15,255)) break p000e0463;
 		if (!CNDonotzero(getFlag(15),2)) break p000e0463;
 		if (!CNDpresent(getFlag(15))) break p000e0463;
- 		ACCautop(getFlag(15));
-		if (!success) break pro000_restart;
+		if (!CNDonotzero(getFlag(15),13)) break p000e0463;
+		if (!CNDozero(getFlag(15),14)) break p000e0463;
+ 		ACCwriteln(276);
+ 		ACCbreak();
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8599,8 +8584,32 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(getFlag(51))) break p000e0464;
 		if (!CNDnoteq(44,255)) break p000e0464;
 		if (!CNDnoteq(15,255)) break p000e0464;
-		if (!CNDonotzero(getFlag(15),18)) break p000e0464;
+		if (!CNDonotzero(getFlag(15),2)) break p000e0464;
 		if (!CNDpresent(getFlag(15))) break p000e0464;
+		if (!CNDonotzero(getFlag(15),9)) break p000e0464;
+		if (!CNDozero(getFlag(15),10)) break p000e0464;
+ 		ACCwriteln(277);
+ 		ACCbreak();
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ECHA _
+	p000e0465:
+	{
+ 		if (skipdoall('p000e0465')) break p000e0465;
+ 		if (in_response)
+		{
+			if (!CNDverb(74)) break p000e0465;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0465;
+		if (!CNDcarried(getFlag(51))) break p000e0465;
+		if (!CNDnoteq(44,255)) break p000e0465;
+		if (!CNDnoteq(15,255)) break p000e0465;
+		if (!CNDonotzero(getFlag(15),2)) break p000e0465;
+		if (!CNDpresent(getFlag(15))) break p000e0465;
  		ACCautop(getFlag(15));
 		if (!success) break pro000_restart;
  		ACCdone();
@@ -8609,34 +8618,22 @@ pro000_restart: while(process_restart)
 
 	}
 
-	// DESVESTIR _
-	p000e0465:
-	{
- 		if (skipdoall('p000e0465')) break p000e0465;
- 		if (in_response)
-		{
-			if (!CNDverb(22)) break p000e0465;
- 		}
-		if (!CNDeq(34,255)) break p000e0465;
-		if (!CNDbnotzero(12,1)) break p000e0465;
- 		ACCwriteln(278);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// DESVESTIR _
+	// ECHA _
 	p000e0466:
 	{
  		if (skipdoall('p000e0466')) break p000e0466;
  		if (in_response)
 		{
-			if (!CNDverb(22)) break p000e0466;
+			if (!CNDverb(74)) break p000e0466;
  		}
-		if (!CNDeq(34,255)) break p000e0466;
-		if (!CNDbzero(12,1)) break p000e0466;
- 		ACCwriteln(279);
+		if (!CNDnoteq(51,255)) break p000e0466;
+		if (!CNDcarried(getFlag(51))) break p000e0466;
+		if (!CNDnoteq(44,255)) break p000e0466;
+		if (!CNDnoteq(15,255)) break p000e0466;
+		if (!CNDonotzero(getFlag(15),18)) break p000e0466;
+		if (!CNDpresent(getFlag(15))) break p000e0466;
+ 		ACCautop(getFlag(15));
+		if (!success) break pro000_restart;
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8651,42 +8648,44 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(22)) break p000e0467;
  		}
- 		ACCautor();
-		if (!success) break pro000_restart;
+		if (!CNDeq(34,255)) break p000e0467;
+		if (!CNDbnotzero(12,1)) break p000e0467;
+ 		ACCwriteln(278);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// PON _
+	// DESVESTIR _
 	p000e0468:
 	{
  		if (skipdoall('p000e0468')) break p000e0468;
  		if (in_response)
 		{
-			if (!CNDverb(71)) break p000e0468;
+			if (!CNDverb(22)) break p000e0468;
  		}
 		if (!CNDeq(34,255)) break p000e0468;
-		if (!CNDbnotzero(12,1)) break p000e0468;
- 		ACCwriteln(280);
+		if (!CNDbzero(12,1)) break p000e0468;
+ 		ACCwriteln(279);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// PON _
+	// DESVESTIR _
 	p000e0469:
 	{
  		if (skipdoall('p000e0469')) break p000e0469;
  		if (in_response)
 		{
-			if (!CNDverb(71)) break p000e0469;
+			if (!CNDverb(22)) break p000e0469;
  		}
-		if (!CNDeq(34,255)) break p000e0469;
-		if (!CNDbzero(12,1)) break p000e0469;
- 		ACCwriteln(281);
+ 		ACCautor();
+		if (!success) break pro000_restart;
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
@@ -8699,44 +8698,40 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(71)) break p000e0470;
  		}
- 		ACCautow();
-		if (!success) break pro000_restart;
+		if (!CNDeq(34,255)) break p000e0470;
+		if (!CNDbnotzero(12,1)) break p000e0470;
+ 		ACCwriteln(280);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ARROJA _
+	// PON _
 	p000e0471:
 	{
  		if (skipdoall('p000e0471')) break p000e0471;
  		if (in_response)
 		{
-			if (!CNDverb(32)) break p000e0471;
+			if (!CNDverb(71)) break p000e0471;
  		}
-		if (!CNDprep(3)) break p000e0471;
 		if (!CNDeq(34,255)) break p000e0471;
-		if (!CNDbnotzero(12,1)) break p000e0471;
- 		ACCwriteln(282);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDbzero(12,1)) break p000e0471;
+ 		ACCwriteln(281);
 		{}
 
 	}
 
-	// ARROJA _
+	// PON _
 	p000e0472:
 	{
  		if (skipdoall('p000e0472')) break p000e0472;
  		if (in_response)
 		{
-			if (!CNDverb(32)) break p000e0472;
+			if (!CNDverb(71)) break p000e0472;
  		}
-		if (!CNDprep(3)) break p000e0472;
-		if (!CNDeq(34,255)) break p000e0472;
-		if (!CNDbzero(12,1)) break p000e0472;
- 		ACCwriteln(283);
+ 		ACCautow();
+		if (!success) break pro000_restart;
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8752,11 +8747,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(32)) break p000e0473;
  		}
 		if (!CNDprep(3)) break p000e0473;
-		if (!CNDnoteq(34,255)) break p000e0473;
-		if (!CNDnoteq(51,255)) break p000e0473;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0473;
-		if (!CNDpresent(getFlag(51))) break p000e0473;
- 		ACCwriteln(284);
+		if (!CNDeq(34,255)) break p000e0473;
+		if (!CNDbnotzero(12,1)) break p000e0473;
+ 		ACCwriteln(282);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8772,11 +8765,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(32)) break p000e0474;
  		}
 		if (!CNDprep(3)) break p000e0474;
-		if (!CNDnoteq(34,255)) break p000e0474;
-		if (!CNDnoteq(51,255)) break p000e0474;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0474;
-		if (!CNDabsent(getFlag(51))) break p000e0474;
- 		ACCwriteln(285);
+		if (!CNDeq(34,255)) break p000e0474;
+		if (!CNDbzero(12,1)) break p000e0474;
+ 		ACCwriteln(283);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8793,8 +8784,10 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDprep(3)) break p000e0475;
 		if (!CNDnoteq(34,255)) break p000e0475;
-		if (!CNDeq(51,255)) break p000e0475;
- 		ACCwriteln(286);
+		if (!CNDnoteq(51,255)) break p000e0475;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0475;
+		if (!CNDpresent(getFlag(51))) break p000e0475;
+ 		ACCwriteln(284);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8810,9 +8803,11 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(32)) break p000e0476;
  		}
 		if (!CNDprep(3)) break p000e0476;
+		if (!CNDnoteq(34,255)) break p000e0476;
 		if (!CNDnoteq(51,255)) break p000e0476;
-		if (!CNDpresent(getFlag(51))) break p000e0476;
- 		ACCwriteln(287);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0476;
+		if (!CNDabsent(getFlag(51))) break p000e0476;
+ 		ACCwriteln(285);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8828,45 +8823,45 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(32)) break p000e0477;
  		}
 		if (!CNDprep(3)) break p000e0477;
-		if (!CNDnoteq(51,255)) break p000e0477;
-		if (!CNDabsent(getFlag(51))) break p000e0477;
- 		ACCwriteln(288);
+		if (!CNDnoteq(34,255)) break p000e0477;
+		if (!CNDeq(51,255)) break p000e0477;
+ 		ACCwriteln(286);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// D _
+	// ARROJA _
 	p000e0478:
 	{
  		if (skipdoall('p000e0478')) break p000e0478;
  		if (in_response)
 		{
-			if (!CNDverb(24)) break p000e0478;
+			if (!CNDverb(32)) break p000e0478;
  		}
-		if (!CNDprep(4)) break p000e0478;
-		if (!CNDeq(34,255)) break p000e0478;
-		if (!CNDbnotzero(12,1)) break p000e0478;
- 		ACCwriteln(289);
+		if (!CNDprep(3)) break p000e0478;
+		if (!CNDnoteq(51,255)) break p000e0478;
+		if (!CNDpresent(getFlag(51))) break p000e0478;
+ 		ACCwriteln(287);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// D _
+	// ARROJA _
 	p000e0479:
 	{
  		if (skipdoall('p000e0479')) break p000e0479;
  		if (in_response)
 		{
-			if (!CNDverb(24)) break p000e0479;
+			if (!CNDverb(32)) break p000e0479;
  		}
-		if (!CNDprep(4)) break p000e0479;
-		if (!CNDeq(34,255)) break p000e0479;
-		if (!CNDbzero(12,1)) break p000e0479;
- 		ACCwriteln(290);
+		if (!CNDprep(3)) break p000e0479;
+		if (!CNDnoteq(51,255)) break p000e0479;
+		if (!CNDabsent(getFlag(51))) break p000e0479;
+ 		ACCwriteln(288);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8881,8 +8876,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(24)) break p000e0480;
  		}
-		if (!CNDlt(34,12)) break p000e0480;
- 		ACCwriteln(291);
+		if (!CNDprep(4)) break p000e0480;
+		if (!CNDeq(34,255)) break p000e0480;
+		if (!CNDbnotzero(12,1)) break p000e0480;
+ 		ACCwriteln(289);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8897,9 +8894,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(24)) break p000e0481;
  		}
+		if (!CNDprep(4)) break p000e0481;
 		if (!CNDeq(34,255)) break p000e0481;
-		if (!CNDbnotzero(12,1)) break p000e0481;
- 		ACCwriteln(292);
+		if (!CNDbzero(12,1)) break p000e0481;
+ 		ACCwriteln(290);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8914,42 +8912,41 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(24)) break p000e0482;
  		}
-		if (!CNDeq(34,255)) break p000e0482;
- 		ACCdesc();
+		if (!CNDlt(34,12)) break p000e0482;
+ 		ACCwriteln(291);
+ 		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ESCONDE _
+	// D _
 	p000e0483:
 	{
  		if (skipdoall('p000e0483')) break p000e0483;
  		if (in_response)
 		{
-			if (!CNDverb(91)) break p000e0483;
+			if (!CNDverb(24)) break p000e0483;
  		}
 		if (!CNDeq(34,255)) break p000e0483;
 		if (!CNDbnotzero(12,1)) break p000e0483;
- 		ACCwriteln(293);
+ 		ACCwriteln(292);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ESCONDE _
+	// D _
 	p000e0484:
 	{
  		if (skipdoall('p000e0484')) break p000e0484;
  		if (in_response)
 		{
-			if (!CNDverb(91)) break p000e0484;
+			if (!CNDverb(24)) break p000e0484;
  		}
 		if (!CNDeq(34,255)) break p000e0484;
-		if (!CNDbzero(12,1)) break p000e0484;
- 		ACCwriteln(294);
- 		ACCdone();
+ 		ACCdesc();
 		break pro000_restart;
 		{}
 
@@ -8963,11 +8960,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(91)) break p000e0485;
  		}
-		if (!CNDnoteq(34,255)) break p000e0485;
-		if (!CNDnoteq(51,255)) break p000e0485;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0485;
-		if (!CNDpresent(getFlag(51))) break p000e0485;
- 		ACCwriteln(295);
+		if (!CNDeq(34,255)) break p000e0485;
+		if (!CNDbnotzero(12,1)) break p000e0485;
+ 		ACCwriteln(293);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -8982,11 +8977,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(91)) break p000e0486;
  		}
-		if (!CNDnoteq(34,255)) break p000e0486;
-		if (!CNDnoteq(51,255)) break p000e0486;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0486;
-		if (!CNDabsent(getFlag(51))) break p000e0486;
- 		ACCwriteln(296);
+		if (!CNDeq(34,255)) break p000e0486;
+		if (!CNDbzero(12,1)) break p000e0486;
+ 		ACCwriteln(294);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9002,8 +8995,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(91)) break p000e0487;
  		}
 		if (!CNDnoteq(34,255)) break p000e0487;
-		if (!CNDeq(51,255)) break p000e0487;
- 		ACCwriteln(297);
+		if (!CNDnoteq(51,255)) break p000e0487;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0487;
+		if (!CNDpresent(getFlag(51))) break p000e0487;
+ 		ACCwriteln(295);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9018,9 +9013,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(91)) break p000e0488;
  		}
+		if (!CNDnoteq(34,255)) break p000e0488;
 		if (!CNDnoteq(51,255)) break p000e0488;
-		if (!CNDpresent(getFlag(51))) break p000e0488;
- 		ACCwriteln(298);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0488;
+		if (!CNDabsent(getFlag(51))) break p000e0488;
+ 		ACCwriteln(296);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9035,8 +9032,42 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(91)) break p000e0489;
  		}
-		if (!CNDnoteq(51,255)) break p000e0489;
-		if (!CNDabsent(getFlag(51))) break p000e0489;
+		if (!CNDnoteq(34,255)) break p000e0489;
+		if (!CNDeq(51,255)) break p000e0489;
+ 		ACCwriteln(297);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ESCONDE _
+	p000e0490:
+	{
+ 		if (skipdoall('p000e0490')) break p000e0490;
+ 		if (in_response)
+		{
+			if (!CNDverb(91)) break p000e0490;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0490;
+		if (!CNDpresent(getFlag(51))) break p000e0490;
+ 		ACCwriteln(298);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ESCONDE _
+	p000e0491:
+	{
+ 		if (skipdoall('p000e0491')) break p000e0491;
+ 		if (in_response)
+		{
+			if (!CNDverb(91)) break p000e0491;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0491;
+		if (!CNDabsent(getFlag(51))) break p000e0491;
  		ACCwriteln(299);
  		ACCdone();
 		break pro000_restart;
@@ -9045,12 +9076,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// LLORA _
-	p000e0490:
+	p000e0492:
 	{
- 		if (skipdoall('p000e0490')) break p000e0490;
+ 		if (skipdoall('p000e0492')) break p000e0492;
  		if (in_response)
 		{
-			if (!CNDverb(93)) break p000e0490;
+			if (!CNDverb(93)) break p000e0492;
  		}
  		ACCwriteln(300);
  		ACCdone();
@@ -9060,12 +9091,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// ACORDARSE _
-	p000e0491:
+	p000e0493:
 	{
- 		if (skipdoall('p000e0491')) break p000e0491;
+ 		if (skipdoall('p000e0493')) break p000e0493;
  		if (in_response)
 		{
-			if (!CNDverb(94)) break p000e0491;
+			if (!CNDverb(94)) break p000e0493;
  		}
  		ACCwriteln(301);
  		ACCdone();
@@ -9075,12 +9106,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// SALUDA _
-	p000e0492:
+	p000e0494:
 	{
- 		if (skipdoall('p000e0492')) break p000e0492;
+ 		if (skipdoall('p000e0494')) break p000e0494;
  		if (in_response)
 		{
-			if (!CNDverb(113)) break p000e0492;
+			if (!CNDverb(113)) break p000e0494;
  		}
  		ACCwriteln(302);
  		ACCdone();
@@ -9090,48 +9121,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// ESCONDERSE _
-	p000e0493:
-	{
- 		if (skipdoall('p000e0493')) break p000e0493;
- 		if (in_response)
-		{
-			if (!CNDverb(92)) break p000e0493;
- 		}
- 		ACCwriteln(303);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// EMPUJA _
-	p000e0494:
-	{
- 		if (skipdoall('p000e0494')) break p000e0494;
- 		if (in_response)
-		{
-			if (!CNDverb(33)) break p000e0494;
- 		}
-		if (!CNDeq(34,255)) break p000e0494;
-		if (!CNDbnotzero(12,1)) break p000e0494;
- 		ACCwriteln(304);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// EMPUJA _
 	p000e0495:
 	{
  		if (skipdoall('p000e0495')) break p000e0495;
  		if (in_response)
 		{
-			if (!CNDverb(33)) break p000e0495;
+			if (!CNDverb(92)) break p000e0495;
  		}
-		if (!CNDeq(34,255)) break p000e0495;
-		if (!CNDbzero(12,1)) break p000e0495;
- 		ACCwriteln(305);
+ 		ACCwriteln(303);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9146,11 +9143,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(33)) break p000e0496;
  		}
-		if (!CNDnoteq(34,255)) break p000e0496;
-		if (!CNDnoteq(51,255)) break p000e0496;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0496;
-		if (!CNDpresent(getFlag(51))) break p000e0496;
- 		ACCwriteln(306);
+		if (!CNDeq(34,255)) break p000e0496;
+		if (!CNDbnotzero(12,1)) break p000e0496;
+ 		ACCwriteln(304);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9165,11 +9160,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(33)) break p000e0497;
  		}
-		if (!CNDnoteq(34,255)) break p000e0497;
-		if (!CNDnoteq(51,255)) break p000e0497;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0497;
-		if (!CNDpresent(getFlag(51))) break p000e0497;
- 		ACCwriteln(307);
+		if (!CNDeq(34,255)) break p000e0497;
+		if (!CNDbzero(12,1)) break p000e0497;
+ 		ACCwriteln(305);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9187,8 +9180,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0498;
 		if (!CNDnoteq(51,255)) break p000e0498;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0498;
-		if (!CNDabsent(getFlag(51))) break p000e0498;
- 		ACCwriteln(308);
+		if (!CNDpresent(getFlag(51))) break p000e0498;
+ 		ACCwriteln(306);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9206,8 +9199,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0499;
 		if (!CNDnoteq(51,255)) break p000e0499;
 		if (!CNDonotzero(getFlag(51),21)) break p000e0499;
-		if (!CNDabsent(getFlag(51))) break p000e0499;
- 		ACCwriteln(309);
+		if (!CNDpresent(getFlag(51))) break p000e0499;
+ 		ACCwriteln(307);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9223,8 +9216,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(33)) break p000e0500;
  		}
 		if (!CNDnoteq(34,255)) break p000e0500;
-		if (!CNDeq(51,255)) break p000e0500;
- 		ACCwriteln(310);
+		if (!CNDnoteq(51,255)) break p000e0500;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0500;
+		if (!CNDabsent(getFlag(51))) break p000e0500;
+ 		ACCwriteln(308);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9239,9 +9234,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(33)) break p000e0501;
  		}
+		if (!CNDnoteq(34,255)) break p000e0501;
 		if (!CNDnoteq(51,255)) break p000e0501;
-		if (!CNDpresent(getFlag(51))) break p000e0501;
- 		ACCwriteln(311);
+		if (!CNDonotzero(getFlag(51),21)) break p000e0501;
+		if (!CNDabsent(getFlag(51))) break p000e0501;
+ 		ACCwriteln(309);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9256,43 +9253,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(33)) break p000e0502;
  		}
-		if (!CNDnoteq(51,255)) break p000e0502;
-		if (!CNDabsent(getFlag(51))) break p000e0502;
- 		ACCwriteln(312);
+		if (!CNDnoteq(34,255)) break p000e0502;
+		if (!CNDeq(51,255)) break p000e0502;
+ 		ACCwriteln(310);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESPLAZA _
+	// EMPUJA _
 	p000e0503:
 	{
  		if (skipdoall('p000e0503')) break p000e0503;
  		if (in_response)
 		{
-			if (!CNDverb(110)) break p000e0503;
+			if (!CNDverb(33)) break p000e0503;
  		}
-		if (!CNDeq(34,255)) break p000e0503;
-		if (!CNDbnotzero(12,1)) break p000e0503;
- 		ACCwriteln(313);
+		if (!CNDnoteq(51,255)) break p000e0503;
+		if (!CNDpresent(getFlag(51))) break p000e0503;
+ 		ACCwriteln(311);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESPLAZA _
+	// EMPUJA _
 	p000e0504:
 	{
  		if (skipdoall('p000e0504')) break p000e0504;
  		if (in_response)
 		{
-			if (!CNDverb(110)) break p000e0504;
+			if (!CNDverb(33)) break p000e0504;
  		}
-		if (!CNDeq(34,255)) break p000e0504;
-		if (!CNDbzero(12,1)) break p000e0504;
- 		ACCwriteln(314);
+		if (!CNDnoteq(51,255)) break p000e0504;
+		if (!CNDabsent(getFlag(51))) break p000e0504;
+ 		ACCwriteln(312);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9307,11 +9304,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(110)) break p000e0505;
  		}
-		if (!CNDnoteq(34,255)) break p000e0505;
-		if (!CNDnoteq(51,255)) break p000e0505;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0505;
-		if (!CNDpresent(getFlag(51))) break p000e0505;
- 		ACCwriteln(315);
+		if (!CNDeq(34,255)) break p000e0505;
+		if (!CNDbnotzero(12,1)) break p000e0505;
+ 		ACCwriteln(313);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9326,11 +9321,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(110)) break p000e0506;
  		}
-		if (!CNDnoteq(34,255)) break p000e0506;
-		if (!CNDnoteq(51,255)) break p000e0506;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0506;
-		if (!CNDabsent(getFlag(51))) break p000e0506;
- 		ACCwriteln(316);
+		if (!CNDeq(34,255)) break p000e0506;
+		if (!CNDbzero(12,1)) break p000e0506;
+ 		ACCwriteln(314);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9346,8 +9339,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(110)) break p000e0507;
  		}
 		if (!CNDnoteq(34,255)) break p000e0507;
-		if (!CNDeq(51,255)) break p000e0507;
- 		ACCwriteln(317);
+		if (!CNDnoteq(51,255)) break p000e0507;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0507;
+		if (!CNDpresent(getFlag(51))) break p000e0507;
+ 		ACCwriteln(315);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9362,9 +9357,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(110)) break p000e0508;
  		}
+		if (!CNDnoteq(34,255)) break p000e0508;
 		if (!CNDnoteq(51,255)) break p000e0508;
-		if (!CNDpresent(getFlag(51))) break p000e0508;
- 		ACCwriteln(318);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0508;
+		if (!CNDabsent(getFlag(51))) break p000e0508;
+ 		ACCwriteln(316);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9379,43 +9376,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(110)) break p000e0509;
  		}
-		if (!CNDnoteq(51,255)) break p000e0509;
-		if (!CNDabsent(getFlag(51))) break p000e0509;
- 		ACCwriteln(319);
+		if (!CNDnoteq(34,255)) break p000e0509;
+		if (!CNDeq(51,255)) break p000e0509;
+ 		ACCwriteln(317);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// GIRA _
+	// DESPLAZA _
 	p000e0510:
 	{
  		if (skipdoall('p000e0510')) break p000e0510;
  		if (in_response)
 		{
-			if (!CNDverb(35)) break p000e0510;
+			if (!CNDverb(110)) break p000e0510;
  		}
-		if (!CNDeq(34,255)) break p000e0510;
-		if (!CNDbnotzero(12,1)) break p000e0510;
- 		ACCwriteln(320);
+		if (!CNDnoteq(51,255)) break p000e0510;
+		if (!CNDpresent(getFlag(51))) break p000e0510;
+ 		ACCwriteln(318);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// GIRA _
+	// DESPLAZA _
 	p000e0511:
 	{
  		if (skipdoall('p000e0511')) break p000e0511;
  		if (in_response)
 		{
-			if (!CNDverb(35)) break p000e0511;
+			if (!CNDverb(110)) break p000e0511;
  		}
-		if (!CNDeq(34,255)) break p000e0511;
-		if (!CNDbzero(12,1)) break p000e0511;
- 		ACCwriteln(321);
+		if (!CNDnoteq(51,255)) break p000e0511;
+		if (!CNDabsent(getFlag(51))) break p000e0511;
+ 		ACCwriteln(319);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9430,10 +9427,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(35)) break p000e0512;
  		}
-		if (!CNDnoteq(51,255)) break p000e0512;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0512;
-		if (!CNDpresent(getFlag(51))) break p000e0512;
- 		ACCwriteln(322);
+		if (!CNDeq(34,255)) break p000e0512;
+		if (!CNDbnotzero(12,1)) break p000e0512;
+ 		ACCwriteln(320);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9448,10 +9444,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(35)) break p000e0513;
  		}
-		if (!CNDnoteq(51,255)) break p000e0513;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0513;
-		if (!CNDpresent(getFlag(51))) break p000e0513;
- 		ACCwriteln(323);
+		if (!CNDeq(34,255)) break p000e0513;
+		if (!CNDbzero(12,1)) break p000e0513;
+ 		ACCwriteln(321);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9468,8 +9463,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0514;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0514;
-		if (!CNDabsent(getFlag(51))) break p000e0514;
- 		ACCwriteln(324);
+		if (!CNDpresent(getFlag(51))) break p000e0514;
+ 		ACCwriteln(322);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9486,8 +9481,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0515;
 		if (!CNDonotzero(getFlag(51),21)) break p000e0515;
-		if (!CNDabsent(getFlag(51))) break p000e0515;
- 		ACCwriteln(325);
+		if (!CNDpresent(getFlag(51))) break p000e0515;
+ 		ACCwriteln(323);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9502,9 +9497,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(35)) break p000e0516;
  		}
-		if (!CNDnoteq(34,255)) break p000e0516;
-		if (!CNDeq(51,255)) break p000e0516;
- 		ACCwriteln(326);
+		if (!CNDnoteq(51,255)) break p000e0516;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0516;
+		if (!CNDabsent(getFlag(51))) break p000e0516;
+ 		ACCwriteln(324);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9520,8 +9516,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(35)) break p000e0517;
  		}
 		if (!CNDnoteq(51,255)) break p000e0517;
-		if (!CNDpresent(getFlag(51))) break p000e0517;
- 		ACCwriteln(327);
+		if (!CNDonotzero(getFlag(51),21)) break p000e0517;
+		if (!CNDabsent(getFlag(51))) break p000e0517;
+ 		ACCwriteln(325);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9536,43 +9533,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(35)) break p000e0518;
  		}
-		if (!CNDnoteq(51,255)) break p000e0518;
-		if (!CNDabsent(getFlag(51))) break p000e0518;
- 		ACCwriteln(328);
+		if (!CNDnoteq(34,255)) break p000e0518;
+		if (!CNDeq(51,255)) break p000e0518;
+ 		ACCwriteln(326);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ARROJA _
+	// GIRA _
 	p000e0519:
 	{
  		if (skipdoall('p000e0519')) break p000e0519;
  		if (in_response)
 		{
-			if (!CNDverb(32)) break p000e0519;
+			if (!CNDverb(35)) break p000e0519;
  		}
-		if (!CNDeq(34,255)) break p000e0519;
-		if (!CNDbnotzero(12,1)) break p000e0519;
- 		ACCwriteln(329);
+		if (!CNDnoteq(51,255)) break p000e0519;
+		if (!CNDpresent(getFlag(51))) break p000e0519;
+ 		ACCwriteln(327);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ARROJA _
+	// GIRA _
 	p000e0520:
 	{
  		if (skipdoall('p000e0520')) break p000e0520;
  		if (in_response)
 		{
-			if (!CNDverb(32)) break p000e0520;
+			if (!CNDverb(35)) break p000e0520;
  		}
-		if (!CNDeq(34,255)) break p000e0520;
-		if (!CNDbzero(12,1)) break p000e0520;
- 		ACCwriteln(330);
+		if (!CNDnoteq(51,255)) break p000e0520;
+		if (!CNDabsent(getFlag(51))) break p000e0520;
+ 		ACCwriteln(328);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9587,10 +9584,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(32)) break p000e0521;
  		}
-		if (!CNDnoteq(51,255)) break p000e0521;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0521;
-		if (!CNDpresent(getFlag(51))) break p000e0521;
- 		ACCwriteln(331);
+		if (!CNDeq(34,255)) break p000e0521;
+		if (!CNDbnotzero(12,1)) break p000e0521;
+ 		ACCwriteln(329);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9605,10 +9601,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(32)) break p000e0522;
  		}
-		if (!CNDnoteq(51,255)) break p000e0522;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0522;
-		if (!CNDpresent(getFlag(51))) break p000e0522;
- 		ACCwriteln(332);
+		if (!CNDeq(34,255)) break p000e0522;
+		if (!CNDbzero(12,1)) break p000e0522;
+ 		ACCwriteln(330);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9625,8 +9620,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0523;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0523;
-		if (!CNDabsent(getFlag(51))) break p000e0523;
- 		ACCwriteln(333);
+		if (!CNDpresent(getFlag(51))) break p000e0523;
+ 		ACCwriteln(331);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9643,8 +9638,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0524;
 		if (!CNDonotzero(getFlag(51),21)) break p000e0524;
-		if (!CNDabsent(getFlag(51))) break p000e0524;
- 		ACCwriteln(334);
+		if (!CNDpresent(getFlag(51))) break p000e0524;
+ 		ACCwriteln(332);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9659,9 +9654,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(32)) break p000e0525;
  		}
-		if (!CNDnoteq(34,255)) break p000e0525;
-		if (!CNDeq(51,255)) break p000e0525;
- 		ACCwriteln(335);
+		if (!CNDnoteq(51,255)) break p000e0525;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0525;
+		if (!CNDabsent(getFlag(51))) break p000e0525;
+ 		ACCwriteln(333);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9677,9 +9673,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(32)) break p000e0526;
  		}
 		if (!CNDnoteq(51,255)) break p000e0526;
-		if (!CNDcarried(getFlag(51))) break p000e0526;
- 		ACCwriteln(336);
- 		ACCplace(getFlag(51),getFlag(38));
+		if (!CNDonotzero(getFlag(51),21)) break p000e0526;
+		if (!CNDabsent(getFlag(51))) break p000e0526;
+ 		ACCwriteln(334);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9694,45 +9690,44 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(32)) break p000e0527;
  		}
-		if (!CNDnoteq(51,255)) break p000e0527;
-		if (!CNDnotcarr(getFlag(51))) break p000e0527;
- 		ACCwriteln(337);
+		if (!CNDnoteq(34,255)) break p000e0527;
+		if (!CNDeq(51,255)) break p000e0527;
+ 		ACCwriteln(335);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ESCUCHA _
+	// ARROJA _
 	p000e0528:
 	{
  		if (skipdoall('p000e0528')) break p000e0528;
  		if (in_response)
 		{
-			if (!CNDverb(37)) break p000e0528;
+			if (!CNDverb(32)) break p000e0528;
  		}
 		if (!CNDnoteq(51,255)) break p000e0528;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0528;
-		if (!CNDpresent(getFlag(51))) break p000e0528;
- 		ACCwriteln(338);
+		if (!CNDcarried(getFlag(51))) break p000e0528;
+ 		ACCwriteln(336);
+ 		ACCplace(getFlag(51),getFlag(38));
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ESCUCHA _
+	// ARROJA _
 	p000e0529:
 	{
  		if (skipdoall('p000e0529')) break p000e0529;
  		if (in_response)
 		{
-			if (!CNDverb(37)) break p000e0529;
+			if (!CNDverb(32)) break p000e0529;
  		}
 		if (!CNDnoteq(51,255)) break p000e0529;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0529;
-		if (!CNDabsent(getFlag(51))) break p000e0529;
- 		ACCwriteln(339);
+		if (!CNDnotcarr(getFlag(51))) break p000e0529;
+ 		ACCwriteln(337);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9747,42 +9742,44 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(37)) break p000e0530;
  		}
-		if (!CNDeq(34,255)) break p000e0530;
- 		ACCwriteln(340);
+		if (!CNDnoteq(51,255)) break p000e0530;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0530;
+		if (!CNDpresent(getFlag(51))) break p000e0530;
+ 		ACCwriteln(338);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// COME _
+	// ESCUCHA _
 	p000e0531:
 	{
  		if (skipdoall('p000e0531')) break p000e0531;
  		if (in_response)
 		{
-			if (!CNDverb(38)) break p000e0531;
+			if (!CNDverb(37)) break p000e0531;
  		}
-		if (!CNDeq(34,255)) break p000e0531;
-		if (!CNDbnotzero(12,1)) break p000e0531;
- 		ACCwriteln(341);
+		if (!CNDnoteq(51,255)) break p000e0531;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0531;
+		if (!CNDabsent(getFlag(51))) break p000e0531;
+ 		ACCwriteln(339);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// COME _
+	// ESCUCHA _
 	p000e0532:
 	{
  		if (skipdoall('p000e0532')) break p000e0532;
  		if (in_response)
 		{
-			if (!CNDverb(38)) break p000e0532;
+			if (!CNDverb(37)) break p000e0532;
  		}
 		if (!CNDeq(34,255)) break p000e0532;
-		if (!CNDbzero(12,1)) break p000e0532;
- 		ACCwriteln(342);
+ 		ACCwriteln(340);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9797,11 +9794,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(38)) break p000e0533;
  		}
-		if (!CNDnoteq(34,255)) break p000e0533;
-		if (!CNDnoteq(51,255)) break p000e0533;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0533;
-		if (!CNDpresent(getFlag(51))) break p000e0533;
- 		ACCwriteln(343);
+		if (!CNDeq(34,255)) break p000e0533;
+		if (!CNDbnotzero(12,1)) break p000e0533;
+ 		ACCwriteln(341);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9816,11 +9811,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(38)) break p000e0534;
  		}
-		if (!CNDnoteq(34,255)) break p000e0534;
-		if (!CNDnoteq(51,255)) break p000e0534;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0534;
-		if (!CNDpresent(getFlag(51))) break p000e0534;
- 		ACCwriteln(344);
+		if (!CNDeq(34,255)) break p000e0534;
+		if (!CNDbzero(12,1)) break p000e0534;
+ 		ACCwriteln(342);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9838,8 +9831,8 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(34,255)) break p000e0535;
 		if (!CNDnoteq(51,255)) break p000e0535;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0535;
-		if (!CNDabsent(getFlag(51))) break p000e0535;
- 		ACCwriteln(345);
+		if (!CNDpresent(getFlag(51))) break p000e0535;
+ 		ACCwriteln(343);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9855,8 +9848,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(38)) break p000e0536;
  		}
 		if (!CNDnoteq(34,255)) break p000e0536;
-		if (!CNDeq(51,255)) break p000e0536;
- 		ACCwriteln(346);
+		if (!CNDnoteq(51,255)) break p000e0536;
+		if (!CNDonotzero(getFlag(51),21)) break p000e0536;
+		if (!CNDpresent(getFlag(51))) break p000e0536;
+ 		ACCwriteln(344);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9871,10 +9866,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(38)) break p000e0537;
  		}
+		if (!CNDnoteq(34,255)) break p000e0537;
 		if (!CNDnoteq(51,255)) break p000e0537;
-		if (!CNDpresent(getFlag(51))) break p000e0537;
-		if (!CNDozero(getFlag(51),5)) break p000e0537;
- 		ACCwriteln(347);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0537;
+		if (!CNDabsent(getFlag(51))) break p000e0537;
+ 		ACCwriteln(345);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9889,11 +9885,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(38)) break p000e0538;
  		}
-		if (!CNDnoteq(51,255)) break p000e0538;
-		if (!CNDpresent(getFlag(51))) break p000e0538;
-		if (!CNDonotzero(getFlag(51),5)) break p000e0538;
- 		ACCwriteln(348);
- 		ACCdestroy(getFlag(51));
+		if (!CNDnoteq(34,255)) break p000e0538;
+		if (!CNDeq(51,255)) break p000e0538;
+ 		ACCwriteln(346);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9909,42 +9903,45 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(38)) break p000e0539;
  		}
 		if (!CNDnoteq(51,255)) break p000e0539;
-		if (!CNDabsent(getFlag(51))) break p000e0539;
- 		ACCwriteln(349);
+		if (!CNDpresent(getFlag(51))) break p000e0539;
+		if (!CNDozero(getFlag(51),5)) break p000e0539;
+ 		ACCwriteln(347);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// BEBE _
+	// COME _
 	p000e0540:
 	{
  		if (skipdoall('p000e0540')) break p000e0540;
  		if (in_response)
 		{
-			if (!CNDverb(39)) break p000e0540;
+			if (!CNDverb(38)) break p000e0540;
  		}
-		if (!CNDeq(34,255)) break p000e0540;
-		if (!CNDbnotzero(12,1)) break p000e0540;
- 		ACCwriteln(350);
+		if (!CNDnoteq(51,255)) break p000e0540;
+		if (!CNDpresent(getFlag(51))) break p000e0540;
+		if (!CNDonotzero(getFlag(51),5)) break p000e0540;
+ 		ACCwriteln(348);
+ 		ACCdestroy(getFlag(51));
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// BEBE _
+	// COME _
 	p000e0541:
 	{
  		if (skipdoall('p000e0541')) break p000e0541;
  		if (in_response)
 		{
-			if (!CNDverb(39)) break p000e0541;
+			if (!CNDverb(38)) break p000e0541;
  		}
-		if (!CNDeq(34,255)) break p000e0541;
-		if (!CNDbzero(12,1)) break p000e0541;
- 		ACCwriteln(351);
+		if (!CNDnoteq(51,255)) break p000e0541;
+		if (!CNDabsent(getFlag(51))) break p000e0541;
+ 		ACCwriteln(349);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9959,11 +9956,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(39)) break p000e0542;
  		}
-		if (!CNDnoteq(34,255)) break p000e0542;
-		if (!CNDnoteq(51,255)) break p000e0542;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0542;
-		if (!CNDpresent(getFlag(51))) break p000e0542;
- 		ACCwriteln(352);
+		if (!CNDeq(34,255)) break p000e0542;
+		if (!CNDbnotzero(12,1)) break p000e0542;
+ 		ACCwriteln(350);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9978,11 +9973,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(39)) break p000e0543;
  		}
-		if (!CNDnoteq(34,255)) break p000e0543;
-		if (!CNDnoteq(51,255)) break p000e0543;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0543;
-		if (!CNDabsent(getFlag(51))) break p000e0543;
- 		ACCwriteln(353);
+		if (!CNDeq(34,255)) break p000e0543;
+		if (!CNDbzero(12,1)) break p000e0543;
+ 		ACCwriteln(351);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -9998,8 +9991,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(39)) break p000e0544;
  		}
 		if (!CNDnoteq(34,255)) break p000e0544;
-		if (!CNDeq(51,255)) break p000e0544;
- 		ACCwriteln(354);
+		if (!CNDnoteq(51,255)) break p000e0544;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0544;
+		if (!CNDpresent(getFlag(51))) break p000e0544;
+ 		ACCwriteln(352);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10014,10 +10009,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(39)) break p000e0545;
  		}
+		if (!CNDnoteq(34,255)) break p000e0545;
 		if (!CNDnoteq(51,255)) break p000e0545;
-		if (!CNDpresent(getFlag(51))) break p000e0545;
-		if (!CNDozero(getFlag(51),6)) break p000e0545;
- 		ACCwriteln(355);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0545;
+		if (!CNDabsent(getFlag(51))) break p000e0545;
+ 		ACCwriteln(353);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10032,11 +10028,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(39)) break p000e0546;
  		}
-		if (!CNDnoteq(51,255)) break p000e0546;
-		if (!CNDpresent(getFlag(51))) break p000e0546;
-		if (!CNDonotzero(getFlag(51),6)) break p000e0546;
- 		ACCwriteln(356);
- 		ACCdestroy(getFlag(51));
+		if (!CNDnoteq(34,255)) break p000e0546;
+		if (!CNDeq(51,255)) break p000e0546;
+ 		ACCwriteln(354);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10052,7 +10046,44 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(39)) break p000e0547;
  		}
 		if (!CNDnoteq(51,255)) break p000e0547;
-		if (!CNDabsent(getFlag(51))) break p000e0547;
+		if (!CNDpresent(getFlag(51))) break p000e0547;
+		if (!CNDozero(getFlag(51),6)) break p000e0547;
+ 		ACCwriteln(355);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// BEBE _
+	p000e0548:
+	{
+ 		if (skipdoall('p000e0548')) break p000e0548;
+ 		if (in_response)
+		{
+			if (!CNDverb(39)) break p000e0548;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0548;
+		if (!CNDpresent(getFlag(51))) break p000e0548;
+		if (!CNDonotzero(getFlag(51),6)) break p000e0548;
+ 		ACCwriteln(356);
+ 		ACCdestroy(getFlag(51));
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// BEBE _
+	p000e0549:
+	{
+ 		if (skipdoall('p000e0549')) break p000e0549;
+ 		if (in_response)
+		{
+			if (!CNDverb(39)) break p000e0549;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0549;
+		if (!CNDabsent(getFlag(51))) break p000e0549;
  		ACCwriteln(357);
  		ACCdone();
 		break pro000_restart;
@@ -10061,48 +10092,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// CAGA _
-	p000e0548:
-	{
- 		if (skipdoall('p000e0548')) break p000e0548;
- 		if (in_response)
-		{
-			if (!CNDverb(47)) break p000e0548;
- 		}
- 		ACCwriteln(358);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// ESCUPE _
-	p000e0549:
-	{
- 		if (skipdoall('p000e0549')) break p000e0549;
- 		if (in_response)
-		{
-			if (!CNDverb(48)) break p000e0549;
- 		}
-		if (!CNDeq(34,255)) break p000e0549;
-		if (!CNDbnotzero(12,1)) break p000e0549;
- 		ACCwriteln(359);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// ESCUPE _
 	p000e0550:
 	{
  		if (skipdoall('p000e0550')) break p000e0550;
  		if (in_response)
 		{
-			if (!CNDverb(48)) break p000e0550;
+			if (!CNDverb(47)) break p000e0550;
  		}
-		if (!CNDeq(34,255)) break p000e0550;
-		if (!CNDbzero(12,1)) break p000e0550;
- 		ACCwriteln(360);
+ 		ACCwriteln(358);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10117,11 +10114,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(48)) break p000e0551;
  		}
-		if (!CNDnoteq(34,255)) break p000e0551;
-		if (!CNDnoteq(51,255)) break p000e0551;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0551;
-		if (!CNDpresent(getFlag(51))) break p000e0551;
- 		ACCwriteln(361);
+		if (!CNDeq(34,255)) break p000e0551;
+		if (!CNDbnotzero(12,1)) break p000e0551;
+ 		ACCwriteln(359);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10136,11 +10131,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(48)) break p000e0552;
  		}
-		if (!CNDnoteq(34,255)) break p000e0552;
-		if (!CNDnoteq(51,255)) break p000e0552;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0552;
-		if (!CNDabsent(getFlag(51))) break p000e0552;
- 		ACCwriteln(362);
+		if (!CNDeq(34,255)) break p000e0552;
+		if (!CNDbzero(12,1)) break p000e0552;
+ 		ACCwriteln(360);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10156,8 +10149,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(48)) break p000e0553;
  		}
 		if (!CNDnoteq(34,255)) break p000e0553;
-		if (!CNDeq(51,255)) break p000e0553;
- 		ACCwriteln(363);
+		if (!CNDnoteq(51,255)) break p000e0553;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0553;
+		if (!CNDpresent(getFlag(51))) break p000e0553;
+ 		ACCwriteln(361);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10172,9 +10167,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(48)) break p000e0554;
  		}
+		if (!CNDnoteq(34,255)) break p000e0554;
 		if (!CNDnoteq(51,255)) break p000e0554;
-		if (!CNDpresent(getFlag(51))) break p000e0554;
- 		ACCwriteln(364);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0554;
+		if (!CNDabsent(getFlag(51))) break p000e0554;
+ 		ACCwriteln(362);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10189,43 +10186,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(48)) break p000e0555;
  		}
-		if (!CNDnoteq(51,255)) break p000e0555;
-		if (!CNDabsent(getFlag(51))) break p000e0555;
- 		ACCwriteln(365);
+		if (!CNDnoteq(34,255)) break p000e0555;
+		if (!CNDeq(51,255)) break p000e0555;
+ 		ACCwriteln(363);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ACARICIA _
+	// ESCUPE _
 	p000e0556:
 	{
  		if (skipdoall('p000e0556')) break p000e0556;
  		if (in_response)
 		{
-			if (!CNDverb(40)) break p000e0556;
+			if (!CNDverb(48)) break p000e0556;
  		}
-		if (!CNDeq(34,255)) break p000e0556;
-		if (!CNDbnotzero(12,1)) break p000e0556;
- 		ACCwriteln(366);
+		if (!CNDnoteq(51,255)) break p000e0556;
+		if (!CNDpresent(getFlag(51))) break p000e0556;
+ 		ACCwriteln(364);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ACARICIA _
+	// ESCUPE _
 	p000e0557:
 	{
  		if (skipdoall('p000e0557')) break p000e0557;
  		if (in_response)
 		{
-			if (!CNDverb(40)) break p000e0557;
+			if (!CNDverb(48)) break p000e0557;
  		}
-		if (!CNDeq(34,255)) break p000e0557;
-		if (!CNDbzero(12,1)) break p000e0557;
- 		ACCwriteln(367);
+		if (!CNDnoteq(51,255)) break p000e0557;
+		if (!CNDabsent(getFlag(51))) break p000e0557;
+ 		ACCwriteln(365);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10240,11 +10237,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(40)) break p000e0558;
  		}
-		if (!CNDnoteq(34,255)) break p000e0558;
-		if (!CNDnoteq(51,255)) break p000e0558;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0558;
-		if (!CNDpresent(getFlag(51))) break p000e0558;
- 		ACCwriteln(368);
+		if (!CNDeq(34,255)) break p000e0558;
+		if (!CNDbnotzero(12,1)) break p000e0558;
+ 		ACCwriteln(366);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10259,11 +10254,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(40)) break p000e0559;
  		}
-		if (!CNDnoteq(34,255)) break p000e0559;
-		if (!CNDnoteq(51,255)) break p000e0559;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0559;
-		if (!CNDabsent(getFlag(51))) break p000e0559;
- 		ACCwriteln(369);
+		if (!CNDeq(34,255)) break p000e0559;
+		if (!CNDbzero(12,1)) break p000e0559;
+ 		ACCwriteln(367);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10279,8 +10272,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(40)) break p000e0560;
  		}
 		if (!CNDnoteq(34,255)) break p000e0560;
-		if (!CNDeq(51,255)) break p000e0560;
- 		ACCwriteln(370);
+		if (!CNDnoteq(51,255)) break p000e0560;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0560;
+		if (!CNDpresent(getFlag(51))) break p000e0560;
+ 		ACCwriteln(368);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10295,9 +10290,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(40)) break p000e0561;
  		}
+		if (!CNDnoteq(34,255)) break p000e0561;
 		if (!CNDnoteq(51,255)) break p000e0561;
-		if (!CNDpresent(getFlag(51))) break p000e0561;
- 		ACCwriteln(371);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0561;
+		if (!CNDabsent(getFlag(51))) break p000e0561;
+ 		ACCwriteln(369);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10312,43 +10309,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(40)) break p000e0562;
  		}
-		if (!CNDnoteq(51,255)) break p000e0562;
-		if (!CNDabsent(getFlag(51))) break p000e0562;
- 		ACCwriteln(372);
+		if (!CNDnoteq(34,255)) break p000e0562;
+		if (!CNDeq(51,255)) break p000e0562;
+ 		ACCwriteln(370);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// HUELE _
+	// ACARICIA _
 	p000e0563:
 	{
  		if (skipdoall('p000e0563')) break p000e0563;
  		if (in_response)
 		{
-			if (!CNDverb(42)) break p000e0563;
+			if (!CNDverb(40)) break p000e0563;
  		}
-		if (!CNDeq(34,255)) break p000e0563;
-		if (!CNDbnotzero(12,1)) break p000e0563;
- 		ACCwriteln(373);
+		if (!CNDnoteq(51,255)) break p000e0563;
+		if (!CNDpresent(getFlag(51))) break p000e0563;
+ 		ACCwriteln(371);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// HUELE _
+	// ACARICIA _
 	p000e0564:
 	{
  		if (skipdoall('p000e0564')) break p000e0564;
  		if (in_response)
 		{
-			if (!CNDverb(42)) break p000e0564;
+			if (!CNDverb(40)) break p000e0564;
  		}
-		if (!CNDeq(34,255)) break p000e0564;
-		if (!CNDbzero(12,1)) break p000e0564;
- 		ACCwriteln(374);
+		if (!CNDnoteq(51,255)) break p000e0564;
+		if (!CNDabsent(getFlag(51))) break p000e0564;
+ 		ACCwriteln(372);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10363,11 +10360,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(42)) break p000e0565;
  		}
-		if (!CNDnoteq(34,255)) break p000e0565;
-		if (!CNDnoteq(51,255)) break p000e0565;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0565;
-		if (!CNDpresent(getFlag(51))) break p000e0565;
- 		ACCwriteln(375);
+		if (!CNDeq(34,255)) break p000e0565;
+		if (!CNDbnotzero(12,1)) break p000e0565;
+ 		ACCwriteln(373);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10382,11 +10377,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(42)) break p000e0566;
  		}
-		if (!CNDnoteq(34,255)) break p000e0566;
-		if (!CNDnoteq(51,255)) break p000e0566;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0566;
-		if (!CNDabsent(getFlag(51))) break p000e0566;
- 		ACCwriteln(376);
+		if (!CNDeq(34,255)) break p000e0566;
+		if (!CNDbzero(12,1)) break p000e0566;
+ 		ACCwriteln(374);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10402,8 +10395,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(42)) break p000e0567;
  		}
 		if (!CNDnoteq(34,255)) break p000e0567;
-		if (!CNDeq(51,255)) break p000e0567;
- 		ACCwriteln(377);
+		if (!CNDnoteq(51,255)) break p000e0567;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0567;
+		if (!CNDpresent(getFlag(51))) break p000e0567;
+ 		ACCwriteln(375);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10418,10 +10413,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(42)) break p000e0568;
  		}
+		if (!CNDnoteq(34,255)) break p000e0568;
 		if (!CNDnoteq(51,255)) break p000e0568;
-		if (!CNDpresent(getFlag(51))) break p000e0568;
-		if (!CNDonotzero(getFlag(51),5)) break p000e0568;
- 		ACCwriteln(378);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0568;
+		if (!CNDabsent(getFlag(51))) break p000e0568;
+ 		ACCwriteln(376);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10436,10 +10432,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(42)) break p000e0569;
  		}
-		if (!CNDnoteq(51,255)) break p000e0569;
-		if (!CNDpresent(getFlag(51))) break p000e0569;
-		if (!CNDonotzero(getFlag(51),6)) break p000e0569;
- 		ACCwriteln(379);
+		if (!CNDnoteq(34,255)) break p000e0569;
+		if (!CNDeq(51,255)) break p000e0569;
+ 		ACCwriteln(377);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10456,7 +10451,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0570;
 		if (!CNDpresent(getFlag(51))) break p000e0570;
- 		ACCwriteln(380);
+		if (!CNDonotzero(getFlag(51),5)) break p000e0570;
+ 		ACCwriteln(378);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10473,8 +10469,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0571;
 		if (!CNDpresent(getFlag(51))) break p000e0571;
-		if (!CNDonotzero(getFlag(51),5)) break p000e0571;
- 		ACCwriteln(381);
+		if (!CNDonotzero(getFlag(51),6)) break p000e0571;
+ 		ACCwriteln(379);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10490,42 +10486,43 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(42)) break p000e0572;
  		}
 		if (!CNDnoteq(51,255)) break p000e0572;
-		if (!CNDabsent(getFlag(51))) break p000e0572;
- 		ACCwriteln(382);
+		if (!CNDpresent(getFlag(51))) break p000e0572;
+ 		ACCwriteln(380);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// AGITA _
+	// HUELE _
 	p000e0573:
 	{
  		if (skipdoall('p000e0573')) break p000e0573;
  		if (in_response)
 		{
-			if (!CNDverb(49)) break p000e0573;
+			if (!CNDverb(42)) break p000e0573;
  		}
-		if (!CNDeq(34,255)) break p000e0573;
-		if (!CNDbnotzero(12,1)) break p000e0573;
- 		ACCwriteln(383);
+		if (!CNDnoteq(51,255)) break p000e0573;
+		if (!CNDpresent(getFlag(51))) break p000e0573;
+		if (!CNDonotzero(getFlag(51),5)) break p000e0573;
+ 		ACCwriteln(381);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// AGITA _
+	// HUELE _
 	p000e0574:
 	{
  		if (skipdoall('p000e0574')) break p000e0574;
  		if (in_response)
 		{
-			if (!CNDverb(49)) break p000e0574;
+			if (!CNDverb(42)) break p000e0574;
  		}
-		if (!CNDeq(34,255)) break p000e0574;
-		if (!CNDbzero(12,1)) break p000e0574;
- 		ACCwriteln(384);
+		if (!CNDnoteq(51,255)) break p000e0574;
+		if (!CNDabsent(getFlag(51))) break p000e0574;
+ 		ACCwriteln(382);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10540,11 +10537,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(49)) break p000e0575;
  		}
-		if (!CNDnoteq(34,255)) break p000e0575;
-		if (!CNDnoteq(51,255)) break p000e0575;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0575;
-		if (!CNDpresent(getFlag(51))) break p000e0575;
- 		ACCwriteln(385);
+		if (!CNDeq(34,255)) break p000e0575;
+		if (!CNDbnotzero(12,1)) break p000e0575;
+ 		ACCwriteln(383);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10559,11 +10554,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(49)) break p000e0576;
  		}
-		if (!CNDnoteq(34,255)) break p000e0576;
-		if (!CNDnoteq(51,255)) break p000e0576;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0576;
-		if (!CNDabsent(getFlag(51))) break p000e0576;
- 		ACCwriteln(386);
+		if (!CNDeq(34,255)) break p000e0576;
+		if (!CNDbzero(12,1)) break p000e0576;
+ 		ACCwriteln(384);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10579,8 +10572,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(49)) break p000e0577;
  		}
 		if (!CNDnoteq(34,255)) break p000e0577;
-		if (!CNDeq(51,255)) break p000e0577;
- 		ACCwriteln(387);
+		if (!CNDnoteq(51,255)) break p000e0577;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0577;
+		if (!CNDpresent(getFlag(51))) break p000e0577;
+ 		ACCwriteln(385);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10595,9 +10590,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(49)) break p000e0578;
  		}
+		if (!CNDnoteq(34,255)) break p000e0578;
 		if (!CNDnoteq(51,255)) break p000e0578;
-		if (!CNDpresent(getFlag(51))) break p000e0578;
- 		ACCwriteln(388);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0578;
+		if (!CNDabsent(getFlag(51))) break p000e0578;
+ 		ACCwriteln(386);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10612,43 +10609,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(49)) break p000e0579;
  		}
-		if (!CNDnoteq(51,255)) break p000e0579;
-		if (!CNDabsent(getFlag(51))) break p000e0579;
- 		ACCwriteln(389);
+		if (!CNDnoteq(34,255)) break p000e0579;
+		if (!CNDeq(51,255)) break p000e0579;
+ 		ACCwriteln(387);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// BALANCEA _
+	// AGITA _
 	p000e0580:
 	{
  		if (skipdoall('p000e0580')) break p000e0580;
  		if (in_response)
 		{
-			if (!CNDverb(50)) break p000e0580;
+			if (!CNDverb(49)) break p000e0580;
  		}
-		if (!CNDeq(34,255)) break p000e0580;
-		if (!CNDbnotzero(12,1)) break p000e0580;
- 		ACCwriteln(390);
+		if (!CNDnoteq(51,255)) break p000e0580;
+		if (!CNDpresent(getFlag(51))) break p000e0580;
+ 		ACCwriteln(388);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// BALANCEA _
+	// AGITA _
 	p000e0581:
 	{
  		if (skipdoall('p000e0581')) break p000e0581;
  		if (in_response)
 		{
-			if (!CNDverb(50)) break p000e0581;
+			if (!CNDverb(49)) break p000e0581;
  		}
-		if (!CNDeq(34,255)) break p000e0581;
-		if (!CNDbzero(12,1)) break p000e0581;
- 		ACCwriteln(391);
+		if (!CNDnoteq(51,255)) break p000e0581;
+		if (!CNDabsent(getFlag(51))) break p000e0581;
+ 		ACCwriteln(389);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10663,11 +10660,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(50)) break p000e0582;
  		}
-		if (!CNDnoteq(34,255)) break p000e0582;
-		if (!CNDnoteq(51,255)) break p000e0582;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0582;
-		if (!CNDpresent(getFlag(51))) break p000e0582;
- 		ACCwriteln(392);
+		if (!CNDeq(34,255)) break p000e0582;
+		if (!CNDbnotzero(12,1)) break p000e0582;
+ 		ACCwriteln(390);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10682,11 +10677,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(50)) break p000e0583;
  		}
-		if (!CNDnoteq(34,255)) break p000e0583;
-		if (!CNDnoteq(51,255)) break p000e0583;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0583;
-		if (!CNDabsent(getFlag(51))) break p000e0583;
- 		ACCwriteln(393);
+		if (!CNDeq(34,255)) break p000e0583;
+		if (!CNDbzero(12,1)) break p000e0583;
+ 		ACCwriteln(391);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10702,8 +10695,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(50)) break p000e0584;
  		}
 		if (!CNDnoteq(34,255)) break p000e0584;
-		if (!CNDeq(51,255)) break p000e0584;
- 		ACCwriteln(394);
+		if (!CNDnoteq(51,255)) break p000e0584;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0584;
+		if (!CNDpresent(getFlag(51))) break p000e0584;
+ 		ACCwriteln(392);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10718,9 +10713,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(50)) break p000e0585;
  		}
+		if (!CNDnoteq(34,255)) break p000e0585;
 		if (!CNDnoteq(51,255)) break p000e0585;
-		if (!CNDpresent(getFlag(51))) break p000e0585;
- 		ACCwriteln(395);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0585;
+		if (!CNDabsent(getFlag(51))) break p000e0585;
+ 		ACCwriteln(393);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10735,8 +10732,42 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(50)) break p000e0586;
  		}
-		if (!CNDnoteq(51,255)) break p000e0586;
-		if (!CNDabsent(getFlag(51))) break p000e0586;
+		if (!CNDnoteq(34,255)) break p000e0586;
+		if (!CNDeq(51,255)) break p000e0586;
+ 		ACCwriteln(394);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// BALANCEA _
+	p000e0587:
+	{
+ 		if (skipdoall('p000e0587')) break p000e0587;
+ 		if (in_response)
+		{
+			if (!CNDverb(50)) break p000e0587;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0587;
+		if (!CNDpresent(getFlag(51))) break p000e0587;
+ 		ACCwriteln(395);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// BALANCEA _
+	p000e0588:
+	{
+ 		if (skipdoall('p000e0588')) break p000e0588;
+ 		if (in_response)
+		{
+			if (!CNDverb(50)) break p000e0588;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0588;
+		if (!CNDabsent(getFlag(51))) break p000e0588;
  		ACCwriteln(396);
  		ACCdone();
 		break pro000_restart;
@@ -10745,12 +10776,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// ESPERA _
-	p000e0587:
+	p000e0589:
 	{
- 		if (skipdoall('p000e0587')) break p000e0587;
+ 		if (skipdoall('p000e0589')) break p000e0589;
  		if (in_response)
 		{
-			if (!CNDverb(43)) break p000e0587;
+			if (!CNDverb(43)) break p000e0589;
  		}
  		ACCsysmess(35);
  		ACCdone();
@@ -10760,12 +10791,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// DESCANSA _
-	p000e0588:
+	p000e0590:
 	{
- 		if (skipdoall('p000e0588')) break p000e0588;
+ 		if (skipdoall('p000e0590')) break p000e0590;
  		if (in_response)
 		{
-			if (!CNDverb(61)) break p000e0588;
+			if (!CNDverb(61)) break p000e0590;
  		}
  		ACCwriteln(397);
  		ACCdone();
@@ -10775,12 +10806,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// BRINCA _
-	p000e0589:
+	p000e0591:
 	{
- 		if (skipdoall('p000e0589')) break p000e0589;
+ 		if (skipdoall('p000e0591')) break p000e0591;
  		if (in_response)
 		{
-			if (!CNDverb(45)) break p000e0589;
+			if (!CNDverb(45)) break p000e0591;
  		}
  		ACCwriteln(398);
  		ACCdone();
@@ -10790,12 +10821,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// ORA _
-	p000e0590:
+	p000e0592:
 	{
- 		if (skipdoall('p000e0590')) break p000e0590;
+ 		if (skipdoall('p000e0592')) break p000e0592;
  		if (in_response)
 		{
-			if (!CNDverb(59)) break p000e0590;
+			if (!CNDverb(59)) break p000e0592;
  		}
  		ACCwriteln(399);
  		ACCdone();
@@ -10805,12 +10836,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// CAVA _
-	p000e0591:
+	p000e0593:
 	{
- 		if (skipdoall('p000e0591')) break p000e0591;
+ 		if (skipdoall('p000e0593')) break p000e0593;
  		if (in_response)
 		{
-			if (!CNDverb(51)) break p000e0591;
+			if (!CNDverb(51)) break p000e0593;
  		}
  		ACCwriteln(400);
  		ACCdone();
@@ -10820,12 +10851,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// PENSAR _
-	p000e0592:
+	p000e0594:
 	{
- 		if (skipdoall('p000e0592')) break p000e0592;
+ 		if (skipdoall('p000e0594')) break p000e0594;
  		if (in_response)
 		{
-			if (!CNDverb(60)) break p000e0592;
+			if (!CNDverb(60)) break p000e0594;
  		}
  		ACCwriteln(401);
  		ACCdone();
@@ -10835,12 +10866,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// DESCANSA _
-	p000e0593:
+	p000e0595:
 	{
- 		if (skipdoall('p000e0593')) break p000e0593;
+ 		if (skipdoall('p000e0595')) break p000e0595;
  		if (in_response)
 		{
-			if (!CNDverb(61)) break p000e0593;
+			if (!CNDverb(61)) break p000e0595;
  		}
  		ACCwriteln(402);
  		ACCdone();
@@ -10850,12 +10881,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// CANTA _
-	p000e0594:
+	p000e0596:
 	{
- 		if (skipdoall('p000e0594')) break p000e0594;
+ 		if (skipdoall('p000e0596')) break p000e0596;
  		if (in_response)
 		{
-			if (!CNDverb(44)) break p000e0594;
+			if (!CNDverb(44)) break p000e0596;
  		}
  		ACCwriteln(403);
  		ACCdone();
@@ -10865,48 +10896,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// BAILA _
-	p000e0595:
-	{
- 		if (skipdoall('p000e0595')) break p000e0595;
- 		if (in_response)
-		{
-			if (!CNDverb(112)) break p000e0595;
- 		}
- 		ACCwriteln(404);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// AGREDE _
-	p000e0596:
-	{
- 		if (skipdoall('p000e0596')) break p000e0596;
- 		if (in_response)
-		{
-			if (!CNDverb(46)) break p000e0596;
- 		}
-		if (!CNDeq(34,255)) break p000e0596;
-		if (!CNDbnotzero(12,1)) break p000e0596;
- 		ACCwriteln(405);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// AGREDE _
 	p000e0597:
 	{
  		if (skipdoall('p000e0597')) break p000e0597;
  		if (in_response)
 		{
-			if (!CNDverb(46)) break p000e0597;
+			if (!CNDverb(112)) break p000e0597;
  		}
-		if (!CNDeq(34,255)) break p000e0597;
-		if (!CNDbzero(12,1)) break p000e0597;
- 		ACCwriteln(406);
+ 		ACCwriteln(404);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10921,11 +10918,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(46)) break p000e0598;
  		}
-		if (!CNDnoteq(34,255)) break p000e0598;
-		if (!CNDnoteq(51,255)) break p000e0598;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0598;
-		if (!CNDpresent(getFlag(51))) break p000e0598;
- 		ACCwriteln(407);
+		if (!CNDeq(34,255)) break p000e0598;
+		if (!CNDbnotzero(12,1)) break p000e0598;
+ 		ACCwriteln(405);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10940,11 +10935,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(46)) break p000e0599;
  		}
-		if (!CNDnoteq(34,255)) break p000e0599;
-		if (!CNDnoteq(51,255)) break p000e0599;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0599;
-		if (!CNDabsent(getFlag(51))) break p000e0599;
- 		ACCwriteln(408);
+		if (!CNDeq(34,255)) break p000e0599;
+		if (!CNDbzero(12,1)) break p000e0599;
+ 		ACCwriteln(406);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10960,8 +10953,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(46)) break p000e0600;
  		}
 		if (!CNDnoteq(34,255)) break p000e0600;
-		if (!CNDeq(51,255)) break p000e0600;
- 		ACCwriteln(409);
+		if (!CNDnoteq(51,255)) break p000e0600;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0600;
+		if (!CNDpresent(getFlag(51))) break p000e0600;
+ 		ACCwriteln(407);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10976,9 +10971,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(46)) break p000e0601;
  		}
+		if (!CNDnoteq(34,255)) break p000e0601;
 		if (!CNDnoteq(51,255)) break p000e0601;
-		if (!CNDpresent(getFlag(51))) break p000e0601;
- 		ACCwriteln(410);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0601;
+		if (!CNDabsent(getFlag(51))) break p000e0601;
+ 		ACCwriteln(408);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -10993,43 +10990,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(46)) break p000e0602;
  		}
-		if (!CNDnoteq(51,255)) break p000e0602;
-		if (!CNDabsent(getFlag(51))) break p000e0602;
- 		ACCwriteln(411);
+		if (!CNDnoteq(34,255)) break p000e0602;
+		if (!CNDeq(51,255)) break p000e0602;
+ 		ACCwriteln(409);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// GOLPEA _
+	// AGREDE _
 	p000e0603:
 	{
  		if (skipdoall('p000e0603')) break p000e0603;
  		if (in_response)
 		{
-			if (!CNDverb(72)) break p000e0603;
+			if (!CNDverb(46)) break p000e0603;
  		}
-		if (!CNDeq(34,255)) break p000e0603;
-		if (!CNDbnotzero(12,1)) break p000e0603;
- 		ACCwriteln(412);
+		if (!CNDnoteq(51,255)) break p000e0603;
+		if (!CNDpresent(getFlag(51))) break p000e0603;
+ 		ACCwriteln(410);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// GOLPEA _
+	// AGREDE _
 	p000e0604:
 	{
  		if (skipdoall('p000e0604')) break p000e0604;
  		if (in_response)
 		{
-			if (!CNDverb(72)) break p000e0604;
+			if (!CNDverb(46)) break p000e0604;
  		}
-		if (!CNDeq(34,255)) break p000e0604;
-		if (!CNDbzero(12,1)) break p000e0604;
- 		ACCwriteln(413);
+		if (!CNDnoteq(51,255)) break p000e0604;
+		if (!CNDabsent(getFlag(51))) break p000e0604;
+ 		ACCwriteln(411);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11044,11 +11041,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(72)) break p000e0605;
  		}
-		if (!CNDnoteq(34,255)) break p000e0605;
-		if (!CNDnoteq(51,255)) break p000e0605;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0605;
-		if (!CNDpresent(getFlag(51))) break p000e0605;
- 		ACCwriteln(414);
+		if (!CNDeq(34,255)) break p000e0605;
+		if (!CNDbnotzero(12,1)) break p000e0605;
+ 		ACCwriteln(412);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11063,11 +11058,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(72)) break p000e0606;
  		}
-		if (!CNDnoteq(34,255)) break p000e0606;
-		if (!CNDnoteq(51,255)) break p000e0606;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0606;
-		if (!CNDabsent(getFlag(51))) break p000e0606;
- 		ACCwriteln(415);
+		if (!CNDeq(34,255)) break p000e0606;
+		if (!CNDbzero(12,1)) break p000e0606;
+ 		ACCwriteln(413);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11083,8 +11076,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(72)) break p000e0607;
  		}
 		if (!CNDnoteq(34,255)) break p000e0607;
-		if (!CNDeq(51,255)) break p000e0607;
- 		ACCwriteln(416);
+		if (!CNDnoteq(51,255)) break p000e0607;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0607;
+		if (!CNDpresent(getFlag(51))) break p000e0607;
+ 		ACCwriteln(414);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11099,9 +11094,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(72)) break p000e0608;
  		}
+		if (!CNDnoteq(34,255)) break p000e0608;
 		if (!CNDnoteq(51,255)) break p000e0608;
-		if (!CNDpresent(getFlag(51))) break p000e0608;
- 		ACCwriteln(417);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0608;
+		if (!CNDabsent(getFlag(51))) break p000e0608;
+ 		ACCwriteln(415);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11116,8 +11113,42 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(72)) break p000e0609;
  		}
-		if (!CNDnoteq(51,255)) break p000e0609;
-		if (!CNDabsent(getFlag(51))) break p000e0609;
+		if (!CNDnoteq(34,255)) break p000e0609;
+		if (!CNDeq(51,255)) break p000e0609;
+ 		ACCwriteln(416);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// GOLPEA _
+	p000e0610:
+	{
+ 		if (skipdoall('p000e0610')) break p000e0610;
+ 		if (in_response)
+		{
+			if (!CNDverb(72)) break p000e0610;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0610;
+		if (!CNDpresent(getFlag(51))) break p000e0610;
+ 		ACCwriteln(417);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// GOLPEA _
+	p000e0611:
+	{
+ 		if (skipdoall('p000e0611')) break p000e0611;
+ 		if (in_response)
+		{
+			if (!CNDverb(72)) break p000e0611;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0611;
+		if (!CNDabsent(getFlag(51))) break p000e0611;
  		ACCwriteln(418);
  		ACCdone();
 		break pro000_restart;
@@ -11126,48 +11157,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// USA _
-	p000e0610:
-	{
- 		if (skipdoall('p000e0610')) break p000e0610;
- 		if (in_response)
-		{
-			if (!CNDverb(80)) break p000e0610;
- 		}
- 		ACCwriteln(419);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// FREGAR _
-	p000e0611:
-	{
- 		if (skipdoall('p000e0611')) break p000e0611;
- 		if (in_response)
-		{
-			if (!CNDverb(101)) break p000e0611;
- 		}
-		if (!CNDeq(34,255)) break p000e0611;
-		if (!CNDbnotzero(12,1)) break p000e0611;
- 		ACCwriteln(420);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// FREGAR _
 	p000e0612:
 	{
  		if (skipdoall('p000e0612')) break p000e0612;
  		if (in_response)
 		{
-			if (!CNDverb(101)) break p000e0612;
+			if (!CNDverb(80)) break p000e0612;
  		}
-		if (!CNDeq(34,255)) break p000e0612;
-		if (!CNDbzero(12,1)) break p000e0612;
- 		ACCwriteln(421);
+ 		ACCwriteln(419);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11182,11 +11179,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(101)) break p000e0613;
  		}
-		if (!CNDnoteq(34,255)) break p000e0613;
-		if (!CNDnoteq(51,255)) break p000e0613;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0613;
-		if (!CNDpresent(getFlag(51))) break p000e0613;
- 		ACCwriteln(422);
+		if (!CNDeq(34,255)) break p000e0613;
+		if (!CNDbnotzero(12,1)) break p000e0613;
+ 		ACCwriteln(420);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11201,11 +11196,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(101)) break p000e0614;
  		}
-		if (!CNDnoteq(34,255)) break p000e0614;
-		if (!CNDnoteq(51,255)) break p000e0614;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0614;
-		if (!CNDabsent(getFlag(51))) break p000e0614;
- 		ACCwriteln(423);
+		if (!CNDeq(34,255)) break p000e0614;
+		if (!CNDbzero(12,1)) break p000e0614;
+ 		ACCwriteln(421);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11221,8 +11214,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(101)) break p000e0615;
  		}
 		if (!CNDnoteq(34,255)) break p000e0615;
-		if (!CNDeq(51,255)) break p000e0615;
- 		ACCwriteln(424);
+		if (!CNDnoteq(51,255)) break p000e0615;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0615;
+		if (!CNDpresent(getFlag(51))) break p000e0615;
+ 		ACCwriteln(422);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11237,9 +11232,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(101)) break p000e0616;
  		}
+		if (!CNDnoteq(34,255)) break p000e0616;
 		if (!CNDnoteq(51,255)) break p000e0616;
-		if (!CNDpresent(getFlag(51))) break p000e0616;
- 		ACCwriteln(425);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0616;
+		if (!CNDabsent(getFlag(51))) break p000e0616;
+ 		ACCwriteln(423);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11254,43 +11251,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(101)) break p000e0617;
  		}
-		if (!CNDnoteq(51,255)) break p000e0617;
-		if (!CNDabsent(getFlag(51))) break p000e0617;
- 		ACCwriteln(426);
+		if (!CNDnoteq(34,255)) break p000e0617;
+		if (!CNDeq(51,255)) break p000e0617;
+ 		ACCwriteln(424);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// RASCA _
+	// FREGAR _
 	p000e0618:
 	{
  		if (skipdoall('p000e0618')) break p000e0618;
  		if (in_response)
 		{
-			if (!CNDverb(102)) break p000e0618;
+			if (!CNDverb(101)) break p000e0618;
  		}
-		if (!CNDeq(34,255)) break p000e0618;
-		if (!CNDbnotzero(12,1)) break p000e0618;
- 		ACCwriteln(427);
+		if (!CNDnoteq(51,255)) break p000e0618;
+		if (!CNDpresent(getFlag(51))) break p000e0618;
+ 		ACCwriteln(425);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// RASCA _
+	// FREGAR _
 	p000e0619:
 	{
  		if (skipdoall('p000e0619')) break p000e0619;
  		if (in_response)
 		{
-			if (!CNDverb(102)) break p000e0619;
+			if (!CNDverb(101)) break p000e0619;
  		}
-		if (!CNDeq(34,255)) break p000e0619;
-		if (!CNDbzero(12,1)) break p000e0619;
- 		ACCwriteln(428);
+		if (!CNDnoteq(51,255)) break p000e0619;
+		if (!CNDabsent(getFlag(51))) break p000e0619;
+ 		ACCwriteln(426);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11305,11 +11302,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(102)) break p000e0620;
  		}
-		if (!CNDnoteq(34,255)) break p000e0620;
-		if (!CNDnoteq(51,255)) break p000e0620;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0620;
-		if (!CNDpresent(getFlag(51))) break p000e0620;
- 		ACCwriteln(429);
+		if (!CNDeq(34,255)) break p000e0620;
+		if (!CNDbnotzero(12,1)) break p000e0620;
+ 		ACCwriteln(427);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11324,11 +11319,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(102)) break p000e0621;
  		}
-		if (!CNDnoteq(34,255)) break p000e0621;
-		if (!CNDnoteq(51,255)) break p000e0621;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0621;
-		if (!CNDabsent(getFlag(51))) break p000e0621;
- 		ACCwriteln(430);
+		if (!CNDeq(34,255)) break p000e0621;
+		if (!CNDbzero(12,1)) break p000e0621;
+ 		ACCwriteln(428);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11344,8 +11337,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(102)) break p000e0622;
  		}
 		if (!CNDnoteq(34,255)) break p000e0622;
-		if (!CNDeq(51,255)) break p000e0622;
- 		ACCwriteln(431);
+		if (!CNDnoteq(51,255)) break p000e0622;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0622;
+		if (!CNDpresent(getFlag(51))) break p000e0622;
+ 		ACCwriteln(429);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11360,9 +11355,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(102)) break p000e0623;
  		}
+		if (!CNDnoteq(34,255)) break p000e0623;
 		if (!CNDnoteq(51,255)) break p000e0623;
-		if (!CNDpresent(getFlag(51))) break p000e0623;
- 		ACCwriteln(432);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0623;
+		if (!CNDabsent(getFlag(51))) break p000e0623;
+ 		ACCwriteln(430);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11377,43 +11374,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(102)) break p000e0624;
  		}
-		if (!CNDnoteq(51,255)) break p000e0624;
-		if (!CNDabsent(getFlag(51))) break p000e0624;
- 		ACCwriteln(433);
+		if (!CNDnoteq(34,255)) break p000e0624;
+		if (!CNDeq(51,255)) break p000e0624;
+ 		ACCwriteln(431);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ENCENDER _
+	// RASCA _
 	p000e0625:
 	{
  		if (skipdoall('p000e0625')) break p000e0625;
  		if (in_response)
 		{
-			if (!CNDverb(66)) break p000e0625;
+			if (!CNDverb(102)) break p000e0625;
  		}
-		if (!CNDeq(34,255)) break p000e0625;
-		if (!CNDbnotzero(12,1)) break p000e0625;
- 		ACCwriteln(434);
+		if (!CNDnoteq(51,255)) break p000e0625;
+		if (!CNDpresent(getFlag(51))) break p000e0625;
+ 		ACCwriteln(432);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ENCENDER _
+	// RASCA _
 	p000e0626:
 	{
  		if (skipdoall('p000e0626')) break p000e0626;
  		if (in_response)
 		{
-			if (!CNDverb(66)) break p000e0626;
+			if (!CNDverb(102)) break p000e0626;
  		}
-		if (!CNDeq(34,255)) break p000e0626;
-		if (!CNDbzero(12,1)) break p000e0626;
- 		ACCwriteln(435);
+		if (!CNDnoteq(51,255)) break p000e0626;
+		if (!CNDabsent(getFlag(51))) break p000e0626;
+ 		ACCwriteln(433);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11428,10 +11425,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(66)) break p000e0627;
  		}
-		if (!CNDnoteq(51,255)) break p000e0627;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0627;
-		if (!CNDpresent(getFlag(51))) break p000e0627;
- 		ACCwriteln(436);
+		if (!CNDeq(34,255)) break p000e0627;
+		if (!CNDbnotzero(12,1)) break p000e0627;
+ 		ACCwriteln(434);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11446,10 +11442,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(66)) break p000e0628;
  		}
-		if (!CNDnoteq(51,255)) break p000e0628;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0628;
-		if (!CNDabsent(getFlag(51))) break p000e0628;
- 		ACCwriteln(437);
+		if (!CNDeq(34,255)) break p000e0628;
+		if (!CNDbzero(12,1)) break p000e0628;
+ 		ACCwriteln(435);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11464,9 +11459,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(66)) break p000e0629;
  		}
-		if (!CNDnoteq(34,255)) break p000e0629;
-		if (!CNDeq(51,255)) break p000e0629;
- 		ACCwriteln(438);
+		if (!CNDnoteq(51,255)) break p000e0629;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0629;
+		if (!CNDpresent(getFlag(51))) break p000e0629;
+ 		ACCwriteln(436);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11482,8 +11478,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(66)) break p000e0630;
  		}
 		if (!CNDnoteq(51,255)) break p000e0630;
-		if (!CNDpresent(getFlag(51))) break p000e0630;
- 		ACCwriteln(439);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0630;
+		if (!CNDabsent(getFlag(51))) break p000e0630;
+ 		ACCwriteln(437);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11498,43 +11495,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(66)) break p000e0631;
  		}
-		if (!CNDnoteq(51,255)) break p000e0631;
-		if (!CNDabsent(getFlag(51))) break p000e0631;
- 		ACCwriteln(440);
+		if (!CNDnoteq(34,255)) break p000e0631;
+		if (!CNDeq(51,255)) break p000e0631;
+ 		ACCwriteln(438);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// APAGA _
+	// ENCENDER _
 	p000e0632:
 	{
  		if (skipdoall('p000e0632')) break p000e0632;
  		if (in_response)
 		{
-			if (!CNDverb(67)) break p000e0632;
+			if (!CNDverb(66)) break p000e0632;
  		}
-		if (!CNDeq(34,255)) break p000e0632;
-		if (!CNDbnotzero(12,1)) break p000e0632;
- 		ACCwriteln(441);
+		if (!CNDnoteq(51,255)) break p000e0632;
+		if (!CNDpresent(getFlag(51))) break p000e0632;
+ 		ACCwriteln(439);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// APAGA _
+	// ENCENDER _
 	p000e0633:
 	{
  		if (skipdoall('p000e0633')) break p000e0633;
  		if (in_response)
 		{
-			if (!CNDverb(67)) break p000e0633;
+			if (!CNDverb(66)) break p000e0633;
  		}
-		if (!CNDeq(34,255)) break p000e0633;
-		if (!CNDbzero(12,1)) break p000e0633;
- 		ACCwriteln(442);
+		if (!CNDnoteq(51,255)) break p000e0633;
+		if (!CNDabsent(getFlag(51))) break p000e0633;
+ 		ACCwriteln(440);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11549,9 +11546,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(67)) break p000e0634;
  		}
-		if (!CNDnoteq(34,255)) break p000e0634;
-		if (!CNDeq(51,255)) break p000e0634;
- 		ACCwriteln(443);
+		if (!CNDeq(34,255)) break p000e0634;
+		if (!CNDbnotzero(12,1)) break p000e0634;
+ 		ACCwriteln(441);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11566,9 +11563,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(67)) break p000e0635;
  		}
-		if (!CNDnoteq(51,255)) break p000e0635;
-		if (!CNDpresent(getFlag(51))) break p000e0635;
- 		ACCwriteln(444);
+		if (!CNDeq(34,255)) break p000e0635;
+		if (!CNDbzero(12,1)) break p000e0635;
+ 		ACCwriteln(442);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11583,43 +11580,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(67)) break p000e0636;
  		}
-		if (!CNDnoteq(51,255)) break p000e0636;
-		if (!CNDabsent(getFlag(51))) break p000e0636;
- 		ACCwriteln(445);
+		if (!CNDnoteq(34,255)) break p000e0636;
+		if (!CNDeq(51,255)) break p000e0636;
+ 		ACCwriteln(443);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CORTA _
+	// APAGA _
 	p000e0637:
 	{
  		if (skipdoall('p000e0637')) break p000e0637;
  		if (in_response)
 		{
-			if (!CNDverb(52)) break p000e0637;
+			if (!CNDverb(67)) break p000e0637;
  		}
-		if (!CNDeq(34,255)) break p000e0637;
-		if (!CNDbnotzero(12,1)) break p000e0637;
- 		ACCwriteln(446);
+		if (!CNDnoteq(51,255)) break p000e0637;
+		if (!CNDpresent(getFlag(51))) break p000e0637;
+ 		ACCwriteln(444);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CORTA _
+	// APAGA _
 	p000e0638:
 	{
  		if (skipdoall('p000e0638')) break p000e0638;
  		if (in_response)
 		{
-			if (!CNDverb(52)) break p000e0638;
+			if (!CNDverb(67)) break p000e0638;
  		}
-		if (!CNDeq(34,255)) break p000e0638;
-		if (!CNDbzero(12,1)) break p000e0638;
- 		ACCwriteln(447);
+		if (!CNDnoteq(51,255)) break p000e0638;
+		if (!CNDabsent(getFlag(51))) break p000e0638;
+ 		ACCwriteln(445);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11634,10 +11631,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(52)) break p000e0639;
  		}
-		if (!CNDnoteq(51,255)) break p000e0639;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0639;
-		if (!CNDpresent(getFlag(51))) break p000e0639;
- 		ACCwriteln(448);
+		if (!CNDeq(34,255)) break p000e0639;
+		if (!CNDbnotzero(12,1)) break p000e0639;
+ 		ACCwriteln(446);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11652,10 +11648,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(52)) break p000e0640;
  		}
-		if (!CNDnoteq(51,255)) break p000e0640;
-		if (!CNDonotzero(getFlag(51),21)) break p000e0640;
-		if (!CNDpresent(getFlag(51))) break p000e0640;
- 		ACCwriteln(449);
+		if (!CNDeq(34,255)) break p000e0640;
+		if (!CNDbzero(12,1)) break p000e0640;
+ 		ACCwriteln(447);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11672,8 +11667,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0641;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0641;
-		if (!CNDabsent(getFlag(51))) break p000e0641;
- 		ACCwriteln(450);
+		if (!CNDpresent(getFlag(51))) break p000e0641;
+ 		ACCwriteln(448);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11688,9 +11683,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(52)) break p000e0642;
  		}
-		if (!CNDnoteq(34,255)) break p000e0642;
-		if (!CNDeq(51,255)) break p000e0642;
- 		ACCwriteln(451);
+		if (!CNDnoteq(51,255)) break p000e0642;
+		if (!CNDonotzero(getFlag(51),21)) break p000e0642;
+		if (!CNDpresent(getFlag(51))) break p000e0642;
+ 		ACCwriteln(449);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11706,8 +11702,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(52)) break p000e0643;
  		}
 		if (!CNDnoteq(51,255)) break p000e0643;
-		if (!CNDpresent(getFlag(51))) break p000e0643;
- 		ACCwriteln(452);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0643;
+		if (!CNDabsent(getFlag(51))) break p000e0643;
+ 		ACCwriteln(450);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11722,43 +11719,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(52)) break p000e0644;
  		}
-		if (!CNDnoteq(51,255)) break p000e0644;
-		if (!CNDabsent(getFlag(51))) break p000e0644;
- 		ACCwriteln(453);
+		if (!CNDnoteq(34,255)) break p000e0644;
+		if (!CNDeq(51,255)) break p000e0644;
+ 		ACCwriteln(451);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ANUDA _
+	// CORTA _
 	p000e0645:
 	{
  		if (skipdoall('p000e0645')) break p000e0645;
  		if (in_response)
 		{
-			if (!CNDverb(54)) break p000e0645;
+			if (!CNDverb(52)) break p000e0645;
  		}
-		if (!CNDeq(34,255)) break p000e0645;
-		if (!CNDbnotzero(12,1)) break p000e0645;
- 		ACCwriteln(454);
+		if (!CNDnoteq(51,255)) break p000e0645;
+		if (!CNDpresent(getFlag(51))) break p000e0645;
+ 		ACCwriteln(452);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ANUDA _
+	// CORTA _
 	p000e0646:
 	{
  		if (skipdoall('p000e0646')) break p000e0646;
  		if (in_response)
 		{
-			if (!CNDverb(54)) break p000e0646;
+			if (!CNDverb(52)) break p000e0646;
  		}
-		if (!CNDeq(34,255)) break p000e0646;
-		if (!CNDbzero(12,1)) break p000e0646;
- 		ACCwriteln(455);
+		if (!CNDnoteq(51,255)) break p000e0646;
+		if (!CNDabsent(getFlag(51))) break p000e0646;
+ 		ACCwriteln(453);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11773,10 +11770,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(54)) break p000e0647;
  		}
-		if (!CNDnoteq(51,255)) break p000e0647;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0647;
-		if (!CNDpresent(getFlag(51))) break p000e0647;
- 		ACCwriteln(456);
+		if (!CNDeq(34,255)) break p000e0647;
+		if (!CNDbnotzero(12,1)) break p000e0647;
+ 		ACCwriteln(454);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11791,10 +11787,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(54)) break p000e0648;
  		}
-		if (!CNDnoteq(51,255)) break p000e0648;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0648;
-		if (!CNDabsent(getFlag(51))) break p000e0648;
- 		ACCwriteln(457);
+		if (!CNDeq(34,255)) break p000e0648;
+		if (!CNDbzero(12,1)) break p000e0648;
+ 		ACCwriteln(455);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11809,9 +11804,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(54)) break p000e0649;
  		}
-		if (!CNDnoteq(34,255)) break p000e0649;
-		if (!CNDeq(51,255)) break p000e0649;
- 		ACCwriteln(458);
+		if (!CNDnoteq(51,255)) break p000e0649;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0649;
+		if (!CNDpresent(getFlag(51))) break p000e0649;
+ 		ACCwriteln(456);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11827,8 +11823,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(54)) break p000e0650;
  		}
 		if (!CNDnoteq(51,255)) break p000e0650;
-		if (!CNDpresent(getFlag(51))) break p000e0650;
- 		ACCwriteln(459);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0650;
+		if (!CNDabsent(getFlag(51))) break p000e0650;
+ 		ACCwriteln(457);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11843,43 +11840,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(54)) break p000e0651;
  		}
-		if (!CNDnoteq(51,255)) break p000e0651;
-		if (!CNDabsent(getFlag(51))) break p000e0651;
- 		ACCwriteln(460);
+		if (!CNDnoteq(34,255)) break p000e0651;
+		if (!CNDeq(51,255)) break p000e0651;
+ 		ACCwriteln(458);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESATA _
+	// ANUDA _
 	p000e0652:
 	{
  		if (skipdoall('p000e0652')) break p000e0652;
  		if (in_response)
 		{
-			if (!CNDverb(98)) break p000e0652;
+			if (!CNDverb(54)) break p000e0652;
  		}
-		if (!CNDeq(34,255)) break p000e0652;
-		if (!CNDbnotzero(12,1)) break p000e0652;
- 		ACCwriteln(461);
+		if (!CNDnoteq(51,255)) break p000e0652;
+		if (!CNDpresent(getFlag(51))) break p000e0652;
+ 		ACCwriteln(459);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESATA _
+	// ANUDA _
 	p000e0653:
 	{
  		if (skipdoall('p000e0653')) break p000e0653;
  		if (in_response)
 		{
-			if (!CNDverb(98)) break p000e0653;
+			if (!CNDverb(54)) break p000e0653;
  		}
-		if (!CNDeq(34,255)) break p000e0653;
-		if (!CNDbzero(12,1)) break p000e0653;
- 		ACCwriteln(462);
+		if (!CNDnoteq(51,255)) break p000e0653;
+		if (!CNDabsent(getFlag(51))) break p000e0653;
+ 		ACCwriteln(460);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11894,10 +11891,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(98)) break p000e0654;
  		}
-		if (!CNDnoteq(51,255)) break p000e0654;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0654;
-		if (!CNDpresent(getFlag(51))) break p000e0654;
- 		ACCwriteln(463);
+		if (!CNDeq(34,255)) break p000e0654;
+		if (!CNDbnotzero(12,1)) break p000e0654;
+ 		ACCwriteln(461);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11912,10 +11908,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(98)) break p000e0655;
  		}
-		if (!CNDnoteq(51,255)) break p000e0655;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0655;
-		if (!CNDabsent(getFlag(51))) break p000e0655;
- 		ACCwriteln(464);
+		if (!CNDeq(34,255)) break p000e0655;
+		if (!CNDbzero(12,1)) break p000e0655;
+ 		ACCwriteln(462);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11930,9 +11925,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(98)) break p000e0656;
  		}
-		if (!CNDnoteq(34,255)) break p000e0656;
-		if (!CNDeq(51,255)) break p000e0656;
- 		ACCwriteln(465);
+		if (!CNDnoteq(51,255)) break p000e0656;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0656;
+		if (!CNDpresent(getFlag(51))) break p000e0656;
+ 		ACCwriteln(463);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11948,8 +11944,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(98)) break p000e0657;
  		}
 		if (!CNDnoteq(51,255)) break p000e0657;
-		if (!CNDpresent(getFlag(51))) break p000e0657;
- 		ACCwriteln(466);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0657;
+		if (!CNDabsent(getFlag(51))) break p000e0657;
+ 		ACCwriteln(464);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -11964,43 +11961,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(98)) break p000e0658;
  		}
-		if (!CNDnoteq(51,255)) break p000e0658;
-		if (!CNDabsent(getFlag(51))) break p000e0658;
- 		ACCwriteln(467);
+		if (!CNDnoteq(34,255)) break p000e0658;
+		if (!CNDeq(51,255)) break p000e0658;
+ 		ACCwriteln(465);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// LLENA _
+	// DESATA _
 	p000e0659:
 	{
  		if (skipdoall('p000e0659')) break p000e0659;
  		if (in_response)
 		{
-			if (!CNDverb(55)) break p000e0659;
+			if (!CNDverb(98)) break p000e0659;
  		}
-		if (!CNDeq(34,255)) break p000e0659;
-		if (!CNDbnotzero(12,1)) break p000e0659;
- 		ACCwriteln(468);
+		if (!CNDnoteq(51,255)) break p000e0659;
+		if (!CNDpresent(getFlag(51))) break p000e0659;
+ 		ACCwriteln(466);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// LLENA _
+	// DESATA _
 	p000e0660:
 	{
  		if (skipdoall('p000e0660')) break p000e0660;
  		if (in_response)
 		{
-			if (!CNDverb(55)) break p000e0660;
+			if (!CNDverb(98)) break p000e0660;
  		}
-		if (!CNDeq(34,255)) break p000e0660;
-		if (!CNDbzero(12,1)) break p000e0660;
- 		ACCwriteln(469);
+		if (!CNDnoteq(51,255)) break p000e0660;
+		if (!CNDabsent(getFlag(51))) break p000e0660;
+ 		ACCwriteln(467);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12015,9 +12012,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(55)) break p000e0661;
  		}
-		if (!CNDnoteq(34,255)) break p000e0661;
-		if (!CNDeq(51,255)) break p000e0661;
- 		ACCwriteln(470);
+		if (!CNDeq(34,255)) break p000e0661;
+		if (!CNDbnotzero(12,1)) break p000e0661;
+ 		ACCwriteln(468);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12032,10 +12029,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(55)) break p000e0662;
  		}
-		if (!CNDnoteq(51,255)) break p000e0662;
-		if (!CNDpresent(getFlag(51))) break p000e0662;
-		if (!CNDonotzero(getFlag(51),2)) break p000e0662;
- 		ACCwriteln(471);
+		if (!CNDeq(34,255)) break p000e0662;
+		if (!CNDbzero(12,1)) break p000e0662;
+ 		ACCwriteln(469);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12050,10 +12046,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(55)) break p000e0663;
  		}
-		if (!CNDnoteq(51,255)) break p000e0663;
-		if (!CNDpresent(getFlag(51))) break p000e0663;
-		if (!CNDozero(getFlag(51),2)) break p000e0663;
- 		ACCwriteln(472);
+		if (!CNDnoteq(34,255)) break p000e0663;
+		if (!CNDeq(51,255)) break p000e0663;
+ 		ACCwriteln(470);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12069,7 +12064,43 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(55)) break p000e0664;
  		}
 		if (!CNDnoteq(51,255)) break p000e0664;
-		if (!CNDabsent(getFlag(51))) break p000e0664;
+		if (!CNDpresent(getFlag(51))) break p000e0664;
+		if (!CNDonotzero(getFlag(51),2)) break p000e0664;
+ 		ACCwriteln(471);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// LLENA _
+	p000e0665:
+	{
+ 		if (skipdoall('p000e0665')) break p000e0665;
+ 		if (in_response)
+		{
+			if (!CNDverb(55)) break p000e0665;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0665;
+		if (!CNDpresent(getFlag(51))) break p000e0665;
+		if (!CNDozero(getFlag(51),2)) break p000e0665;
+ 		ACCwriteln(472);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// LLENA _
+	p000e0666:
+	{
+ 		if (skipdoall('p000e0666')) break p000e0666;
+ 		if (in_response)
+		{
+			if (!CNDverb(55)) break p000e0666;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0666;
+		if (!CNDabsent(getFlag(51))) break p000e0666;
  		ACCwriteln(473);
  		ACCdone();
 		break pro000_restart;
@@ -12078,12 +12109,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// BANAR _
-	p000e0665:
+	p000e0667:
 	{
- 		if (skipdoall('p000e0665')) break p000e0665;
+ 		if (skipdoall('p000e0667')) break p000e0667;
  		if (in_response)
 		{
-			if (!CNDverb(56)) break p000e0665;
+			if (!CNDverb(56)) break p000e0667;
  		}
  		ACCwriteln(474);
  		ACCdone();
@@ -12093,48 +12124,14 @@ pro000_restart: while(process_restart)
 	}
 
 	// ESCALA _
-	p000e0666:
-	{
- 		if (skipdoall('p000e0666')) break p000e0666;
- 		if (in_response)
-		{
-			if (!CNDverb(57)) break p000e0666;
- 		}
- 		ACCwriteln(475);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// RETORCER _
-	p000e0667:
-	{
- 		if (skipdoall('p000e0667')) break p000e0667;
- 		if (in_response)
-		{
-			if (!CNDverb(58)) break p000e0667;
- 		}
-		if (!CNDeq(34,255)) break p000e0667;
-		if (!CNDbnotzero(12,1)) break p000e0667;
- 		ACCwriteln(476);
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// RETORCER _
 	p000e0668:
 	{
  		if (skipdoall('p000e0668')) break p000e0668;
  		if (in_response)
 		{
-			if (!CNDverb(58)) break p000e0668;
+			if (!CNDverb(57)) break p000e0668;
  		}
-		if (!CNDeq(34,255)) break p000e0668;
-		if (!CNDbzero(12,1)) break p000e0668;
- 		ACCwriteln(477);
+ 		ACCwriteln(475);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12149,10 +12146,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(58)) break p000e0669;
  		}
-		if (!CNDnoteq(51,255)) break p000e0669;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0669;
-		if (!CNDpresent(getFlag(51))) break p000e0669;
- 		ACCwriteln(478);
+		if (!CNDeq(34,255)) break p000e0669;
+		if (!CNDbnotzero(12,1)) break p000e0669;
+ 		ACCwriteln(476);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12167,10 +12163,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(58)) break p000e0670;
  		}
-		if (!CNDnoteq(51,255)) break p000e0670;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0670;
-		if (!CNDabsent(getFlag(51))) break p000e0670;
- 		ACCwriteln(479);
+		if (!CNDeq(34,255)) break p000e0670;
+		if (!CNDbzero(12,1)) break p000e0670;
+ 		ACCwriteln(477);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12185,9 +12180,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(58)) break p000e0671;
  		}
-		if (!CNDnoteq(34,255)) break p000e0671;
-		if (!CNDeq(51,255)) break p000e0671;
- 		ACCwriteln(480);
+		if (!CNDnoteq(51,255)) break p000e0671;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0671;
+		if (!CNDpresent(getFlag(51))) break p000e0671;
+ 		ACCwriteln(478);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12203,8 +12199,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(58)) break p000e0672;
  		}
 		if (!CNDnoteq(51,255)) break p000e0672;
-		if (!CNDpresent(getFlag(51))) break p000e0672;
- 		ACCwriteln(481);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0672;
+		if (!CNDabsent(getFlag(51))) break p000e0672;
+ 		ACCwriteln(479);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12219,43 +12216,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(58)) break p000e0673;
  		}
-		if (!CNDnoteq(51,255)) break p000e0673;
-		if (!CNDabsent(getFlag(51))) break p000e0673;
- 		ACCwriteln(482);
+		if (!CNDnoteq(34,255)) break p000e0673;
+		if (!CNDeq(51,255)) break p000e0673;
+ 		ACCwriteln(480);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// APRETAR _
+	// RETORCER _
 	p000e0674:
 	{
  		if (skipdoall('p000e0674')) break p000e0674;
  		if (in_response)
 		{
-			if (!CNDverb(111)) break p000e0674;
+			if (!CNDverb(58)) break p000e0674;
  		}
-		if (!CNDeq(34,255)) break p000e0674;
-		if (!CNDbnotzero(12,1)) break p000e0674;
- 		ACCwriteln(483);
+		if (!CNDnoteq(51,255)) break p000e0674;
+		if (!CNDpresent(getFlag(51))) break p000e0674;
+ 		ACCwriteln(481);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// APRETAR _
+	// RETORCER _
 	p000e0675:
 	{
  		if (skipdoall('p000e0675')) break p000e0675;
  		if (in_response)
 		{
-			if (!CNDverb(111)) break p000e0675;
+			if (!CNDverb(58)) break p000e0675;
  		}
-		if (!CNDeq(34,255)) break p000e0675;
-		if (!CNDbzero(12,1)) break p000e0675;
- 		ACCwriteln(484);
+		if (!CNDnoteq(51,255)) break p000e0675;
+		if (!CNDabsent(getFlag(51))) break p000e0675;
+ 		ACCwriteln(482);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12270,10 +12267,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(111)) break p000e0676;
  		}
-		if (!CNDnoteq(51,255)) break p000e0676;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0676;
-		if (!CNDpresent(getFlag(51))) break p000e0676;
- 		ACCwriteln(485);
+		if (!CNDeq(34,255)) break p000e0676;
+		if (!CNDbnotzero(12,1)) break p000e0676;
+ 		ACCwriteln(483);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12288,10 +12284,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(111)) break p000e0677;
  		}
-		if (!CNDnoteq(51,255)) break p000e0677;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0677;
-		if (!CNDabsent(getFlag(51))) break p000e0677;
- 		ACCwriteln(486);
+		if (!CNDeq(34,255)) break p000e0677;
+		if (!CNDbzero(12,1)) break p000e0677;
+ 		ACCwriteln(484);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12306,9 +12301,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(111)) break p000e0678;
  		}
-		if (!CNDnoteq(34,255)) break p000e0678;
-		if (!CNDeq(51,255)) break p000e0678;
- 		ACCwriteln(487);
+		if (!CNDnoteq(51,255)) break p000e0678;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0678;
+		if (!CNDpresent(getFlag(51))) break p000e0678;
+ 		ACCwriteln(485);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12324,8 +12320,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(111)) break p000e0679;
  		}
 		if (!CNDnoteq(51,255)) break p000e0679;
-		if (!CNDpresent(getFlag(51))) break p000e0679;
- 		ACCwriteln(488);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0679;
+		if (!CNDabsent(getFlag(51))) break p000e0679;
+ 		ACCwriteln(486);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12340,43 +12337,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(111)) break p000e0680;
  		}
-		if (!CNDnoteq(51,255)) break p000e0680;
-		if (!CNDabsent(getFlag(51))) break p000e0680;
- 		ACCwriteln(489);
+		if (!CNDnoteq(34,255)) break p000e0680;
+		if (!CNDeq(51,255)) break p000e0680;
+ 		ACCwriteln(487);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// BESA _
+	// APRETAR _
 	p000e0681:
 	{
  		if (skipdoall('p000e0681')) break p000e0681;
  		if (in_response)
 		{
-			if (!CNDverb(62)) break p000e0681;
+			if (!CNDverb(111)) break p000e0681;
  		}
-		if (!CNDeq(34,255)) break p000e0681;
-		if (!CNDbnotzero(12,1)) break p000e0681;
- 		ACCwriteln(490);
+		if (!CNDnoteq(51,255)) break p000e0681;
+		if (!CNDpresent(getFlag(51))) break p000e0681;
+ 		ACCwriteln(488);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// BESA _
+	// APRETAR _
 	p000e0682:
 	{
  		if (skipdoall('p000e0682')) break p000e0682;
  		if (in_response)
 		{
-			if (!CNDverb(62)) break p000e0682;
+			if (!CNDverb(111)) break p000e0682;
  		}
-		if (!CNDeq(34,255)) break p000e0682;
-		if (!CNDbzero(12,1)) break p000e0682;
- 		ACCwriteln(491);
+		if (!CNDnoteq(51,255)) break p000e0682;
+		if (!CNDabsent(getFlag(51))) break p000e0682;
+ 		ACCwriteln(489);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12391,11 +12388,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(62)) break p000e0683;
  		}
-		if (!CNDnoteq(34,255)) break p000e0683;
-		if (!CNDnoteq(51,255)) break p000e0683;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0683;
-		if (!CNDpresent(getFlag(51))) break p000e0683;
- 		ACCwriteln(492);
+		if (!CNDeq(34,255)) break p000e0683;
+		if (!CNDbnotzero(12,1)) break p000e0683;
+ 		ACCwriteln(490);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12410,11 +12405,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(62)) break p000e0684;
  		}
-		if (!CNDnoteq(34,255)) break p000e0684;
-		if (!CNDnoteq(51,255)) break p000e0684;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0684;
-		if (!CNDabsent(getFlag(51))) break p000e0684;
- 		ACCwriteln(493);
+		if (!CNDeq(34,255)) break p000e0684;
+		if (!CNDbzero(12,1)) break p000e0684;
+ 		ACCwriteln(491);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12430,8 +12423,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(62)) break p000e0685;
  		}
 		if (!CNDnoteq(34,255)) break p000e0685;
-		if (!CNDeq(51,255)) break p000e0685;
- 		ACCwriteln(494);
+		if (!CNDnoteq(51,255)) break p000e0685;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0685;
+		if (!CNDpresent(getFlag(51))) break p000e0685;
+ 		ACCwriteln(492);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12446,9 +12441,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(62)) break p000e0686;
  		}
+		if (!CNDnoteq(34,255)) break p000e0686;
 		if (!CNDnoteq(51,255)) break p000e0686;
-		if (!CNDpresent(getFlag(51))) break p000e0686;
- 		ACCwriteln(495);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0686;
+		if (!CNDabsent(getFlag(51))) break p000e0686;
+ 		ACCwriteln(493);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12463,43 +12460,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(62)) break p000e0687;
  		}
-		if (!CNDnoteq(51,255)) break p000e0687;
-		if (!CNDabsent(getFlag(51))) break p000e0687;
- 		ACCwriteln(496);
+		if (!CNDnoteq(34,255)) break p000e0687;
+		if (!CNDeq(51,255)) break p000e0687;
+ 		ACCwriteln(494);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ABRAZA _
+	// BESA _
 	p000e0688:
 	{
  		if (skipdoall('p000e0688')) break p000e0688;
  		if (in_response)
 		{
-			if (!CNDverb(105)) break p000e0688;
+			if (!CNDverb(62)) break p000e0688;
  		}
-		if (!CNDeq(34,255)) break p000e0688;
-		if (!CNDbnotzero(12,1)) break p000e0688;
- 		ACCwriteln(497);
+		if (!CNDnoteq(51,255)) break p000e0688;
+		if (!CNDpresent(getFlag(51))) break p000e0688;
+ 		ACCwriteln(495);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ABRAZA _
+	// BESA _
 	p000e0689:
 	{
  		if (skipdoall('p000e0689')) break p000e0689;
  		if (in_response)
 		{
-			if (!CNDverb(105)) break p000e0689;
+			if (!CNDverb(62)) break p000e0689;
  		}
-		if (!CNDeq(34,255)) break p000e0689;
-		if (!CNDbzero(12,1)) break p000e0689;
- 		ACCwriteln(498);
+		if (!CNDnoteq(51,255)) break p000e0689;
+		if (!CNDabsent(getFlag(51))) break p000e0689;
+ 		ACCwriteln(496);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12514,11 +12511,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(105)) break p000e0690;
  		}
-		if (!CNDnoteq(34,255)) break p000e0690;
-		if (!CNDnoteq(51,255)) break p000e0690;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0690;
-		if (!CNDpresent(getFlag(51))) break p000e0690;
- 		ACCwriteln(499);
+		if (!CNDeq(34,255)) break p000e0690;
+		if (!CNDbnotzero(12,1)) break p000e0690;
+ 		ACCwriteln(497);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12533,11 +12528,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(105)) break p000e0691;
  		}
-		if (!CNDnoteq(34,255)) break p000e0691;
-		if (!CNDnoteq(51,255)) break p000e0691;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0691;
-		if (!CNDabsent(getFlag(51))) break p000e0691;
- 		ACCwriteln(500);
+		if (!CNDeq(34,255)) break p000e0691;
+		if (!CNDbzero(12,1)) break p000e0691;
+ 		ACCwriteln(498);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12553,8 +12546,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(105)) break p000e0692;
  		}
 		if (!CNDnoteq(34,255)) break p000e0692;
-		if (!CNDeq(51,255)) break p000e0692;
- 		ACCwriteln(501);
+		if (!CNDnoteq(51,255)) break p000e0692;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0692;
+		if (!CNDpresent(getFlag(51))) break p000e0692;
+ 		ACCwriteln(499);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12569,9 +12564,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(105)) break p000e0693;
  		}
+		if (!CNDnoteq(34,255)) break p000e0693;
 		if (!CNDnoteq(51,255)) break p000e0693;
-		if (!CNDpresent(getFlag(51))) break p000e0693;
- 		ACCwriteln(502);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0693;
+		if (!CNDabsent(getFlag(51))) break p000e0693;
+ 		ACCwriteln(500);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12586,43 +12583,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(105)) break p000e0694;
  		}
-		if (!CNDnoteq(51,255)) break p000e0694;
-		if (!CNDabsent(getFlag(51))) break p000e0694;
- 		ACCwriteln(503);
+		if (!CNDnoteq(34,255)) break p000e0694;
+		if (!CNDeq(51,255)) break p000e0694;
+ 		ACCwriteln(501);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ACTIVA _
+	// ABRAZA _
 	p000e0695:
 	{
  		if (skipdoall('p000e0695')) break p000e0695;
  		if (in_response)
 		{
-			if (!CNDverb(103)) break p000e0695;
+			if (!CNDverb(105)) break p000e0695;
  		}
-		if (!CNDeq(34,255)) break p000e0695;
-		if (!CNDbnotzero(12,1)) break p000e0695;
- 		ACCwriteln(504);
+		if (!CNDnoteq(51,255)) break p000e0695;
+		if (!CNDpresent(getFlag(51))) break p000e0695;
+ 		ACCwriteln(502);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ACTIVA _
+	// ABRAZA _
 	p000e0696:
 	{
  		if (skipdoall('p000e0696')) break p000e0696;
  		if (in_response)
 		{
-			if (!CNDverb(103)) break p000e0696;
+			if (!CNDverb(105)) break p000e0696;
  		}
-		if (!CNDeq(34,255)) break p000e0696;
-		if (!CNDbzero(12,1)) break p000e0696;
- 		ACCwriteln(505);
+		if (!CNDnoteq(51,255)) break p000e0696;
+		if (!CNDabsent(getFlag(51))) break p000e0696;
+ 		ACCwriteln(503);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12637,9 +12634,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(103)) break p000e0697;
  		}
-		if (!CNDnoteq(34,255)) break p000e0697;
-		if (!CNDeq(51,255)) break p000e0697;
- 		ACCwriteln(506);
+		if (!CNDeq(34,255)) break p000e0697;
+		if (!CNDbnotzero(12,1)) break p000e0697;
+ 		ACCwriteln(504);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12654,12 +12651,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(103)) break p000e0698;
  		}
-		if (!CNDnoteq(51,255)) break p000e0698;
-		if (!CNDpresent(getFlag(51))) break p000e0698;
-		if (!CNDonotzero(getFlag(51),19)) break p000e0698;
-		if (!CNDozero(getFlag(51),20)) break p000e0698;
- 		ACCoset(getFlag(51),20);
- 		ACCwriteln(507);
+		if (!CNDeq(34,255)) break p000e0698;
+		if (!CNDbzero(12,1)) break p000e0698;
+ 		ACCwriteln(505);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12674,11 +12668,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(103)) break p000e0699;
  		}
-		if (!CNDnoteq(51,255)) break p000e0699;
-		if (!CNDpresent(getFlag(51))) break p000e0699;
-		if (!CNDonotzero(getFlag(51),19)) break p000e0699;
-		if (!CNDonotzero(getFlag(51),20)) break p000e0699;
- 		ACCwriteln(508);
+		if (!CNDnoteq(34,255)) break p000e0699;
+		if (!CNDeq(51,255)) break p000e0699;
+ 		ACCwriteln(506);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12695,7 +12687,10 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0700;
 		if (!CNDpresent(getFlag(51))) break p000e0700;
- 		ACCwriteln(509);
+		if (!CNDonotzero(getFlag(51),19)) break p000e0700;
+		if (!CNDozero(getFlag(51),20)) break p000e0700;
+ 		ACCoset(getFlag(51),20);
+ 		ACCwriteln(507);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12711,42 +12706,44 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(103)) break p000e0701;
  		}
 		if (!CNDnoteq(51,255)) break p000e0701;
-		if (!CNDabsent(getFlag(51))) break p000e0701;
- 		ACCwriteln(510);
+		if (!CNDpresent(getFlag(51))) break p000e0701;
+		if (!CNDonotzero(getFlag(51),19)) break p000e0701;
+		if (!CNDonotzero(getFlag(51),20)) break p000e0701;
+ 		ACCwriteln(508);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESACTIVA _
+	// ACTIVA _
 	p000e0702:
 	{
  		if (skipdoall('p000e0702')) break p000e0702;
  		if (in_response)
 		{
-			if (!CNDverb(104)) break p000e0702;
+			if (!CNDverb(103)) break p000e0702;
  		}
-		if (!CNDeq(34,255)) break p000e0702;
-		if (!CNDbnotzero(12,1)) break p000e0702;
- 		ACCwriteln(511);
+		if (!CNDnoteq(51,255)) break p000e0702;
+		if (!CNDpresent(getFlag(51))) break p000e0702;
+ 		ACCwriteln(509);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESACTIVA _
+	// ACTIVA _
 	p000e0703:
 	{
  		if (skipdoall('p000e0703')) break p000e0703;
  		if (in_response)
 		{
-			if (!CNDverb(104)) break p000e0703;
+			if (!CNDverb(103)) break p000e0703;
  		}
-		if (!CNDeq(34,255)) break p000e0703;
-		if (!CNDbzero(12,1)) break p000e0703;
- 		ACCwriteln(512);
+		if (!CNDnoteq(51,255)) break p000e0703;
+		if (!CNDabsent(getFlag(51))) break p000e0703;
+ 		ACCwriteln(510);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12761,9 +12758,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(104)) break p000e0704;
  		}
-		if (!CNDnoteq(34,255)) break p000e0704;
-		if (!CNDeq(51,255)) break p000e0704;
- 		ACCwriteln(513);
+		if (!CNDeq(34,255)) break p000e0704;
+		if (!CNDbnotzero(12,1)) break p000e0704;
+ 		ACCwriteln(511);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12778,12 +12775,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(104)) break p000e0705;
  		}
-		if (!CNDnoteq(51,255)) break p000e0705;
-		if (!CNDpresent(getFlag(51))) break p000e0705;
-		if (!CNDonotzero(getFlag(51),19)) break p000e0705;
-		if (!CNDonotzero(getFlag(51),20)) break p000e0705;
- 		ACCoclear(getFlag(51),20);
- 		ACCwriteln(514);
+		if (!CNDeq(34,255)) break p000e0705;
+		if (!CNDbzero(12,1)) break p000e0705;
+ 		ACCwriteln(512);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12798,11 +12792,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(104)) break p000e0706;
  		}
-		if (!CNDnoteq(51,255)) break p000e0706;
-		if (!CNDpresent(getFlag(51))) break p000e0706;
-		if (!CNDonotzero(getFlag(51),19)) break p000e0706;
-		if (!CNDozero(getFlag(51),20)) break p000e0706;
- 		ACCwriteln(515);
+		if (!CNDnoteq(34,255)) break p000e0706;
+		if (!CNDeq(51,255)) break p000e0706;
+ 		ACCwriteln(513);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12819,7 +12811,10 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0707;
 		if (!CNDpresent(getFlag(51))) break p000e0707;
- 		ACCwriteln(516);
+		if (!CNDonotzero(getFlag(51),19)) break p000e0707;
+		if (!CNDonotzero(getFlag(51),20)) break p000e0707;
+ 		ACCoclear(getFlag(51),20);
+ 		ACCwriteln(514);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12835,42 +12830,44 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(104)) break p000e0708;
  		}
 		if (!CNDnoteq(51,255)) break p000e0708;
-		if (!CNDabsent(getFlag(51))) break p000e0708;
- 		ACCwriteln(517);
+		if (!CNDpresent(getFlag(51))) break p000e0708;
+		if (!CNDonotzero(getFlag(51),19)) break p000e0708;
+		if (!CNDozero(getFlag(51),20)) break p000e0708;
+ 		ACCwriteln(515);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ABRE _
+	// DESACTIVA _
 	p000e0709:
 	{
  		if (skipdoall('p000e0709')) break p000e0709;
  		if (in_response)
 		{
-			if (!CNDverb(64)) break p000e0709;
+			if (!CNDverb(104)) break p000e0709;
  		}
-		if (!CNDeq(34,255)) break p000e0709;
-		if (!CNDbnotzero(12,1)) break p000e0709;
- 		ACCwriteln(518);
+		if (!CNDnoteq(51,255)) break p000e0709;
+		if (!CNDpresent(getFlag(51))) break p000e0709;
+ 		ACCwriteln(516);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ABRE _
+	// DESACTIVA _
 	p000e0710:
 	{
  		if (skipdoall('p000e0710')) break p000e0710;
  		if (in_response)
 		{
-			if (!CNDverb(64)) break p000e0710;
+			if (!CNDverb(104)) break p000e0710;
  		}
-		if (!CNDeq(34,255)) break p000e0710;
-		if (!CNDbzero(12,1)) break p000e0710;
- 		ACCwriteln(519);
+		if (!CNDnoteq(51,255)) break p000e0710;
+		if (!CNDabsent(getFlag(51))) break p000e0710;
+ 		ACCwriteln(517);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12885,9 +12882,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(64)) break p000e0711;
  		}
-		if (!CNDnoteq(34,255)) break p000e0711;
-		if (!CNDeq(51,255)) break p000e0711;
- 		ACCwriteln(520);
+		if (!CNDeq(34,255)) break p000e0711;
+		if (!CNDbnotzero(12,1)) break p000e0711;
+ 		ACCwriteln(518);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12902,13 +12899,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(64)) break p000e0712;
  		}
-		if (!CNDnoteq(51,255)) break p000e0712;
-		if (!CNDpresent(getFlag(51))) break p000e0712;
-		if (!CNDonotzero(getFlag(51),13)) break p000e0712;
-		if (!CNDozero(getFlag(51),14)) break p000e0712;
-		if (!CNDozero(getFlag(51),10)) break p000e0712;
- 		ACCoset(getFlag(51),14);
- 		ACCwriteln(521);
+		if (!CNDeq(34,255)) break p000e0712;
+		if (!CNDbzero(12,1)) break p000e0712;
+ 		ACCwriteln(519);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12923,12 +12916,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(64)) break p000e0713;
  		}
-		if (!CNDnoteq(51,255)) break p000e0713;
-		if (!CNDpresent(getFlag(51))) break p000e0713;
-		if (!CNDonotzero(getFlag(51),13)) break p000e0713;
-		if (!CNDozero(getFlag(51),14)) break p000e0713;
-		if (!CNDonotzero(getFlag(51),10)) break p000e0713;
- 		ACCwriteln(522);
+		if (!CNDnoteq(34,255)) break p000e0713;
+		if (!CNDeq(51,255)) break p000e0713;
+ 		ACCwriteln(520);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12946,8 +12936,10 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p000e0714;
 		if (!CNDpresent(getFlag(51))) break p000e0714;
 		if (!CNDonotzero(getFlag(51),13)) break p000e0714;
-		if (!CNDonotzero(getFlag(51),14)) break p000e0714;
- 		ACCwriteln(523);
+		if (!CNDozero(getFlag(51),14)) break p000e0714;
+		if (!CNDozero(getFlag(51),10)) break p000e0714;
+ 		ACCoset(getFlag(51),14);
+ 		ACCwriteln(521);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12965,8 +12957,9 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p000e0715;
 		if (!CNDpresent(getFlag(51))) break p000e0715;
 		if (!CNDonotzero(getFlag(51),13)) break p000e0715;
-		if (!CNDonotzero(getFlag(51),14)) break p000e0715;
- 		ACCwriteln(524);
+		if (!CNDozero(getFlag(51),14)) break p000e0715;
+		if (!CNDonotzero(getFlag(51),10)) break p000e0715;
+ 		ACCwriteln(522);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12983,7 +12976,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0716;
 		if (!CNDpresent(getFlag(51))) break p000e0716;
- 		ACCwriteln(525);
+		if (!CNDonotzero(getFlag(51),13)) break p000e0716;
+		if (!CNDonotzero(getFlag(51),14)) break p000e0716;
+ 		ACCwriteln(523);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -12999,41 +12994,44 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(64)) break p000e0717;
  		}
 		if (!CNDnoteq(51,255)) break p000e0717;
-		if (!CNDabsent(getFlag(51))) break p000e0717;
- 		ACCwriteln(526);
+		if (!CNDpresent(getFlag(51))) break p000e0717;
+		if (!CNDonotzero(getFlag(51),13)) break p000e0717;
+		if (!CNDonotzero(getFlag(51),14)) break p000e0717;
+ 		ACCwriteln(524);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CERRAR _
+	// ABRE _
 	p000e0718:
 	{
  		if (skipdoall('p000e0718')) break p000e0718;
  		if (in_response)
 		{
-			if (!CNDverb(65)) break p000e0718;
+			if (!CNDverb(64)) break p000e0718;
  		}
-		if (!CNDeq(34,255)) break p000e0718;
- 		ACCwriteln(527);
+		if (!CNDnoteq(51,255)) break p000e0718;
+		if (!CNDpresent(getFlag(51))) break p000e0718;
+ 		ACCwriteln(525);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CERRAR _
+	// ABRE _
 	p000e0719:
 	{
  		if (skipdoall('p000e0719')) break p000e0719;
  		if (in_response)
 		{
-			if (!CNDverb(65)) break p000e0719;
+			if (!CNDverb(64)) break p000e0719;
  		}
-		if (!CNDeq(34,255)) break p000e0719;
-		if (!CNDbzero(12,1)) break p000e0719;
- 		ACCwriteln(528);
+		if (!CNDnoteq(51,255)) break p000e0719;
+		if (!CNDabsent(getFlag(51))) break p000e0719;
+ 		ACCwriteln(526);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13048,9 +13046,8 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(65)) break p000e0720;
  		}
-		if (!CNDnoteq(34,255)) break p000e0720;
-		if (!CNDeq(51,255)) break p000e0720;
- 		ACCwriteln(529);
+		if (!CNDeq(34,255)) break p000e0720;
+ 		ACCwriteln(527);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13065,12 +13062,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(65)) break p000e0721;
  		}
-		if (!CNDnoteq(51,255)) break p000e0721;
-		if (!CNDpresent(getFlag(51))) break p000e0721;
-		if (!CNDonotzero(getFlag(51),13)) break p000e0721;
-		if (!CNDonotzero(getFlag(51),14)) break p000e0721;
- 		ACCoclear(getFlag(51),14);
- 		ACCwriteln(530);
+		if (!CNDeq(34,255)) break p000e0721;
+		if (!CNDbzero(12,1)) break p000e0721;
+ 		ACCwriteln(528);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13085,11 +13079,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(65)) break p000e0722;
  		}
-		if (!CNDnoteq(51,255)) break p000e0722;
-		if (!CNDpresent(getFlag(51))) break p000e0722;
-		if (!CNDonotzero(getFlag(51),13)) break p000e0722;
-		if (!CNDozero(getFlag(51),14)) break p000e0722;
- 		ACCwriteln(531);
+		if (!CNDnoteq(34,255)) break p000e0722;
+		if (!CNDeq(51,255)) break p000e0722;
+ 		ACCwriteln(529);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13106,7 +13098,10 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0723;
 		if (!CNDpresent(getFlag(51))) break p000e0723;
- 		ACCwriteln(532);
+		if (!CNDonotzero(getFlag(51),13)) break p000e0723;
+		if (!CNDonotzero(getFlag(51),14)) break p000e0723;
+ 		ACCoclear(getFlag(51),14);
+ 		ACCwriteln(530);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13122,42 +13117,44 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(65)) break p000e0724;
  		}
 		if (!CNDnoteq(51,255)) break p000e0724;
-		if (!CNDabsent(getFlag(51))) break p000e0724;
- 		ACCwriteln(533);
+		if (!CNDpresent(getFlag(51))) break p000e0724;
+		if (!CNDonotzero(getFlag(51),13)) break p000e0724;
+		if (!CNDozero(getFlag(51),14)) break p000e0724;
+ 		ACCwriteln(531);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CHUPA _
+	// CERRAR _
 	p000e0725:
 	{
  		if (skipdoall('p000e0725')) break p000e0725;
  		if (in_response)
 		{
-			if (!CNDverb(63)) break p000e0725;
+			if (!CNDverb(65)) break p000e0725;
  		}
-		if (!CNDeq(34,255)) break p000e0725;
-		if (!CNDbnotzero(12,1)) break p000e0725;
- 		ACCwriteln(534);
+		if (!CNDnoteq(51,255)) break p000e0725;
+		if (!CNDpresent(getFlag(51))) break p000e0725;
+ 		ACCwriteln(532);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CHUPA _
+	// CERRAR _
 	p000e0726:
 	{
  		if (skipdoall('p000e0726')) break p000e0726;
  		if (in_response)
 		{
-			if (!CNDverb(63)) break p000e0726;
+			if (!CNDverb(65)) break p000e0726;
  		}
-		if (!CNDeq(34,255)) break p000e0726;
-		if (!CNDbzero(12,1)) break p000e0726;
- 		ACCwriteln(535);
+		if (!CNDnoteq(51,255)) break p000e0726;
+		if (!CNDabsent(getFlag(51))) break p000e0726;
+ 		ACCwriteln(533);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13172,10 +13169,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(63)) break p000e0727;
  		}
-		if (!CNDnoteq(51,255)) break p000e0727;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0727;
-		if (!CNDpresent(getFlag(51))) break p000e0727;
- 		ACCwriteln(536);
+		if (!CNDeq(34,255)) break p000e0727;
+		if (!CNDbnotzero(12,1)) break p000e0727;
+ 		ACCwriteln(534);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13190,10 +13186,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(63)) break p000e0728;
  		}
-		if (!CNDnoteq(51,255)) break p000e0728;
-		if (!CNDonotzero(getFlag(51),5)) break p000e0728;
-		if (!CNDpresent(getFlag(51))) break p000e0728;
- 		ACCwriteln(537);
+		if (!CNDeq(34,255)) break p000e0728;
+		if (!CNDbzero(12,1)) break p000e0728;
+ 		ACCwriteln(535);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13210,8 +13205,8 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0729;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0729;
-		if (!CNDabsent(getFlag(51))) break p000e0729;
- 		ACCwriteln(538);
+		if (!CNDpresent(getFlag(51))) break p000e0729;
+ 		ACCwriteln(536);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13226,9 +13221,10 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(63)) break p000e0730;
  		}
-		if (!CNDnoteq(34,255)) break p000e0730;
-		if (!CNDeq(51,255)) break p000e0730;
- 		ACCwriteln(539);
+		if (!CNDnoteq(51,255)) break p000e0730;
+		if (!CNDonotzero(getFlag(51),5)) break p000e0730;
+		if (!CNDpresent(getFlag(51))) break p000e0730;
+ 		ACCwriteln(537);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13244,8 +13240,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(63)) break p000e0731;
  		}
 		if (!CNDnoteq(51,255)) break p000e0731;
-		if (!CNDpresent(getFlag(51))) break p000e0731;
- 		ACCwriteln(540);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0731;
+		if (!CNDabsent(getFlag(51))) break p000e0731;
+ 		ACCwriteln(538);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13260,43 +13257,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(63)) break p000e0732;
  		}
-		if (!CNDnoteq(51,255)) break p000e0732;
-		if (!CNDabsent(getFlag(51))) break p000e0732;
- 		ACCwriteln(541);
+		if (!CNDnoteq(34,255)) break p000e0732;
+		if (!CNDeq(51,255)) break p000e0732;
+ 		ACCwriteln(539);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESTRUIR _
+	// CHUPA _
 	p000e0733:
 	{
  		if (skipdoall('p000e0733')) break p000e0733;
  		if (in_response)
 		{
-			if (!CNDverb(69)) break p000e0733;
+			if (!CNDverb(63)) break p000e0733;
  		}
-		if (!CNDeq(34,255)) break p000e0733;
-		if (!CNDbnotzero(12,1)) break p000e0733;
- 		ACCwriteln(542);
+		if (!CNDnoteq(51,255)) break p000e0733;
+		if (!CNDpresent(getFlag(51))) break p000e0733;
+ 		ACCwriteln(540);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESTRUIR _
+	// CHUPA _
 	p000e0734:
 	{
  		if (skipdoall('p000e0734')) break p000e0734;
  		if (in_response)
 		{
-			if (!CNDverb(69)) break p000e0734;
+			if (!CNDverb(63)) break p000e0734;
  		}
-		if (!CNDeq(34,255)) break p000e0734;
-		if (!CNDbzero(12,1)) break p000e0734;
- 		ACCwriteln(543);
+		if (!CNDnoteq(51,255)) break p000e0734;
+		if (!CNDabsent(getFlag(51))) break p000e0734;
+ 		ACCwriteln(541);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13311,11 +13308,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(69)) break p000e0735;
  		}
-		if (!CNDnoteq(34,255)) break p000e0735;
-		if (!CNDnoteq(51,255)) break p000e0735;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0735;
-		if (!CNDpresent(getFlag(51))) break p000e0735;
- 		ACCwriteln(544);
+		if (!CNDeq(34,255)) break p000e0735;
+		if (!CNDbnotzero(12,1)) break p000e0735;
+ 		ACCwriteln(542);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13330,11 +13325,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(69)) break p000e0736;
  		}
-		if (!CNDnoteq(34,255)) break p000e0736;
-		if (!CNDnoteq(51,255)) break p000e0736;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0736;
-		if (!CNDabsent(getFlag(51))) break p000e0736;
- 		ACCwriteln(545);
+		if (!CNDeq(34,255)) break p000e0736;
+		if (!CNDbzero(12,1)) break p000e0736;
+ 		ACCwriteln(543);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13350,8 +13343,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(69)) break p000e0737;
  		}
 		if (!CNDnoteq(34,255)) break p000e0737;
-		if (!CNDeq(51,255)) break p000e0737;
- 		ACCwriteln(546);
+		if (!CNDnoteq(51,255)) break p000e0737;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0737;
+		if (!CNDpresent(getFlag(51))) break p000e0737;
+ 		ACCwriteln(544);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13366,9 +13361,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(69)) break p000e0738;
  		}
+		if (!CNDnoteq(34,255)) break p000e0738;
 		if (!CNDnoteq(51,255)) break p000e0738;
-		if (!CNDpresent(getFlag(51))) break p000e0738;
- 		ACCwriteln(547);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0738;
+		if (!CNDabsent(getFlag(51))) break p000e0738;
+ 		ACCwriteln(545);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13383,43 +13380,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(69)) break p000e0739;
  		}
-		if (!CNDnoteq(51,255)) break p000e0739;
-		if (!CNDabsent(getFlag(51))) break p000e0739;
- 		ACCwriteln(548);
+		if (!CNDnoteq(34,255)) break p000e0739;
+		if (!CNDeq(51,255)) break p000e0739;
+ 		ACCwriteln(546);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ADQUIERE _
+	// DESTRUIR _
 	p000e0740:
 	{
  		if (skipdoall('p000e0740')) break p000e0740;
  		if (in_response)
 		{
-			if (!CNDverb(106)) break p000e0740;
+			if (!CNDverb(69)) break p000e0740;
  		}
-		if (!CNDeq(34,255)) break p000e0740;
-		if (!CNDbnotzero(12,1)) break p000e0740;
- 		ACCwriteln(549);
+		if (!CNDnoteq(51,255)) break p000e0740;
+		if (!CNDpresent(getFlag(51))) break p000e0740;
+ 		ACCwriteln(547);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ADQUIERE _
+	// DESTRUIR _
 	p000e0741:
 	{
  		if (skipdoall('p000e0741')) break p000e0741;
  		if (in_response)
 		{
-			if (!CNDverb(106)) break p000e0741;
+			if (!CNDverb(69)) break p000e0741;
  		}
-		if (!CNDeq(34,255)) break p000e0741;
-		if (!CNDbzero(12,1)) break p000e0741;
- 		ACCwriteln(550);
+		if (!CNDnoteq(51,255)) break p000e0741;
+		if (!CNDabsent(getFlag(51))) break p000e0741;
+ 		ACCwriteln(548);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13434,11 +13431,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(106)) break p000e0742;
  		}
-		if (!CNDnoteq(34,255)) break p000e0742;
-		if (!CNDnoteq(51,255)) break p000e0742;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0742;
-		if (!CNDpresent(getFlag(51))) break p000e0742;
- 		ACCwriteln(551);
+		if (!CNDeq(34,255)) break p000e0742;
+		if (!CNDbnotzero(12,1)) break p000e0742;
+ 		ACCwriteln(549);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13453,11 +13448,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(106)) break p000e0743;
  		}
-		if (!CNDnoteq(34,255)) break p000e0743;
-		if (!CNDnoteq(51,255)) break p000e0743;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0743;
-		if (!CNDabsent(getFlag(51))) break p000e0743;
- 		ACCwriteln(552);
+		if (!CNDeq(34,255)) break p000e0743;
+		if (!CNDbzero(12,1)) break p000e0743;
+ 		ACCwriteln(550);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13473,8 +13466,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(106)) break p000e0744;
  		}
 		if (!CNDnoteq(34,255)) break p000e0744;
-		if (!CNDeq(51,255)) break p000e0744;
- 		ACCwriteln(553);
+		if (!CNDnoteq(51,255)) break p000e0744;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0744;
+		if (!CNDpresent(getFlag(51))) break p000e0744;
+ 		ACCwriteln(551);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13489,9 +13484,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(106)) break p000e0745;
  		}
+		if (!CNDnoteq(34,255)) break p000e0745;
 		if (!CNDnoteq(51,255)) break p000e0745;
-		if (!CNDpresent(getFlag(51))) break p000e0745;
- 		ACCwriteln(554);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0745;
+		if (!CNDabsent(getFlag(51))) break p000e0745;
+ 		ACCwriteln(552);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13506,43 +13503,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(106)) break p000e0746;
  		}
-		if (!CNDnoteq(51,255)) break p000e0746;
-		if (!CNDabsent(getFlag(51))) break p000e0746;
- 		ACCwriteln(555);
+		if (!CNDnoteq(34,255)) break p000e0746;
+		if (!CNDeq(51,255)) break p000e0746;
+ 		ACCwriteln(553);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DOBLA _
+	// ADQUIERE _
 	p000e0747:
 	{
  		if (skipdoall('p000e0747')) break p000e0747;
  		if (in_response)
 		{
-			if (!CNDverb(96)) break p000e0747;
+			if (!CNDverb(106)) break p000e0747;
  		}
-		if (!CNDeq(34,255)) break p000e0747;
-		if (!CNDbnotzero(12,1)) break p000e0747;
- 		ACCwriteln(556);
+		if (!CNDnoteq(51,255)) break p000e0747;
+		if (!CNDpresent(getFlag(51))) break p000e0747;
+ 		ACCwriteln(554);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DOBLA _
+	// ADQUIERE _
 	p000e0748:
 	{
  		if (skipdoall('p000e0748')) break p000e0748;
  		if (in_response)
 		{
-			if (!CNDverb(96)) break p000e0748;
+			if (!CNDverb(106)) break p000e0748;
  		}
-		if (!CNDeq(34,255)) break p000e0748;
-		if (!CNDbzero(12,1)) break p000e0748;
- 		ACCwriteln(557);
+		if (!CNDnoteq(51,255)) break p000e0748;
+		if (!CNDabsent(getFlag(51))) break p000e0748;
+ 		ACCwriteln(555);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13557,11 +13554,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(96)) break p000e0749;
  		}
-		if (!CNDnoteq(34,255)) break p000e0749;
-		if (!CNDnoteq(51,255)) break p000e0749;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0749;
-		if (!CNDpresent(getFlag(51))) break p000e0749;
- 		ACCwriteln(558);
+		if (!CNDeq(34,255)) break p000e0749;
+		if (!CNDbnotzero(12,1)) break p000e0749;
+ 		ACCwriteln(556);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13576,11 +13571,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(96)) break p000e0750;
  		}
-		if (!CNDnoteq(34,255)) break p000e0750;
-		if (!CNDnoteq(51,255)) break p000e0750;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0750;
-		if (!CNDabsent(getFlag(51))) break p000e0750;
- 		ACCwriteln(559);
+		if (!CNDeq(34,255)) break p000e0750;
+		if (!CNDbzero(12,1)) break p000e0750;
+ 		ACCwriteln(557);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13596,8 +13589,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(96)) break p000e0751;
  		}
 		if (!CNDnoteq(34,255)) break p000e0751;
-		if (!CNDeq(51,255)) break p000e0751;
- 		ACCwriteln(560);
+		if (!CNDnoteq(51,255)) break p000e0751;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0751;
+		if (!CNDpresent(getFlag(51))) break p000e0751;
+ 		ACCwriteln(558);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13612,9 +13607,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(96)) break p000e0752;
  		}
+		if (!CNDnoteq(34,255)) break p000e0752;
 		if (!CNDnoteq(51,255)) break p000e0752;
-		if (!CNDpresent(getFlag(51))) break p000e0752;
- 		ACCwriteln(561);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0752;
+		if (!CNDabsent(getFlag(51))) break p000e0752;
+ 		ACCwriteln(559);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13629,43 +13626,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(96)) break p000e0753;
  		}
-		if (!CNDnoteq(51,255)) break p000e0753;
-		if (!CNDabsent(getFlag(51))) break p000e0753;
- 		ACCwriteln(562);
+		if (!CNDnoteq(34,255)) break p000e0753;
+		if (!CNDeq(51,255)) break p000e0753;
+ 		ACCwriteln(560);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESDOBLA _
+	// DOBLA _
 	p000e0754:
 	{
  		if (skipdoall('p000e0754')) break p000e0754;
  		if (in_response)
 		{
-			if (!CNDverb(97)) break p000e0754;
+			if (!CNDverb(96)) break p000e0754;
  		}
-		if (!CNDeq(34,255)) break p000e0754;
-		if (!CNDbnotzero(12,1)) break p000e0754;
- 		ACCwriteln(563);
+		if (!CNDnoteq(51,255)) break p000e0754;
+		if (!CNDpresent(getFlag(51))) break p000e0754;
+ 		ACCwriteln(561);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESDOBLA _
+	// DOBLA _
 	p000e0755:
 	{
  		if (skipdoall('p000e0755')) break p000e0755;
  		if (in_response)
 		{
-			if (!CNDverb(97)) break p000e0755;
+			if (!CNDverb(96)) break p000e0755;
  		}
-		if (!CNDeq(34,255)) break p000e0755;
-		if (!CNDbzero(12,1)) break p000e0755;
- 		ACCwriteln(564);
+		if (!CNDnoteq(51,255)) break p000e0755;
+		if (!CNDabsent(getFlag(51))) break p000e0755;
+ 		ACCwriteln(562);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13680,11 +13677,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(97)) break p000e0756;
  		}
-		if (!CNDnoteq(34,255)) break p000e0756;
-		if (!CNDnoteq(51,255)) break p000e0756;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0756;
-		if (!CNDpresent(getFlag(51))) break p000e0756;
- 		ACCwriteln(565);
+		if (!CNDeq(34,255)) break p000e0756;
+		if (!CNDbnotzero(12,1)) break p000e0756;
+ 		ACCwriteln(563);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13699,11 +13694,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(97)) break p000e0757;
  		}
-		if (!CNDnoteq(34,255)) break p000e0757;
-		if (!CNDnoteq(51,255)) break p000e0757;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0757;
-		if (!CNDabsent(getFlag(51))) break p000e0757;
- 		ACCwriteln(566);
+		if (!CNDeq(34,255)) break p000e0757;
+		if (!CNDbzero(12,1)) break p000e0757;
+ 		ACCwriteln(564);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13719,8 +13712,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(97)) break p000e0758;
  		}
 		if (!CNDnoteq(34,255)) break p000e0758;
-		if (!CNDeq(51,255)) break p000e0758;
- 		ACCwriteln(567);
+		if (!CNDnoteq(51,255)) break p000e0758;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0758;
+		if (!CNDpresent(getFlag(51))) break p000e0758;
+ 		ACCwriteln(565);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13735,9 +13730,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(97)) break p000e0759;
  		}
+		if (!CNDnoteq(34,255)) break p000e0759;
 		if (!CNDnoteq(51,255)) break p000e0759;
-		if (!CNDpresent(getFlag(51))) break p000e0759;
- 		ACCwriteln(568);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0759;
+		if (!CNDabsent(getFlag(51))) break p000e0759;
+ 		ACCwriteln(566);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13752,8 +13749,42 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(97)) break p000e0760;
  		}
-		if (!CNDnoteq(51,255)) break p000e0760;
-		if (!CNDabsent(getFlag(51))) break p000e0760;
+		if (!CNDnoteq(34,255)) break p000e0760;
+		if (!CNDeq(51,255)) break p000e0760;
+ 		ACCwriteln(567);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// DESDOBLA _
+	p000e0761:
+	{
+ 		if (skipdoall('p000e0761')) break p000e0761;
+ 		if (in_response)
+		{
+			if (!CNDverb(97)) break p000e0761;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0761;
+		if (!CNDpresent(getFlag(51))) break p000e0761;
+ 		ACCwriteln(568);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// DESDOBLA _
+	p000e0762:
+	{
+ 		if (skipdoall('p000e0762')) break p000e0762;
+ 		if (in_response)
+		{
+			if (!CNDverb(97)) break p000e0762;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0762;
+		if (!CNDabsent(getFlag(51))) break p000e0762;
  		ACCwriteln(569);
  		ACCdone();
 		break pro000_restart;
@@ -13762,12 +13793,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// EXITS _
-	p000e0761:
+	p000e0763:
 	{
- 		if (skipdoall('p000e0761')) break p000e0761;
+ 		if (skipdoall('p000e0763')) break p000e0763;
  		if (in_response)
 		{
-			if (!CNDverb(41)) break p000e0761;
+			if (!CNDverb(41)) break p000e0763;
  		}
  		ACCexits(getFlag(38),1000);
  		ACCnewline();
@@ -13778,12 +13809,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// _ PARTIDAS
-	p000e0762:
+	p000e0764:
 	{
- 		if (skipdoall('p000e0762')) break p000e0762;
+ 		if (skipdoall('p000e0764')) break p000e0764;
  		if (in_response)
 		{
-			if (!CNDnoun1(183)) break p000e0762;
+			if (!CNDnoun1(183)) break p000e0764;
  		}
  		ACClet(33,129);
 		{}
@@ -13791,13 +13822,13 @@ pro000_restart: while(process_restart)
 	}
 
 	// ENUMERA PARTIDAS
-	p000e0763:
+	p000e0765:
 	{
- 		if (skipdoall('p000e0763')) break p000e0763;
+ 		if (skipdoall('p000e0765')) break p000e0765;
  		if (in_response)
 		{
-			if (!CNDverb(129)) break p000e0763;
-			if (!CNDnoun1(183)) break p000e0763;
+			if (!CNDverb(129)) break p000e0765;
+			if (!CNDnoun1(183)) break p000e0765;
  		}
  		ACClistsavedgames();
  		ACCdone();
@@ -13807,12 +13838,12 @@ pro000_restart: while(process_restart)
 	}
 
 	// AYUDA _
-	p000e0764:
+	p000e0766:
 	{
- 		if (skipdoall('p000e0764')) break p000e0764;
+ 		if (skipdoall('p000e0766')) break p000e0766;
  		if (in_response)
 		{
-			if (!CNDverb(34)) break p000e0764;
+			if (!CNDverb(34)) break p000e0766;
  		}
  		ACChelp();
  		ACCdone();
@@ -13822,57 +13853,15 @@ pro000_restart: while(process_restart)
 	}
 
 	// VERSION _
-	p000e0765:
-	{
- 		if (skipdoall('p000e0765')) break p000e0765;
- 		if (in_response)
-		{
-			if (!CNDverb(70)) break p000e0765;
- 		}
- 		ACCversion();
- 		ACCnewline();
- 		ACCdone();
-		break pro000_restart;
-		{}
-
-	}
-
-	// DA _
-	p000e0766:
-	{
- 		if (skipdoall('p000e0766')) break p000e0766;
- 		if (in_response)
-		{
-			if (!CNDverb(73)) break p000e0766;
- 		}
-		if (!CNDsame(46,34)) break p000e0766;
- 		ACCwhatox(13);
-		if (!CNDonotzero(getFlag(13),3)) break p000e0766;
-		if (!CNDnoteq(44,255)) break p000e0766;
- 		ACCcopyff(34,14);
- 		ACCcopyff(44,34);
- 		ACCcopyff(14,44);
- 		ACCcopyff(35,14);
- 		ACCcopyff(45,35);
- 		ACCcopyff(14,45);
- 		ACCwhato();
-		{}
-
-	}
-
-	// DA _
 	p000e0767:
 	{
  		if (skipdoall('p000e0767')) break p000e0767;
  		if (in_response)
 		{
-			if (!CNDverb(73)) break p000e0767;
+			if (!CNDverb(70)) break p000e0767;
  		}
-		if (!CNDprep(2)) break p000e0767;
-		if (!CNDbzero(12,2)) break p000e0767;
-		if (!CNDeq(44,255)) break p000e0767;
-		if (!CNDbnotzero(12,1)) break p000e0767;
- 		ACCwriteln(570);
+ 		ACCversion();
+ 		ACCnewline();
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13887,11 +13876,17 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(73)) break p000e0768;
  		}
-		if (!CNDeq(34,255)) break p000e0768;
-		if (!CNDbzero(12,1)) break p000e0768;
- 		ACCwriteln(571);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDsame(46,34)) break p000e0768;
+ 		ACCwhatox(13);
+		if (!CNDonotzero(getFlag(13),3)) break p000e0768;
+		if (!CNDnoteq(44,255)) break p000e0768;
+ 		ACCcopyff(34,14);
+ 		ACCcopyff(44,34);
+ 		ACCcopyff(14,44);
+ 		ACCcopyff(35,14);
+ 		ACCcopyff(45,35);
+ 		ACCcopyff(14,45);
+ 		ACCwhato();
 		{}
 
 	}
@@ -13904,9 +13899,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(73)) break p000e0769;
  		}
-		if (!CNDeq(34,255)) break p000e0769;
+		if (!CNDprep(2)) break p000e0769;
+		if (!CNDbzero(12,2)) break p000e0769;
+		if (!CNDeq(44,255)) break p000e0769;
 		if (!CNDbnotzero(12,1)) break p000e0769;
- 		ACCwriteln(572);
+ 		ACCwriteln(570);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13921,9 +13918,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(73)) break p000e0770;
  		}
-		if (!CNDnoteq(34,255)) break p000e0770;
-		if (!CNDeq(51,255)) break p000e0770;
- 		ACCwriteln(573);
+		if (!CNDeq(34,255)) break p000e0770;
+		if (!CNDbzero(12,1)) break p000e0770;
+ 		ACCwriteln(571);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13938,10 +13935,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(73)) break p000e0771;
  		}
-		if (!CNDnoteq(51,255)) break p000e0771;
-		if (!CNDworn(getFlag(51))) break p000e0771;
-		if (!CNDonotzero(getFlag(51),1)) break p000e0771;
- 		ACCwriteln(574);
+		if (!CNDeq(34,255)) break p000e0771;
+		if (!CNDbnotzero(12,1)) break p000e0771;
+ 		ACCwriteln(572);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13956,9 +13952,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(73)) break p000e0772;
  		}
-		if (!CNDnoteq(51,255)) break p000e0772;
-		if (!CNDnotcarr(getFlag(51))) break p000e0772;
- 		ACCwriteln(575);
+		if (!CNDnoteq(34,255)) break p000e0772;
+		if (!CNDeq(51,255)) break p000e0772;
+ 		ACCwriteln(573);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13974,10 +13970,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(73)) break p000e0773;
  		}
 		if (!CNDnoteq(51,255)) break p000e0773;
-		if (!CNDcarried(getFlag(51))) break p000e0773;
-		if (!CNDeq(44,255)) break p000e0773;
-		if (!CNDbzero(12,1)) break p000e0773;
- 		ACCwriteln(576);
+		if (!CNDworn(getFlag(51))) break p000e0773;
+		if (!CNDonotzero(getFlag(51),1)) break p000e0773;
+ 		ACCwriteln(574);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -13993,10 +13988,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(73)) break p000e0774;
  		}
 		if (!CNDnoteq(51,255)) break p000e0774;
-		if (!CNDcarried(getFlag(51))) break p000e0774;
-		if (!CNDeq(44,255)) break p000e0774;
-		if (!CNDbnotzero(12,1)) break p000e0774;
- 		ACCwriteln(577);
+		if (!CNDnotcarr(getFlag(51))) break p000e0774;
+ 		ACCwriteln(575);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14013,10 +14006,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0775;
 		if (!CNDcarried(getFlag(51))) break p000e0775;
-		if (!CNDnoteq(44,255)) break p000e0775;
- 		ACCwhatox2(15);
-		if (!CNDeq(15,255)) break p000e0775;
- 		ACCwriteln(578);
+		if (!CNDeq(44,255)) break p000e0775;
+		if (!CNDbzero(12,1)) break p000e0775;
+ 		ACCwriteln(576);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14033,11 +14025,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0776;
 		if (!CNDcarried(getFlag(51))) break p000e0776;
-		if (!CNDnoteq(44,255)) break p000e0776;
- 		ACCwhatox2(13);
-		if (!CNDnoteq(13,255)) break p000e0776;
-		if (!CNDozero(getFlag(13),3)) break p000e0776;
- 		ACCwriteln(579);
+		if (!CNDeq(44,255)) break p000e0776;
+		if (!CNDbnotzero(12,1)) break p000e0776;
+ 		ACCwriteln(577);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14055,11 +14045,9 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(51,255)) break p000e0777;
 		if (!CNDcarried(getFlag(51))) break p000e0777;
 		if (!CNDnoteq(44,255)) break p000e0777;
- 		ACCwhatox2(13);
-		if (!CNDnoteq(13,255)) break p000e0777;
-		if (!CNDonotzero(getFlag(13),3)) break p000e0777;
-		if (!CNDabsent(getFlag(13))) break p000e0777;
- 		ACCwriteln(580);
+ 		ACCwhatox2(15);
+		if (!CNDeq(15,255)) break p000e0777;
+ 		ACCwriteln(578);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14079,51 +14067,52 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(44,255)) break p000e0778;
  		ACCwhatox2(13);
 		if (!CNDnoteq(13,255)) break p000e0778;
-		if (!CNDonotzero(getFlag(13),3)) break p000e0778;
-		if (!CNDpresent(getFlag(13))) break p000e0778;
- 		ACCwriteln(581);
+		if (!CNDozero(getFlag(13),3)) break p000e0778;
+ 		ACCwriteln(579);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ENSEÑA _
+	// DA _
 	p000e0779:
 	{
  		if (skipdoall('p000e0779')) break p000e0779;
  		if (in_response)
 		{
-			if (!CNDverb(36)) break p000e0779;
+			if (!CNDverb(73)) break p000e0779;
  		}
-		if (!CNDsame(46,34)) break p000e0779;
- 		ACCwhatox(13);
-		if (!CNDonotzero(getFlag(13),3)) break p000e0779;
+		if (!CNDnoteq(51,255)) break p000e0779;
+		if (!CNDcarried(getFlag(51))) break p000e0779;
 		if (!CNDnoteq(44,255)) break p000e0779;
- 		ACCcopyff(34,14);
- 		ACCcopyff(44,34);
- 		ACCcopyff(14,44);
- 		ACCcopyff(35,14);
- 		ACCcopyff(45,35);
- 		ACCcopyff(14,45);
- 		ACCwhato();
+ 		ACCwhatox2(13);
+		if (!CNDnoteq(13,255)) break p000e0779;
+		if (!CNDonotzero(getFlag(13),3)) break p000e0779;
+		if (!CNDabsent(getFlag(13))) break p000e0779;
+ 		ACCwriteln(580);
+ 		ACCdone();
+		break pro000_restart;
 		{}
 
 	}
 
-	// ENSEÑA _
+	// DA _
 	p000e0780:
 	{
  		if (skipdoall('p000e0780')) break p000e0780;
  		if (in_response)
 		{
-			if (!CNDverb(36)) break p000e0780;
+			if (!CNDverb(73)) break p000e0780;
  		}
-		if (!CNDprep(2)) break p000e0780;
-		if (!CNDbzero(12,2)) break p000e0780;
-		if (!CNDeq(44,255)) break p000e0780;
-		if (!CNDbnotzero(12,1)) break p000e0780;
- 		ACCwriteln(582);
+		if (!CNDnoteq(51,255)) break p000e0780;
+		if (!CNDcarried(getFlag(51))) break p000e0780;
+		if (!CNDnoteq(44,255)) break p000e0780;
+ 		ACCwhatox2(13);
+		if (!CNDnoteq(13,255)) break p000e0780;
+		if (!CNDonotzero(getFlag(13),3)) break p000e0780;
+		if (!CNDpresent(getFlag(13))) break p000e0780;
+ 		ACCwriteln(581);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14138,11 +14127,17 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(36)) break p000e0781;
  		}
-		if (!CNDeq(34,255)) break p000e0781;
-		if (!CNDbzero(12,1)) break p000e0781;
- 		ACCwriteln(583);
- 		ACCdone();
-		break pro000_restart;
+		if (!CNDsame(46,34)) break p000e0781;
+ 		ACCwhatox(13);
+		if (!CNDonotzero(getFlag(13),3)) break p000e0781;
+		if (!CNDnoteq(44,255)) break p000e0781;
+ 		ACCcopyff(34,14);
+ 		ACCcopyff(44,34);
+ 		ACCcopyff(14,44);
+ 		ACCcopyff(35,14);
+ 		ACCcopyff(45,35);
+ 		ACCcopyff(14,45);
+ 		ACCwhato();
 		{}
 
 	}
@@ -14155,9 +14150,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(36)) break p000e0782;
  		}
-		if (!CNDeq(34,255)) break p000e0782;
+		if (!CNDprep(2)) break p000e0782;
+		if (!CNDbzero(12,2)) break p000e0782;
+		if (!CNDeq(44,255)) break p000e0782;
 		if (!CNDbnotzero(12,1)) break p000e0782;
- 		ACCwriteln(584);
+ 		ACCwriteln(582);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14172,9 +14169,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(36)) break p000e0783;
  		}
-		if (!CNDnoteq(34,255)) break p000e0783;
-		if (!CNDeq(51,255)) break p000e0783;
- 		ACCwriteln(585);
+		if (!CNDeq(34,255)) break p000e0783;
+		if (!CNDbzero(12,1)) break p000e0783;
+ 		ACCwriteln(583);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14189,10 +14186,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(36)) break p000e0784;
  		}
-		if (!CNDnoteq(51,255)) break p000e0784;
-		if (!CNDworn(getFlag(51))) break p000e0784;
-		if (!CNDonotzero(getFlag(51),1)) break p000e0784;
- 		ACCwriteln(586);
+		if (!CNDeq(34,255)) break p000e0784;
+		if (!CNDbnotzero(12,1)) break p000e0784;
+ 		ACCwriteln(584);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14207,9 +14203,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(36)) break p000e0785;
  		}
-		if (!CNDnoteq(51,255)) break p000e0785;
-		if (!CNDnotcarr(getFlag(51))) break p000e0785;
- 		ACCwriteln(587);
+		if (!CNDnoteq(34,255)) break p000e0785;
+		if (!CNDeq(51,255)) break p000e0785;
+ 		ACCwriteln(585);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14225,10 +14221,9 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(36)) break p000e0786;
  		}
 		if (!CNDnoteq(51,255)) break p000e0786;
-		if (!CNDcarried(getFlag(51))) break p000e0786;
-		if (!CNDeq(44,255)) break p000e0786;
-		if (!CNDbzero(12,1)) break p000e0786;
- 		ACCwriteln(588);
+		if (!CNDworn(getFlag(51))) break p000e0786;
+		if (!CNDonotzero(getFlag(51),1)) break p000e0786;
+ 		ACCwriteln(586);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14244,10 +14239,8 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(36)) break p000e0787;
  		}
 		if (!CNDnoteq(51,255)) break p000e0787;
-		if (!CNDcarried(getFlag(51))) break p000e0787;
-		if (!CNDeq(44,255)) break p000e0787;
-		if (!CNDbnotzero(12,1)) break p000e0787;
- 		ACCwriteln(589);
+		if (!CNDnotcarr(getFlag(51))) break p000e0787;
+ 		ACCwriteln(587);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14264,10 +14257,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0788;
 		if (!CNDcarried(getFlag(51))) break p000e0788;
-		if (!CNDnoteq(44,255)) break p000e0788;
- 		ACCwhatox2(13);
-		if (!CNDeq(13,255)) break p000e0788;
- 		ACCwriteln(590);
+		if (!CNDeq(44,255)) break p000e0788;
+		if (!CNDbzero(12,1)) break p000e0788;
+ 		ACCwriteln(588);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14284,11 +14276,9 @@ pro000_restart: while(process_restart)
  		}
 		if (!CNDnoteq(51,255)) break p000e0789;
 		if (!CNDcarried(getFlag(51))) break p000e0789;
-		if (!CNDnoteq(44,255)) break p000e0789;
- 		ACCwhatox2(13);
-		if (!CNDnoteq(13,255)) break p000e0789;
-		if (!CNDozero(getFlag(13),3)) break p000e0789;
- 		ACCwriteln(591);
+		if (!CNDeq(44,255)) break p000e0789;
+		if (!CNDbnotzero(12,1)) break p000e0789;
+ 		ACCwriteln(589);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14307,10 +14297,8 @@ pro000_restart: while(process_restart)
 		if (!CNDcarried(getFlag(51))) break p000e0790;
 		if (!CNDnoteq(44,255)) break p000e0790;
  		ACCwhatox2(13);
-		if (!CNDnoteq(13,255)) break p000e0790;
-		if (!CNDonotzero(getFlag(13),3)) break p000e0790;
-		if (!CNDabsent(getFlag(13))) break p000e0790;
- 		ACCwriteln(592);
+		if (!CNDeq(13,255)) break p000e0790;
+ 		ACCwriteln(590);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14330,43 +14318,52 @@ pro000_restart: while(process_restart)
 		if (!CNDnoteq(44,255)) break p000e0791;
  		ACCwhatox2(13);
 		if (!CNDnoteq(13,255)) break p000e0791;
-		if (!CNDonotzero(getFlag(13),3)) break p000e0791;
-		if (!CNDpresent(getFlag(13))) break p000e0791;
- 		ACCwriteln(593);
+		if (!CNDozero(getFlag(13),3)) break p000e0791;
+ 		ACCwriteln(591);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// SOPLA _
+	// ENSEÑA _
 	p000e0792:
 	{
  		if (skipdoall('p000e0792')) break p000e0792;
  		if (in_response)
 		{
-			if (!CNDverb(95)) break p000e0792;
+			if (!CNDverb(36)) break p000e0792;
  		}
-		if (!CNDeq(34,255)) break p000e0792;
-		if (!CNDbnotzero(12,1)) break p000e0792;
- 		ACCwriteln(594);
+		if (!CNDnoteq(51,255)) break p000e0792;
+		if (!CNDcarried(getFlag(51))) break p000e0792;
+		if (!CNDnoteq(44,255)) break p000e0792;
+ 		ACCwhatox2(13);
+		if (!CNDnoteq(13,255)) break p000e0792;
+		if (!CNDonotzero(getFlag(13),3)) break p000e0792;
+		if (!CNDabsent(getFlag(13))) break p000e0792;
+ 		ACCwriteln(592);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// SOPLA _
+	// ENSEÑA _
 	p000e0793:
 	{
  		if (skipdoall('p000e0793')) break p000e0793;
  		if (in_response)
 		{
-			if (!CNDverb(95)) break p000e0793;
+			if (!CNDverb(36)) break p000e0793;
  		}
-		if (!CNDeq(34,255)) break p000e0793;
-		if (!CNDbzero(12,1)) break p000e0793;
- 		ACCwriteln(595);
+		if (!CNDnoteq(51,255)) break p000e0793;
+		if (!CNDcarried(getFlag(51))) break p000e0793;
+		if (!CNDnoteq(44,255)) break p000e0793;
+ 		ACCwhatox2(13);
+		if (!CNDnoteq(13,255)) break p000e0793;
+		if (!CNDonotzero(getFlag(13),3)) break p000e0793;
+		if (!CNDpresent(getFlag(13))) break p000e0793;
+ 		ACCwriteln(593);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14381,11 +14378,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(95)) break p000e0794;
  		}
-		if (!CNDnoteq(34,255)) break p000e0794;
-		if (!CNDnoteq(51,255)) break p000e0794;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0794;
-		if (!CNDpresent(getFlag(51))) break p000e0794;
- 		ACCwriteln(596);
+		if (!CNDeq(34,255)) break p000e0794;
+		if (!CNDbnotzero(12,1)) break p000e0794;
+ 		ACCwriteln(594);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14400,11 +14395,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(95)) break p000e0795;
  		}
-		if (!CNDnoteq(34,255)) break p000e0795;
-		if (!CNDnoteq(51,255)) break p000e0795;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0795;
-		if (!CNDabsent(getFlag(51))) break p000e0795;
- 		ACCwriteln(597);
+		if (!CNDeq(34,255)) break p000e0795;
+		if (!CNDbzero(12,1)) break p000e0795;
+ 		ACCwriteln(595);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14420,8 +14413,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(95)) break p000e0796;
  		}
 		if (!CNDnoteq(34,255)) break p000e0796;
-		if (!CNDeq(51,255)) break p000e0796;
- 		ACCwriteln(598);
+		if (!CNDnoteq(51,255)) break p000e0796;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0796;
+		if (!CNDpresent(getFlag(51))) break p000e0796;
+ 		ACCwriteln(596);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14436,9 +14431,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(95)) break p000e0797;
  		}
+		if (!CNDnoteq(34,255)) break p000e0797;
 		if (!CNDnoteq(51,255)) break p000e0797;
-		if (!CNDpresent(getFlag(51))) break p000e0797;
- 		ACCwriteln(599);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0797;
+		if (!CNDabsent(getFlag(51))) break p000e0797;
+ 		ACCwriteln(597);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14453,47 +14450,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(95)) break p000e0798;
  		}
-		if (!CNDnoteq(51,255)) break p000e0798;
-		if (!CNDabsent(getFlag(51))) break p000e0798;
- 		ACCwriteln(600);
+		if (!CNDnoteq(34,255)) break p000e0798;
+		if (!CNDeq(51,255)) break p000e0798;
+ 		ACCwriteln(598);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CHILLA _
+	// SOPLA _
 	p000e0799:
 	{
  		if (skipdoall('p000e0799')) break p000e0799;
  		if (in_response)
 		{
-			if (!CNDverb(77)) break p000e0799;
+			if (!CNDverb(95)) break p000e0799;
  		}
-		if (!CNDnoteq(34,255)) break p000e0799;
 		if (!CNDnoteq(51,255)) break p000e0799;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0799;
 		if (!CNDpresent(getFlag(51))) break p000e0799;
- 		ACCwriteln(601);
+ 		ACCwriteln(599);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CHILLA _
+	// SOPLA _
 	p000e0800:
 	{
  		if (skipdoall('p000e0800')) break p000e0800;
  		if (in_response)
 		{
-			if (!CNDverb(77)) break p000e0800;
+			if (!CNDverb(95)) break p000e0800;
  		}
-		if (!CNDnoteq(34,255)) break p000e0800;
 		if (!CNDnoteq(51,255)) break p000e0800;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0800;
 		if (!CNDabsent(getFlag(51))) break p000e0800;
- 		ACCwriteln(602);
+ 		ACCwriteln(600);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14508,45 +14501,45 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(77)) break p000e0801;
  		}
- 		ACCwriteln(603);
+		if (!CNDnoteq(34,255)) break p000e0801;
+		if (!CNDnoteq(51,255)) break p000e0801;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0801;
+		if (!CNDpresent(getFlag(51))) break p000e0801;
+ 		ACCwriteln(601);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESPERTAR _
+	// CHILLA _
 	p000e0802:
 	{
  		if (skipdoall('p000e0802')) break p000e0802;
  		if (in_response)
 		{
-			if (!CNDverb(87)) break p000e0802;
+			if (!CNDverb(77)) break p000e0802;
  		}
 		if (!CNDnoteq(34,255)) break p000e0802;
 		if (!CNDnoteq(51,255)) break p000e0802;
 		if (!CNDonotzero(getFlag(51),3)) break p000e0802;
-		if (!CNDpresent(getFlag(51))) break p000e0802;
- 		ACCwriteln(604);
+		if (!CNDabsent(getFlag(51))) break p000e0802;
+ 		ACCwriteln(602);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DESPERTAR _
+	// CHILLA _
 	p000e0803:
 	{
  		if (skipdoall('p000e0803')) break p000e0803;
  		if (in_response)
 		{
-			if (!CNDverb(87)) break p000e0803;
+			if (!CNDverb(77)) break p000e0803;
  		}
-		if (!CNDnoteq(34,255)) break p000e0803;
-		if (!CNDnoteq(51,255)) break p000e0803;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0803;
-		if (!CNDabsent(getFlag(51))) break p000e0803;
- 		ACCwriteln(605);
+ 		ACCwriteln(603);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14561,41 +14554,45 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(87)) break p000e0804;
  		}
- 		ACCwriteln(606);
+		if (!CNDnoteq(34,255)) break p000e0804;
+		if (!CNDnoteq(51,255)) break p000e0804;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0804;
+		if (!CNDpresent(getFlag(51))) break p000e0804;
+ 		ACCwriteln(604);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// LEVANTA _
+	// DESPERTAR _
 	p000e0805:
 	{
  		if (skipdoall('p000e0805')) break p000e0805;
  		if (in_response)
 		{
-			if (!CNDverb(114)) break p000e0805;
+			if (!CNDverb(87)) break p000e0805;
  		}
-		if (!CNDeq(34,255)) break p000e0805;
-		if (!CNDbnotzero(12,1)) break p000e0805;
- 		ACCwriteln(607);
+		if (!CNDnoteq(34,255)) break p000e0805;
+		if (!CNDnoteq(51,255)) break p000e0805;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0805;
+		if (!CNDabsent(getFlag(51))) break p000e0805;
+ 		ACCwriteln(605);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// LEVANTA _
+	// DESPERTAR _
 	p000e0806:
 	{
  		if (skipdoall('p000e0806')) break p000e0806;
  		if (in_response)
 		{
-			if (!CNDverb(114)) break p000e0806;
+			if (!CNDverb(87)) break p000e0806;
  		}
-		if (!CNDeq(34,255)) break p000e0806;
-		if (!CNDbzero(12,1)) break p000e0806;
- 		ACCwriteln(608);
+ 		ACCwriteln(606);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14610,11 +14607,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(114)) break p000e0807;
  		}
-		if (!CNDnoteq(34,255)) break p000e0807;
-		if (!CNDnoteq(51,255)) break p000e0807;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0807;
-		if (!CNDpresent(getFlag(51))) break p000e0807;
- 		ACCwriteln(609);
+		if (!CNDeq(34,255)) break p000e0807;
+		if (!CNDbnotzero(12,1)) break p000e0807;
+ 		ACCwriteln(607);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14629,11 +14624,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(114)) break p000e0808;
  		}
-		if (!CNDnoteq(34,255)) break p000e0808;
-		if (!CNDnoteq(51,255)) break p000e0808;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0808;
-		if (!CNDabsent(getFlag(51))) break p000e0808;
- 		ACCwriteln(610);
+		if (!CNDeq(34,255)) break p000e0808;
+		if (!CNDbzero(12,1)) break p000e0808;
+ 		ACCwriteln(608);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14649,8 +14642,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(114)) break p000e0809;
  		}
 		if (!CNDnoteq(34,255)) break p000e0809;
-		if (!CNDeq(51,255)) break p000e0809;
- 		ACCwriteln(611);
+		if (!CNDnoteq(51,255)) break p000e0809;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0809;
+		if (!CNDpresent(getFlag(51))) break p000e0809;
+ 		ACCwriteln(609);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14665,10 +14660,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(114)) break p000e0810;
  		}
+		if (!CNDnoteq(34,255)) break p000e0810;
 		if (!CNDnoteq(51,255)) break p000e0810;
-		if (!CNDpresent(getFlag(51))) break p000e0810;
-		if (!CNDgt(55,52)) break p000e0810;
- 		ACCwriteln(612);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0810;
+		if (!CNDabsent(getFlag(51))) break p000e0810;
+ 		ACCwriteln(610);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14683,9 +14679,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(114)) break p000e0811;
  		}
-		if (!CNDnoteq(51,255)) break p000e0811;
-		if (!CNDpresent(getFlag(51))) break p000e0811;
- 		ACCwriteln(613);
+		if (!CNDnoteq(34,255)) break p000e0811;
+		if (!CNDeq(51,255)) break p000e0811;
+ 		ACCwriteln(611);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14701,42 +14697,43 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(114)) break p000e0812;
  		}
 		if (!CNDnoteq(51,255)) break p000e0812;
-		if (!CNDabsent(getFlag(51))) break p000e0812;
- 		ACCwriteln(614);
+		if (!CNDpresent(getFlag(51))) break p000e0812;
+		if (!CNDgt(55,52)) break p000e0812;
+ 		ACCwriteln(612);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ARRASTRA _
+	// LEVANTA _
 	p000e0813:
 	{
  		if (skipdoall('p000e0813')) break p000e0813;
  		if (in_response)
 		{
-			if (!CNDverb(83)) break p000e0813;
+			if (!CNDverb(114)) break p000e0813;
  		}
-		if (!CNDeq(34,255)) break p000e0813;
-		if (!CNDbnotzero(12,1)) break p000e0813;
- 		ACCwriteln(615);
+		if (!CNDnoteq(51,255)) break p000e0813;
+		if (!CNDpresent(getFlag(51))) break p000e0813;
+ 		ACCwriteln(613);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ARRASTRA _
+	// LEVANTA _
 	p000e0814:
 	{
  		if (skipdoall('p000e0814')) break p000e0814;
  		if (in_response)
 		{
-			if (!CNDverb(83)) break p000e0814;
+			if (!CNDverb(114)) break p000e0814;
  		}
-		if (!CNDeq(34,255)) break p000e0814;
-		if (!CNDbzero(12,1)) break p000e0814;
- 		ACCwriteln(616);
+		if (!CNDnoteq(51,255)) break p000e0814;
+		if (!CNDabsent(getFlag(51))) break p000e0814;
+ 		ACCwriteln(614);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14751,11 +14748,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(83)) break p000e0815;
  		}
-		if (!CNDnoteq(34,255)) break p000e0815;
-		if (!CNDnoteq(51,255)) break p000e0815;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0815;
-		if (!CNDpresent(getFlag(51))) break p000e0815;
- 		ACCwriteln(617);
+		if (!CNDeq(34,255)) break p000e0815;
+		if (!CNDbnotzero(12,1)) break p000e0815;
+ 		ACCwriteln(615);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14770,11 +14765,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(83)) break p000e0816;
  		}
-		if (!CNDnoteq(34,255)) break p000e0816;
-		if (!CNDnoteq(51,255)) break p000e0816;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0816;
-		if (!CNDabsent(getFlag(51))) break p000e0816;
- 		ACCwriteln(618);
+		if (!CNDeq(34,255)) break p000e0816;
+		if (!CNDbzero(12,1)) break p000e0816;
+ 		ACCwriteln(616);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14790,8 +14783,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(83)) break p000e0817;
  		}
 		if (!CNDnoteq(34,255)) break p000e0817;
-		if (!CNDeq(51,255)) break p000e0817;
- 		ACCwriteln(619);
+		if (!CNDnoteq(51,255)) break p000e0817;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0817;
+		if (!CNDpresent(getFlag(51))) break p000e0817;
+ 		ACCwriteln(617);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14806,9 +14801,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(83)) break p000e0818;
  		}
+		if (!CNDnoteq(34,255)) break p000e0818;
 		if (!CNDnoteq(51,255)) break p000e0818;
-		if (!CNDpresent(getFlag(51))) break p000e0818;
- 		ACCwriteln(620);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0818;
+		if (!CNDabsent(getFlag(51))) break p000e0818;
+ 		ACCwriteln(618);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14823,43 +14820,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(83)) break p000e0819;
  		}
-		if (!CNDnoteq(51,255)) break p000e0819;
-		if (!CNDabsent(getFlag(51))) break p000e0819;
- 		ACCwriteln(621);
+		if (!CNDnoteq(34,255)) break p000e0819;
+		if (!CNDeq(51,255)) break p000e0819;
+ 		ACCwriteln(619);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// VACIA _
+	// ARRASTRA _
 	p000e0820:
 	{
  		if (skipdoall('p000e0820')) break p000e0820;
  		if (in_response)
 		{
-			if (!CNDverb(86)) break p000e0820;
+			if (!CNDverb(83)) break p000e0820;
  		}
-		if (!CNDeq(34,255)) break p000e0820;
-		if (!CNDbnotzero(12,1)) break p000e0820;
- 		ACCwriteln(622);
+		if (!CNDnoteq(51,255)) break p000e0820;
+		if (!CNDpresent(getFlag(51))) break p000e0820;
+ 		ACCwriteln(620);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// VACIA _
+	// ARRASTRA _
 	p000e0821:
 	{
  		if (skipdoall('p000e0821')) break p000e0821;
  		if (in_response)
 		{
-			if (!CNDverb(86)) break p000e0821;
+			if (!CNDverb(83)) break p000e0821;
  		}
-		if (!CNDeq(34,255)) break p000e0821;
-		if (!CNDbzero(12,1)) break p000e0821;
- 		ACCwriteln(623);
+		if (!CNDnoteq(51,255)) break p000e0821;
+		if (!CNDabsent(getFlag(51))) break p000e0821;
+ 		ACCwriteln(621);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14874,11 +14871,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(86)) break p000e0822;
  		}
-		if (!CNDnoteq(34,255)) break p000e0822;
-		if (!CNDnoteq(51,255)) break p000e0822;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0822;
-		if (!CNDpresent(getFlag(51))) break p000e0822;
- 		ACCwriteln(624);
+		if (!CNDeq(34,255)) break p000e0822;
+		if (!CNDbnotzero(12,1)) break p000e0822;
+ 		ACCwriteln(622);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14893,11 +14888,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(86)) break p000e0823;
  		}
-		if (!CNDnoteq(34,255)) break p000e0823;
-		if (!CNDnoteq(51,255)) break p000e0823;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0823;
-		if (!CNDabsent(getFlag(51))) break p000e0823;
- 		ACCwriteln(625);
+		if (!CNDeq(34,255)) break p000e0823;
+		if (!CNDbzero(12,1)) break p000e0823;
+ 		ACCwriteln(623);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14913,8 +14906,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(86)) break p000e0824;
  		}
 		if (!CNDnoteq(34,255)) break p000e0824;
-		if (!CNDeq(51,255)) break p000e0824;
- 		ACCwriteln(626);
+		if (!CNDnoteq(51,255)) break p000e0824;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0824;
+		if (!CNDpresent(getFlag(51))) break p000e0824;
+ 		ACCwriteln(624);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14929,9 +14924,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(86)) break p000e0825;
  		}
+		if (!CNDnoteq(34,255)) break p000e0825;
 		if (!CNDnoteq(51,255)) break p000e0825;
-		if (!CNDpresent(getFlag(51))) break p000e0825;
- 		ACCwriteln(627);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0825;
+		if (!CNDabsent(getFlag(51))) break p000e0825;
+ 		ACCwriteln(625);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14946,43 +14943,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(86)) break p000e0826;
  		}
-		if (!CNDnoteq(51,255)) break p000e0826;
-		if (!CNDabsent(getFlag(51))) break p000e0826;
- 		ACCwriteln(628);
+		if (!CNDnoteq(34,255)) break p000e0826;
+		if (!CNDeq(51,255)) break p000e0826;
+ 		ACCwriteln(626);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// LLAMA _
+	// VACIA _
 	p000e0827:
 	{
  		if (skipdoall('p000e0827')) break p000e0827;
  		if (in_response)
 		{
-			if (!CNDverb(76)) break p000e0827;
+			if (!CNDverb(86)) break p000e0827;
  		}
-		if (!CNDeq(34,255)) break p000e0827;
-		if (!CNDbnotzero(12,1)) break p000e0827;
- 		ACCwriteln(629);
+		if (!CNDnoteq(51,255)) break p000e0827;
+		if (!CNDpresent(getFlag(51))) break p000e0827;
+ 		ACCwriteln(627);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// LLAMA _
+	// VACIA _
 	p000e0828:
 	{
  		if (skipdoall('p000e0828')) break p000e0828;
  		if (in_response)
 		{
-			if (!CNDverb(76)) break p000e0828;
+			if (!CNDverb(86)) break p000e0828;
  		}
-		if (!CNDeq(34,255)) break p000e0828;
-		if (!CNDbzero(12,1)) break p000e0828;
- 		ACCwriteln(630);
+		if (!CNDnoteq(51,255)) break p000e0828;
+		if (!CNDabsent(getFlag(51))) break p000e0828;
+ 		ACCwriteln(628);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -14997,11 +14994,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(76)) break p000e0829;
  		}
-		if (!CNDnoteq(34,255)) break p000e0829;
-		if (!CNDnoteq(51,255)) break p000e0829;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0829;
-		if (!CNDpresent(getFlag(51))) break p000e0829;
- 		ACCwriteln(631);
+		if (!CNDeq(34,255)) break p000e0829;
+		if (!CNDbnotzero(12,1)) break p000e0829;
+ 		ACCwriteln(629);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15016,11 +15011,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(76)) break p000e0830;
  		}
-		if (!CNDnoteq(34,255)) break p000e0830;
-		if (!CNDnoteq(51,255)) break p000e0830;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0830;
-		if (!CNDabsent(getFlag(51))) break p000e0830;
- 		ACCwriteln(632);
+		if (!CNDeq(34,255)) break p000e0830;
+		if (!CNDbzero(12,1)) break p000e0830;
+ 		ACCwriteln(630);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15036,8 +15029,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(76)) break p000e0831;
  		}
 		if (!CNDnoteq(34,255)) break p000e0831;
-		if (!CNDeq(51,255)) break p000e0831;
- 		ACCwriteln(633);
+		if (!CNDnoteq(51,255)) break p000e0831;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0831;
+		if (!CNDpresent(getFlag(51))) break p000e0831;
+ 		ACCwriteln(631);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15052,9 +15047,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(76)) break p000e0832;
  		}
+		if (!CNDnoteq(34,255)) break p000e0832;
 		if (!CNDnoteq(51,255)) break p000e0832;
-		if (!CNDpresent(getFlag(51))) break p000e0832;
- 		ACCwriteln(634);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0832;
+		if (!CNDabsent(getFlag(51))) break p000e0832;
+ 		ACCwriteln(632);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15069,43 +15066,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(76)) break p000e0833;
  		}
-		if (!CNDnoteq(51,255)) break p000e0833;
-		if (!CNDabsent(getFlag(51))) break p000e0833;
- 		ACCwriteln(635);
+		if (!CNDnoteq(34,255)) break p000e0833;
+		if (!CNDeq(51,255)) break p000e0833;
+ 		ACCwriteln(633);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DECIR _
+	// LLAMA _
 	p000e0834:
 	{
  		if (skipdoall('p000e0834')) break p000e0834;
  		if (in_response)
 		{
-			if (!CNDverb(31)) break p000e0834;
+			if (!CNDverb(76)) break p000e0834;
  		}
-		if (!CNDeq(34,255)) break p000e0834;
-		if (!CNDbnotzero(12,1)) break p000e0834;
- 		ACCwriteln(636);
+		if (!CNDnoteq(51,255)) break p000e0834;
+		if (!CNDpresent(getFlag(51))) break p000e0834;
+ 		ACCwriteln(634);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DECIR _
+	// LLAMA _
 	p000e0835:
 	{
  		if (skipdoall('p000e0835')) break p000e0835;
  		if (in_response)
 		{
-			if (!CNDverb(31)) break p000e0835;
+			if (!CNDverb(76)) break p000e0835;
  		}
-		if (!CNDeq(34,255)) break p000e0835;
-		if (!CNDbzero(12,1)) break p000e0835;
- 		ACCwriteln(637);
+		if (!CNDnoteq(51,255)) break p000e0835;
+		if (!CNDabsent(getFlag(51))) break p000e0835;
+ 		ACCwriteln(635);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15120,11 +15117,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(31)) break p000e0836;
  		}
-		if (!CNDnoteq(34,255)) break p000e0836;
-		if (!CNDnoteq(51,255)) break p000e0836;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0836;
-		if (!CNDpresent(getFlag(51))) break p000e0836;
- 		ACCwriteln(638);
+		if (!CNDeq(34,255)) break p000e0836;
+		if (!CNDbnotzero(12,1)) break p000e0836;
+ 		ACCwriteln(636);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15139,11 +15134,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(31)) break p000e0837;
  		}
-		if (!CNDnoteq(34,255)) break p000e0837;
-		if (!CNDnoteq(51,255)) break p000e0837;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0837;
-		if (!CNDabsent(getFlag(51))) break p000e0837;
- 		ACCwriteln(639);
+		if (!CNDeq(34,255)) break p000e0837;
+		if (!CNDbzero(12,1)) break p000e0837;
+ 		ACCwriteln(637);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15159,8 +15152,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(31)) break p000e0838;
  		}
 		if (!CNDnoteq(34,255)) break p000e0838;
-		if (!CNDeq(51,255)) break p000e0838;
- 		ACCwriteln(640);
+		if (!CNDnoteq(51,255)) break p000e0838;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0838;
+		if (!CNDpresent(getFlag(51))) break p000e0838;
+ 		ACCwriteln(638);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15175,9 +15170,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(31)) break p000e0839;
  		}
+		if (!CNDnoteq(34,255)) break p000e0839;
 		if (!CNDnoteq(51,255)) break p000e0839;
-		if (!CNDpresent(getFlag(51))) break p000e0839;
- 		ACCwriteln(641);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0839;
+		if (!CNDabsent(getFlag(51))) break p000e0839;
+ 		ACCwriteln(639);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15192,43 +15189,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(31)) break p000e0840;
  		}
-		if (!CNDnoteq(51,255)) break p000e0840;
-		if (!CNDabsent(getFlag(51))) break p000e0840;
- 		ACCwriteln(642);
+		if (!CNDnoteq(34,255)) break p000e0840;
+		if (!CNDeq(51,255)) break p000e0840;
+ 		ACCwriteln(640);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CONSULTA _
+	// DECIR _
 	p000e0841:
 	{
  		if (skipdoall('p000e0841')) break p000e0841;
  		if (in_response)
 		{
-			if (!CNDverb(107)) break p000e0841;
+			if (!CNDverb(31)) break p000e0841;
  		}
-		if (!CNDeq(34,255)) break p000e0841;
-		if (!CNDbnotzero(12,1)) break p000e0841;
- 		ACCwriteln(643);
+		if (!CNDnoteq(51,255)) break p000e0841;
+		if (!CNDpresent(getFlag(51))) break p000e0841;
+ 		ACCwriteln(641);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// CONSULTA _
+	// DECIR _
 	p000e0842:
 	{
  		if (skipdoall('p000e0842')) break p000e0842;
  		if (in_response)
 		{
-			if (!CNDverb(107)) break p000e0842;
+			if (!CNDverb(31)) break p000e0842;
  		}
-		if (!CNDeq(34,255)) break p000e0842;
-		if (!CNDbzero(12,1)) break p000e0842;
- 		ACCwriteln(644);
+		if (!CNDnoteq(51,255)) break p000e0842;
+		if (!CNDabsent(getFlag(51))) break p000e0842;
+ 		ACCwriteln(642);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15243,9 +15240,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(107)) break p000e0843;
  		}
-		if (!CNDnoteq(34,255)) break p000e0843;
-		if (!CNDeq(51,255)) break p000e0843;
- 		ACCwriteln(645);
+		if (!CNDeq(34,255)) break p000e0843;
+		if (!CNDbnotzero(12,1)) break p000e0843;
+ 		ACCwriteln(643);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15260,9 +15257,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(107)) break p000e0844;
  		}
-		if (!CNDnoteq(51,255)) break p000e0844;
-		if (!CNDpresent(getFlag(51))) break p000e0844;
- 		ACCwriteln(646);
+		if (!CNDeq(34,255)) break p000e0844;
+		if (!CNDbzero(12,1)) break p000e0844;
+ 		ACCwriteln(644);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15277,43 +15274,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(107)) break p000e0845;
  		}
-		if (!CNDnoteq(51,255)) break p000e0845;
-		if (!CNDabsent(getFlag(51))) break p000e0845;
- 		ACCwriteln(647);
+		if (!CNDnoteq(34,255)) break p000e0845;
+		if (!CNDeq(51,255)) break p000e0845;
+ 		ACCwriteln(645);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// INCREPA _
+	// CONSULTA _
 	p000e0846:
 	{
  		if (skipdoall('p000e0846')) break p000e0846;
  		if (in_response)
 		{
-			if (!CNDverb(89)) break p000e0846;
+			if (!CNDverb(107)) break p000e0846;
  		}
-		if (!CNDeq(34,255)) break p000e0846;
-		if (!CNDbnotzero(12,1)) break p000e0846;
- 		ACCwriteln(648);
+		if (!CNDnoteq(51,255)) break p000e0846;
+		if (!CNDpresent(getFlag(51))) break p000e0846;
+ 		ACCwriteln(646);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// INCREPA _
+	// CONSULTA _
 	p000e0847:
 	{
  		if (skipdoall('p000e0847')) break p000e0847;
  		if (in_response)
 		{
-			if (!CNDverb(89)) break p000e0847;
+			if (!CNDverb(107)) break p000e0847;
  		}
-		if (!CNDeq(34,255)) break p000e0847;
-		if (!CNDbzero(12,1)) break p000e0847;
- 		ACCwriteln(649);
+		if (!CNDnoteq(51,255)) break p000e0847;
+		if (!CNDabsent(getFlag(51))) break p000e0847;
+ 		ACCwriteln(647);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15328,11 +15325,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(89)) break p000e0848;
  		}
-		if (!CNDnoteq(34,255)) break p000e0848;
-		if (!CNDnoteq(51,255)) break p000e0848;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0848;
-		if (!CNDpresent(getFlag(51))) break p000e0848;
- 		ACCwriteln(650);
+		if (!CNDeq(34,255)) break p000e0848;
+		if (!CNDbnotzero(12,1)) break p000e0848;
+ 		ACCwriteln(648);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15347,11 +15342,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(89)) break p000e0849;
  		}
-		if (!CNDnoteq(34,255)) break p000e0849;
-		if (!CNDnoteq(51,255)) break p000e0849;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0849;
-		if (!CNDabsent(getFlag(51))) break p000e0849;
- 		ACCwriteln(651);
+		if (!CNDeq(34,255)) break p000e0849;
+		if (!CNDbzero(12,1)) break p000e0849;
+ 		ACCwriteln(649);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15367,8 +15360,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(89)) break p000e0850;
  		}
 		if (!CNDnoteq(34,255)) break p000e0850;
-		if (!CNDeq(51,255)) break p000e0850;
- 		ACCwriteln(652);
+		if (!CNDnoteq(51,255)) break p000e0850;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0850;
+		if (!CNDpresent(getFlag(51))) break p000e0850;
+ 		ACCwriteln(650);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15383,9 +15378,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(89)) break p000e0851;
  		}
+		if (!CNDnoteq(34,255)) break p000e0851;
 		if (!CNDnoteq(51,255)) break p000e0851;
-		if (!CNDpresent(getFlag(51))) break p000e0851;
- 		ACCwriteln(653);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0851;
+		if (!CNDabsent(getFlag(51))) break p000e0851;
+ 		ACCwriteln(651);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15400,43 +15397,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(89)) break p000e0852;
  		}
-		if (!CNDnoteq(51,255)) break p000e0852;
-		if (!CNDabsent(getFlag(51))) break p000e0852;
- 		ACCwriteln(654);
+		if (!CNDnoteq(34,255)) break p000e0852;
+		if (!CNDeq(51,255)) break p000e0852;
+ 		ACCwriteln(652);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ACERCA _
+	// INCREPA _
 	p000e0853:
 	{
  		if (skipdoall('p000e0853')) break p000e0853;
  		if (in_response)
 		{
-			if (!CNDverb(99)) break p000e0853;
+			if (!CNDverb(89)) break p000e0853;
  		}
-		if (!CNDeq(34,255)) break p000e0853;
-		if (!CNDbnotzero(12,1)) break p000e0853;
- 		ACCwriteln(655);
+		if (!CNDnoteq(51,255)) break p000e0853;
+		if (!CNDpresent(getFlag(51))) break p000e0853;
+ 		ACCwriteln(653);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ACERCA _
+	// INCREPA _
 	p000e0854:
 	{
  		if (skipdoall('p000e0854')) break p000e0854;
  		if (in_response)
 		{
-			if (!CNDverb(99)) break p000e0854;
+			if (!CNDverb(89)) break p000e0854;
  		}
-		if (!CNDeq(34,255)) break p000e0854;
-		if (!CNDbzero(12,1)) break p000e0854;
- 		ACCwriteln(656);
+		if (!CNDnoteq(51,255)) break p000e0854;
+		if (!CNDabsent(getFlag(51))) break p000e0854;
+ 		ACCwriteln(654);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15451,11 +15448,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(99)) break p000e0855;
  		}
-		if (!CNDnoteq(34,255)) break p000e0855;
-		if (!CNDnoteq(51,255)) break p000e0855;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0855;
-		if (!CNDpresent(getFlag(51))) break p000e0855;
- 		ACCwriteln(657);
+		if (!CNDeq(34,255)) break p000e0855;
+		if (!CNDbnotzero(12,1)) break p000e0855;
+ 		ACCwriteln(655);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15470,11 +15465,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(99)) break p000e0856;
  		}
-		if (!CNDnoteq(34,255)) break p000e0856;
-		if (!CNDnoteq(51,255)) break p000e0856;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0856;
-		if (!CNDabsent(getFlag(51))) break p000e0856;
- 		ACCwriteln(658);
+		if (!CNDeq(34,255)) break p000e0856;
+		if (!CNDbzero(12,1)) break p000e0856;
+ 		ACCwriteln(656);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15490,8 +15483,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(99)) break p000e0857;
  		}
 		if (!CNDnoteq(34,255)) break p000e0857;
-		if (!CNDeq(51,255)) break p000e0857;
- 		ACCwriteln(659);
+		if (!CNDnoteq(51,255)) break p000e0857;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0857;
+		if (!CNDpresent(getFlag(51))) break p000e0857;
+ 		ACCwriteln(657);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15506,9 +15501,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(99)) break p000e0858;
  		}
+		if (!CNDnoteq(34,255)) break p000e0858;
 		if (!CNDnoteq(51,255)) break p000e0858;
-		if (!CNDpresent(getFlag(51))) break p000e0858;
- 		ACCwriteln(660);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0858;
+		if (!CNDabsent(getFlag(51))) break p000e0858;
+ 		ACCwriteln(658);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15523,43 +15520,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(99)) break p000e0859;
  		}
-		if (!CNDnoteq(51,255)) break p000e0859;
-		if (!CNDabsent(getFlag(51))) break p000e0859;
- 		ACCwriteln(661);
+		if (!CNDnoteq(34,255)) break p000e0859;
+		if (!CNDeq(51,255)) break p000e0859;
+ 		ACCwriteln(659);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// SEPARA _
+	// ACERCA _
 	p000e0860:
 	{
  		if (skipdoall('p000e0860')) break p000e0860;
  		if (in_response)
 		{
-			if (!CNDverb(100)) break p000e0860;
+			if (!CNDverb(99)) break p000e0860;
  		}
-		if (!CNDeq(34,255)) break p000e0860;
-		if (!CNDbnotzero(12,1)) break p000e0860;
- 		ACCwriteln(662);
+		if (!CNDnoteq(51,255)) break p000e0860;
+		if (!CNDpresent(getFlag(51))) break p000e0860;
+ 		ACCwriteln(660);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// SEPARA _
+	// ACERCA _
 	p000e0861:
 	{
  		if (skipdoall('p000e0861')) break p000e0861;
  		if (in_response)
 		{
-			if (!CNDverb(100)) break p000e0861;
+			if (!CNDverb(99)) break p000e0861;
  		}
-		if (!CNDeq(34,255)) break p000e0861;
-		if (!CNDbzero(12,1)) break p000e0861;
- 		ACCwriteln(663);
+		if (!CNDnoteq(51,255)) break p000e0861;
+		if (!CNDabsent(getFlag(51))) break p000e0861;
+ 		ACCwriteln(661);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15574,11 +15571,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(100)) break p000e0862;
  		}
-		if (!CNDnoteq(34,255)) break p000e0862;
-		if (!CNDnoteq(51,255)) break p000e0862;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0862;
-		if (!CNDpresent(getFlag(51))) break p000e0862;
- 		ACCwriteln(664);
+		if (!CNDeq(34,255)) break p000e0862;
+		if (!CNDbnotzero(12,1)) break p000e0862;
+ 		ACCwriteln(662);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15593,11 +15588,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(100)) break p000e0863;
  		}
-		if (!CNDnoteq(34,255)) break p000e0863;
-		if (!CNDnoteq(51,255)) break p000e0863;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0863;
-		if (!CNDabsent(getFlag(51))) break p000e0863;
- 		ACCwriteln(665);
+		if (!CNDeq(34,255)) break p000e0863;
+		if (!CNDbzero(12,1)) break p000e0863;
+ 		ACCwriteln(663);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15613,8 +15606,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(100)) break p000e0864;
  		}
 		if (!CNDnoteq(34,255)) break p000e0864;
-		if (!CNDeq(51,255)) break p000e0864;
- 		ACCwriteln(666);
+		if (!CNDnoteq(51,255)) break p000e0864;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0864;
+		if (!CNDpresent(getFlag(51))) break p000e0864;
+ 		ACCwriteln(664);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15629,9 +15624,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(100)) break p000e0865;
  		}
+		if (!CNDnoteq(34,255)) break p000e0865;
 		if (!CNDnoteq(51,255)) break p000e0865;
-		if (!CNDpresent(getFlag(51))) break p000e0865;
- 		ACCwriteln(667);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0865;
+		if (!CNDabsent(getFlag(51))) break p000e0865;
+ 		ACCwriteln(665);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15646,43 +15643,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(100)) break p000e0866;
  		}
-		if (!CNDnoteq(51,255)) break p000e0866;
-		if (!CNDabsent(getFlag(51))) break p000e0866;
- 		ACCwriteln(668);
+		if (!CNDnoteq(34,255)) break p000e0866;
+		if (!CNDeq(51,255)) break p000e0866;
+ 		ACCwriteln(666);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DECIR _
+	// SEPARA _
 	p000e0867:
 	{
  		if (skipdoall('p000e0867')) break p000e0867;
  		if (in_response)
 		{
-			if (!CNDverb(31)) break p000e0867;
+			if (!CNDverb(100)) break p000e0867;
  		}
-		if (!CNDeq(34,255)) break p000e0867;
-		if (!CNDbnotzero(12,1)) break p000e0867;
- 		ACCwriteln(669);
+		if (!CNDnoteq(51,255)) break p000e0867;
+		if (!CNDpresent(getFlag(51))) break p000e0867;
+ 		ACCwriteln(667);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// DECIR _
+	// SEPARA _
 	p000e0868:
 	{
  		if (skipdoall('p000e0868')) break p000e0868;
  		if (in_response)
 		{
-			if (!CNDverb(31)) break p000e0868;
+			if (!CNDverb(100)) break p000e0868;
  		}
-		if (!CNDeq(34,255)) break p000e0868;
-		if (!CNDbzero(12,1)) break p000e0868;
- 		ACCwriteln(670);
+		if (!CNDnoteq(51,255)) break p000e0868;
+		if (!CNDabsent(getFlag(51))) break p000e0868;
+ 		ACCwriteln(668);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15697,11 +15694,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(31)) break p000e0869;
  		}
-		if (!CNDnoteq(34,255)) break p000e0869;
-		if (!CNDnoteq(51,255)) break p000e0869;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0869;
-		if (!CNDpresent(getFlag(51))) break p000e0869;
- 		ACCwriteln(671);
+		if (!CNDeq(34,255)) break p000e0869;
+		if (!CNDbnotzero(12,1)) break p000e0869;
+ 		ACCwriteln(669);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15716,11 +15711,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(31)) break p000e0870;
  		}
-		if (!CNDnoteq(34,255)) break p000e0870;
-		if (!CNDnoteq(51,255)) break p000e0870;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0870;
-		if (!CNDabsent(getFlag(51))) break p000e0870;
- 		ACCwriteln(672);
+		if (!CNDeq(34,255)) break p000e0870;
+		if (!CNDbzero(12,1)) break p000e0870;
+ 		ACCwriteln(670);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15736,8 +15729,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(31)) break p000e0871;
  		}
 		if (!CNDnoteq(34,255)) break p000e0871;
-		if (!CNDeq(51,255)) break p000e0871;
- 		ACCwriteln(673);
+		if (!CNDnoteq(51,255)) break p000e0871;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0871;
+		if (!CNDpresent(getFlag(51))) break p000e0871;
+ 		ACCwriteln(671);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15752,9 +15747,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(31)) break p000e0872;
  		}
+		if (!CNDnoteq(34,255)) break p000e0872;
 		if (!CNDnoteq(51,255)) break p000e0872;
-		if (!CNDpresent(getFlag(51))) break p000e0872;
- 		ACCwriteln(674);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0872;
+		if (!CNDabsent(getFlag(51))) break p000e0872;
+ 		ACCwriteln(672);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15769,43 +15766,43 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(31)) break p000e0873;
  		}
-		if (!CNDnoteq(51,255)) break p000e0873;
-		if (!CNDabsent(getFlag(51))) break p000e0873;
- 		ACCwriteln(675);
+		if (!CNDnoteq(34,255)) break p000e0873;
+		if (!CNDeq(51,255)) break p000e0873;
+ 		ACCwriteln(673);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ANDA _
+	// DECIR _
 	p000e0874:
 	{
  		if (skipdoall('p000e0874')) break p000e0874;
  		if (in_response)
 		{
-			if (!CNDverb(90)) break p000e0874;
+			if (!CNDverb(31)) break p000e0874;
  		}
-		if (!CNDeq(34,255)) break p000e0874;
-		if (!CNDbnotzero(12,1)) break p000e0874;
- 		ACCwriteln(676);
+		if (!CNDnoteq(51,255)) break p000e0874;
+		if (!CNDpresent(getFlag(51))) break p000e0874;
+ 		ACCwriteln(674);
  		ACCdone();
 		break pro000_restart;
 		{}
 
 	}
 
-	// ANDA _
+	// DECIR _
 	p000e0875:
 	{
  		if (skipdoall('p000e0875')) break p000e0875;
  		if (in_response)
 		{
-			if (!CNDverb(90)) break p000e0875;
+			if (!CNDverb(31)) break p000e0875;
  		}
-		if (!CNDeq(34,255)) break p000e0875;
-		if (!CNDbzero(12,1)) break p000e0875;
- 		ACCwriteln(677);
+		if (!CNDnoteq(51,255)) break p000e0875;
+		if (!CNDabsent(getFlag(51))) break p000e0875;
+ 		ACCwriteln(675);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15820,11 +15817,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(90)) break p000e0876;
  		}
-		if (!CNDnoteq(34,255)) break p000e0876;
-		if (!CNDnoteq(51,255)) break p000e0876;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0876;
-		if (!CNDpresent(getFlag(51))) break p000e0876;
- 		ACCwriteln(678);
+		if (!CNDeq(34,255)) break p000e0876;
+		if (!CNDbnotzero(12,1)) break p000e0876;
+ 		ACCwriteln(676);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15839,11 +15834,9 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(90)) break p000e0877;
  		}
-		if (!CNDnoteq(34,255)) break p000e0877;
-		if (!CNDnoteq(51,255)) break p000e0877;
-		if (!CNDonotzero(getFlag(51),3)) break p000e0877;
-		if (!CNDabsent(getFlag(51))) break p000e0877;
- 		ACCwriteln(679);
+		if (!CNDeq(34,255)) break p000e0877;
+		if (!CNDbzero(12,1)) break p000e0877;
+ 		ACCwriteln(677);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15859,8 +15852,10 @@ pro000_restart: while(process_restart)
 			if (!CNDverb(90)) break p000e0878;
  		}
 		if (!CNDnoteq(34,255)) break p000e0878;
-		if (!CNDeq(51,255)) break p000e0878;
- 		ACCwriteln(680);
+		if (!CNDnoteq(51,255)) break p000e0878;
+		if (!CNDonotzero(getFlag(51),3)) break p000e0878;
+		if (!CNDpresent(getFlag(51))) break p000e0878;
+ 		ACCwriteln(678);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15875,9 +15870,11 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(90)) break p000e0879;
  		}
+		if (!CNDnoteq(34,255)) break p000e0879;
 		if (!CNDnoteq(51,255)) break p000e0879;
-		if (!CNDpresent(getFlag(51))) break p000e0879;
- 		ACCwriteln(681);
+		if (!CNDonotzero(getFlag(51),3)) break p000e0879;
+		if (!CNDabsent(getFlag(51))) break p000e0879;
+ 		ACCwriteln(679);
  		ACCdone();
 		break pro000_restart;
 		{}
@@ -15892,8 +15889,42 @@ pro000_restart: while(process_restart)
 		{
 			if (!CNDverb(90)) break p000e0880;
  		}
-		if (!CNDnoteq(51,255)) break p000e0880;
-		if (!CNDabsent(getFlag(51))) break p000e0880;
+		if (!CNDnoteq(34,255)) break p000e0880;
+		if (!CNDeq(51,255)) break p000e0880;
+ 		ACCwriteln(680);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ANDA _
+	p000e0881:
+	{
+ 		if (skipdoall('p000e0881')) break p000e0881;
+ 		if (in_response)
+		{
+			if (!CNDverb(90)) break p000e0881;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0881;
+		if (!CNDpresent(getFlag(51))) break p000e0881;
+ 		ACCwriteln(681);
+ 		ACCdone();
+		break pro000_restart;
+		{}
+
+	}
+
+	// ANDA _
+	p000e0882:
+	{
+ 		if (skipdoall('p000e0882')) break p000e0882;
+ 		if (in_response)
+		{
+			if (!CNDverb(90)) break p000e0882;
+ 		}
+		if (!CNDnoteq(51,255)) break p000e0882;
+		if (!CNDabsent(getFlag(51))) break p000e0882;
  		ACCwriteln(682);
  		ACCdone();
 		break pro000_restart;
@@ -15902,11 +15933,11 @@ pro000_restart: while(process_restart)
 	}
 
 	// _ _
-	p000e0881:
+	p000e0883:
 	{
- 		if (skipdoall('p000e0881')) break p000e0881;
-		if (!CNDlt(33,14)) break p000e0881;
-		if (!CNDmove(38)) break p000e0881;
+ 		if (skipdoall('p000e0883')) break p000e0883;
+		if (!CNDlt(33,14)) break p000e0883;
+		if (!CNDmove(38)) break p000e0883;
  		ACCprocess(26);
  		ACCdesc();
 		break pro000_restart;
@@ -15915,10 +15946,10 @@ pro000_restart: while(process_restart)
 	}
 
 	// _ _
-	p000e0882:
+	p000e0884:
 	{
- 		if (skipdoall('p000e0882')) break p000e0882;
-		if (!CNDlt(33,14)) break p000e0882;
+ 		if (skipdoall('p000e0884')) break p000e0884;
+		if (!CNDlt(33,14)) break p000e0884;
  		ACCplus(33,1002);
  		ACCwrite(683);
  		ACCmes(getFlag(33));
@@ -15933,9 +15964,9 @@ pro000_restart: while(process_restart)
 	}
 
 	// _ _
-	p000e0883:
+	p000e0885:
 	{
- 		if (skipdoall('p000e0883')) break p000e0883;
+ 		if (skipdoall('p000e0885')) break p000e0885;
  		ACChook(685);
 		if (done_flag) break pro000_restart;
 		{}
@@ -19132,11 +19163,16 @@ process_restart=true;
 pro010_restart: while(process_restart)
 {
 	process_restart=false;
-	// _ _
+	// DECIR ENANO
 	p010e0000:
 	{
  		if (skipdoall('p010e0000')) break p010e0000;
-		if (!CNDparse()) break p010e0000;
+ 		if (in_response)
+		{
+			if (!CNDverb(31)) break p010e0000;
+			if (!CNDnoun1(68)) break p010e0000;
+ 		}
+		if (!CNDprep(9)) break p010e0000;
  		ACCwriteln(833);
  		ACCdone();
 		break pro010_restart;
@@ -19144,14 +19180,11 @@ pro010_restart: while(process_restart)
 
 	}
 
-	// AYUDA _
+	// _ _
 	p010e0001:
 	{
  		if (skipdoall('p010e0001')) break p010e0001;
- 		if (in_response)
-		{
-			if (!CNDverb(34)) break p010e0001;
- 		}
+		if (!CNDparse()) break p010e0001;
  		ACCwriteln(834);
  		ACCdone();
 		break pro010_restart;
@@ -19159,13 +19192,28 @@ pro010_restart: while(process_restart)
 
 	}
 
-	// _ MIERDA
+	// AYUDA _
 	p010e0002:
 	{
  		if (skipdoall('p010e0002')) break p010e0002;
  		if (in_response)
 		{
-			if (!CNDnoun1(117)) break p010e0002;
+			if (!CNDverb(34)) break p010e0002;
+ 		}
+ 		ACCwriteln(835);
+ 		ACCdone();
+		break pro010_restart;
+		{}
+
+	}
+
+	// _ MIERDA
+	p010e0003:
+	{
+ 		if (skipdoall('p010e0003')) break p010e0003;
+ 		if (in_response)
+		{
+			if (!CNDnoun1(117)) break p010e0003;
  		}
  		ACCprocess(11);
  		ACCdone();
@@ -19175,12 +19223,12 @@ pro010_restart: while(process_restart)
 	}
 
 	// CABRON _
-	p010e0003:
+	p010e0004:
 	{
- 		if (skipdoall('p010e0003')) break p010e0003;
+ 		if (skipdoall('p010e0004')) break p010e0004;
  		if (in_response)
 		{
-			if (!CNDverb(119)) break p010e0003;
+			if (!CNDverb(119)) break p010e0004;
  		}
  		ACCprocess(11);
  		ACCdone();
@@ -19190,27 +19238,12 @@ pro010_restart: while(process_restart)
 	}
 
 	// _ ESTAS
-	p010e0004:
-	{
- 		if (skipdoall('p010e0004')) break p010e0004;
- 		if (in_response)
-		{
-			if (!CNDnoun1(15)) break p010e0004;
- 		}
- 		ACCwriteln(835);
- 		ACCdone();
-		break pro010_restart;
-		{}
-
-	}
-
-	// ACERCATE _
 	p010e0005:
 	{
  		if (skipdoall('p010e0005')) break p010e0005;
  		if (in_response)
 		{
-			if (!CNDverb(120)) break p010e0005;
+			if (!CNDnoun1(15)) break p010e0005;
  		}
  		ACCwriteln(836);
  		ACCdone();
@@ -19219,13 +19252,13 @@ pro010_restart: while(process_restart)
 
 	}
 
-	// _ SIGUE
+	// ACERCATE _
 	p010e0006:
 	{
  		if (skipdoall('p010e0006')) break p010e0006;
  		if (in_response)
 		{
-			if (!CNDnoun1(106)) break p010e0006;
+			if (!CNDverb(120)) break p010e0006;
  		}
  		ACCwriteln(837);
  		ACCdone();
@@ -19234,13 +19267,13 @@ pro010_restart: while(process_restart)
 
 	}
 
-	// BESA _
+	// _ SIGUE
 	p010e0007:
 	{
  		if (skipdoall('p010e0007')) break p010e0007;
  		if (in_response)
 		{
-			if (!CNDverb(62)) break p010e0007;
+			if (!CNDnoun1(106)) break p010e0007;
  		}
  		ACCwriteln(838);
  		ACCdone();
@@ -19249,13 +19282,13 @@ pro010_restart: while(process_restart)
 
 	}
 
-	// _ LLAMAS
+	// BESA _
 	p010e0008:
 	{
  		if (skipdoall('p010e0008')) break p010e0008;
  		if (in_response)
 		{
-			if (!CNDnoun1(109)) break p010e0008;
+			if (!CNDverb(62)) break p010e0008;
  		}
  		ACCwriteln(839);
  		ACCdone();
@@ -19264,13 +19297,13 @@ pro010_restart: while(process_restart)
 
 	}
 
-	// _ HOLA
+	// _ LLAMAS
 	p010e0009:
 	{
  		if (skipdoall('p010e0009')) break p010e0009;
  		if (in_response)
 		{
-			if (!CNDnoun1(115)) break p010e0009;
+			if (!CNDnoun1(109)) break p010e0009;
  		}
  		ACCwriteln(840);
  		ACCdone();
@@ -19279,11 +19312,26 @@ pro010_restart: while(process_restart)
 
 	}
 
-	// _ _
+	// _ HOLA
 	p010e0010:
 	{
  		if (skipdoall('p010e0010')) break p010e0010;
+ 		if (in_response)
+		{
+			if (!CNDnoun1(115)) break p010e0010;
+ 		}
  		ACCwriteln(841);
+ 		ACCdone();
+		break pro010_restart;
+		{}
+
+	}
+
+	// _ _
+	p010e0011:
+	{
+ 		if (skipdoall('p010e0011')) break p010e0011;
+ 		ACCwriteln(842);
  		ACCdone();
 		break pro010_restart;
 		{}
@@ -19305,7 +19353,7 @@ pro011_restart: while(process_restart)
 	{
  		if (skipdoall('p011e0000')) break p011e0000;
  		ACCset(102);
- 		ACCwriteln(842);
+ 		ACCwriteln(843);
  		ACCpause(100);
  		function anykey00056() 
 		{
@@ -19315,13 +19363,13 @@ pro011_restart: while(process_restart)
 		}
  		function anykey00055() 
 		{
- 		ACCwriteln(844);
+ 		ACCwriteln(845);
  		ACCpause(150);
  		waitKey(anykey00056);
 		}
  		function anykey00054() 
 		{
- 		ACCwrite(843);
+ 		ACCwrite(844);
  		ACCpause(100);
  		waitKey(anykey00055);
 		}
@@ -19448,7 +19496,7 @@ pro015_restart: while(process_restart)
  		if (skipdoall('p015e0000')) break p015e0000;
  		ACCset(7);
  		ACCpicture(260);
- 		ACCwriteln(845);
+ 		ACCwriteln(846);
 		{}
 
 	}
@@ -19519,7 +19567,7 @@ pro016_restart: while(process_restart)
  		ACCputo(47);
  		ACCcls();
  		ACCpicture(264);
- 		ACCwrite(846);
+ 		ACCwrite(847);
  		ACCpause(100);
  		function anykey00058() 
 		{
@@ -19528,7 +19576,7 @@ pro016_restart: while(process_restart)
 		}
  		function anykey00057() 
 		{
- 		ACCwriteln(847);
+ 		ACCwriteln(848);
  		ACCnewline();
  		ACCanykey();
  		waitKey(anykey00058);
@@ -19611,9 +19659,9 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0002')) break p018e0002;
 		if (!CNDat(82)) break p018e0002;
 		if (!CNDislight()) break p018e0002;
- 		ACCwrite(848);
+ 		ACCwrite(849);
 		if (!CNDlt(119,255)) break p018e0002;
- 		ACCwriteln(849);
+ 		ACCwriteln(850);
 		{}
 
 	}
@@ -19625,7 +19673,7 @@ pro018_restart: while(process_restart)
 		if (!CNDat(82)) break p018e0003;
 		if (!CNDislight()) break p018e0003;
 		if (!CNDeq(119,255)) break p018e0003;
- 		ACCwriteln(850);
+ 		ACCwriteln(851);
 		{}
 
 	}
@@ -19638,7 +19686,7 @@ pro018_restart: while(process_restart)
 		if (!CNDatgt(101)) break p018e0004;
 		if (!CNDatlt(104)) break p018e0004;
 		if (!CNDzero(121)) break p018e0004;
- 		ACCwriteln(851);
+ 		ACCwriteln(852);
 		{}
 
 	}
@@ -19650,7 +19698,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0005;
 		if (!CNDat(66)) break p018e0005;
 		if (!CNDlt(116,9)) break p018e0005;
- 		ACCwriteln(852);
+ 		ACCwriteln(853);
 		{}
 
 	}
@@ -19661,7 +19709,7 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0006')) break p018e0006;
 		if (!CNDat(35)) break p018e0006;
 		if (!CNDzero(130)) break p018e0006;
- 		ACCwriteln(853);
+ 		ACCwriteln(854);
 		{}
 
 	}
@@ -19673,7 +19721,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0007;
 		if (!CNDat(106)) break p018e0007;
 		if (!CNDzero(124)) break p018e0007;
- 		ACCwriteln(854);
+ 		ACCwriteln(855);
 		{}
 
 	}
@@ -19685,7 +19733,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0008;
 		if (!CNDat(106)) break p018e0008;
 		if (!CNDeq(124,1)) break p018e0008;
- 		ACCwriteln(855);
+ 		ACCwriteln(856);
 		{}
 
 	}
@@ -19697,7 +19745,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0009;
 		if (!CNDat(106)) break p018e0009;
 		if (!CNDgt(124,1)) break p018e0009;
- 		ACCwriteln(856);
+ 		ACCwriteln(857);
 		{}
 
 	}
@@ -19710,12 +19758,12 @@ pro018_restart: while(process_restart)
 		if (!CNDatgt(47)) break p018e0010;
 		if (!CNDatlt(53)) break p018e0010;
  		ACCpicture(48);
- 		ACCwrite(857);
-		if (!CNDat(48)) break p018e0010;
  		ACCwrite(858);
+		if (!CNDat(48)) break p018e0010;
  		ACCwrite(859);
  		ACCwrite(860);
  		ACCwrite(861);
+ 		ACCwrite(862);
 		{}
 
 	}
@@ -19736,10 +19784,10 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0012')) break p018e0012;
 		if (!CNDislight()) break p018e0012;
 		if (!CNDat(49)) break p018e0012;
- 		ACCwrite(862);
  		ACCwrite(863);
  		ACCwrite(864);
  		ACCwrite(865);
+ 		ACCwrite(866);
 		{}
 
 	}
@@ -19750,10 +19798,10 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0013')) break p018e0013;
 		if (!CNDislight()) break p018e0013;
 		if (!CNDat(50)) break p018e0013;
- 		ACCwrite(866);
  		ACCwrite(867);
  		ACCwrite(868);
  		ACCwrite(869);
+ 		ACCwrite(870);
 		{}
 
 	}
@@ -19764,10 +19812,10 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0014')) break p018e0014;
 		if (!CNDislight()) break p018e0014;
 		if (!CNDat(51)) break p018e0014;
- 		ACCwrite(870);
  		ACCwrite(871);
  		ACCwrite(872);
  		ACCwrite(873);
+ 		ACCwrite(874);
 		{}
 
 	}
@@ -19778,10 +19826,10 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0015')) break p018e0015;
 		if (!CNDislight()) break p018e0015;
 		if (!CNDat(52)) break p018e0015;
- 		ACCwrite(874);
  		ACCwrite(875);
  		ACCwrite(876);
  		ACCwrite(877);
+ 		ACCwrite(878);
 		{}
 
 	}
@@ -19793,7 +19841,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0016;
 		if (!CNDatgt(47)) break p018e0016;
 		if (!CNDatlt(53)) break p018e0016;
- 		ACCwriteln(878);
+ 		ACCwriteln(879);
 		{}
 
 	}
@@ -19815,7 +19863,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0018;
 		if (!CNDat(92)) break p018e0018;
 		if (!CNDzero(120)) break p018e0018;
- 		ACCwriteln(879);
+ 		ACCwriteln(880);
 		{}
 
 	}
@@ -19827,7 +19875,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0019;
 		if (!CNDat(92)) break p018e0019;
 		if (!CNDeq(120,1)) break p018e0019;
- 		ACCwriteln(880);
+ 		ACCwriteln(881);
 		{}
 
 	}
@@ -19839,7 +19887,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0020;
 		if (!CNDat(92)) break p018e0020;
 		if (!CNDgt(120,1)) break p018e0020;
- 		ACCwriteln(881);
+ 		ACCwriteln(882);
 		{}
 
 	}
@@ -19851,7 +19899,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0021;
 		if (!CNDat(117)) break p018e0021;
 		if (!CNDzero(122)) break p018e0021;
- 		ACCwriteln(882);
+ 		ACCwriteln(883);
 		{}
 
 	}
@@ -19863,7 +19911,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0022;
 		if (!CNDat(117)) break p018e0022;
 		if (!CNDeq(122,2)) break p018e0022;
- 		ACCwriteln(883);
+ 		ACCwriteln(884);
 		{}
 
 	}
@@ -19896,7 +19944,7 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0025')) break p018e0025;
 		if (!CNDislight()) break p018e0025;
 		if (!CNDeq(122,255)) break p018e0025;
- 		ACCwriteln(884);
+ 		ACCwriteln(885);
 		{}
 
 	}
@@ -19909,12 +19957,12 @@ pro018_restart: while(process_restart)
 		if (!CNDatgt(41)) break p018e0026;
 		if (!CNDatlt(48)) break p018e0026;
  		ACCpicture(42);
- 		ACCwrite(885);
-		if (!CNDat(42)) break p018e0026;
  		ACCwrite(886);
+		if (!CNDat(42)) break p018e0026;
  		ACCwrite(887);
  		ACCwrite(888);
  		ACCwrite(889);
+ 		ACCwrite(890);
 		{}
 
 	}
@@ -19925,10 +19973,10 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0027')) break p018e0027;
 		if (!CNDislight()) break p018e0027;
 		if (!CNDat(43)) break p018e0027;
- 		ACCwrite(890);
  		ACCwrite(891);
  		ACCwrite(892);
  		ACCwrite(893);
+ 		ACCwrite(894);
 		{}
 
 	}
@@ -19939,12 +19987,12 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0028')) break p018e0028;
 		if (!CNDislight()) break p018e0028;
 		if (!CNDat(44)) break p018e0028;
- 		ACCwrite(894);
  		ACCwrite(895);
  		ACCwrite(896);
  		ACCwrite(897);
- 		ACCwriteln(898);
- 		ACCwrite(899);
+ 		ACCwrite(898);
+ 		ACCwriteln(899);
+ 		ACCwrite(900);
 		{}
 
 	}
@@ -19955,10 +20003,10 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0029')) break p018e0029;
 		if (!CNDislight()) break p018e0029;
 		if (!CNDat(45)) break p018e0029;
- 		ACCwrite(900);
  		ACCwrite(901);
  		ACCwrite(902);
  		ACCwrite(903);
+ 		ACCwrite(904);
 		{}
 
 	}
@@ -19969,10 +20017,10 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0030')) break p018e0030;
 		if (!CNDislight()) break p018e0030;
 		if (!CNDat(46)) break p018e0030;
- 		ACCwrite(904);
  		ACCwrite(905);
  		ACCwrite(906);
  		ACCwrite(907);
+ 		ACCwrite(908);
 		{}
 
 	}
@@ -19983,12 +20031,12 @@ pro018_restart: while(process_restart)
  		if (skipdoall('p018e0031')) break p018e0031;
 		if (!CNDislight()) break p018e0031;
 		if (!CNDat(47)) break p018e0031;
- 		ACCwrite(908);
  		ACCwrite(909);
  		ACCwrite(910);
  		ACCwrite(911);
- 		ACCwriteln(912);
- 		ACCwrite(913);
+ 		ACCwrite(912);
+ 		ACCwriteln(913);
+ 		ACCwrite(914);
 		{}
 
 	}
@@ -20000,7 +20048,7 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0032;
 		if (!CNDatgt(41)) break p018e0032;
 		if (!CNDatlt(48)) break p018e0032;
- 		ACCwriteln(914);
+ 		ACCwriteln(915);
 		{}
 
 	}
@@ -20012,10 +20060,10 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0033;
 		if (!CNDatgt(37)) break p018e0033;
 		if (!CNDatlt(40)) break p018e0033;
- 		ACCwrite(915);
-		if (!CNDzero(160)) break p018e0033;
  		ACCwrite(916);
- 		ACCwriteln(917);
+		if (!CNDzero(160)) break p018e0033;
+ 		ACCwrite(917);
+ 		ACCwriteln(918);
  		ACCdone();
 		break pro018_restart;
 		{}
@@ -20029,8 +20077,8 @@ pro018_restart: while(process_restart)
 		if (!CNDislight()) break p018e0034;
 		if (!CNDatgt(37)) break p018e0034;
 		if (!CNDatlt(40)) break p018e0034;
- 		ACCwrite(918);
- 		ACCwriteln(919);
+ 		ACCwrite(919);
+ 		ACCwriteln(920);
 		{}
 
 	}
@@ -20042,11 +20090,11 @@ pro018_restart: while(process_restart)
 		if (!CNDat(120)) break p018e0035;
  		ACCpicture(29);
  		ACCcommand(0);
- 		ACCwrite(920);
+ 		ACCwrite(921);
  		ACCprint(31);
- 		ACCwriteln(921);
- 		ACCnewline();
  		ACCwriteln(922);
+ 		ACCnewline();
+ 		ACCwriteln(923);
  		ACCtime(0,0);
 		{}
 
@@ -20079,7 +20127,7 @@ pro019_restart: while(process_restart)
 	{
  		if (skipdoall('p019e0001')) break p019e0001;
 		if (!CNDeq(119,1)) break p019e0001;
- 		ACCwriteln(923);
+ 		ACCwriteln(924);
 		{}
 
 	}
@@ -20089,7 +20137,7 @@ pro019_restart: while(process_restart)
 	{
  		if (skipdoall('p019e0002')) break p019e0002;
 		if (!CNDeq(119,2)) break p019e0002;
- 		ACCwriteln(924);
+ 		ACCwriteln(925);
 		{}
 
 	}
@@ -20099,7 +20147,7 @@ pro019_restart: while(process_restart)
 	{
  		if (skipdoall('p019e0003')) break p019e0003;
 		if (!CNDeq(119,3)) break p019e0003;
- 		ACCwriteln(925);
+ 		ACCwriteln(926);
 		{}
 
 	}
@@ -20120,7 +20168,7 @@ pro020_restart: while(process_restart)
  		if (skipdoall('p020e0000')) break p020e0000;
 		if (!CNDat(82)) break p020e0000;
 		if (!CNDeq(119,255)) break p020e0000;
- 		ACCwriteln(926);
+ 		ACCwriteln(927);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20133,7 +20181,7 @@ pro020_restart: while(process_restart)
  		if (skipdoall('p020e0001')) break p020e0001;
 		if (!CNDat(117)) break p020e0001;
 		if (!CNDeq(122,1)) break p020e0001;
- 		ACCwriteln(927);
+ 		ACCwriteln(928);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20147,7 +20195,7 @@ pro020_restart: while(process_restart)
 		if (!CNDatgt(101)) break p020e0002;
 		if (!CNDatlt(104)) break p020e0002;
 		if (!CNDnotzero(121)) break p020e0002;
- 		ACCwriteln(928);
+ 		ACCwriteln(929);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20166,7 +20214,7 @@ pro020_restart: while(process_restart)
 		if (!CNDat(117)) break p020e0003;
 		if (!CNDzero(122)) break p020e0003;
  		ACClet(122,2);
- 		ACCwriteln(929);
+ 		ACCwriteln(930);
  		ACCdestroy(2);
  		ACCdone();
 		break pro020_restart;
@@ -20185,8 +20233,8 @@ pro020_restart: while(process_restart)
  		}
 		if (!CNDat(82)) break p020e0004;
  		ACCset(0);
- 		ACCwrite(930);
- 		ACCwriteln(931);
+ 		ACCwrite(931);
+ 		ACCwriteln(932);
  		ACCdestroy(0);
  		ACCanykey();
  		function anykey00059() 
@@ -20212,7 +20260,7 @@ pro020_restart: while(process_restart)
  		}
 		if (!CNDat(117)) break p020e0005;
  		ACCset(0);
- 		ACCwrite(932);
+ 		ACCwrite(933);
  		ACCpause(100);
  		function anykey00061() 
 		{
@@ -20221,7 +20269,7 @@ pro020_restart: while(process_restart)
 		}
  		function anykey00060() 
 		{
- 		ACCwriteln(933);
+ 		ACCwriteln(934);
  		ACCdestroy(0);
  		ACCanykey();
  		waitKey(anykey00061);
@@ -20244,9 +20292,9 @@ pro020_restart: while(process_restart)
  		}
 		if (!CNDatgt(101)) break p020e0006;
 		if (!CNDatlt(104)) break p020e0006;
- 		ACCwrite(934);
- 		ACCset(0);
  		ACCwrite(935);
+ 		ACCset(0);
+ 		ACCwrite(936);
  		ACCpause(100);
  		function anykey00063() 
 		{
@@ -20255,7 +20303,7 @@ pro020_restart: while(process_restart)
 		}
  		function anykey00062() 
 		{
- 		ACCwriteln(936);
+ 		ACCwriteln(937);
  		ACCnewline();
  		ACCdestroy(0);
  		ACCanykey();
@@ -20278,7 +20326,7 @@ pro020_restart: while(process_restart)
  		}
 		if (!CNDat(82)) break p020e0007;
  		ACCdestroy(getFlag(51));
- 		ACCwriteln(937);
+ 		ACCwriteln(938);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20295,7 +20343,7 @@ pro020_restart: while(process_restart)
  		}
 		if (!CNDat(117)) break p020e0008;
  		ACCdestroy(getFlag(51));
- 		ACCwriteln(938);
+ 		ACCwriteln(939);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20313,7 +20361,7 @@ pro020_restart: while(process_restart)
 		if (!CNDnotat(103)) break p020e0009;
 		if (!CNDgt(122,1)) break p020e0009;
  		ACCdestroy(getFlag(51));
- 		ACCwriteln(939);
+ 		ACCwriteln(940);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20330,7 +20378,7 @@ pro020_restart: while(process_restart)
  		}
 		if (!CNDnotat(103)) break p020e0010;
 		if (!CNDgt(122,1)) break p020e0010;
- 		ACCwriteln(940);
+ 		ACCwriteln(941);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20346,7 +20394,7 @@ pro020_restart: while(process_restart)
 			if (!CNDverb(73)) break p020e0011;
  		}
 		if (!CNDat(117)) break p020e0011;
- 		ACCwriteln(941);
+ 		ACCwriteln(942);
  		ACCdone();
 		break pro020_restart;
 		{}
@@ -20364,7 +20412,7 @@ pro020_restart: while(process_restart)
 		if (!CNDatgt(101)) break p020e0012;
 		if (!CNDatlt(104)) break p020e0012;
 		if (!CNDlt(51,14)) break p020e0012;
- 		ACCwriteln(942);
+ 		ACCwriteln(943);
  		ACCdestroy(getFlag(51));
  		ACCdone();
 		break pro020_restart;
@@ -20383,7 +20431,7 @@ pro020_restart: while(process_restart)
 		if (!CNDatgt(101)) break p020e0013;
 		if (!CNDatlt(104)) break p020e0013;
  		ACCputo(125);
- 		ACCwriteln(943);
+ 		ACCwriteln(944);
  		ACCset(121);
  		ACCdone();
 		break pro020_restart;
@@ -20399,7 +20447,7 @@ pro020_restart: while(process_restart)
 		{
 			if (!CNDverb(73)) break p020e0014;
  		}
- 		ACCwriteln(944);
+ 		ACCwriteln(945);
 		{}
 
 	}
@@ -20427,7 +20475,7 @@ pro021_restart: while(process_restart)
 	p021e0001:
 	{
  		if (skipdoall('p021e0001')) break p021e0001;
- 		ACCwriteln(945);
+ 		ACCwriteln(946);
  		ACCnewline();
  		ACClet(150,14);
 		entry_for_doall = 'p021e0002';
@@ -20435,7 +20483,7 @@ pro021_restart: while(process_restart)
  		ACCdoall(getFlag(38));
 		break pro021_restart;
 		if (!CNDgt(51,13)) break p021e0001;
- 		ACCwriteln(946);
+ 		ACCwriteln(947);
  		ACCminus(150,1);
 		{}
 
@@ -20446,7 +20494,7 @@ pro021_restart: while(process_restart)
 	{
  		if (skipdoall('p021e0002')) break p021e0002;
 		if (!CNDgt(51,13)) break p021e0002;
- 		ACCwriteln(947);
+ 		ACCwriteln(948);
  		ACCminus(150,1);
 		{}
 
@@ -20457,7 +20505,7 @@ pro021_restart: while(process_restart)
 	{
  		if (skipdoall('p021e0003')) break p021e0003;
 		if (!CNDlt(51,14)) break p021e0003;
- 		ACCwriteln(948);
+ 		ACCwriteln(949);
  		ACCnewline();
 		{}
 
@@ -20477,7 +20525,7 @@ pro022_restart: while(process_restart)
 	p022e0000:
 	{
  		if (skipdoall('p022e0000')) break p022e0000;
- 		ACCwriteln(949);
+ 		ACCwriteln(950);
  		ACCanykey();
  		function anykey00064() 
 		{
@@ -20509,7 +20557,7 @@ pro023_restart: while(process_restart)
  		if (skipdoall('p023e0000')) break p023e0000;
  		ACCcls();
  		ACCpicture(261);
- 		ACCwriteln(950);
+ 		ACCwriteln(951);
  		ACCnewline();
  		ACCanykey();
  		function anykey00065() 
@@ -20542,7 +20590,7 @@ pro024_restart: while(process_restart)
  		if (skipdoall('p024e0000')) break p024e0000;
 		if (!CNDatgt(41)) break p024e0000;
 		if (!CNDatlt(54)) break p024e0000;
- 		ACCwriteln(951);
+ 		ACCwriteln(952);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20554,7 +20602,7 @@ pro024_restart: while(process_restart)
 	{
  		if (skipdoall('p024e0001')) break p024e0001;
 		if (!CNDat(101)) break p024e0001;
- 		ACCwriteln(952);
+ 		ACCwriteln(953);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20566,7 +20614,7 @@ pro024_restart: while(process_restart)
 	{
  		if (skipdoall('p024e0002')) break p024e0002;
 		if (!CNDat(33)) break p024e0002;
- 		ACCwriteln(953);
+ 		ACCwriteln(954);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20578,7 +20626,7 @@ pro024_restart: while(process_restart)
 	{
  		if (skipdoall('p024e0003')) break p024e0003;
 		if (!CNDat(68)) break p024e0003;
- 		ACCwriteln(954);
+ 		ACCwriteln(955);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20590,7 +20638,7 @@ pro024_restart: while(process_restart)
 	{
  		if (skipdoall('p024e0004')) break p024e0004;
 		if (!CNDat(38)) break p024e0004;
- 		ACCwriteln(955);
+ 		ACCwriteln(956);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20602,7 +20650,7 @@ pro024_restart: while(process_restart)
 	{
  		if (skipdoall('p024e0005')) break p024e0005;
 		if (!CNDnotcarr(0)) break p024e0005;
- 		ACCwriteln(956);
+ 		ACCwriteln(957);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20615,7 +20663,7 @@ pro024_restart: while(process_restart)
  		if (skipdoall('p024e0006')) break p024e0006;
 		if (!CNDat(37)) break p024e0006;
 		if (!CNDzero(131)) break p024e0006;
- 		ACCwriteln(957);
+ 		ACCwriteln(958);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20627,7 +20675,7 @@ pro024_restart: while(process_restart)
 	{
  		if (skipdoall('p024e0007')) break p024e0007;
 		if (!CNDat(37)) break p024e0007;
- 		ACCwriteln(958);
+ 		ACCwriteln(959);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20638,7 +20686,7 @@ pro024_restart: while(process_restart)
 	p024e0008:
 	{
  		if (skipdoall('p024e0008')) break p024e0008;
- 		ACCwriteln(959);
+ 		ACCwriteln(960);
  		ACCdone();
 		break pro024_restart;
 		{}
@@ -20680,7 +20728,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(161)) break p025e0001;
  		}
 		if (!CNDat(68)) break p025e0001;
- 		ACCwriteln(960);
+ 		ACCwriteln(961);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20693,7 +20741,7 @@ pro025_restart: while(process_restart)
  		if (skipdoall('p025e0002')) break p025e0002;
 		if (!CNDnotzero(0)) break p025e0002;
 		if (!CNDabsent(0)) break p025e0002;
- 		ACCwriteln(961);
+ 		ACCwriteln(962);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20710,7 +20758,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(92)) break p025e0003;
 		if (!CNDeq(120,1)) break p025e0003;
- 		ACCwriteln(962);
+ 		ACCwriteln(963);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20727,7 +20775,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(92)) break p025e0004;
 		if (!CNDgt(120,1)) break p025e0004;
- 		ACCwriteln(963);
+ 		ACCwriteln(964);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20743,7 +20791,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(132)) break p025e0005;
  		}
 		if (!CNDat(92)) break p025e0005;
- 		ACCwriteln(964);
+ 		ACCwriteln(965);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20759,7 +20807,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(139)) break p025e0006;
  		}
 		if (!CNDat(83)) break p025e0006;
- 		ACCwriteln(965);
+ 		ACCwriteln(966);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20790,7 +20838,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDeq(44,255)) break p025e0008;
 		if (!CNDat(96)) break p025e0008;
- 		ACCwriteln(966);
+ 		ACCwriteln(967);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20806,7 +20854,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0009;
  		}
 		if (!CNDat(96)) break p025e0009;
- 		ACCwriteln(967);
+ 		ACCwriteln(968);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20822,7 +20870,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0010;
  		}
 		if (!CNDat(104)) break p025e0010;
- 		ACCwriteln(968);
+ 		ACCwriteln(969);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20838,7 +20886,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(145)) break p025e0011;
  		}
 		if (!CNDat(69)) break p025e0011;
- 		ACCwriteln(969);
+ 		ACCwriteln(970);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20854,7 +20902,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(126)) break p025e0012;
  		}
 		if (!CNDat(77)) break p025e0012;
- 		ACCwriteln(970);
+ 		ACCwriteln(971);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20870,7 +20918,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(54)) break p025e0013;
  		}
 		if (!CNDcarried(4)) break p025e0013;
- 		ACCwriteln(971);
+ 		ACCwriteln(972);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20886,7 +20934,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(133)) break p025e0014;
  		}
 		if (!CNDat(82)) break p025e0014;
- 		ACCwriteln(972);
+ 		ACCwriteln(973);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20903,7 +20951,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDatgt(101)) break p025e0015;
 		if (!CNDatlt(104)) break p025e0015;
- 		ACCwriteln(973);
+ 		ACCwriteln(974);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20919,7 +20967,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(164)) break p025e0016;
  		}
 		if (!CNDat(39)) break p025e0016;
- 		ACCwriteln(974);
+ 		ACCwriteln(975);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20935,7 +20983,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(67)) break p025e0017;
  		}
 		if (!CNDat(38)) break p025e0017;
- 		ACCwriteln(975);
+ 		ACCwriteln(976);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20951,7 +20999,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(149)) break p025e0018;
  		}
 		if (!CNDat(106)) break p025e0018;
- 		ACCwriteln(976);
+ 		ACCwriteln(977);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20967,7 +21015,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(171)) break p025e0019;
  		}
 		if (!CNDat(106)) break p025e0019;
- 		ACCwriteln(977);
+ 		ACCwriteln(978);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -20984,7 +21032,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(106)) break p025e0020;
 		if (!CNDzero(124)) break p025e0020;
- 		ACCwriteln(978);
+ 		ACCwriteln(979);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21001,7 +21049,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(106)) break p025e0021;
 		if (!CNDeq(124,1)) break p025e0021;
- 		ACCwriteln(979);
+ 		ACCwriteln(980);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21017,7 +21065,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(89)) break p025e0022;
  		}
 		if (!CNDat(106)) break p025e0022;
- 		ACCwriteln(980);
+ 		ACCwriteln(981);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21034,7 +21082,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(82)) break p025e0023;
 		if (!CNDnoteq(119,255)) break p025e0023;
- 		ACCwriteln(981);
+ 		ACCwriteln(982);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21050,7 +21098,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(175)) break p025e0024;
  		}
 		if (!CNDat(84)) break p025e0024;
- 		ACCwriteln(982);
+ 		ACCwriteln(983);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21066,7 +21114,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(155)) break p025e0025;
  		}
 		if (!CNDat(53)) break p025e0025;
- 		ACCwriteln(983);
+ 		ACCwriteln(984);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21082,7 +21130,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(52)) break p025e0026;
  		}
 		if (!CNDpresent(2)) break p025e0026;
- 		ACCwriteln(984);
+ 		ACCwriteln(985);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21098,7 +21146,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(75)) break p025e0027;
  		}
 		if (!CNDat(69)) break p025e0027;
- 		ACCwriteln(985);
+ 		ACCwriteln(986);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21114,7 +21162,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(156)) break p025e0028;
  		}
 		if (!CNDat(37)) break p025e0028;
- 		ACCwriteln(986);
+ 		ACCwriteln(987);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21130,7 +21178,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(156)) break p025e0029;
  		}
 		if (!CNDat(69)) break p025e0029;
- 		ACCwriteln(987);
+ 		ACCwriteln(988);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21146,7 +21194,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(156)) break p025e0030;
  		}
 		if (!CNDat(38)) break p025e0030;
- 		ACCwriteln(988);
+ 		ACCwriteln(989);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21162,7 +21210,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(156)) break p025e0031;
  		}
 		if (!CNDat(40)) break p025e0031;
- 		ACCwriteln(989);
+ 		ACCwriteln(990);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21178,7 +21226,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(156)) break p025e0032;
  		}
 		if (!CNDat(36)) break p025e0032;
- 		ACCwriteln(990);
+ 		ACCwriteln(991);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21194,7 +21242,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(156)) break p025e0033;
  		}
 		if (!CNDat(69)) break p025e0033;
- 		ACCwriteln(991);
+ 		ACCwriteln(992);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21210,7 +21258,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(156)) break p025e0034;
  		}
 		if (!CNDat(40)) break p025e0034;
- 		ACCwriteln(992);
+ 		ACCwriteln(993);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21226,7 +21274,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(66)) break p025e0035;
  		}
 		if (!CNDat(78)) break p025e0035;
- 		ACCwriteln(993);
+ 		ACCwriteln(994);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21242,7 +21290,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(66)) break p025e0036;
  		}
 		if (!CNDat(79)) break p025e0036;
- 		ACCwriteln(994);
+ 		ACCwriteln(995);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21258,7 +21306,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(176)) break p025e0037;
  		}
 		if (!CNDat(93)) break p025e0037;
- 		ACCwriteln(995);
+ 		ACCwriteln(996);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21302,7 +21350,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(77)) break p025e0040;
  		}
 		if (!CNDat(81)) break p025e0040;
- 		ACCwriteln(996);
+ 		ACCwriteln(997);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21318,7 +21366,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(77)) break p025e0041;
  		}
 		if (!CNDat(81)) break p025e0041;
- 		ACCwriteln(997);
+ 		ACCwriteln(998);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21334,7 +21382,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(77)) break p025e0042;
  		}
 		if (!CNDat(92)) break p025e0042;
- 		ACCwriteln(998);
+ 		ACCwriteln(999);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21350,7 +21398,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(177)) break p025e0043;
  		}
 		if (!CNDat(66)) break p025e0043;
- 		ACCwriteln(999);
+ 		ACCwriteln(1000);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21366,7 +21414,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(174)) break p025e0044;
  		}
 		if (!CNDat(66)) break p025e0044;
- 		ACCwriteln(1000);
+ 		ACCwriteln(1001);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21382,7 +21430,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(173)) break p025e0045;
  		}
 		if (!CNDat(66)) break p025e0045;
- 		ACCwriteln(1001);
+ 		ACCwriteln(1002);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21398,7 +21446,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(178)) break p025e0046;
  		}
 		if (!CNDat(98)) break p025e0046;
- 		ACCwriteln(1002);
+ 		ACCwriteln(1003);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21414,7 +21462,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(179)) break p025e0047;
  		}
 		if (!CNDat(98)) break p025e0047;
- 		ACCwriteln(1003);
+ 		ACCwriteln(1004);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21430,7 +21478,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(116)) break p025e0048;
  		}
 		if (!CNDat(100)) break p025e0048;
- 		ACCwriteln(1004);
+ 		ACCwriteln(1005);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21446,7 +21494,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(74)) break p025e0049;
  		}
 		if (!CNDat(37)) break p025e0049;
- 		ACCwriteln(1005);
+ 		ACCwriteln(1006);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21462,7 +21510,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(89)) break p025e0050;
  		}
 		if (!CNDat(101)) break p025e0050;
- 		ACCwriteln(1006);
+ 		ACCwriteln(1007);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21478,7 +21526,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(119)) break p025e0051;
  		}
 		if (!CNDat(112)) break p025e0051;
- 		ACCwriteln(1007);
+ 		ACCwriteln(1008);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21494,7 +21542,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(182)) break p025e0052;
  		}
 		if (!CNDat(116)) break p025e0052;
- 		ACCwriteln(1008);
+ 		ACCwriteln(1009);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21524,7 +21572,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(55)) break p025e0054;
  		}
 		if (!CNDabsent(0)) break p025e0054;
- 		ACCwriteln(1009);
+ 		ACCwriteln(1010);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21540,7 +21588,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(55)) break p025e0055;
  		}
 		if (!CNDozero(0,20)) break p025e0055;
- 		ACCwrite(1010);
+ 		ACCwrite(1011);
 		{}
 
 	}
@@ -21554,7 +21602,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(55)) break p025e0056;
  		}
 		if (!CNDonotzero(0,20)) break p025e0056;
- 		ACCwrite(1011);
+ 		ACCwrite(1012);
 		{}
 
 	}
@@ -21569,7 +21617,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDzero(105)) break p025e0057;
 		if (!CNDabsent(5)) break p025e0057;
- 		ACCwriteln(1012);
+ 		ACCwriteln(1013);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21584,7 +21632,7 @@ pro025_restart: while(process_restart)
 		{
 			if (!CNDnoun1(55)) break p025e0058;
  		}
- 		ACCwrite(1013);
+ 		ACCwrite(1014);
 		if (!CNDnotzero(8)) break p025e0058;
  		ACCprint(8);
  		ACCnewline();
@@ -21602,7 +21650,7 @@ pro025_restart: while(process_restart)
 		{
 			if (!CNDnoun1(55)) break p025e0059;
  		}
- 		ACCwriteln(1014);
+ 		ACCwriteln(1015);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21618,7 +21666,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(129)) break p025e0060;
  		}
 		if (!CNDat(31)) break p025e0060;
- 		ACCwriteln(1015);
+ 		ACCwriteln(1016);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21635,7 +21683,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(116)) break p025e0061;
 		if (!CNDzero(123)) break p025e0061;
- 		ACCwriteln(1016);
+ 		ACCwriteln(1017);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21652,7 +21700,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDpresent(7)) break p025e0062;
 		if (!CNDozero(7,23)) break p025e0062;
- 		ACCwriteln(1017);
+ 		ACCwriteln(1018);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21669,7 +21717,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDcarried(7)) break p025e0063;
 		if (!CNDonotzero(7,23)) break p025e0063;
- 		ACCwriteln(1018);
+ 		ACCwriteln(1019);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21686,7 +21734,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDcarried(7)) break p025e0064;
 		if (!CNDonotzero(7,23)) break p025e0064;
- 		ACCwriteln(1019);
+ 		ACCwriteln(1020);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21702,7 +21750,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(158)) break p025e0065;
  		}
 		if (!CNDat(35)) break p025e0065;
- 		ACCwriteln(1020);
+ 		ACCwriteln(1021);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21718,7 +21766,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0066;
  		}
 		if (!CNDat(88)) break p025e0066;
- 		ACCwriteln(1021);
+ 		ACCwriteln(1022);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21734,7 +21782,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0067;
  		}
 		if (!CNDat(37)) break p025e0067;
- 		ACCwriteln(1022);
+ 		ACCwriteln(1023);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21750,7 +21798,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0068;
  		}
 		if (!CNDat(33)) break p025e0068;
- 		ACCwriteln(1023);
+ 		ACCwriteln(1024);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21766,7 +21814,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0069;
  		}
 		if (!CNDat(68)) break p025e0069;
- 		ACCwriteln(1024);
+ 		ACCwriteln(1025);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21782,7 +21830,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0070;
  		}
 		if (!CNDat(105)) break p025e0070;
- 		ACCwriteln(1025);
+ 		ACCwriteln(1026);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21798,7 +21846,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(124)) break p025e0071;
  		}
 		if (!CNDat(106)) break p025e0071;
- 		ACCwriteln(1026);
+ 		ACCwriteln(1027);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21813,7 +21861,7 @@ pro025_restart: while(process_restart)
 		{
 			if (!CNDnoun1(124)) break p025e0072;
  		}
- 		ACCwriteln(1027);
+ 		ACCwriteln(1028);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21830,7 +21878,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(66)) break p025e0073;
 		if (!CNDlt(116,9)) break p025e0073;
- 		ACCwriteln(1028);
+ 		ACCwriteln(1029);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21847,7 +21895,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDatgt(37)) break p025e0074;
 		if (!CNDatlt(40)) break p025e0074;
- 		ACCwriteln(1029);
+ 		ACCwriteln(1030);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21864,7 +21912,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDatgt(101)) break p025e0075;
 		if (!CNDatlt(104)) break p025e0075;
- 		ACCwriteln(1030);
+ 		ACCwriteln(1031);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21882,7 +21930,7 @@ pro025_restart: while(process_restart)
 		if (!CNDzero(121)) break p025e0076;
 		if (!CNDatgt(101)) break p025e0076;
 		if (!CNDatlt(104)) break p025e0076;
- 		ACCwriteln(1031);
+ 		ACCwriteln(1032);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21899,7 +21947,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDat(117)) break p025e0077;
 		if (!CNDnoteq(122,1)) break p025e0077;
- 		ACCwriteln(1032);
+ 		ACCwriteln(1033);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21916,7 +21964,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDatgt(101)) break p025e0078;
 		if (!CNDatlt(104)) break p025e0078;
- 		ACCwriteln(1033);
+ 		ACCwriteln(1034);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21933,7 +21981,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDatgt(101)) break p025e0079;
 		if (!CNDatlt(104)) break p025e0079;
- 		ACCwriteln(1034);
+ 		ACCwriteln(1035);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21949,7 +21997,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(181)) break p025e0080;
  		}
 		if (!CNDat(104)) break p025e0080;
- 		ACCwriteln(1035);
+ 		ACCwriteln(1036);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21965,7 +22013,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(161)) break p025e0081;
  		}
 		if (!CNDat(33)) break p025e0081;
- 		ACCwriteln(1036);
+ 		ACCwriteln(1037);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21981,7 +22029,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(161)) break p025e0082;
  		}
 		if (!CNDat(68)) break p025e0082;
- 		ACCwriteln(1037);
+ 		ACCwriteln(1038);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -21997,7 +22045,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(53)) break p025e0083;
  		}
 		if (!CNDcarried(9)) break p025e0083;
- 		ACCwriteln(1038);
+ 		ACCwriteln(1039);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -22014,7 +22062,7 @@ pro025_restart: while(process_restart)
  		}
 		if (!CNDcarried(3)) break p025e0084;
 		if (!CNDozero(3,22)) break p025e0084;
- 		ACCwriteln(1039);
+ 		ACCwriteln(1040);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -22030,7 +22078,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(53)) break p025e0085;
  		}
 		if (!CNDcarried(3)) break p025e0085;
- 		ACCwriteln(1040);
+ 		ACCwriteln(1041);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -22046,7 +22094,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(168)) break p025e0086;
  		}
 		if (!CNDpresent(8)) break p025e0086;
- 		ACCwrite(1041);
+ 		ACCwrite(1042);
 		{}
 
 	}
@@ -22060,7 +22108,7 @@ pro025_restart: while(process_restart)
 			if (!CNDnoun1(135)) break p025e0087;
  		}
 		if (!CNDpresent(13)) break p025e0087;
- 		ACCwrite(1042);
+ 		ACCwrite(1043);
 		{}
 
 	}
@@ -22073,7 +22121,7 @@ pro025_restart: while(process_restart)
 		{
 			if (!CNDnoun1(72)) break p025e0088;
  		}
- 		ACCwriteln(1043);
+ 		ACCwriteln(1044);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -22094,7 +22142,7 @@ pro025_restart: while(process_restart)
 	{
  		if (skipdoall('p025e0090')) break p025e0090;
 		if (!CNDeq(51,255)) break p025e0090;
- 		ACCwriteln(1044);
+ 		ACCwriteln(1045);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -22106,7 +22154,7 @@ pro025_restart: while(process_restart)
 	{
  		if (skipdoall('p025e0091')) break p025e0091;
 		if (!CNDabsent(getFlag(51))) break p025e0091;
- 		ACCwriteln(1045);
+ 		ACCwriteln(1046);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -22119,7 +22167,7 @@ pro025_restart: while(process_restart)
  		if (skipdoall('p025e0092')) break p025e0092;
 		if (!CNDpresent(getFlag(51))) break p025e0092;
 		if (!CNDgt(51,13)) break p025e0092;
- 		ACCwriteln(1046);
+ 		ACCwriteln(1047);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -22132,7 +22180,7 @@ pro025_restart: while(process_restart)
  		if (skipdoall('p025e0093')) break p025e0093;
 		if (!CNDpresent(getFlag(51))) break p025e0093;
 		if (!CNDlt(51,14)) break p025e0093;
- 		ACCwriteln(1047);
+ 		ACCwriteln(1048);
  		ACCdone();
 		break pro025_restart;
 		{}
@@ -24466,6 +24514,13 @@ h_keydown = function (event)
 
 
 
+//CND NPCAT A 9 1 0 0
+
+function ACCnpcat(locno, flagno)
+{
+	setFlag(flagno,getNPCCountAt(locno));
+}
+
 //CND LISTSAVEDGAMES A 0 0 0 0
 
 function ACClistsavedgames()
@@ -24483,17 +24538,10 @@ function ACClistsavedgames()
   }
   if (numberofgames == 0) 
   {
-     writelnText("No hay ninguna partida guardada.");
+     if (getLang()=='EN') writelnText("No saved games found."); else writelnText("No hay ninguna partida guardada.");
   }
 }
 
-
-//CND NPCAT A 9 1 0 0
-
-function ACCnpcat(locno, flagno)
-{
-	setFlag(flagno,getNPCCountAt(locno));
-}
 
 // This file is (C) Carlos Sanchez 2014, released under the MIT license
 
@@ -25574,7 +25622,7 @@ function normalize(player_order)
 		if (pos!=-1) output = output + "aeiou".charAt(pos % 5); else 
 		{
 			ch = player_order.charAt(i);
-			if ((ch=='.') || (ch==',') || (ch==';') || (ch=='"') || (ch=='\'')) output = output + ' , '; else output = output + player_order.charAt(i); 
+			if ((ch=='.') || (ch==',') || (ch==';') || (ch=='"') || (ch=='\'') || (ch=='«') || (ch=='»')) output = output + ' , '; else output = output + player_order.charAt(i);
 		}
 
 	}
@@ -27534,7 +27582,7 @@ messages[1015] = "{ACTION|fuera|fuera}";
 
 // WRITE MESSAGES
 
-total_writemessages=1048;
+total_writemessages=1049;
 
 writemessages = [];
 
@@ -28310,7 +28358,7 @@ writemessages[768] = "Por su posición y solidez proporciona una fácil subida."
 writemessages[769] = "¿Estás de broma? Es demasiado peligroso. Te estás quedando sin cejas del calor que notas ya desde aquí.";
 writemessages[770] = "¿Estás de broma? Si antes ya era peligroso ahora vas a arder si te acercas más.";
 writemessages[771] = "Solo de imaginar que te asomas al vacío ya te estás mareando, como para acercarse.";
-writemessages[772] = "Como los del circo. Parece tener muy mala uva. Para comunicarte, «háblale».";
+writemessages[772] = "Como los del circo. Parece tener muy mala uva. Para comunicarte, «dile algo».";
 writemessages[773] = "Seguro que desde allí hay buenas vistas.";
 writemessages[774] = "De un color oscuro. Cada una de una forma más excepcional que la anterior.";
 writemessages[775] = "No serviría de mucho. Ni tan siquiera si pudieras acercar la mano.";
@@ -28371,221 +28419,222 @@ writemessages[829] = "Oh, qué amable. Gracias.";
 writemessages[830] = "«Mi nombre es Elfito.»";
 writemessages[831] = "Te dice: «¡Hola tú!»";
 writemessages[832] = "«¡No quiero!»";
-writemessages[833] = "«Pero ¿qué dices?»";
-writemessages[834] = "«¡No me da la gana!»";
-writemessages[835] = "«¡Quiero ser más alto!»";
-writemessages[836] = "«No quiero ir a ninguna parte ¿Por qué no me dejas en paz?»";
-writemessages[837] = "«No quiero seguirte. Déjame tranquilo ya.»";
-writemessages[838] = "«¿Quién te has creído que soy? ¿Quién te piensas que eres?»";
-writemessages[839] = "«Don Enano»";
-writemessages[840] = "Sí, sí... hola, hola. Ahora, piérdete.";
-writemessages[841] = "«¡Largo de aquí!»";
-writemessages[842] = "Cabreadísimo te ataca, echándose encima de ti.";
-writemessages[843] = "Lucháis, forcejeando como dos locos, en el borde del volcán...";
-writemessages[844] = " ¡y os precipitáis hacia el abismo!";
-writemessages[845] = "Te arroja con furia su hacha...";
-writemessages[846] = "Aparece el Terrible Pirata gritando: «¡Te quito {OREF} y me voy a mi entrelazada guarida!» ";
-writemessages[847] = "Y con un gran insulto vuelve a las tinieblas.";
-writemessages[848] = "Estás en una fétida madriguera llena de caca de dragón por todos lados. El olor es insoportable, pero del norte llega una suave brisa húmeda";
-writemessages[849] = ". Frente a ti tienes al «bisssssho» más grande que hayas visto jamás.";
-writemessages[850] = ".";
-writemessages[851] = "¡Te bloquea un fornido Troll que ruge: «un tesoro has de dar para poder pasar»!";
-writemessages[852] = " Una enorme serpiente te observa.";
-writemessages[853] = " Un pajarillo revolotea por la estancia.";
-writemessages[854] = "Aquí hay una puerta herrumbrosa.";
-writemessages[855] = "Ves que la puerta está bien aceitada.";
-writemessages[856] = "La puerta está abierta.";
-writemessages[857] = "Estás en un";
-writemessages[858] = " laberinto de";
-writemessages[859] = " ovales";
-writemessages[860] = " pasillos";
-writemessages[861] = " intercomunicados";
-writemessages[862] = " intercomunicado";
-writemessages[863] = " laberinto de";
-writemessages[864] = " pasillos";
-writemessages[865] = " ovales";
-writemessages[866] = " laberinto de";
-writemessages[867] = " intercomunicados";
-writemessages[868] = " pasillos";
-writemessages[869] = " ovales";
-writemessages[870] = " intercomunicado";
-writemessages[871] = " laberinto de";
-writemessages[872] = " ovales";
-writemessages[873] = " pasillos";
-writemessages[874] = " laberinto de";
-writemessages[875] = " pasillos";
-writemessages[876] = " ovales";
-writemessages[877] = " intercomunicados";
-writemessages[878] = ". ";
-writemessages[879] = "En el suelo hay unas semillas de judías.";
-writemessages[880] = "Aquí hay una tierna plantita de judías.";
-writemessages[881] = "Aquí hay una planta de judías cuyo tronco es enorme. Sale por el agujero superior.";
-writemessages[882] = " ¡Un enorme oso tira con furia de su cadena para darte un abrazo de bienvenida!";
-writemessages[883] = " El oso Peposo está encadenado.";
-writemessages[884] = " El oso viene contigo. ";
-writemessages[885] = "Estás en un";
-writemessages[886] = " laberinto de";
-writemessages[887] = " pequeñas";
-writemessages[888] = " habitaciones";
-writemessages[889] = " entrelazadas";
-writemessages[890] = " pequeño";
-writemessages[891] = " laberinto de";
-writemessages[892] = " habitaciones";
-writemessages[893] = " entrelazadas";
-writemessages[894] = " entrelazado";
-writemessages[895] = " laberinto de";
-writemessages[896] = " habitaciones";
-writemessages[897] = " pequeñas";
-writemessages[898] = ". ";
-writemessages[899] = "Hay un agujero en el suelo";
-writemessages[900] = " pequeño";
-writemessages[901] = " laberinto de";
-writemessages[902] = " entrelazadas";
-writemessages[903] = " habitaciones";
-writemessages[904] = " laberinto de";
-writemessages[905] = " habitaciones";
-writemessages[906] = " pequeñas";
-writemessages[907] = " entrelazadas";
-writemessages[908] = " entrelazado";
-writemessages[909] = " laberinto de";
-writemessages[910] = " pequeñas";
-writemessages[911] = " habitaciones";
-writemessages[912] = ". ";
-writemessages[913] = "Estás en la guarida del pirata cleptómano";
-writemessages[914] = ". ";
-writemessages[915] = " El precipicio queda al ";
-writemessages[916] = "oeste";
-writemessages[917] = ".";
-writemessages[918] = "este";
-writemessages[919] = ".";
-writemessages[920] = "Has dado ";
-writemessages[921] = " órdenes.";
-writemessages[922] = "{RESTART|Volver a jugar}";
-writemessages[923] = "Chorreando espesa baba avanza bamboleante hacia ti.";
-writemessages[924] = "Mirándote amenazante desde lo alto, ruge: ¡Serás un buen bocata!";
-writemessages[925] = "¡Qué rico! Exclama relamiéndose, otro aventurero para cenar.";
-writemessages[926] = "No ves al dragón por ninguna parte.";
-writemessages[927] = "Peposo no está aquí.";
-writemessages[928] = "No ves al troll.";
-writemessages[929] = "Peposo se tranquiliza, come la tortilla y agradecido te lame la sucia cara. Tienes un fiel amigo.";
-writemessages[930] = "Se ha comido la linterna. Y ahora no crees que haya sido una buena idea... ";
-writemessages[931] = "porque todo se queda a oscuras";
-writemessages[932] = "Aunque no pensaste que fuera capaz, se ha comido la linterna. Y puede que no haya sido una buena idea... ";
-writemessages[933] = "porque todo se queda a oscuras";
-writemessages[934] = "¡No intentes engañarme! Esto no es un tesoro. Y cabreado tira la linterna al abismo.";
-writemessages[935] = " Puede que no haya sido una buena idea... ";
-writemessages[936] = "porque todo se queda a oscuras";
-writemessages[937] = "El dragón se ha comido {OREF}.";
-writemessages[938] = "El oso se ha comido {OREF}.";
-writemessages[939] = "Se ha comido {OREF}.";
-writemessages[940] = "Pero... ¡Si no tienes eso!";
+writemessages[833] = "Concreta un poco más. Intenta «Decir, y lo que quieras preguntar»";
+writemessages[834] = "«Pero ¿qué dices?»";
+writemessages[835] = "«¡No me da la gana!»";
+writemessages[836] = "«¡Quiero ser más alto!»";
+writemessages[837] = "«No quiero ir a ninguna parte ¿Por qué no me dejas en paz?»";
+writemessages[838] = "«No quiero seguirte. Déjame tranquilo ya.»";
+writemessages[839] = "«¿Quién te has creído que soy? ¿Quién te piensas que eres?»";
+writemessages[840] = "«Don Enano»";
+writemessages[841] = "Sí, sí... hola, hola. Ahora, piérdete.";
+writemessages[842] = "«¡Largo de aquí!»";
+writemessages[843] = "Cabreadísimo te ataca, echándose encima de ti.";
+writemessages[844] = "Lucháis, forcejeando como dos locos, en el borde del volcán...";
+writemessages[845] = " ¡y os precipitáis hacia el abismo!";
+writemessages[846] = "Te arroja con furia su hacha...";
+writemessages[847] = "Aparece el Terrible Pirata gritando: «¡Te quito {OREF} y me voy a mi entrelazada guarida!» ";
+writemessages[848] = "Y con un gran insulto vuelve a las tinieblas.";
+writemessages[849] = "Estás en una fétida madriguera llena de caca de dragón por todos lados. El olor es insoportable, pero del norte llega una suave brisa húmeda";
+writemessages[850] = ". Frente a ti tienes al «bisssssho» más grande que hayas visto jamás.";
+writemessages[851] = ".";
+writemessages[852] = "¡Te bloquea un fornido Troll que ruge: «un tesoro has de dar para poder pasar»!";
+writemessages[853] = " Una enorme serpiente te observa.";
+writemessages[854] = " Un pajarillo revolotea por la estancia.";
+writemessages[855] = "Aquí hay una puerta herrumbrosa.";
+writemessages[856] = "Ves que la puerta está bien aceitada.";
+writemessages[857] = "La puerta está abierta.";
+writemessages[858] = "Estás en un";
+writemessages[859] = " laberinto de";
+writemessages[860] = " ovales";
+writemessages[861] = " pasillos";
+writemessages[862] = " intercomunicados";
+writemessages[863] = " intercomunicado";
+writemessages[864] = " laberinto de";
+writemessages[865] = " pasillos";
+writemessages[866] = " ovales";
+writemessages[867] = " laberinto de";
+writemessages[868] = " intercomunicados";
+writemessages[869] = " pasillos";
+writemessages[870] = " ovales";
+writemessages[871] = " intercomunicado";
+writemessages[872] = " laberinto de";
+writemessages[873] = " ovales";
+writemessages[874] = " pasillos";
+writemessages[875] = " laberinto de";
+writemessages[876] = " pasillos";
+writemessages[877] = " ovales";
+writemessages[878] = " intercomunicados";
+writemessages[879] = ". ";
+writemessages[880] = "En el suelo hay unas semillas de judías.";
+writemessages[881] = "Aquí hay una tierna plantita de judías.";
+writemessages[882] = "Aquí hay una planta de judías cuyo tronco es enorme. Sale por el agujero superior.";
+writemessages[883] = " ¡Un enorme oso tira con furia de su cadena para darte un abrazo de bienvenida!";
+writemessages[884] = " El oso Peposo está encadenado.";
+writemessages[885] = " El oso viene contigo. ";
+writemessages[886] = "Estás en un";
+writemessages[887] = " laberinto de";
+writemessages[888] = " pequeñas";
+writemessages[889] = " habitaciones";
+writemessages[890] = " entrelazadas";
+writemessages[891] = " pequeño";
+writemessages[892] = " laberinto de";
+writemessages[893] = " habitaciones";
+writemessages[894] = " entrelazadas";
+writemessages[895] = " entrelazado";
+writemessages[896] = " laberinto de";
+writemessages[897] = " habitaciones";
+writemessages[898] = " pequeñas";
+writemessages[899] = ". ";
+writemessages[900] = "Hay un agujero en el suelo";
+writemessages[901] = " pequeño";
+writemessages[902] = " laberinto de";
+writemessages[903] = " entrelazadas";
+writemessages[904] = " habitaciones";
+writemessages[905] = " laberinto de";
+writemessages[906] = " habitaciones";
+writemessages[907] = " pequeñas";
+writemessages[908] = " entrelazadas";
+writemessages[909] = " entrelazado";
+writemessages[910] = " laberinto de";
+writemessages[911] = " pequeñas";
+writemessages[912] = " habitaciones";
+writemessages[913] = ". ";
+writemessages[914] = "Estás en la guarida del pirata cleptómano";
+writemessages[915] = ". ";
+writemessages[916] = " El precipicio queda al ";
+writemessages[917] = "oeste";
+writemessages[918] = ".";
+writemessages[919] = "este";
+writemessages[920] = ".";
+writemessages[921] = "Has dado ";
+writemessages[922] = " órdenes.";
+writemessages[923] = "{RESTART|Volver a jugar}";
+writemessages[924] = "Chorreando espesa baba avanza bamboleante hacia ti.";
+writemessages[925] = "Mirándote amenazante desde lo alto, ruge: ¡Serás un buen bocata!";
+writemessages[926] = "¡Qué rico! Exclama relamiéndose, otro aventurero para cenar.";
+writemessages[927] = "No ves al dragón por ninguna parte.";
+writemessages[928] = "Peposo no está aquí.";
+writemessages[929] = "No ves al troll.";
+writemessages[930] = "Peposo se tranquiliza, come la tortilla y agradecido te lame la sucia cara. Tienes un fiel amigo.";
+writemessages[931] = "Se ha comido la linterna. Y ahora no crees que haya sido una buena idea... ";
+writemessages[932] = "porque todo se queda a oscuras";
+writemessages[933] = "Aunque no pensaste que fuera capaz, se ha comido la linterna. Y puede que no haya sido una buena idea... ";
+writemessages[934] = "porque todo se queda a oscuras";
+writemessages[935] = "¡No intentes engañarme! Esto no es un tesoro. Y cabreado tira la linterna al abismo.";
+writemessages[936] = " Puede que no haya sido una buena idea... ";
+writemessages[937] = "porque todo se queda a oscuras";
+writemessages[938] = "El dragón se ha comido {OREF}.";
+writemessages[939] = "El oso se ha comido {OREF}.";
+writemessages[940] = "Se ha comido {OREF}.";
 writemessages[941] = "Pero... ¡Si no tienes eso!";
-writemessages[942] = "¡No intentes engañarme! Esto no es un tesoro. Y cabreado tira {OREF} al abismo.";
-writemessages[943] = "¡Cojo {OREF}. Pasa aventurero cobardica!";
-writemessages[944] = "No puedes hacerlo.";
-writemessages[945] = "\1<div style='padding:2em 2%; text-align:center; font-size:1.5em'>*** RECOLECTOR DE TESOROS ***</div>";
-writemessages[946] = "Tesoro: {OREF}";
+writemessages[942] = "Pero... ¡Si no tienes eso!";
+writemessages[943] = "¡No intentes engañarme! Esto no es un tesoro. Y cabreado tira {OREF} al abismo.";
+writemessages[944] = "¡Cojo {OREF}. Pasa aventurero cobardica!";
+writemessages[945] = "No puedes hacerlo.";
+writemessages[946] = "\1<div style='padding:2em 2%; text-align:center; font-size:1.5em'>*** RECOLECTOR DE TESOROS ***</div>";
 writemessages[947] = "Tesoro: {OREF}";
-writemessages[948] = "Objeto: {OREF}";
-writemessages[949] = "Caes por el precipicio y te estampas contra el suelo.";
-writemessages[950] = "¡Vale gran mago! El pajarillo se transforma en dragón, y de un flamazo te incinera. ";
-writemessages[951] = "Intenta hacerte un mapa.";
-writemessages[952] = "Utiliza la magia.";
+writemessages[948] = "Tesoro: {OREF}";
+writemessages[949] = "Objeto: {OREF}";
+writemessages[950] = "Caes por el precipicio y te estampas contra el suelo.";
+writemessages[951] = "¡Vale gran mago! El pajarillo se transforma en dragón, y de un flamazo te incinera. ";
+writemessages[952] = "Intenta hacerte un mapa.";
 writemessages[953] = "Utiliza la magia.";
-writemessages[954] = "Usa otros sentidos o la magia.";
-writemessages[955] = "Utiliza la magia.";
-writemessages[956] = "¡Busca luz!";
-writemessages[957] = "¡Aparta la niebla!";
-writemessages[958] = "Ya no hay nada más que hacer aquí.";
-writemessages[959] = "¡Piensa un poco! Es fácil. ";
-writemessages[960] = "Las letras están grabadas en la piedra.";
-writemessages[961] = "No se ve bien.";
-writemessages[962] = "Es una tierna plantita. Todavía le falta por crecer.";
-writemessages[963] = "Vaya con la «plantita». Podrías trepar por ella.";
-writemessages[964] = "¡Agua, agua!";
-writemessages[965] = "El espejo, en estos momentos, solo refleja la ventana vacía de la habitación situada al otro lado del abismo.";
-writemessages[966] = "La alfombra cubre el suelo de toda esta habitación.";
-writemessages[967] = "¡Puaj! Qué asco. Están recubiertas de moho.";
-writemessages[968] = "Lo único llamativo son las ventanas por las que no llegas a ver.";
-writemessages[969] = "La figura te imita.";
-writemessages[970] = "Neptuno las abría fácilmente con sus tres dientes.";
-writemessages[971] = "Es la llave del zoológico subterráneo de los Reyes Elfos.";
-writemessages[972] = "Debido a tu retorcida curiosidad te pringas todo. ¡Cochino!";
-writemessages[973] = "Es un puente colgante muy peligroso porque las tablas de las que está hecho seguramente estén podridas.";
-writemessages[974] = "Es un puente mágico que cambia de color según el lugar de donde lo mires.";
-writemessages[975] = "La grieta es demasiado grande para poder atravesarla.";
-writemessages[976] = "El hacha es muy grande. De un tamaño descomunal.";
-writemessages[977] = "Es muy grande. Tanto como el hacha.";
-writemessages[978] = "Dirías que no puede moverse ni un milímetro con el óxido que tiene.";
-writemessages[979] = "La puerta está bien aceitada. Seguro que se abre.";
-writemessages[980] = "La puerta está abierta. Parecía mentira.";
-writemessages[981] = "Es enorme y fiero. Te tiemblan las piernas al verlo.";
-writemessages[982] = "El agua es cristalina pero pensar que el dragón se bañaba aquí te quita las ganas de bañarte.";
-writemessages[983] = "Tiene una ranura y un apartado para poner pilas.";
-writemessages[984] = "Se la comería hasta un oso.";
-writemessages[985] = "Aunque no es muy grande, es un charco de agua bastante limpia.";
-writemessages[986] = "La niebla es tan densa aquí que podría haber cualquier cosa y no podrías verla.";
-writemessages[987] = "Ves la niebla a lo lejos, espesa... misteriosa.";
-writemessages[988] = "La misteriosa niebla parece comenzar aquí.";
-writemessages[989] = "La niebla no es muy espesa aquí.";
-writemessages[990] = "Ves la niebla quedesaparece en tenues retazos.";
-writemessages[991] = "Ves la niebla a lo lejos, espesa... misteriosa.";
-writemessages[992] = "La niebla es bastante molesta. Suerte que no es tan densa como en otras partes de la caverna.";
-writemessages[993] = "La rampa desciende de forma bastante pronunciada.";
-writemessages[994] = "La rampa acaba aquí. Qué lugar más extraño.";
-writemessages[995] = "El aceite se acumula en esa zona de ahí, en un charco. Da un poco de asco.";
-writemessages[996] = "El agujero es lo suficientemente grande como para que pases por él. ¿Hacia dónde va? Deberás averiguarlo tú.";
-writemessages[997] = "No se ve a dónde va a parar el agujero. Ya que quieres meter la cabeza, atraviésalo que será más seguro.";
-writemessages[998] = "Por el agujero entra la luz... mmm...";
-writemessages[999] = "Es un trono bastante grande adornados con intrincados dibujos. No sabes si significan algo.";
-writemessages[1000] = "No sabrías decir qué son excepto que son antiguos trofeos pero no parecen tener mucho valor.";
-writemessages[1001] = "Debían ser bellísimos cuando eran nuevos. Ahora, son solo una sombra de lo que fueron.";
-writemessages[1002] = "Son pleciosos. O al menos eso clees polque son un poco lalos. No palecen tenel mucho valol.";
-writemessages[1003] = "Pleciosas telas de seda natural. Piensas de qué podlía servirte pelo no se te oculle nada.";
-writemessages[1004] = "La luz parece venir de otro lugar. Es totalmente artificial.";
-writemessages[1005] = "Es una escalera de piedra, algo resbaladiza pero podrás usarla.";
-writemessages[1006] = "No tiene mucho misterio. Es una puerta, de madera, bastante fea.";
-writemessages[1007] = "Aunque la visión es espectacular, no deberías quedarte aquí mucho tiempo.";
-writemessages[1008] = "Por la peste que hace aquí, ha vivido mucho tiempo aquí. ";
-writemessages[1009] = "No la ves por aquí.";
-writemessages[1010] = "La linterna está apagada. ";
-writemessages[1011] = "La linterna está encendida. ";
-writemessages[1012] = "No tiene la pila.";
-writemessages[1013] = "Nivel de energia de la pila: ";
-writemessages[1014] = "altísimo.";
-writemessages[1015] = "¡Es demasiado fuerte para ti, forastero!";
+writemessages[954] = "Utiliza la magia.";
+writemessages[955] = "Usa otros sentidos o la magia.";
+writemessages[956] = "Utiliza la magia.";
+writemessages[957] = "¡Busca luz!";
+writemessages[958] = "¡Aparta la niebla!";
+writemessages[959] = "Ya no hay nada más que hacer aquí.";
+writemessages[960] = "¡Piensa un poco! Es fácil. ";
+writemessages[961] = "Las letras están grabadas en la piedra.";
+writemessages[962] = "No se ve bien.";
+writemessages[963] = "Es una tierna plantita. Todavía le falta por crecer.";
+writemessages[964] = "Vaya con la «plantita». Podrías trepar por ella.";
+writemessages[965] = "¡Agua, agua!";
+writemessages[966] = "El espejo, en estos momentos, solo refleja la ventana vacía de la habitación situada al otro lado del abismo.";
+writemessages[967] = "La alfombra cubre el suelo de toda esta habitación.";
+writemessages[968] = "¡Puaj! Qué asco. Están recubiertas de moho.";
+writemessages[969] = "Lo único llamativo son las ventanas por las que no llegas a ver.";
+writemessages[970] = "La figura te imita.";
+writemessages[971] = "Neptuno las abría fácilmente con sus tres dientes.";
+writemessages[972] = "Es la llave del zoológico subterráneo de los Reyes Elfos.";
+writemessages[973] = "Debido a tu retorcida curiosidad te pringas todo. ¡Cochino!";
+writemessages[974] = "Es un puente colgante muy peligroso porque las tablas de las que está hecho seguramente estén podridas.";
+writemessages[975] = "Es un puente mágico que cambia de color según el lugar de donde lo mires.";
+writemessages[976] = "La grieta es demasiado grande para poder atravesarla.";
+writemessages[977] = "El hacha es muy grande. De un tamaño descomunal.";
+writemessages[978] = "Es muy grande. Tanto como el hacha.";
+writemessages[979] = "Dirías que no puede moverse ni un milímetro con el óxido que tiene.";
+writemessages[980] = "La puerta está bien aceitada. Seguro que se abre.";
+writemessages[981] = "La puerta está abierta. Parecía mentira.";
+writemessages[982] = "Es enorme y fiero. Te tiemblan las piernas al verlo.";
+writemessages[983] = "El agua es cristalina pero pensar que el dragón se bañaba aquí te quita las ganas de bañarte.";
+writemessages[984] = "Tiene una ranura y un apartado para poner pilas.";
+writemessages[985] = "Se la comería hasta un oso.";
+writemessages[986] = "Aunque no es muy grande, es un charco de agua bastante limpia.";
+writemessages[987] = "La niebla es tan densa aquí que podría haber cualquier cosa y no podrías verla.";
+writemessages[988] = "Ves la niebla a lo lejos, espesa... misteriosa.";
+writemessages[989] = "La misteriosa niebla parece comenzar aquí.";
+writemessages[990] = "La niebla no es muy espesa aquí.";
+writemessages[991] = "Ves la niebla quedesaparece en tenues retazos.";
+writemessages[992] = "Ves la niebla a lo lejos, espesa... misteriosa.";
+writemessages[993] = "La niebla es bastante molesta. Suerte que no es tan densa como en otras partes de la caverna.";
+writemessages[994] = "La rampa desciende de forma bastante pronunciada.";
+writemessages[995] = "La rampa acaba aquí. Qué lugar más extraño.";
+writemessages[996] = "El aceite se acumula en esa zona de ahí, en un charco. Da un poco de asco.";
+writemessages[997] = "El agujero es lo suficientemente grande como para que pases por él. ¿Hacia dónde va? Deberás averiguarlo tú.";
+writemessages[998] = "No se ve a dónde va a parar el agujero. Ya que quieres meter la cabeza, atraviésalo que será más seguro.";
+writemessages[999] = "Por el agujero entra la luz... mmm...";
+writemessages[1000] = "Es un trono bastante grande adornados con intrincados dibujos. No sabes si significan algo.";
+writemessages[1001] = "No sabrías decir qué son excepto que son antiguos trofeos pero no parecen tener mucho valor.";
+writemessages[1002] = "Debían ser bellísimos cuando eran nuevos. Ahora, son solo una sombra de lo que fueron.";
+writemessages[1003] = "Son pleciosos. O al menos eso clees polque son un poco lalos. No palecen tenel mucho valol.";
+writemessages[1004] = "Pleciosas telas de seda natural. Piensas de qué podlía servirte pelo no se te oculle nada.";
+writemessages[1005] = "La luz parece venir de otro lugar. Es totalmente artificial.";
+writemessages[1006] = "Es una escalera de piedra, algo resbaladiza pero podrás usarla.";
+writemessages[1007] = "No tiene mucho misterio. Es una puerta, de madera, bastante fea.";
+writemessages[1008] = "Aunque la visión es espectacular, no deberías quedarte aquí mucho tiempo.";
+writemessages[1009] = "Por la peste que hace aquí, ha vivido mucho tiempo aquí. ";
+writemessages[1010] = "No la ves por aquí.";
+writemessages[1011] = "La linterna está apagada. ";
+writemessages[1012] = "La linterna está encendida. ";
+writemessages[1013] = "No tiene la pila.";
+writemessages[1014] = "Nivel de energia de la pila: ";
+writemessages[1015] = "altísimo.";
 writemessages[1016] = "¡Es demasiado fuerte para ti, forastero!";
-writemessages[1017] = "La jaula está vacía.";
-writemessages[1018] = "Tienes al pájaro enjaulado.";
+writemessages[1017] = "¡Es demasiado fuerte para ti, forastero!";
+writemessages[1018] = "La jaula está vacía.";
 writemessages[1019] = "Tienes al pájaro enjaulado.";
-writemessages[1020] = "Está volando.";
-writemessages[1021] = "¿Se podrán comer las paredes?.";
-writemessages[1022] = "«En este lugar perdió el Rey Elfo una pepita de oro.»";
-writemessages[1023] = "Pone XYZZY.";
-writemessages[1024] = "Pone «OID».";
-writemessages[1025] = "Pone: «GRACIAS POR HABER TRAÍDO LUZ A ESTA TRISTE HABITACIÓN»";
-writemessages[1026] = "Pone: «FEE FIE FOE FOO». Lee justo después de la descripción. ¿Estás de beta tester o qué?";
-writemessages[1027] = "Mmm... Aquí las paredes no tienen mucho interés.";
-writemessages[1028] = "La serpiente se está poniendo nerviosa.";
-writemessages[1029] = "Es una grieta tan profunda que no ves dónde acaba.";
-writemessages[1030] = "La grieta es tan profunda que crees perder el conocimiento al mirar.";
-writemessages[1031] = "El troll da mucho miedo. No sabes cómo puede reaccionar...";
-writemessages[1032] = "Ahora ya sabes qué animal era el que hacía tanta peste.";
-writemessages[1033] = "Sudas la gota gorda del calor que hace en el interior del volcán.";
-writemessages[1034] = "Apesta aquí. Te recuerdan a los gases de fuera de la caverna. ";
-writemessages[1035] = "La cornisa es artificial. No sabes cuánto tiempo debe hacer que está aquí.";
-writemessages[1036] = "Las letras, enormes, están grabadas en la piedra de una forma muy tosca.";
-writemessages[1037] = "Las letras son bastante sutiles. Están grabadas en la piedra.";
-writemessages[1038] = "La botella está llena de un aceite muy denso.";
-writemessages[1039] = "La botella está vacía.";
-writemessages[1040] = "La botella está llena de agua.";
-writemessages[1041] = "Es mágica. A ver, úsala a ver qué pasa. Aparte de eso, ";
-writemessages[1042] = "Es... una piedra, redonda y bastante fea. Aparte de eso, ";
-writemessages[1043] = "No ves nada que te llame la atención. Pierdes el tiempo.";
-writemessages[1044] = "No ves eso por aquí.";
-writemessages[1045] = "No ves {OREF} por aquí.";
-writemessages[1046] = "{OREF} es un tesoro.";
-writemessages[1047] = "{OREF} es un objeto.";
+writemessages[1020] = "Tienes al pájaro enjaulado.";
+writemessages[1021] = "Está volando.";
+writemessages[1022] = "¿Se podrán comer las paredes?.";
+writemessages[1023] = "«En este lugar perdió el Rey Elfo una pepita de oro.»";
+writemessages[1024] = "Pone XYZZY.";
+writemessages[1025] = "Pone «OID».";
+writemessages[1026] = "Pone: «GRACIAS POR HABER TRAÍDO LUZ A ESTA TRISTE HABITACIÓN»";
+writemessages[1027] = "Pone: «FEE FIE FOE FOO». Lee justo después de la descripción. ¿Estás de beta tester o qué?";
+writemessages[1028] = "Mmm... Aquí las paredes no tienen mucho interés.";
+writemessages[1029] = "La serpiente se está poniendo nerviosa.";
+writemessages[1030] = "Es una grieta tan profunda que no ves dónde acaba.";
+writemessages[1031] = "La grieta es tan profunda que crees perder el conocimiento al mirar.";
+writemessages[1032] = "El troll da mucho miedo. No sabes cómo puede reaccionar...";
+writemessages[1033] = "Ahora ya sabes qué animal era el que hacía tanta peste.";
+writemessages[1034] = "Sudas la gota gorda del calor que hace en el interior del volcán.";
+writemessages[1035] = "Apesta aquí. Te recuerdan a los gases de fuera de la caverna. ";
+writemessages[1036] = "La cornisa es artificial. No sabes cuánto tiempo debe hacer que está aquí.";
+writemessages[1037] = "Las letras, enormes, están grabadas en la piedra de una forma muy tosca.";
+writemessages[1038] = "Las letras son bastante sutiles. Están grabadas en la piedra.";
+writemessages[1039] = "La botella está llena de un aceite muy denso.";
+writemessages[1040] = "La botella está vacía.";
+writemessages[1041] = "La botella está llena de agua.";
+writemessages[1042] = "Es mágica. A ver, úsala a ver qué pasa. Aparte de eso, ";
+writemessages[1043] = "Es... una piedra, redonda y bastante fea. Aparte de eso, ";
+writemessages[1044] = "No ves nada que te llame la atención. Pierdes el tiempo.";
+writemessages[1045] = "No ves eso por aquí.";
+writemessages[1046] = "No ves {OREF} por aquí.";
+writemessages[1047] = "{OREF} es un tesoro.";
+writemessages[1048] = "{OREF} es un objeto.";
 
 // LOCATION MESSAGES
 

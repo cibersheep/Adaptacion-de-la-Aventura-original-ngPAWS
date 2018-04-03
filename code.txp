@@ -25,16 +25,41 @@
 ;-------------------------------------------------------------
 ; Deficiones flags del sistema
 ;-------------------------------------------------------------
-#define flg fGraficosActivados 	203
-#define flg fMoneda 		120 	; f12 es de sistema
-#define flg fCandado 		140 	; f14 es de sistema
-#define flg fLintPilas 		110 	; f11 es de sistema
+#define flg fInicio2Parte 	100
 #define flg fElfito 		101 	; 4 contigo, 3 , 2, 1 presente?
 #define flg fEnano 		102 
 #define flg fLlave 		103 	; 1 ya está cogido
 #define flg fDichoCasa 		104
+#define flg fLintPilas 		105 	; f11 es de sistema
+#define flg fMoneda 		106 	; f12 es de sistema
+#define flg fCandado 		107 	; f14 es de sistema
+#define flg fElfitoEnCasa 	108
+#define flg fHayNiebla 		114
+#define flg fPuente		115
+#define flg fSerpiente		116
+#define flg f2P105 		117
+#define flg fOstra 		118
+#define flg fDragon 		119
+#define flg fJudias 		120
+#define flg fTroll 		121
+#define flg fOso 		122
+#define flg fJaula 		123
+#define flg fPuerta 		124
+#define flg fMaquina 		125
+#define flg fEnano2P 		126
+#define flg fFallasEnano2P 	127
+#define flg fEnano2P120 	128
+#define flg fTesoros 		129
+#define flg fPajaroVuelve 	130
+#define flg fPepita 		131
+#define flg fTesorosFaltan 	150
+#define flg fElfito2Phasalido 	151
+#define flg fEntradaAbierta 	152
+#define flg fLocFisuraIzda 	160
+#define flg fGraficosActivados 	203
 #define flg fGrosero 		254 	; 1 controla si se usan palabrotas
-;flg 255 ¿Si ya has muerto?
+#define flg fConsejo 		253
+;flg 255. Si ya has visto los créditos
 ;-------------------------------------------------------------
 ; Deficiones de objetos
 ;-------------------------------------------------------------
@@ -45,7 +70,30 @@
 #define obj oLlave 		4
 #define obj oPila 		5
 #define obj oBotas 		6
-
+;-------------------------------------------------------------
+; Deficiones de objetos. 2ª parte
+;-------------------------------------------------------------
+#define obj oJaula 		7
+#define obj oVarita 		8
+#define obj oBoteAceite		9
+#define obj oHueso 		10
+#define obj oAlmohada 		11
+#define obj oHacha 		12
+#define obj oCanto 		13 ; ALERTA Mayor que oCanto es tesoro
+#define obj oPepita 		14 ; ALERTA Menor que oPepita es objeto
+#define obj oDiamante 		15
+#define obj oTitanio 		16
+#define obj oJoya 		17
+#define obj oEspecias 		18
+#define obj oAlfombra 		19
+#define obj oTridente 		20
+#define obj oPerla 		21
+#define obj oHuevo 		22
+#define obj oCadena 		23
+#define obj oPiramide 		24
+#define obj oEsmeralda 		25
+#define obj oJarron 		26
+#define obj oGarfio 		27
 ;-------------------------------------------------------------
 ; Deficiones de localidades
 ;-------------------------------------------------------------
@@ -72,11 +120,111 @@
 #define loc lReja	 	26
 #define loc lCanon 		28
 #define loc lMuerte 		29
-
+;
+;-------------------------------------------------------------
+; Deficiones de localidades. Parte 2
+;-------------------------------------------------------------
+#define loc lP2Hab00		124 	; 0
+#define loc lP2Hab01		125 	; 1
+#define loc lP2Hab02		30 	; 2
+#define loc lP2Hab03		31 	; 3
+#define loc lP2PasadizoBajo	32 	; 4
+#define loc lP2CaminoGuijarros	33 	; 5
+#define loc lP2Hab06		34 	; 6
+#define loc lP2CanonCamara	35 	; 7
+#define loc lP2Agujero		36 	; 8
+#define loc lP2DensoVapor	37 	; 9
+#define loc lP2AnchaFisura	38 	; 10
+#define loc lP2PuenteMagico	39 	; 11
+#define loc lP2VariasSalidas	40 	; 12
+#define loc lP2Hab13		41 	; 13
+#define loc lP2Hab14		42 	; 14
+#define loc lP2Hab15		43 	; 15
+#define loc lP2Hab16		44 	; 16
+#define	loc lP2Hab17		45	; 17
+#define	loc lP2Hab18		46	; 18
+#define	loc lP2Hab19		47	; 19
+#define	loc lP2Hab20		48	; 20
+#define	loc lP2Hab21		49	; 21
+#define	loc lP2Hab22		50	; 22
+#define	loc lP2Hab23		51	; 23
+#define	loc lP2Hab24		52	; 24
+#define	loc lP2Maquina		53	; 25
+#define	loc lP2Hab26		54	; 26
+#define	loc lP2Hab27		55	; 27
+#define	loc lP2Hab28		56	; 28
+#define	loc lP2Hab29		57	; 29
+#define	loc lP2Hab30		58	; 30
+#define	loc lP2Hab31		59	; 31
+#define	loc lP2Hab32		60	; 32
+#define	loc lP2Hab33		61	; 33
+#define	loc lP2Hab34		62	; 34
+#define	loc lP2Hab35		63	; 35
+#define	loc lP2Hab36		64	; 36
+#define	loc lP2Hab37		65	; 37
+#define	loc lP2Trono		66	; 38
+#define	loc lP2PsajeInclinado	67	; 39	
+#define	loc lP2SalaAcustica	68	; 40	
+#define	loc lP2Mirador		69	; 41
+#define	loc lP2Hab42		70	; 42
+#define	loc lP2Hab43		71	; 43
+#define	loc lP2Hab44		72	; 44
+#define	loc lP2Hab45		73	; 45
+#define	loc lP2Hab46		74	; 46
+#define	loc lP2Hab47		75	; 47
+#define	loc lP2Hab48		76	; 48
+#define	loc lP2HabMarina	77	; 49	
+#define	loc lP2InclCor		78	; 50
+#define	loc lP2FinalCor		79	; 51
+#define	loc lP2Hab52		80	; 52
+#define	loc lP2HabSecreta	81	; 53	
+#define	loc lP2Hab54		82	; 54
+#define	loc lP2GalAlta		83	; 55
+#define	loc lP2LagSubte		84	; 56
+#define	loc lP2Hab57		85	; 57
+#define	loc lP2Hab58		86	; 58
+#define	loc lP2Hab59		87	; 59
+#define	loc lP2HabQues		88	; 60
+#define	loc lP2Hab61		89	; 61
+#define	loc lP2Hab62		90	; 62
+#define	loc lP2Hab63		91	; 63
+#define	loc lP2FondPozoOes	92	; 64	
+#define	loc lP2DepoFosoEst	93	; 65	
+#define	loc lP2DosFos		94	; 66
+#define	loc lP2DosFosos		95	; 67
+#define	loc lP2HabBlanda	96	; 68	
+#define	loc lP2Hab69		97	; 69
+#define	loc lP2HabOlien		98	; 70
+#define	loc lP2Hab71		99	; 71
+#define	loc lP2Alcoba		100	; 72
+#define	loc lP2HabMagica	101	; 73	
+#define	loc lP2AbismoSO		102	; 74
+#define	loc lP2AbismoNe		103	; 75
+#define	loc lP2EncimaCornisa	104	; 76	
+#define	loc lP2HabNegra		105	; 77
+#define	loc lP2EscudoGigante	106	; 78	
+#define	loc lP2Hab79		107	; 79
+#define	loc lP2Hab80		108	; 80
+#define	loc lP2Hab81		109	; 81
+#define	loc lP2Hab82		110	; 82
+#define	loc lP2Hab83		111	; 83
+#define	loc lP2HabParedesCal	112	; 84	
+#define	loc lP2Hab85		113	; 85
+#define	loc lP2Hab86		114	; 86
+#define	loc lP2Hab87		115	; 87
+#define	loc lP2HumPasadInc	116	; 88	
+#define	loc lP2ApestosaJaula	117	; 89	
+#define	loc lP2MagnLago		118	; 90
+#define	loc lP2Hab91		119	; 91
+#define	loc lP2NoHasLogrado	120	; 92	
+#define	loc lP2Hab93		121	; 93
+#define	loc lP2Hab94		122	; 94
+#define	loc lP2Hab95		123	; 95
 ;-------------------------------------------------------------
 ; Deficiones imágenes de localidades
 ;-------------------------------------------------------------
 #define grf intro.png 1
+#define pic loc00.svg 0
 #define pic loc03.png 3 ; lFrontera
 #define pic loc04.png 4
 #define pic loc05.png 5
@@ -105,13 +253,65 @@
 #define grf loc26sincand.png 3
 #define pic loc28.png 28 ; lCanon
 #define pic loc29.png 29 ; lMuerte
-
+;-------------------------------------------------------------
+; Deficiones imágenes de localidades de la 2ª parte
+;-------------------------------------------------------------
+#define grf enanomalauva.png 4
+#define grf dragon.png 5
+#define grf loc117osolibre.png 6
+#define grf loc117vacia.png 7
+#define grf pirata.png 8
+#define pic loc30.png 30
+#define pic loc31.png 31
+#define pic loc32.png 32
+#define pic loc33.png 33
+#define pic loc35.png 35
+#define pic loc36.png 36
+#define pic loc37.png 37
+#define pic loc38.png 38
+#define pic loc39.png 39
+#define pic loc40.png 40
+;--- Laberinto al sur del puente
+#define pic loc42.png 42
+;---
+;--- Laberinto al norte del puente
+#define pic loc48.png 48
+;---
+#define pic loc66.png 66
+#define pic loc67.png 67
+#define pic loc68.png 68
+#define pic loc69.png 69
+#define pic loc77.png 77
+#define pic loc78.png 78
+#define pic loc79.png 79
+#define pic loc81.png 81
+#define pic loc82.png 82
+#define pic loc83.png 83
+#define pic loc84.png 84
+#define pic loc88.png 88
+#define pic loc92.png 92
+#define pic loc93.png 93
+#define pic loc94.png 94
+#define pic loc96.png 96
+#define pic loc98.png 98
+#define pic loc100.png 100
+#define pic loc101.png 101
+#define pic loc102.png 102
+#define pic loc103.png 103
+#define pic loc104.png 104
+#define pic loc105.png 105
+#define pic loc106.png 106
+#define pic loc112.png 112
+#define pic loc116.png 116
+#define pic loc117.png 117
+#define pic loc118.png 118
 ;-------------------------------------------------------------
 ; Deficiones constantes propias
 ;-------------------------------------------------------------
-#define const cMaxCosas = 4	; Máximo de objetos que se pueden llevar
+#define const cMaxCosas = 4	; Máximo de objetos que se pueden llevar -1
+#define const cMaxCosas2P = 6	; Máximo de objetos que se pueden llevar -1 (2ªparte)
 #define const NOTCREATED = 252
-
+#define const PROCINICIO = 12
 ;-------------------------------------------------------------
 ; Definiciones por defecto para atributos de objeto
 ;-------------------------------------------------------------
@@ -142,6 +342,11 @@
 ; Definiciones propias para atributos de objeto
 ;-------------------------------------------------------------
 #define const aFull = 22
+;-------------------------------------------------------------
+; Definiciones propias para atributos de objeto. 2ª parte
+;-------------------------------------------------------------
+#define const aPajaro = 23
+#define const aTesoro = 24
 /CTL
 
 /VOC
@@ -233,6 +438,8 @@ BOTELLA		53	noun
 LLAVE		54	noun
 PILA 		55	noun
 PILAS		55	noun
+BATERIAS 	55	noun
+BATERIA 	55	noun
 CABAÑ		56	noun
 CABAÑA		56	noun
 CASA 		56	noun
@@ -350,6 +557,95 @@ MALEZA		121	noun
 ESPINO		121	noun
 HUMO		122	noun
 FUEGO		123	noun
+NOTA		124	noun
+MENSAJE		124	noun
+TEXTO		124	noun
+; -----------2ª parte ------------------------------------
+ALFOMBRA	125	noun
+CATIFA		125	noun
+ESTERA		125	noun
+ALMEJA		126	noun
+OSTRA		126	noun
+ALMOHADA	127	noun
+COJIN		127	noun
+BARRA		128	noun
+TITANIO		128	noun
+BARROTE		129	noun ; ALERTA : Reja
+BARROTES	129	noun
+JAULA		129	noun
+DRAGON		130	noun
+BICHO		130	noun
+ACEITE		131	noun ; Botella con aceite ; En 2ª parte es **verbo** sinónimo del noun charco
+BROTE 		132	noun
+TRONCO 		132	noun
+SEMILLA 	132	noun
+PLANTA 		132	noun
+JUDIA 		132	noun
+CACA 		133	noun
+EXCREMENTOS 	133	noun
+HECES 		133	noun
+CADENA		134	noun
+CANTO		135	noun
+PIEDRA		135	noun ; ALERTA con roca
+DIAMANTE	136	noun
+ESMERALDA	137	noun
+ESPECIAS	138	noun
+ESPEJO		139	noun ; En el original es sinónimo de «AD»
+FIE 		140	noun
+VENTANA		145	noun ; ALERTA en 2ª parte ex fugura y ventana es lo mismo: Es el espejo (pero son != noun)
+FISURA		146	noun 
+ABISMO		146	noun 
+GANCHO		147	noun 
+GARFIO		148	noun 
+HACHA		149 	noun
+HUESO		150 	noun
+HUEVO		151	noun
+JARRON		152	noun
+JOYA		153	noun
+MAGIA		154	noun
+MAGICA		154	noun
+MAGICO		154	noun
+MAQUINA		155	noun
+NIEBLA		156	noun
+VAPOR		156	noun
+OSO		157	noun
+PEPOSO		157	noun
+PAJARO 		158	noun
+PEPITA 		159	noun
+PERLA 		160	noun
+PILAR		161	noun ; ALERTA en 2ª parte es sinónimo de pared
+PIRAMIDE 	162	noun
+PLOVE 		163 	noun 
+PLUGH 		163 	noun
+PUENTE 		164	noun
+RECOLECTOR 	165 	noun
+SERPIENTE 	166	noun
+TRIDENTE	167	noun
+VARITA 		168	noun
+TROLL 		169	noun
+; XYZZY			     ; ALERTA Ya es verbo
+GRABADO		170 	noun
+ESCUDO 		171 	noun
+GIGANTE 	172 	noun
+TAPIZ 		173 	noun
+TAPICES 	173 	noun
+TROFEO 		174 	noun
+TROFEOS 	174 	noun
+LAGUNA 		175 	noun
+LAGO 		175 	noun
+DEPOSITO 	176 	noun
+TRONO 		177 	noun
+CUADLOS 	178 	noun
+CUADROS 	178 	noun
+CUADLO 		178 	noun
+CUADRO 		178 	noun
+SEDAS 		179 	noun
+SEDA 		179 	noun
+GAS 		180 	noun
+GASES 		180 	noun
+CORNISA 	181 	noun
+ANIMAL 		182 	noun
+PARTIDAS 	183 	noun
 
 ;--Verbos--
 COGER		20	verb
@@ -495,6 +791,7 @@ BEBERSE		39	verb
 BEBERTE		39	verb
 TOCAR         40       verb
 TOCA          40       verb
+TOCO          40       verb
 ACARICIAR     40       verb
 ACARICIA      40       verb
 PALPA         40       verb
@@ -508,7 +805,7 @@ OLFATEAR      42       verb
 OLFATEA       42       verb
 HUSMEA        42       verb
 HUSMEAR       42       verb
-ESPERAR		43	verb
+ESPERAR		43	verb ; ALERTA En la 2ª parte es sinónimo de dormir
 ESPERA		43	verb
 ESPERO		43	verb
 CANTAR		44	verb
@@ -662,6 +959,7 @@ SABOREAR      63       verb
 SABOREA       63       verb
 ABRIR         64       verb
 ABRE          64       verb
+ABRO          64       verb
 OPEN          64       verb
 CERRAR        65       verb
 CIERRA        65       verb
@@ -842,6 +1140,7 @@ ACORDARSE     94       verb
 ACORDARTE     94       verb
 ACUERDATE     94       verb
 SOPLA         95       verb
+SOPLO         95       verb
 SOPLAR        95       verb
 DOBLA         96       verb
 DOBLAR        96       verb
@@ -931,7 +1230,7 @@ AD		115	verb
 ASOMA		116	verb
 ASOMAR		116	verb
 ASOMO		116	verb
-ASUST		117	verb
+ASUST		117	verb ; ALERTA en la 2ª parte es sinónimo de ATACAR
 ASUSTAR		117	verb
 ASUSTO		117	verb
 BUSCA		118	verb
@@ -954,6 +1253,55 @@ VENIR		120	verb
 VENTE		120	verb
 VEN  		120	verb
 ACERCATE	120	verb
+;---------------2ª parte-----------------------
+;BATRA			     ; Las claves para comenzar la segunda parte
+;WHALK
+;TIMAC
+;GUACH
+FEE  		121	verb
+ALUMBRAR	85	verb ; COMPROBAR sinónimo de examinar. ALUMB
+ALUMBRO		85	verb 
+ALUMBRA		85	verb 
+APARTAR 	122	verb
+APARTO 		122	verb
+APARTA 		122	verb
+ATRAPAR 	20	verb
+ATRAPO 		20	verb
+ATRAPA 		20	verb
+CAZAR 		20	verb
+CAZO 		20	verb
+CAZA 		20	verb
+COGEL 		123	verb
+COJER 		124	verb 
+COJE 		124	verb 
+BANAR 		56	verb ; ALERTA BAÑAR en 2ª parte es sinónimo de LANZAR (¿para «Lanzarse al agua»?)
+BANO 		56	verb ;        mejor sinónimo de NADAR
+BANATE 		56	verb
+CRUZAR 		125	verb
+CRUZO 		125	verb
+CRUZA 		125	verb
+PASAR		125	verb
+PASO 		125	verb
+;PASA 		125	verb ; Ya es noun
+;DESATAR 	21	verb
+;DESATO 	21	verb
+;DESATA 	21	verb
+DESENCADEN 	21	verb
+LEEL		109	verb
+LEERL		109	verb
+REGAR		126	verb
+RIEGO		126	verb
+RIEGA		126	verb
+RETIRO 		25	verb
+USARL 		80	verb
+USAL 		80	verb
+ACEITAR		127	verb
+UNTAR		127	verb
+LIBERAR 	128 	verb
+LIBERA 		128 	verb
+LIBERO 		128 	verb
+ENUMERAR 	129 	verb
+ENUMERA		129 	verb
 
 ;--Adjetivos--
 PEQUEÑO       	2     	adjective
@@ -970,6 +1318,7 @@ LARGO         	9	adjective
 LARGA         	9  	adjective
 ENCENDIDA	10	adjective
 ALTOS		11	adjective ; ALTOS 102	adjective
+RODADO		12	adjective
 
 ;--Adverbios--
 RAPIDAMENT    2        adverb
@@ -1023,7 +1372,7 @@ ENTONCES      2        conjunction ; A efectos del sistema. ENTONCES es un adver
 
 /STX
 /0
-No puedes ver nada, está muy oscuro y aquí apesta.
+No puedes ver nada, está muy oscuro.
 
 /1
 Puedes ver: 
@@ -1175,9 +1524,14 @@ Directorio lleno.
 /58
 Introduce el nombre con el que grabaste la partida.
 /59
-No se encontró ninguna partida grabada con ese nombre. Confirma que el nombre es correcto y que realizaste dicha partida en este mismo navegador.
+No se encontró ninguna partida grabada con ese nombre.
+
+Confirma que el nombre es correcto y que realizaste dicha partida en este mismo dispositivo.
+
+Escribe «PARTIDAS» para una lista de las partidas guardadas.
+
 /60
-Introduce el nombre con el que grabar la partida. Necesitarás recordar ese nombre para poder recuperarla posteriormente.
+Introduce el nombre con el que grabar la partida.
 /61
 
 
@@ -1205,7 +1559,7 @@ encima hay
 /3
 ¡Qué horror, el palizas otra vez! ¡Prefiero la muerte!
 /4
-¡Riquísima!
+
 /5
 Algo que has hecho te impide completar la aventura.
 /6
@@ -1241,7 +1595,7 @@ Dejaría satisfecho hasta a un oso.
 /21
 Lleva la insignia del Rey Elfo.
 /22
-«SEMPER LUX» (No lo creas).
+Es de la marca «SEMPER LUX» (aunque no deberías creértelo).
 /26
 No estás en clase de botánica.
 /27
@@ -1278,9 +1632,7 @@ Tremendo batacazo en el fondo del abismo.
 /43
 Pareces estar un poco muerto.
 
-/46
 
-Ya te lo advertí...
 /47
       ¡¡¡FELICIDADES!!!
 /48
@@ -1314,22 +1666,29 @@ Y desesperado Don Enano se lanza al volcán. ¡Descanse en paz!
 /72
 ¡Parece una llave!
 /77
-\1<div style='padding:2em 2%; text-align:center'> AVENTURA ORIGINAL I 
+\1<div style='padding:0 1%; margin: 0; font-size:.7em; text-align:center'><span style='font-size:1.3em; font-weight:bold; color:#ff3333'>AVENTURA ORIGINAL</span>
+
+<b>La búsqueda</b> y <b>el encuentro</b>
 
 
- LA BÚSQUEDA 
+
+
+<b>Dirección:</b> Andrés Samudio
+
+<b>Programación:</b> Manuel González
+
+<b>Gráficos:</b> Carlos Marqués
+
+
+(c) 1989 Aventuras AD
 
 
 
 
-Dirección: Andrés Samudio
+<b>Adaptación a ngPAWS:</b> CiberSheep
 
-Programación: Manuel González
+<b>Soporte y betatesting:</b> Uto, I. Cabanillas</div>
 
-Gráficos: Carlos Marqués
-
-
-(c) 1989 Aventuras AD </div>
 
 
 /96
@@ -1337,36 +1696,34 @@ Gráficos: Carlos Marqués
 /98
 
 /99
-\1<div style='padding:2em 2%; text-align:center'>
-               ********
+\1<div style='padding:0 1%; margin: 0; font-size:.7em; text-align:center'>********
 
-           ¡LA GRAN CAVERNA!
+<span style='font-size:1.5em; font-weight:bold; color:#ff3333'>¡LA GRAN CAVERNA!</span>
 
-
-  ORIGEN DE LEYENDAS SOBRE FABULOSAS
-     RIQUEZAS Y TERRIBLES PELIGROS.
-
-           ¿MITO O REALIDAD?
+  Origen de leyendas sobre fabulosas
+     <b>riquezas</b> y terribles <b>peligros.</b>
 
 
-SIGUIENDO EL BORROSO MAPA QUE TE DIO UN
-EXTRAÑO (POR CIERTO, MUY RICO) A QUIEN
- SALVASTE DE LAS GARRAS DE UNOS TROLLS
-   HAS LLEGADO A ESTE APACIBLE VALLE.  
+<span style='font-size:1.2em; font-weight:bold; color:#ffcccc'>¿MITO O REALIDAD?</span>
+
+Siguiendo el borroso mapa que te dio un
+extraño (por cierto, muy rico) a quien
+ salvaste de las garras de unos <i>trolls</i>
+   has llegado a este apacible valle.  
 
 
-    PRESIENTES QUE ESTAS MUY CERCA,
-   PERO DE REPENTE EL VIEJO MAPA SE
-   DESHACE EN TUS MANOS MIENTRAS UNA   
-        CALIDA BRISA TE SUSURRA:
+    Presientes que estás muy cerca,
+   pero de repente el viejo mapa se
+   <b>deshace</b> en tus manos mientras una   
+        calida brisa te susurra:
 
-   «SOLO LOS VALIENTES QUE DOMINEN
-    LA MAGIA MERECERAN MIS TESOROS»
-
-               ¡SUERTE!
+   «Solo los valientes que dominen
+    la <b>magia</b> merecerán mis tesoros»
 
 
-                ****** </div>
+<span style='font-size:1.2em; font-weight:bold; color:#ffcccc'>¡SUERTE!</span>
+
+******</div>
 /100
 ;No tienes nada.
 /101
@@ -1439,20 +1796,62 @@ al {ACTION|suroeste|suroeste}
 /0 			; 0 lint encendida ; 2 linterna
 una linterna {TEXTPIC|iconolinterna.svg|0}
 /1 			; 1 moneda
-una moneda
+una moneda {TEXTPIC|iconomoneda.svg|0}
 /2 			; 3 tortiall
-una tortilla
+una tortilla {TEXTPIC|iconotortilla.svg|0}
 /3 			; 4 botella ; 5 botella con agua
-una botella
+una botella {TEXTPIC|iconobotella.svg|0}
 /4 			; 6 llave
-una llave
+una llave {TEXTPIC|iconollave.svg|0}
 /5		 	; 7 pila
-una pila eléctrica
+una pila eléctrica {TEXTPIC|iconopila.svg|0}
 /6 			; 8 botas
-una pareja de botas
+una pareja de botas {TEXTPIC|iconobotas.svg|0}
+/7 			; era /8 ;;; ; era /10 Una jaula con pájaro
+una jaula {TEXTPIC|iconojaula.svg|0}
+/8 			; era/9
+una varita mágica {TEXTPIC|iconovarita.svg|0}
+/9 			; era /11
+una botella con aceite {TEXTPIC|iconobotella.svg|0}
+/10 			; era /12
+un hueso humano algo chamuscado {TEXTPIC|iconohueso.svg|0}
+/11 			; era /13
+una almohada {TEXTPIC|iconoalmohada.svg|0}
+/12 			; era /14
+un hacha {TEXTPIC|iconohacha.svg|0}
+/13 			; era /15
+un canto rodado {TEXTPIC|iconopiedra.svg|0}
+/14 			; era /16
+una pepita de oro {TEXTPIC|iconopepita.svg|0}
+/15	 		; era /17
+un diamante {TEXTPIC|iconodiamante.svg|0}
+/16 			; era /18
+una barra de titanio {TEXTPIC|iconotitanio.svg|0}
+/17 			; era /19
+una joya {TEXTPIC|iconojoya.svg|0}
+/18 			; era /20
+unas especias indias {TEXTPIC|iconoespecias.svg|0}
+/19 			; era /21
+una alfombra persa {TEXTPIC|iconoalfombra.svg|0}
+/20 			; era /22
+un tridente marino {TEXTPIC|iconotridente.svg|0}
+/21 			; era /23
+una gran perla {TEXTPIC|iconoperla.svg|0}
+/22 			; era /24
+un huevo de oro {TEXTPIC|iconohuevo.svg|0}
+/23 			; era /25
+una cadena de plata {TEXTPIC|iconocadena.svg|0}
+/24 			; era /26
+una pirámide de platino {TEXTPIC|iconopiramide.svg|0}
+/25 			; era /27
+una esmeralda {TEXTPIC|iconoesmeralda.svg|0}
+/26 			; era /28
+un jarrón chino {TEXTPIC|iconojarron.svg|0}
+/27 			; era /29
+un garfio de oro {TEXTPIC|iconogarfio.svg|0}
 /LTX
 /0
-\1<div style='padding:2em 2%; text-align:center'>LA AVENTURA ORIGINAL</div>
+\1<div style='padding:2em 2%; text-align:center; font-size:1.5em'>LA AVENTURA ORIGINAL</div>
 
 /1
 /2
@@ -1505,43 +1904,197 @@ El valle se hace más estrecho y profundo. El arroyo es cada vez menos caudaloso
 El cañón se abre en lo que fue antes una cascada y hoy solo un precipicio rocoso. Un enorme cortado parte el paisaje de este a oeste y, desde tus quinientos metros de altura, tienes una vista maravillosa de las tierras del sur. Desde el norte llega el viento a través de la garganta rocosa.
 /29
 
-/30
-Con un click la puerta se cierra mágicamente...
-/31
+/30 ; lP2Hab02
 
-/32
+/31 ; lP2Hab03
 
-/33
+/32 ; lP2PasadizoBajo
+Gateas trabajosamente sobre cantos rodados en un pasadizo muy bajo. El lugar es muy estrecho, con paredes poco trabajadas y llenas de humedad. Todo parece indicar que era una salida de emergencia. Una suave luminosidad te llega del este.
+/33 ; lP2CaminoGuijarros
+El camino de guijarros termina aquí, donde se acumulan todos los desechos arrastrados por el rio. La caverna se hace un poco más amplia y un misterioso cañon continúa hacia el oeste. Un enigmático texto grabado en la roca rompe la monotonía de la pared.
+/34 ; lP2Hab06
 
-/34
+/35 ; lP2CanonCamara
+El cañon se abre formando una espléndida cámara llena de pétreas cascadas doradas adornadas con rojas pinceladas de ferrita. El techo está decorado con bellas estalactitas multiformes. En el centro destaca una enorme y labrada estalagmita que se eleva majestuosa.
+/36 ; lP2Agujero
+El rústico pasaje de escape hacia el este termina aquí. A tus pies se abre un agujero por el que escapan tenues retazos de tibia niebla.
+/37 ; lP2DensoVapor
+El lado este de la enorme Cámara de las Nieblas está lleno de cúmulos de denso vapor que se deslizan silenciosamente por la estancia dificultando la visión. Hay una nota en la pared y, entre la niebla, distingues una escalera de piedra que baja aún más hacia desconocidas profundidades.
+/38 ; lP2AnchaFisura
+Estás junto a una enorme y ancha fisura que parte en dos la cámara. Del abismo salen desagradables ruidos de espesos borboteos y también nace la niebla, muy espesa en esta zona.
+/39 ; lP2PuenteMagico
+Sigues junto a la impresionante fisura, pero ahora estás junto a un bellísimo puente de mágico cristal multicolor.
+/40 ; lP2VariasSalidas
+Es el lado oeste de la Cámara, aquí no hay tanta niebla y puedes ver varias salidas que se abren hacia los desconocido.
+/41 ; lP2Hab13
 
-/35
+/42 ; lP2Hab14
 
-/36
+/43 ; lP2Hab15
 
-/37
+/44 ; lP2Hab16
 
-/38
+/45 ; lP2Hab17
 
-/39
+/46 ; lP2Hab18
 
-/40
+/47 ; lP2Hab19
 
-/41
+/48 ; lP2Hab20
 
-/42
+/49 ; lP2Hab21
 
-/43
+/50 ; lP2Hab22
 
-/44
+/51 ; lP2Hab23
 
-/45
+/52 ; lP2Hab24
 
-/46
+/53 ; lP2Maquina
+Hay una máquina recargapilas con una ranura para meter monedas.
+/54 ; lP2Hab26
 
-/47
+/55 ; lP2Hab27
 
-/48
+/56 ; lP2Hab28
+
+/57 ; lP2Hab29
+
+/58 ; lP2Hab30
+
+/59 ; lP2Hab31
+
+/60 ; lP2Hab32
+
+/61 ; lP2Hab33
+
+/62 ; lP2Hab34
+
+/63 ; lP2Hab35
+
+/64 ; lP2Hab36
+
+/65 ; lP2Hab37
+
+/66 ; lP2Trono
+El Trono de los Reyes Elfos de las Montañas está en una impresionante habitación. Las paredes están decoradas con varios trofeos y bellos tapices que, aunque algo dañados, aún recuerdan un pasado esplendoroso.
+/67 ; lP2PsajeInclinado
+Esta habitación es un bajo pasaje inclinado, su dirección es norte-sur y en el rocoso suelo hay un agujero que penetra aún más en las entrañas de la caverna.
+/68 ; lP2SalaAcustica
+Estás en la Sala Acústica, donde convergen todos los sonidos de la inmensa caverna. Cuentan que los Reyes Elfos oían aquí los conciertos ofrecidos por las hadas cantoras. En el pilar central hay, tallado en la roca, un curioso mensaje.
+/69 ; lP2Mirador
+El mirador tiene una ventana que da al profundo abismo. El fondo se halla cubierto de espesa niebla y al lado opuesto se abre otra ventana hacia una habitación en penumbra, desde la cual te observa una extraña figura. Tambien hay un charco de agua.
+/70 ; lP2Hab42
+
+/71 ; lP2Hab43
+
+/72 ; lP2Hab44
+
+/73 ; lP2Hab45
+
+/74 ; lP2Hab46
+
+/75 ; lP2Hab47
+
+/76 ; lP2Hab48
+
+/77 ; lP2HabMarina
+En la habitación marina se oye a lo lejos el sonido de las olas del mar y se respira un picante aire salado. Una enorme almeja está anclada firmemente al inclinado suelo.
+/78 ; lP2InclCor 
+Estás en un inclinado corredor de cortantes paredes. Por el centro baja una rampa de granito.
+/79 ; lP2FinalCor
+Has llegado al final del corredor inclinado, es un fondo de saco excavado en la roca donde termina la granítica rampa.
+/80 ; lP2Hab52
+
+/81 ; lP2HabSecreta
+Has encontrado la habitación secreta por donde los reyes Elfos desaparecían hacia sus correrías nocturnas. Hay un agujero en el suelo que te llevará aún mas profundo, hacia los fosos. Huele un poco a caca de dragón.
+/82 ; lP2Hab54
+
+/83 ; lP2GalAlta
+Una galería muy alta y con humedad que le llega del norte. Arriba, colgando del techo hay un enorme espejo. En la pared, muy alto y frente al espejo, hay una ventana por la que se ven retazos de vapor ascendiendo. Hay un agujero en el suelo, por el cual se oyen campanitas chinas.
+/84 ; lP2LagSubte
+A esta laguna subterranea formada por el agua del rio del valle venía a beber y tomar baños el dragón cobarde.
+/85 ; lP2Hab57
+
+/86 ; lP2Hab58
+
+/87 ; lP2Hab59
+
+/88 ; lP2HabQues
+Estás en la famosa habitación del Queso Suizo, viendo sus paredes perforadas por miles de polimorfos agujeritos y oliendo, muy a pesar tuyo, su fortísimo aroma.
+/89 ; lP2Hab61
+
+/90 ; lP2Hab62
+
+/91 ; lP2Hab63
+
+/92 ; lP2FondPozoOes
+El fondo del Pozo Oeste queda unos cuatro metros por debajo del salón Dos Fosos. En lo alto ves el agujero. 
+/93 ; lP2DepoFosoEst
+Estás al lado de un depósito de aceite en el Foso Este.
+/94 ; lP2DosFos
+La Habitación Dos Fosos es muy grande, estás en el lado oeste, cerca a uno de los fosos, y ves que la bajada es fácil debido a lo tallado de las paredes de roca.
+/95 ; lP2DosFosos
+Estás al este de la Habitación Dos Fosos, al lado de uno de los fosos. La bajada es fácil debido a lo tallado de las paredes de roca. Desde el este llega un fuerte olor.
+/96 ; lP2HabBlanda
+La habitación blanda lo es porque una gruesa alfombra cubre el suelo duro de la roca y las paredes están tapizadas por espeso moho.
+/97 ; lP2Hab69
+
+/98 ; lP2HabOlien
+La habitación Oliental estal bellamente decolada con finas sedas y pleciosos cuadlos. En el aile oilse el dulce tañido de las campanitas de viento y hasta tu sentilte un poco chinito.
+/99 ; lP2Hab71
+
+/100 ; lP2Alcoba
+La Alcoba, lugar de retozos de los Reyes. Hoy dia vacía y olvidada. Una misteriosa luz verde sale por un estrecho pasaje al este.
+/101 ; lP2HabMagica
+La habitación mágica no necesita luz. Su enorme poder la hace vibrar y carga el aire de eléctricas motitas de energía que dan a la escena un sobrenatural resplandor verde. En el lado norte hay una puerta hacia la oscuridad.
+/102 ; lP2AbismoSO
+Estás del lado suroeste de un abismo cruzado sólo por un destartalado y peligroso puente. De la enorme grieta brotan fétidos gases y se escucha el rugir de las entrañas del volcán.
+/103 ; lP2AbismoNe
+Este es el lado Noreste del abismo. Del este llegan ráfagas de aire caliente y se escucha el sordo retumbar del magma hirviente.
+/104 ; lP2EncimaCornisa
+Encima de una cornisa de unos diez metros de altura sobre un profundo cortado del que suben extraños vapores. En las paredes de húmeda roca que dan al abismo se encuentran, enfrentadas, dos ventanas.
+/105 ; lP2HabNegra
+Hacía años que la luz no rasgaba las espesas tinieblas de la habitación Negra.
+/106 ; lP2EscudoGigante
+El hacha y el escudo del gigante llenan casi por completo este lugar. En la pared se lee: FEE FIE FOE FOO.
+/107 ; lP2Hab79
+
+/108 ; lP2Hab80
+
+/109 ; lP2Hab81
+
+/110 ; lP2Hab82
+
+/111 ; lP2Hab83
+
+/112 ; lP2HabParedesCal
+Esta habitación tiene las paredes calientes y combadas hacia dentro por la ardiente presión que soportan. Estamos tan cerca al corazón del furioso volcán que su latir hace temblar toda la estructura. Del techo cae un fino polvillo mezclado con cenizas y de los lados ruedan pequeñas rocas chamuscadas.
+/113 ; lP2Hab85
+
+/114 ; lP2Hab86
+
+/115 ; lP2Hab87
+
+/116 ; lP2HumPasadInc
+Es un húmedo pasadizo inclinado, bastante incómodo y resbaloso que termina frente a una jaula muy fuerte, como para contener a un terrible animal. De hecho, apesta a fiera que marea.
+/117 ; lP2ApestosaJaula
+Estás dentro de una apestosa y sucia jaula en las profundidades de la caverna. Hoy dia es lo único que resta del antaño bien surtido zoológico subterraneo.
+/118 ; lP2MagnLago
+Estás en un magnífico lago interior, frente a la espumosa Gran Cascada. En el centro hay un remolino que succiona con avaricia. La luz de tu lámpara crea en el rocío bellos juegos de luz, llegando por momentos a formar un multicolor arcoiris.
+/119 ; lP2Hab91
+
+/120 ; lP2NoHasLogrado
+Lo siento, no has logrado sobrevivir dentro de la Gran Caverna.
+/121 ; lP2Hab93
+
+/122 ; lP2Hab94
+
+/123 ; lP2Hab95
+
+/124 ; lP2Hab00
+
+/125 ; lP2Hab01
 
 
 
@@ -1669,24 +2222,282 @@ ESTE  lBosqueCer
 /29
 /30
 /31
+OESTE lP2PasadizoBajo
+SALIR lP2Hab03
 /32
+ESTE  lP2Hab03
+OESTE lP2CaminoGuijarros
 /33
+ESTE  lP2PasadizoBajo
+OESTE lP2CanonCamara
 /34
 /35
+ESTE  lP2CaminoGuijarros
+OESTE lP2Agujero
 /36
+ESTE  lP2CanonCamara
+BAJAR  lP2DensoVapor
 /37
+OESTE lP2PuenteMagico
+SUBIR lP2Agujero
+BAJAR  lP2Trono
 /38
+OESTE lP2VariasSalidas
+ESTE  lP2DensoVapor
 /39
+OESTE lP2VariasSalidas
+ESTE  lP2DensoVapor
 /40
+ESTE  lP2PuenteMagico
+SUR   lP2Hab14
+NORTE lP2Hab20
 /41
 /42
+NORTE lP2VariasSalidas
+SUR   lP2Hab14
+ESTE  lP2Hab14
+OESTE lP2Hab14
+NORESTE lP2VariasSalidas
+NOROESTE lP2VariasSalidas
+SURESTE lP2VariasSalidas
+SUROESTE lP2VariasSalidas
+SUBIR lP2Hab15
+BAJAR  lP2Hab14
 /43
+NORTE lP2Hab15
+SUR   lP2Hab15
+ESTE  lP2Hab14
+OESTE lP2Hab15
+NORESTE lP2Hab54
+NOROESTE lP2Hab14
+SURESTE lP2Hab14
+SUROESTE lP2Hab16
+SUBIR lP2Hab14
+BAJAR lP2Hab14
 /44
+NORTE lP2Hab16
+SUR   lP2Hab16
+ESTE  lP2Hab16
+OESTE lP2Hab17
+NORESTE lP2Hab14
+NOROESTE lP2Hab16
+SURESTE lP2Hab15
+SUROESTE lP2Hab15
+SUBIR lP2Hab15
+BAJAR lP2CanonCamara
 /45
+NORTE lP2Hab16
+SUR   lP2Hab16
+ESTE  lP2Hab17
+OESTE lP2Hab16
+NORESTE lP2Hab17
+NOROESTE lP2Hab17
+SURESTE lP2Hab17
+SUROESTE lP2Hab17
+SUBIR lP2Hab15
+BAJAR lP2Hab18
 /46
+NORTE lP2Hab17
+SUR   lP2Hab17
+ESTE  lP2Hab16
+OESTE lP2Hab18
+NORESTE lP2Hab19
+NOROESTE lP2Hab16
+SURESTE lP2Hab17
+SUROESTE lP2Hab16
+SUBIR lP2Hab18
+BAJAR lP2Hab18
 /47
+NORTE lP2Hab18
+SUR   lP2Hab19
+ESTE  lP2Hab16
+OESTE lP2Hab17
+NORESTE lP2Hab18
+NOROESTE lP2Hab18
+SURESTE lP2Hab16
+SUROESTE lP2Hab18
+SUBIR lP2Hab17
+BAJAR lP2Hab19
 /48
-
+NORTE lP2Hab21
+SUR   lP2VariasSalidas
+ESTE  lP2Hab20
+OESTE lP2Hab20
+SUBIR lP2Hab20
+BAJAR lP2Hab20
+/49
+NORTE lP2Hab21
+SUR   lP2Hab22
+ESTE  lP2Hab21
+OESTE lP2Hab21
+SUBIR lP2Hab21
+BAJAR lP2Hab20
+/50
+NORTE lP2Hab21
+SUR   lP2Hab22
+ESTE  lP2Hab23
+OESTE lP2Hab22
+SUBIR lP2Hab22
+BAJAR lP2Hab22
+/51
+NORTE lP2Hab23
+SUR   lP2Hab23
+ESTE  lP2Hab22
+OESTE lP2Hab24
+SUBIR lP2Hab23
+BAJAR  lP2Hab23
+/52
+NORTE lP2Hab24
+SUR   lP2Hab23
+ESTE  lP2Hab24
+OESTE lP2Hab24
+SUBIR lP2Hab24
+BAJAR lP2Maquina
+/53
+NORTE lP2Maquina
+SUR   lP2Maquina
+ESTE  lP2Maquina
+OESTE lP2Maquina
+SUBIR lP2Hab24
+BAJAR lP2Maquina
+/54
+/55
+/56
+/57
+/58
+/59
+/60
+/61
+/62
+/63
+/64
+/65
+/66
+SUBIR lP2DensoVapor
+SUROESTE lP2HabSecreta
+NORTE 0
+/67
+SUR   lP2Trono
+NORTE lP2SalaAcustica
+BAJAR  lP2HabQues
+/68
+SUR   lP2PsajeInclinado
+OESTE lP2Mirador
+/69
+ESTE  lP2SalaAcustica
+/70
+/71
+/72
+/73
+/74
+/75
+/76
+/77
+SUR   lP2HabQues
+BAJAR  lP2InclCor
+/78
+SUBIR lP2HabMarina
+BAJAR  lP2FinalCor
+/79
+SUBIR lP2InclCor
+/80
+/81
+OESTE lP2Hab54
+NORESTE lP2Trono
+BAJAR  lP2DosFos
+/82
+ESTE  lP2HabSecreta
+NORTE 0
+/83
+SUR   lP2Hab54
+NORTE lP2LagSubte
+BAJAR  lP2HabOlien
+/84
+SUR   lP2GalAlta
+/85
+/86
+/87
+/88
+NOROESTE lP2HabOlien
+ESTE  lP2HabBlanda
+OESTE lP2DosFosos
+SUR   lP2Hab16
+NORTE lP2HabMarina
+SUBIR lP2PsajeInclinado
+/89
+/90
+/91
+/92
+SUBIR lP2DosFos
+/93
+SUBIR lP2DosFosos
+/94
+BAJAR  lP2FondPozoOes
+ESTE  lP2DosFosos
+SUBIR lP2HabSecreta
+/95
+BAJAR  lP2DepoFosoEst
+ESTE  lP2HabQues
+OESTE lP2DosFos
+/96
+OESTE lP2HabQues
+/97
+/98
+NORESTE lP2Alcoba
+SURESTE lP2HabQues
+SUROESTE lP2EncimaCornisa
+SUBIR lP2GalAlta
+/99
+/100
+SUROESTE lP2HabOlien
+ESTE  0
+/101
+NORTE lP2HabNegra
+ENTRO lP2HabNegra
+OESTE 0
+/102
+SUR   lP2EncimaCornisa
+NORESTE 0
+NORTE 0
+/103
+ESTE  lP2HabParedesCal
+SUR   0
+SUROESTE 0
+/104
+NORTE lP2AbismoSO
+SUR   lP2HabOlien
+/105
+SUR   lP2HabMagica
+SALIR lP2HabMagica
+/106
+BAJAR  lP2FondPozoOes
+ENTRAR 0
+/107
+/108
+/109
+/110
+/111
+/112
+BAJAR  lP2HumPasadInc
+OESTE lP2AbismoNe
+/113
+/114
+/115
+/116
+SUBIR lP2HabParedesCal
+ENTRO 0
+/117
+ESTE  lP2HumPasadInc
+SALIR lP2HumPasadInc
+/118
+BAJAR  lP2EncimaCornisa
+/119
+/120
+/121
+/122
+/123
+/124
+/125
 
 /OBJ
 ;obj	loc		peso	nombre		adj.	atributo
@@ -1697,7 +2508,28 @@ ESTE  lBosqueCer
 /3	lCanon 		1	BOTELLA		_	ATTR aFemale aFull
 /4	NOTCREATED	1	LLAVE		_	ATTR aFemale				;lRamas
 /5	lColina		1	PILAS		_	ATTR aFemale
-/6	lEspiral	1	ZAPATOS		_	ATTR aFemale aWear aPluralName	;pareja de botas
+/6	lEspiral	1	ZAPATOS		_	ATTR aFemale aWear			;pareja de botas
+/7	lP2PasadizoBajo	1 	JAULA  		_ 	ATTR aFemale
+/8 	lP2CaminoGuijarros 1 	VARITA 		_ 	ATTR aFemale
+/9 	NOTCREATED 	1 	BOTELLA		_ 	ATTR aFemale
+/10 	lP2Hab54 	1 	HUESO 		_ 	ATTR aMale
+/11 	lP2HabBlanda 	1 	ALMOHADA 	_ 	ATTR aFemale
+/12 	NOTCREATED 	1 	HACHA 		_ 	ATTR aMale
+/13 	lP2PasadizoBajo	1 	PIEDRA 		_ 	ATTR aMale 		; Masculino El canto Rodado
+/14 	NOTCREATED 	1 	PEPITA 		_ 	ATTR aFemale
+/15 	lP2PuenteMagico 1 	DIAMANTE 	_ 	ATTR aTesoro
+/16 	lP2PsajeInclinado 1 	TITANIO 	_ 	ATTR aTesoro
+/17 	NOTCREATED 	1 	JOYA  		_ 	ATTR aFemale aTesoro
+/18 	lP2FondPozoOes 	1 	ESPECIAS 	_ 	ATTR aTesoro
+/19 	NOTCREATED 	1 	ALFOMBRA 	_ 	ATTR aFemale aTesoro
+/20 	lP2MagnLago 	1 	TRIDENTE 	_ 	ATTR aTesoro
+/21 	NOTCREATED 	1 	PERLA 		_ 	ATTR aFemale aTesoro
+/22 	NOTCREATED 	1 	HUEVO 		_ 	ATTR aTesoro 				;lP2EscudoGigante
+/23 	NOTCREATED 	1 	CADENA 		_ 	ATTR aFemale aTesoro
+/24 	lP2HabNegra 	1 	PIRAMIDE 	_ 	ATTR aFemale aTesoro
+/25 	lP2Alcoba 	1 	ESMERALDA 	_ 	ATTR aFemale aTesoro
+/26 	lP2HabOlien 	1 	JARRON 		_ 	ATTR aTesoro
+/27 	lP2Hab19 	1 	GARFIO 		_	ATTR aTesoro
 
 ; Importante: Recuerda que si creas un objeto contenedor o soporte, debes dejar sin usar la localidad de igual número
 /PRO 0
@@ -1740,6 +2572,12 @@ DEJAR TODO
  OBJAT 254 13
  ZERO 13  ; no llevas nada en el inventario
  WRITELN "No llevas nada."
+ DONE
+
+DEJAR TODO 
+ AT    lPicnic 
+ PROCESS 13
+ WRITELN "¿No sabes leer? ¡Un enanito desaparece con lo dejado!"
  DONE
 
 DEJAR        TODO
@@ -2144,30 +2982,37 @@ AD    _
 SUR   _
  AT      lCanon 
  PROCESS 7 
+ DONE
 
 SUR   _
  AT      lPrecipicio
  PROCESS 7 
+ DONE
 
 SUR   _
  AT      lRamas 
  PROCESS 8 
+ DONE
 
 SUR   _
  AT      lEspiral 
  PROCESS 7 
+ DONE
 
 ESTE  _
  AT      lPrecipicio
  PROCESS 7 
+ DONE
 
 ESTE  _
  AT      lRamas 
  PROCESS 8 
+ DONE
 
 OESTE _
  AT      lRamas 
  PROCESS 8 
+ DONE
 
 SUBIR _
  AT      lPozo 
@@ -2187,19 +3032,22 @@ BAJAR  _
  AT      lHabGuarra 
  GOTO    lPozo 
  SET     0 	; Está oscuro
- DESC    
+ DESC  
 
 BAJAR  _
  AT      lLava 
  PROCESS 6 
+ DONE
 
 BAJAR  _
  AT      lCanon 
  PROCESS 7 
+ DONE
 
 BAJAR  _
  AT      lPrecipicio
  PROCESS 7 
+ DONE
 
 ENTRAR _
  AT      lReja 
@@ -2245,10 +3093,270 @@ ENTRAR _
 NORTE _
  AT      lLava 
  PROCESS 6 
+ DONE
 
 NORTE _
  AT      lRamas 
  PROCESS 8 
+ DONE
+
+;-----------2ª parte----------------
+
+SUR   _
+ AT      lP2AbismoNe 
+ LET     33 _voc_CRUZAR 
+
+SUR   _
+ AT      lP2HabNegra 
+ CLEAR   0 
+ GOTO    lP2HabMagica 
+ DESC    
+
+ESTE  _
+ AT      lP2Alcoba 
+ EQ      1 1 
+ CARRIED oPiramide 
+ CLEAR   0 
+ GOTO    lP2HabMagica 
+ DESC    
+
+ESTE  _
+ AT      lP2Alcoba 
+ ZERO    1 
+ CLEAR   0 
+ GOTO    lP2HabMagica 
+ DESC    
+
+ESTE  _
+ AT      lP2Alcoba 
+ WRITELN "¡Algo te impide pasar!" 
+ DONE    
+
+ESTE  _
+ AT      lP2PasadizoBajo 
+ CLEAR   0 
+ GOTO    lP2Hab03 
+ DESC    
+
+OESTE _
+ AT      lP2DensoVapor 
+ PRESENT oPepita 
+ NOTCARR oPepita 
+ DESTROY oPepita 
+ CLEAR   fPepita 
+ CLEAR   fHayNiebla 
+
+OESTE _
+ AT      lP2DensoVapor 
+ ZERO    fPuente 
+ CLEAR   fLocFisuraIzda 
+ GOTO    lP2AnchaFisura 
+ DESC    
+
+OESTE _
+ AT      lP2AnchaFisura 
+ ZERO    fLocFisuraIzda 
+ PROCESS 22 ; Era Process 9 
+ DONE
+
+ESTE  _
+ AT      lP2AnchaFisura 
+ NOTZERO fLocFisuraIzda 
+ PROCESS 22 ; Era Process 9
+ DONE
+
+ESTE  _
+ AT      lP2VariasSalidas 
+ ZERO    fPuente 
+ SET     fLocFisuraIzda 
+ GOTO    lP2AnchaFisura 
+ DESC    
+
+SALIR _
+ AT      lP2Hab03 
+ NOTZERO fEntradaAbierta ; Flag 152 ¿de triunfo?
+ CLEAR   fElfito2Phasalido
+ ;WINDOW  7 
+ CLS     
+ ;WINDOW  5 
+ ;PRINTAT 4 0 
+ WRITELN "\1<div style='padding:0; text-align:center; color:#ff3333'>¡Bien hecho!</div>"
+ WRITELN "\1<div style='text-align:center'>Todos los habitantes del valle han venido a admirar al nuevo: MAESTRO AVENTURERO</div>"
+ WRITELN "\1<div style='text-align:center'>A tus pies aparecen todos los tesoros conquistados.</div>"
+ WRITELN "\1<div style='text-align:center'>El equipo A.D. te invita a participar en su próxima aventura.</div>" 
+ WRITELN "\1<div style='text-align:center'>{RESTART|¿Juegas de nuevo?}</div>"
+ COMMAND 0
+ TIME    0 0
+ DONE     
+
+SALIR _
+ AT      lP2Hab03 
+ WRITELN "¡Algo te impide pasar!" 
+ DONE    
+
+SALIR _
+ AT      lP2HabNegra 
+ CLEAR   0 
+ GOTO    lP2HabMagica 
+ DESC    
+
+OESTE _
+ AT      lP2HabMagica 
+ EQ      1 1 
+ CARRIED oPiramide 
+ GOTO    lP2Alcoba 
+ PROCESS 26
+ DESC    
+
+OESTE _
+ AT      lP2HabMagica 
+ ZERO    1 
+ GOTO    lP2Alcoba 
+ PROCESS 26
+ DESC    
+
+OESTE _
+ AT      lP2HabMagica 
+ WRITELN "¡Algo te impide pasar!" 
+ DONE    
+
+OESTE _
+ AT      lP2Hab03 
+ CARRIED oLinterna
+ OZERO   oLinterna aOn 
+ SET     0 
+
+OESTE _
+ AT      lP2Hab03 
+ NOTCARR oLinterna
+ SET     0 
+
+OESTE _
+ AT      lP2Hab03 
+ GOTO    lP2PasadizoBajo 
+ DESC    
+
+NORESTE _
+ AT      lP2AbismoSO 
+ LET     33 _voc_CRUZAR 
+ LET     34 _voc_PUENTE 
+
+SUROESTE _
+ AT      lP2Trono 
+ GT      fSerpiente 8 
+ GOTO    lP2HabSecreta 
+ DESC    
+
+SUROESTE _
+ AT      lP2Trono 
+ WRITELN "El reptil te marca sus colmillos en el cuello, y se marcha." 
+ LET     fSerpiente 9 
+ DONE    
+
+SUROESTE _
+ AT      lP2AbismoNe 
+ LET     33 _voc_CRUZAR 
+ LET     34 _voc_PUENTE 
+
+SUBIR _
+ AT      lP2DensoVapor 
+ PRESENT oPepita 
+ NOTCARR oPepita 
+ DESTROY oPepita 
+ CLEAR   fPepita 
+ CLEAR   fHayNiebla 
+ NOTDONE 
+
+BAJAR  _
+ AT      lP2DensoVapor 
+ PRESENT oPepita 
+ NOTCARR oPepita 
+ DESTROY oPepita 
+ CLEAR   fPepita 
+ CLEAR   fHayNiebla 
+ NOTDONE 
+
+TREPAR TRONCO 
+ AT      lP2FondPozoOes 
+ GT      fJudias 1 
+ GOTO    lP2EscudoGigante 
+ DESC    
+
+TREPAR TRONCO 
+ AT      lP2FondPozoOes 
+ WRITELN "¡Hala! con tus patazas has roto la tierna plantita." 
+ CLEAR   fJudias 
+ DONE    
+
+ENTRAR _
+ AT      lP2HabMagica 
+ SET     0 
+ GOTO    lP2HabNegra 
+ DESC    
+
+ENTRAR _
+ AT      lP2EscudoGigante 
+ EQ      fPuerta 255 
+ GOTO    lP2MagnLago 
+ DESC    
+
+ENTRAR _
+ AT      lP2EscudoGigante 
+ EQ      fPuerta 1 
+ WRITELN "La puerta está cerrada." 
+ DONE    
+
+ENTRAR _
+ AT      lP2EscudoGigante 
+ WRITELN "Uff. Empujas la puerta pero no cede." 
+ DONE    
+
+ENTRAR _
+ AT      lP2HumPasadInc 
+ NOTZERO fJaula 
+ GOTO    lP2ApestosaJaula 
+ DESC    
+
+ENTRAR _
+ AT      lP2HumPasadInc 
+ WRITELN "No puedes entrar. La jaula está cerrada." 
+ DONE    
+
+NORTE _
+ AT      lP2Trono 
+ GT      fSerpiente 8 
+ GOTO    lP2PsajeInclinado 
+ DESC    
+
+NORTE _
+ AT      lP2Trono 
+ WRITELN "El reptil te marca sus colmillos en el cuello, y se marcha." 
+ LET     fSerpiente 9 
+ DONE    
+
+NORTE _
+ AT      lP2Hab54 
+ EQ      fDragon 255 
+ GOTO    lP2GalAlta 
+ DESC    
+
+NORTE _
+ AT      lP2Hab54 
+ WRITELN "¡Algo te impide pasar!" 
+ DONE    
+
+NORTE _
+ AT      lP2HabMagica 
+ GOTO    lP2HabNegra 
+ PROCESS 26
+ DESC    
+
+NORTE _
+ AT      lP2AbismoSO 
+ LET     33 _voc_CRUZAR 
+ LET     34 _voc_PUENTE 
+
+;-----------_____-------------
 
 OIR   _
  AT      lBoscillo 
@@ -2256,52 +3364,66 @@ OIR   _
  DONE    
 
 OIR   _
+ AT      lP2SalaAcustica 
+ WRITELN "El eco susurra: RECOLECTOR" 
+ DONE
+
+OIR   _
  WRITELN "Si en vez de escuchar tanto, teclearas más, oirías: «Clik, Clak, Clok»."
+ DONE    
+
+AYUDA _ ; Debería responder con la AYUDA para la 2ª parte
+ ATGT lP2Hab02
+ PROCESS 24 ; COMPROBAR Era Process 5 en la 2ª parte 
  DONE    
 
 AYUDA _
  PROCESS 3 
  DONE    
 
+;-------------- 2ª parte ------------
+MATAR SERPIENTE
+ AT      lP2Trono 
+ LT      fSerpiente 9 
+ WRITELN "El reptil te marca sus colmillos en el cuello y se marcha." 
+ ANYKEY  
+ WRITELN "El veneno te ha matado." 
+ ANYKEY  
+ CLEAR   0 
+ GOTO    lP2NoHasLogrado 
+ DESC    
+
+ASUSTAR DRAGON
+ AT      lP2Hab54 
+ LT      fDragon 255 
+ LET 33 _voc_MATAR
+
+MATAR DRAGON
+ AT      lP2Hab54 
+ LT      fDragon 255 
+ SET     fDragon 
+ WRITELN "Asustado por tu valentía, el cobardica vuelve llorando a su casa en el Hobbit." 
+ PLACE   oAlfombra lP2Hab54 
+ DONE    
+
+MATAR ENANO
+ EQ      fEnano2P 2 
+ WRITELN "¡El enano se las sabe todas!" 
+ DONE    
+
+MATAR TROLL
+ ATGT    lP2HabMagica 
+ ATLT    lP2EncimaCornisa 
+ ZERO    fTroll 
+ WRITELN "El invencible Troll Chulangas te da una patada." 
+ PROCESS 22 		; COMPROBAR Era PROCESS 9 en la 2ª parte
+ DONE
+
+;------------------------------------
 MATAR  _
  ;MESSAGE 28 
  WRITELN "¿Te parece forma de solucionar las cosas?"
  NOTDONE 
-
-;SAVE  RAM  
-; RAMSAVE 
-; DESC    
-
-;SAVE  _
-; SAVE    
-; DESC    
-
-;LOAD  _
-; COMPROBAR
-; NOTEQ   34 99 
-; GT      29 127 
-; LOAD    
-; LT      29 128 
-; PLUS    29 128 
-
-;LOAD  _
-; COMPROBAR
-; NOTEQ   34 99 
-; LT      29 128 
-; LOAD    
-; GT      29 127 
-; MINUS   29 128 
-
-;LOAD  RAM  
-; RAMLOAD 248 
-
-;LOAD  _
-; NOTEQ   34 99 
-; DONE    
-
-;SAVE  _
-; CLS     
-; DESC    
 
 EMPUJAR ENANO
  AT      lLava 
@@ -2404,6 +3526,14 @@ PEGAR ENANO
  PROCESS 11 
  DONE    
 
+COGER NOTA
+ LET     34 _voc_LETRERO
+
+COGER LETRERO
+ AT      lPicnic 
+ WRITELN "No te va a servir de nada llevártelo así que lo dejas donde está."
+ DONE 
+
 COGER  MONED
  AT      lPozo 
  PRESENT oMoneda 
@@ -2473,126 +3603,264 @@ GOLPEAR CANDADO
  WRITELN "No consigues más que hacerte daño. Cabeza de chorlito."
  DONE
 
-SOLTAR TODO 
- AT      lPicnic 
- ZERO    1 
- ;MESSAGE 100 
- WRITELN "No tienes nada."
- NEWLINE 
- DONE    
-
-SOLTAR TODO 
- AT      lPicnic 
- GOTO    lHabGuarra 
- DROPALL 
- GOTO    lPicnic 
- ;MESSAGE 52 
- WRITELN "¿No sabes leer? ¡Un enanito desaparece con lo dejado!"
- DONE    
-
 ;SOLTAR TODO 
-; DOALL   254 
+; AT      lPicnic 
+; ZERO    1 
+; ;MESSAGE 100 
+; WRITELN "No tienes nada."
+; NEWLINE 
+; DONE    
 
 SOLTAR _
  AT      lPicnic 
- GOTO    lHabGuarra 
- WHATO   
- LT      51 255 ; COMPROBAR flag 51
- EQ      54 254 ; COMPROBAR flag 54
- COPYFF  55 38 ; COMPROBAR flag 55, 38
- AUTOD   
- PAUSE   50 
- ;MESSAGE 52 
+ WRITELN "Dejas {OREF}" 
  WRITELN "¿No sabes leer? ¡Un enanito desaparece con lo dejado!"
- GOTO    lPicnic 
- DONE    
+ PUTO    lHabGuarra
+ DONE      
 
 SOLTAR _
  AT      lRamas 
- WHATO   
  LT      51 255 
- EQ      54 254 
- ;MESSAGE 24 
- WRITELN "¡{OREF} ha caído al suelo!"
+ CARRIED @51
+ WRITELN "¡Anda, {OREF} ha caído al suelo!"
  PUTO    lBosqueProf
  DONE    
-
-;SOLTAR _
-; AUTOD   
-; DONE    
-
-SALTAR _
- AT      lPrecipicio
- PROCESS 7 
 
 SALTAR _
  AT      lLava 
  PROCESS 6 
+ DONE
 
 SALTAR _
- AT      lRamas 
- PROCESS 8 
+ AT      lPrecipicio
+ PROCESS 7 
+ DONE
 
 SALTAR _
  AT      lCanon 
  PROCESS 7 
-
-SALTAR _
- WRITELN "Nunca te lo habías pasado bien haciendo el tonto. Venga, déjate ya de perder el tiempo."      
  DONE
 
-CONECTAR LINTERNA 
- CARRIED oLinterna 
- NOTZERO fLintPilas ; flag 11
- AT      lPozo 
- OZERO oLinterna aOn
- OSET oLinterna aOn
- WRITELN "Enciendes la linterna que ilumina el lugar."
+SALTAR _
+ AT      lEspiral 
+ PROCESS 7 
+ DONE
+
+SALTAR _
+ AT      lRamas 
+ PROCESS 8 
+ DONE
+
+SALTAR  _
+ AT      lP2MagnLago 
+ WRITELN "¡¡Argggh!! ¡Te has ahogado!" 
  CLEAR   0 
+ GOTO    lP2NoHasLogrado 
+ ANYKEY  
+ DESC    
+
+SALTAR  _
+ AT      lP2LagSubte 
+ WRITELN "¡¡Arggg!! ¡Te has ahogado!" 
+ CLEAR   0 
+ GOTO    lP2NoHasLogrado 
+ ANYKEY  
  DESC    
 
 CONECTAR LINTERNA
- CARRIED oLinterna 
- NOTZERO fLintPilas 
- OZERO oLinterna aOn
+ NOTCARR oLinterna 
+ WRITELN "No tienes la linterna."
+ DONE 
+
+CONECTAR LINTERNA
+ ;CARRIED oLinterna 
+ ZERO    fLintPilas 
+ WRITELN "No tiene pilas."
+ DONE 
+
+CONECTAR LINTERNA ; COMPROBAR
+ LT      8 3 ; Flag 8 linterna se apaga
+ NOTZERO 8
+ WRITELN "La linterna va mal. La luz parpadea."
+ NOTDONE 
+
+CONECTAR LINTERNA 
+ ONOTZERO oLinterna aOn
+ WRITELN "Ya está encendida."
+ DONE
+
+CONECTAR LINTERNA 
+ ;CARRIED oLinterna 
+ ;NOTZERO fLintPilas ; flag 11
+ AT      lPozo 
+ ;OZERO oLinterna aOn
+ OSET oLinterna aOn
+ WRITELN "Enciendes la linterna que ilumina el lugar."
+ CLEAR   0 
+ PAUSE 50
+ DESC    
+
+CONECTAR LINTERNA 
+ NOTAT   lP2Hab91
+ NOTAT   lP2HabMagica 
+ ATGT    lP2Hab03
+ ;CARRIED oLinterna 
+ ;OZERO oLinterna aOn
+ OSET oLinterna aOn
+ WRITELN "Enciendes la linterna iluminándolo todo."
+ CLEAR   0 
+ PAUSE 50
+ DESC 
+
+CONECTAR LINTERNA
+ ;CARRIED oLinterna 
+ ;NOTZERO fLintPilas 
+ ;OZERO oLinterna aOn
  OSET oLinterna aOn
  ;SWAP    2 0 
  CLEAR   0 	
  WRITELN "Enciendes la linterna."
  DONE
+   
+DESCONECTAR LINTERNA
+ NOTCARR oLinterna 
+ WRITELN "No tienes la linterna."
+ DONE 
 
-CONECTAR LINTERNA
- CARRIED oLinterna 
- ZERO    fLintPilas 
- WRITELN "No tiene pilas."
- DONE    
+
+DESCONECTAR LINTERNA 
+ OZERO oLinterna aOn
+ WRITELN "Ya está apagada."
+ DONE
 
 DESCONECTAR LINTERNA
- CARRIED oLinterna ; apagada
+ ;CARRIED oLinterna ; apagada
  AT      lPozo 
- ONOTZERO oLinterna aOn
+ ;ONOTZERO oLinterna aOn
  OCLEAR oLinterna aOn
  SET     0  
  WRITELN "Apagas la linterna y la oscuridad se apodera del lugar."
- PAUSE 5
+ PAUSE 50
  DESC    
 
 DESCONECTAR LINTERNA
- CARRIED oLinterna ; apagada
- ONOTZERO oLinterna aOn
+ NOTAT   lP2Hab91
+ NOTAT   lP2HabMagica 
+ ATGT    lP2Hab03
+ ;CARRIED oLinterna 
+ ;ONOTZERO oLinterna aOn
+ OCLEAR oLinterna aOn
+ SET   0 
+ WRITELN "Apagas la linterna. Todo queda a oscuras."
+ PAUSE 50
+ DESC 
+
+DESCONECTAR LINTERNA
+ ;CARRIED oLinterna ; apagada
+ ;ONOTZERO oLinterna aOn
  OCLEAR oLinterna aOn
  ;SWAP    0 2 
  WRITELN "Apagas la linterna."
  DONE
 
 ESPERAR _
+ ATGT    lP2Hab03
+ WRITELN "Como quieras pero yo no estaría mucho tiempo sin hacer nada aquí dentro."
+ DONE    
+
+ESPERAR _
  ; redundante pero da otro mensaje
  MESSAGE 36 
  DONE    
 
+EXAMINAR LETRERO
+LET 33 _voc_LEER
+
 LEER LETRERO
+ AT      lPicnic
+ LET 	 34 _voc_TEXTO
+
+EXAMINAR PARED
+ ATGT    lP2Hab02
+ LET     33 _voc_LEER
+
+LEER PARED
+ ATGT    lP2Hab02
+ LET     34 _voc_TEXTO
+
+LEER NOTA
+ LET     34 _voc_TEXTO
+
+LEER GRABADO
+ AT      lP2SalaAcustica
+ LET     34 _voc_TEXTO
+
+LEER PILAR
+ AT      lP2SalaAcustica
+ LET     34 _voc_TEXTO
+
+LEER TEXTO
+ ATGT lP2Hab02
+ ;LET     33 _voc_EXAMINAR
+ PROCESS 25 
+ DONE    
+
+LEER TEXTO
  PROCESS 4 
  DONE    
+
+LEER _
+ EQ 34 255
+ AT lPicnic
+ LET 34 _voc_TEXTO
+ PROCESS 4
+ DONE
+
+LEER _
+ AT lPicnic
+ WRITELN "¿Intentas leer el letrero?"
+ DONE
+
+;----------------------------------------------
+; Movido de las respuestas por defecto 
+;  porque no se detectaba
+;----------------------------------------------
+
+LEER _                        ; No hay nombre en la frase
+ EQ 34 255
+ BNOTZERO 12 1
+ WRITELN "No puedes leer eso que dices."
+ DONE
+
+LEER _                        ; No hay nombre en la frase
+ EQ 34 255
+ BZERO 12 1
+ WRITELN "Por favor, especifica qué quieres leer."
+ DONE
+ 
+LEER _                        ; Hay nombre pero no es un objeto
+ NOTEQ 34 255
+ EQ 51 255
+ WRITELN "No le ves sentido a leer eso."
+ DONE
+
+LEER _                        ; Es un objeto presente
+ NOTEQ 51 255
+ PRESENT @51
+ WRITELN "No puedes leer {OREF}."
+ DONE
+
+LEER _                        ; Es un objeto ausente
+ NOTEQ 51 255
+ ABSENT @51
+ WRITELN "No ves {OREF} por aquí."
+ DONE
+
+
+EXAMINAR _ ; COMPROBAR examinar a 2ª parte
+ ATGT lP2Hab02
+ PROCESS 25 ; COMPROBAR Era PROCESS 4 en la 2ª parte
+ DONE  
 
 EXAMINAR _
  PROCESS 4 
@@ -2619,88 +3887,160 @@ OLER AIRE
  DONE   
 
 VACIAR BOTELLA
- CARRIED oBotella
- OZERO oBotella aFull
- WRITELN "Ya está vacía."
+ CARRIED  oBotella
+ OZERO    oBotella aFull
+ WRITELN  "Ya está vacía."
  DONE
+
+VACIO _
+ CARRIED  oBotella
+ ONOTZERO oBotella aFull 
+ EQ       34 94 
+ LET      34 _voc_BOTELLA 
+
+VACIO BOTELLA
+ CARRIED  oBotella
+ ONOTZERO oBotella aFull
+ NOTAT    lP2FondPozoOes 
+ ;SWAP    4 5 
+ OCLEAR   oBotella aFull
+ OK      
+
+VACIO BOTELLA
+ CARRIED oBoteAceite 
+ NOTAT   lP2FondPozoOes 
+ NOTAT   lP2EscudoGigante 
+ SWAP    oBoteAceite oBotella
+ OCLEAR  oBotella aFull
+ WRITELN "Derramas el aceite que deja una mancha en el suelo."
+ DONE      
+
+VACIO BOTELLA
+ AT       lP2FondPozoOes 
+ NOTCARR  oBotella ; COMPROBAR : llena
+ ; ONOTZERO oBotella aFull ; Debería bastar comprobar que no llevas ninguna de las dos botellas
+ NOTCARR  oBoteAceite 
+ WRITELN  "No puedes hacerlo." 
+ DONE    
+
+VACIO BOTELLA
+ AT      lP2FondPozoOes 
+ LET     33 _voc_REGAR 
+ LET     34 _voc_BROTE
+
+VACIO BOTELLA
+ AT      lP2EscudoGigante 
+ LET     33 _voc_ACEITAR 
+ LET     34 _voc_PUERTA     
 
 VACIAR BOTELLA
  CARRIED oBotella 
- OCLEAR oBotella aFull
- ;SWAP    5 4 
+ OCLEAR  oBotella aFull
  WRITELN "Derramas el agua que hay en ella hasta que no queda nada."
  DONE
 
 LLENAR BOTELLA
- CARRIED oBotella
+ CARRIED  oBoteAceite
+ WRITELN  "Está llena de aceite y no cabe nada más."
+ DONE
+
+LLENAR BOTELLA
+ CARRIED  oBotella
  ONOTZERO oBotella aFull
- WRITELN "No cabe más agua ya."
+ WRITELN  "No cabe más agua ya."
  DONE
 
 LLENAR BOTELLA
  AT      lFrontera 
  CARRIED oBotella 
- OSET oBotella aFull
+ OSET    oBotella aFull
  WRITELN "Casi sin esfuerzo, llenas la botella de agua."
  DONE
 
 LLENAR BOTELLA
  AT      lBoscillo 
  CARRIED oBotella 
- OSET oBotella aFull
+ OSET    oBotella aFull
  WRITELN "No te resulta demasiado difícil llenarla de agua."
  DONE
 
 LLENAR BOTELLA
  AT      lValle 
  CARRIED oBotella 
- OSET oBotella aFull
+ OSET    oBotella aFull
  WRITELN "Genial. Ya está llena de agua."
  DONE      
 
 LLENAR BOTELLA
  AT      lValleProf 
  CARRIED oBotella 
- OSET oBotella aFull
+ OSET    oBotella aFull
  WRITELN "Mmm... a ver... listo. Botella llena."
  DONE      
 
 LLENAR BOTELLA
- CARRIED oBotella 
- WRITELN "No puedes llenarla si no hay agua cerca."
+ AT      	lP2MagnLago 
+ CARRIED 	oBotella ; COMPROBAR : Vacía
+ OSET    	oBotella aFull
+ WRITELN 	"Llenas la botella de agua espectacularmente cristalina."
+ DONE      
+
+LLENAR BOTELLA
+ AT 		lP2Mirador 
+ CARRIED 	oBotella ; COMPROBAR : Vacía
+ OSET 		oBotella aFull
+ WRITELN 	"Llenas la botella. Crees que irá bien."
+ DONE      
+
+LLENAR BOTELLA
+ AT      	lP2LagSubte 
+ CARRIED 	oBotella ; COMPROBAR : Vacía
+ OSET    	oBotella aFull
+ WRITELN 	"Botella llena. Perfecto."
+ DONE      
+
+LLENAR BOTELLA
+ AT 		lP2DepoFosoEst 
+ CARRIED 	oBotella ; COMPROBAR : Vacía
+ OSET 		oBotella aFull
+ SWAP 		oBotella oBoteAceite
+ WRITELN 	"No sin cierta dificultad, llenas la botella de aceite, quedando un poco pringosa."
+ DONE
+
+LLENAR BOTELLA
+ CARRIED 	oBotella 
+ WRITELN 	"De qué quieres llenarla. No hay nada por aquí."
  DONE      
 
 COMER TORTI
- CARRIED oTortilla
- DESTROY oTortilla
- MESSAGE 4 
- LET     5 4 ; COMPROBAR flag 5
+ CARRIED 	oTortilla
+ DESTROY 	oTortilla
+ WRITELN 	"¡La tortila está riquísima!"
+ LET 		5 4 ; COMPROBAR flag 5
  DONE    
 
 BEBER  RIO  ; COMPROBAR
- CARRIED oBotella
- OCLEAR oBotella aFull
- ;SWAP    5 4 ; COMPROBAR
- WRITELN "Pero qué sed tenías."    
+ CARRIED 	oBotella
+ OCLEAR 	oBotella aFull
+ WRITELN 	"Pero qué sed tenías."    
  DONE   
 
 COGER RAMAS
- AT      lRamas 
- WRITELN "Ya te estás agarrando a las ramas. Si no, ya hubieras caído."
+ AT 		lRamas 
+ WRITELN 	"Ya te estás agarrando a las ramas. Si no, ya hubieras caído."
  DONE
 
 MOVER RAMAS
- AT      lRamas 
- LET 33 _voc_SACUDIR
+ AT 		lRamas 
+ LET 		33 _voc_SACUDIR
 
 SACUDIR RAMAS
- AT      lRamas 
- LT      fLlave 2 ; flag 103
- LET     51 oLlave ; flag 51 = Último ebjeto referenciado. Era LET 51 6 (6 era llave)
- ;MESSAGE 24 
- WRITELN "¡La llave ha caído al suelo!"
- PLACE   oLlave lBosqueProf 
- SET     fLlave 
+ AT 		lRamas 
+ LT 		fLlave 2 ; flag 103
+ LET 		51 oLlave ; flag 51 = Último ebjeto referenciado. Era LET 51 6 (6 era llave)
+ WRITELN 	"¡La llave ha caído al suelo!"
+ PLACE   	oLlave lBosqueProf 
+ SET 		fLlave 
  DONE    
 
 SACUDIR RAMAS
@@ -2712,31 +4052,71 @@ PONER PILAS
  LET 33 _voc_METER
 
 METER PILAS
- LET 43 &&_voc_EN
- LET 44 &&_voc_LINTERNA
+ NOTAT   lP2Maquina 
+ LET     43 &&_voc_EN
+ LET     44 &&_voc_LINTERNA
 
 METER PILAS
  PREP A
  LET 43 _voc_EN
 
-METER PILAS
- PREP EN
- NOUN2 LINTERNA
- CARRIED oLinterna
- NOTZERO fLintPilas 
- WRITELN "La linterna ya tiene las pilas puestas."
+;----------- 2ª parte -----------
+METER MONEDA
+ AT      lP2Maquina 
+ NOTZERO fMaquina 
+ CARRIED oMoneda 
+ DESTROY oMoneda 
+ CLEAR   8 
+ WRITELN "¡CHUMM! ¡PUM! ¡BROOM! ¡PIFSSSS!"
+ WRITELN "¡¡¡ Pilas recargadas !!!" 
+ CREATE  oPila 
  DONE    
+
+METER MONEDA
+ AT      lP2Maquina 
+ CARRIED oMoneda 
+ DESTROY oMoneda 
+ SET     fMaquina 
+ OK      
+
+METER PILAS
+ NOUN2   MAQUINA
+ AT      lP2Maquina 
+ NOTZERO fMaquina 
+ CARRIED oPila 
+ CLEAR   8 
+ PLACE   oPila lP2Maquina 
+ WRITELN "¡CHUMM! ¡PUM! ¡BROOM! ¡PIFSSSS!"
+ WRITELN "¡¡¡ Pilas recargadas !!!" 
+ DONE    
+
+PONGO PILAS
+ NOUN2   MAQUINA
+ AT      lP2Maquina 
+ CARRIED oPila 
+ DESTROY oPila 
+ SET     fMaquina 
+ OK      
+
+PONGO PILAS
+ CARRIED oPila 
+ CARRIED oLinterna 
+ DESTROY oPila ; COMPROBAR ¿Es necesario? Ahora es un contenedor
+ SET     fLintPilas 
+ OK      
+
+PONGO PILAS
+ NOTCARR oPila 
+ DROP    oPila 
+ DONE    
+;----------------
 
 METER PILAS
  PREP EN
  NOUN2 LINTERNA
- CARRIED oPila
- CARRIED oLinterna
- DESTROY oPila
- SET     fLintPilas 
- WRITELN "Vale, linterna lista."
- ;MESSAGE 2 
- DONE    
+ NOTCARR oLinterna
+ WRITELN "No tienes la linterna... ¿Dónde está?"
+ DONE
 
 METER PILAS
  PREP EN
@@ -2748,34 +4128,71 @@ METER PILAS
 METER PILAS
  PREP EN
  NOUN2 LINTERNA
- NOTCARR oLinterna
- WRITELN "No tienes la linterna... ¿Dónde está?"
- DONE
+ NOTZERO fLintPilas 
+ WRITELN "La linterna ya tiene las pilas puestas."
+ DONE    
+
+METER PILAS
+ PREP EN
+ NOUN2 LINTERNA
+ ;CARRIED oPila
+ ;CARRIED oLinterna
+ DESTROY oPila
+ SET     fLintPilas 
+ WRITELN "Vale, linterna lista."
+ DONE    
+
 
 QUITAR PILAS
  LET 33 _voc_SACAR
- LET 43 &&_voc_DE
- LET 44 &&_voc_LINTERNA
 
 SACAR PILAS
- CARRIED oLinterna
- NOTZERO fLintPilas 
- GT      1 cMaxCosas ; Llevas más de cuatro cosas
- WRITELN "Ya no puedes llevar más trastos."
- DONE    
+ EQ      43 255 
+ NOTAT   lP2Maquina 
+ LET 43 _voc_DE
+ LET 44 _voc_LINTERNA
+
+SACAR PILAS
+ EQ      43 255 
+ AT     lP2Maquina 
+ LET 43 _voc_DE
+ LET 44 _voc_MAQUINA
+
+SACAR PILAS
+ PREP DE
+ NOUN2 LINTERNA
+ NOTCARR oLinterna
+ WRITELN "No tienes la linterna."
+ DONE 
 
 SACAR PILAS
  PREP DE
  NOUN2 LINTERNA
  ZERO fLintPilas
- CARRIED oLinterna
+ ;CARRIED oLinterna
  WRITELN "La linterna no tiene las pilas puestas."
+ DONE 
+
+SACAR PILAS
+ ATLT    lP2Hab02
+ ;CARRIED oLinterna
+ ;NOTZERO fLintPilas 
+ GT      1 cMaxCosas ; Llevas más de cuatro cosas
+ WRITELN "Ya no puedes llevar más trastos."
  DONE    
 
 SACAR PILAS
+ ATGT    lP2Hab02
+ ;CARRIED oLinterna
+ ;NOTZERO fLintPilas 
+ GT      1 cMaxCosas2P ; Llevas más de seis cosas
+ WRITELN "Ya no puedes llevar más trastos."
+ DONE    
+   
+SACAR PILAS
  PREP DE
  NOUN2 LINTERNA
- CARRIED oLinterna ; encendida
+ ;CARRIED oLinterna ; encendida
  OCLEAR oLinterna aOn
  AT      lPozo 
  SET     0
@@ -2787,33 +4204,41 @@ SACAR PILAS
 SACAR PILAS
  PREP DE
  NOUN2 LINTERNA
- CARRIED oLinterna
- NOTZERO fLintPilas 
- CLEAR   fLintPilas 
+ NOTAT   lP2Hab91 
+ NOTAT   lP2HabMagica 
+ ATGT    lP2Hab03
+ ;CARRIED oLinterna ; encendida
  OCLEAR oLinterna aOn
  CREATE  oPila
  GET     oPila
- OK      
-
-;SACO  PILAS
- ;Redundante
-; CARRIED oLinterna ; encendida
-; NOTZERO fLintPilas 
-; GT      1 cMaxCosas 
-; WRITELN "Ya no puedes llevar más trastos."
-; DONE    
+ CLEAR   fLintPilas 
+ SET     0
+ CLS
+ DESC    
 
 SACAR PILAS
  PREP DE
  NOUN2 LINTERNA
- CARRIED oLinterna ; encendida
- NOTZERO fLintPilas 
+ ;CARRIED oLinterna
+ ;NOTZERO fLintPilas 
+ CLEAR   fLintPilas 
  OCLEAR oLinterna aOn
- ;SWAP    0 2 
  CREATE  oPila
  GET     oPila
- CLEAR   fLintPilas 
- OK      
+ WRITELN "Sacas la pila y la linterna se apaga."
+ DONE      
+
+;SACAR PILAS
+; PREP DE
+; NOUN2 LINTERNA
+ ;CARRIED oLinterna ; encendida
+ ;NOTZERO fLintPilas 
+; OCLEAR oLinterna aOn
+ ;SWAP    0 2 
+; CREATE  oPila
+; GET     oPila
+; CLEAR   fLintPilas 
+; OK      
 
 SACAR CANDA
  PREP DE
@@ -2821,14 +4246,10 @@ SACAR CANDA
  AT      lReja 
  EQ      fCandado 1 
  LET     fCandado 2 
- ;MESSAGE 58 
  WRITELN "Al quitarlo... ¡desaparece de tus manos!"
- ;ANYKEY  
- DESC    
-
-;MIRAR _
- ; Redundante
-; DESC    
+ NEWLINE
+ ANYKEY  
+ DESC        
 
 SENTAR SILLA
  AT      lPicnic 
@@ -2844,55 +4265,53 @@ ROMPER BOTELLA
  LET     5 4 ; COMPROBAR ; flag 5 autodecrementa
  OK      
 
-SALTAR _
- AT      lLava 
- PROCESS 6 
-
-SALTAR _
- AT      lPrecipicio
- PROCESS 7 
-
-SALTAR _
- AT      lCanon 
- PROCESS 7 
-
-SALTAR _
- AT      lEspiral 
- PROCESS 7 
-
-;---------- COMPROBAR ------------
 PUTA  _
  NOTZERO fGrosero 
  CLEAR   fGrosero 
- MESSAGE 46 	; Ya te lo advertí
- PAUSE   200 
+ NEWLINE
+ WRITELN "Ya te lo advertí..."
+ NEWLINE
+ ANYKEY
  PROCESS 5 
+ DONE
 
 PUTA  _
  SET 	 fGrosero
- DROPALL 
- WRITELN "No hace falta decir groserías."
+ WRITELN "Te aconsejo que dejes de insultar."
+ NOTZERO 1
+ LET 33 _voc_DEJAR
+ DOALL  CARRIED
+ DONE
+
+PUTA  _
  DONE
 
 _ MIERDA
  NOTZERO fGrosero 
  CLEAR   fGrosero 
- MESSAGE 46 
- PAUSE   200 
+ NEWLINE
+ WRITELN "Ya te lo advertí..."
+ NEWLINE
+ ANYKEY
  PROCESS 5 
+ DONE
 
 _ MIERDA
- DROPALL 
  SET     fGrosero 
- WRITELN "No hace falta decir groserías."
- PAUSE   2 
+ WRITELN "Te aconsejo que dejes de decir groserías."
+ PAUSE   120
+ PROCESS 14
  GOTO    lFrontera 
- DESC    
-;---------------------------------
+ DESC
 
 RINDO _
- QUIT    
- PRINT  21 ; comprobar
+ COMMAND 0
+ WRITE   "Has jugado "
+ PRINT   31 
+ WRITELN " turnos."
+ NEWLINE
+ WRITELN "{RESTART|Volver a jugar}"
+ DONE
 
 RINDO _
  OK      
@@ -2902,6 +4321,12 @@ SALUDAR _
  LT      fEnano 255 
  WRITELN "El enano está muy cabreado para finuras y con malos modales intenta deshacerse de ti."
  DONE    
+
+_ ENANO  ;para que funcione "Enano «algo»"
+ AT      lLava 
+ LT      fEnano 255 
+ PROCESS 10 
+ DONE
 
 PREGUNTAR ENANO
  AT      lLava 
@@ -2986,19 +4411,6 @@ DAR ZAPATOS
  WRITELN "Don Enano se calza, y agradecido, te deja una linterna."
  DONE
 
-;SALID _
-; PROCESS 13 
-; DONE    
-
-;_ INVEN
-; NOTZERO 1 
-; SYSMESS 9 
-; LISTAT  254 
-; DONE    
-
-;_ INVEN
-; MESSAGE 100 
-
 _ LLAVE
  AT      lReja 
  EQ      33 255 
@@ -3024,31 +4436,862 @@ _ FIGURA
  PROCESS 9 
  DONE    
 
-;_ _
-; ; No sé qué hace esto. Mira el vebo, si es menor de 14. Redundante
-; LT      33 14 ; COMPROBAR flag 33
-; MOVE    38 ; COMPROBAR flag 38
+LIBERAR PAJARO
+  LET 33 _voc_SOLTAR
+
+SOLTAR PAJARO
+ LET     33 _voc_ABRIR 
+ LET     34 _voc_JAULA 
+
+
+TIRAR  JARRON
+ CARRIED oJarron 
+ DESTROY oJarron 
+ NEWLINE
+ WRITELN "El jarrón se ha roto en el suelo." 
+ DONE    
+
+
+;INVEN _
+; PROCESS 6 
+
+ESPERAR _
+ WRITELN "... tras un corto descansito sigues con lo tuyo." 
+ DONE    
+
+EMPUJAR _
+ AT      lP2Hab03 
+ WRITELN "¡Algo te impide pasar!" 
+ DONE    
+
+;DOY   LINTERNA
+;REDUNDANTE
+; PRESENT oLinterna 
+; PROCESS 20 
+; ABSENT  oLinterna 
+; ANYKEY  
 ; DESC    
 
-; Runtina AD de «no puedes ir al»
+;DOY   LINTERNA
+; PRESENT oLinterna ; COMPROBAR (Era encendida) No hace nada
+ ;ONOTZERO oLinterna aOn
+; DONE    
+
+DOY   _ 	; COMPROBAR Hemos dicho en la llamada que tiene que ser llevado
+ ATGT    	lP2HabMagica 
+ ATLT    	lP2EncimaCornisa 
+ NOTEQ 		51 255
+ NOTCARR 	@51
+ WRITELN 	"¡Si el peaje no quieres pagar, conmigo tendrás que luchar!" 
+ DONE    
+
+DOY   _
+ NOTEQ 		51 255
+ CARRIED 	@51
+ PROCESS 	20 
+ DONE    
+
+ABRO  BARROTES 
+ NOTAT   	lP2Trono 
+ CARRIED 	oJaula ; con pájaro
+ ONOTZERO 	oJaula aPajaro
+ OCLEAR 	oJaula aPajaro
+ WRITELN 	"El pajarito se escapa, cantando alegremente." 
+ CLEAR   	fPajaroVuelve 
+ DONE    
+
+ABRO  BARROTES 
+ LT      	fSerpiente 9 
+ CARRIED 	oJaula ; con pájaro
+ ONOTZERO 	oJaula aPajaro
+ OCLEAR 	oJaula aPajaro
+ WRITE  	"El pajarito se escapa, cantando alegremente. " 
+ CLEAR   	fPajaroVuelve 
+ WRITELN 	"Y al ver a la serpiente la ataca en los ojos y la hace huir despavorida." 
+ SET     	fSerpiente ; Serpiente presente
+ CREATE  	oJoya 
+ DONE    
+
+ABRO  BARROTES 
+ CARRIED 	oJaula ; con pájaro
+ ONOTZERO 	oJaula aPajaro
+ WRITELN 	"El veneno te ha matado." 
+ ANYKEY  
+ CLEAR   	0 
+ GOTO    	lP2NoHasLogrado 
+ DESC    
+
+ABRO  BARROTES 
+ AT      	lP2HumPasadInc 
+ CARRIED 	oLlave 
+ WRITELN 	"Abres la jaula que ahora tiene la reja abierta." 
+ SET     	fJaula ; flag jaula abierta
+ DONE    
+
+ABRO  BARROTES 
+ AT      	lP2HumPasadInc 
+ WRITELN 	"Necesitarás algo, ¿no?" 
+ DONE    
+
+ABRO  BARROTES 
+ CARRIED 	oJaula 
+ OZERO 		oJaula aPajaro
+ WRITELN 	"No hace falta. " 
+ DONE    
+
+ABRO  OSTRA
+ AT      	lP2HabMarina 
+ CARRIED 	oTridente 
+ ZERO    	fOstra 
+ WRITELN 	"Poco a poco las valvas del molusco se abren y con asombro descubres que... ¡es una ostra! Dentro hay una preciosa perla que por tu imprudencia cae y rueda por el pasillo. La ostra se cierra." 
+ PLACE   	oPerla lP2FinalCor 
+ SET     	fOstra 
+ DONE    
+
+ABRO  OSTRA
+ AT      	lP2HabMarina 
+ CARRIED 	oTridente 
+ WRITELN 	"Está cerrada para siempre. No hay más que hacer aquí." 
+ DONE    
+
+ABRO  OSTRA
+ AT      	lP2HabMarina 
+ WRITELN 	"¡Es demasiado fuerte para ti, forastero!"  
+ DONE    
+
+ABRO  PUERTA
+ AT      	lP2EscudoGigante 
+ EQ      	fPuerta 1 
+ SET     	fPuerta 
+ WRITELN 	"Abres la puerta con facilidad."
+ DONE    
+
+ABRIR PUERTA
+ AT      	lP2EscudoGigante 
+ ZERO    	fPuerta 
+ WRITELN 	"Lo intentas pero no cede. Mmm... ¡cuánto óxido!"
+ DONE
+
+ABRIR PUERTA
+ AT      	lP2EscudoGigante 
+ WRITELN 	"Pero si ya está abierta."
+ DONE
+
+ABRO  _
+ AT      	lP2Hab03 
+ WRITELN 	"¡Algo te impide pasar!" 
+ DONE    
+
+CERRAR  	PUERTA
+ AT      	lP2EscudoGigante 
+ EQ      	fPuerta 1 
+ WRITELN 	"Ya está cerrada."
+ DONE 
+
+CERRAR  	PUERTA
+ AT      	lP2EscudoGigante 
+ ZERO    	fPuerta
+ WRITELN 	"Ni cerrar la puerta ni abrirla podrías con el óxido que tiene."
+ DONE 
+
+CERRAR  	PUERTA
+ AT     	lP2EscudoGigante 
+ LET    	fPuerta 1
+ WRITELN 	"Cierras la puerta fácilmente."
+ DONE 
+
+CERRAR REJA 
+ CARRIED 	oJaula ; con pájaro
+ ONOTZERO 	oJaula aPajaro
+ WRITELN 	"No hace falta. " 
+ DONE    
+
+MOVER  VARITA
+ LET 		33 _voc_USAR
+
+AGITAR  VARITA
+ LET 		33 _voc_USAR
+
+USAR   VARITA
+ ATGT    	lP2DensoVapor 
+ ATLT    	lP2VariasSalidas 
+ CARRIED 	oVarita 
+ PLUS    	fPuente 1 	; flag puente
+ GOTO    	lP2PuenteMagico 
+ EQ      	fPuente 2 
+ CLEAR   	fPuente 
+ GOTO   	lP2AnchaFisura 
+
+USAR   VARITA
+ CARRIED 	oVarita 
+ ATGT    	lP2DensoVapor 
+ ATLT    	lP2VariasSalidas 
+ DESC    
+
+USAR   VARITA
+ CARRIED 	oVarita 
+ PRESENT 	oJaula 	; con pájaro
+ ONOTZERO	oJaula aPajaro 
+ PROCESS 	23 		; COMPROBAR Era Process 7 en la 2ªparte
+ DONE
+
+USAR   VARITA
+ CARRIED 	oVarita 
+ AT      	lP2CanonCamara 
+ ZERO    	fPajaroVuelve 
+ PROCESS 	23 		; COMPROBAR Era Process 7 en la 2ªparte
+ DONE
+
+USAR   VARITA
+ CARRIED 	oVarita 
+ WRITELN 	"Te pasarías horas probando de hacer algo útil pero tal vez no sea el sitio indicado."
+ DONE      
+
+USAR   VARITA
+ LET     	33 _voc_COGER 	; COMPROBAR
+
+SACO  PILAS
+ NOUN2   	MAQUINA
+ AT      	lP2Maquina 
+ ABSENT  	oPila
+ WRITELN 	"No ves la pila por aquí."
+ DONE
+
+SACO  PILAS
+ NOUN2   	MAQUINA
+ AT      	lP2Maquina 
+ LET     	33 _voc_COGER 	; COMPROBAR
+
+BUSCO _
+ AT      	lP2DensoVapor 
+ ZERO    	fHayNiebla 
+ WRITELN 	"La niebla te lo impide." 
+ DONE    
+
+BUSCO PEPITA
+ AT      	lP2DensoVapor 
+ ISAT    	oPepita lP2DensoVapor 
+ WRITELN 	"¡Está en el suelo!" 
+ DONE    
+
+COJO  _
+ AT      	lP2Trono 
+ LT      	fSerpiente 9 
+ LET     	fSerpiente 9 
+ WRITELN 	"El reptil te marca sus colmillos en el cuello y se marcha." 
+ DONE    
+
+COJO  ALMOHADA
+ ISAT    	oAlmohada @38 
+ ISAT    	oJarron @38 
+ NOTAT   	lP2HabBlanda 
+ GET     	oAlmohada 
+ LET     	51 _voc_JARRON 
+ WRITELN 	"El jarrón se ha roto en el suelo." 
+ DESTROY 	oJarron 
+ DONE    
+
+COJO  PAJARO
+ AT      	lP2CanonCamara 
+ NOTCARR 	oVarita 
+ CARRIED 	oJaula 	; COMPROBAR ; jaula Vacía 
+ OZERO  	oJaula aPajaro
+ ZERO   	fPajaroVuelve 
+ OSET  	  	oJaula aPajaro
+ SET     	fPajaroVuelve 
+ WRITELN 	"Tienes al pájaro enjaulado." 
+ DONE    
+
+COJO  PAJARO
+ AT      	lP2CanonCamara 
+ WRITELN 	"El pajarito se escapa, cantando alegremente." 
+ DONE    
+
+COJO  TRONCO
+ AT      lP2FondPozoOes 
+ WRITELN "Las resecas semillas queman tu mano y caen de nuevo a tierra." 
+ DONE    
+
+COJO  PEPITA
+ AT      lP2DensoVapor 
+ ZERO    fHayNiebla ; flag ¿niebla?
+ WRITELN "La niebla te lo impide." 
+ DONE    
+
+COGER  HACHA
+ AT      lP2EscudoGigante
+ ABSENT  oHacha 
+ LET 33 _voc_SACAR
+ LET 43 _voc_DE
+ LET 44 _voc_GIGANTE
+
+SACAR HACHA 	; ¿SACAR? Como sinónimo de COGER para poder hacer "Coger hacha de gigante"
+ PREP 	 DE
+ NOUN2 	 GIGANTE
+ AT      lP2EscudoGigante
+ WRITELN "Es demasiado pesada. Es como si fuera de un gigante."
+ NOTDONE 
+
+SACAR HACHA 	; ¿SACAR? Como sinónimo de COGER para poder hacer "Coger hacha de gigante"
+ PREP 	 DE
+ NOUN2 	 GIGANTE
+ WRITELN "No ves el hacha de gigante por aquí."
+ NOTDONE 
+
+COJO  ESCUDO
+ AT      lP2EscudoGigante 
+ WRITELN "Es demasiado pesado, tanto como el hacha. Es como si fuera de un gigante."
+ NOTDONE 
+
+COJO  _
+ AUTOG   
+ DONE    
+
+COJER _
+ WRITELN "Coger se escribe con ge." 
+ DONE    
+
+COGEL _
+ AT      lP2HabOlien 
+ WRITELN "No sel puñetelo." 
+ DONE    
+
+SOLTAR JARRON
+ ISNOTAT 	oAlmohada @38 ; COMPROBAR 255 = Here?
+ CARRIED 	oJarron 
+ NOTAT   	lP2HabBlanda 
+ WRITELN 	"El jarrón se ha roto en el suelo."  
+ DESTROY 	oJarron 
+ DONE    
+
+LIBERAR PEPOSO
+  LET 		33 _voc_SOLTAR
+
+SOLTAR PEPOSO
+ AT      	lP2ApestosaJaula 
+ EQ      	fOso 2 
+ CARRIED 	oLlave 
+ SET     	fOso 
+ WRITELN 	"Lo liberas de la pared y lo llevas de la cadena." 
+ DONE    
+
+SOLTAR PEPOSO
+ AT      	lP2ApestosaJaula 
+ CARRIED 	oLlave 
+ ZERO    	fOso 
+ WRITELN 	"Recibes de lleno el ataque del enorme oso Peposo." 
+ ANYKEY  
+ CLEAR   	0 
+ GOTO    	lP2NoHasLogrado 
+ DESC    
+
+SOLTAR PEPOSO
+ EQ      	fOso 255 
+ ATGT    	lP2HabMagica 
+ ATLT    	lP2EncimaCornisa 
+ ZERO    	fTroll ; Troll en el puente
+ WRITE   	"Al verse libre, Peposo escapa dejando a tus pies la cadena." 
+ WRITELN 	" Se yergue sobre sus patas traseras y agitando sus garras amenazadoramente, abre su enorme boca y deja escapar un cavernoso rugido. Al verlo suelto, el Troll Chulangas sale corriendo." 
+ SET     	fTroll 
+ CREATE  	oCadena 
+ LET     	fOso 1 
+ DONE    
+
+SOLTAR PEPOSO
+ EQ      	fOso 255 ; flag 111 cadena
+ WRITELN 	"Al verse libre, Peposo escapa dejando a tus pies la cadena." 
+ CREATE  	oCadena 
+ LET     	fOso 1 
+ DONE    
+
+SOLTAR PEPOSO
+ EQ      	fOso 1
+ WRITELN 	"No ves a Peposo por aquí. Seguramente no querrá acercarse a un humano ahora que es libre." 
+ DONE
+
+TOCO  PILAR
+ PROCESS 	25 ; COMPROBAR Era PROCESS 4 en la 2ª parte
+ DONE    
+
+TOCO  _
+ WRITELN 	"No le encuentras nada de especial." 
+ DONE        
+
+LEO   _
+ LET     	34 _voc_TEXTO ; COMPROBAR 
+ PROCESS 	4 
+ DONE    
+
+COMO  HUESO
+ CARRIED 	oHueso 
+ WRITELN 	"¡¡Arggg!! ¡Te has ahogado con el hueso!" 
+ NEWLINE
+ ANYKEY  
+ CLEAR   	0 
+ GOTO    	lP2NoHasLogrado 
+ DESC    
+
+COMO  TORTI
+ CARRIED 	oTortilla 
+ DESTROY 	oTortilla 
+ OK      
+
+BEBO  _
+ CARRIED 	oBotella ; COMPROBAR : Vacía
+ ONOTZERO 	oBotella aFull
+ OCLEAR 	oBotella aFull
+ OK      
+
+BEBO  _
+ AT      	lP2MagnLago 
+ WRITELN 	"Bebes hasta saciar tu sed."
+ DONE      
+
+BEBO  _
+ AT      	lP2Mirador 
+ WRITELN 	"Aunque da un poco de asco, bebes saciando la sed."
+ DONE      
+
+BEBO  _
+ AT      	lP2LagSubte 
+ WRITELN 	"Es excelente. No puede ser un agua más pura."
+ DONE      
+
+ACEITAR PUERTA
+ AT      	lP2EscudoGigante 
+ CARRIED 	oBoteAceite 
+ ZERO    	fPuerta 
+ SWAP   	oBoteAceite oBotella
+ OCLEAR 	oBotella aFull 
+ WRITELN 	"La puerta queda bien aceitada." 
+ LET     	fPuerta 1 
+ DONE    
+
+ACEITAR PUERTA
+ AT      	lP2EscudoGigante 
+ NOTCARR 	oBoteAceite
+ WRITELN 	"No ves aceite por aquí."
+ DONE
+
+ACEITAR PUERTA
+ AT      	lP2EscudoGigante 
+ NOTZERO 	fPuerta
+ WRITELN 	"No le hace falta más aceite. Con el que tiene será suficiente."
+ DONE
+
+ACEITAR _
+ WRITELN 	"No sabrías cómo."
+ NOTDONE 
+
+APARTAR NIEBLA
+ AT      	lP2DensoVapor 
+ WRITELN 	"¿Cómo la vas a apartar?" 
+ DONE    
+
+SOPLO _
+ AT      	lP2DensoVapor 
+ ZERO    	fHayNiebla 
+ SET     	fHayNiebla 
+
+SOPLO _
+ ZERO    	fPepita 
+ SET     	fPepita 
+ WRITE   	"Soplas y parece que funciona. "
+ PLACE   	oPepita lP2DensoVapor 
+
+SOPLO _
+ AT      	lP2DensoVapor 
+ WRITELN 	"La niebla se disipa momentánemente, puedes ver todo un poco mejor... y lentamente vuelve a envolverlo todo."
+ DONE      
+
+RIEGO TRONCO
+ AT      lP2FondPozoOes 
+ CARRIED oBoteAceite 
+ WRITELN "El aceite, como es lógico, las deja bien fritas."  
+ CLEAR   fJudias ; flag planta
+ SWAP    oBoteAceite oBotella
+ OCLEAR  oBotella aFull 
+ DONE    
+
+RIEGO TRONCO
+ NOTCARR  oBotella
+ WRITELN  "Ya me dirás cómo quieres hacerlo sin la botella."
+ DONE
+
+RIEGO TRONCO
+ OZERO    oBotella aFull
+ WRITELN  "Ya me dirás cómo quieres hacerlo sin agua."
+ DONE
+
+RIEGO TRONCO
+ AT       lP2FondPozoOes 
+ PLUS     fJudias 1 
+ OCLEAR   oBotella aFull
+
+RIEGO TRONCO
+ AT       lP2FondPozoOes 
+ EQ 	  fJudias 1 
+ WRITELN  "Absorbiendo ávidamente el precioso líquido las semillas se hinchan, se abren y de ellas nace una tierna plantita de judías."
+ NEWLINE
+ DONE
+
+RIEGO TRONCO
+ AT       lP2FondPozoOes 
+ GT 	  fJudias 1
+ WRITELN  "Al recibir más agua, el tronco se endurece y crece fuerte hacia lo alto hasta salir por el agujero superior."
+ DONE
+
+;MIERD _
+; PLUS    33 1 
+; ZERO    fGrosero 
+; SET     fGrosero 
+; WRITE "Nadie te hace caso. " 
+; DONE    
+
+PUTA  _
+ ATGT lP2Hab02
+ DESTROY oLinterna 
+ ;DESTROY 2 
+ WRITE "Nadie te hace caso. " 
+ ANYKEY  
+ DESC    
+
+
+TIRO  BOTELLA
+ CARRIED oBotella
+ ;ONOTZERO oBotella aFull 
+ DESTROY oBotella
+ WRITELN "La botella se ha roto en el suelo."  
+ DONE    
+
+;TIRO  BOTELLA
+;redundante
+; CARRIED 5 
+; DESTROY 5 
+; WRITELN "La botella se ha roto en el suelo." 
+; DONE    
+
+TIRO  BOTELLA
+ CARRIED oBoteAceite 
+ DESTROY oBoteAceite
+ NEWLINE 
+ WRITELN "La botella se ha roto en el suelo dejando una fea mancha de aceite." 
+ DONE    
+
+
+TIRO  HACHA
+ NOTCARR oHacha 
+ WRITELN "No la llevas encima."
+ DONE
+
+TIRO  HACHA
+ ZERO    fFallasEnano2P 
+ EQ      fEnano2P 2 
+ CHANCE  50 
+ WRITELN "¡Has fallado! El hacha cae al suelo." 
+ PLACE   oHacha @38 
+ SET     fFallasEnano2P 
+ DONE    
+
+TIRO  HACHA
+ EQ      fEnano2P 2 
+ WRITELN "¡Le has cortado la cabeza! ¡Maluva se desintegra junto con su hacha!" 
+ DESTROY oHacha 
+ CLEAR   fEnano2P 
+ CLEAR   fFallasEnano2P 
+ PLUS    fEnano2P120 1 
+ ANYKEY
+ DESC    
+
+TIRO  LINTERNA
+ NOTCARR oLinterna 
+ WRITELN "No la llevas encima."
+ DONE
+
+TIRO  LINTERNA
+ AT      lP2MagnLago 
+ WRITELN "Al agua que va la linte... ¡Espera un momento!"
+ SET  0
+ PAUSE 100
+ DESC
+
+TIRO  LINTERNA
+ AT      lP2LagSubte 
+ WRITELN "Al agua que va la linte... ¡Espera un momento!"
+ SET  0
+ PAUSE 100
+ DESC
+
+TIRO  _
+ AT      lP2MagnLago 
+ NOTEQ 51 255
+ CARRIED @51
+ WRITELN "Tiras {OREF} al agua y ves como se hunde... lentamente..." 
+ DESTROY @51
+ DONE
+
+TIRO  _
+ NOTEQ 51 255
+ AT      lP2LagSubte 
+ CARRIED @51
+ WRITELN "Tiras {OREF} al agua. Y allá va, hundiéndose. ¿Pero qué has hecho?" 
+ DESTROY @51
+ DONE
+
+PASO  _
+ ATGT    lP2HabMagica 
+ ATLT    lP2EncimaCornisa 
+ ZERO    fTroll 
+ WRITELN "¡Te bloquea un fornido Troll que ruge: «un tesoro has de dar para poder pasar»!" 
+ DONE    
+
+PASO  _
+ ATGT    lP2HabMagica 
+ ATLT    lP2EncimaCornisa 
+ EQ      fOso 255 
+ WRITELN "Por el peso de Peposo, el puente se rompe y los dos al foso." 
+ CLEAR   0 
+ GOTO    lP2NoHasLogrado 
+ ANYKEY  
+ DESC    
+
+PASO  _
+ AT      lP2AbismoSO 
+ GOTO    lP2AbismoNe 
+ DESC    
+
+PASO  _
+ AT      lP2AbismoNe 
+ GOTO    lP2AbismoSO 
+ DESC    
+
+PASO  _
+ AT      lP2PuenteMagico 
+ GOTO    lP2VariasSalidas 
+ DESC    
+
+PASO  _
+ AT      lP2VariasSalidas 
+ GOTO    lP2PuenteMagico 
+ DESC    
+
+SACO  PILAS
+ CARRIED 	oLinterna
+ CLEAR   	fLintPilas ; COMPROBAR si es flag fLintPilas (110 1ª parte)
+ PLACE   	oPila 254 
+ OCLEAR 	oLinterna aOn
+ DESC    
+
+SALTAR _
+ AT      	lP2HabBlanda 
+ WRITELN 	"¡Boing! ¡Boong!" 
+ DONE    
+
+SALTAR _
+ AT      	lP2AnchaFisura 
+ PROCESS 	22 ; COMPROBAR Era PROCESS 9 en la 2ª parte
+ DONE
+
+SALTAR _
+ ATGT    	lP2HabMagica 
+ ATLT    	lP2EncimaCornisa 
+ PROCESS 	22 ; COMPROBAR Era PROCESS 9 en la 2ª parte
+ DONE
+
+SALTAR _
+ WRITELN 	"Nunca te lo habías pasado bien haciendo el tonto. Venga, déjate ya de perder el tiempo."      
+ DONE
+
+MIRAR _
+ DESC    
+
+FEE   FIE  
+ AT      	lP2EscudoGigante 
+ ISAT    	oHuevo lP2EscudoGigante 
+ WRITELN 	"El huevo vibra afectado por el hechizo." 
+ DONE    
+
+FEE   FIE  
+ AT      	lP2EscudoGigante 
+ CARRIED 	oHuevo 
+ PLACE   	oHuevo lP2EscudoGigante 
+ WRITE   	"Se te ha caído. " 
+ WRITELN 	"El huevo vibra afectado por el hechizo." 
+ DONE    
+
+FEE   FIE  
+ AT      	lP2EscudoGigante 
+ WRITELN 	"¡El huevo aparece entre tus pies!" 
+ CREATE  	oHuevo 
+ DONE    
+
+FEE   FIE  
+ WRITELN 	"La magia hace temblar la cueva." 
+ DONE    
+
+_ RECOLECTOR
+ AT      	lP2SalaAcustica 
+ CLEAR   	0 
+ GOTO    	lP2Hab91 
+ DESC    
+
+_ RECOLECTOR
+ AT      	lP2Hab91 
+ ABSENT  	oLinterna
+ SET     	0
+
+_ RECOLECTOR
+ AT      	lP2Hab91 
+ OZERO   	oLinterna aOn
+ SET     	0
+
+_ RECOLECTOR
+ AT      	lP2Hab91 
+ OBJFOUND 	aOn lP2SalaAcustica
+ CLEAR   	0
+
+_ RECOLECTOR
+ AT      	lP2Hab91 
+ CLS     
+ GOTO    	lP2SalaAcustica 
+ DESC    
+
+_ RECOLECTOR
+ WRITELN 	"La magia hace temblar la cueva." 
+ DONE    
+
+_ MAGICA
+ AT      	lP2SalaAcustica 
+ CLEAR   	0 
+ GOTO    	lP2HabMagica 
+ DESC    
+
+_ MAGICA
+ AT      	lP2HabMagica 
+ CARRIED 	oEsmeralda 
+ PLACE   	oEsmeralda lP2HabMagica 
+
+_ MAGICA
+ AT      	lP2HabMagica 
+ NOTCARR 	oLinterna
+ SET     	0
+
+_ MAGICA
+ AT      	lP2HabMagica 
+ PRESENT 	oLinterna
+ OZERO   	oLinterna aOn
+ SET     	0
+
+_ MAGICA
+ AT      	lP2HabMagica 
+ OBJFOUND 	aOn lP2SalaAcustica
+ CLEAR   	0
+
+_ MAGICA
+ AT      	lP2HabMagica 
+ GOTO    	lP2SalaAcustica 
+ DESC    
+
+_ MAGICA
+ WRITELN 	"La magia hace temblar la cueva." 
+ DONE    
+
+XYZZY _
+ AT      	lP2CaminoGuijarros 
+ CLEAR   	0 
+ GOTO    	lP2Hab91 
+ DESC    
+
+XYZZY _
+ AT      	lP2Hab91 
+ ABSENT  	oLinterna
+ SET     	0
+
+XYZZY _
+ AT      	lP2Hab91 
+ OZERO   	oLinterna aOn
+ SET     	0
+
+XYZZY _
+ AT      	lP2Hab91 
+ OBJFOUND 	aOn lP2CaminoGuijarros
+ CLEAR   	0
+
+XYZZY _
+ AT      	lP2Hab91 
+ CLS     
+ GOTO    	lP2CaminoGuijarros 
+ DESC    
+
+XYZZY _
+ WRITELN 	"La magia hace temblar la cueva." 
+ DONE    
+
+_ PLUGH
+ WRITELN 	"La magia hace temblar la cueva." 
+ DONE    
+
+SALUDAR _
+ WRITE 		"Nadie te hace caso. " 
+ DONE    
+
+_ _
+ AT      	lP2Hab48 	; COMPROBAR. Es una localidad sin conexiones, 
+				; con una bandera con la que no se hace nada en el código. 
+				; ¿Un fallo? ¿Un posible recorte de diseño?
+				; ¿Un «no puedes ir al norte»?
+ CLEAR   	f2P105 
+ WRITE   	"No puedes "
+ DONE    
+
 ;_ _
 ; LT      33 14 
-; WRITELN "No puedes "; COMPROBAR
-; EQ      33 13 
-; WRITELN "ir al "; COMPROBAR 
+; MOVE    38 ; flag 38
+; DESC    
+
+;_ _
+; LT      33 14 
+; ;SYSMESS 7 
+; WRITE   "No puedes "
+; EQ      33 13 ; NORTE
+; WRITE   "ir al "
 
 ;_ _
 ; LT      33 9 
-; WRITELN "ir al " ; COMPROBAR
+; WRITE   "ir al "
 
-; Rutina AD «no puedes ir al»
 ;_ _
 ; LT      33 14 
+; NEWTEXT 
 ; COPYFF  33 200 
-; PLUS    200 100 
+; PLUS    200 116 
 ; MES     @200 
-; WRITELN "." ; COMPROBAR
-; PROCESS 13 
+; WRITELN ". "
+; PROCESS 10 
+;/PRO 1
+
+
+_ _
+ AT      lP2Hab00 
+ SET     255 
+ PICTURE 1 
+
+_ _
+ AT      lP2Hab00 
+; WRITE   "AVENTURA ORIGINAL II" 
+; WRITE   "Programación:" 
+; WRITE   "Gráficos:" 
+; WRITE   "EL ENCUENTRO" 
+; WRITE   "Manuel González" 
+; WRITE   "Andrés  Samudio"
+; WRITE   "Carlos  Marqués"
+; WRITE   "(c) 1989 Aventuras AD" 
+; WRITE   "Dirección:" 
+ GOTO    lP2Hab01 
+ DONE    
+
+
+;------------------------------------------------------------------
 
 ; ############################### RESPUESTAS POR DEFECTO ##################################
 ; #                                                                                       #
@@ -5303,39 +7546,6 @@ CERRAR _                        ; Es un objeto ausente
 ;----------------------------------------------
 
 
-LEER _                        ; No hay nombre en la frase
- EQ 34 255
- BNOTZERO 12 1
- WRITELN "No puedes leer eso que dices."
- DONE
-
-LEER _                        ; No hay nombre en la frase
- EQ 34 255
- BZERO 12 1
- WRITELN "Por favor, especifica qué quieres leer."
- DONE
- 
-LEER _                        ; Hay nombre pero no es un objeto
- NOTEQ 34 255
- EQ 51 255
- WRITELN "No le ves sentido a leer eso."
- DONE
-
-LEER _                        ; Es un objeto presente
- NOTEQ 51 255
- PRESENT @51
- WRITELN "No puedes leer {OREF}."
- DONE
-
-LEER _                        ; Es un objeto ausente
- NOTEQ 51 255
- ABSENT @51
- WRITELN "No ves {OREF} por aquí."
- DONE
-
-;----------------------------------------------
-
-
 CHUPAR _                        ; Posiblemente en la frase hay un nombre no incluido en el vocabulario
  EQ 34 255
  BNOTZERO 12 1
@@ -5591,6 +7801,15 @@ SALIDAS _
  NEWLINE
  DONE
 
+;------------------------------------------------------------
+
+_ PARTIDAS
+ LET 		33 _voc_ENUMERAR
+
+ENUMERAR PARTIDAS
+ LISTSAVEDGAMES
+ DONE
+ 
 ;------------------------------------------------------------
 
 AYUDA _
@@ -6452,6 +8671,7 @@ IR _                        ; Es un objeto ausente
  
 _	_	LT 33 14
 		MOVE 38
+		PROCESS 26 ; Proceso para saber si se lleva la linterna
 		DESC
 
 _	_	LT 33 14
@@ -6481,6 +8701,11 @@ _	_
 _	_
  HOOK "PRO1"  ; «Back call» a el sistema de hooks. Por defecto no hace nada pero algunas librerías plugin podrían necesitarlo. No borrar.
 
+;_ _ 		; COMPROBAR Para no volver a ver los créditos. No funciona
+; AT      0 
+; EQ  255 1
+; GOTO    2 
+
 _	_
  AT 0
  TITLE "La aventura original"
@@ -6490,29 +8715,10 @@ _	_
  ;CLEAR 11 ; De McArras
  OCLEAR oBotella aFull ; debe estar vacía al principio.
  COMMAND 0
- BLOCK "La aventura original (1ª parte)" intro.png 17
+ GOTO 1
+ DESC
+; BLOCK "LA AVENTURA ORIGINAL" intro.png PROCINICIO
 
-;/PRO 1
-
-_ _
- AT      0 
- NOTZERO 255 
- GOTO    2 
-
-;_ _
-; Obsoleto. bandera 29 a 128 es para redibujar el gráfico
-; AT      0 
-; ;PRINTAT 11 26 
-; LT      29 128 
-; ;PRINTAT 11 39 
-
-;_ _
-; AT      0 
- ;MES     18 
-; WRITE "?"
-; ANYKEY  
-; GOTO    1 
-; DESC    
 
 _ _
  ; Si el jugador está en el laberinto, muestra el mensaje de que está perdido
@@ -6520,263 +8726,254 @@ _ _
  ATLT    lBosqueProf 
  ;MES     95 
  WRITELN "Esta parte del bosque es muy densa, los árboles te impiden orientarte bien y son todos muy parecidos. Vagas por entre la maleza buscando tu rumbo pero pronto te das cuenta de que estás algo despistadillo."
-;_ _
-;obsoleto
-; AT      1 
-; LT      29 128 
 
 _ _
- AT      1 
+ AT  		lFrontera 
+ ZERO 		fConsejo
+ NEWLINE
+ WRITELN 	"<b>Si es la primera vez que juegas a una aventura conversacional y no sabes por dónde empezar, teclea «AYUDA».</b>"
+ SET 		fConsejo
+ DONE
 
- ;PICTURE 44 
 
- MESSAGE     77 
- ANYKEY  
- CLS     
- MES     99 
+_ _
+ AT      	1 
+ SET     	255 ; COMPROBAR flag 255 ; ;Init solamente la primera vez
+ MESSAGE     	99 
  ANYKEY  
  CLS
- GOTO    2 
+ GOTO    	2 
  DESC
-_ _
- AT      1 
- CLS     
- SET     255 ; COMPROBAR flag 255 ; ;Init solamente la primera vez
- GOTO    2 
 
 _ _
- AT      2 
- ABILITY 5 255 ; Máx objetos, máx peso
- LET     53 64 ; COMPROBAR flag 53 ; Imprimir el inventario en una línea
- GOTO    lFrontera
+ AT      	2 
+ ABILITY 	5 255 ; Máx objetos, máx peso
+ MESSAGE     	77 
+ ANYKEY  
+ CLS     
+ GOTO    	lFrontera
+ COMMAND 	1
  DESC    
 
 _ _
- TIME    47 1 	; TIEMP 
+ TIME    	47 1 	; TIEMP 
 
 _ _
- AT      lRamas 
- LT      fLlave 255 
- ;MES     71 
- WRITELN "El sol hace brillar algo en una rama."
+ AT      	lPozo
+ ISNOTLIGHT
+ WRITELN 	"¡Puaj! Aquí apesta. "
 
 _ _
- AT      lBosqueCer
- ZERO    fElfito 
- LET     fElfito 1 
+ AT      	lRamas 
+ LT      	fLlave 255 
+ WRITELN 	"El sol hace brillar algo en una rama."
 
 _ _
- NOTAT   lBoscillo 
- EQ      fElfito 1 
- LET     fElfito 2 
+ AT      	lBosqueCer
+ ZERO    	fElfito 
+ LET     	fElfito 1 
 
 _ _
- AT      lBosqueCer
- EQ      fElfito 2 
- WRITELN "Oyes un débil llanto y con dificultad ves una figura traslúcida."
+ NOTAT   	lBoscillo 
+ EQ      	fElfito 1 
+ LET     	fElfito 2 
 
 _ _
- AT      lBosqueCer
- EQ      fElfito 3 
- ;MES     67 
- WRITELN "«¡Mi casa!»"
+ AT      	lBosqueCer
+ EQ      	fElfito 2 
+ WRITELN 	"Oyes un débil llanto y con dificultad ves una figura traslúcida."
 
 _ _
- AT      lLava 
- ZERO    fEnano 
- LET     fEnano 1 
+ AT      	lBosqueCer
+ EQ      	fElfito 3 
+ WRITELN 	"«¡Mi casa!»"
 
 _ _
- NOTAT   lLava 
- EQ      fEnano 1 
- LET     fEnano 2 
+ AT      	lLava 
+ ZERO    	fEnano 
+ LET     	fEnano 1 
 
 _ _
- AT      lLava 
- EQ      fEnano 2 
- LET     fEnano 3 
+ NOTAT   	lLava 
+ EQ      	fEnano 1 
+ LET     	fEnano 2 
 
 _ _
- NOTAT   lLava 
- EQ      fEnano 3 
- LET     fEnano 4 
+ AT      	lLava 
+ EQ      	fEnano 2 
+ LET     	fEnano 3 
 
 _ _
- AT      lReja 
- WRITE "Estás en una depresión de siete metros. El valle se estrecha hacia el sur."
- EQ      fElfito 4 	; elfito contigo
- LT      fCandado 3 	; puerta no abierta
- ;MESSAGE 134 
- WRITELN " Elfito da saltos de alegría."
+ NOTAT   	lLava 
+ EQ      	fEnano 3 
+ LET     	fEnano 4 
+
+_ _
+ AT      	lReja 
+ WRITE 		"Estás en una depresión de siete metros. El valle se estrecha hacia el sur."
+ EQ      	fElfito 4 	; elfito contigo
+ LT      	fCandado 3 	; puerta no abierta
+ WRITELN 	" Elfito da saltos de alegría."
 
 SUR   _
- AT      lReja 
- EQ      fElfito 4 	; elfito contigo
- EQ      fCandado 3 	; la habías abierto cuando no iba contigo
- ;MESSAGE 134 
- WRITELN " Elfito da saltos de alegría."
-_ _
- AT      lReja 
- EQ      fCandado 0 
-
- PICTURE 26 
-
- MES     53 
- MES     55 
- MESSAGE 54 
+ AT      	lReja 
+ EQ      	fElfito 4 	; elfito contigo
+ EQ      	fCandado 3 	; la habías abierto cuando no iba contigo
+ WRITELN 	" Elfito da saltos de alegría."
 
 _ _
- AT      lReja 
- EQ      fCandado 1 
+ AT      	lReja 
+ EQ      	fCandado 0 
 
- PICTURE 26 
+ ;PICTURE 26 ; COMPROBAR
 
- MES     53 
- MES     56 
- MESSAGE 54 
-
-_ _
- AT      lReja 
- EQ      fCandado 2 
-
- PICTURE loc26sincand.png 
-
- MES     53 
- MESSAGE 54 
+ MES     	53 
+ MES     	55 
+ MESSAGE 	54 
 
 _ _
- AT      lReja 
- EQ      fCandado 3 
- PICTURE 27 
- WRITELN " Tienes ante ti la entrada a La Gran Caverna."
+ AT      	lReja 
+ EQ      	fCandado 1 
+
+ ;PICTURE 26 
+
+ MES     	53 
+ MES     	56 
+ MESSAGE 	54 
+
 _ _
- AT      lReja 
- EQ      fElfito 4 
- EQ      fCandado 3 
- SET     fElfito 
- ;MESSAGE 67 
+ AT      	lReja 
+ EQ      	fCandado 2 
+
+ PICTURE 	loc26sincand.png 
+
+ MES     	53 
+ MESSAGE 	54 
+
+_ _
+ AT      	lReja 
+ EQ      	fCandado 3 
+ PICTURE 	27 ; COMPROBAR
+ WRITELN 	" Tienes ante ti la entrada a La Gran Caverna."
+_ _
+ AT      	lReja 
+ EQ      	fElfito 4 
+ EQ      	fCandado 3 
+ SET     	fElfito 
  NEWLINE
- WRITELN "Elfito dice: «¡Mi casa!»"
- WRITE "«Mi agradecimiento está sobre la mesa.» "
- WRITELN "Y penetra en las profundidades."
- PLACE   oTortilla lPicnic  
+ WRITELN 	"Elfito dice: «¡Mi casa!»"
+ WRITELN 	"«Mi agradecimiento está sobre la mesa.» Y penetra en las profundidades."
+ PLACE   	oTortilla lPicnic  
 
 _ _
- EQ      fElfito 4 
- PLUS    100 1 
- EQ      100 2 
- CLEAR   100 
+ EQ      	fElfito 4 
+ PLUS    	fElfitoEnCasa 1 
+ EQ      	fElfitoEnCasa 2 
+ CLEAR   	fElfitoEnCasa 
 
 _ _
- EQ      fElfito 4 
- ZERO    100 
- NOTAT   lReja 
+ EQ      	fElfito 4 
+ ZERO    	fElfitoEnCasa 
+ NOTAT   	lReja 
+ NOTAT	 	lMuerte
  NEWLINE 
- ;MES     98 
- ;MESSAGE 68 
- WRITELN "«No es aquí.»"
+ WRITELN 	"«No es aquí.»"
 
 _ _
- EQ      fElfito 4 
- EQ      100 1 
- NOTAT   lReja 
- ;MESSAGE 67 
+ EQ      	fElfito 4 
+ EQ      	fElfitoEnCasa 1 
+ NOTAT   	lReja 
+ NOTAT	 	lMuerte
  NEWLINE
- WRITELN "«¡Mi casa!»"
+ WRITELN 	"«¡Mi casa!»"
 
 _ _
- AT      lLava 
- WRITE "El calor que se desprende de la burbujeante lava es asfixiante. Un enorme penacho de cenizas se desprende flotando perezosamente del ardiente magma, dejando una peste cosa mala. Imprudentemente estás haciendo el payaso en el peligroso borde del volcán"
+ AT      	lLava 
+ WRITE 		"El calor que se desprende de la burbujeante lava es asfixiante. Un enorme penacho de cenizas se desprende flotando perezosamente del ardiente magma, dejando una peste cosa mala. Imprudentemente estás haciendo el payaso en el peligroso borde del volcán"
 
 _ _
- AT      lLava 
- LT      fEnano 255 
- WRITELN   " junto a un enano que rabia de amargura."
- ;MESSAGE 60 
+ AT      	lLava 
+ LT      	fEnano 255 
+ WRITELN   	" junto a un enano que rabia de amargura."
 
 _ _
- AT      lLava 
- EQ      fEnano 255 
- WRITELN "."
+ AT      	lLava 
+ EQ      	fEnano 255 
+ WRITELN 	"."
 
-; COMPROBAR estas dos opciones. Son condiciones de fin de juego pero se activan al principio
-;_ _
-; AT      lFrontera 
-; CLS     
-; ;PRINTAT 8 10 
-; LT      29 128 
-; ;PRINTAT 8 22 
-
-;Muestra datos del final de la partida pero no hay flag para discriminarlos
-;_ _
-; AT      lFrontera 
-; MESSAGE 47 
-; ;PRINTAT 12 10 
-; LT      29 128 
-; ;PRINTAT 12 22 
-
-;_ _
-; AT      lFrontera 
-; CARRIED oLinterna ;apagada
-; CARRIED oBotella ;llena
-; MESSAGE 50 
-
-;_ _
-; AT      lFrontera 
-; CARRIED oLinterna ;apagada
-; CARRIED oBotella ; vacía
-; MESSAGE 49 
-
-;_ _
-; AT      lFrontera 
-; CARRIED oLinterna ; encendida
-; CARRIED oBotella ;llena
-; MESSAGE 48 
-
-;_ _
-; AT      lFrontera 
-; CARRIED oLinterna ;encendida
-; CARRIED oBotella ;vacía
-; MESSAGE 51 
-
-;_ _ 
-; ; COMPROBAR ¿Es el final de la aventura?
-; AT      lFrontera 
-; ;PRINTAT 19 0 
-; END     
-
-;_ _
- ;¿Lista de objetos?
-; NEWLINE 
-; ZERO    0 ; COMPROBAR flag 0
-; ABSENT  oLinterna 
-; LISTOBJ 
-
-;_ _
- ; ¿Redundante?
- ;PRESENT oLinterna
- ;ONOTZERO oLinterna aOn
- ; podría ser mejor:
-; ISLIGHT
-
-; LISTOBJ 
 
 _ _
  AT      lMuerte 	; Muerte
- ;CLS     
- ; PICTURE 
- COMMAND 0
- WRITE "Has jugado durante "
- PRINT  31 
- WRITELN " turnos."
+ COMMAND 	0
+ WRITE 		"Has jugado durante "
+ PRINT  	31 
+ WRITELN 	" turnos."
  NEWLINE
- WRITELN "{RESTART|Volver a jugar}"
+ WRITELN 	"{RESTART|Volver a jugar}"
+ TIME    	0 0
+
+_ _
+ AT      	lP2Hab02 
+ LET     	8 200 ; duración de la pila ; ALERTA per debugging 10. Should be 200
+ ABILITY 	7 255 
+ CLS     
+ PICTURE 	30
+ WRITELN 	"Con un click la puerta se cierra mágicamente..." 
+ ANYKEY  
+ GOTO    	lP2Hab03 
+ DESC    
+
+_ _
+ AT      	lP2Hab91 
+ PROCESS 	21 ; COMPROBAR En 2ª parte era PROCESS 15 
+ LT      	fTesorosFaltan 4 
+ GT      	fTesorosFaltan 1 
+ NEWLINE
+ WRITE   	"Ánimo, solo te faltan " 
+ PRINT   	fTesorosFaltan ; ¿Número de tesoros?
+ WRITELN 	"." 
+
+_ _
+ AT      	lP2Hab91 
+ EQ      	fTesorosFaltan 1 
+ NEWLINE
+ WRITELN 	"Si no has perdido el último tesoro vencerás a la Gran Caverna." 
+
+_ _
+ AT      	lP2Hab03 
+ ZERO    	fEntradaAbierta 
+ NOTZERO 	fElfito2Phasalido 
+ WRITELN 	"Mágicamente, dándote otra oportunidad de vivir, la puerta se abre..." 
+ SET     	fEntradaAbierta 
+ ANYKEY  
+ DESC    
+
+_ _
+ PROCESS 	18 ; COMPROBAR En 2ª es Process 18
+
+_ _
+ AT      	lP2ApestosaJaula 
+ CLEAR   	fTroll 
+
+_ _
+ AT      	lP2Hab03 
+ ZERO    	fEntradaAbierta 
+ PICTURE 	31 
+ WRITELN 	"Te encuentras en una pequeña cueva, rodeado de húmedas rocas. Los rayos del sol penetran a través de los barrotes de la cerrada reja. Hacia el oeste sale un pasadizo bajo y oscuro que se pierde en el misterio." 
+
+_ _
+ AT      	lP2Hab03 
+ NOTZERO 	fEntradaAbierta 
+ PICTURE 	loc30.png
+ WRITELN 	"Te encuentras en la salida al exterior de la cueva. Vuelves a ver los rayos del sol." 
+
 
 ; Si dejas esto al final los objetos siempre se listan después de las descripciones
 _	_
  ISLIGHT
- LISTOBJ                        ;Lista los objetos
- LISTNPC @38                    ;Lista las personas
+ NOTAT 		lP2Hab91 
+ LISTOBJ 			;Lista los objetos
+ LISTNPC 	@38 		;Lista las personas
 
 /PRO 2
 
@@ -6792,6 +8989,214 @@ _	_
 _	_
  HOOK "PRO2"  ; «Back call» a el sistema de hooks. Por defecto no hace nada pero algunas librerías plugin podrían necesitarlo. No borrar.
  
+; COMPROBAR No todos estos condactos son para comprobar cada turno
+
+
+_ _
+ NOTZERO 0 
+ ;ABSENT  oLinterna 
+ OBJNOTFOUND aOn HERE
+ ZERO    9 
+ SET     9 
+
+_ _
+ PRESENT oLinterna 
+ ONOTZERO oLinterna aOn
+ CLEAR   9 
+
+_ _
+ ZERO    0 
+ CLEAR   9 
+
+_ _
+ ISAT    oLinterna NOTCREATED ; COMPROBAR
+ ONOTZERO oLinterna aOn
+ NOTZERO 8 
+ PLUS    8 1 
+
+_ _
+ EQ      8 1 
+ LET     8 2 
+ PRESENT oLinterna
+ ONOTZERO oLinterna aOn
+ ;SWAP    2 0 
+ OCLEAR  oLinterna aOn
+ SET     0
+ CLS
+ WRITELN "¡La linterna se ha apagado!"
+ DESC    
+
+_ _
+ LT      fEnano2P 2 
+ SET     7 
+
+_ _
+ EQ      7 250 
+ PAUSE 100
+ PROCESS 15 ; COMPROBAR Antes Process 8
+ PAUSE 150
+ WRITELN "Maluva te parte en dos la cabeza." 
+ NEWTEXT
+ ANYKEY
+ ;PROCESS 17 ; COMPROBAR En 2ª parte era Process 17
+ CLEAR   0 
+ GOTO    lP2NoHasLogrado 
+ ;ANYKEY  
+ DESC    
+
+_ _
+ PLUS    fSerpiente 1 
+ NOTAT   lP2Trono 
+ LT      fSerpiente 9 
+ CLEAR   fSerpiente 
+
+_ _
+ EQ      fSerpiente 9 
+ WRITELN "El reptil te marca sus colmillos en el cuello, y se marcha." 
+
+_ _
+ EQ      fSerpiente 16 
+ WRITELN "El veneno te ha matado." 
+ CLEAR   0 
+ GOTO    lP2NoHasLogrado 
+ ANYKEY  
+ DESC    
+
+_ _
+ PRESENT oLinterna
+ ONOTZERO oLinterna aOn
+ EQ      8 60 
+ WRITELN "La linterna va mal. La luz parpadea." 
+ MINUS   8 1 
+
+_ _
+ PRESENT oLinterna
+ ONOTZERO oLinterna aOn 
+ NOTZERO 8 
+ LT      8 50 
+ WRITELN "¡La linterna apenas da luz!" 
+
+_ _
+ LT      9 250 
+ NOTZERO 9 
+ WRITELN "Tropiezas en la oscuridad y te desnucas." 
+ ANYKEY  
+ CLEAR   0 
+ GOTO    lP2NoHasLogrado 
+ DESC    
+
+_ _
+ AT      lP2Hab54 
+ ZERO    fDragon 
+ LET     fDragon 4 
+
+_ _
+ AT      lP2Hab54 
+ LT      fDragon 255 
+ GT      fDragon 1 
+ MINUS   fDragon 1 
+
+_ _
+ AT      lP2Hab54 
+ PROCESS 19 ; COMPROBAR Antes process
+
+_ _
+ LT      fEnano2P 2 
+ LT      fEnano2P120 5 
+ CHANCE  9 
+ ATGT    lP2Hab43 
+ ATLT    lP2HabBlanda 
+ NOTAT   lP2Hab47 
+ NOTAT   lP2Hab52 
+ NOTAT   lP2HabSecreta 
+ NOTAT   lP2Hab54 
+ NOTAT   lP2GalAlta 
+ NOTAT   lP2LagSubte 
+ NOTAT   lP2Hab58 
+ NOTAT   lP2Hab59 
+ NOTAT   lP2Hab91 
+ PLUS    fEnano2P 1 
+ CLS
+ NEWTEXT 
+ WRITELN "¡El enano Maluva sale de entre las sombras! Chorreando espesa baba avanza bamboleante hacia ti." 
+ PROCESS 15 ; COMPROBAR Antes Process 8 
+ EQ      fEnano2P 1 ; ALERTA Falla y no sé por qué. ¿Por poner un PAUSE antes de un CLS?
+ PAUSE 150
+ PLACE   oHacha @38 ; 255 
+ WRITELN "...¡y falla por poco!" 
+ PAUSE 100
+ WRITELN "Con un gran insulto vuelve a las tinieblas." 
+ ANYKEY  
+ ;PROCESS 17 ; COMPROBAR En 2ª parte era Process 17
+ DESC    
+
+_ _
+ NOTAT   lP2Hab03 
+ NOTAT   lP2Trono 
+ NOTAT   lP2Hab91 
+ NOTAT   lP2ApestosaJaula 
+ NOTAT   lP2Hab54 
+ NOTAT   lP2Hab19 
+ PROCESS 16 ; COMPROBAR En 2ª parte era Process 16
+
+_ _
+ AT      lP2Hab91 
+ CLEAR   fTesoros 
+ ZERO    fElfito2Phasalido 
+ DOALL   lP2Hab91 
+ ;WHATO   
+
+_ _
+ AT      lP2Hab91 
+ GT      51 oCanto ; ALERTA los tesoros son mayores que oCanto. CAMBIAR a  aTesoro
+ PLUS    fTesoros 1 
+
+_ _
+ AT      lP2Hab91 
+ EQ      fTesoros 14 
+ PAUSE   100 
+ CLS     
+ ;WINDOW  5 
+ ;PRINTAT 10 0 
+ WRITE "\1<div style='padding:0 1%; margin: 0; font-family:monospace; font-size:.7em; text-align:center'>------- LOS TESOROS DE -------</div>"
+ WRITE "\1<div style='padding:0 1%; margin: 0; font-family:monospace; font-size:.7em; text-align:center'>----- LA CAVERNA ORIGINAL ----</div>"
+  WRITELN "\1<div style='padding:0 1%; margin: 0; font-family:monospace; font-size:.7em; text-align:center'>---------- SON TUYOS ---------</div>"
+ NEWLINE
+ ANYKEY  
+ CLS     
+ ;PRINTAT 6 0 
+ WRITELN "\1<div style='padding:0 1%; margin: 0; font-size:.7em; text-align:center'>FELICIDADES</div>"
+ NEWLINE
+ WRITELN "   Aparece Elfito y te dice:"
+ NEWLINE
+ WRITELN "    «Al haber perdido todos sus tesoros La Gran Caverna no tiene razón para seguir existiendo y está a punto de derrumbarse, larguémonos cuanto antes»"
+ NEWLINE
+ WRITELN "        y se las pira..."
+ NEWLINE
+ ANYKEY  
+ CLS     
+ LET     fElfito2Phasalido 11 
+ DESC    
+
+_ _
+ NOTZERO fElfito2Phasalido 
+ MINUS   fElfito2Phasalido 1 
+ ZERO    fElfito2Phasalido 
+ CLS     
+ WRITELN "Tal como dijo Elfito, sin tesoros que le den fuerza vital, la caverna se colapsa. El cataclismo acaba con todo ser viviente." 
+ NEWLINE
+ ANYKEY  
+ CLS     
+ CLEAR   0 
+ GOTO    lP2NoHasLogrado 
+ DESC    
+
+_ _		; COMPROBAR si es necesario
+ EQ      5 1
+ WRITELN "Algo que has hecho te impide completar la aventura."
+ LET     5 4
+ DONE
+
 ;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 ;
 /PRO 3
@@ -6915,7 +9320,6 @@ EXAMINAR BOTAS
 EXAMINAR BOTELLA
  PRESENT oBotella
  OZERO oBotella aFull
- ;WRITELN "{TEXTPIC|iconobotella.svg|3}" ; COMPROBAR y hacer en todos los objetos
  WRITELN "Es de vidrio y está vacía."
  ;MESSAGE 20 
  DONE    
@@ -6989,11 +9393,12 @@ EXAMINAR RIO
  ZERO    fMoneda 
  ;MES     6 
  WRITE "Chapoteas tocando asquerosas gelatinosas babosidades "
- PAUSE   15 
+ PAUSE   100 
  ;MESSAGE 7 
  WRITELN "y de pronto descubres que hay ¡una moneda!"
  CREATE  oMoneda 
  SET     fMoneda 
+ EXTERN "previous_noun=51" ; ALERTA oMoneda ;descubres una moneda... cógela...
  DONE    
 
 EXAMINAR RIO  
@@ -7105,7 +9510,7 @@ EXAMINAR PRECI
 EXAMINAR ENANO
  AT      lLava 
  LT      fEnano 255 
- WRITELN "Como los del circo. Parece tener muy mala uva. Para comunicarte, «háblale»."
+ WRITELN "Como los del circo. Parece tener muy mala uva. Para comunicarte, «dile algo»."
  DONE    
 
 EXAMINAR COLINA
@@ -7265,7 +9670,7 @@ EXAMINAR CORTADO
  WRITELN "Ves la pared casi vertical. Imposible de escalar, ni tan siquiera teniendo el equipo adecuado. Como para intentarlo sin él: Muerte segura."
  DONE   
 
-_ LETRE
+LEER TEXTO
  AT      lPicnic 
  MESSAGE 13 
  DONE    
@@ -7284,6 +9689,11 @@ EXAMINAR FIGUR
  EQ      fElfito 2 
  MESSAGE 64 
  DONE    
+
+;EXAMINAR FIGUR
+; EQ      fElfito 3 
+; WRITELN "Tiene un aspecto peculiar."
+; DONE    
 
 EXAMINAR BRILL
  AT      lRamas 
@@ -7456,8 +9866,7 @@ EX _                        ; Es un objeto ausente
 ;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 ;
 _ _
- PAUSE   15 
- ;PAUSE   15 
+ ;PAUSE   150 
  GOTO    lMuerte 
  DESC 
 ;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
@@ -7468,12 +9877,12 @@ _ _
 ;
 _ _
  ;MESSAGE 29 
- WRITELN "La lava te reduce a cenizas."
- PAUSE   150 
- MESSAGE 43 	; Pareces estar un poco muerto.
- PAUSE   150 
+ WRITE "La lava te reduce a cenizas."
+ PAUSE   100 
+ WRITELN " Flotas en forma de nube."
+ PAUSE   100 
  ;MESSAGE 40 
- WRITELN "Flotas en forma de nube."
+ MESSAGE 43 	; Pareces estar un poco muerto.
  ANYKEY
  PROCESS 5
 ;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
@@ -7488,7 +9897,7 @@ _ _
  MESSAGE 42 
  PAUSE   150 
  MESSAGE 43 
- ANYKEY 	; COMPROBAR
+ ANYKEY 
  PROCESS 5 
 ;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 ;
@@ -7502,6 +9911,7 @@ _ _
  WRITELN "Te rompes el hocico contra la raíz del árbol."
  PAUSE   150 
  MESSAGE 43 
+ ANYKEY
  PROCESS 5 
 ;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 ;
@@ -7529,8 +9939,8 @@ AYUDA _
  WRITELN "«Cuando encuentre mi casa.»"
  DONE    
 
-;MIERDA _
- ;LET     33 119 	; Era LET 33 96 
+_ MIERDA
+ LET     33 _voc_PUTA 	; Era LET 33 96 
  			; Ya es verbo 119
 
 PUTA  _
@@ -7577,10 +9987,17 @@ _ _
 ; Conversación con Don Enano
 ;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 ;
+
+HABLAR ENANO
+ PREP CON
+ WRITELN "Concreta un poco más. Intenta «Decir, y lo que quieras preguntar»"
+ DONE
+
 _ _
  PARSE   
  WRITELN "«Pero ¿qué dices?»"
  DONE    
+
 
 AYUDA _
  WRITELN "«¡No me da la gana!»"
@@ -7624,108 +10041,1243 @@ _ _
 ;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 ;
 /PRO 11
-; Has insulado al enano. COMPROBAR porque también vale para Elfito
+; Has insulado al enano.
 ;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 _ _
  SET     fEnano 
  WRITELN "Cabreadísimo te ataca, echándose encima de ti."
  PAUSE   100 
  WRITE "Lucháis, forcejeando como dos locos, en el borde del volcán..."
- PAUSE   200 
+ PAUSE   100 
  WRITELN " ¡y os precipitáis hacia el abismo!"
- PAUSE   200 
+ PAUSE   150 
  PROCESS 6 
- OK   
+ DONE   
 ;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 ;   
 /PRO 12
-; Obsoleto. Pintaba una imagen en blanco de transición para algunos equipos
-;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-;
-;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-;
-/PRO 13
-; Rutina AD «La única salida es»
-;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-;
-;_ _
-; CLEAR   201 
-; LET     200 101 
-; PROCESS 16 
-; PROCESS 14 
-; GT      201 1 
-; MES     117 
-;_ _
-; EQ      201 1 
-; MES     118 
-
-;_ _
-; MES     @200 
-; WRITELN "." 
-;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-;
-/PRO 14
-; Runtina AD «la única salida es»
-;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-;
-;_ _
-; COPYFF  38 202 
-; MOVE    202 
-; PROCESS 15 
-
-;_ _
-; PLUS    33 1 
-; LT      33 13 
-;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-;
-/PRO 15
-; Rutina AD «las posibles salidas son»
-;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-;
-;_ _
-; EQ      201 1 
-; MES     114 
-
-;_ _
-; GT      201 1 
-; MES     116 
-
-;_ _
-; NOTZERO 201 
-; MES     @200 
-
-;_ _
-; COPYFF  33 200 
-; PLUS    200 100 
-; PLUS    201 1 
-;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-;
-/PRO 16
-; Rutina AD «la única salida es». Imprimir norte primero
-;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-;
-;_ _
-; LET     33 13 
-; COPYFF  38 202 
-; MOVE    202 
-; PROCESS 15 
-
-;_ _
-; LET     33 2 
-;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-;
-/PRO 17
 ; Comienza la aventura
 ;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-;
+
 _	_
  COMMAND 1
  GOTO 1
  DESC
+;
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 13
+; DEJALO TODO por insultar
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+_ _
+ DOALL CARRIED
+ 
+SOLTAR _
+ ;AT      lPicnic 
+ AUTOD   
+ PUTO    lHabGuarra
+ DONE    
+
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 14
+; DEJALO TODO por insultar (_ mierda)
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+_ _
+ LET 33 _voc_DEJAR
+ DOALL CARRIED
+ 
+DEJAR _
+ AUTOD   
+ DONE    
+
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 15
+; /PRO 8 de la 2ª parte
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+_ _
+ SET     7 
+ PICTURE enanomalauva.png
+ WRITELN "Te arroja con furia su hacha..." 
 
 
+;
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 16
+; Pirata ladrón
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 
+_ _
+ ISNOTAT oGarfio lP2Hab19 
+ DONE    
+
+_ _
+ WHATO   
+ LT      51 oPepita ; ALTERTA 
+ COPYFF  46 34 
+ WHATO   
+ LT      51 oPepita ; ALTERTA 
+ DONE    
+
+_ _
+ NOTEQ   54 254 
+ NOTSAME 54 38 
+ DONE    
+
+_ _
+ CHANCE  80 
+ DONE    
+
+_ _
+ PUTO    lP2Hab19 
+ ;GT      29 127 
+ ;WINDOW  7 
+ CLS     
+ ;WINDOW  2 
+ PICTURE pirata.png 
+ ;WINDOW  6 
+ ;MODE    0 
+ ;WINAT   21 0 
+ ;WINSIZE 3 127 
+ ;CLS     
+ WRITE    "Aparece el Terrible Pirata gritando: «¡Te quito {OREF} y me voy a mi entrelazada guarida!» " 
+ ;ANYKEY  
+ ;WINDOW  7 
+ ;CLS     
+ ;PROCESS 17 	; COMPROBAR En 2ª parte era Process 17 
+		; Redundante
+ ;CLS 
+ PAUSE 100    
+ WRITELN "Y con un gran insulto vuelve a las tinieblas." 
+ NEWLINE
+ ANYKEY  
+ DESC    
+
+;_ _
+; WRITELN   "Aparece el Terrible Pirata. ¡Te quito {OREF} y me voy a mi entrelazada guarida! " 
+; ANYKEY  
+; WRITELN "Con un gran insulto vuelve a las tinieblas." 
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 17
+; COMPROBAR Creo que no es necesario... era para mostrar la imagen de la localidad una vez se había cambiado por la del pirata, enano, etc.
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+_ _
+ NOTZERO 0 
+ ABSENT  oLinterna ; encendida
+ DONE    
+
+_ _
+ ;WINDOW  0 
+ ;PICTURE @38 
+ DESC
+
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 18
+; 
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+_ _
+ NOTZERO 0 
+ ABSENT  oLinterna 
+ DONE 
+
+_ _
+ AT      lP2Hab54 
+ LT      fDragon 255 
+ ;GT      29 127 
+ ;WINDOW  7 
+ ;CLS     
+ ;WINDOW  2 
+ PICTURE dragon.png
+ ;ANYKEY  
+ ;WINDOW  7 
+ ;CLS     
+
+;_ _
+; AT      lP2Hab54 
+ ;GT      29 127 
+ ;WINDOW  0 
+; PICTURE 95 	; COMPROBAR Pantalla de paso ¿?
+ ;WINDOW  1 
+
+_ _
+ AT      lP2Hab54 
+ ISLIGHT
+ WRITE "Estás en una fétida madriguera llena de caca de dragón por todos lados. El olor es insoportable, pero del norte llega una suave brisa húmeda" 
+ LT      fDragon 255 ; flag 107 dragon
+ WRITELN   ". Frente a ti tienes al «bisssssho» más grande que hayas visto jamás." 
+
+_ _
+ AT      lP2Hab54 
+ ISLIGHT
+ EQ      fDragon 255 ; flag 107 dragon
+ WRITELN   "." 
+
+_ _
+ ISLIGHT
+ ATGT    lP2HabMagica 
+ ATLT    lP2EncimaCornisa 
+ ZERO    fTroll 
+ WRITELN "¡Te bloquea un fornido Troll que ruge: «un tesoro has de dar para poder pasar»!" 
+
+_ _
+ ISLIGHT
+ AT      lP2Trono 
+ LT      fSerpiente 9 
+ WRITELN " Una enorme serpiente te observa." 
+
+_ _
+ AT      lP2CanonCamara 
+ ZERO    fPajaroVuelve 
+ WRITELN " Un pajarillo revolotea por la estancia." 
+
+_ _
+ ISLIGHT
+ AT      lP2EscudoGigante 
+ ZERO    fPuerta 
+ WRITELN "Aquí hay una puerta herrumbrosa." 
+
+_ _
+ ISLIGHT
+ AT      lP2EscudoGigante 
+ EQ      fPuerta 1 
+ WRITELN "Ves que la puerta está bien aceitada." 
+
+_ _
+ ISLIGHT
+ AT      lP2EscudoGigante 
+ GT      fPuerta 1 
+ WRITELN "La puerta está abierta." 
+
+_ _
+ ISLIGHT
+ ATGT    lP2Hab19 
+ ATLT    lP2Maquina 
+ PICTURE 48
+ WRITE   "Estás en un" 
+ AT      lP2Hab20 
+ WRITE   " laberinto de" 
+ WRITE   " ovales" 
+ WRITE   " pasillos"
+ WRITE   " intercomunicados" 
+
+_ _
+ AT     lP2Maquina
+ PICTURE 48
+
+;_ _
+; AT     lP2AbismoNe
+; PICTURE 102 ; En Atari ST es la misma imagen que al otro lado del puente
+; 		pero lo vamos a cambiar por una imagen girada XD
+
+_ _
+ ISLIGHT
+ AT      lP2Hab21 
+ WRITE   " intercomunicado" 
+ WRITE   " laberinto de" 
+ WRITE   " pasillos" 
+ WRITE   " ovales" 
+
+_ _
+ ISLIGHT
+ AT      lP2Hab22 
+ WRITE   " laberinto de" 
+ WRITE   " intercomunicados"
+ WRITE   " pasillos"
+ WRITE   " ovales" 
+
+_ _
+ ISLIGHT
+ AT      lP2Hab23 
+ WRITE   " intercomunicado" 
+ WRITE   " laberinto de" 
+ WRITE   " ovales" 
+ WRITE   " pasillos"
+
+_ _
+ ISLIGHT
+ AT      lP2Hab24 
+ WRITE   " laberinto de" 
+ WRITE   " pasillos"
+ WRITE   " ovales" 
+ WRITE   " intercomunicados"
+
+_ _
+ ISLIGHT
+ ATGT    lP2Hab19 
+ ATLT    lP2Maquina 
+ ;SYSMESS 4 
+ WRITELN ". "
+
+_ _
+ AT     lP2DosFosos
+ PICTURE 94
+
+_ _
+ ISLIGHT
+ AT      lP2FondPozoOes 
+ ZERO    fJudias 
+ WRITELN "En el suelo hay unas semillas de judías." 
+
+_ _
+ ISLIGHT
+ AT      lP2FondPozoOes 
+ EQ      fJudias 1 
+ WRITELN "Aquí hay una tierna plantita de judías." 
+
+_ _
+ ISLIGHT
+ AT      lP2FondPozoOes 
+ GT      fJudias 1 
+ WRITELN "Aquí hay una planta de judías cuyo tronco es enorme. Sale por el agujero superior." 
+
+_ _
+ ISLIGHT
+ AT      lP2ApestosaJaula 
+ ZERO    fOso 
+ WRITELN " ¡Un enorme oso tira con furia de su cadena para darte un abrazo de bienvenida!" 
+
+_ _
+ ISLIGHT
+ AT      lP2ApestosaJaula 
+ EQ      fOso 2 
+ WRITELN " El oso Peposo está encadenado." 
+
+_ _
+ AT      lP2ApestosaJaula 
+ EQ      fOso 255 
+ PICTURE loc117osolibre.png
+
+_ _
+ AT      lP2ApestosaJaula 
+ EQ      fOso 1 
+ PICTURE loc117vacia.png
+
+_ _
+ ISLIGHT
+ EQ      fOso 255 ; flag 111 Oso
+ WRITELN " El oso viene contigo. " 
+
+_ _
+ ISLIGHT
+ ATGT    lP2Hab13 
+ ATLT    lP2Hab20 
+ PICTURE 42
+ WRITE   "Estás en un" 
+ AT      lP2Hab14 
+ WRITE   " laberinto de" 
+ WRITE   " pequeñas" 
+ WRITE   " habitaciones" 
+ WRITE   " entrelazadas" 
+
+_ _
+ ISLIGHT
+ AT      lP2Hab15 
+ WRITE   " pequeño" 
+ WRITE   " laberinto de" 
+ WRITE   " habitaciones" 
+ WRITE   " entrelazadas" 
+
+_ _
+ ISLIGHT
+ AT      lP2Hab16 
+ WRITE   " entrelazado" 
+ WRITE   " laberinto de" 
+ WRITE   " habitaciones" 
+ WRITE   " pequeñas" 
+ ;SYSMESS 4 
+ WRITELN ". "
+ WRITE   "Hay un agujero en el suelo" 
+
+_ _
+ ISLIGHT
+ AT      lP2Hab17 
+ WRITE   " pequeño" 
+ WRITE   " laberinto de" 
+ WRITE   " entrelazadas" 
+ WRITE   " habitaciones" 
+
+_ _
+ ISLIGHT
+ AT      lP2Hab18 
+ WRITE   " laberinto de" 
+ WRITE   " habitaciones" 
+ WRITE   " pequeñas" 
+ WRITE   " entrelazadas" 
+
+_ _
+ ISLIGHT
+ AT      lP2Hab19 
+ WRITE   " entrelazado" 
+ WRITE   " laberinto de" 
+ WRITE   " pequeñas" 
+ WRITE   " habitaciones" 
+ ;SYSMESS 4 
+ WRITELN ". "
+ WRITE   "Estás en la guarida del pirata cleptómano" 
+
+_ _
+ ISLIGHT
+ ATGT    lP2Hab13 
+ ATLT    lP2Hab20 
+ ;SYSMESS 4 
+ WRITELN ". "
+
+_ _
+ ISLIGHT
+ ATGT    lP2DensoVapor 
+ ATLT    lP2VariasSalidas 
+ WRITE   " El precipicio queda al " 
+ ZERO    fLocFisuraIzda ; flag está a la derecha
+ WRITE   "oeste"
+ WRITELN "." 
+ DONE    
+
+_ _
+ ISLIGHT
+ ATGT    lP2DensoVapor 
+ ATLT    lP2VariasSalidas 
+ WRITE     "este" 
+ WRITELN "." 
+
+
+_ _
+ AT     lP2NoHasLogrado
+ PICTURE 29   
+ COMMAND 0 ; ALERTA dejar activo
+ WRITE "Has dado "
+ PRINT  31 
+ WRITELN " órdenes."
+ NEWLINE
+ WRITELN "{RESTART|Volver a jugar}"
+ TIME    0 0
+
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 19
+; Dragón
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+_ _
+ NOTZERO 0 
+ ABSENT  oLinterna ; encendida 
+ DONE    
+
+_ _
+ EQ      fDragon 1 
+ WRITELN "Chorreando espesa baba avanza bamboleante hacia ti." 
+
+_ _
+ EQ      fDragon 2 
+ WRITELN "Mirándote amenazante desde lo alto, ruge: ¡Serás un buen bocata!" 
+
+_ _
+ EQ      fDragon 3 
+ WRITELN "¡Qué rico! Exclama relamiéndose, otro aventurero para cenar." 
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 20
+; DAR cosas
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _
+ AT      lP2Hab54 
+ EQ   fDragon 255
+ WRITELN "No ves al dragón por ninguna parte."
+ DONE
+
+_ _
+ AT      lP2ApestosaJaula 
+ EQ      fOso 1 
+ WRITELN "Peposo no está aquí."
+ DONE
+
+_ _
+ ATGT    lP2HabMagica 
+ ATLT    lP2EncimaCornisa 
+ NOTZERO    fTroll 
+ WRITELN "No ves al troll."
+ DONE
+
+; Ya se ha mirado si existe y si se lleva en la llamada «Process 20» pero no si están el troll, oso y dragón.
+DOY   TORTI
+ AT      lP2ApestosaJaula 
+ ZERO    fOso 
+ LET     fOso 2 
+ WRITELN "Peposo se tranquiliza, come la tortilla y agradecido te lame la sucia cara. Tienes un fiel amigo." 
+ DESTROY oTortilla 
+ DONE    
+
+DAR LINTERNA
+ AT      lP2Hab54 
+ SET 0
+ WRITE "Se ha comido la linterna. Y ahora no crees que haya sido una buena idea... "
+ WRITELN "porque todo se queda a oscuras"
+ DESTROY oLinterna
+ ANYKEY
+ DESC
+
+DOY   LINTERNA
+ AT      lP2ApestosaJaula 
+ SET 0 
+ WRITE "Aunque no pensaste que fuera capaz, se ha comido la linterna. Y puede que no haya sido una buena idea... "
+ PAUSE 100
+ WRITELN "porque todo se queda a oscuras"
+ DESTROY oLinterna
+ ANYKEY
+ DESC    
+
+DOY   LINTERNA
+ ATGT    lP2HabMagica 
+ ATLT    lP2EncimaCornisa 
+ WRITE "¡No intentes engañarme! Esto no es un tesoro. Y cabreado tira la linterna al abismo." 
+ SET 0 
+ WRITE " Puede que no haya sido una buena idea... "
+ PAUSE 100
+ WRITELN "porque todo se queda a oscuras"
+ NEWLINE
+ DESTROY oLinterna
+ ANYKEY
+ DESC    
+
+DOY   _
+ AT      lP2Hab54 
+ DESTROY @51
+ WRITELN "El dragón se ha comido {OREF}." 
+ DONE    
+
+DOY   _
+ AT      lP2ApestosaJaula 
+ DESTROY @51
+ WRITELN "El oso se ha comido {OREF}."  
+ DONE    
+
+DOY   _
+ NOTAT   lP2AbismoNe 
+ GT      fOso 1 
+ DESTROY @51
+ WRITELN "Se ha comido {OREF}." 
+ DONE    
+
+DOY   _ ; COMPROBAR Creo que redundante
+ NOTAT   lP2AbismoNe 
+ GT      fOso 1 
+ WRITELN "Pero... ¡Si no tienes eso!" 
+ DONE    
+
+DOY   _ ; COMPROBAR Creo que redundante
+ AT      lP2ApestosaJaula 
+ WRITELN "Pero... ¡Si no tienes eso!" 
+ DONE    
+
+DOY   _
+ ATGT    lP2HabMagica 
+ ATLT    lP2EncimaCornisa 
+ LT      51 oPepita ; ALERTA 
+ WRITELN "¡No intentes engañarme! Esto no es un tesoro. Y cabreado tira {OREF} al abismo." 
+ DESTROY @51
+ DONE    
+   
+
+DOY   _
+ ATGT    lP2HabMagica 
+ ATLT    lP2EncimaCornisa 
+ PUTO    lP2Hab01 
+ WRITELN "¡Cojo {OREF}. Pasa aventurero cobardica!" 
+ SET     fTroll ; flag ¿Troll te deja pasar?
+ DONE    
+
+;DOY   _
+; NOTEQ   54 254 
+; WRITELN "Pero... ¡Si no tienes eso!" 
+; DONE    
+
+DOY   _
+ WRITELN "No puedes hacerlo." 
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 21
+; Recolector. Era /PRO 15 en la 2ª parte
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+_ _
+ ;WINDOW  7 
+ CLS     
+ ;WINDOW  4 
+ ;WINSIZE 24 127 
+ ;PRINTAT 0 12 
+ ;LT      29 128 
+ ;PRINTAT 0 26 
+
+_ _
+ WRITELN "\1<div style='padding:2em 2%; text-align:center; font-size:1.5em'>*** RECOLECTOR DE TESOROS ***</div>" 
+ NEWLINE
+ LET     fTesorosFaltan 14 
+ DOALL   @38 ; Era 255 = Here?
+ ;WHATO   
+ GT      51 oCanto ; ALERTA. CAMBIAR a  aTesoro
+ WRITELN "Tesoro: {OREF}" 
+ MINUS   fTesorosFaltan 1 
+
+_ _
+ GT      51 oCanto ; ALERTA. CAMBIAR a  aTesoro
+ WRITELN "Tesoro: {OREF}" 
+ MINUS   fTesorosFaltan 1 
+
+_ _
+ LT      51 oPepita ; ALERTA. CAMBIAR a  aTesoro
+ WRITELN "Objeto: {OREF}" 
+ NEWLINE 
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 22
+; Muerte 2ª parte
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+_ _
+ WRITELN "Caes por el precipicio y te estampas contra el suelo." 
+ ANYKEY  
+ GOTO    lP2NoHasLogrado 
+ CLEAR   0 
+ DESC    
+
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 23
+; Era /PRO 7 en la 2ª parte
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+_ _
+ CLS
+ PICTURE dragon.png 
+ WRITELN "¡Vale gran mago! El pajarillo se transforma en dragón, y de un flamazo te incinera. " 
+ NEWLINE
+ ANYKEY
+ GOTO    lP2NoHasLogrado 
+ CLEAR   0 
+ DESC    
+
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;   
+
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 24
+; Ayuda 2ª parte. Era /PRO 5 en la 2ª parte
+; COMPROAR Casi todas dependen de localizaiones: juntar con el otro PRO de ayuda
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+_ _
+ ATGT    lP2Hab13 
+ ATLT    lP2Hab26 
+ WRITELN "Intenta hacerte un mapa." 
+ DONE    
+
+_ _
+ AT      lP2HabMagica 
+ WRITELN "Utiliza la magia." 
+ DONE    
+
+_ _
+ AT      lP2CaminoGuijarros 
+ WRITELN "Utiliza la magia." 
+ DONE    
+
+_ _
+ AT      lP2SalaAcustica 
+ WRITELN "Usa otros sentidos o la magia." 
+ DONE    
+
+_ _
+ AT      lP2AnchaFisura 
+ WRITELN "Utiliza la magia." 
+ DONE    
+
+_ _
+ NOTCARR oLinterna ; COMPROBAR ha de estar encendida
+ ;ISNOTLIGHT ? 
+ WRITELN "¡Busca luz!" 
+ DONE    
+
+_ _
+ AT      lP2DensoVapor 
+ ZERO    fPepita
+ WRITELN "¡Aparta la niebla!" 
+ DONE    
+
+_ _
+ AT      lP2DensoVapor 
+ WRITELN "Ya no hay nada más que hacer aquí." 
+ DONE 
+
+_ _
+ WRITELN "¡Piensa un poco! Es fácil. " 
+ DONE    
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 25
+; Examinar 2ª parte. Era /PRO 4 en la 2ª parte
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+_ ROCA
+ AT 		lP2SalaAcustica 
+ LET 		33 _voc_TOCAR
+ LET 		34 _voc_PILAR
+
+TOCO PILAR
+ AT      lP2SalaAcustica 
+ WRITELN "Las letras están grabadas en la piedra."  
+ DONE    
+
+_ _
+ NOTZERO 0 
+ ABSENT  oLinterna 
+ ;COMPROBAR -> ISNOTLIGHT
+ WRITELN "No se ve bien." 
+ DONE    
+
+_ TRONCO
+ AT      lP2FondPozoOes 
+ EQ      fJudias 1 
+ WRITELN "Es una tierna plantita. Todavía le falta por crecer." 
+ DONE    
+
+_ TRONCO
+ AT      lP2FondPozoOes 
+ GT      fJudias 1 
+ WRITELN "Vaya con la «plantita». Podrías trepar por ella." 
+ DONE 
+
+_ TRONCO
+ AT      lP2FondPozoOes 
+ WRITELN "¡Agua, agua!" 
+ DONE    
+
+_ ESPEJO
+ AT      lP2GalAlta 
+ WRITELN "El espejo, en estos momentos, solo refleja la ventana vacía de la habitación situada al otro lado del abismo." 
+ DONE    
+
+_ FIGURA
+ AT      lP2Mirador 
+ LET 34 _voc_VENTANA
+
+;----------------- condactos de la 2ª parte ----------------------
+_ ALFOMBRA
+ EQ 		44 255
+ AT 		lP2HabBlanda
+ WRITELN 	"La alfombra cubre el suelo de toda esta habitación." 
+ DONE  
+
+_ TEXTO 	;Texto viene de PARED
+ AT 		lP2HabBlanda
+ WRITELN 	"¡Puaj! Qué asco. Están recubiertas de moho." 
+ DONE  
+
+_ TEXTO 	;Texto viene de PARED
+ AT 		lP2EncimaCornisa
+ WRITELN 	"Lo único llamativo son las ventanas por las que no llegas a ver." 
+ DONE  
+
+_ VENTANA
+ AT 		lP2Mirador 
+ WRITELN 	"La figura te imita." 
+ DONE  
+
+_ OSTRA
+ AT      lP2HabMarina 
+ WRITELN "Neptuno las abría fácilmente con sus tres dientes." 
+ DONE    
+
+_ LLAVE ; COMPROBAR ¿Dos descripciones?
+ CARRIED oLlave 
+ WRITELN "Es la llave del zoológico subterráneo de los Reyes Elfos." 
+ DONE    
+
+_ CACA 
+ AT      lP2Hab54 
+ WRITELN "Debido a tu retorcida curiosidad te pringas todo. ¡Cochino!" 
+ DONE    
+
+_ PUENTE
+ ATGT    lP2HabMagica 
+ ATLT    lP2EncimaCornisa 
+ WRITELN "Es un puente colgante muy peligroso porque las tablas de las que está hecho seguramente estén podridas." 
+ DONE    
+
+_ PUENTE
+ AT      lP2PuenteMagico 
+ WRITELN "Es un puente mágico que cambia de color según el lugar de donde lo mires." 
+ DONE    
+
+_ PRECIPICIO
+ AT 		lP2AnchaFisura
+ WRITELN 	"La grieta es demasiado grande para poder atravesarla."
+ DONE
+
+_ HACHA
+ AT      	lP2EscudoGigante 
+ WRITELN 	"El hacha es muy grande. De un tamaño descomunal." 
+ DONE    
+
+_ ESCUDO
+ AT      	lP2EscudoGigante 
+ WRITELN 	"Es muy grande. Tanto como el hacha." 
+ DONE    
+
+_ PUERTA
+ AT      	lP2EscudoGigante 
+ ZERO 		fPuerta
+ WRITELN 	"Dirías que no puede moverse ni un milímetro con el óxido que tiene." 
+ DONE    
+
+_ PUERTA
+ AT      lP2EscudoGigante 
+ EQ fPuerta 1
+ WRITELN "La puerta está bien aceitada. Seguro que se abre." 
+ DONE    
+
+_ PUERTA
+ AT      lP2EscudoGigante 
+ WRITELN "La puerta está abierta. Parecía mentira." 
+ DONE    
+
+_ DRAGON
+ AT 	 lP2Hab54
+ NOTEQ   fDragon 255
+ WRITELN "Es enorme y fiero. Te tiemblan las piernas al verlo."
+ DONE
+
+_ LAGUNA
+ AT 		lP2LagSubte
+ WRITELN 	"El agua es cristalina pero pensar que el dragón se bañaba aquí te quita las ganas de bañarte."
+ DONE
+
+_ MAQUINA
+ AT 	 lP2Maquina
+ WRITELN "Tiene una ranura y un apartado para poner pilas."
+ DONE
+
+_ TORTILLA ; COMPROBAR ¿Hay dos descripciones?
+ PRESENT oTortilla 
+ WRITELN "Se la comería hasta un oso." 
+ DONE    
+
+_ CHARCO
+ AT 		lP2Mirador
+ WRITELN 	"Aunque no es muy grande, es un charco de agua bastante limpia."
+ DONE
+
+_ NIEBLA
+ AT 		lP2DensoVapor
+ WRITELN 	"La niebla es tan densa aquí que podría haber cualquier cosa y no podrías verla."
+ DONE
+
+_ NIEBLA
+ AT 		lP2Mirador
+ WRITELN 	"Ves la niebla a lo lejos, espesa... misteriosa."
+ DONE
+
+_ VAPOR
+ AT 		lP2AnchaFisura
+ WRITELN 	"La misteriosa niebla parece comenzar aquí."
+ DONE
+
+_ NIEBLA
+ AT 		lP2VariasSalidas
+ WRITELN 	"La niebla no es muy espesa aquí."
+ DONE
+
+_ NIEBLA
+ AT 		lP2Agujero 
+ WRITELN 	"Ves la niebla quedesaparece en tenues retazos."
+ DONE
+
+_ NIEBLA
+ AT 		lP2Mirador
+ WRITELN 	"Ves la niebla a lo lejos, espesa... misteriosa."
+ DONE
+
+_ NIEBLA
+ AT 		lP2VariasSalidas
+ WRITELN 	"La niebla es bastante molesta. Suerte que no es tan densa como en otras partes de la caverna."
+ DONE
+
+_ RAMPA
+ AT 		lP2InclCor
+ WRITELN 	"La rampa desciende de forma bastante pronunciada."
+ DONE
+
+_ RAMPA
+ AT 		 lP2FinalCor
+ WRITELN 	"La rampa acaba aquí. Qué lugar más extraño."
+ DONE
+
+_ DEPOSITO
+ AT 		 lP2DepoFosoEst
+ WRITELN 	"El aceite se acumula en esa zona de ahí, en un charco. Da un poco de asco."
+ DONE
+
+_ SUELO
+ AT 		lP2GalAlta
+ LET 		34 _voc_AGUJERO
+
+_ SUELO
+ AT 		lP2HabSecreta
+ LET 		34 _voc_AGUJERO
+
+_ AGUJERO
+ AT 		lP2HabSecreta
+ WRITELN 	"El agujero es lo suficientemente grande como para que pases por él. ¿Hacia dónde va? Deberás averiguarlo tú."
+ DONE
+
+_ AGUJERO
+ AT 		lP2HabSecreta
+ WRITELN 	"No se ve a dónde va a parar el agujero. Ya que quieres meter la cabeza, atraviésalo que será más seguro."
+ DONE
+
+_ AGUJERO
+ AT 		lP2FondPozoOes
+ WRITELN 	"Por el agujero entra la luz... mmm..."
+ DONE
+
+_ TRONO
+ AT 		lP2Trono
+ WRITELN 	"Es un trono bastante grande adornados con intrincados dibujos. No sabes si significan algo."
+ DONE
+
+_ TROFEOS
+ AT 		lP2Trono
+ WRITELN 	"No sabrías decir qué son excepto que son antiguos trofeos pero no parecen tener mucho valor."
+ DONE
+
+_ TAPIZ
+ AT 		lP2Trono
+ WRITELN 	"Debían ser bellísimos cuando eran nuevos. Ahora, son solo una sombra de lo que fueron."
+ DONE
+
+_ CUADLOS
+ AT 		lP2HabOlien
+ WRITELN 	"Son pleciosos. O al menos eso clees polque son un poco lalos. No palecen tenel mucho valol."
+ DONE
+
+_ SEDAS
+ AT 		lP2HabOlien
+ WRITELN 	"Pleciosas telas de seda natural. Piensas de qué podlía servirte pelo no se te oculle nada."
+ DONE
+
+_ LUZ
+ AT 		lP2Alcoba
+ WRITELN 	"La luz parece venir de otro lugar. Es totalmente artificial."
+ DONE
+
+_ ESCALERA
+ AT 		lP2DensoVapor
+ WRITELN 	"Es una escalera de piedra, algo resbaladiza pero podrás usarla."
+ DONE
+
+_ PUERTA
+ AT 		lP2HabMagica
+ WRITELN 	"No tiene mucho misterio. Es una puerta, de madera, bastante fea."
+ DONE
+
+_ ROCA
+ AT 		lP2HabParedesCal
+ WRITELN 	"Aunque la visión es espectacular, no deberías quedarte aquí mucho tiempo."
+ DONE
+
+_ ANIMAL
+ AT 		lP2HumPasadInc
+ WRITELN 	"Por la peste que hace aquí, ha vivido mucho tiempo aquí. "
+ DONE
+
+_ LINTERNA
+ NOTZERO fLintPilas 
+ LET     34 _voc_PILA 
+
+_ PILA
+ ABSENT oLinterna
+ WRITELN "No la ves por aquí."
+ DONE
+
+_ PILA
+ OZERO oLinterna aOn
+ WRITE "La linterna está apagada. "
+
+_ PILA
+ ONOTZERO oLinterna aOn
+ WRITE "La linterna está encendida. "
+
+
+;_ PILAS
+; NOTZERO fLintPilas 
+; ABSENT  oLinterna 
+ ;ABSENT  2 
+; WRITELN "Pero... ¡Si no tienes eso!" 
+; DONE    
+
+_ PILAS
+ ZERO    fLintPilas 
+ ABSENT  oPila 
+ WRITELN "No tiene la pila." 
+ DONE    
+
+_ PILAS
+ WRITE   "Nivel de energia de la pila: " 
+ NOTZERO 8 
+ PRINT   8 
+ NEWLINE 
+ DONE    
+
+_ PILAS
+ WRITELN "altísimo." 
+ DONE    
+
+_ BARROTES 
+ AT      lP2Hab03 
+  WRITELN "¡Es demasiado fuerte para ti, forastero!"  
+ DONE    
+
+_ BARROTES 
+ AT      lP2HumPasadInc 
+ ZERO    fJaula 
+ WRITELN "¡Es demasiado fuerte para ti, forastero!"  
+ DONE    
+
+_ BARROTES 
+ PRESENT oJaula ; sin pájaro 
+ OZERO oJaula aPajaro
+ WRITELN "La jaula está vacía." 
+ DONE    
+
+_ BARROTES 
+ CARRIED oJaula ; con pájaro 
+ ONOTZERO oJaula aPajaro
+  WRITELN "Tienes al pájaro enjaulado." 
+ DONE    
+
+_ PAJARO
+ CARRIED oJaula ; con pájaro 
+ ONOTZERO oJaula aPajaro
+  WRITELN "Tienes al pájaro enjaulado." 
+ DONE    
+
+_ PAJARO
+ AT      lP2CanonCamara 
+ WRITELN "Está volando." 
+ DONE    
+
+_ TEXTO 	;Texto viene de PARED
+ AT 		lP2HabQues
+ WRITELN 	"¿Se podrán comer las paredes?."
+ DONE
+
+_ TEXTO
+ AT      lP2DensoVapor 
+ WRITELN "«En este lugar perdió el Rey Elfo una pepita de oro.»" 
+ DONE    
+
+_ TEXTO
+ AT      lP2CaminoGuijarros 
+ WRITELN "Pone XYZZY." 
+ DONE    
+
+_ TEXTO
+ AT      lP2SalaAcustica 
+ WRITELN "Pone «OID»." 
+ DONE    
+
+_ TEXTO
+ AT      lP2HabNegra 
+ WRITELN "Pone: «GRACIAS POR HABER TRAÍDO LUZ A ESTA TRISTE HABITACIÓN»" 
+ DONE    
+
+_ TEXTO
+ AT      lP2EscudoGigante 
+ WRITELN "Pone: «FEE FIE FOE FOO». Lee justo después de la descripción. ¿Estás de beta tester o qué?" 
+ DONE  
+
+_ TEXTO
+ WRITELN "Mmm... Aquí las paredes no tienen mucho interés."
+ DONE
+
+_ SERPIENTE
+ AT      lP2Trono 
+ LT      fSerpiente 9 
+ WRITELN "La serpiente se está poniendo nerviosa." 
+ DONE    
+
+_ FISURA
+ ATGT    lP2DensoVapor 
+ ATLT    lP2VariasSalidas 
+ WRITELN "Es una grieta tan profunda que no ves dónde acaba." 
+ DONE    
+
+_ GRIETA
+ ATGT    lP2HabMagica 
+ ATLT    lP2EncimaCornisa 
+ WRITELN "La grieta es tan profunda que crees perder el conocimiento al mirar." 
+ DONE    
+
+_ TROLL
+ ZERO    fTroll 
+ ATGT    lP2HabMagica 
+ ATLT    lP2EncimaCornisa 
+ WRITELN "El troll da mucho miedo. No sabes cómo puede reaccionar..." 
+ DONE    
+
+_ PEPOSO
+ AT      lP2ApestosaJaula 
+ NOTEQ      fOso 1 
+ WRITELN "Ahora ya sabes qué animal era el que hacía tanta peste."
+ DONE
+
+_ VOLCAN
+ ATGT    lP2HabMagica 
+ ATLT    lP2EncimaCornisa 
+ WRITELN "Sudas la gota gorda del calor que hace en el interior del volcán." 
+ DONE    
+
+_ GASES
+ ATGT    lP2HabMagica 
+ ATLT    lP2EncimaCornisa 
+ WRITELN "Apesta aquí. Te recuerdan a los gases de fuera de la caverna. " 
+ DONE    
+
+_ CORNISA
+ AT 		lP2EncimaCornisa
+ WRITELN 	"La cornisa es artificial. No sabes cuánto tiempo debe hacer que está aquí." 
+ DONE    
+
+
+_ PILAR
+ AT      lP2CaminoGuijarros 
+ WRITELN "Las letras, enormes, están grabadas en la piedra de una forma muy tosca." 
+ DONE    
+
+_ PILAR
+ AT      lP2SalaAcustica 
+ WRITELN "Las letras son bastante sutiles. Están grabadas en la piedra." 
+ DONE    
+
+_ BOTELLA
+ CARRIED oBoteAceite
+ WRITELN "La botella está llena de un aceite muy denso." 
+ DONE   
+
+_ BOTELLA
+ CARRIED oBotella
+ OZERO oBotella aFull
+ WRITELN "La botella está vacía." 
+ DONE   
+
+_ BOTELLA
+ CARRIED oBotella
+ WRITELN "La botella está llena de agua." 
+ DONE 
+
+_ VARITA
+ PRESENT oVarita
+ WRITE "Es mágica. A ver, úsala a ver qué pasa. Aparte de eso, " 
+  
+_ CANTO
+ PRESENT oCanto
+ WRITE "Es... una piedra, redonda y bastante fea. Aparte de eso, " 
+
+_ SUELO
+ WRITELN 	"No ves nada que te llame la atención. Pierdes el tiempo."
+ DONE
+
+_ _
+ WHATO   
+
+_ _
+ EQ 51 255
+ WRITELN "No ves eso por aquí."
+ DONE
+
+_ _
+ ABSENT @51 
+ WRITELN "No ves {OREF} por aquí." 
+ DONE  
+
+_ _
+ PRESENT @51 
+ GT      51 oCanto ; ALERTA. CAMBIAR a  aTesoro
+ WRITELN "{OREF} es un tesoro." 
+ DONE    
+
+_ _
+ PRESENT @51 
+ LT      51 oPepita ; ALERTA. CAMBIAR a  aTesoro
+ WRITELN "{OREF} es un objeto." 
+ DONE    
+
+_ _
+ NOTDONE
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+;
+/PRO 26
+; Decidir si hay luz 2ª parte. COMPRUEBA SI ADAPTAR A TODO EL JUEGO
+; TODO Pasar todas las habitaciones con usos especiales de 
+;   la luz (entrada 2ª parte), habmagica
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+_ _
+ ATLT 		lP2PasadizoBajo
+ DONE
+
+_ _
+ AT   lP2Hab91
+ DONE
+
+_ _
+ AT   lP2HabMagica 
+ DONE
+
+_ _
+ ABSENT 	oLinterna
+ SET 		0 
+
+_ _
+ PRESENT 	oLinterna
+ OZERO 		oLinterna aOn 
+ SET 		0 
+
+_ _
+ PRESENT 	oLinterna
+ ONOTZERO 	oLinterna aOn
+ CLEAR 		0 
+ 
+
+ 
+;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 
 ; TO DO
@@ -7734,11 +11286,11 @@ _	_
 ; ampliar EXAMINAR cosas. Que sea más rico el juego
 ; Hacer una pasada por todos los «; COMPROBAR»
 
-;CSS en pantalla pequeña debería hacer subir el texto como en landscape
+;DONE CSS en pantalla pequeña debería hacer subir el texto como en landscape
 ;CSS las imágenes en pantalla pequeña deberían mantener la escala 
 
-;COMPROBAR contraseñas... cuando tienes los elementos que se necesitan. En lFrontera
-;Arreglar la zona de insultos
+;DONE COMPROBAR contraseñas... cuando tienes los elementos que se necesitan. En lFrontera
+;DONE Arreglar la zona de insultos
 
 
 ;DONE     ; Comprobar flags y bits de control
@@ -7806,3 +11358,107 @@ _	_
 ;DONE La rama se mueve y se mueve.
 ;DONE > coger rama
 ;DONE No ves eso por aquí.
+
+
+;> me cago en dios
+;Hay una fuerte reja metálica cerrada con un candado.
+;Detecta EN como ENTRAR
+
+;COMPROBAR examinar dentro de la caverna
+;DONE COMPROBAR encender apagar linterna en caverna
+;DONE COMPROBAR retorno de Recolector sin luz, se ha de comprobar linterna
+
+;     COMPROBAR Después de cargar pila, no se ve al mirar.
+;NOPE Está a oscuras así que no se listaría.
+
+;DONE COMPROBAR Linterna sin pila, se puede encender 
+
+;DONE El enano malauva apareix massa contantment. Et mata sempre a les llavors
+
+;DONE COMPROBAR Ha de ser sinónimo de ATACAR DRAGÓN
+;DONE > asusta dragon
+;DONE ¿Perdón?
+
+;DONE > ex dragon
+;DONE No ves eso por aquí.
+
+;DONE Dar linterna
+;DONE Se la das per no se apaga la luz.
+
+;DONE En el Recolector:
+;DONE se listan los tesoros pero no en columna
+
+;DONE Sacar pila
+;DONE En localidad de la máquina. Hace un DESC. No apaga la luz!
+
+;DONE Falta imagen
+;DONE Estás en una fétida madriguera llena de caca de dragón por todos lados. 
+
+;DONE falta imagen
+;DONE  PUTO    lP2Hab19 
+;pirata
+
+;DONE A esta laguna subterranea formada por el agua del rio del valle venía a beber y tomar baños el dragón cobarde.
+;DONE > llenar botella
+;DONE No puedes llenarla si no hay agua cerca.
+;DONE > llenar botella en rio
+;DONE No puedes llenarla si no hay agua cerca.
+
+;DONE Llenar botella en charco de aceite, la llena de agua
+
+;DONE Al haber regado una vez las judías, da el mismo texto al volver / mirar:
+;DONE WRITELN "Absorbiendo ávidamente el precioso líquido las semillas se hinchan, se abren y de ellas nace una tierna plantita de judías." 
+
+;DONE  El enano sigue yendo raro (¿Soy yo que no lo leo o a veces te mata sin posibilidad de tirarle el hacha?)
+
+;DONE El hacha y el escudo del gigante llenan casi por completo este lugar. En la pared se lee: FEE FIE FOE FOO.
+;DONE > lee pared
+;DONE No ves eso por aquí.
+;DONE > ex pared
+;DONE No ves eso por aquí.
+;DONE > ex puerta
+;DONE No ves eso por aquí.
+
+;DONE Llenar botella en foso con aceite, con la botella llena: No cabe más agua
+
+;DONE Si no tienes la botella
+;DONE > riega semillas
+;DONE ¿Perdón?
+;DONE > ex botella
+;DONE > vacia botella
+;DONE No puedes hacerlo.
+
+;DONE El hacha y el escudo del gigante llenan casi por completo este lugar. En la pared se lee: FEE FIE FOE FOO.
+;DONE Aquí hay una puerta herrumbrosa.
+;DONE > dentro
+;DONE ¡Algo te impide pasar!
+;DONE > abre puerta
+;DONE No le ves sentido a abrir eso.
+;DONE > ex puerta
+;DONE No ves eso por aquí.
+;DONE > ex hacha
+;DONE Es muy grande.
+;DONE > cogela
+;DONE Ya tienes la hacha.
+;DONE > ex escudo
+;DONE No ves eso por aquí.
+
+
+;DONE > vacia botella
+;DONE Hay una puerta bien aceitada.
+
+
+;DONE El oso Peposo está encadenado.
+;DONE > libera oso
+
+;Check CSS. Cuando el historial es muy largo queda oculto por la línea de comandos
+
+;REVISA
+;Llena botella
+;> lanzale hacha
+;La botella se ha roto en el suelo.
+;> lanza hacha
+;¡Le has cortado la cabeza! ¡Maluva se desintegra junto con su hacha!
+
+; la hacha es un objeto
+; la hueso humano
