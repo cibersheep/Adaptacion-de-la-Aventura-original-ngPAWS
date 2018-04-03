@@ -9690,10 +9690,17 @@ EXAMINAR FIGUR
  MESSAGE 64 
  DONE    
 
-;EXAMINAR FIGUR
-; EQ      fElfito 3 
-; WRITELN "Tiene un aspecto peculiar."
-; DONE    
+EXAMINAR FIGUR
+ AT      lBosqueCer
+ GT      fElfito 2 
+ LT      fElfito 5 
+ WRITELN "Tiene un aspecto peculiar."
+ DONE    
+
+EXAMINAR FIGUR
+ EQ      fElfito 4 
+ WRITELN "Tiene un aspecto peculiar."
+ DONE
 
 EXAMINAR BRILL
  AT      lRamas 
