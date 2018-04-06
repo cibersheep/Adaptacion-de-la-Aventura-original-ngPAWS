@@ -27408,6 +27408,8 @@ vocabulary.push([120, "VENIR", 0]);
 vocabulary.push([73, "VENTA", 1]);
 vocabulary.push([145, "VENTANA", 1]);
 vocabulary.push([120, "VENTE", 0]);
+vocabulary.push([89, "VERJA", 1]);
+vocabulary.push([89, "VERJAS", 1]);
 vocabulary.push([70, "VERSION", 0]);
 vocabulary.push([86, "VERTER", 0]);
 vocabulary.push([86, "VERTIR", 0]);
