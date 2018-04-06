@@ -4410,7 +4410,7 @@ DAR ZAPATOS
  EXTERN "previous_noun=50" 	; Para que se pueda decir «cógela» y entienda «la linterna» después
  				; de que la deje el enano. No puede ser oLinterna, ha de ser 50.
 				; Gracias Uto
- WRITELN "Don Enano se calza, y agradecido, te deja una linterna."
+ WRITELN "Don Enano se calza, y agradecido, te deja una linterna. Ves como se marcha dando salitos de alegría."
  DONE
 
 _ LLAVE
@@ -9988,7 +9988,7 @@ _ HOLA
  DONE    
 
 _ _
- WRITELN "«¡No quiero!»"
+ WRITELN "«¡No quiero! ¿No entiendes que estoy perdido? Solo quiero saber dónde está mi casa.»"
  DONE  
 ;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 ;
@@ -11471,3 +11471,14 @@ _ _
 
 ; la hacha es un objeto
 ; la hueso humano
+
+;elfo
+;decir, ven
+;«Mi casa»
+;decir, ven
+;«Qué amable
+
+;después de que el elfo se haya ido
+;ex elfo
+;no le ves sentido a examinar eso
+ 
