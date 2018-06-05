@@ -1,3 +1,7 @@
+# IMPORTANTE
+Este proyecto se ha movido a gitlab. Para informar de errores o seguir la evolución:
+[https://gitlab.com/cibersheep/Adaptacion-de-la-Aventura-original-ngPAWS](https://gitlab.com/cibersheep/Adaptacion-de-la-Aventura-original-ngPAWS)
+
 # Adaptación de la Aventura original a ngPAWS
 Recreación de la Aventura original de Aventuras AD (versión reducida y en castellano de _Advent._
 
@@ -8,4 +12,4 @@ Recreación de la Aventura original de Aventuras AD (versión reducida y en cast
 
 ## Aplicación
 - App para teléfonos con Ubuntu Touch [descargable aquí](https://open-store.io/app/aventuraoriginal.cibersheep)
-- Versión [online](https://cibersheep.github.io/Adaptacion-de-la-Aventura-original-ngPAWS/)
+- Versión [online](https://cibersheep.gitlab.io/Adaptacion-de-la-Aventura-original-ngPAWS/)
